@@ -21,3 +21,9 @@ google-services.json
 GoogleService-Info.plist
 firebase_options.dart
 .env
+
+# Android release keystore (never commit signing keys)
+android/keystore/release_new.jks
+android/keystore/keystore_creds.txt
+*.jks
+*.keystore
