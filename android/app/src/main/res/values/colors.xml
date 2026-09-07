@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="ic_launcher_background">#FFFFFF</color>
+    <!-- Flutterのスプラッシュ画面(SplashScreen)のグラデーション開始色と合わせ、
+         ネイティブ起動画面→Flutterスプラッシュの切り替わりを白フラッシュなしに見せる -->
+    <color name="splash_background">#F39C12</color>
+</resources>
