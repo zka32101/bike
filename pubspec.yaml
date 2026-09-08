@@ -48,6 +48,7 @@ dependencies:
 
   # モデル生成（Freezed + json_serializable用）
   freezed_annotation: ^2.4.1
+  json_annotation: ^4.9.0
 
 dev_dependencies:
   flutter_test:

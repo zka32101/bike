@@ -967,9 +967,10 @@ class SuccessFacade {
   Future<List<ChurnPrediction>> getChurnAlerts() =>
       manager.churnEngine.getImminentChurnRisks();
 
-  Future<void> initializeChurnPreventionProgram() =>
-      manager.churnEngine.createRetentionInterventions(
-          await manager.churnEngine.getImminentChurnRisks());
+  Future<void> initializeChurnPreventionProgram() async {
+    final risks = await manager.churnEngine.getImminentChurnRisks();
+    return manager.churnEngine.createRetentionInterventions(risks);
+  }
 
   // Renewal Management
   Future<List<RenewalInfo>> getUpcomingRenewals() =>
