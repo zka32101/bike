@@ -27,7 +27,7 @@ class LocalNotificationService implements NotificationService {
   @override
   Future<void> sendNotification(Notification notification) async {
     if (kDebugMode) {
-      debugPrint('Notification sent: ${notification.id}');
+      debugPrint('Notification sent: ${notification.notificationId}');
     }
   }
 
@@ -42,7 +42,7 @@ class LocalNotificationService implements NotificationService {
     _userNotifications[userId]!.add(notification);
 
     if (kDebugMode) {
-      debugPrint('Notification sent to user $userId: ${notification.id}');
+      debugPrint('Notification sent to user $userId: ${notification.notificationId}');
     }
   }
 
