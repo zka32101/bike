@@ -6,6 +6,27 @@ import 'dart:async';
 import '../models/analytics_models.dart';
 
 // ============================================================================
+// BASIC ANALYTICS SERVICE INTERFACE (for Firebase Analytics, events tracking)
+// ============================================================================
+
+abstract class AnalyticsService {
+  /// Log an analytics event
+  Future<void> logEvent(
+    String name, {
+    Map<String, Object?>? parameters,
+  });
+
+  /// Set user ID for analytics
+  Future<void> setUserId(String userId);
+
+  /// Set user properties
+  Future<void> setUserProperty(String name, String value);
+
+  /// Log screen view
+  Future<void> logScreenView(String screenName);
+}
+
+// ============================================================================
 // REPOSITORY INTERFACE
 // ============================================================================
 

@@ -375,3 +375,51 @@ class ChannelConfiguration {
     required this.settings,
   });
 }
+
+class DeliveryLog {
+  final String logId;
+  final String notificationId;
+  final DeliveryChannel channel;
+  final DateTime sentAt;
+  final DateTime? deliveredAt;
+  final String status; // sent, delivered, failed
+  final String? errorMessage;
+  final Map<String, dynamic> metadata;
+
+  DeliveryLog({
+    required this.logId,
+    required this.notificationId,
+    required this.channel,
+    required this.sentAt,
+    this.deliveredAt,
+    required this.status,
+    this.errorMessage,
+    required this.metadata,
+  });
+
+  bool get isDelivered => deliveredAt != null;
+  bool get isFailed => status == 'failed';
+  int get deliveryTimeMs => deliveredAt != null ? deliveredAt!.difference(sentAt).inMilliseconds : -1;
+}
+
+class NotificationParameter {
+  final String parameterId;
+  final String templateId;
+  final String paramName;
+  final String paramType; // string, number, boolean, datetime
+  final bool isRequired;
+  final String? defaultValue;
+  final String? description;
+
+  NotificationParameter({
+    required this.parameterId,
+    required this.templateId,
+    required this.paramName,
+    required this.paramType,
+    this.isRequired = false,
+    this.defaultValue,
+    this.description,
+  });
+
+  bool get hasDefault => defaultValue != null && defaultValue!.isNotEmpty;
+}
