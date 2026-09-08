@@ -240,10 +240,9 @@ class LocalFirestoreSyncService implements FirestoreSyncService {
       return docs.docs.map((doc) {
         final data = doc.data();
         return BikeUnlockProgress(
+          uid: uid,
           bikeId: data['bikeId'] as String,
-          correctCountRequired: data['correctCountRequired'] as int,
-          currentCorrectCount: data['currentCorrectCount'] as int,
-          isUnlocked: data['isUnlocked'] as bool,
+          requiredCorrectCount: data['correctCountRequired'] as int? ?? 0,
           unlockedAt: data['unlockedAt'] != null
               ? DateTime.parse(data['unlockedAt'] as String)
               : null,

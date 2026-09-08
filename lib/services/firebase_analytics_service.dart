@@ -24,18 +24,49 @@ class FirebaseAnalyticsService implements AnalyticsService {
   @override
   Future<void> logEvent(
     String name, {
-    Map<String, Object?> parameters = const {},
+    Map<String, Object?>? parameters,
   }) async {
     try {
       await _analytics.logEvent(
         name: name,
-        parameters: parameters,
+        parameters: parameters ?? {},
       );
     } catch (e) {
-      // Analytics エラーはアプリケーションを止めない
-      // ただしログには出す（Firebase Console でトレース可能）
       if (kDebugMode) {
         debugPrint('Analytics error: $e');
+      }
+    }
+  }
+
+  @override
+  Future<void> setUserId(String userId) async {
+    try {
+      await _analytics.setUserId(userId);
+    } catch (e) {
+      if (kDebugMode) {
+        debugPrint('Analytics setUserId error: $e');
+      }
+    }
+  }
+
+  @override
+  Future<void> setUserProperty(String name, String value) async {
+    try {
+      await _analytics.setUserProperty(name: name, value: value);
+    } catch (e) {
+      if (kDebugMode) {
+        debugPrint('Analytics setUserProperty error: $e');
+      }
+    }
+  }
+
+  @override
+  Future<void> logScreenView(String screenName) async {
+    try {
+      await _analytics.logScreenView(screenName: screenName);
+    } catch (e) {
+      if (kDebugMode) {
+        debugPrint('Analytics logScreenView error: $e');
       }
     }
   }
