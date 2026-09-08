@@ -1,3 +1,4 @@
+import 'dart:math' show min;
 import 'package:cloud_firestore/cloud_firestore.dart';
 import '../models/community_model.dart';
 
@@ -13530,5 +13531,3 @@ class StubCommunityService implements CommunityService {
         .toList();
   }
 }
-
-import 'dart:math' show min;

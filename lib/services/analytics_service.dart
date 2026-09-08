@@ -560,7 +560,7 @@ class PredictionEngine {
     final prediction = await repository.getPredictionById(predictionId);
     if (prediction == null || !prediction.hasActualValue) return;
 
-    final error = (prediction.predictedValue as num - prediction.actualValue as num).abs();
+    final error = ((prediction.predictedValue as num) - (prediction.actualValue as num)).abs();
     await repository.updatePrediction(prediction.copyWith(error: error.toDouble()));
   }
 }
