@@ -39,6 +39,7 @@ import '../services/export_service.dart';
 import '../models/report_model.dart';
 import '../services/debug_analytics_service.dart';
 import '../services/notification_service_impl.dart';
+import '../services/export_service_impl.dart';
 
 // ---------------------------------------------------------------------------
 // Service層 Provider（差し替え可能。main.dart の overrides で本番実装に切替）

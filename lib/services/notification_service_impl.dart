@@ -10,6 +10,7 @@ abstract class NotificationService {
   Future<List<Notification>> getNotificationsForUser(String userId);
   Future<void> markAsRead(String notificationId);
   Future<void> deleteNotification(String notificationId);
+  Future<bool> isNotificationEnabled();
 }
 
 /// ローカル（メモリ内）の通知サービス実装
@@ -62,5 +63,11 @@ class LocalNotificationService implements NotificationService {
     if (kDebugMode) {
       debugPrint('Notification deleted: $notificationId');
     }
+  }
+
+  @override
+  Future<bool> isNotificationEnabled() async {
+    // Local service always returns true (no permission checks in memory)
+    return true;
   }
 }
