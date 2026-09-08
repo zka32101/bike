@@ -1,11 +1,6 @@
+# Configure build_runner to skip test files
 targets:
   $default:
-    builders:
-      json_serializable:
-        options:
-          exclude_keys:
-            - test/**
-            
     sources:
       exclude:
         - test/**
