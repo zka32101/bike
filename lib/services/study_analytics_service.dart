@@ -375,6 +375,19 @@ class DefaultStudyAnalyticsService implements StudyAnalyticsService {
         return 'その他のひっかけ';
     }
   }
+
+  /// 統計値を累積に追加するヘルパーメソッド
+  void _addToAccumulator<K>(
+    Map<K, _StatAccumulator> accumulators,
+    K key,
+    bool isCorrect,
+  ) {
+    accumulators.putIfAbsent(key, () => _StatAccumulator());
+    accumulators[key]!.attempts++;
+    if (isCorrect) {
+      accumulators[key]!.correctCount++;
+    }
+  }
 }
 
 /// 統計値の累積用ヘルパークラス

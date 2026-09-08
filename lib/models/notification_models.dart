@@ -1,11 +1,15 @@
 /// Real-time Notification & Messaging Models
 
 enum NotificationChannel { email, sms, push, webhook, inApp, slack, teams }
-enum NotificationStatus { pending, sent, delivered, failed, expired, archived }
+enum NotificationStatus { pending, sent, delivered, failed, expired, archived, read }
 enum NotificationPriority { critical, high, normal, low, minimal }
 enum MessageType { alert, update, reminder, confirmation, broadcast, scheduled }
 enum SubscriptionStatus { active, paused, unsubscribed, suspended, expired }
 enum NotificationTopic { incident, deployment, health, performance, security, audit }
+enum DeliveryChannel { email, sms, push, webhook, inApp, slack, teams }
+enum AlertType { threshold, anomaly, pattern, schedule, manual }
+enum NotificationType { mention, reply, like, comment, system, alert }
+enum AlertSeverity { critical, high, medium, low, info }
 
 class Notification {
   final String notificationId;
@@ -261,4 +265,102 @@ class NotificationAnalytics {
 
   double get failureRate => totalSent > 0 ? ((totalSent - totalDelivered) / totalSent) * 100 : 0.0;
   int get periodInDays => periodEnd.difference(periodStart).inDays;
+}
+
+class Alert {
+  final String alertId;
+  final String alertName;
+  final AlertType type;
+  final String condition;
+  final AlertSeverity severity;
+  final List<DeliveryChannel> notificationChannels;
+  final bool isActive;
+  final DateTime createdAt;
+
+  Alert({
+    required this.alertId,
+    required this.alertName,
+    required this.type,
+    required this.condition,
+    required this.severity,
+    required this.notificationChannels,
+    this.isActive = true,
+    required this.createdAt,
+  });
+}
+
+class AlertEvent {
+  final String eventId;
+  final String alertId;
+  final DateTime timestamp;
+  final String triggerValue;
+  final bool isRecent;
+
+  AlertEvent({
+    required this.eventId,
+    required this.alertId,
+    required this.timestamp,
+    required this.triggerValue,
+    this.isRecent = true,
+  });
+}
+
+class NotificationStats {
+  final String statsId;
+  final int totalSent;
+  final int totalDelivered;
+  final int totalFailed;
+  final Map<DeliveryChannel, int> channelStats;
+  final DateTime generatedAt;
+
+  NotificationStats({
+    required this.statsId,
+    required this.totalSent,
+    required this.totalDelivered,
+    required this.totalFailed,
+    required this.channelStats,
+    required this.generatedAt,
+  });
+}
+
+class NotificationReport {
+  final String reportId;
+  final DateTime startDate;
+  final DateTime endDate;
+  final int totalNotifications;
+  final Map<String, dynamic> summary;
+
+  NotificationReport({
+    required this.reportId,
+    required this.startDate,
+    required this.endDate,
+    required this.totalNotifications,
+    required this.summary,
+  });
+}
+
+class QueueEntry {
+  final String entryId;
+  final String notificationId;
+  final DateTime enqueuedAt;
+  final DateTime? processedAt;
+
+  QueueEntry({
+    required this.entryId,
+    required this.notificationId,
+    required this.enqueuedAt,
+    this.processedAt,
+  });
+}
+
+class ChannelConfiguration {
+  final String configId;
+  final DeliveryChannel channel;
+  final Map<String, dynamic> settings;
+
+  ChannelConfiguration({
+    required this.configId,
+    required this.channel,
+    required this.settings,
+  });
 }
