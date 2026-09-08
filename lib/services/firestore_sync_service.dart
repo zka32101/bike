@@ -165,10 +165,11 @@ class LocalFirestoreSyncService implements FirestoreSyncService {
       return docs.docs.map((doc) {
         final data = doc.data();
         return UserAnswerLog(
+          uid: uid,
           questionId: data['questionId'] as String,
-          licenseCategory: data['licenseCategory'] as String,
-          userAnswer: data['userAnswer'] as String,
-          correctAnswer: data['correctAnswer'] as String,
+          licenseCategory: data['licenseCategory'] as String?,
+          userAnswer: data['userAnswer'] as String?,
+          correctAnswer: data['correctAnswer'] as String?,
           isCorrect: data['isCorrect'] as bool,
           answeredAt: DateTime.parse(data['answeredAt'] as String),
           stage: data['stage'] as String?,

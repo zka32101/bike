@@ -12,8 +12,12 @@ class BikeUnlockProgress {
   final String bikeId;
   final DateTime? unlockedAt;
   final int requiredCorrectCount;
+  int currentCorrectCount = 0;
 
   bool get isUnlocked => unlockedAt != null;
+
+  // Aliases for compatibility
+  int get correctCountRequired => requiredCorrectCount;
 
   factory BikeUnlockProgress.fromJson(Map<String, dynamic> json) =>
       BikeUnlockProgress(
