@@ -270,7 +270,7 @@ class NotificationAnalytics {
 class Alert {
   final String alertId;
   final String alertName;
-  final AlertType type;
+  final AlertType alertType;
   final String condition;
   final AlertSeverity severity;
   final List<DeliveryChannel> notificationChannels;
@@ -280,7 +280,7 @@ class Alert {
   Alert({
     required this.alertId,
     required this.alertName,
-    required this.type,
+    required this.alertType,
     required this.condition,
     required this.severity,
     required this.notificationChannels,
@@ -292,14 +292,14 @@ class Alert {
 class AlertEvent {
   final String eventId;
   final String alertId;
-  final DateTime timestamp;
+  final DateTime occurredAt;
   final String triggerValue;
   final bool isRecent;
 
   AlertEvent({
     required this.eventId,
     required this.alertId,
-    required this.timestamp,
+    required this.occurredAt,
     required this.triggerValue,
     this.isRecent = true,
   });
@@ -310,6 +310,7 @@ class NotificationStats {
   final int totalSent;
   final int totalDelivered;
   final int totalFailed;
+  final int totalNotifications;
   final Map<DeliveryChannel, int> channelStats;
   final DateTime generatedAt;
 
@@ -318,6 +319,7 @@ class NotificationStats {
     required this.totalSent,
     required this.totalDelivered,
     required this.totalFailed,
+    required this.totalNotifications,
     required this.channelStats,
     required this.generatedAt,
   });
@@ -328,6 +330,7 @@ class NotificationReport {
   final DateTime startDate;
   final DateTime endDate;
   final int totalNotifications;
+  final DateTime generatedAt;
   final Map<String, dynamic> summary;
 
   NotificationReport({
@@ -335,6 +338,7 @@ class NotificationReport {
     required this.startDate,
     required this.endDate,
     required this.totalNotifications,
+    required this.generatedAt,
     required this.summary,
   });
 }
@@ -344,23 +348,30 @@ class QueueEntry {
   final String notificationId;
   final DateTime enqueuedAt;
   final DateTime? processedAt;
+  final DeliveryChannel channel;
 
   QueueEntry({
     required this.entryId,
     required this.notificationId,
     required this.enqueuedAt,
     this.processedAt,
+    required this.channel,
   });
+
+  bool get hasFailed => processedAt == null;
+  bool get needsRetry => hasFailed;
 }
 
 class ChannelConfiguration {
   final String configId;
   final DeliveryChannel channel;
+  final bool isEnabled;
   final Map<String, dynamic> settings;
 
   ChannelConfiguration({
     required this.configId,
     required this.channel,
+    this.isEnabled = true,
     required this.settings,
   });
 }
