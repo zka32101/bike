@@ -13,31 +13,39 @@ class BikeLicenseKoreApp extends ConsumerWidget {
     // アプリ起動時に Firebase Auth 初期化を実行
     // エラー時は同期的にスナックバーを表示して続行
     ref.listen(authReadyProvider, (previous, next) {
-      next.whenData((uid) {
-        if (context.mounted) {
-          debugPrint('Auth initialized with UID: $uid');
-        }
-      }).whenError((error, stackTrace) {
-        if (context.mounted) {
-          ScaffoldMessenger.of(context).showSnackBar(
-            SnackBar(content: Text('認証初期化に失敗: $error')),
-          );
-        }
-      });
+      next.when(
+        data: (uid) {
+          if (context.mounted) {
+            debugPrint('Auth initialized with UID: $uid');
+          }
+        },
+        loading: () {},
+        error: (error, stackTrace) {
+          if (context.mounted) {
+            ScaffoldMessenger.of(context).showSnackBar(
+              SnackBar(content: Text('認証初期化に失敗: $error')),
+            );
+          }
+        },
+      );
     });
 
     // アプリ起動時にネットワークキュープロセッサーを初期化
     // これでオフラインキューの自動処理が開始される
     ref.listen(networkQueueProcessorProvider, (previous, next) {
-      next.whenData((processor) {
-        if (context.mounted) {
-          debugPrint('Network queue processor initialized');
-        }
-      }).whenError((error, stackTrace) {
-        if (context.mounted) {
-          debugPrint('Failed to initialize network queue processor: $error');
-        }
-      });
+      next.when(
+        data: (processor) {
+          if (context.mounted) {
+            debugPrint('Network queue processor initialized');
+          }
+        },
+        loading: () {},
+        error: (error, stackTrace) {
+          if (context.mounted) {
+            debugPrint('Failed to initialize network queue processor: $error');
+          }
+        },
+      );
     });
 
     return MaterialApp(
