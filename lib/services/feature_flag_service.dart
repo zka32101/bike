@@ -2,7 +2,7 @@
 ///
 /// フィーチャーフラグ管理、A/Bテスト、段階的ロールアウト
 
-import 'package:project_040/models/feature_flag_models.dart';
+import '../models/feature_flag_models.dart';
 
 /// フィーチャーフラグリポジトリインターフェース
 abstract class FeatureFlagRepository {

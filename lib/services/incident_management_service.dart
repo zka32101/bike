@@ -1,6 +1,6 @@
 /// Incident Management & Response Service
 
-import 'package:project_040/models/incident_models.dart';
+import '../models/incident_models.dart';
 
 // ============================================================================
 // Repository Interface (45 Methods)

@@ -1,6 +1,6 @@
 /// Real-time Notification & Messaging Service
 
-import 'package:project_040/models/notification_models.dart';
+import '../models/notification_models.dart';
 
 abstract class NotificationRepository {
   // Notification Management (10 methods)

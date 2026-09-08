@@ -2,7 +2,7 @@
 ///
 /// 複数言語対応、地域設定、通貨・日付形式管理、翻訳管理
 
-import 'package:project_040/models/localization_models.dart';
+import '../models/localization_models.dart';
 
 /// 翻訳リポジトリインターフェース
 abstract class TranslationRepository {

@@ -2,7 +2,7 @@
 ///
 /// リリース管理、デプロイメント実行、ロールバック管理
 
-import 'package:project_040/models/deployment_models.dart';
+import '../models/deployment_models.dart';
 
 /// リリースリポジトリインターフェース
 abstract class ReleaseRepository {

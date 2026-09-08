@@ -2,7 +2,7 @@
 ///
 /// API仕様管理、ドキュメント生成、SDKジェネレーション
 
-import 'package:project_040/models/api_documentation_models.dart';
+import '../models/api_documentation_models.dart';
 
 /// API仕様リポジトリインターフェース
 abstract class ApiSpecificationRepository {

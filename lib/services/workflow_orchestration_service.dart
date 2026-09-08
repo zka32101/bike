@@ -2,7 +2,7 @@
 /// Service layer for workflow orchestration
 library workflow_orchestration_service;
 
-import 'package:project_040/models/workflow_orchestration_models.dart';
+import '../models/workflow_orchestration_models.dart';
 
 // ============================================================================
 // REPOSITORY INTERFACE (70+ methods)

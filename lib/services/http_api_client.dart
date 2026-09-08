@@ -2,9 +2,9 @@
 /// http パッケージを使用した REST API クライアント
 
 import 'dart:convert';
-import 'package:project_040/models/api_models.dart';
-import 'package:project_040/models/async_job_model.dart';
-import 'package:project_040/services/jwt_service.dart';
+import '../models/api_models.dart';
+import '../models/async_job_model.dart';
+import '../services/jwt_service.dart';
 
 // ==================== HTTP クライアント設定 ====================
 

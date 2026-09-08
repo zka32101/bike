@@ -2,7 +2,7 @@
 ///
 /// 分散トレーシング、メトリクス、ログ記録
 
-import 'package:project_040/models/observability_models.dart';
+import '../models/observability_models.dart';
 
 /// 監視可能性リポジトリインターフェース
 abstract class ObservabilityRepository {

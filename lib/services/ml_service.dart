@@ -2,7 +2,7 @@
 /// Service layer for ML and AI systems
 library ml_service;
 
-import 'package:project_040/models/ml_models.dart';
+import '../models/ml_models.dart';
 
 // ============================================================================
 // REPOSITORY INTERFACE (70+ methods)

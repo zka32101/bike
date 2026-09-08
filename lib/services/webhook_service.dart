@@ -2,7 +2,7 @@
 ///
 /// ウェブフック管理、デリバリー、リトライ、監視
 
-import 'package:project_040/models/webhook_models.dart';
+import '../models/webhook_models.dart';
 
 /// ウェブフックリポジトリインターフェース
 abstract class WebhookRepository {

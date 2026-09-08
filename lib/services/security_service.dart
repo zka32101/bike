@@ -3,7 +3,7 @@
 library security_service;
 
 import 'dart:async';
-import 'package:project_040/models/security_models.dart';
+import '../models/security_models.dart';
 
 // ============================================================================
 // REPOSITORY INTERFACE

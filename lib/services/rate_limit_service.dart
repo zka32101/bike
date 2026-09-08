@@ -2,7 +2,7 @@
 ///
 /// レート制限管理、クォータ実行、使用状況追跡
 
-import 'package:project_040/models/rate_limit_models.dart';
+import '../models/rate_limit_models.dart';
 
 /// レート制限リポジトリインターフェース
 abstract class RateLimitRepository {

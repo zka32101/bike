@@ -1,4 +1,4 @@
-import 'package:project_040/models/compliance_models.dart';
+import '../models/compliance_models.dart';
 
 // ============================================================================
 // REPOSITORY INTERFACE

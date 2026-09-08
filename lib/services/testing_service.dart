@@ -2,7 +2,7 @@
 ///
 /// テスト実行、モック、カバレッジ分析、パフォーマンス測定
 
-import 'package:project_040/models/testing_models.dart';
+import '../models/testing_models.dart';
 
 /// テストリポジトリインターフェース
 abstract class TestRepository {

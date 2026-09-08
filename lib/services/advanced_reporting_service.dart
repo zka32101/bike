@@ -2,7 +2,7 @@
 /// Service layer for advanced reporting and analytics
 library advanced_reporting_service;
 
-import 'package:project_040/models/advanced_reporting_models.dart';
+import '../models/advanced_reporting_models.dart';
 
 // ============================================================================
 // REPOSITORY INTERFACE (70+ methods)

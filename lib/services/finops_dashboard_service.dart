@@ -1,7 +1,7 @@
 // Phase 83: Financial Reporting & FinOps Dashboard System
 // Service layer with Repository, Engines, Manager, and Facade
 
-import 'package:project_040/models/finops_dashboard_models.dart';
+import '../models/finops_dashboard_models.dart';
 
 // ===== REPOSITORY INTERFACE =====
 abstract class FinOpsRepository {

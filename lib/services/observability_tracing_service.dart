@@ -1,6 +1,6 @@
 /// Observability & Tracing Service
 
-import 'package:project_040/models/observability_models.dart';
+import '../models/observability_models.dart';
 
 abstract class ObservabilityRepository {
   // Trace Management (10 methods)

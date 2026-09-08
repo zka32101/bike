@@ -2,7 +2,7 @@
 ///
 /// LRU, LFU, TTL, ARC, 分散キャッシュ戦略の実装
 
-import 'package:project_040/models/cache_models.dart';
+import '../models/cache_models.dart';
 
 /// キャッシュリポジトリインターフェース
 abstract class CacheRepository {

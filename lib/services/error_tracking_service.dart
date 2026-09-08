@@ -2,7 +2,7 @@
 ///
 /// エラー記録、クラスタリング、アラート、分析
 
-import 'package:project_040/models/error_tracking_models.dart';
+import '../models/error_tracking_models.dart';
 
 /// エラートラッキングリポジトリインターフェース
 abstract class ErrorTrackingRepository {

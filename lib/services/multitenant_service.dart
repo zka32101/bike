@@ -2,7 +2,7 @@
 /// Service layer for multi-tenant management
 library multitenant_service;
 
-import 'package:project_040/models/multitenant_models.dart';
+import '../models/multitenant_models.dart';
 
 // ============================================================================
 // REPOSITORY INTERFACE (88 methods)

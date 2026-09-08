@@ -2,7 +2,7 @@
 /// Service layer for caching and performance optimization
 library caching_service;
 
-import 'package:project_040/models/caching_models.dart';
+import '../models/caching_models.dart';
 
 // ============================================================================
 // REPOSITORY INTERFACE (70+ methods)

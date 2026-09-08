@@ -1,6 +1,6 @@
 /// Security & Access Control Service
 
-import 'package:project_040/models/security_models.dart';
+import '../models/security_models.dart';
 
 abstract class SecurityRepository {
   // User Management (10 methods)

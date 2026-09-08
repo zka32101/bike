@@ -3,7 +3,7 @@
 library analytics_service;
 
 import 'dart:async';
-import 'package:project_040/models/analytics_models.dart';
+import '../models/analytics_models.dart';
 
 // ============================================================================
 // REPOSITORY INTERFACE

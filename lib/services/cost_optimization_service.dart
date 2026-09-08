@@ -1,7 +1,7 @@
 // Phase 82: Cost Optimization & Resource Management System
 // Service layer with Repository, Engines, Manager, and Facade
 
-import 'package:project_040/models/cost_optimization_models.dart';
+import '../models/cost_optimization_models.dart';
 
 // ===== REPOSITORY INTERFACE =====
 abstract class CostRepository {
