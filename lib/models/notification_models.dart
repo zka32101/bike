@@ -353,6 +353,7 @@ class QueueEntry {
   final DateTime enqueuedAt;
   final DateTime? processedAt;
   final DeliveryChannel channel;
+  final int retryCount;
 
   QueueEntry({
     required this.entryId,
@@ -360,6 +361,7 @@ class QueueEntry {
     required this.enqueuedAt,
     this.processedAt,
     required this.channel,
+    this.retryCount = 0,
   });
 
   bool get hasFailed => processedAt == null;

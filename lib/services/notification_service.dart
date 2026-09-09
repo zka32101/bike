@@ -494,10 +494,14 @@ class MemoryNotificationManager implements NotificationManager {
     final notification = Notification(
       notificationId: 'notif_${DateTime.now().millisecondsSinceEpoch}',
       userId: userId,
+      recipientId: userId,
       title: title,
       message: message,
-      notificationType: type,
+      channel: NotificationChannel.inApp,
+      status: NotificationStatus.pending,
+      priority: NotificationPriority.normal,
       createdAt: DateTime.now(),
+      metadata: {'type': type.toString()},
     );
     await _repository.createNotification(notification);
     await _deliveryEngine.sendNotification(notification, DeliveryChannel.inApp);
@@ -512,15 +516,17 @@ class MemoryNotificationManager implements NotificationManager {
     final updated = Notification(
       notificationId: notification.notificationId,
       userId: notification.userId,
+      recipientId: notification.recipientId,
       title: notification.title,
       message: notification.message,
-      notificationType: notification.notificationType,
+      channel: notification.channel,
+      status: NotificationStatus.read,
       priority: notification.priority,
       createdAt: notification.createdAt,
-      readAt: DateTime.now(),
-      status: NotificationStatus.read,
+      deliveredAt: DateTime.now(),
+      relatedEntityId: notification.relatedEntityId,
+      retryCount: notification.retryCount,
       metadata: notification.metadata,
-      actionUrl: notification.actionUrl,
     );
     await _repository.updateNotification(updated);
   }
