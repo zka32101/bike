@@ -114,7 +114,7 @@ class ReviewRecommendationCard extends ConsumerWidget {
         // ひっかけ道場に遷移
         Navigator.of(context).push(
           MaterialPageRoute(
-            builder: (_) => const TrapDojoView(),
+            builder: (_) => const TrapDojoView(licenseCategory: 'motorcycle'),
           ),
         );
         break;

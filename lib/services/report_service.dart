@@ -212,7 +212,7 @@ class ReportService {
         className: className,
         totalStudents: totalStudents,
         activeStudents: activeStudents,
-        averageScore: averageScore,
+        averageScore: (averageScore as num).toDouble(),
         scoreDistribution: _buildScoreDistribution(studentAnalyses),
         topPerformers: topPerformers,
         needsSupport: needsSupport,
