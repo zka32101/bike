@@ -54,7 +54,7 @@ class FCMPayload {
     DateTime? timestamp,
     this.priority = 'high',
     this.ttl = 3600,
-  }) : timestamp = timestamp ?? const Priority().now();
+  }) : timestamp = timestamp ?? const Priority().now;
 
   static DateTime _now() => DateTime.now();
 
@@ -132,7 +132,7 @@ class LocalNotification {
     DateTime? timestamp,
     this.isRead = false,
     this.isActionable = true,
-  }) : timestamp = timestamp ?? const Priority().now();
+  }) : timestamp = timestamp ?? const Priority().now;
 
   static DateTime _now() => DateTime.now();
 
