@@ -6,6 +6,8 @@ import '../models/user_answer_log.dart';
 import '../models/bike_unlock_progress.dart';
 import '../models/trap_dojo_session.dart';
 import '../models/pass_prediction_score.dart';
+import '../models/question.dart';
+import 'local_data_service.dart';
 
 /// Firestore と同期するデータサービスの抽象インターフェース。
 /// ユーザーデータ・回答ログ・進捗情報などをクラウドに保存・読み込み。
@@ -39,6 +41,12 @@ abstract class FirestoreSyncService {
 
   /// 合格率予測スコアをFirestoreから読み込み
   Future<PassPredictionScore?> loadPredictionScore(String uid);
+
+  /// 問題をFirestoreから読み込み
+  Future<List<Question>> loadQuestions({
+    required String licenseCategory,
+    String? stageTag,
+  });
 }
 
 /// Firestore を使った実装
@@ -392,6 +400,20 @@ class LocalFirestoreSyncService implements FirestoreSyncService {
       return null;
     }
   }
+
+  @override
+  Future<List<Question>> loadQuestions({
+    required String licenseCategory,
+    String? stageTag,
+  }) async {
+    // 本格投入時: Firestore から取得
+    // 現段階: assets/questions/*.json をローカルサービスで取得
+    final localService = LocalDataService();
+    return localService.loadQuestions(
+      licenseCategory: licenseCategory,
+      stageTag: stageTag,
+    );
+  }
 }
 
 /// テスト用スタブ実装
@@ -451,5 +473,13 @@ class StubFirestoreSyncService implements FirestoreSyncService {
   @override
   Future<PassPredictionScore?> loadPredictionScore(String uid) async {
     return _storage['predictionScore_$uid'] as PassPredictionScore?;
+  }
+
+  @override
+  Future<List<Question>> loadQuestions({
+    required String licenseCategory,
+    String? stageTag,
+  }) async {
+    return [];
   }
 }

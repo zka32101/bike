@@ -280,6 +280,11 @@ class Alert {
   final List<DeliveryChannel> notificationChannels;
   final bool isActive;
   final DateTime createdAt;
+  final List<String> recipients;
+  final String status;
+  final DateTime? lastTriggeredAt;
+  final bool isEnabled;
+  final int triggerCount;
 
   Alert({
     required this.alertId,
@@ -290,6 +295,11 @@ class Alert {
     required this.notificationChannels,
     this.isActive = true,
     required this.createdAt,
+    this.recipients = const [],
+    this.status = 'active',
+    this.lastTriggeredAt,
+    this.isEnabled = true,
+    this.triggerCount = 0,
   });
 }
 
@@ -299,6 +309,12 @@ class AlertEvent {
   final DateTime occurredAt;
   final String triggerValue;
   final bool isRecent;
+  final String message;
+  final Map<String, dynamic> details;
+  final AlertSeverity severity;
+  final bool isAcknowledged;
+  final DateTime? acknowledgedAt;
+  final String? acknowledgedBy;
 
   AlertEvent({
     required this.eventId,
@@ -306,6 +322,12 @@ class AlertEvent {
     required this.occurredAt,
     required this.triggerValue,
     this.isRecent = true,
+    this.message = '',
+    this.details = const {},
+    this.severity = AlertSeverity.medium,
+    this.isAcknowledged = false,
+    this.acknowledgedAt,
+    this.acknowledgedBy,
   });
 }
 
@@ -317,6 +339,7 @@ class NotificationStats {
   final int totalNotifications;
   final Map<DeliveryChannel, int> channelStats;
   final DateTime generatedAt;
+  final int sentNotifications;
 
   NotificationStats({
     required this.statsId,
@@ -326,6 +349,7 @@ class NotificationStats {
     required this.totalNotifications,
     required this.channelStats,
     required this.generatedAt,
+    this.sentNotifications = 0,
   });
 }
 
@@ -336,6 +360,7 @@ class NotificationReport {
   final int totalNotifications;
   final DateTime generatedAt;
   final Map<String, dynamic> summary;
+  final DateTime? periodStart;
 
   NotificationReport({
     required this.reportId,
@@ -344,6 +369,7 @@ class NotificationReport {
     required this.totalNotifications,
     required this.generatedAt,
     required this.summary,
+    this.periodStart,
   });
 }
 
@@ -373,12 +399,14 @@ class ChannelConfiguration {
   final DeliveryChannel channel;
   final bool isEnabled;
   final Map<String, dynamic> settings;
+  final DateTime createdAt;
 
   ChannelConfiguration({
     required this.configId,
     required this.channel,
     this.isEnabled = true,
     required this.settings,
+    required this.createdAt,
   });
 }
 

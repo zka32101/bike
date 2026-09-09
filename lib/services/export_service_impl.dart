@@ -1,6 +1,7 @@
 import 'package:flutter/foundation.dart';
 
 import '../models/export_models.dart';
+import '../models/report_model.dart';
 import 'export_service.dart';
 
 /// エクスポートサービス実装
@@ -54,13 +55,17 @@ class ExportService {
       _repository.getStatisticsInRange(start, end);
 
   /// データをエクスポート
-  Future<ExportResult> exportData(String dataType, String format) async {
+  Future<ExportResult> exportData({
+    required String exportId,
+    required ExportConfig config,
+    required List<Map<String, dynamic>> dataRecords,
+  }) async {
     final result = ExportResult(
-      id: 'export_${DateTime.now().millisecondsSinceEpoch}',
-      exportType: dataType,
-      format: format,
+      id: exportId,
+      exportType: config.dataType,
+      format: config.format,
       downloadUrl: 'data:text/plain,',
-      recordCount: 0,
+      recordCount: dataRecords.length,
       fileSizeBytes: 0,
       createdAt: DateTime.now(),
       status: 'pending',
