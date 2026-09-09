@@ -52,4 +52,19 @@ class ExportService {
     DateTime end,
   ) =>
       _repository.getStatisticsInRange(start, end);
+
+  /// データをエクスポート
+  Future<ExportResult> exportData(String dataType, String format) async {
+    final result = ExportResult(
+      id: 'export_${DateTime.now().millisecondsSinceEpoch}',
+      exportType: dataType,
+      format: format,
+      downloadUrl: 'data:text/plain,',
+      recordCount: 0,
+      fileSizeBytes: 0,
+      createdAt: DateTime.now(),
+      status: 'pending',
+    );
+    return result;
+  }
 }
