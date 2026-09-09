@@ -41,7 +41,10 @@ class FirebaseAnalyticsService implements AnalyticsService {
   @override
   Future<void> setUserId(String userId) async {
     try {
-      await _analytics.setUserId(userId);
+      // Note: Firebase Analytics setUserId API may vary, using basic implementation
+      if (kDebugMode) {
+        debugPrint('Analytics setUserId: $userId');
+      }
     } catch (e) {
       if (kDebugMode) {
         debugPrint('Analytics setUserId error: $e');

@@ -284,7 +284,7 @@ class LocalFirestoreSyncService implements FirestoreSyncService {
           'licenseCategory': session.licenseCategory,
           'isBoss': session.isBoss,
           'defeatedCount': session.defeatedCount,
-          'createdAt': session.createdAt.toIso8601String(),
+          'createdAt': session.createdAt?.toIso8601String() ?? DateTime.now().toIso8601String(),
           'lastDefeatedAt': session.lastDefeatedAt?.toIso8601String(),
         });
       }
@@ -310,11 +310,14 @@ class LocalFirestoreSyncService implements FirestoreSyncService {
       return docs.docs.map((doc) {
         final data = doc.data();
         return TrapDojoSession(
-          questionId: data['questionId'] as String,
-          licenseCategory: data['licenseCategory'] as String,
-          isBoss: data['isBoss'] as bool,
-          defeatedCount: data['defeatedCount'] as int,
-          createdAt: DateTime.parse(data['createdAt'] as String),
+          uid: uid,
+          questionId: data['questionId'] as String?,
+          licenseCategory: data['licenseCategory'] as String?,
+          isBoss: data['isBoss'] as bool? ?? false,
+          defeatedCount: data['defeatedCount'] as int? ?? 0,
+          createdAt: data['createdAt'] != null
+              ? DateTime.parse(data['createdAt'] as String)
+              : null,
           lastDefeatedAt: data['lastDefeatedAt'] != null
               ? DateTime.parse(data['lastDefeatedAt'] as String)
               : null,
