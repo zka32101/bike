@@ -13,6 +13,7 @@ enum AlertSeverity { critical, high, medium, low, info }
 
 class Notification {
   final String notificationId;
+  final String userId;
   final String recipientId;
   final String title;
   final String message;
@@ -23,10 +24,12 @@ class Notification {
   final DateTime? sentAt;
   final DateTime? deliveredAt;
   final String? relatedEntityId;
+  final int retryCount;
   final Map<String, dynamic> metadata;
 
   Notification({
     required this.notificationId,
+    required this.userId,
     required this.recipientId,
     required this.title,
     required this.message,
@@ -37,6 +40,7 @@ class Notification {
     this.sentAt,
     this.deliveredAt,
     this.relatedEntityId,
+    this.retryCount = 0,
     required this.metadata,
   });
 

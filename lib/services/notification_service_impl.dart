@@ -11,6 +11,8 @@ abstract class NotificationService {
   Future<void> markAsRead(String notificationId);
   Future<void> deleteNotification(String notificationId);
   Future<bool> isNotificationEnabled();
+  Future<bool> requestNotificationPermission();
+  Future<void> sendTestNotification();
 }
 
 /// ローカル（メモリ内）の通知サービス実装
@@ -69,5 +71,20 @@ class LocalNotificationService implements NotificationService {
   Future<bool> isNotificationEnabled() async {
     // Local service always returns true (no permission checks in memory)
     return true;
+  }
+
+  @override
+  Future<bool> requestNotificationPermission() async {
+    if (kDebugMode) {
+      debugPrint('Notification permission requested');
+    }
+    return true;
+  }
+
+  @override
+  Future<void> sendTestNotification() async {
+    if (kDebugMode) {
+      debugPrint('Test notification sent');
+    }
   }
 }
