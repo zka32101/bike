@@ -244,7 +244,7 @@ class MemoryNotificationRepository implements NotificationRepository {
   Future<QueueEntry?> dequeueNotification() async {
     if (_queue.isEmpty) return null;
     final entry = _queue.firstWhere(
-      (e) => e.status == 'queued',
+      (e) => e.processedAt == null,
       orElse: () => _queue.first,
     );
     _queue.remove(entry);
@@ -253,7 +253,7 @@ class MemoryNotificationRepository implements NotificationRepository {
 
   @override
   Future<List<QueueEntry>> getPendingQueue() async {
-    return _queue.where((e) => e.status == 'queued' || e.status == 'processing').toList();
+    return _queue.where((e) => e.processedAt == null).toList();
   }
 
   @override
@@ -301,8 +301,8 @@ class MemoryNotificationDeliveryEngine implements NotificationDeliveryEngine {
       notificationId: notification.notificationId,
       channel: channel,
       sentAt: DateTime.now(),
-      status: NotificationStatus.sent,
-      retryCount: 0,
+      status: 'sent',
+      metadata: {},
     );
     await _repository.createDeliveryLog(log);
   }
@@ -319,8 +319,6 @@ class MemoryNotificationDeliveryEngine implements NotificationDeliveryEngine {
           channel: entry.channel,
           enqueuedAt: entry.enqueuedAt,
           processedAt: DateTime.now(),
-          status: 'completed',
-          priority: entry.priority,
           retryCount: entry.retryCount,
         ),
       );
@@ -343,10 +341,7 @@ class MemoryNotificationDeliveryEngine implements NotificationDeliveryEngine {
             notificationId: entry.notificationId,
             channel: entry.channel,
             enqueuedAt: entry.enqueuedAt,
-            status: 'queued',
-            priority: entry.priority,
             retryCount: entry.retryCount + 1,
-            lastError: entry.lastError,
           ),
         );
       }

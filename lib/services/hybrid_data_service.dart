@@ -217,4 +217,35 @@ class HybridDataService extends DataService {
     // ローカルにフォールバック
     return _localDataService.loadPredictionScore(uid);
   }
+
+  @override
+  Future<List<Question>> loadQuestions({
+    required String licenseCategory,
+    String? stageTag,
+  }) async {
+    try {
+      // Firestore から読み込みを試みる
+      final firestoreQuestions = await _firestoreSyncService.loadQuestions(
+        licenseCategory: licenseCategory,
+        stageTag: stageTag,
+      );
+      if (firestoreQuestions.isNotEmpty) {
+        if (kDebugMode) {
+          debugPrint('Loaded ${firestoreQuestions.length} questions from Firestore');
+        }
+        return firestoreQuestions;
+      }
+    } catch (e) {
+      if (kDebugMode) {
+        debugPrint(
+            'Failed to load questions from Firestore: $e, falling back to local');
+      }
+    }
+
+    // ローカルにフォールバック
+    return _localDataService.loadQuestions(
+      licenseCategory: licenseCategory,
+      stageTag: stageTag,
+    );
+  }
 }

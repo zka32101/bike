@@ -95,12 +95,18 @@ class FirestoreDataService implements DataService {
   }
 
   @override
-  Future<List<UserAnswerLog>> loadAnswerLogs(String uid) async {
-    final querySnapshot = await _firestore
+  Future<List<UserAnswerLog>> loadAnswerLogs(String uid, {DateTime? since}) async {
+    var query = _firestore
         .collection(_usersCollection)
         .doc(uid)
         .collection(_answerLogsSubcollection)
-        .orderBy('answeredAt', descending: true)
+        .orderBy('answeredAt', descending: true);
+
+    if (since != null) {
+      query = query.where('answeredAt', isGreaterThanOrEqualTo: since);
+    }
+
+    final querySnapshot = await query
         .get(const GetOptions(source: Source.serverAndCache));
 
     return querySnapshot.docs
