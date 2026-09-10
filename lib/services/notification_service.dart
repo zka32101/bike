@@ -548,7 +548,7 @@ class MemoryNotificationManager implements NotificationManager {
       alertName: alertName,
       alertType: type,
       condition: condition,
-      severity: PriorityLevel.high,
+      severity: AlertSeverity.high,
       recipients: [],
       notificationChannels: [DeliveryChannel.inApp, DeliveryChannel.email],
       createdAt: DateTime.now(),
@@ -560,27 +560,23 @@ class MemoryNotificationManager implements NotificationManager {
   Future<NotificationReport> generateReport() async {
     final stats = NotificationStats(
       statsId: 'stats_${DateTime.now().millisecondsSinceEpoch}',
+      totalSent: 95,
+      totalDelivered: 90,
+      totalFailed: 5,
       totalNotifications: 100,
+      channelStats: {},
+      generatedAt: DateTime.now(),
       sentNotifications: 95,
-      deliveredNotifications: 90,
-      readNotifications: 75,
-      failedNotifications: 5,
-      periodStart: DateTime.now().subtract(Duration(days: 1)),
-      periodEnd: DateTime.now(),
-      deliveryRate: 0.95,
-      readRate: 0.83,
-      averageDeliveryTimeSeconds: 5,
     );
 
     final report = NotificationReport(
       reportId: 'report_${DateTime.now().millisecondsSinceEpoch}',
+      startDate: DateTime.now().subtract(Duration(days: 1)),
+      endDate: DateTime.now(),
+      totalNotifications: 100,
       generatedAt: DateTime.now(),
+      summary: {'sent': 95, 'delivered': 90, 'failed': 5},
       periodStart: DateTime.now().subtract(Duration(days: 1)),
-      periodEnd: DateTime.now(),
-      stats: stats,
-      topNotificationTypes: ['info', 'warning', 'alert'],
-      topChannels: ['in_app', 'email', 'push'],
-      recommendations: [],
     );
 
     await _repository.saveNotificationReport(report);
