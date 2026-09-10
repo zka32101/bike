@@ -564,7 +564,7 @@ class MemoryNotificationManager implements NotificationManager {
       totalDelivered: 90,
       totalFailed: 5,
       totalNotifications: 100,
-      channelStats: {},
+      channelStats: <DeliveryChannel, int>{},
       generatedAt: DateTime.now(),
       sentNotifications: 95,
     );
