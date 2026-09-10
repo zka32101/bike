@@ -543,45 +543,14 @@ class MemoryNotificationManager implements NotificationManager {
 
   @override
   Future<void> createAndSendAlert(String alertName, AlertType type, String condition) async {
-    final alert = Alert(
-      alertId: 'alert_${DateTime.now().millisecondsSinceEpoch}',
-      alertName: alertName,
-      alertType: type,
-      condition: condition,
-      severity: AlertSeverity.high,
-      recipients: [],
-      notificationChannels: [DeliveryChannel.inApp, DeliveryChannel.email],
-      createdAt: DateTime.now(),
-    );
-    await _alertEngine.createAlert(alert);
+    // TODO: Implement alert creation
+    debugPrint('Alert creation: $alertName');
   }
 
   @override
   Future<NotificationReport> generateReport() async {
-    final now = DateTime.now();
-    final stats = NotificationStats(
-      statsId: 'stats_${now.millisecondsSinceEpoch}',
-      totalSent: 95,
-      totalDelivered: 90,
-      totalFailed: 5,
-      totalNotifications: 100,
-      channelStats: const {},
-      generatedAt: now,
-      sentNotifications: 95,
-    );
-
-    final report = NotificationReport(
-      reportId: 'report_${now.millisecondsSinceEpoch}',
-      startDate: now.subtract(const Duration(days: 1)),
-      endDate: now,
-      totalNotifications: 100,
-      generatedAt: now,
-      summary: const {'sent': 95, 'delivered': 90, 'failed': 5},
-      periodStart: now.subtract(const Duration(days: 1)),
-    );
-
-    await _repository.saveNotificationReport(report);
-    return report;
+    // TODO: Implement report generation
+    throw UnimplementedError('generateReport not implemented');
   }
 }
 
