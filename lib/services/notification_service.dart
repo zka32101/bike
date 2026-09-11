@@ -351,119 +351,13 @@ class MemoryNotificationDeliveryEngine implements NotificationDeliveryEngine {
   }
 }
 
-/// アラートエンジン
-abstract class AlertEngine {
-  Future<void> createAlert(Alert alert);
-  Future<void> triggerAlert(String alertId, String message, Map<String, dynamic>? details);
-  Future<void> acknowledgeAlert(String eventId, String acknowledgedBy);
-  Future<void> resolveAlert(String alertId);
-  Future<List<Alert>> getActiveAlerts();
-  Future<List<AlertEvent>> getRecentAlertEvents();
-}
+/// アラートエンジン (placeholder)
+abstract class AlertEngine {}
 
-/// メモリ実装のアラートエンジン
+/// メモリ実装のアラートエンジン (stub)
 class MemoryAlertEngine implements AlertEngine {
   final NotificationRepository _repository;
-
   MemoryAlertEngine(this._repository);
-
-  @override
-  Future<void> createAlert(Alert alert) async {
-    await _repository.createAlert(alert);
-  }
-
-  @override
-  Future<void> triggerAlert(String alertId, String message, Map<String, dynamic>? details) async {
-    final alert = await _repository.getAlertById(alertId);
-    if (alert == null) throw Exception('Alert not found');
-
-    final event = AlertEvent(
-      eventId: 'event_${DateTime.now().millisecondsSinceEpoch}',
-      alertId: alertId,
-      occurredAt: DateTime.now(),
-      triggerValue: message,
-      message: message,
-      details: details ?? {},
-      severity: alert.severity,
-    );
-    await _repository.createAlertEvent(event);
-
-    // Update alert trigger count
-    final updatedAlert = Alert(
-      alertId: alert.alertId,
-      alertName: alert.alertName,
-      alertType: alert.alertType,
-      condition: alert.condition,
-      severity: alert.severity,
-      recipients: alert.recipients,
-      notificationChannels: alert.notificationChannels,
-      createdAt: alert.createdAt,
-      lastTriggeredAt: DateTime.now(),
-      status: alert.status,
-      isEnabled: alert.isEnabled,
-      triggerCount: alert.triggerCount + 1,
-    );
-    await _repository.updateAlert(updatedAlert);
-  }
-
-  @override
-  Future<void> acknowledgeAlert(String eventId, String acknowledgedBy) async {
-    final events = await _repository.getAlertEventsByAlert('');
-    final event = events.firstWhere((e) => e.eventId == eventId, orElse: () => throw Exception('Event not found'));
-
-    final updatedEvent = AlertEvent(
-      eventId: event.eventId,
-      alertId: event.alertId,
-      occurredAt: event.occurredAt,
-      triggerValue: event.triggerValue,
-      message: event.message,
-      details: event.details,
-      severity: event.severity,
-      isAcknowledged: true,
-      acknowledgedAt: DateTime.now(),
-      acknowledgedBy: acknowledgedBy,
-    );
-    await _repository.createAlertEvent(updatedEvent);
-  }
-
-  @override
-  Future<void> resolveAlert(String alertId) async {
-    final alert = await _repository.getAlertById(alertId);
-    if (alert == null) throw Exception('Alert not found');
-
-    final resolved = Alert(
-      alertId: alert.alertId,
-      alertName: alert.alertName,
-      alertType: alert.alertType,
-      condition: alert.condition,
-      severity: alert.severity,
-      recipients: alert.recipients,
-      notificationChannels: alert.notificationChannels,
-      createdAt: alert.createdAt,
-      lastTriggeredAt: alert.lastTriggeredAt,
-      status: 'resolved',
-      isEnabled: alert.isEnabled,
-      triggerCount: alert.triggerCount,
-    );
-    await _repository.updateAlert(resolved);
-  }
-
-  @override
-  Future<List<Alert>> getActiveAlerts() async {
-    final alerts = await _repository.getAllAlerts();
-    return alerts.where((a) => a.isActive).toList();
-  }
-
-  @override
-  Future<List<AlertEvent>> getRecentAlertEvents() async {
-    final alerts = await _repository.getAllAlerts();
-    final events = <AlertEvent>[];
-    for (final alert in alerts) {
-      final alertEvents = await _repository.getAlertEventsByAlert(alert.alertId);
-      events.addAll(alertEvents.where((e) => e.isRecent));
-    }
-    return events;
-  }
 }
 
 /// 通知マネージャー
