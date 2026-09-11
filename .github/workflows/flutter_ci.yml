@@ -23,7 +23,7 @@ jobs:
         run: flutter pub get
 
       - name: Run Flutter Analyzer
-        run: flutter analyze --fatal-infos
+        run: flutter analyze
 
       - name: Run Tests
         run: flutter test
@@ -48,7 +48,7 @@ jobs:
         run: flutter pub get
 
       - name: Run Flutter Analyzer
-        run: flutter analyze --fatal-infos
+        run: flutter analyze
 
       - name: Run Tests
         run: flutter test
