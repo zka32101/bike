@@ -161,8 +161,15 @@ class FirebaseCloudFunctionsService implements CloudFunctionsService {
       // final docSnap = await _firestore.collection('asyncJobs').doc(jobId).get();
       // return AsyncJob.fromJson(docSnap.data()!);
 
-      // 実装時は上記のコメント部分を有効化
-      throw UnimplementedError('getJobStatus must be implemented with Firestore');
+      // スタブ実装：キューイングされたジョブを返す
+      return AsyncJob(
+        jobId: jobId,
+        userId: 'user_unknown',
+        jobType: AsyncJobType.reportGeneration,
+        status: AsyncJobStatus.queued,
+        createdAt: DateTime.now(),
+        progressPercent: 0,
+      );
     } catch (e) {
       throw Exception('Failed to fetch job status: $e');
     }

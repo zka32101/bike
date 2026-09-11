@@ -446,7 +446,23 @@ class MemoryNotificationManager implements NotificationManager {
 
   @override
   Future<NotificationReport> generateReport() async {
-    throw UnimplementedError();
+    final now = DateTime.now();
+    final notifications = await _repository.getAllAlerts();
+    final stats = await _repository.getLatestStats();
+
+    return NotificationReport(
+      reportId: 'report_${DateTime.now().millisecondsSinceEpoch}',
+      startDate: now.subtract(const Duration(days: 30)),
+      endDate: now,
+      totalNotifications: stats?.totalNotifications ?? 0,
+      generatedAt: now,
+      summary: {
+        'totalSent': stats?.totalSent ?? 0,
+        'totalDelivered': stats?.totalDelivered ?? 0,
+        'totalFailed': stats?.totalFailed ?? 0,
+        'period': '30_days',
+      },
+    );
   }
 }
 
