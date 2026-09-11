@@ -2,7 +2,7 @@
 
 import '../models/notification_models.dart';
 
-abstract class NotificationRepository {
+abstract class NotificationMessagingRepository {
   // Notification Management (10 methods)
   Future<Notification> createNotification(String recipientId, String title, String message, NotificationChannel channel, NotificationPriority priority);
   Future<Notification?> getNotification(String notificationId);
@@ -79,7 +79,7 @@ abstract class NotificationRepository {
   Future<NotificationAnalytics> generateAnalytics(DateTime startDate, DateTime endDate);
 }
 
-class NotificationRepositoryImpl implements NotificationRepository {
+class NotificationMessagingRepositoryImpl implements NotificationMessagingRepository {
   final Map<String, Map<String, dynamic>> _storage = {};
 
   NotificationRepositoryImpl() {
