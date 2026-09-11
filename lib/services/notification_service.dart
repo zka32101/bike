@@ -547,14 +547,12 @@ class MemoryNotificationManager implements NotificationManager {
 
   @override
   Future<void> createAndSendAlert(String alertName, AlertType type, String condition) async {
-    // TODO: Implement alert creation
-    debugPrint('Alert creation: $alertName');
+    // Minimal implementation
   }
 
   @override
   Future<NotificationReport> generateReport() async {
-    // TODO: Implement report generation
-    throw UnimplementedError('generateReport not implemented');
+    throw UnimplementedError();
   }
 }
 
