@@ -187,7 +187,7 @@ class MemoryRateLimitEngine implements RateLimitEngine {
   Future<RateLimitResponse> _evaluateTokenBucket(
       String userId, RateLimitRule rule) async {
     final bucketId = 'bucket:$userId:${rule.ruleId}';
-    var bucket = await _repository.getTokenBucket(bucketId);
+    TokenBucket? bucket = await _repository.getTokenBucket(bucketId);
 
     if (bucket == null) {
       bucket = TokenBucket(
@@ -219,7 +219,7 @@ class MemoryRateLimitEngine implements RateLimitEngine {
   Future<RateLimitResponse> _evaluateSlidingWindow(
       String userId, RateLimitRule rule) async {
     final windowId = 'window:$userId:${rule.ruleId}';
-    var window = await _repository.getSlidingWindow(windowId);
+    SlidingWindow? window = await _repository.getSlidingWindow(windowId);
 
     if (window == null) {
       window = SlidingWindow(

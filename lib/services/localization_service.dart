@@ -335,7 +335,7 @@ class MemoryLocalizationService implements LocalizationService {
     final entry = await _translationRepo.getPluralText(key);
     if (entry == null) return count.toString();
 
-    var text = entry.getText(count);
+    String text = entry.getText(count);
     text = text.replaceAll('{{count}}', count.toString());
     return text;
   }
@@ -346,7 +346,7 @@ class MemoryLocalizationService implements LocalizationService {
     Map<String, String> variables, {
     String? languageCode,
   }) async {
-    var text = await translate(key, languageCode: languageCode);
+    String text = await translate(key, languageCode: languageCode);
 
     variables.forEach((varKey, value) {
       text = text.replaceAll('{{$varKey}}', value);

@@ -90,7 +90,7 @@ class LocalDataService implements DataService {
     final asset = _questionAssetByCategory[licenseCategory];
     if (asset == null) return [];
 
-    var pool = _questionCache[asset];
+    List<Question>? pool = _questionCache[asset];
     if (pool == null) {
       final raw = await rootBundle.loadString(asset);
       final list = jsonDecode(raw) as List;

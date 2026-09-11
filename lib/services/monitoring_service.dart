@@ -116,7 +116,7 @@ class MemoryMetricsCollector implements MetricsCollector {
 
   @override
   Future<List<MetricPoint>> getMetrics(String name, {Duration? duration}) async {
-    var filtered = _metrics.where((m) => m.name == name).toList();
+    List<MetricPoint> filtered = _metrics.where((m) => m.name == name).toList();
     if (duration != null) {
       final cutoff = DateTime.now().subtract(duration);
       filtered = filtered.where((m) => m.timestamp.isAfter(cutoff)).toList();

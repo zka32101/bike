@@ -203,7 +203,7 @@ class HttpApiClientImpl implements HttpClient {
   ]) async {
     try {
       // リクエストインターセプター実行
-      var interceptedRequest = request;
+      HttpRequest interceptedRequest = request;
       for (final interceptor in interceptors) {
         interceptedRequest =
             await interceptor.onRequest(interceptedRequest, this);
@@ -239,7 +239,7 @@ class HttpApiClientImpl implements HttpClient {
       );
 
       // レスポンスインターセプター実行
-      var interceptedResponse = response;
+      HttpResponse interceptedResponse = response;
       for (final interceptor in interceptors) {
         interceptedResponse = await interceptor.onResponse(
           interceptedResponse,

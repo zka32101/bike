@@ -225,7 +225,7 @@ class JwtServiceImpl implements JwtService {
   }
 
   List<int> _base64UrlDecode(String encoded) {
-    var output = encoded.replaceAll('-', '+').replaceAll('_', '/');
+    String output = encoded.replaceAll('-', '+').replaceAll('_', '/');
     switch (output.length % 4) {
       case 0:
         break;
@@ -305,7 +305,7 @@ class TokenRefreshManager {
   });
 
   Future<JwtToken?> getValidToken() async {
-    var token = await tokenStore.getToken();
+    JwtToken? token = await tokenStore.getToken();
     
     if (token == null) {
       return null;

@@ -47,7 +47,7 @@ class MemorySearchService implements SearchService {
     final results = _performTextSearch(query.text);
 
     // フィルター適用
-    var filtered = _applyFilter(results, query.filter);
+    List<AsyncJob> filtered = _applyFilter(results, query.filter);
 
     // ソート適用
     filtered = _applySort(filtered, query.sort);
@@ -109,7 +109,7 @@ class MemorySearchService implements SearchService {
 
   /// フィルターを適用
   List<AsyncJob> _applyFilter(List<AsyncJob> jobs, SearchFilter filter) {
-    var filtered = jobs;
+    List<AsyncJob> filtered = jobs;
 
     if (filter.jobTypes != null) {
       filtered = filtered.where((j) => filter.jobTypes!.contains(j.jobType)).toList();

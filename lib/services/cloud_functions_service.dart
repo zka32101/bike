@@ -214,9 +214,9 @@ class FirebaseCloudFunctionsService implements CloudFunctionsService {
 
   /// ランダムID を生成
   String _randomId() {
-    const chars = 'abcdefghijklmnopqrstuvwxyz0123456789';
-    var result = '';
-    for (var i = 0; i < 8; i++) {
+    const String chars = 'abcdefghijklmnopqrstuvwxyz0123456789';
+    String result = '';
+    for (int i = 0; i < 8; i++) {
       result += chars[DateTime.now().millisecond % chars.length];
     }
     return result;

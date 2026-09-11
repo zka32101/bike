@@ -654,7 +654,7 @@ class IncidentRepositoryImpl implements IncidentRepository {
 
   @override
   Future<List<Incident>> getIncidentsByFilter(IncidentFilter filter) async {
-    var incidents = _storage['incidents']!.values.map(_mapToIncident).toList();
+    List<Incident> incidents = _storage['incidents']!.values.map(_mapToIncident).toList();
     
     if (filter.severity != null) {
       incidents = incidents.where((i) => i.severity == filter.severity).toList();

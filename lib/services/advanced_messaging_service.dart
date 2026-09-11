@@ -715,7 +715,7 @@ class FirebaseAdvancedMessagingService implements AdvancedMessagingService {
     int endHour,
   ) async {
     try {
-      var settings =
+      ConversationSettings settings =
           await getConversationSettings(conversationId, userId);
       settings = settings.copyWith(
         notificationQuietHoursStart: startHour,
@@ -734,7 +734,7 @@ class FirebaseAdvancedMessagingService implements AdvancedMessagingService {
     String memberId,
   ) async {
     try {
-      var settings = await getConversationSettings(conversationId, userId);
+      ConversationSettings settings = await getConversationSettings(conversationId, userId);
       if (!settings.pinnedMemberIds.contains(memberId)) {
         settings = settings.copyWith(
           pinnedMemberIds: [...settings.pinnedMemberIds, memberId],
@@ -753,7 +753,7 @@ class FirebaseAdvancedMessagingService implements AdvancedMessagingService {
     String memberId,
   ) async {
     try {
-      var settings = await getConversationSettings(conversationId, userId);
+      ConversationSettings settings = await getConversationSettings(conversationId, userId);
       settings = settings.copyWith(
         pinnedMemberIds: settings.pinnedMemberIds
             .where((id) => id != memberId)
@@ -1110,7 +1110,7 @@ class StubAdvancedMessagingService implements AdvancedMessagingService {
     int startHour,
     int endHour,
   ) async {
-    var settings = await getConversationSettings(conversationId, userId);
+    ConversationSettings settings = await getConversationSettings(conversationId, userId);
     settings = settings.copyWith(
       notificationQuietHoursStart: startHour,
       notificationQuietHoursEnd: endHour,
@@ -1124,7 +1124,7 @@ class StubAdvancedMessagingService implements AdvancedMessagingService {
     String userId,
     String memberId,
   ) async {
-    var settings = await getConversationSettings(conversationId, userId);
+    ConversationSettings settings = await getConversationSettings(conversationId, userId);
     if (!settings.pinnedMemberIds.contains(memberId)) {
       settings = settings.copyWith(
         pinnedMemberIds: [...settings.pinnedMemberIds, memberId],

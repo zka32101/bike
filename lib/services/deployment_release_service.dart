@@ -653,7 +653,7 @@ class DeploymentRepositoryImpl implements DeploymentRepository {
 
   @override
   Future<List<Deployment>> getDeploymentsByFilter(DeploymentFilter filter) async {
-    var deployments = _storage['deployments']!.values.map(_mapToDeployment).toList();
+    List<Deployment> deployments = _storage['deployments']!.values.map(_mapToDeployment).toList();
     
     if (filter.status != null) {
       deployments = deployments.where((d) => d.status == filter.status).toList();

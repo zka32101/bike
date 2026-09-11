@@ -899,7 +899,7 @@ class StubMediaMessagingService implements MediaMessagingService {
     MediaType? filterType,
     int limit = 50,
   }) async {
-    var filtered = _sharedMedia.values
+    List<SharedMedia> filtered = _sharedMedia.values
         .where((media) => media.conversationId == conversationId)
         .toList();
 
@@ -965,7 +965,7 @@ class StubMediaMessagingService implements MediaMessagingService {
   Future<void> updateCallStatus(String callId, CallStatus status) async {
     final call = _calls[callId];
     if (call != null) {
-      var updatedCall = call.copyWith(status: status);
+      VoiceCall updatedCall = call.copyWith(status: status);
 
       if (status == CallStatus.active) {
         updatedCall = updatedCall.copyWith(

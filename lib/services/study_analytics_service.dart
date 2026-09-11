@@ -59,9 +59,9 @@ class DefaultStudyAnalyticsService implements StudyAnalyticsService {
     final byDay = <DateTime, _DailyAccumulator>{};
     final dailyQuestionSamples = <String, List<String>>{};
 
-    var totalAttempts = 0;
-    var totalCorrect = 0;
-    var orphanCount = 0;
+    int totalAttempts = 0;
+    int totalCorrect = 0;
+    int orphanCount = 0;
 
     // 単一パスで全ログを集計
     for (final log in logs) {

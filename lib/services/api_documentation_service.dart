@@ -576,7 +576,7 @@ class MemorySdkGeneratorService implements SdkGeneratorService {
     String template,
     Map<String, dynamic> context,
   ) async {
-    var result = template;
+    String result = template;
     context.forEach((key, value) {
       result = result.replaceAll('{{$key}}', value.toString());
     });

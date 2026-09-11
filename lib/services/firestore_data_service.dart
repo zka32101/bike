@@ -96,7 +96,7 @@ class FirestoreDataService implements DataService {
 
   @override
   Future<List<UserAnswerLog>> loadAnswerLogs(String uid, {DateTime? since}) async {
-    var query = _firestore
+    Query<Map<String, dynamic>> query = _firestore
         .collection(_usersCollection)
         .doc(uid)
         .collection(_answerLogsSubcollection)

@@ -766,7 +766,7 @@ class InMemoryHRRepository implements HRRepository {
   @override
   Future<OrgChart?> getLatestOrgChart() async {
     if (_orgCharts.isEmpty) return null;
-    var latest = _orgCharts.values.first;
+    OrgChart latest = _orgCharts.values.first;
     for (final chart in _orgCharts.values) {
       if (chart.lastUpdatedDate.isAfter(latest.lastUpdatedDate)) {
         latest = chart;

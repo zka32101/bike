@@ -176,7 +176,7 @@ class ObservabilityRepositoryImpl implements ObservabilityRepository {
 
   @override
   Future<List<Trace>> getTracesByFilter(ObservabilityFilter filter) async {
-    var traces = _storage['traces']!.values.map(_mapToTrace).toList();
+    List<Trace> traces = _storage['traces']!.values.map(_mapToTrace).toList();
     if (filter.serviceName != null) {
       traces = traces.where((t) => t.serviceName == filter.serviceName).toList();
     }
