@@ -605,9 +605,9 @@ class PatternEngine {
   }
 }
 
-class AlertEngine {
+class AnalyticsAlertEngine {
   final AnalyticsRepository repository;
-  AlertEngine(this.repository);
+  AnalyticsAlertEngine(this.repository);
 
   Future<void> resolveAlert(String alertId) async {
     final alert = await repository.getAlertById(alertId);
@@ -641,14 +641,14 @@ class AnalyticsManager {
   late final PredictionEngine predictionEngine;
   late final AnomalyEngine anomalyEngine;
   late final PatternEngine patternEngine;
-  late final AlertEngine alertEngine;
+  late final AnalyticsAlertEngine alertEngine;
   late final FraudEngine fraudEngine;
 
   AnalyticsManager(this.repository) {
     predictionEngine = PredictionEngine(repository);
     anomalyEngine = AnomalyEngine(repository);
     patternEngine = PatternEngine(repository);
-    alertEngine = AlertEngine(repository);
+    alertEngine = AnalyticsAlertEngine(repository);
     fraudEngine = FraudEngine(repository);
   }
 }

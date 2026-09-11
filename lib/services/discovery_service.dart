@@ -382,10 +382,10 @@ class MetricsCollectionEngine {
   }
 }
 
-class AlertEngine {
+class DiscoveryAlertEngine {
   final DiscoveryRepository repository;
 
-  AlertEngine(this.repository);
+  DiscoveryAlertEngine(this.repository);
 
   Future<void> createAlert(
     String instanceId,
@@ -427,13 +427,13 @@ class DiscoveryManager {
   late final HealthCheckEngine healthEngine;
   late final ServiceDiscoveryEngine discoveryEngine;
   late final MetricsCollectionEngine metricsEngine;
-  late final AlertEngine alertEngine;
+  late final DiscoveryAlertEngine alertEngine;
 
   DiscoveryManager(this.repository) {
     healthEngine = HealthCheckEngine(repository);
     discoveryEngine = ServiceDiscoveryEngine(repository);
     metricsEngine = MetricsCollectionEngine(repository);
-    alertEngine = AlertEngine(repository);
+    alertEngine = DiscoveryAlertEngine(repository);
   }
 }
 
