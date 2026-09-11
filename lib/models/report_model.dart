@@ -1,8 +1,3 @@
-import 'package:freezed_annotation/freezed_annotation.dart';
-
-part 'report_model.freezed.dart';
-part 'report_model.g.dart';
-
 /// レポート生成・エクスポートシステムのデータモデル
 
 // ============================================================================
@@ -10,45 +5,61 @@ part 'report_model.g.dart';
 // ============================================================================
 
 /// レポートテンプレート
-@freezed
-class ReportTemplate with _$ReportTemplate {
-  const factory ReportTemplate({
-    required String id,
-    required String name,
-    required String description,
-    required String category, // 'student', 'class', 'institution'
-    required List<String> includedMetrics, // 含まれるメトリクス
-    required String defaultFormat, // 'pdf', 'csv', 'excel', 'json'
-    required Map<String, dynamic> templateConfig, // テンプレート設定
-    DateTime? createdAt,
-    DateTime? updatedAt,
-    bool? isCustom, // ユーザーカスタムテンプレート
-  }) = _ReportTemplate;
+class ReportTemplate {
+  final String id;
+  final String name;
+  final String description;
+  final String category;
+  final List<String> includedMetrics;
+  final String defaultFormat;
+  final Map<String, dynamic> templateConfig;
+  final DateTime? createdAt;
+  final DateTime? updatedAt;
+  final bool? isCustom;
 
-  factory ReportTemplate.fromJson(Map<String, dynamic> json) =>
-      _$ReportTemplateFromJson(json);
+  ReportTemplate({
+    required this.id,
+    required this.name,
+    required this.description,
+    required this.category,
+    required this.includedMetrics,
+    required this.defaultFormat,
+    required this.templateConfig,
+    this.createdAt,
+    this.updatedAt,
+    this.isCustom,
+  });
 }
 
 /// レポート設定（フィルタ・期間・フォーマット）
-@freezed
-class ReportConfig with _$ReportConfig {
-  const factory ReportConfig({
-    required String id,
-    required String templateId,
-    required String reportType, // 'student_progress', 'class_performance', 'cohort_analysis'
-    required String format, // 'pdf', 'csv', 'excel', 'json'
-    required DateTime startDate,
-    required DateTime endDate,
-    Map<String, dynamic>? filters, // フィルタ条件
-    List<String>? includedFields, // 含めるフィールド
-    bool? includeCharts, // グラフ含否
-    bool? includeSummary, // 概要ページ含否
-    String? timezone, // タイムゾーン
-    DateTime? createdAt,
-  }) = _ReportConfig;
+class ReportConfig {
+  final String id;
+  final String templateId;
+  final String reportType;
+  final String format;
+  final DateTime startDate;
+  final DateTime endDate;
+  final Map<String, dynamic>? filters;
+  final List<String>? includedFields;
+  final bool? includeCharts;
+  final bool? includeSummary;
+  final String? timezone;
+  final DateTime? createdAt;
 
-  factory ReportConfig.fromJson(Map<String, dynamic> json) =>
-      _$ReportConfigFromJson(json);
+  ReportConfig({
+    required this.id,
+    required this.templateId,
+    required this.reportType,
+    required this.format,
+    required this.startDate,
+    required this.endDate,
+    this.filters,
+    this.includedFields,
+    this.includeCharts,
+    this.includeSummary,
+    this.timezone,
+    this.createdAt,
+  });
 }
 
 // ============================================================================
@@ -56,57 +67,85 @@ class ReportConfig with _$ReportConfig {
 // ============================================================================
 
 /// 生成済みレポート
-@freezed
-class GeneratedReport with _$GeneratedReport {
-  const factory GeneratedReport({
-    required String id,
-    required String templateId,
-    required String reportType,
-    required String title,
-    required String description,
-    required String format,
-    required DateTime generatedAt,
-    required DateTime startDate,
-    required DateTime endDate,
-    required String contentUrl, // レポート保存先 URL
-    required double fileSizeBytes,
-    required String generatedBy, // ユーザーID
-    int? pageCount,
-    int? recordCount, // レコード数
-    String? status, // 'pending', 'generating', 'ready', 'error'
-    String? errorMessage,
-    DateTime? expiresAt, // 有効期限
-    int? downloadCount,
-    DateTime? lastDownloadedAt,
-  }) = _GeneratedReport;
+class GeneratedReport {
+  final String id;
+  final String templateId;
+  final String reportType;
+  final String title;
+  final String description;
+  final String format;
+  final DateTime generatedAt;
+  final DateTime startDate;
+  final DateTime endDate;
+  final String contentUrl;
+  final double fileSizeBytes;
+  final String generatedBy;
+  final int? pageCount;
+  final int? recordCount;
+  final String? status;
+  final String? errorMessage;
+  final DateTime? expiresAt;
+  final int? downloadCount;
+  final DateTime? lastDownloadedAt;
 
-  factory GeneratedReport.fromJson(Map<String, dynamic> json) =>
-      _$GeneratedReportFromJson(json);
+  GeneratedReport({
+    required this.id,
+    required this.templateId,
+    required this.reportType,
+    required this.title,
+    required this.description,
+    required this.format,
+    required this.generatedAt,
+    required this.startDate,
+    required this.endDate,
+    required this.contentUrl,
+    required this.fileSizeBytes,
+    required this.generatedBy,
+    this.pageCount,
+    this.recordCount,
+    this.status,
+    this.errorMessage,
+    this.expiresAt,
+    this.downloadCount,
+    this.lastDownloadedAt,
+  });
 }
 
 /// レポート配信設定（スケジュール）
-@freezed
-class ReportDeliverySchedule with _$ReportDeliverySchedule {
-  const factory ReportDeliverySchedule({
-    required String id,
-    required String templateId,
-    required String deliveryType, // 'email', 'download', 'dashboard'
-    required String frequency, // 'daily', 'weekly', 'monthly'
-    required String dayOfWeek, // 'monday', 'tuesday'... (weeklyの場合)
-    required int dayOfMonth, // 月の日（monthlyの場合）
-    required String time, // '09:00' 形式
-    required List<String> recipientEmails,
-    required String timezone,
-    bool? isActive,
-    DateTime? startDate,
-    DateTime? endDate,
-    DateTime? createdAt,
-    DateTime? nextDeliveryAt,
-    int? totalDeliveries,
-  }) = _ReportDeliverySchedule;
+class ReportDeliverySchedule {
+  final String id;
+  final String templateId;
+  final String deliveryType;
+  final String frequency;
+  final String dayOfWeek;
+  final int dayOfMonth;
+  final String time;
+  final List<String> recipientEmails;
+  final String timezone;
+  final bool? isActive;
+  final DateTime? startDate;
+  final DateTime? endDate;
+  final DateTime? createdAt;
+  final DateTime? nextDeliveryAt;
+  final int? totalDeliveries;
 
-  factory ReportDeliverySchedule.fromJson(Map<String, dynamic> json) =>
-      _$ReportDeliveryScheduleFromJson(json);
+  ReportDeliverySchedule({
+    required this.id,
+    required this.templateId,
+    required this.deliveryType,
+    required this.frequency,
+    required this.dayOfWeek,
+    required this.dayOfMonth,
+    required this.time,
+    required this.recipientEmails,
+    required this.timezone,
+    this.isActive,
+    this.startDate,
+    this.endDate,
+    this.createdAt,
+    this.nextDeliveryAt,
+    this.totalDeliveries,
+  });
 }
 
 // ============================================================================
@@ -114,47 +153,65 @@ class ReportDeliverySchedule with _$ReportDeliverySchedule {
 // ============================================================================
 
 /// エクスポート設定
-@freezed
-class ExportConfig with _$ExportConfig {
-  const factory ExportConfig({
-    required String id,
-    required String dataType, // 'student_data', 'answers', 'analytics', 'progress'
-    required String format, // 'csv', 'excel', 'json', 'xml'
-    required DateTime startDate,
-    required DateTime endDate,
-    Map<String, dynamic>? filters,
-    List<String>? includedFields,
-    bool? includePersonalInfo, // 個人情報を含める
-    bool? maskPersonalData, // 個人情報をマスク
-    String? encryptionType, // 'none', 'aes256', 'pgp'
-    DateTime? createdAt,
-  }) = _ExportConfig;
+class ExportConfig {
+  final String id;
+  final String dataType;
+  final String format;
+  final DateTime startDate;
+  final DateTime endDate;
+  final Map<String, dynamic>? filters;
+  final List<String>? includedFields;
+  final bool? includePersonalInfo;
+  final bool? maskPersonalData;
+  final String? encryptionType;
+  final DateTime? createdAt;
 
-  factory ExportConfig.fromJson(Map<String, dynamic> json) =>
-      _$ExportConfigFromJson(json);
+  ExportConfig({
+    required this.id,
+    required this.dataType,
+    required this.format,
+    required this.startDate,
+    required this.endDate,
+    this.filters,
+    this.includedFields,
+    this.includePersonalInfo,
+    this.maskPersonalData,
+    this.encryptionType,
+    this.createdAt,
+  });
 }
 
 /// エクスポート結果
-@freezed
-class ExportResult with _$ExportResult {
-  const factory ExportResult({
-    required String id,
-    required String exportType,
-    required String format,
-    required String downloadUrl,
-    required int recordCount,
-    required double fileSizeBytes,
-    required DateTime createdAt,
-    required String status, // 'pending', 'processing', 'ready', 'error'
-    String? errorMessage,
-    DateTime? expiresAt,
-    int? downloadCount,
-    bool? isEncrypted,
-    String? encryptionKey, // クライアント側でのみ表示
-  }) = _ExportResult;
+class ExportResult {
+  final String id;
+  final String exportType;
+  final String format;
+  final String downloadUrl;
+  final int recordCount;
+  final double fileSizeBytes;
+  final DateTime createdAt;
+  final String status;
+  final String? errorMessage;
+  final DateTime? expiresAt;
+  final int? downloadCount;
+  final bool? isEncrypted;
+  final String? encryptionKey;
 
-  factory ExportResult.fromJson(Map<String, dynamic> json) =>
-      _$ExportResultFromJson(json);
+  ExportResult({
+    required this.id,
+    required this.exportType,
+    required this.format,
+    required this.downloadUrl,
+    required this.recordCount,
+    required this.fileSizeBytes,
+    required this.createdAt,
+    required this.status,
+    this.errorMessage,
+    this.expiresAt,
+    this.downloadCount,
+    this.isEncrypted,
+    this.encryptionKey,
+  });
 }
 
 // ============================================================================
@@ -162,115 +219,162 @@ class ExportResult with _$ExportResult {
 // ============================================================================
 
 /// クラス管理ビュー
-@freezed
-class ClassManagementView with _$ClassManagementView {
-  const factory ClassManagementView({
-    required String classId,
-    required String className,
-    required int totalStudents,
-    required int activeStudents,
-    required double averageScore,
-    required Map<String, int> scoreDistribution, // スコア範囲の学生数
-    required List<String> topPerformers, // 成績上位学生 ID
-    required List<String> needsSupport, // 支援が必要な学生 ID
-    required Map<String, double> categoryAverages, // カテゴリ別平均
-    required DateTime lastUpdatedAt,
-  }) = _ClassManagementView;
+class ClassManagementView {
+  final String classId;
+  final String className;
+  final int totalStudents;
+  final int activeStudents;
+  final double averageScore;
+  final Map<String, int> scoreDistribution;
+  final List<String> topPerformers;
+  final List<String> needsSupport;
+  final Map<String, double> categoryAverages;
+  final DateTime lastUpdatedAt;
 
-  factory ClassManagementView.fromJson(Map<String, dynamic> json) =>
-      _$ClassManagementViewFromJson(json);
+  ClassManagementView({
+    required this.classId,
+    required this.className,
+    required this.totalStudents,
+    required this.activeStudents,
+    required this.averageScore,
+    required this.scoreDistribution,
+    required this.topPerformers,
+    required this.needsSupport,
+    required this.categoryAverages,
+    required this.lastUpdatedAt,
+  });
 }
 
 /// 学生パフォーマンス分析（教師用）
-@freezed
-class StudentPerformanceAnalysis with _$StudentPerformanceAnalysis {
-  const factory StudentPerformanceAnalysis({
-    required String studentId,
-    required String studentName,
-    required double currentScore,
-    required double previousScore,
-    required double scoreChange, // スコア変化量
-    required String trend, // 'improving', 'declining', 'stable'
-    required int questionsAttempted,
-    required int correctAnswers,
-    required double accuracy,
-    required Map<String, double> categoryScores,
-    required List<String> weakCategories,
-    required List<String> strongCategories,
-    required DateTime lastActivityAt,
-    required String engagementLevel, // 'high', 'medium', 'low'
-    required List<String> recommendedActions,
-  }) = _StudentPerformanceAnalysis;
+class StudentPerformanceAnalysis {
+  final String studentId;
+  final String studentName;
+  final double currentScore;
+  final double previousScore;
+  final double scoreChange;
+  final String trend;
+  final int questionsAttempted;
+  final int correctAnswers;
+  final double accuracy;
+  final Map<String, double> categoryScores;
+  final List<String> weakCategories;
+  final List<String> strongCategories;
+  final DateTime lastActivityAt;
+  final String engagementLevel;
+  final List<String> recommendedActions;
 
-  factory StudentPerformanceAnalysis.fromJson(Map<String, dynamic> json) =>
-      _$StudentPerformanceAnalysisFromJson(json);
+  StudentPerformanceAnalysis({
+    required this.studentId,
+    required this.studentName,
+    required this.currentScore,
+    required this.previousScore,
+    required this.scoreChange,
+    required this.trend,
+    required this.questionsAttempted,
+    required this.correctAnswers,
+    required this.accuracy,
+    required this.categoryScores,
+    required this.weakCategories,
+    required this.strongCategories,
+    required this.lastActivityAt,
+    required this.engagementLevel,
+    required this.recommendedActions,
+  });
 }
 
 /// 掲示板（クラス内コミュニケーション）
-@freezed
-class Announcement with _$Announcement {
-  const factory Announcement({
-    required String id,
-    required String classId,
-    required String creatorId,
-    required String title,
-    required String content,
-    required DateTime createdAt,
-    DateTime? updatedAt,
-    required String priority, // 'low', 'normal', 'high'
-    required List<String> targetStudentIds, // 空=全員
-    DateTime? expiresAt,
-    int? viewCount,
-  }) = _Announcement;
+class Announcement {
+  final String id;
+  final String classId;
+  final String creatorId;
+  final String title;
+  final String content;
+  final DateTime createdAt;
+  final DateTime? updatedAt;
+  final String priority;
+  final List<String> targetStudentIds;
+  final DateTime? expiresAt;
+  final int? viewCount;
 
-  factory Announcement.fromJson(Map<String, dynamic> json) =>
-      _$AnnouncementFromJson(json);
+  Announcement({
+    required this.id,
+    required this.classId,
+    required this.creatorId,
+    required this.title,
+    required this.content,
+    required this.createdAt,
+    this.updatedAt,
+    required this.priority,
+    required this.targetStudentIds,
+    this.expiresAt,
+    this.viewCount,
+  });
 }
 
 /// 課題・アサインメント
-@freezed
-class Assignment with _$Assignment {
-  const factory Assignment({
-    required String id,
-    required String classId,
-    required String creatorId,
-    required String title,
-    required String description,
-    required DateTime dueDate,
-    required List<String> assignedStudentIds,
-    required String category, // 'practice', 'test', 'project'
-    required int estimatedMinutes,
-    DateTime? createdAt,
-    Map<String, dynamic>? rubric, // 評価基準
-    List<String>? resourceUrls,
-    bool? allowLateSubmission,
-    int? lateSubmissionPenaltyPercent,
-  }) = _Assignment;
+class Assignment {
+  final String id;
+  final String classId;
+  final String creatorId;
+  final String title;
+  final String description;
+  final DateTime dueDate;
+  final List<String> assignedStudentIds;
+  final String category;
+  final int estimatedMinutes;
+  final DateTime? createdAt;
+  final Map<String, dynamic>? rubric;
+  final List<String>? resourceUrls;
+  final bool? allowLateSubmission;
+  final int? lateSubmissionPenaltyPercent;
 
-  factory Assignment.fromJson(Map<String, dynamic> json) =>
-      _$AssignmentFromJson(json);
+  Assignment({
+    required this.id,
+    required this.classId,
+    required this.creatorId,
+    required this.title,
+    required this.description,
+    required this.dueDate,
+    required this.assignedStudentIds,
+    required this.category,
+    required this.estimatedMinutes,
+    this.createdAt,
+    this.rubric,
+    this.resourceUrls,
+    this.allowLateSubmission,
+    this.lateSubmissionPenaltyPercent,
+  });
 }
 
 /// 採点・フィードバック
-@freezed
-class GradingFeedback with _$GradingFeedback {
-  const factory GradingFeedback({
-    required String id,
-    required String assignmentId,
-    required String studentId,
-    required double score,
-    required String scoreOutOf, // 例: "10"
-    required String feedbackText,
-    required DateTime submittedAt,
-    required DateTime gradedAt,
-    required String gradedBy, // 教師 ID
-    List<String>? attachmentUrls, // フィードバック添付資料
-    bool? isPublished,
-    DateTime? publishedAt,
-  }) = _GradingFeedback;
+class GradingFeedback {
+  final String id;
+  final String assignmentId;
+  final String studentId;
+  final double score;
+  final String scoreOutOf;
+  final String feedbackText;
+  final DateTime submittedAt;
+  final DateTime gradedAt;
+  final String gradedBy;
+  final List<String>? attachmentUrls;
+  final bool? isPublished;
+  final DateTime? publishedAt;
 
-  factory GradingFeedback.fromJson(Map<String, dynamic> json) =>
-      _$GradingFeedbackFromJson(json);
+  GradingFeedback({
+    required this.id,
+    required this.assignmentId,
+    required this.studentId,
+    required this.score,
+    required this.scoreOutOf,
+    required this.feedbackText,
+    required this.submittedAt,
+    required this.gradedAt,
+    required this.gradedBy,
+    this.attachmentUrls,
+    this.isPublished,
+    this.publishedAt,
+  });
 }
 
 // ============================================================================
@@ -278,63 +382,86 @@ class GradingFeedback with _$GradingFeedback {
 // ============================================================================
 
 /// コホート分析（学年別、入学日別の比較）
-@freezed
-class CohortAnalysis with _$CohortAnalysis {
-  const factory CohortAnalysis({
-    required String id,
-    required String cohortName,
-    required String cohortType, // 'enrollment_date', 'grade', 'program'
-    required int totalStudents,
-    required double averageScore,
-    required double medianScore,
-    required double stdDeviation,
-    required Map<String, int> scoreDistribution,
-    required Map<String, double> categoryAverages,
-    required double completionRate,
-    required double passRate,
-    required DateTime generatedAt,
-    required int percentileRank, // 他のコホートに対する百分位数
-  }) = _CohortAnalysis;
+class CohortAnalysis {
+  final String id;
+  final String cohortName;
+  final String cohortType;
+  final int totalStudents;
+  final double averageScore;
+  final double medianScore;
+  final double stdDeviation;
+  final Map<String, int> scoreDistribution;
+  final Map<String, double> categoryAverages;
+  final double completionRate;
+  final double passRate;
+  final DateTime generatedAt;
+  final int percentileRank;
 
-  factory CohortAnalysis.fromJson(Map<String, dynamic> json) =>
-      _$CohortAnalysisFromJson(json);
+  CohortAnalysis({
+    required this.id,
+    required this.cohortName,
+    required this.cohortType,
+    required this.totalStudents,
+    required this.averageScore,
+    required this.medianScore,
+    required this.stdDeviation,
+    required this.scoreDistribution,
+    required this.categoryAverages,
+    required this.completionRate,
+    required this.passRate,
+    required this.generatedAt,
+    required this.percentileRank,
+  });
 }
 
 /// 修了予定日・脱落リスク予測
-@freezed
-class CompletionPrediction with _$CompletionPrediction {
-  const factory CompletionPrediction({
-    required String studentId,
-    required DateTime estimatedCompletionDate,
-    required int estimatedDaysRemaining,
-    required double completionLikelihood, // 0-100%
-    required String riskLevel, // 'low', 'medium', 'high'
-    required List<String> riskFactors,
-    required List<String> positiveFactors,
-    required String recommendedAction, // 取るべき行動
-    required DateTime predictedAt,
-  }) = _CompletionPrediction;
+class CompletionPrediction {
+  final String studentId;
+  final DateTime estimatedCompletionDate;
+  final int estimatedDaysRemaining;
+  final double completionLikelihood;
+  final String riskLevel;
+  final List<String> riskFactors;
+  final List<String> positiveFactors;
+  final String recommendedAction;
+  final DateTime predictedAt;
 
-  factory CompletionPrediction.fromJson(Map<String, dynamic> json) =>
-      _$CompletionPredictionFromJson(json);
+  CompletionPrediction({
+    required this.studentId,
+    required this.estimatedCompletionDate,
+    required this.estimatedDaysRemaining,
+    required this.completionLikelihood,
+    required this.riskLevel,
+    required this.riskFactors,
+    required this.positiveFactors,
+    required this.recommendedAction,
+    required this.predictedAt,
+  });
 }
 
 /// ベンチマーク分析（機関内外の比較）
-@freezed
-class BenchmarkAnalysis with _$BenchmarkAnalysis {
-  const factory BenchmarkAnalysis({
-    required String id,
-    required String institutionId,
-    required double institutionAverage,
-    required double nationalAverage,
-    required double regionAverage,
-    required double performanceDifference, // 機関 - 国家平均
-    required String performanceRating, // 'below_average', 'average', 'above_average', 'exceptional'
-    required Map<String, double> categoryComparison,
-    required int percentilRank, // 他機関に対する百分位数
-    required DateTime analyzeDate,
-  }) = _BenchmarkAnalysis;
+class BenchmarkAnalysis {
+  final String id;
+  final String institutionId;
+  final double institutionAverage;
+  final double nationalAverage;
+  final double regionAverage;
+  final double performanceDifference;
+  final String performanceRating;
+  final Map<String, double> categoryComparison;
+  final int percentilRank;
+  final DateTime analyzeDate;
 
-  factory BenchmarkAnalysis.fromJson(Map<String, dynamic> json) =>
-      _$BenchmarkAnalysisFromJson(json);
+  BenchmarkAnalysis({
+    required this.id,
+    required this.institutionId,
+    required this.institutionAverage,
+    required this.nationalAverage,
+    required this.regionAverage,
+    required this.performanceDifference,
+    required this.performanceRating,
+    required this.categoryComparison,
+    required this.percentilRank,
+    required this.analyzeDate,
+  });
 }

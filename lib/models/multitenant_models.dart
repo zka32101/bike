@@ -1,8 +1,5 @@
 /// Phase 84: Multi-Tenant Architecture & Isolation System
 /// Core domain models for multi-tenant application management
-library multitenant_models;
-
-part 'enums/multitenant_enums.dart';
 
 // ============================================================================
 // ENUMS (6 total)

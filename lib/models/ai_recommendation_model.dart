@@ -1,8 +1,3 @@
-import 'package:freezed_annotation/freezed_annotation.dart';
-
-part 'ai_recommendation_model.freezed.dart';
-part 'ai_recommendation_model.g.dart';
-
 /// AI推奨ロジックのデータモデル集合
 /// 適応的学習パスと個別最適化学習を支える
 
@@ -11,62 +6,82 @@ part 'ai_recommendation_model.g.dart';
 // ============================================================================
 
 /// 学習パス要素（単一の学習ステップ）
-@freezed
-class LearningPathElement with _$LearningPathElement {
-  const factory LearningPathElement({
-    required String id,
-    required String questionId,
-    required String categoryId,
-    required String subcategoryId,
-    required int difficulty, // 1-5 (1=簡単, 5=難しい)
-    required String rationale, // なぜこの問題を推奨したのか
-    required DateTime recommendedAt,
-    DateTime? completedAt,
-    bool? passed, // null=未実施, true=正解, false=不正解
-  }) = _LearningPathElement;
+class LearningPathElement {
+  final String id;
+  final String questionId;
+  final String categoryId;
+  final String subcategoryId;
+  final int difficulty;
+  final String rationale;
+  final DateTime recommendedAt;
+  final DateTime? completedAt;
+  final bool? passed;
 
-  factory LearningPathElement.fromJson(Map<String, dynamic> json) =>
-      _$LearningPathElementFromJson(json);
+  LearningPathElement({
+    required this.id,
+    required this.questionId,
+    required this.categoryId,
+    required this.subcategoryId,
+    required this.difficulty,
+    required this.rationale,
+    required this.recommendedAt,
+    this.completedAt,
+    this.passed,
+  });
 }
 
 /// 適応的学習パス（学生ごとの個別学習経路）
-@freezed
-class AdaptiveLearningPath with _$AdaptiveLearningPath {
-  const factory AdaptiveLearningPath({
-    required String studentId,
-    required List<LearningPathElement> elements,
-    required DateTime generatedAt,
-    required String generationReason, // パス生成の根拠
-    required double estimatedCompletionTime, // 時間（時間単位）
-    int? currentElementIndex,
-    bool? isActive,
-  }) = _AdaptiveLearningPath;
+class AdaptiveLearningPath {
+  final String studentId;
+  final List<LearningPathElement> elements;
+  final DateTime generatedAt;
+  final String generationReason;
+  final double estimatedCompletionTime;
+  final int? currentElementIndex;
+  final bool? isActive;
 
-  factory AdaptiveLearningPath.fromJson(Map<String, dynamic> json) =>
-      _$AdaptiveLearningPathFromJson(json);
+  AdaptiveLearningPath({
+    required this.studentId,
+    required this.elements,
+    required this.generatedAt,
+    required this.generationReason,
+    required this.estimatedCompletionTime,
+    this.currentElementIndex,
+    this.isActive,
+  });
 }
 
 /// 学習推奨（特定のトピックや学習方法の推奨）
-@freezed
-class LearningRecommendation with _$LearningRecommendation {
-  const factory LearningRecommendation({
-    required String id,
-    required String studentId,
-    required String type, // 'focus_area', 'review', 'skip', 'group_study'
-    required String contentId, // カテゴリID等
-    required String contentTitle,
-    required String description,
-    required int priority, // 1-10 (10=最優先)
-    required double effectScore, // この推奨の効果スコア 0-100
-    required String reason, // 推奨理由の説明
-    DateTime? createdAt,
-    DateTime? acceptedAt,
-    DateTime? completedAt,
-    double? userRating, // ユーザーによる評価 0-5
-  }) = _LearningRecommendation;
+class LearningRecommendation {
+  final String id;
+  final String studentId;
+  final String type;
+  final String contentId;
+  final String contentTitle;
+  final String description;
+  final int priority;
+  final double effectScore;
+  final String reason;
+  final DateTime? createdAt;
+  final DateTime? acceptedAt;
+  final DateTime? completedAt;
+  final double? userRating;
 
-  factory LearningRecommendation.fromJson(Map<String, dynamic> json) =>
-      _$LearningRecommendationFromJson(json);
+  LearningRecommendation({
+    required this.id,
+    required this.studentId,
+    required this.type,
+    required this.contentId,
+    required this.contentTitle,
+    required this.description,
+    required this.priority,
+    required this.effectScore,
+    required this.reason,
+    this.createdAt,
+    this.acceptedAt,
+    this.completedAt,
+    this.userRating,
+  });
 }
 
 // ============================================================================
@@ -74,32 +89,35 @@ class LearningRecommendation with _$LearningRecommendation {
 // ============================================================================
 
 /// 難度調整エンジンの状態
-@freezed
-class DifficultyAdjustment with _$DifficultyAdjustment {
-  const factory DifficultyAdjustment({
-    required String studentId,
-    required Map<String, DifficultyLevel> categoryLevels,
-    required DateTime lastAdjustedAt,
-    required String adjustmentStrategy, // 'aggressive', 'moderate', 'conservative'
-  }) = _DifficultyAdjustment;
+class DifficultyAdjustment {
+  final String studentId;
+  final Map<String, DifficultyLevel> categoryLevels;
+  final DateTime lastAdjustedAt;
+  final String adjustmentStrategy;
 
-  factory DifficultyAdjustment.fromJson(Map<String, dynamic> json) =>
-      _$DifficultyAdjustmentFromJson(json);
+  DifficultyAdjustment({
+    required this.studentId,
+    required this.categoryLevels,
+    required this.lastAdjustedAt,
+    required this.adjustmentStrategy,
+  });
 }
 
 /// カテゴリごとの難度レベル
-@freezed
-class DifficultyLevel with _$DifficultyLevel {
-  const factory DifficultyLevel({
-    required String categoryId,
-    required int currentLevel, // 1-5
-    required double accuracyRate, // 現在の正答率
-    required int questionCount, // 実施問題数
-    required DateTime lastUpdatedAt,
-  }) = _DifficultyLevel;
+class DifficultyLevel {
+  final String categoryId;
+  final int currentLevel;
+  final double accuracyRate;
+  final int questionCount;
+  final DateTime lastUpdatedAt;
 
-  factory DifficultyLevel.fromJson(Map<String, dynamic> json) =>
-      _$DifficultyLevelFromJson(json);
+  DifficultyLevel({
+    required this.categoryId,
+    required this.currentLevel,
+    required this.accuracyRate,
+    required this.questionCount,
+    required this.lastUpdatedAt,
+  });
 }
 
 // ============================================================================
@@ -107,38 +125,47 @@ class DifficultyLevel with _$DifficultyLevel {
 // ============================================================================
 
 /// 学習効果予測
-@freezed
-class LearningEffectPrediction with _$LearningEffectPrediction {
-  const factory LearningEffectPrediction({
-    required String studentId,
-    required double passLikelihood, // 合格可能性 0-100%
-    required double estimatedDaysToCompletion, // 修了予定日数
-    required double estimatedHoursToCompletion, // 修了予定時間
-    required String completionStatus, // 'on_track', 'at_risk', 'slow', 'fast'
-    required List<String> riskFactors, // 脱落リスク要因
-    required List<String> successFactors, // 成功要因
-    required DateTime generatedAt,
-    required double confidenceScore, // 予測の信頼度 0-100%
-  }) = _LearningEffectPrediction;
+class LearningEffectPrediction {
+  final String studentId;
+  final double passLikelihood;
+  final double estimatedDaysToCompletion;
+  final double estimatedHoursToCompletion;
+  final String completionStatus;
+  final List<String> riskFactors;
+  final List<String> successFactors;
+  final DateTime generatedAt;
+  final double confidenceScore;
 
-  factory LearningEffectPrediction.fromJson(Map<String, dynamic> json) =>
-      _$LearningEffectPredictionFromJson(json);
+  LearningEffectPrediction({
+    required this.studentId,
+    required this.passLikelihood,
+    required this.estimatedDaysToCompletion,
+    required this.estimatedHoursToCompletion,
+    required this.completionStatus,
+    required this.riskFactors,
+    required this.successFactors,
+    required this.generatedAt,
+    required this.confidenceScore,
+  });
 }
 
 /// 脱落リスク検出
-@freezed
-class DropoutRiskDetection with _$DropoutRiskDetection {
-  const factory DropoutRiskDetection({
-    required String studentId,
-    required double riskScore, // 0-100 (100=最高リスク)
-    required List<String> riskIndicators, // リスク指標のリスト
-    required String riskLevel, // 'low', 'medium', 'high', 'critical'
-    required List<String> interventionSuggestions, // 介入提案
-    required DateTime detectedAt,
-  }) = _DropoutRiskDetection;
+class DropoutRiskDetection {
+  final String studentId;
+  final double riskScore;
+  final List<String> riskIndicators;
+  final String riskLevel;
+  final List<String> interventionSuggestions;
+  final DateTime detectedAt;
 
-  factory DropoutRiskDetection.fromJson(Map<String, dynamic> json) =>
-      _$DropoutRiskDetectionFromJson(json);
+  DropoutRiskDetection({
+    required this.studentId,
+    required this.riskScore,
+    required this.riskIndicators,
+    required this.riskLevel,
+    required this.interventionSuggestions,
+    required this.detectedAt,
+  });
 }
 
 // ============================================================================
@@ -146,38 +173,47 @@ class DropoutRiskDetection with _$DropoutRiskDetection {
 // ============================================================================
 
 /// スタック検出（成長停滞）
-@freezed
-class StuckDetection with _$StuckDetection {
-  const factory StuckDetection({
-    required String studentId,
-    required String categoryId,
-    required int dayCount, // 停滞日数
-    required double accuracyRate, // 停滞中の正答率
-    required int problemCount, // 実施問題数
-    required DateTime detectedAt,
-    required List<String> suggestedInterventions,
-  }) = _StuckDetection;
+class StuckDetection {
+  final String studentId;
+  final String categoryId;
+  final int dayCount;
+  final double accuracyRate;
+  final int problemCount;
+  final DateTime detectedAt;
+  final List<String> suggestedInterventions;
 
-  factory StuckDetection.fromJson(Map<String, dynamic> json) =>
-      _$StuckDetectionFromJson(json);
+  StuckDetection({
+    required this.studentId,
+    required this.categoryId,
+    required this.dayCount,
+    required this.accuracyRate,
+    required this.problemCount,
+    required this.detectedAt,
+    required this.suggestedInterventions,
+  });
 }
 
 /// 代替学習法提案
-@freezed
-class AlternativeLearningMethod with _$AlternativeLearningMethod {
-  const factory AlternativeLearningMethod({
-    required String id,
-    required String studentId,
-    required String categoryId,
-    required String methodType, // 'video', 'explanation', 'practice_intensive', 'groupwork'
-    required String description,
-    required double expectedEffectiveness, // 0-100%
-    required String reason,
-    DateTime? suggestedAt,
-  }) = _AlternativeLearningMethod;
+class AlternativeLearningMethod {
+  final String id;
+  final String studentId;
+  final String categoryId;
+  final String methodType;
+  final String description;
+  final double expectedEffectiveness;
+  final String reason;
+  final DateTime? suggestedAt;
 
-  factory AlternativeLearningMethod.fromJson(Map<String, dynamic> json) =>
-      _$AlternativeLearningMethodFromJson(json);
+  AlternativeLearningMethod({
+    required this.id,
+    required this.studentId,
+    required this.categoryId,
+    required this.methodType,
+    required this.description,
+    required this.expectedEffectiveness,
+    required this.reason,
+    this.suggestedAt,
+  });
 }
 
 // ============================================================================
@@ -185,20 +221,24 @@ class AlternativeLearningMethod with _$AlternativeLearningMethod {
 // ============================================================================
 
 /// 復習予定
-@freezed
-class ReviewSchedule with _$ReviewSchedule {
-  const factory ReviewSchedule({
-    required String studentId,
-    required String questionId,
-    required DateTime nextReviewDate,
-    required int reviewCount, // これまでの復習回数
-    required String interval, // '1day', '3days', '1week', '2weeks', '1month'
-    required double retentionRate, // 保持率 0-100%
-    DateTime? lastReviewedAt,
-  }) = _ReviewSchedule;
+class ReviewSchedule {
+  final String studentId;
+  final String questionId;
+  final DateTime nextReviewDate;
+  final int reviewCount;
+  final String interval;
+  final double retentionRate;
+  final DateTime? lastReviewedAt;
 
-  factory ReviewSchedule.fromJson(Map<String, dynamic> json) =>
-      _$ReviewScheduleFromJson(json);
+  ReviewSchedule({
+    required this.studentId,
+    required this.questionId,
+    required this.nextReviewDate,
+    required this.reviewCount,
+    required this.interval,
+    required this.retentionRate,
+    this.lastReviewedAt,
+  });
 }
 
 // ============================================================================
@@ -206,40 +246,51 @@ class ReviewSchedule with _$ReviewSchedule {
 // ============================================================================
 
 /// スタディグループマッチング情報
-@freezed
-class StudyGroupMatch with _$StudyGroupMatch {
-  const factory StudyGroupMatch({
-    required String studentId,
-    required List<String> suggestedPeerIds, // マッチング対象の学生ID
-    required List<String> suggestedTopics, // グループ学習が効果的な単元
-    required double compatibilityScore, // マッチング度 0-100%
-    required String reason, // マッチング理由
-    required DateTime generatedAt,
-  }) = _StudyGroupMatch;
+class StudyGroupMatch {
+  final String studentId;
+  final List<String> suggestedPeerIds;
+  final List<String> suggestedTopics;
+  final double compatibilityScore;
+  final String reason;
+  final DateTime generatedAt;
 
-  factory StudyGroupMatch.fromJson(Map<String, dynamic> json) =>
-      _$StudyGroupMatchFromJson(json);
+  StudyGroupMatch({
+    required this.studentId,
+    required this.suggestedPeerIds,
+    required this.suggestedTopics,
+    required this.compatibilityScore,
+    required this.reason,
+    required this.generatedAt,
+  });
 }
 
 /// グループ学習セッション
-@freezed
-class GroupLearningSession with _$GroupLearningSession {
-  const factory GroupLearningSession({
-    required String id,
-    required List<String> studentIds,
-    required String topicId,
-    required String topicName,
-    required DateTime scheduledAt,
-    DateTime? startedAt,
-    DateTime? completedAt,
-    required int estimatedDurationMinutes,
-    List<String>? resourceUrls,
-    String? outcome, // 'completed', 'in_progress', 'cancelled'
-    Map<String, double>? studentScores, // 学生ごとのスコア
-  }) = _GroupLearningSession;
+class GroupLearningSession {
+  final String id;
+  final List<String> studentIds;
+  final String topicId;
+  final String topicName;
+  final DateTime scheduledAt;
+  final DateTime? startedAt;
+  final DateTime? completedAt;
+  final int estimatedDurationMinutes;
+  final List<String>? resourceUrls;
+  final String? outcome;
+  final Map<String, double>? studentScores;
 
-  factory GroupLearningSession.fromJson(Map<String, dynamic> json) =>
-      _$GroupLearningSessionFromJson(json);
+  GroupLearningSession({
+    required this.id,
+    required this.studentIds,
+    required this.topicId,
+    required this.topicName,
+    required this.scheduledAt,
+    this.startedAt,
+    this.completedAt,
+    required this.estimatedDurationMinutes,
+    this.resourceUrls,
+    this.outcome,
+    this.studentScores,
+  });
 }
 
 // ============================================================================
@@ -247,38 +298,49 @@ class GroupLearningSession with _$GroupLearningSession {
 // ============================================================================
 
 /// ピア比較情報
-@freezed
-class PeerComparison with _$PeerComparison {
-  const factory PeerComparison({
-    required String studentId,
-    required double studentScore,
-    required double cohortAverage,
-    required double cohortMedian,
-    required int percentileRank, // 0-100
-    required int cohortSize,
-    required String performanceLevel, // 'top_10%', 'above_average', 'average', 'below_average', 'needs_support'
-    required List<String> strengths, // 強み
-    required List<String> improvementAreas, // 改善エリア
-    required DateTime generatedAt,
-  }) = _PeerComparison;
+class PeerComparison {
+  final String studentId;
+  final double studentScore;
+  final double cohortAverage;
+  final double cohortMedian;
+  final int percentileRank;
+  final int cohortSize;
+  final String performanceLevel;
+  final List<String> strengths;
+  final List<String> improvementAreas;
+  final DateTime generatedAt;
 
-  factory PeerComparison.fromJson(Map<String, dynamic> json) =>
-      _$PeerComparisonFromJson(json);
+  PeerComparison({
+    required this.studentId,
+    required this.studentScore,
+    required this.cohortAverage,
+    required this.cohortMedian,
+    required this.percentileRank,
+    required this.cohortSize,
+    required this.performanceLevel,
+    required this.strengths,
+    required this.improvementAreas,
+    required this.generatedAt,
+  });
 }
 
 /// 励まし・モチベーションメッセージ
-@freezed
-class MotivationalInsight with _$MotivationalInsight {
-  const factory MotivationalInsight({
-    required String id,
-    required String studentId,
-    required String messageType, // 'achievement', 'encouragement', 'milestone', 'comparison'
-    required String message,
-    required String actionCTA, // Call-to-Action テキスト
-    required DateTime generatedAt,
-    DateTime? viewedAt,
-  }) = _MotivationalInsight;
+class MotivationalInsight {
+  final String id;
+  final String studentId;
+  final String messageType;
+  final String message;
+  final String actionCTA;
+  final DateTime generatedAt;
+  final DateTime? viewedAt;
 
-  factory MotivationalInsight.fromJson(Map<String, dynamic> json) =>
-      _$MotivationalInsightFromJson(json);
+  MotivationalInsight({
+    required this.id,
+    required this.studentId,
+    required this.messageType,
+    required this.message,
+    required this.actionCTA,
+    required this.generatedAt,
+    this.viewedAt,
+  });
 }
