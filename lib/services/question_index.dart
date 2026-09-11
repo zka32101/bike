@@ -31,7 +31,7 @@ class QuestionMeta {
     difficulty: question.difficulty,
     isTrapQuestion: question.isTrapQuestion,
     trapNumberType: question.trapNumberType,
-    topicTag: null, // TODO: Questionモデルに topicTag フィールドを追加後、ここで取得
+    topicTag: question.topicTag,
   );
 }
 

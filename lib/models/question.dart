@@ -22,6 +22,7 @@ class Question {
     required this.explanation,
     this.isTrapQuestion = false,
     this.trapNumberType = TrapNumberType.none,
+    this.topicTag,
   }) : assert(choices.length >= 2, 'choices must have at least 2 options'),
        assert(
          answer >= 0 && answer < choices.length,
@@ -52,6 +53,9 @@ class Question {
   /// ひっかけの種類（isTrapQuestion=true のときのみ意味を持つ）。
   final TrapNumberType trapNumberType;
 
+  /// トピックタグ（学習パスの個別最適化に使用）。
+  final String? topicTag;
+
   factory Question.fromJson(Map<String, dynamic> json) {
     return Question(
       id: json['id'] as String,
@@ -67,6 +71,7 @@ class Question {
         (e) => e.name == (json['trapNumberType'] as String? ?? 'none'),
         orElse: () => TrapNumberType.none,
       ),
+      topicTag: json['topicTag'] as String?,
     );
   }
 
@@ -81,5 +86,6 @@ class Question {
     'explanation': explanation,
     'isTrapQuestion': isTrapQuestion,
     'trapNumberType': trapNumberType.name,
+    'topicTag': topicTag,
   };
 }

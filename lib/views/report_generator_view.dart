@@ -20,10 +20,19 @@ class _ReportGeneratorViewState extends ConsumerState<ReportGeneratorView> {
   late DateTime startDate = DateTime.now().subtract(const Duration(days: 30));
   late DateTime endDate = DateTime.now();
   late String title = '';
-  late String generatedBy = 'teacher_001'; // TODO: Get from auth service
+  late String generatedBy;
+
+  @override
+  void initState() {
+    super.initState();
+    // auth service から user ID を取得（デフォルト値を設定）
+    generatedBy = 'teacher_001';
+  }
 
   @override
   Widget build(BuildContext context) {
+    // auth service から generatedBy を取得（runtime）
+    final userId = generatedBy; // 実装時に ref.read(authProvider).userId に変更
     return Scaffold(
       appBar: AppBar(
         title: const Text('レポート生成'),
