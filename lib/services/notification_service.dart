@@ -1,3 +1,5 @@
+import 'package:flutter/foundation.dart';
+
 import '../models/notification_models.dart';
 
 /// 通知リポジトリインターフェース
@@ -613,7 +615,6 @@ class NotificationFacade {
       isEnabled: true,
       settings: settings,
       createdAt: DateTime.now(),
-      isVerified: true,
     );
     await _repository.createChannelConfig(config);
   }
