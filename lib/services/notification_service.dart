@@ -381,7 +381,7 @@ class MemoryAlertEngine implements AlertEngine {
       occurredAt: DateTime.now(),
       message: message,
       details: details,
-      severity: alert.severity.value,
+      severity: alert.severity,
     );
     await _repository.createAlertEvent(event);
 
@@ -437,7 +437,7 @@ class MemoryAlertEngine implements AlertEngine {
       notificationChannels: alert.notificationChannels,
       createdAt: alert.createdAt,
       lastTriggeredAt: alert.lastTriggeredAt,
-      status: AlertStatus.resolved,
+      status: 'resolved',
       isEnabled: alert.isEnabled,
       triggerCount: alert.triggerCount,
     );
