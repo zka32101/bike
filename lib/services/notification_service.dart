@@ -381,8 +381,9 @@ class MemoryAlertEngine implements AlertEngine {
       eventId: 'event_${DateTime.now().millisecondsSinceEpoch}',
       alertId: alertId,
       occurredAt: DateTime.now(),
+      triggerValue: message,
       message: message,
-      details: details,
+      details: details ?? {},
       severity: alert.severity,
     );
     await _repository.createAlertEvent(event);
@@ -414,6 +415,7 @@ class MemoryAlertEngine implements AlertEngine {
       eventId: event.eventId,
       alertId: event.alertId,
       occurredAt: event.occurredAt,
+      triggerValue: event.triggerValue,
       message: event.message,
       details: event.details,
       severity: event.severity,
