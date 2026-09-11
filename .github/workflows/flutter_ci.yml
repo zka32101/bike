@@ -80,7 +80,13 @@ jobs:
       - name: Build Debug APK
         run: |
           set -o pipefail
-          flutter build apk --debug 2>&1 | tee build.log
+          flutter build apk --debug --verbose 2>&1 | tee build.log || true
+
+      - name: Show APK Build Log on Failure
+        if: always()
+        run: |
+          echo "=== Last 100 lines of build log ==="
+          tail -100 build.log || echo "Log file not found"
 
       - name: Verify APK artifact
         run: |
