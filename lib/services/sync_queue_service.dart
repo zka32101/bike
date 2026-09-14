@@ -84,6 +84,11 @@ abstract class SyncQueueService {
 
   /// キューをクリア
   Future<void> clear();
+
+  /// ネットワーク接続時に呼ばれる：キュー内の操作を処理
+  Future<void> processQueue(
+    Future<void> Function(QueuedOperation) processor,
+  );
 }
 
 /// SyncQueueService の実装
@@ -278,5 +283,44 @@ class StubSyncQueueService implements SyncQueueService {
     _currentStatus = SyncStatus.connected;
     _statusController.add(_currentStatus);
     if (kDebugMode) print('Stub: Queue cleared');
+  }
+
+  @override
+  Future<void> processQueue(
+    Future<void> Function(QueuedOperation) processor,
+  ) async {
+    if (_queue.isEmpty) {
+      _currentStatus = SyncStatus.connected;
+      _statusController.add(_currentStatus);
+      return;
+    }
+
+    _currentStatus = SyncStatus.syncing;
+    _statusController.add(_currentStatus);
+
+    final List<QueuedOperation> toRemove = [];
+
+    for (final operation in _queue) {
+      try {
+        await processor(operation);
+        toRemove.add(operation);
+        if (kDebugMode) {
+          print('Stub: Successfully processed ${operation.id}');
+        }
+      } catch (e) {
+        if (kDebugMode) {
+          print('Stub: Failed to process ${operation.id}: $e');
+        }
+      }
+    }
+
+    _queue.removeWhere((op) => toRemove.contains(op));
+
+    if (_queue.isEmpty) {
+      _currentStatus = SyncStatus.connected;
+    } else {
+      _currentStatus = SyncStatus.failed;
+    }
+    _statusController.add(_currentStatus);
   }
 }

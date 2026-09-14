@@ -162,6 +162,30 @@ class Prediction {
   bool get isHighConfidence => confidence > 0.9;
   bool get hasActualValue => actualValue != null;
   int get ageInMinutes => DateTime.now().difference(predictionTime).inMinutes;
+
+  Prediction copyWith({
+    String? id,
+    String? modelId,
+    dynamic predictedValue,
+    double? confidence,
+    DateTime? predictionTime,
+    DateTime? createdAt,
+    dynamic? actualValue,
+    Map<String, dynamic>? features,
+    double? error,
+  }) {
+    return Prediction(
+      id: id ?? this.id,
+      modelId: modelId ?? this.modelId,
+      predictedValue: predictedValue ?? this.predictedValue,
+      confidence: confidence ?? this.confidence,
+      predictionTime: predictionTime ?? this.predictionTime,
+      createdAt: createdAt ?? this.createdAt,
+      actualValue: actualValue ?? this.actualValue,
+      features: features ?? this.features,
+      error: error ?? this.error,
+    );
+  }
 }
 
 /// AnomalyDetection: 異常検出
@@ -276,6 +300,30 @@ class IntelligentAlert {
       ? resolvedAt!.difference(triggeredAt).inMinutes
       : -1;
   int get ageInMinutes => DateTime.now().difference(triggeredAt).inMinutes;
+
+  IntelligentAlert copyWith({
+    String? id,
+    String? alertType,
+    AlertSeverity? severity,
+    DateTime? triggeredAt,
+    DateTime? createdAt,
+    String? description,
+    String? recommendation,
+    bool? isResolved,
+    DateTime? resolvedAt,
+  }) {
+    return IntelligentAlert(
+      id: id ?? this.id,
+      alertType: alertType ?? this.alertType,
+      severity: severity ?? this.severity,
+      triggeredAt: triggeredAt ?? this.triggeredAt,
+      createdAt: createdAt ?? this.createdAt,
+      description: description ?? this.description,
+      recommendation: recommendation ?? this.recommendation,
+      isResolved: isResolved ?? this.isResolved,
+      resolvedAt: resolvedAt ?? this.resolvedAt,
+    );
+  }
 }
 
 /// BehavioralAnalysis: 行動分析
