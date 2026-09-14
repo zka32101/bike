@@ -260,16 +260,30 @@ class ExportNotification {
 
 /// エクスポート設定
 class ExportConfig {
+  final String id;
   final String dataType;
-  final ExportFormat format;
-  final bool includeTimestamp;
-  final Map<String, dynamic>? formatOptions;
+  final String format;
+  final DateTime startDate;
+  final DateTime endDate;
+  final Map<String, dynamic>? filters;
+  final List<String>? includedFields;
+  final bool? includePersonalInfo;
+  final bool? maskPersonalData;
+  final String? encryptionType;
+  final DateTime? createdAt;
 
   ExportConfig({
+    required this.id,
     required this.dataType,
     required this.format,
-    this.includeTimestamp = true,
-    this.formatOptions,
+    required this.startDate,
+    required this.endDate,
+    this.filters,
+    this.includedFields,
+    this.includePersonalInfo,
+    this.maskPersonalData,
+    this.encryptionType,
+    this.createdAt,
   });
 }
 
@@ -277,13 +291,17 @@ class ExportConfig {
 class ExportResult {
   final String id;
   final String exportType;
-  final ExportFormat format;
+  final String format;
   final String downloadUrl;
   final int recordCount;
-  final int fileSizeBytes;
+  final double fileSizeBytes;
   final DateTime createdAt;
   final String status;
   final String? errorMessage;
+  final DateTime? expiresAt;
+  final int? downloadCount;
+  final bool? isEncrypted;
+  final String? encryptionKey;
 
   ExportResult({
     required this.id,
@@ -295,6 +313,10 @@ class ExportResult {
     required this.createdAt,
     required this.status,
     this.errorMessage,
+    this.expiresAt,
+    this.downloadCount,
+    this.isEncrypted,
+    this.encryptionKey,
   });
 
   bool get isSuccessful => status == 'completed';
