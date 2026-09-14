@@ -152,67 +152,7 @@ class ReportDeliverySchedule {
 // 3. エクスポート機能
 // ============================================================================
 
-/// エクスポート設定
-class ExportConfig {
-  final String id;
-  final String dataType;
-  final String format;
-  final DateTime startDate;
-  final DateTime endDate;
-  final Map<String, dynamic>? filters;
-  final List<String>? includedFields;
-  final bool? includePersonalInfo;
-  final bool? maskPersonalData;
-  final String? encryptionType;
-  final DateTime? createdAt;
-
-  ExportConfig({
-    required this.id,
-    required this.dataType,
-    required this.format,
-    required this.startDate,
-    required this.endDate,
-    this.filters,
-    this.includedFields,
-    this.includePersonalInfo,
-    this.maskPersonalData,
-    this.encryptionType,
-    this.createdAt,
-  });
-}
-
-/// エクスポート結果
-class ExportResult {
-  final String id;
-  final String exportType;
-  final String format;
-  final String downloadUrl;
-  final int recordCount;
-  final double fileSizeBytes;
-  final DateTime createdAt;
-  final String status;
-  final String? errorMessage;
-  final DateTime? expiresAt;
-  final int? downloadCount;
-  final bool? isEncrypted;
-  final String? encryptionKey;
-
-  ExportResult({
-    required this.id,
-    required this.exportType,
-    required this.format,
-    required this.downloadUrl,
-    required this.recordCount,
-    required this.fileSizeBytes,
-    required this.createdAt,
-    required this.status,
-    this.errorMessage,
-    this.expiresAt,
-    this.downloadCount,
-    this.isEncrypted,
-    this.encryptionKey,
-  });
-}
+// Note: ExportConfig と ExportResult は export_models.dart で定義されています
 
 // ============================================================================
 // 4. 教師・管理者向けダッシュボード
