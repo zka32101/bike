@@ -88,7 +88,21 @@ jobs:
           echo "=== Last 100 lines of build log ==="
           tail -100 build.log || echo "Log file not found"
 
+          echo ""
+          echo "=== Gradle build error summary ==="
+          grep -i "error\|failed\|exception" build.log | tail -20 || echo "No error patterns found"
+
+      - name: Upload Build Log on Failure
+        if: failure()
+        uses: actions/upload-artifact@v4
+        with:
+          name: build-log-failure
+          path: build.log
+          retention-days: 30
+          if-no-files-found: ignore
+
       - name: Verify APK artifact
+        if: success()
         run: |
           echo "=== Searching for APK files ==="
           find build -name "*.apk" -type f 2>/dev/null || echo "No APK found via find"
@@ -113,6 +127,7 @@ jobs:
           fi
 
       - name: Upload APK artifact
+        if: success()
         uses: actions/upload-artifact@v4
         with:
           name: apk-debug
