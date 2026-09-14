@@ -116,6 +116,6 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: apk-debug
-          path: build/app/outputs/flutter-apk/*.apk
+          path: build/app/outputs/flutter-apk/**/*.apk
           retention-days: 30
-          if-no-files-found: error
+          if-no-files-found: ignore
