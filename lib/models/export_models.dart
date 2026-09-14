@@ -257,3 +257,46 @@ class ExportNotification {
   bool get isDelivered => status == 'delivered';
   bool get hasFailed => status == 'failed';
 }
+
+/// エクスポート設定
+class ExportConfig {
+  final String dataType;
+  final ExportFormat format;
+  final bool includeTimestamp;
+  final Map<String, dynamic>? formatOptions;
+
+  ExportConfig({
+    required this.dataType,
+    required this.format,
+    this.includeTimestamp = true,
+    this.formatOptions,
+  });
+}
+
+/// エクスポート結果
+class ExportResult {
+  final String id;
+  final String exportType;
+  final ExportFormat format;
+  final String downloadUrl;
+  final int recordCount;
+  final int fileSizeBytes;
+  final DateTime createdAt;
+  final String status;
+  final String? errorMessage;
+
+  ExportResult({
+    required this.id,
+    required this.exportType,
+    required this.format,
+    required this.downloadUrl,
+    required this.recordCount,
+    required this.fileSizeBytes,
+    required this.createdAt,
+    required this.status,
+    this.errorMessage,
+  });
+
+  bool get isSuccessful => status == 'completed';
+  bool get isFailed => status == 'failed';
+}
