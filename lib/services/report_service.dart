@@ -10,7 +10,7 @@ class ReportService {
   final Map<String, ReportDeliverySchedule> _scheduleCache = {};
 
   /// レポートテンプレート集
-  static const Map<String, ReportTemplate> predefinedTemplates = {
+  static final Map<String, ReportTemplate> predefinedTemplates = {
     'student_progress': ReportTemplate(
       id: 'tpl_student_progress',
       name: 'Student Progress Report',
