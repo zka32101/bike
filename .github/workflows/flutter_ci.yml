@@ -77,6 +77,12 @@ jobs:
             echo "$GOOGLE_SERVICES_JSON_BASE64" | base64 --decode > android/app/google-services.json
           fi
 
+      - name: Clean Gradle Cache
+        run: |
+          cd android
+          ./gradlew clean
+          cd ..
+
       - name: Build Debug APK
         run: |
           set -o pipefail
