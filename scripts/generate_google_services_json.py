@@ -7,6 +7,9 @@ import os
 def generate_google_services_json(output_path):
     """Create a minimal valid Firebase config for debug builds."""
     base_package = "com.yourwish.bikelicensekore"
+    api_key_entry = {
+        "current_key": "debug_api_key_value"
+    }
     config = {
         "project_info": {
             "project_number": "0",
@@ -22,7 +25,7 @@ def generate_google_services_json(output_path):
                     }
                 },
                 "oauth_client": [],
-                "api_key": [],
+                "api_key": [api_key_entry],
                 "services": {
                     "analytics_service": {"status": 1},
                     "appinvite_service": {"status": 1},
@@ -37,7 +40,7 @@ def generate_google_services_json(output_path):
                     }
                 },
                 "oauth_client": [],
-                "api_key": [],
+                "api_key": [api_key_entry],
                 "services": {
                     "analytics_service": {"status": 1},
                     "appinvite_service": {"status": 1},
