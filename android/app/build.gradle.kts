@@ -38,11 +38,17 @@ android {
         // storePassword / keyPassword come from the KEYSTORE_PASSWORD / KEY_PASSWORD
         // environment variables (set locally before a release build, or from
         // GitHub Secrets in CI) — never hardcode them here.
-        create("release") {
+        create("release_test") {
             storeFile = file("../keystore/release_new.jks")
-            storePassword = System.getenv("KEYSTORE_PASSWORD")
+            storePassword = System.getenv("KEYSTORE_PASSWORD_TEST") ?: System.getenv("KEYSTORE_PASSWORD")
             keyAlias = "bike_license_release"
-            keyPassword = System.getenv("KEY_PASSWORD")
+            keyPassword = System.getenv("KEY_PASSWORD_TEST") ?: System.getenv("KEY_PASSWORD")
+        }
+        create("release_prod") {
+            storeFile = file("../keystore/release_prod.jks")
+            storePassword = System.getenv("KEYSTORE_PASSWORD_PROD")
+            keyAlias = "bike_license_release_prod"
+            keyPassword = System.getenv("KEY_PASSWORD_PROD")
         }
     }
 
@@ -58,14 +64,27 @@ android {
                 getDefaultProguardFile("proguard-android-optimize.txt"),
                 "proguard-rules.pro"
             )
-            // リリース署名鍵(android/keystore/release_new.jks)が無い環境（未設定のフォーク等）
-            // でもビルドが壊れないよう、無ければ debug 署名にフォールバックする。
-            signingConfig =
-                if (file("../keystore/release_new.jks").exists()) {
-                    signingConfigs.getByName("release")
-                } else {
+            // Signing configuration priority:
+            // 1. Production keystore + KEYSTORE_PASSWORD_PROD env var
+            // 2. Test keystore + KEYSTORE_PASSWORD_TEST env var
+            // 3. Debug signature (fallback)
+            signingConfig = when {
+                System.getenv("KEYSTORE_PASSWORD_PROD") != null &&
+                file("../keystore/release_prod.jks").exists() -> {
+                    signingConfigs.getByName("release_prod")
+                }
+                System.getenv("KEYSTORE_PASSWORD_TEST") != null &&
+                file("../keystore/release_new.jks").exists() -> {
+                    signingConfigs.getByName("release_test")
+                }
+                System.getenv("KEYSTORE_PASSWORD") != null &&
+                file("../keystore/release_new.jks").exists() -> {
+                    signingConfigs.getByName("release_test")
+                }
+                else -> {
                     signingConfigs.getByName("debug")
                 }
+            }
         }
     }
 }

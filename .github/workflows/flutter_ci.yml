@@ -6,6 +6,15 @@ on:
   pull_request:
     branches: [main, master]
   workflow_dispatch:
+    inputs:
+      build_type:
+        description: 'Build type (test or production)'
+        required: false
+        default: 'test'
+        type: choice
+        options:
+          - test
+          - production
 
 jobs:
   test:
@@ -180,11 +189,24 @@ jobs:
             python3 scripts/generate_google_services_json.py
           fi
 
-      - name: Build Release APK (Test keystore or debug signature)
+      - name: Build Release APK (Test or Production)
+        env:
+          BUILD_TYPE: ${{ inputs.build_type || 'test' }}
+          KEYSTORE_PASSWORD_TEST: ${{ secrets.KEYSTORE_PASSWORD_TEST }}
+          KEY_PASSWORD_TEST: ${{ secrets.KEY_PASSWORD_TEST }}
+          KEYSTORE_PASSWORD_PROD: ${{ secrets.KEYSTORE_PASSWORD_PROD }}
+          KEY_PASSWORD_PROD: ${{ secrets.KEY_PASSWORD_PROD }}
         run: |
           set -o pipefail
-          echo "Building release APK..."
-          echo "Note: Using test keystore if secrets are registered, otherwise falls back to debug signature"
+          if [ "$BUILD_TYPE" = "production" ]; then
+            echo "🔒 Building PRODUCTION Release APK..."
+            export KEYSTORE_PASSWORD="$KEYSTORE_PASSWORD_PROD"
+            export KEY_PASSWORD="$KEY_PASSWORD_PROD"
+          else
+            echo "🧪 Building TEST Release APK..."
+            export KEYSTORE_PASSWORD="$KEYSTORE_PASSWORD_TEST"
+            export KEY_PASSWORD="$KEY_PASSWORD_TEST"
+          fi
           flutter build apk --release 2>&1 | tee release_build.log
 
       - name: Show Release Build Log on Failure
@@ -236,9 +258,23 @@ jobs:
           if-no-files-found: ignore
 
       - name: Build Release AAB (App Bundle for Play Store)
+        env:
+          BUILD_TYPE: ${{ inputs.build_type || 'test' }}
+          KEYSTORE_PASSWORD_TEST: ${{ secrets.KEYSTORE_PASSWORD_TEST }}
+          KEY_PASSWORD_TEST: ${{ secrets.KEY_PASSWORD_TEST }}
+          KEYSTORE_PASSWORD_PROD: ${{ secrets.KEYSTORE_PASSWORD_PROD }}
+          KEY_PASSWORD_PROD: ${{ secrets.KEY_PASSWORD_PROD }}
         run: |
           set -o pipefail
-          echo "Building Android App Bundle (AAB)..."
+          if [ "$BUILD_TYPE" = "production" ]; then
+            echo "🔒 Building PRODUCTION AAB..."
+            export KEYSTORE_PASSWORD="$KEYSTORE_PASSWORD_PROD"
+            export KEY_PASSWORD="$KEY_PASSWORD_PROD"
+          else
+            echo "🧪 Building TEST AAB..."
+            export KEYSTORE_PASSWORD="$KEYSTORE_PASSWORD_TEST"
+            export KEY_PASSWORD="$KEY_PASSWORD_TEST"
+          fi
           flutter build appbundle --release 2>&1 | tee aab_build.log
 
       - name: Show AAB Build Log on Failure
