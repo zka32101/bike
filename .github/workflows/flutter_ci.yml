@@ -139,3 +139,99 @@ jobs:
           path: build/app/outputs/flutter-apk/**/*.apk
           retention-days: 30
           if-no-files-found: ignore
+
+  build-release:
+    name: Build Release APK
+    runs-on: ubuntu-latest
+    needs: test
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: subosito/flutter-action@v2
+        with:
+          flutter-version: '3.44.4'
+          channel: 'stable'
+
+      - name: Install dependencies
+        run: flutter pub get
+
+      - name: Setup Java
+        uses: actions/setup-java@v4
+        with:
+          distribution: 'temurin'
+          java-version: '17'
+
+      - name: Write google-services.json (Release)
+        env:
+          GOOGLE_SERVICES_JSON_BASE64: ${{ secrets.GOOGLE_SERVICES_JSON_BASE64 }}
+        run: |
+          mkdir -p android/app
+          if [ -n "$GOOGLE_SERVICES_JSON_BASE64" ]; then
+            echo "⚠️ Attempting to decode GOOGLE_SERVICES_JSON_BASE64..."
+            if echo "$GOOGLE_SERVICES_JSON_BASE64" | base64 --decode > android/app/google-services.json 2>/dev/null && \
+               grep -q '"project_info"' android/app/google-services.json; then
+              echo "✓ Successfully decoded google-services.json from secret"
+            else
+              echo "⚠️ Failed to decode or validate secret - using debug mode"
+              python3 scripts/generate_google_services_json.py
+            fi
+          else
+            echo "⚠️ GOOGLE_SERVICES_JSON_BASE64 not set - using debug mode"
+            python3 scripts/generate_google_services_json.py
+          fi
+
+      - name: Build Release APK (Test keystore)
+        env:
+          KEYSTORE_PASSWORD: ${{ secrets.KEYSTORE_PASSWORD_TEST }}
+          KEY_PASSWORD: ${{ secrets.KEY_PASSWORD_TEST }}
+        run: |
+          set -o pipefail
+          flutter build apk --release 2>&1 | tee release_build.log
+
+      - name: Show Release Build Log on Failure
+        if: always()
+        run: |
+          echo "=== Last 100 lines of release build log ==="
+          tail -100 release_build.log || echo "Log file not found"
+
+          echo ""
+          echo "=== Gradle build error summary ==="
+          grep -i "error\|failed\|exception" release_build.log | tail -20 || echo "No error patterns found"
+
+      - name: Upload Release Build Log on Failure
+        if: failure()
+        uses: actions/upload-artifact@v4
+        with:
+          name: release-build-log-failure
+          path: release_build.log
+          retention-days: 30
+          if-no-files-found: ignore
+
+      - name: Verify Release APK artifact
+        if: success()
+        run: |
+          echo "=== Searching for Release APK files ==="
+          find build -name "*release*.apk" -type f 2>/dev/null || echo "No Release APK found"
+
+          # Check standard location
+          echo "=== Checking Flutter release APK location ==="
+          ls -lh build/app/outputs/flutter-apk/ 2>/dev/null | grep -i release || echo "No release APK in standard location"
+
+          # Find the release APK
+          APK_PATH=$(find build -name "*release*.apk" | head -1)
+          if [ -n "$APK_PATH" ]; then
+            APK_SIZE=$(du -h "$APK_PATH" | cut -f1)
+            echo "✓ Release APK found: $APK_PATH ($APK_SIZE)"
+          else
+            echo "⚠️ No Release APK file found"
+            exit 0
+          fi
+
+      - name: Upload Release APK artifact
+        if: success()
+        uses: actions/upload-artifact@v4
+        with:
+          name: apk-release-test
+          path: build/app/outputs/flutter-apk/*release*.apk
+          retention-days: 30
+          if-no-files-found: ignore
