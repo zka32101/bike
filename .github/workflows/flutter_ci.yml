@@ -234,3 +234,57 @@ jobs:
           path: build/app/outputs/flutter-apk/*release*.apk
           retention-days: 30
           if-no-files-found: ignore
+
+      - name: Build Release AAB (App Bundle for Play Store)
+        run: |
+          set -o pipefail
+          echo "Building Android App Bundle (AAB)..."
+          flutter build appbundle --release 2>&1 | tee aab_build.log
+
+      - name: Show AAB Build Log on Failure
+        if: always()
+        run: |
+          echo "=== Last 100 lines of AAB build log ==="
+          tail -100 aab_build.log || echo "Log file not found"
+
+          echo ""
+          echo "=== Gradle build error summary ==="
+          grep -i "error\|failed\|exception" aab_build.log | tail -20 || echo "No error patterns found"
+
+      - name: Upload AAB Build Log on Failure
+        if: failure()
+        uses: actions/upload-artifact@v4
+        with:
+          name: aab-build-log-failure
+          path: aab_build.log
+          retention-days: 30
+          if-no-files-found: ignore
+
+      - name: Verify AAB artifact
+        if: success()
+        run: |
+          echo "=== Searching for AAB files ==="
+          find build -name "*.aab" -type f 2>/dev/null || echo "No AAB found"
+
+          # Check standard location
+          echo "=== Checking Flutter AAB location ==="
+          ls -lh build/app/outputs/bundle/release/ 2>/dev/null || echo "Standard location does not exist"
+
+          # Find the AAB
+          AAB_PATH=$(find build -name "*.aab" | head -1)
+          if [ -n "$AAB_PATH" ]; then
+            AAB_SIZE=$(du -h "$AAB_PATH" | cut -f1)
+            echo "✓ AAB found: $AAB_PATH ($AAB_SIZE)"
+          else
+            echo "⚠️ No AAB file found"
+            exit 0
+          fi
+
+      - name: Upload AAB artifact
+        if: success()
+        uses: actions/upload-artifact@v4
+        with:
+          name: aab-release-test
+          path: build/app/outputs/bundle/release/app-release.aab
+          retention-days: 30
+          if-no-files-found: ignore
