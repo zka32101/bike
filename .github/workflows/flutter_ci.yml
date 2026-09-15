@@ -77,11 +77,12 @@ jobs:
             echo "$GOOGLE_SERVICES_JSON_BASE64" | base64 --decode > android/app/google-services.json
           fi
 
-      - name: Clean Gradle Cache
+      - name: Clean Flutter Build Cache
         run: |
-          cd android
-          ./gradlew clean
-          cd ..
+          flutter clean
+
+      - name: Get Dependencies Again
+        run: flutter pub get
 
       - name: Build Debug APK
         run: |
