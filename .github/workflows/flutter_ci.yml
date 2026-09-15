@@ -77,17 +77,10 @@ jobs:
             echo "$GOOGLE_SERVICES_JSON_BASE64" | base64 --decode > android/app/google-services.json
           fi
 
-      - name: Clean Flutter Build Cache
-        run: |
-          flutter clean
-
-      - name: Get Dependencies Again
-        run: flutter pub get
-
       - name: Build Debug APK
         run: |
           set -o pipefail
-          flutter build apk --debug --verbose 2>&1 | tee build.log
+          flutter build apk --debug 2>&1 | tee build.log
 
       - name: Show APK Build Log on Failure
         if: always()
