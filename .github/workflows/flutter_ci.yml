@@ -71,38 +71,7 @@ jobs:
             echo "⚠️ GOOGLE_SERVICES_JSON_BASE64 not set - using debug mode"
             mkdir -p android/app/src/main
             # Create minimal valid Firebase config for debug builds
-            cat > android/app/google-services.json << 'EOF'
-{
-  "project_info": {
-    "project_number": "0",
-    "project_id": "debug-project"
-  },
-  "client": [
-    {
-      "client_info": {
-        "mobilesdk_app_id": "1:0:android:debug",
-        "android_client_info": {
-          "package_name": "com.yourwish.bikelicensekore"
-        }
-      },
-      "oauth_client": [],
-      "api_key": [],
-      "services": {
-        "analytics_service": {
-          "status": 1
-        },
-        "appinvite_service": {
-          "status": 1
-        },
-        "ads_service": {
-          "status": 1
-        }
-      }
-    }
-  ],
-  "configuration_version": "1"
-}
-EOF
+            echo '{"project_info":{"project_number":"0","project_id":"debug-project"},"client":[{"client_info":{"mobilesdk_app_id":"1:0:android:debug","android_client_info":{"package_name":"com.yourwish.bikelicensekore"}},"oauth_client":[],"api_key":[],"services":{"analytics_service":{"status":1},"appinvite_service":{"status":1},"ads_service":{"status":1}}}],"configuration_version":"1"}' > android/app/google-services.json
           else
             mkdir -p android/app/src/main
             echo "$GOOGLE_SERVICES_JSON_BASE64" | base64 --decode > android/app/google-services.json
