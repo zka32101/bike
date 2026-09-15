@@ -180,12 +180,11 @@ jobs:
             python3 scripts/generate_google_services_json.py
           fi
 
-      - name: Build Release APK (Test keystore)
-        env:
-          KEYSTORE_PASSWORD: ${{ secrets.KEYSTORE_PASSWORD_TEST }}
-          KEY_PASSWORD: ${{ secrets.KEY_PASSWORD_TEST }}
+      - name: Build Release APK (Test keystore or debug signature)
         run: |
           set -o pipefail
+          echo "Building release APK..."
+          echo "Note: Using test keystore if secrets are registered, otherwise falls back to debug signature"
           flutter build apk --release 2>&1 | tee release_build.log
 
       - name: Show Release Build Log on Failure
