@@ -6,7 +6,7 @@ import os
 
 def generate_google_services_json(output_path):
     """Create a minimal valid Firebase config for debug builds."""
-    base_package = "com.license.bike"
+    base_package = "com.yourwish.bikelicense"
     api_key_entry = {
         "current_key": "debug_api_key_value"
     }
