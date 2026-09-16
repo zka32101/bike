@@ -6,7 +6,7 @@ plugins {
 }
 
 android {
-    namespace = "com.yourwish.bikelicensekore"
+    namespace = "com.license.bike"
     compileSdk = flutter.compileSdkVersion
     ndkVersion = "27.0.12077973"
 
@@ -21,7 +21,7 @@ android {
     }
 
     defaultConfig {
-        applicationId = "com.yourwish.bikelicensekore"
+        applicationId = "com.license.bike"
         minSdk = flutter.minSdkVersion
         targetSdk = flutter.targetSdkVersion
         versionCode = flutter.versionCode

@@ -1,7 +1,7 @@
 name: bike_license_kore
 description: "原付・バイク免許コレ！— 二輪免許（原付〜大型二輪）特化の学科試験対策アプリ"
 publish_to: "none"
-version: 0.1.0+1
+version: 1.0.0+1
 
 environment:
   sdk: ">=3.3.0 <4.0.0"
