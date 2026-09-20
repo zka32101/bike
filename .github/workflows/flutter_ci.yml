@@ -184,15 +184,15 @@ jobs:
             -destkeystore /tmp/keypass_test.p12 -deststoretype PKCS12 -deststorepass "$KEYSTORE_PASSWORD" -destkeypass "$KEYSTORE_PASSWORD" \
             && echo "✓ KEY_PASSWORD is correct - private key decrypted successfully" \
             || echo "❌ KEY_PASSWORD is INCORRECT - private key decryption failed"
-          echo "=== Re-encoding keystore with legacy PBE algorithms (AGP's bundled crypto libs may not support Java 17's newer PKCS12 defaults) ==="
+          echo "=== Re-encoding keystore, normalizing key password to match store password (PKCS12 has no separate per-key password; AGP fails to decrypt when they differ) ==="
           keytool -importkeystore \
             -srckeystore android/keystore/release_prod.jks -srcstorepass "$KEYSTORE_PASSWORD" -srckeypass "$KEY_PASSWORD" -srcalias bike_license_release_prod \
-            -destkeystore /tmp/release_prod_legacy.jks -deststoretype PKCS12 -deststorepass "$KEYSTORE_PASSWORD" -destkeypass "$KEY_PASSWORD" \
+            -destkeystore /tmp/release_prod_legacy.jks -deststoretype PKCS12 -deststorepass "$KEYSTORE_PASSWORD" -destkeypass "$KEYSTORE_PASSWORD" \
             -J-Dkeystore.pkcs12.keyProtectionAlgorithm=PBEWithSHA1AndDESede \
             -J-Dkeystore.pkcs12.certProtectionAlgorithm=PBEWithSHA1AndRC2_40 \
             && mv /tmp/release_prod_legacy.jks android/keystore/release_prod.jks \
-            && echo "✓ Re-encoded with legacy PBE algorithms (same key/cert, different protection)" \
-            || echo "❌ Legacy re-encoding failed - keeping original file"
+            && echo "✓ Re-encoded with unified password (same key/cert, key password now matches store password)" \
+            || echo "❌ Re-encoding failed - keeping original file"
 
       - name: Write google-services.json (Release)
         env:

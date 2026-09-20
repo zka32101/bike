@@ -40,11 +40,17 @@ android {
             storeFile = file("../keystore/release_prod.jks")
             storePassword = System.getenv("KEYSTORE_PASSWORD")
             keyAlias = "bike_license_release_prod"
-            keyPassword = System.getenv("KEY_PASSWORD")
             // keytool defaults to PKCS12 (not JKS) since Java 9, regardless of the
             // .jks file extension. AGP assumes JKS unless told otherwise, which
             // causes signing to fail with a cryptic padding error.
             storeType = "PKCS12"
+            // PKCS12 keystores encrypt the whole store with a single password;
+            // there is no separate per-key password. AGP's signing code still
+            // tries KEY_PASSWORD as a distinct key password, which fails to
+            // decrypt (BadPaddingException) whenever it differs from the store
+            // password. Force it to match the store password to match the
+            // actual PKCS12 format.
+            keyPassword = System.getenv("KEYSTORE_PASSWORD")
         }
     }
 
