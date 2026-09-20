@@ -219,7 +219,7 @@ jobs:
           KEY_PASSWORD: ${{ secrets.KEY_PASSWORD }}
         run: |
           set -o pipefail
-          flutter build apk --release 2>&1 | tee release_build.log
+          flutter build apk --release --verbose 2>&1 | tee release_build.log
 
       - name: Show Release Build Log on Failure
         if: always()
@@ -230,6 +230,10 @@ jobs:
           echo ""
           echo "=== Gradle build error summary ==="
           grep -i "error\|failed\|exception" release_build.log | tail -20 || echo "No error patterns found"
+
+          echo ""
+          echo "=== Full stack trace around KeytoolException (verbose mode) ==="
+          grep -n -A 60 "KeytoolException\|Caused by" release_build.log | head -200 || echo "No stack trace found"
 
       - name: Upload Release Build Log on Failure
         if: failure()
