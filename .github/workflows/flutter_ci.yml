@@ -164,11 +164,16 @@ jobs:
       - name: Restore Keystore from Secret
         env:
           KEYSTORE_FILE_BASE64: ${{ secrets.KEYSTORE_FILE_BASE64 }}
+          KEYSTORE_PASSWORD: ${{ secrets.KEYSTORE_PASSWORD }}
+          KEY_PASSWORD: ${{ secrets.KEY_PASSWORD }}
         run: |
           mkdir -p android/keystore
           echo "$KEYSTORE_FILE_BASE64" | base64 --decode > android/keystore/release_prod.jks
           ls -lh android/keystore/release_prod.jks
-          echo "✓ Keystore restored successfully"
+          echo "=== File type check ==="
+          file android/keystore/release_prod.jks
+          echo "=== Verifying keystore integrity with keytool ==="
+          keytool -list -v -keystore android/keystore/release_prod.jks -storepass "$KEYSTORE_PASSWORD" -alias bike_license_release_prod || echo "❌ keytool verification failed - password or file mismatch"
 
       - name: Write google-services.json (Release)
         env:
