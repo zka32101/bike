@@ -172,6 +172,8 @@ jobs:
           ls -lh android/keystore/release_prod.jks
           echo "=== File type check ==="
           file android/keystore/release_prod.jks
+          echo "=== Magic bytes (JKS starts with feedfeed, PKCS12 starts with 30) ==="
+          xxd -l 8 android/keystore/release_prod.jks
           echo "=== Verifying keystore integrity with keytool ==="
           keytool -list -v -keystore android/keystore/release_prod.jks -storepass "$KEYSTORE_PASSWORD" -alias bike_license_release_prod || echo "❌ keytool verification failed - password or file mismatch"
           echo "=== Verifying KEY_PASSWORD by attempting to decrypt the private key ==="
