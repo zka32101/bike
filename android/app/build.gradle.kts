@@ -73,6 +73,13 @@ android {
     }
 }
 
+afterEvaluate {
+    val releaseConfig = android.signingConfigs.getByName("release")
+    println("DEBUG signingConfig[release]: storeType=${releaseConfig.storeType}, storeFile=${releaseConfig.storeFile}, keyAlias=${releaseConfig.keyAlias}, storePassword.isNullOrEmpty=${releaseConfig.storePassword.isNullOrEmpty()}, keyPassword.isNullOrEmpty=${releaseConfig.keyPassword.isNullOrEmpty()}")
+    val appliedConfig = android.buildTypes.getByName("release").signingConfig
+    println("DEBUG buildType[release].signingConfig: name=${appliedConfig?.name}, storeType=${appliedConfig?.storeType}")
+}
+
 dependencies {
     coreLibraryDesugaring("com.android.tools:desugar_jdk_libs:2.1.4")
 }
