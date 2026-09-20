@@ -174,6 +174,12 @@ jobs:
           file android/keystore/release_prod.jks
           echo "=== Verifying keystore integrity with keytool ==="
           keytool -list -v -keystore android/keystore/release_prod.jks -storepass "$KEYSTORE_PASSWORD" -alias bike_license_release_prod || echo "❌ keytool verification failed - password or file mismatch"
+          echo "=== Verifying KEY_PASSWORD by attempting to decrypt the private key ==="
+          keytool -importkeystore \
+            -srckeystore android/keystore/release_prod.jks -srcstorepass "$KEYSTORE_PASSWORD" -srckeypass "$KEY_PASSWORD" -srcalias bike_license_release_prod \
+            -destkeystore /tmp/keypass_test.p12 -deststoretype PKCS12 -deststorepass "$KEYSTORE_PASSWORD" -destkeypass "$KEYSTORE_PASSWORD" \
+            && echo "✓ KEY_PASSWORD is correct - private key decrypted successfully" \
+            || echo "❌ KEY_PASSWORD is INCORRECT - private key decryption failed"
 
       - name: Write google-services.json (Release)
         env:
