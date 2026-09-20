@@ -176,12 +176,23 @@ jobs:
           xxd -l 8 android/keystore/release_prod.jks
           echo "=== Verifying keystore integrity with keytool ==="
           keytool -list -v -keystore android/keystore/release_prod.jks -storepass "$KEYSTORE_PASSWORD" -alias bike_license_release_prod || echo "❌ keytool verification failed - password or file mismatch"
+          echo "=== PKCS12 key/cert protection algorithm (may be a newer algorithm AGP's bundled crypto libs can't read) ==="
+          openssl pkcs12 -in android/keystore/release_prod.jks -info -noout -passin "pass:$KEYSTORE_PASSWORD" 2>&1 || echo "openssl inspection failed"
           echo "=== Verifying KEY_PASSWORD by attempting to decrypt the private key ==="
           keytool -importkeystore \
             -srckeystore android/keystore/release_prod.jks -srcstorepass "$KEYSTORE_PASSWORD" -srckeypass "$KEY_PASSWORD" -srcalias bike_license_release_prod \
             -destkeystore /tmp/keypass_test.p12 -deststoretype PKCS12 -deststorepass "$KEYSTORE_PASSWORD" -destkeypass "$KEYSTORE_PASSWORD" \
             && echo "✓ KEY_PASSWORD is correct - private key decrypted successfully" \
             || echo "❌ KEY_PASSWORD is INCORRECT - private key decryption failed"
+          echo "=== Re-encoding keystore with legacy PBE algorithms (AGP's bundled crypto libs may not support Java 17's newer PKCS12 defaults) ==="
+          keytool -importkeystore \
+            -srckeystore android/keystore/release_prod.jks -srcstorepass "$KEYSTORE_PASSWORD" -srckeypass "$KEY_PASSWORD" -srcalias bike_license_release_prod \
+            -destkeystore /tmp/release_prod_legacy.jks -deststoretype PKCS12 -deststorepass "$KEYSTORE_PASSWORD" -destkeypass "$KEY_PASSWORD" \
+            -J-Dkeystore.pkcs12.keyProtectionAlgorithm=PBEWithSHA1AndDESede \
+            -J-Dkeystore.pkcs12.certProtectionAlgorithm=PBEWithSHA1AndRC2_40 \
+            && mv /tmp/release_prod_legacy.jks android/keystore/release_prod.jks \
+            && echo "✓ Re-encoded with legacy PBE algorithms (same key/cert, different protection)" \
+            || echo "❌ Legacy re-encoding failed - keeping original file"
 
       - name: Write google-services.json (Release)
         env:
