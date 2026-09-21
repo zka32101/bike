@@ -1,4 +1,4 @@
-package com.yourwish.bikelicensekore
+package com.yourwish.bikelicense
 
 import io.flutter.embedding.android.FlutterActivity
 
