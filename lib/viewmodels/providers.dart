@@ -400,6 +400,15 @@ class DailyQuotaController extends FamilyNotifier<DailyQuotaState, String> {
     final uid = ref.read(currentUidProvider);
     final now = DateTime.now();
 
+    // 正誤演出はローカル保存・キュー登録等のI/Oを待たずに即座に出す。
+    // 以前はログ保存を待ってから state を更新していたため、端末やストレージ
+    // の状態によって結果表示までの体感が数百ms〜と不安定になっていた。
+    final newCorrectCount = state.correctCount + (isCorrect ? 1 : 0);
+    state = state.copyWith(
+      lastResult: isCorrect ? AnswerResult.correct : AnswerResult.incorrect,
+      correctCount: newCorrectCount,
+    );
+
     // ハプティクスフィードバック
     try {
       if (isCorrect) {
@@ -418,12 +427,6 @@ class DailyQuotaController extends FamilyNotifier<DailyQuotaState, String> {
         isCorrect: isCorrect,
         answeredAt: now,
       ),
-    );
-
-    final newCorrectCount = state.correctCount + (isCorrect ? 1 : 0);
-    state = state.copyWith(
-      lastResult: isCorrect ? AnswerResult.correct : AnswerResult.incorrect,
-      correctCount: newCorrectCount,
     );
 
     // 習熟度（合格予測スコア）は毎回の回答で再計算・保存する。
