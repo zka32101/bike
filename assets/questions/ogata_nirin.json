@@ -16,7 +16,8 @@
     "answer": 1,
     "explanation": "大型二輪は高出力であり、急加速による危険性が高いため、適切なコントロールが必須。",
     "isTrapQuestion": false,
-    "trapNumberType": "none"
+    "trapNumberType": "none",
+    "topicTag": "hazard_prediction"
   },
   {
     "id": "o002",
@@ -35,7 +36,8 @@
     "answer": 2,
     "explanation": "大型二輪の最大積載量は60kgと定められている。",
     "isTrapQuestion": true,
-    "trapNumberType": "loadLimit"
+    "trapNumberType": "loadLimit",
+    "topicTag": "parking"
   },
   {
     "id": "o003",
@@ -54,7 +56,8 @@
     "answer": 1,
     "explanation": "大型二輪での二人乗りは、免許取得後1年の実乗経験を経た後に可能。",
     "isTrapQuestion": true,
-    "trapNumberType": "twoPersonRiding"
+    "trapNumberType": "twoPersonRiding",
+    "topicTag": "parking"
   },
   {
     "id": "o004",
@@ -73,7 +76,8 @@
     "answer": 0,
     "explanation": "大型二輪の急加速は、ホイールスピンやウイリー、リアタイヤのグリップ喪失につながる。",
     "isTrapQuestion": false,
-    "trapNumberType": "none"
+    "trapNumberType": "none",
+    "topicTag": "operation"
   },
   {
     "id": "o005",
@@ -92,7 +96,8 @@
     "answer": 3,
     "explanation": "大型二輪免許では排気量の制限がなく、全ての二輪車を運転できる。",
     "isTrapQuestion": false,
-    "trapNumberType": "none"
+    "trapNumberType": "none",
+    "topicTag": "license_system"
   },
   {
     "id": "o006",
@@ -111,7 +116,8 @@
     "answer": 1,
     "explanation": "高速走行時は横風の影響が大きくなり、特に橋上での注意が必須。",
     "isTrapQuestion": false,
-    "trapNumberType": "none"
+    "trapNumberType": "none",
+    "topicTag": "hazard_prediction"
   },
   {
     "id": "o007",
@@ -130,7 +136,8 @@
     "answer": 2,
     "explanation": "大型二輪のブレーキは前後をバランスよく使用し、ABS機能を活用することが重要。",
     "isTrapQuestion": false,
-    "trapNumberType": "none"
+    "trapNumberType": "none",
+    "topicTag": "operation"
   },
   {
     "id": "o008",
@@ -149,7 +156,8 @@
     "answer": 1,
     "explanation": "大型二輪のカーブ走行は、カーブ前の十分な減速と大きな軌跡が安全。",
     "isTrapQuestion": false,
-    "trapNumberType": "none"
+    "trapNumberType": "none",
+    "topicTag": "operation"
   },
   {
     "id": "o009",
@@ -168,7 +176,8 @@
     "answer": 2,
     "explanation": "大型二輪でも、運転者と乗客の両方にヘルメット着用義務がある。",
     "isTrapQuestion": false,
-    "trapNumberType": "none"
+    "trapNumberType": "none",
+    "topicTag": "parking"
   },
   {
     "id": "o010",
@@ -187,7 +196,8 @@
     "answer": 1,
     "explanation": "大型二輪での長距離走行は眠気と疲労による事故リスクが高いため、定期的な休息が必須。",
     "isTrapQuestion": false,
-    "trapNumberType": "none"
+    "trapNumberType": "none",
+    "topicTag": "hazard_prediction"
   },
   {
     "id": "o011",
@@ -206,7 +216,8 @@
     "answer": 1,
     "explanation": "飲酒運転は大型二輪でも道路交通法により完全に禁止されている。",
     "isTrapQuestion": false,
-    "trapNumberType": "none"
+    "trapNumberType": "none",
+    "topicTag": "rules"
   },
   {
     "id": "o012",
@@ -225,7 +236,8 @@
     "answer": 1,
     "explanation": "乗客は運転者の動きに合わせ、急激な重心移動をしないことが安全運転に不可欠。",
     "isTrapQuestion": false,
-    "trapNumberType": "none"
+    "trapNumberType": "none",
+    "topicTag": "parking"
   },
   {
     "id": "o013",
@@ -244,7 +256,8 @@
     "answer": 1,
     "explanation": "タイヤの溝と空気圧、ブレーキシステムは大型二輪の安全性に直結する最重要項目。",
     "isTrapQuestion": false,
-    "trapNumberType": "none"
+    "trapNumberType": "none",
+    "topicTag": "maintenance"
   },
   {
     "id": "o014",
@@ -263,7 +276,8 @@
     "answer": 1,
     "explanation": "雨の日は白線やマンホール上が極めて滑りやすく、大型二輪でも特に注意が必要。",
     "isTrapQuestion": true,
-    "trapNumberType": "weatherSafety"
+    "trapNumberType": "weatherSafety",
+    "topicTag": "hazard_prediction"
   },
   {
     "id": "o015",
@@ -282,7 +296,8 @@
     "answer": 1,
     "explanation": "大型二輪でも自賠責保険への加入が法で義務づけられている。",
     "isTrapQuestion": false,
-    "trapNumberType": "none"
+    "trapNumberType": "none",
+    "topicTag": "hazard_prediction"
   },
   {
     "id": "o016",
@@ -301,7 +316,8 @@
     "answer": 1,
     "explanation": "夜間走行ではハイビーム点灯と反射材装備で視認性が大幅に向上。",
     "isTrapQuestion": false,
-    "trapNumberType": "none"
+    "trapNumberType": "none",
+    "topicTag": "hazard_prediction"
   },
   {
     "id": "o017",
@@ -320,7 +336,8 @@
     "answer": 1,
     "explanation": "大型二輪の右折は、十分な減速と大きな迂回路が安全運転のコツ。",
     "isTrapQuestion": false,
-    "trapNumberType": "none"
+    "trapNumberType": "none",
+    "topicTag": "rules"
   },
   {
     "id": "o018",
@@ -339,7 +356,8 @@
     "answer": 1,
     "explanation": "大型二輪の左折は、十分な減速と大きな回転半径を取ることが安全。",
     "isTrapQuestion": false,
-    "trapNumberType": "none"
+    "trapNumberType": "none",
+    "topicTag": "rules"
   },
   {
     "id": "o019",
@@ -358,7 +376,8 @@
     "answer": 1,
     "explanation": "大型二輪も許可された駐輪場のみ使用が必須。",
     "isTrapQuestion": false,
-    "trapNumberType": "none"
+    "trapNumberType": "none",
+    "topicTag": "parking"
   },
   {
     "id": "o020",
@@ -377,7 +396,8 @@
     "answer": 1,
     "explanation": "大型二輪での急ハンドルは、高速力でのタイヤグリップ低下により転倒やスリップを引き起こす。",
     "isTrapQuestion": false,
-    "trapNumberType": "none"
+    "trapNumberType": "none",
+    "topicTag": "operation"
   },
   {
     "id": "o021",
@@ -396,7 +416,8 @@
     "answer": 1,
     "explanation": "大型二輪の視認性向上には、目立つウェアの着用と常時ライト点灯が最も効果的。",
     "isTrapQuestion": false,
-    "trapNumberType": "none"
+    "trapNumberType": "none",
+    "topicTag": "hazard_prediction"
   },
   {
     "id": "o022",
@@ -415,7 +436,8 @@
     "answer": 1,
     "explanation": "大型二輪は高速道路走行が許可されており、適切な安全運転が必須。",
     "isTrapQuestion": false,
-    "trapNumberType": "none"
+    "trapNumberType": "none",
+    "topicTag": "rules"
   },
   {
     "id": "o023",
@@ -434,7 +456,8 @@
     "answer": 1,
     "explanation": "赤信号では大型二輪も完全に停止する必要がある。",
     "isTrapQuestion": false,
-    "trapNumberType": "none"
+    "trapNumberType": "none",
+    "topicTag": "rules"
   },
   {
     "id": "o024",
@@ -453,7 +476,8 @@
     "answer": 1,
     "explanation": "大型二輪への児童乗車は6歳以上が条件で、適切なヘルメット着用が必須。",
     "isTrapQuestion": false,
-    "trapNumberType": "none"
+    "trapNumberType": "none",
+    "topicTag": "hazard_prediction"
   },
   {
     "id": "o025",
@@ -472,7 +496,8 @@
     "answer": 1,
     "explanation": "大型二輪のサイドスタンドは左側に立て、エンジンは切った状態で駐車。",
     "isTrapQuestion": false,
-    "trapNumberType": "none"
+    "trapNumberType": "none",
+    "topicTag": "parking"
   },
   {
     "id": "o026",
@@ -491,7 +516,8 @@
     "answer": 1,
     "explanation": "大型二輪でも1年に1回の定期点検が法で義務づけられている。",
     "isTrapQuestion": false,
-    "trapNumberType": "none"
+    "trapNumberType": "none",
+    "topicTag": "maintenance"
   },
   {
     "id": "o027",
@@ -510,7 +536,8 @@
     "answer": 2,
     "explanation": "車線変更は、必ず目視確認をしながらウインカーで合図することが必須。",
     "isTrapQuestion": false,
-    "trapNumberType": "none"
+    "trapNumberType": "none",
+    "topicTag": "rules"
   },
   {
     "id": "o028",
@@ -529,7 +556,8 @@
     "answer": 1,
     "explanation": "霧の中は低速走行とライト、霧灯で視認性を確保することが安全。",
     "isTrapQuestion": false,
-    "trapNumberType": "none"
+    "trapNumberType": "none",
+    "topicTag": "hazard_prediction"
   },
   {
     "id": "o029",
@@ -548,7 +576,8 @@
     "answer": 1,
     "explanation": "バックミラーだけでは死角があるため、肩越しの目視確認も必須。",
     "isTrapQuestion": false,
-    "trapNumberType": "none"
+    "trapNumberType": "none",
+    "topicTag": "operation"
   },
   {
     "id": "o030",
@@ -567,7 +596,8 @@
     "answer": 1,
     "explanation": "雪道での急ハンドルと急ブレーキは極めて危険であり、スリップ転倒の原因。",
     "isTrapQuestion": false,
-    "trapNumberType": "none"
+    "trapNumberType": "none",
+    "topicTag": "operation"
   },
   {
     "id": "o031",
@@ -586,7 +616,8 @@
     "answer": 1,
     "explanation": "一時停止標識がある場所では完全に停止し、周囲確認後に進むこと。",
     "isTrapQuestion": false,
-    "trapNumberType": "none"
+    "trapNumberType": "none",
+    "topicTag": "signs"
   },
   {
     "id": "o032",
@@ -605,7 +636,8 @@
     "answer": 2,
     "explanation": "信号待ち時は、万が一他の車両が突入した場合に逃げられる位置が安全。",
     "isTrapQuestion": false,
-    "trapNumberType": "none"
+    "trapNumberType": "none",
+    "topicTag": "rules"
   },
   {
     "id": "o033",
@@ -624,7 +656,8 @@
     "answer": 1,
     "explanation": "緊急時でも周囲判断と段階的な減速で、大型二輪の安定性を保つことが重要。",
     "isTrapQuestion": false,
-    "trapNumberType": "none"
+    "trapNumberType": "none",
+    "topicTag": "hazard_prediction"
   },
   {
     "id": "o034",
@@ -643,7 +676,8 @@
     "answer": 1,
     "explanation": "ガード下は落下物リスクと視認性低下があるため、低速での慎重走行が必須。",
     "isTrapQuestion": false,
-    "trapNumberType": "none"
+    "trapNumberType": "none",
+    "topicTag": "hazard_prediction"
   },
   {
     "id": "o035",
@@ -662,7 +696,8 @@
     "answer": 1,
     "explanation": "大型二輪の乗り降りは停止時に限り、左側（車線側）から行うことが安全。",
     "isTrapQuestion": false,
-    "trapNumberType": "none"
+    "trapNumberType": "none",
+    "topicTag": "operation"
   },
   {
     "id": "o036",
@@ -681,7 +716,8 @@
     "answer": 1,
     "explanation": "下り坂ではエンジンブレーキを活用することで、ブレーキの過熱を防げる。",
     "isTrapQuestion": false,
-    "trapNumberType": "none"
+    "trapNumberType": "none",
+    "topicTag": "operation"
   },
   {
     "id": "o037",
@@ -700,7 +736,8 @@
     "answer": 2,
     "explanation": "大型二輪の手放し運転は道路交通法により禁止されており、安全な操作が必須。",
     "isTrapQuestion": false,
-    "trapNumberType": "none"
+    "trapNumberType": "none",
+    "topicTag": "operation"
   },
   {
     "id": "o038",
@@ -719,7 +756,8 @@
     "answer": 1,
     "explanation": "安全な走行姿勢は、背中を張り視線を先に置き、ハンドルに過度な力を入れないこと。",
     "isTrapQuestion": false,
-    "trapNumberType": "none"
+    "trapNumberType": "none",
+    "topicTag": "operation"
   },
   {
     "id": "o039",
@@ -738,7 +776,8 @@
     "answer": 1,
     "explanation": "大型二輪は陸運局への登録が必須であり、登録証の携行が必要。",
     "isTrapQuestion": false,
-    "trapNumberType": "none"
+    "trapNumberType": "none",
+    "topicTag": "license_system"
   },
   {
     "id": "o040",
@@ -757,7 +796,8 @@
     "answer": 1,
     "explanation": "スリップ予防には段階的な減速と慎重運転が最も効果的。",
     "isTrapQuestion": false,
-    "trapNumberType": "none"
+    "trapNumberType": "none",
+    "topicTag": "operation"
   },
   {
     "id": "o041",
@@ -776,7 +816,8 @@
     "answer": 1,
     "explanation": "チェーンの適切な油さしとスプロケット磨耗確認は安全運転に不可欠。",
     "isTrapQuestion": false,
-    "trapNumberType": "none"
+    "trapNumberType": "none",
+    "topicTag": "maintenance"
   },
   {
     "id": "o042",
@@ -795,7 +836,8 @@
     "answer": 1,
     "explanation": "タイヤの正規空気圧を維持することが、高速走行の安全性を確保する。",
     "isTrapQuestion": false,
-    "trapNumberType": "none"
+    "trapNumberType": "none",
+    "topicTag": "maintenance"
   },
   {
     "id": "o043",
@@ -814,7 +856,8 @@
     "answer": 1,
     "explanation": "大型二輪での携帯電話使用は道路交通法により禁止されており、停止中でも使用できない。",
     "isTrapQuestion": false,
-    "trapNumberType": "none"
+    "trapNumberType": "none",
+    "topicTag": "rules"
   },
   {
     "id": "o044",
@@ -833,7 +876,8 @@
     "answer": 1,
     "explanation": "スタンディング走行は、オフロード走行など特定の状況下でのみ許可される。",
     "isTrapQuestion": false,
-    "trapNumberType": "none"
+    "trapNumberType": "none",
+    "topicTag": "operation"
   },
   {
     "id": "o045",
@@ -852,7 +896,8 @@
     "answer": 1,
     "explanation": "大型二輪の積載物は最大60kgで、シート高を超えてはいけない。",
     "isTrapQuestion": true,
-    "trapNumberType": "loadLimit"
+    "trapNumberType": "loadLimit",
+    "topicTag": "parking"
   },
   {
     "id": "o046",
@@ -871,7 +916,8 @@
     "answer": 2,
     "explanation": "コーナリング時は、バイクを内側に傾けると同時に、体重を外側に移動させることが安全。",
     "isTrapQuestion": false,
-    "trapNumberType": "none"
+    "trapNumberType": "none",
+    "topicTag": "operation"
   },
   {
     "id": "o047",
@@ -890,7 +936,8 @@
     "answer": 1,
     "explanation": "走行速度と状況に応じた適切なギア選択が、安全と燃費効率を実現する。",
     "isTrapQuestion": false,
-    "trapNumberType": "none"
+    "trapNumberType": "none",
+    "topicTag": "operation"
   },
   {
     "id": "o048",
@@ -909,7 +956,8 @@
     "answer": 1,
     "explanation": "渋滞中は追従距離を確保し、前車との急な距離変化に対応できる速度維持が安全。",
     "isTrapQuestion": false,
-    "trapNumberType": "none"
+    "trapNumberType": "none",
+    "topicTag": "rules"
   },
   {
     "id": "o049",
@@ -928,7 +976,8 @@
     "answer": 1,
     "explanation": "大型二輪の常時ライト点灯は視認性を向上させ、事故防止に効果的。",
     "isTrapQuestion": false,
-    "trapNumberType": "none"
+    "trapNumberType": "none",
+    "topicTag": "maintenance"
   },
   {
     "id": "o050",
@@ -947,7 +996,8 @@
     "answer": 1,
     "explanation": "橋上やトンネル出口では横風の影響が大きく、特に高速走行時は注意が必須。",
     "isTrapQuestion": true,
-    "trapNumberType": "weatherSafety"
+    "trapNumberType": "weatherSafety",
+    "topicTag": "hazard_prediction"
   },
   {
     "id": "o051",
@@ -966,7 +1016,8 @@
     "answer": 1,
     "explanation": "横風では、ハンドルを柔軟に握り、バイクの自然な動きに対応することが安全。",
     "isTrapQuestion": false,
-    "trapNumberType": "none"
+    "trapNumberType": "none",
+    "topicTag": "operation"
   },
   {
     "id": "o052",
@@ -985,7 +1036,8 @@
     "answer": 0,
     "explanation": "雨での高速走行は非常に危険なため、まず速度を落とすことが最優先。",
     "isTrapQuestion": false,
-    "trapNumberType": "none"
+    "trapNumberType": "none",
+    "topicTag": "rules"
   },
   {
     "id": "o053",
@@ -1004,7 +1056,8 @@
     "answer": 1,
     "explanation": "高速走行ではタイヤの溝と空気圧が、安全性に直結する最重要項目。",
     "isTrapQuestion": false,
-    "trapNumberType": "none"
+    "trapNumberType": "none",
+    "topicTag": "maintenance"
   },
   {
     "id": "o054",
@@ -1023,7 +1076,8 @@
     "answer": 1,
     "explanation": "大型二輪の高出力は、段階的な加速制御で安全性を確保する必要がある。",
     "isTrapQuestion": false,
-    "trapNumberType": "none"
+    "trapNumberType": "none",
+    "topicTag": "hazard_prediction"
   },
   {
     "id": "o055",
@@ -1042,7 +1096,8 @@
     "answer": 1,
     "explanation": "大型二輪の高出力は急加速・ウイリー・ホイールスピンのリスクが高い。",
     "isTrapQuestion": false,
-    "trapNumberType": "none"
+    "trapNumberType": "none",
+    "topicTag": "operation"
   },
   {
     "id": "o056",
@@ -1061,7 +1116,8 @@
     "answer": 1,
     "explanation": "大型二輪での二人乗りは免許取得後1年の実乗経験が要件。",
     "isTrapQuestion": true,
-    "trapNumberType": "twoPersonRiding"
+    "trapNumberType": "twoPersonRiding",
+    "topicTag": "parking"
   },
   {
     "id": "o057",
@@ -1080,7 +1136,8 @@
     "answer": 1,
     "explanation": "大型二輪の最大積載量は60kg（普通二輪と同じ）。",
     "isTrapQuestion": true,
-    "trapNumberType": "loadLimit"
+    "trapNumberType": "loadLimit",
+    "topicTag": "parking"
   },
   {
     "id": "o058",
@@ -1099,7 +1156,8 @@
     "answer": 1,
     "explanation": "大型二輪は高出力に対応する強力なブレーキシステム搭載が必須。",
     "isTrapQuestion": false,
-    "trapNumberType": "none"
+    "trapNumberType": "none",
+    "topicTag": "operation"
   },
   {
     "id": "o059",
@@ -1118,7 +1176,8 @@
     "answer": 1,
     "explanation": "大型二輪の過度な加速はホイールスピン、ウイリー、リアグリップ喪失を招く。",
     "isTrapQuestion": false,
-    "trapNumberType": "none"
+    "trapNumberType": "none",
+    "topicTag": "operation"
   },
   {
     "id": "o060",
@@ -1137,7 +1196,8 @@
     "answer": 1,
     "explanation": "カーブは事前の十分な減速が安全の基本。カーブ内での急操作は危険。",
     "isTrapQuestion": false,
-    "trapNumberType": "none"
+    "trapNumberType": "none",
+    "topicTag": "operation"
   },
   {
     "id": "o061",
@@ -1156,7 +1216,8 @@
     "answer": 1,
     "explanation": "雨天時は視界悪化とグリップ低下が顕著。速度大幅低下が必須。",
     "isTrapQuestion": false,
-    "trapNumberType": "none"
+    "trapNumberType": "none",
+    "topicTag": "rules"
   },
   {
     "id": "o062",
@@ -1175,7 +1236,8 @@
     "answer": 1,
     "explanation": "高速走行時はハンドルを緩く保ち、バイクの安定性に任せることが基本。",
     "isTrapQuestion": true,
-    "trapNumberType": "hazardRecognition"
+    "trapNumberType": "hazardRecognition",
+    "topicTag": "operation"
   },
   {
     "id": "o063",
@@ -1194,7 +1256,8 @@
     "answer": 1,
     "explanation": "大型二輪免許の有効期限は3年。",
     "isTrapQuestion": true,
-    "trapNumberType": "licensePeriod"
+    "trapNumberType": "licensePeriod",
+    "topicTag": "license_system"
   },
   {
     "id": "o064",
@@ -1213,7 +1276,8 @@
     "answer": 1,
     "explanation": "大型二輪でも基本は周囲確認と予測運転による危機管理。",
     "isTrapQuestion": false,
-    "trapNumberType": "none"
+    "trapNumberType": "none",
+    "topicTag": "hazard_prediction"
   },
   {
     "id": "o065",
@@ -1232,7 +1296,8 @@
     "answer": 1,
     "explanation": "大型二輪の高出力は急加速・ウイリー・ホイールスピンのリスクが高い。",
     "isTrapQuestion": false,
-    "trapNumberType": "none"
+    "trapNumberType": "none",
+    "topicTag": "operation"
   },
   {
     "id": "o066",
@@ -1251,7 +1316,8 @@
     "answer": 1,
     "explanation": "大型二輪での二人乗りは免許取得後1年の実乗経験が要件。",
     "isTrapQuestion": true,
-    "trapNumberType": "twoPersonRiding"
+    "trapNumberType": "twoPersonRiding",
+    "topicTag": "parking"
   },
   {
     "id": "o067",
@@ -1270,7 +1336,8 @@
     "answer": 1,
     "explanation": "大型二輪の最大積載量は60kg（普通二輪と同じ）。",
     "isTrapQuestion": true,
-    "trapNumberType": "loadLimit"
+    "trapNumberType": "loadLimit",
+    "topicTag": "parking"
   },
   {
     "id": "o068",
@@ -1289,7 +1356,8 @@
     "answer": 1,
     "explanation": "大型二輪は高出力に対応する強力なブレーキシステム搭載が必須。",
     "isTrapQuestion": false,
-    "trapNumberType": "none"
+    "trapNumberType": "none",
+    "topicTag": "operation"
   },
   {
     "id": "o069",
@@ -1308,7 +1376,8 @@
     "answer": 1,
     "explanation": "大型二輪の過度な加速はホイールスピン、ウイリー、リアグリップ喪失を招く。",
     "isTrapQuestion": false,
-    "trapNumberType": "none"
+    "trapNumberType": "none",
+    "topicTag": "operation"
   },
   {
     "id": "o070",
@@ -1327,7 +1396,8 @@
     "answer": 1,
     "explanation": "カーブは事前の十分な減速が安全の基本。カーブ内での急操作は危険。",
     "isTrapQuestion": false,
-    "trapNumberType": "none"
+    "trapNumberType": "none",
+    "topicTag": "operation"
   },
   {
     "id": "o071",
@@ -1346,7 +1416,8 @@
     "answer": 1,
     "explanation": "雨天時は視界悪化とグリップ低下が顕著。速度大幅低下が必須。",
     "isTrapQuestion": false,
-    "trapNumberType": "none"
+    "trapNumberType": "none",
+    "topicTag": "rules"
   },
   {
     "id": "o072",
@@ -1365,7 +1436,8 @@
     "answer": 1,
     "explanation": "高速走行時はハンドルを緩く保ち、バイクの安定性に任せることが基本。",
     "isTrapQuestion": true,
-    "trapNumberType": "hazardRecognition"
+    "trapNumberType": "hazardRecognition",
+    "topicTag": "operation"
   },
   {
     "id": "o073",
@@ -1384,7 +1456,8 @@
     "answer": 1,
     "explanation": "大型二輪免許の有効期限は3年。",
     "isTrapQuestion": true,
-    "trapNumberType": "licensePeriod"
+    "trapNumberType": "licensePeriod",
+    "topicTag": "license_system"
   },
   {
     "id": "o074",
@@ -1403,7 +1476,8 @@
     "answer": 1,
     "explanation": "大型二輪でも基本は周囲確認と予測運転による危機管理。",
     "isTrapQuestion": false,
-    "trapNumberType": "none"
+    "trapNumberType": "none",
+    "topicTag": "hazard_prediction"
   },
   {
     "id": "o075",
@@ -1422,7 +1496,8 @@
     "answer": 1,
     "explanation": "大型二輪の高出力は急加速・ウイリー・ホイールスピンのリスクが高い。",
     "isTrapQuestion": false,
-    "trapNumberType": "none"
+    "trapNumberType": "none",
+    "topicTag": "operation"
   },
   {
     "id": "o076",
@@ -1441,7 +1516,8 @@
     "answer": 1,
     "explanation": "大型二輪での二人乗りは免許取得後1年の実乗経験が要件。",
     "isTrapQuestion": true,
-    "trapNumberType": "twoPersonRiding"
+    "trapNumberType": "twoPersonRiding",
+    "topicTag": "parking"
   },
   {
     "id": "o077",
@@ -1460,7 +1536,8 @@
     "answer": 1,
     "explanation": "大型二輪の最大積載量は60kg（普通二輪と同じ）。",
     "isTrapQuestion": true,
-    "trapNumberType": "loadLimit"
+    "trapNumberType": "loadLimit",
+    "topicTag": "parking"
   },
   {
     "id": "o078",
@@ -1479,7 +1556,8 @@
     "answer": 1,
     "explanation": "大型二輪は高出力に対応する強力なブレーキシステム搭載が必須。",
     "isTrapQuestion": false,
-    "trapNumberType": "none"
+    "trapNumberType": "none",
+    "topicTag": "operation"
   },
   {
     "id": "o079",
@@ -1498,7 +1576,8 @@
     "answer": 1,
     "explanation": "大型二輪の過度な加速はホイールスピン、ウイリー、リアグリップ喪失を招く。",
     "isTrapQuestion": false,
-    "trapNumberType": "none"
+    "trapNumberType": "none",
+    "topicTag": "operation"
   },
   {
     "id": "o080",
@@ -1517,7 +1596,8 @@
     "answer": 1,
     "explanation": "カーブは事前の十分な減速が安全の基本。カーブ内での急操作は危険。",
     "isTrapQuestion": false,
-    "trapNumberType": "none"
+    "trapNumberType": "none",
+    "topicTag": "operation"
   },
   {
     "id": "o081",
@@ -1536,7 +1616,8 @@
     "answer": 1,
     "explanation": "雨天時は視界悪化とグリップ低下が顕著。速度大幅低下が必須。",
     "isTrapQuestion": false,
-    "trapNumberType": "none"
+    "trapNumberType": "none",
+    "topicTag": "rules"
   },
   {
     "id": "o082",
@@ -1555,7 +1636,8 @@
     "answer": 1,
     "explanation": "高速走行時はハンドルを緩く保ち、バイクの安定性に任せることが基本。",
     "isTrapQuestion": true,
-    "trapNumberType": "hazardRecognition"
+    "trapNumberType": "hazardRecognition",
+    "topicTag": "operation"
   },
   {
     "id": "o083",
@@ -1574,7 +1656,8 @@
     "answer": 1,
     "explanation": "大型二輪免許の有効期限は3年。",
     "isTrapQuestion": true,
-    "trapNumberType": "licensePeriod"
+    "trapNumberType": "licensePeriod",
+    "topicTag": "license_system"
   },
   {
     "id": "o084",
@@ -1593,7 +1676,8 @@
     "answer": 1,
     "explanation": "大型二輪でも基本は周囲確認と予測運転による危機管理。",
     "isTrapQuestion": false,
-    "trapNumberType": "none"
+    "trapNumberType": "none",
+    "topicTag": "hazard_prediction"
   },
   {
     "id": "o085",
@@ -1612,7 +1696,8 @@
     "answer": 1,
     "explanation": "大型二輪の高出力は急加速・ウイリー・ホイールスピンのリスクが高い。",
     "isTrapQuestion": false,
-    "trapNumberType": "none"
+    "trapNumberType": "none",
+    "topicTag": "operation"
   },
   {
     "id": "o086",
@@ -1631,7 +1716,8 @@
     "answer": 1,
     "explanation": "大型二輪での二人乗りは免許取得後1年の実乗経験が要件。",
     "isTrapQuestion": true,
-    "trapNumberType": "twoPersonRiding"
+    "trapNumberType": "twoPersonRiding",
+    "topicTag": "parking"
   },
   {
     "id": "o087",
@@ -1650,7 +1736,8 @@
     "answer": 1,
     "explanation": "大型二輪の最大積載量は60kg（普通二輪と同じ）。",
     "isTrapQuestion": true,
-    "trapNumberType": "loadLimit"
+    "trapNumberType": "loadLimit",
+    "topicTag": "parking"
   },
   {
     "id": "o088",
@@ -1669,7 +1756,8 @@
     "answer": 1,
     "explanation": "大型二輪は高出力に対応する強力なブレーキシステム搭載が必須。",
     "isTrapQuestion": false,
-    "trapNumberType": "none"
+    "trapNumberType": "none",
+    "topicTag": "operation"
   },
   {
     "id": "o089",
@@ -1688,7 +1776,8 @@
     "answer": 1,
     "explanation": "大型二輪の過度な加速はホイールスピン、ウイリー、リアグリップ喪失を招く。",
     "isTrapQuestion": false,
-    "trapNumberType": "none"
+    "trapNumberType": "none",
+    "topicTag": "operation"
   },
   {
     "id": "o090",
@@ -1707,7 +1796,8 @@
     "answer": 1,
     "explanation": "カーブは事前の十分な減速が安全の基本。カーブ内での急操作は危険。",
     "isTrapQuestion": false,
-    "trapNumberType": "none"
+    "trapNumberType": "none",
+    "topicTag": "operation"
   },
   {
     "id": "o091",
@@ -1726,7 +1816,8 @@
     "answer": 1,
     "explanation": "雨天時は視界悪化とグリップ低下が顕著。速度大幅低下が必須。",
     "isTrapQuestion": false,
-    "trapNumberType": "none"
+    "trapNumberType": "none",
+    "topicTag": "rules"
   },
   {
     "id": "o092",
@@ -1745,7 +1836,8 @@
     "answer": 1,
     "explanation": "高速走行時はハンドルを緩く保ち、バイクの安定性に任せることが基本。",
     "isTrapQuestion": true,
-    "trapNumberType": "hazardRecognition"
+    "trapNumberType": "hazardRecognition",
+    "topicTag": "operation"
   },
   {
     "id": "o093",
@@ -1764,7 +1856,8 @@
     "answer": 1,
     "explanation": "大型二輪免許の有効期限は3年。",
     "isTrapQuestion": true,
-    "trapNumberType": "licensePeriod"
+    "trapNumberType": "licensePeriod",
+    "topicTag": "license_system"
   },
   {
     "id": "o094",
@@ -1783,7 +1876,8 @@
     "answer": 1,
     "explanation": "大型二輪でも基本は周囲確認と予測運転による危機管理。",
     "isTrapQuestion": false,
-    "trapNumberType": "none"
+    "trapNumberType": "none",
+    "topicTag": "hazard_prediction"
   },
   {
     "id": "o095",
@@ -1802,7 +1896,8 @@
     "answer": 1,
     "explanation": "大型二輪の高出力は急加速・ウイリー・ホイールスピンのリスクが高い。",
     "isTrapQuestion": false,
-    "trapNumberType": "none"
+    "trapNumberType": "none",
+    "topicTag": "operation"
   },
   {
     "id": "o096",
@@ -1821,7 +1916,8 @@
     "answer": 1,
     "explanation": "大型二輪での二人乗りは免許取得後1年の実乗経験が要件。",
     "isTrapQuestion": true,
-    "trapNumberType": "twoPersonRiding"
+    "trapNumberType": "twoPersonRiding",
+    "topicTag": "parking"
   },
   {
     "id": "o097",
@@ -1840,7 +1936,8 @@
     "answer": 1,
     "explanation": "大型二輪の最大積載量は60kg（普通二輪と同じ）。",
     "isTrapQuestion": true,
-    "trapNumberType": "loadLimit"
+    "trapNumberType": "loadLimit",
+    "topicTag": "parking"
   },
   {
     "id": "o098",
@@ -1859,7 +1956,8 @@
     "answer": 1,
     "explanation": "大型二輪は高出力に対応する強力なブレーキシステム搭載が必須。",
     "isTrapQuestion": false,
-    "trapNumberType": "none"
+    "trapNumberType": "none",
+    "topicTag": "operation"
   },
   {
     "id": "o099",
@@ -1878,7 +1976,8 @@
     "answer": 1,
     "explanation": "大型二輪の過度な加速はホイールスピン、ウイリー、リアグリップ喪失を招く。",
     "isTrapQuestion": false,
-    "trapNumberType": "none"
+    "trapNumberType": "none",
+    "topicTag": "operation"
   },
   {
     "id": "o100",
@@ -1897,7 +1996,8 @@
     "answer": 1,
     "explanation": "カーブは事前の十分な減速が安全の基本。カーブ内での急操作は危険。",
     "isTrapQuestion": false,
-    "trapNumberType": "none"
+    "trapNumberType": "none",
+    "topicTag": "operation"
   },
   {
     "id": "o101",
@@ -1916,7 +2016,8 @@
     "answer": 1,
     "explanation": "雨天時は視界悪化とグリップ低下が顕著。速度大幅低下が必須。",
     "isTrapQuestion": false,
-    "trapNumberType": "none"
+    "trapNumberType": "none",
+    "topicTag": "rules"
   },
   {
     "id": "o102",
@@ -1935,7 +2036,8 @@
     "answer": 1,
     "explanation": "高速走行時はハンドルを緩く保ち、バイクの安定性に任せることが基本。",
     "isTrapQuestion": true,
-    "trapNumberType": "hazardRecognition"
+    "trapNumberType": "hazardRecognition",
+    "topicTag": "operation"
   },
   {
     "id": "o103",
@@ -1954,7 +2056,8 @@
     "answer": 1,
     "explanation": "大型二輪免許の有効期限は3年。",
     "isTrapQuestion": true,
-    "trapNumberType": "licensePeriod"
+    "trapNumberType": "licensePeriod",
+    "topicTag": "license_system"
   },
   {
     "id": "o104",
@@ -1973,7 +2076,8 @@
     "answer": 1,
     "explanation": "大型二輪でも基本は周囲確認と予測運転による危機管理。",
     "isTrapQuestion": false,
-    "trapNumberType": "none"
+    "trapNumberType": "none",
+    "topicTag": "hazard_prediction"
   },
   {
     "id": "o105",
@@ -1992,7 +2096,8 @@
     "answer": 1,
     "explanation": "大型二輪の高出力は急加速・ウイリー・ホイールスピンのリスクが高い。",
     "isTrapQuestion": false,
-    "trapNumberType": "none"
+    "trapNumberType": "none",
+    "topicTag": "operation"
   },
   {
     "id": "o106",
@@ -2011,7 +2116,8 @@
     "answer": 1,
     "explanation": "大型二輪での二人乗りは免許取得後1年の実乗経験が要件。",
     "isTrapQuestion": true,
-    "trapNumberType": "twoPersonRiding"
+    "trapNumberType": "twoPersonRiding",
+    "topicTag": "parking"
   },
   {
     "id": "o107",
@@ -2030,7 +2136,8 @@
     "answer": 1,
     "explanation": "大型二輪の最大積載量は60kg（普通二輪と同じ）。",
     "isTrapQuestion": true,
-    "trapNumberType": "loadLimit"
+    "trapNumberType": "loadLimit",
+    "topicTag": "parking"
   },
   {
     "id": "o108",
@@ -2049,7 +2156,8 @@
     "answer": 1,
     "explanation": "大型二輪は高出力に対応する強力なブレーキシステム搭載が必須。",
     "isTrapQuestion": false,
-    "trapNumberType": "none"
+    "trapNumberType": "none",
+    "topicTag": "operation"
   },
   {
     "id": "o109",
@@ -2068,7 +2176,8 @@
     "answer": 1,
     "explanation": "大型二輪の過度な加速はホイールスピン、ウイリー、リアグリップ喪失を招く。",
     "isTrapQuestion": false,
-    "trapNumberType": "none"
+    "trapNumberType": "none",
+    "topicTag": "operation"
   },
   {
     "id": "o110",
@@ -2087,7 +2196,8 @@
     "answer": 1,
     "explanation": "カーブは事前の十分な減速が安全の基本。カーブ内での急操作は危険。",
     "isTrapQuestion": false,
-    "trapNumberType": "none"
+    "trapNumberType": "none",
+    "topicTag": "operation"
   },
   {
     "id": "o111",
@@ -2106,7 +2216,8 @@
     "answer": 1,
     "explanation": "雨天時は視界悪化とグリップ低下が顕著。速度大幅低下が必須。",
     "isTrapQuestion": false,
-    "trapNumberType": "none"
+    "trapNumberType": "none",
+    "topicTag": "rules"
   },
   {
     "id": "o112",
@@ -2125,7 +2236,8 @@
     "answer": 1,
     "explanation": "高速走行時はハンドルを緩く保ち、バイクの安定性に任せることが基本。",
     "isTrapQuestion": true,
-    "trapNumberType": "hazardRecognition"
+    "trapNumberType": "hazardRecognition",
+    "topicTag": "operation"
   },
   {
     "id": "o113",
@@ -2144,7 +2256,8 @@
     "answer": 1,
     "explanation": "大型二輪免許の有効期限は3年。",
     "isTrapQuestion": true,
-    "trapNumberType": "licensePeriod"
+    "trapNumberType": "licensePeriod",
+    "topicTag": "license_system"
   },
   {
     "id": "o114",
@@ -2163,7 +2276,8 @@
     "answer": 1,
     "explanation": "大型二輪でも基本は周囲確認と予測運転による危機管理。",
     "isTrapQuestion": false,
-    "trapNumberType": "none"
+    "trapNumberType": "none",
+    "topicTag": "hazard_prediction"
   },
   {
     "id": "o115",
@@ -2182,7 +2296,8 @@
     "answer": 1,
     "explanation": "大型二輪の高出力は急加速・ウイリー・ホイールスピンのリスクが高い。",
     "isTrapQuestion": false,
-    "trapNumberType": "none"
+    "trapNumberType": "none",
+    "topicTag": "operation"
   },
   {
     "id": "o116",
@@ -2201,7 +2316,8 @@
     "answer": 1,
     "explanation": "大型二輪での二人乗りは免許取得後1年の実乗経験が要件。",
     "isTrapQuestion": true,
-    "trapNumberType": "twoPersonRiding"
+    "trapNumberType": "twoPersonRiding",
+    "topicTag": "parking"
   },
   {
     "id": "o117",
@@ -2220,7 +2336,8 @@
     "answer": 1,
     "explanation": "大型二輪の最大積載量は60kg（普通二輪と同じ）。",
     "isTrapQuestion": true,
-    "trapNumberType": "loadLimit"
+    "trapNumberType": "loadLimit",
+    "topicTag": "parking"
   },
   {
     "id": "o118",
@@ -2239,7 +2356,8 @@
     "answer": 1,
     "explanation": "大型二輪は高出力に対応する強力なブレーキシステム搭載が必須。",
     "isTrapQuestion": false,
-    "trapNumberType": "none"
+    "trapNumberType": "none",
+    "topicTag": "operation"
   },
   {
     "id": "o119",
@@ -2258,7 +2376,8 @@
     "answer": 1,
     "explanation": "大型二輪の過度な加速はホイールスピン、ウイリー、リアグリップ喪失を招く。",
     "isTrapQuestion": false,
-    "trapNumberType": "none"
+    "trapNumberType": "none",
+    "topicTag": "operation"
   },
   {
     "id": "o120",
@@ -2277,7 +2396,8 @@
     "answer": 1,
     "explanation": "カーブは事前の十分な減速が安全の基本。カーブ内での急操作は危険。",
     "isTrapQuestion": false,
-    "trapNumberType": "none"
+    "trapNumberType": "none",
+    "topicTag": "operation"
   },
   {
     "id": "o121",
@@ -2296,7 +2416,8 @@
     "answer": 1,
     "explanation": "雨天時は視界悪化とグリップ低下が顕著。速度大幅低下が必須。",
     "isTrapQuestion": false,
-    "trapNumberType": "none"
+    "trapNumberType": "none",
+    "topicTag": "rules"
   },
   {
     "id": "o122",
@@ -2315,7 +2436,8 @@
     "answer": 1,
     "explanation": "高速走行時はハンドルを緩く保ち、バイクの安定性に任せることが基本。",
     "isTrapQuestion": true,
-    "trapNumberType": "hazardRecognition"
+    "trapNumberType": "hazardRecognition",
+    "topicTag": "operation"
   },
   {
     "id": "o123",
@@ -2334,7 +2456,8 @@
     "answer": 1,
     "explanation": "大型二輪免許の有効期限は3年。",
     "isTrapQuestion": true,
-    "trapNumberType": "licensePeriod"
+    "trapNumberType": "licensePeriod",
+    "topicTag": "license_system"
   },
   {
     "id": "o124",
@@ -2353,7 +2476,8 @@
     "answer": 1,
     "explanation": "大型二輪でも基本は周囲確認と予測運転による危機管理。",
     "isTrapQuestion": false,
-    "trapNumberType": "none"
+    "trapNumberType": "none",
+    "topicTag": "hazard_prediction"
   },
   {
     "id": "o125",
@@ -2372,7 +2496,8 @@
     "answer": 1,
     "explanation": "大型二輪の高出力は急加速・ウイリー・ホイールスピンのリスクが高い。",
     "isTrapQuestion": false,
-    "trapNumberType": "none"
+    "trapNumberType": "none",
+    "topicTag": "operation"
   },
   {
     "id": "o126",
@@ -2391,7 +2516,8 @@
     "answer": 1,
     "explanation": "大型二輪での二人乗りは免許取得後1年の実乗経験が要件。",
     "isTrapQuestion": true,
-    "trapNumberType": "twoPersonRiding"
+    "trapNumberType": "twoPersonRiding",
+    "topicTag": "parking"
   },
   {
     "id": "o127",
@@ -2410,7 +2536,8 @@
     "answer": 1,
     "explanation": "大型二輪の最大積載量は60kg（普通二輪と同じ）。",
     "isTrapQuestion": true,
-    "trapNumberType": "loadLimit"
+    "trapNumberType": "loadLimit",
+    "topicTag": "parking"
   },
   {
     "id": "o128",
@@ -2429,7 +2556,8 @@
     "answer": 1,
     "explanation": "大型二輪は高出力に対応する強力なブレーキシステム搭載が必須。",
     "isTrapQuestion": false,
-    "trapNumberType": "none"
+    "trapNumberType": "none",
+    "topicTag": "operation"
   },
   {
     "id": "o129",
@@ -2448,7 +2576,8 @@
     "answer": 1,
     "explanation": "大型二輪の過度な加速はホイールスピン、ウイリー、リアグリップ喪失を招く。",
     "isTrapQuestion": false,
-    "trapNumberType": "none"
+    "trapNumberType": "none",
+    "topicTag": "operation"
   },
   {
     "id": "o130",
@@ -2467,7 +2596,8 @@
     "answer": 1,
     "explanation": "カーブは事前の十分な減速が安全の基本。カーブ内での急操作は危険。",
     "isTrapQuestion": false,
-    "trapNumberType": "none"
+    "trapNumberType": "none",
+    "topicTag": "operation"
   },
   {
     "id": "o131",
@@ -2486,7 +2616,8 @@
     "answer": 1,
     "explanation": "雨天時は視界悪化とグリップ低下が顕著。速度大幅低下が必須。",
     "isTrapQuestion": false,
-    "trapNumberType": "none"
+    "trapNumberType": "none",
+    "topicTag": "rules"
   },
   {
     "id": "o132",
@@ -2505,7 +2636,8 @@
     "answer": 1,
     "explanation": "高速走行時はハンドルを緩く保ち、バイクの安定性に任せることが基本。",
     "isTrapQuestion": true,
-    "trapNumberType": "hazardRecognition"
+    "trapNumberType": "hazardRecognition",
+    "topicTag": "operation"
   },
   {
     "id": "o133",
@@ -2524,7 +2656,8 @@
     "answer": 1,
     "explanation": "大型二輪免許の有効期限は3年。",
     "isTrapQuestion": true,
-    "trapNumberType": "licensePeriod"
+    "trapNumberType": "licensePeriod",
+    "topicTag": "license_system"
   },
   {
     "id": "o134",
@@ -2543,7 +2676,8 @@
     "answer": 1,
     "explanation": "大型二輪でも基本は周囲確認と予測運転による危機管理。",
     "isTrapQuestion": false,
-    "trapNumberType": "none"
+    "trapNumberType": "none",
+    "topicTag": "hazard_prediction"
   },
   {
     "id": "o135",
@@ -2562,7 +2696,8 @@
     "answer": 1,
     "explanation": "大型二輪の高出力は急加速・ウイリー・ホイールスピンのリスクが高い。",
     "isTrapQuestion": false,
-    "trapNumberType": "none"
+    "trapNumberType": "none",
+    "topicTag": "operation"
   },
   {
     "id": "o136",
@@ -2581,7 +2716,8 @@
     "answer": 1,
     "explanation": "大型二輪での二人乗りは免許取得後1年の実乗経験が要件。",
     "isTrapQuestion": true,
-    "trapNumberType": "twoPersonRiding"
+    "trapNumberType": "twoPersonRiding",
+    "topicTag": "parking"
   },
   {
     "id": "o137",
@@ -2600,7 +2736,8 @@
     "answer": 1,
     "explanation": "大型二輪の最大積載量は60kg（普通二輪と同じ）。",
     "isTrapQuestion": true,
-    "trapNumberType": "loadLimit"
+    "trapNumberType": "loadLimit",
+    "topicTag": "parking"
   },
   {
     "id": "o138",
@@ -2619,7 +2756,8 @@
     "answer": 1,
     "explanation": "大型二輪は高出力に対応する強力なブレーキシステム搭載が必須。",
     "isTrapQuestion": false,
-    "trapNumberType": "none"
+    "trapNumberType": "none",
+    "topicTag": "operation"
   },
   {
     "id": "o139",
@@ -2638,7 +2776,8 @@
     "answer": 1,
     "explanation": "大型二輪の過度な加速はホイールスピン、ウイリー、リアグリップ喪失を招く。",
     "isTrapQuestion": false,
-    "trapNumberType": "none"
+    "trapNumberType": "none",
+    "topicTag": "operation"
   },
   {
     "id": "o140",
@@ -2657,7 +2796,8 @@
     "answer": 1,
     "explanation": "カーブは事前の十分な減速が安全の基本。カーブ内での急操作は危険。",
     "isTrapQuestion": false,
-    "trapNumberType": "none"
+    "trapNumberType": "none",
+    "topicTag": "operation"
   },
   {
     "id": "o141",
@@ -2676,7 +2816,8 @@
     "answer": 1,
     "explanation": "雨天時は視界悪化とグリップ低下が顕著。速度大幅低下が必須。",
     "isTrapQuestion": false,
-    "trapNumberType": "none"
+    "trapNumberType": "none",
+    "topicTag": "rules"
   },
   {
     "id": "o142",
@@ -2695,7 +2836,8 @@
     "answer": 1,
     "explanation": "高速走行時はハンドルを緩く保ち、バイクの安定性に任せることが基本。",
     "isTrapQuestion": true,
-    "trapNumberType": "hazardRecognition"
+    "trapNumberType": "hazardRecognition",
+    "topicTag": "operation"
   },
   {
     "id": "o143",
@@ -2714,7 +2856,8 @@
     "answer": 1,
     "explanation": "大型二輪免許の有効期限は3年。",
     "isTrapQuestion": true,
-    "trapNumberType": "licensePeriod"
+    "trapNumberType": "licensePeriod",
+    "topicTag": "license_system"
   },
   {
     "id": "o144",
@@ -2733,7 +2876,8 @@
     "answer": 1,
     "explanation": "大型二輪でも基本は周囲確認と予測運転による危機管理。",
     "isTrapQuestion": false,
-    "trapNumberType": "none"
+    "trapNumberType": "none",
+    "topicTag": "hazard_prediction"
   },
   {
     "id": "o145",
@@ -2752,7 +2896,8 @@
     "answer": 1,
     "explanation": "大型二輪の高出力は急加速・ウイリー・ホイールスピンのリスクが高い。",
     "isTrapQuestion": false,
-    "trapNumberType": "none"
+    "trapNumberType": "none",
+    "topicTag": "operation"
   },
   {
     "id": "o146",
@@ -2771,7 +2916,8 @@
     "answer": 1,
     "explanation": "大型二輪での二人乗りは免許取得後1年の実乗経験が要件。",
     "isTrapQuestion": true,
-    "trapNumberType": "twoPersonRiding"
+    "trapNumberType": "twoPersonRiding",
+    "topicTag": "parking"
   },
   {
     "id": "o147",
@@ -2790,7 +2936,8 @@
     "answer": 1,
     "explanation": "大型二輪の最大積載量は60kg（普通二輪と同じ）。",
     "isTrapQuestion": true,
-    "trapNumberType": "loadLimit"
+    "trapNumberType": "loadLimit",
+    "topicTag": "parking"
   },
   {
     "id": "o148",
@@ -2809,7 +2956,8 @@
     "answer": 1,
     "explanation": "大型二輪は高出力に対応する強力なブレーキシステム搭載が必須。",
     "isTrapQuestion": false,
-    "trapNumberType": "none"
+    "trapNumberType": "none",
+    "topicTag": "operation"
   },
   {
     "id": "o149",
@@ -2828,7 +2976,8 @@
     "answer": 1,
     "explanation": "大型二輪の過度な加速はホイールスピン、ウイリー、リアグリップ喪失を招く。",
     "isTrapQuestion": false,
-    "trapNumberType": "none"
+    "trapNumberType": "none",
+    "topicTag": "operation"
   },
   {
     "id": "o150",
@@ -2847,7 +2996,8 @@
     "answer": 1,
     "explanation": "カーブは事前の十分な減速が安全の基本。カーブ内での急操作は危険。",
     "isTrapQuestion": false,
-    "trapNumberType": "none"
+    "trapNumberType": "none",
+    "topicTag": "operation"
   },
   {
     "id": "o151",
@@ -2866,7 +3016,8 @@
     "answer": 1,
     "explanation": "雨天時は視界悪化とグリップ低下が顕著。速度大幅低下が必須。",
     "isTrapQuestion": false,
-    "trapNumberType": "none"
+    "trapNumberType": "none",
+    "topicTag": "rules"
   },
   {
     "id": "o152",
@@ -2885,7 +3036,8 @@
     "answer": 1,
     "explanation": "高速走行時はハンドルを緩く保ち、バイクの安定性に任せることが基本。",
     "isTrapQuestion": true,
-    "trapNumberType": "hazardRecognition"
+    "trapNumberType": "hazardRecognition",
+    "topicTag": "operation"
   },
   {
     "id": "o153",
@@ -2904,7 +3056,8 @@
     "answer": 1,
     "explanation": "大型二輪免許の有効期限は3年。",
     "isTrapQuestion": true,
-    "trapNumberType": "licensePeriod"
+    "trapNumberType": "licensePeriod",
+    "topicTag": "license_system"
   },
   {
     "id": "o154",
@@ -2923,7 +3076,8 @@
     "answer": 1,
     "explanation": "大型二輪でも基本は周囲確認と予測運転による危機管理。",
     "isTrapQuestion": false,
-    "trapNumberType": "none"
+    "trapNumberType": "none",
+    "topicTag": "hazard_prediction"
   },
   {
     "id": "o155",
@@ -2942,7 +3096,8 @@
     "answer": 1,
     "explanation": "大型二輪の高出力は急加速・ウイリー・ホイールスピンのリスクが高い。",
     "isTrapQuestion": false,
-    "trapNumberType": "none"
+    "trapNumberType": "none",
+    "topicTag": "operation"
   },
   {
     "id": "o156",
@@ -2961,7 +3116,8 @@
     "answer": 1,
     "explanation": "大型二輪での二人乗りは免許取得後1年の実乗経験が要件。",
     "isTrapQuestion": true,
-    "trapNumberType": "twoPersonRiding"
+    "trapNumberType": "twoPersonRiding",
+    "topicTag": "parking"
   },
   {
     "id": "o157",
@@ -2980,7 +3136,8 @@
     "answer": 1,
     "explanation": "大型二輪の最大積載量は60kg（普通二輪と同じ）。",
     "isTrapQuestion": true,
-    "trapNumberType": "loadLimit"
+    "trapNumberType": "loadLimit",
+    "topicTag": "parking"
   },
   {
     "id": "o158",
@@ -2999,7 +3156,8 @@
     "answer": 1,
     "explanation": "大型二輪は高出力に対応する強力なブレーキシステム搭載が必須。",
     "isTrapQuestion": false,
-    "trapNumberType": "none"
+    "trapNumberType": "none",
+    "topicTag": "operation"
   },
   {
     "id": "o159",
@@ -3018,7 +3176,8 @@
     "answer": 1,
     "explanation": "大型二輪の過度な加速はホイールスピン、ウイリー、リアグリップ喪失を招く。",
     "isTrapQuestion": false,
-    "trapNumberType": "none"
+    "trapNumberType": "none",
+    "topicTag": "operation"
   },
   {
     "id": "o160",
@@ -3037,7 +3196,8 @@
     "answer": 1,
     "explanation": "カーブは事前の十分な減速が安全の基本。カーブ内での急操作は危険。",
     "isTrapQuestion": false,
-    "trapNumberType": "none"
+    "trapNumberType": "none",
+    "topicTag": "operation"
   },
   {
     "id": "o161",
@@ -3056,7 +3216,8 @@
     "answer": 1,
     "explanation": "雨天時は視界悪化とグリップ低下が顕著。速度大幅低下が必須。",
     "isTrapQuestion": false,
-    "trapNumberType": "none"
+    "trapNumberType": "none",
+    "topicTag": "rules"
   },
   {
     "id": "o162",
@@ -3075,7 +3236,8 @@
     "answer": 1,
     "explanation": "高速走行時はハンドルを緩く保ち、バイクの安定性に任せることが基本。",
     "isTrapQuestion": true,
-    "trapNumberType": "hazardRecognition"
+    "trapNumberType": "hazardRecognition",
+    "topicTag": "operation"
   },
   {
     "id": "o163",
@@ -3094,7 +3256,8 @@
     "answer": 1,
     "explanation": "大型二輪免許の有効期限は3年。",
     "isTrapQuestion": true,
-    "trapNumberType": "licensePeriod"
+    "trapNumberType": "licensePeriod",
+    "topicTag": "license_system"
   },
   {
     "id": "o164",
@@ -3113,7 +3276,8 @@
     "answer": 1,
     "explanation": "大型二輪でも基本は周囲確認と予測運転による危機管理。",
     "isTrapQuestion": false,
-    "trapNumberType": "none"
+    "trapNumberType": "none",
+    "topicTag": "hazard_prediction"
   },
   {
     "id": "o165",
@@ -3132,7 +3296,8 @@
     "answer": 1,
     "explanation": "大型二輪の高出力は急加速・ウイリー・ホイールスピンのリスクが高い。",
     "isTrapQuestion": false,
-    "trapNumberType": "none"
+    "trapNumberType": "none",
+    "topicTag": "operation"
   },
   {
     "id": "o166",
@@ -3151,7 +3316,8 @@
     "answer": 1,
     "explanation": "大型二輪は高出力で急加速が可能な一方、コントロールが困難で危険管理が必須。",
     "isTrapQuestion": false,
-    "trapNumberType": "none"
+    "trapNumberType": "none",
+    "topicTag": "hazard_prediction"
   },
   {
     "id": "o167",
@@ -3170,7 +3336,8 @@
     "answer": 1,
     "explanation": "排気量が大きいほど出力が大きく、危険管理のための高度な技術が必須。",
     "isTrapQuestion": true,
-    "trapNumberType": "none"
+    "trapNumberType": "none",
+    "topicTag": "maintenance"
   },
   {
     "id": "o168",
@@ -3189,7 +3356,8 @@
     "answer": 1,
     "explanation": "乗客乗車時は重心位置と荷重分散が走行安定性に大きく影響。慎重な対応が必須。",
     "isTrapQuestion": false,
-    "trapNumberType": "none"
+    "trapNumberType": "none",
+    "topicTag": "parking"
   },
   {
     "id": "o169",
@@ -3208,7 +3376,8 @@
     "answer": 1,
     "explanation": "大型二輪の最大積載量は60kgと定められている。",
     "isTrapQuestion": true,
-    "trapNumberType": "loadLimit"
+    "trapNumberType": "loadLimit",
+    "topicTag": "parking"
   },
   {
     "id": "o170",
@@ -3227,7 +3396,8 @@
     "answer": 1,
     "explanation": "ウイリーは高出力で容易に発生。転倒リスク極大で違反行為。",
     "isTrapQuestion": true,
-    "trapNumberType": "hazardRecognition"
+    "trapNumberType": "hazardRecognition",
+    "topicTag": "operation"
   },
   {
     "id": "o171",
@@ -3246,7 +3416,8 @@
     "answer": 1,
     "explanation": "ホイールスピン防止には段階的なアクセル操作が重要。急加速は危険。",
     "isTrapQuestion": false,
-    "trapNumberType": "none"
+    "trapNumberType": "none",
+    "topicTag": "operation"
   },
   {
     "id": "o172",
@@ -3265,7 +3436,8 @@
     "answer": 1,
     "explanation": "高速カーブは横転リスク。事前減速と適切な傾斜が必須。",
     "isTrapQuestion": false,
-    "trapNumberType": "none"
+    "trapNumberType": "none",
+    "topicTag": "operation"
   },
   {
     "id": "o173",
@@ -3284,7 +3456,8 @@
     "answer": 1,
     "explanation": "大型二輪の制動力は大きく、前後ブレーキの適切なバランスが必須。",
     "isTrapQuestion": true,
-    "trapNumberType": "brakingDistance"
+    "trapNumberType": "brakingDistance",
+    "topicTag": "operation"
   },
   {
     "id": "o174",
@@ -3303,7 +3476,8 @@
     "answer": 1,
     "explanation": "雨天時はグリップ低下で制動距離が大幅延長。速度低下が必須。",
     "isTrapQuestion": true,
-    "trapNumberType": "weatherConditions"
+    "trapNumberType": "weatherConditions",
+    "topicTag": "operation"
   },
   {
     "id": "o175",
@@ -3322,7 +3496,8 @@
     "answer": 1,
     "explanation": "横転防止はカーブへの進入速度と体重移動の適切な制御が最優先。",
     "isTrapQuestion": false,
-    "trapNumberType": "none"
+    "trapNumberType": "none",
+    "topicTag": "operation"
   },
   {
     "id": "o176",
@@ -3341,7 +3516,8 @@
     "answer": 1,
     "explanation": "乗客乗車時のコーナリングは、乗客の体重移動を予測した運転が必須。",
     "isTrapQuestion": false,
-    "trapNumberType": "none"
+    "trapNumberType": "none",
+    "topicTag": "parking"
   },
   {
     "id": "o177",
@@ -3360,7 +3536,8 @@
     "answer": 1,
     "explanation": "夜間走行はハイビームで視界確保し、対向車へのロービーム切り替えが必須。",
     "isTrapQuestion": false,
-    "trapNumberType": "none"
+    "trapNumberType": "none",
+    "topicTag": "hazard_prediction"
   },
   {
     "id": "o178",
@@ -3379,7 +3556,8 @@
     "answer": 1,
     "explanation": "高速走行では空気抵抗が顕著になり、バイクの安定性に影響。横風対策も必須。",
     "isTrapQuestion": true,
-    "trapNumberType": "hazardRecognition"
+    "trapNumberType": "hazardRecognition",
+    "topicTag": "hazard_prediction"
   },
   {
     "id": "o179",
@@ -3398,7 +3576,8 @@
     "answer": 1,
     "explanation": "大型二輪での二人乗りは、免許取得後1年の実乗経験が必須条件。",
     "isTrapQuestion": true,
-    "trapNumberType": "twoPersonRiding"
+    "trapNumberType": "twoPersonRiding",
+    "topicTag": "parking"
   },
   {
     "id": "o180",
@@ -3417,7 +3596,8 @@
     "answer": 1,
     "explanation": "積載物の脱落は後続車への事故。確実なロープ固定が必須。",
     "isTrapQuestion": false,
-    "trapNumberType": "none"
+    "trapNumberType": "none",
+    "topicTag": "parking"
   },
   {
     "id": "o181",
@@ -3436,7 +3616,8 @@
     "answer": 1,
     "explanation": "急ブレーキは前輪をロックさせ、スリップや転倒につながり極めて危険。",
     "isTrapQuestion": true,
-    "trapNumberType": "brakingDistance"
+    "trapNumberType": "brakingDistance",
+    "topicTag": "operation"
   },
   {
     "id": "o182",
@@ -3455,7 +3636,8 @@
     "answer": 1,
     "explanation": "積載物の重心位置は走行安定性に直結。中央低位置が最適。",
     "isTrapQuestion": true,
-    "trapNumberType": "loadLimit"
+    "trapNumberType": "loadLimit",
+    "topicTag": "parking"
   },
   {
     "id": "o183",
@@ -3474,7 +3656,8 @@
     "answer": 1,
     "explanation": "交差点進入時は複数の危険要因が重なるため、総合的な視界確認が必須。",
     "isTrapQuestion": false,
-    "trapNumberType": "none"
+    "trapNumberType": "none",
+    "topicTag": "rules"
   },
   {
     "id": "o184",
@@ -3493,7 +3676,8 @@
     "answer": 1,
     "explanation": "橋・トンネル出口・高架下は横風が集中しやすく、バイク安定性への影響大。",
     "isTrapQuestion": true,
-    "trapNumberType": "hazardRecognition"
+    "trapNumberType": "hazardRecognition",
+    "topicTag": "hazard_prediction"
   },
   {
     "id": "o185",
@@ -3512,7 +3696,8 @@
     "answer": 1,
     "explanation": "白線は水を含みやすく、スリップのリスク。雨天時に特に危険。",
     "isTrapQuestion": true,
-    "trapNumberType": "hazardRecognition"
+    "trapNumberType": "hazardRecognition",
+    "topicTag": "operation"
   },
   {
     "id": "o186",
@@ -3531,7 +3716,8 @@
     "answer": 1,
     "explanation": "凍結路は極めて滑りやすい。走行回避が最適。必要時は最低速が必須。",
     "isTrapQuestion": false,
-    "trapNumberType": "none"
+    "trapNumberType": "none",
+    "topicTag": "hazard_prediction"
   },
   {
     "id": "o187",
@@ -3550,7 +3736,8 @@
     "answer": 1,
     "explanation": "蛇行走行は道路交通法違反で、極めて危険。",
     "isTrapQuestion": true,
-    "trapNumberType": "signalAndMarkings"
+    "trapNumberType": "signalAndMarkings",
+    "topicTag": "operation"
   },
   {
     "id": "o188",
@@ -3569,7 +3756,8 @@
     "answer": 1,
     "explanation": "中央線越えは追越し時のみ許可。その他は対向車との衝突リスク。",
     "isTrapQuestion": true,
-    "trapNumberType": "signalAndMarkings"
+    "trapNumberType": "signalAndMarkings",
+    "topicTag": "rules"
   },
   {
     "id": "o189",
@@ -3588,7 +3776,8 @@
     "answer": 1,
     "explanation": "走行中の携帯使用は違反で危険。停止後の使用が必須。",
     "isTrapQuestion": true,
-    "trapNumberType": "hazardRecognition"
+    "trapNumberType": "hazardRecognition",
+    "topicTag": "rules"
   },
   {
     "id": "o190",
@@ -3607,7 +3796,8 @@
     "answer": 1,
     "explanation": "運転中の眠気は極めて危険。定期的な休憩による対策が必須。",
     "isTrapQuestion": false,
-    "trapNumberType": "none"
+    "trapNumberType": "none",
+    "topicTag": "hazard_prediction"
   },
   {
     "id": "o191",
@@ -3626,7 +3816,8 @@
     "answer": 1,
     "explanation": "体調不良は判断力低下と反応時間延長を招く。走行回避が必須。",
     "isTrapQuestion": false,
-    "trapNumberType": "none"
+    "trapNumberType": "none",
+    "topicTag": "hazard_prediction"
   },
   {
     "id": "o192",
@@ -3645,7 +3836,8 @@
     "answer": 1,
     "explanation": "飲酒運転は完全禁止。少量でも重大な違反で法的責任が生じる。",
     "isTrapQuestion": true,
-    "trapNumberType": "none"
+    "trapNumberType": "none",
+    "topicTag": "rules"
   },
   {
     "id": "o193",
@@ -3664,7 +3856,8 @@
     "answer": 1,
     "explanation": "走行中のスマートフォン操作は違反で危険。停止後の使用が必須。",
     "isTrapQuestion": true,
-    "trapNumberType": "hazardRecognition"
+    "trapNumberType": "hazardRecognition",
+    "topicTag": "rules"
   },
   {
     "id": "o194",
@@ -3683,7 +3876,8 @@
     "answer": 1,
     "explanation": "煽り運転は危険で違反。十分な車間距離保持が必須。",
     "isTrapQuestion": true,
-    "trapNumberType": "hazardRecognition"
+    "trapNumberType": "hazardRecognition",
+    "topicTag": "rules"
   },
   {
     "id": "o195",
@@ -3702,7 +3896,8 @@
     "answer": 1,
     "explanation": "バックミラーには死角がある。肩越し目視確認で後方の完全把握が必須。",
     "isTrapQuestion": false,
-    "trapNumberType": "none"
+    "trapNumberType": "none",
+    "topicTag": "operation"
   },
   {
     "id": "o196",
@@ -3721,7 +3916,8 @@
     "answer": 1,
     "explanation": "実走行では様々な危険状況に直面。確実な危険認識と判断能力習得が最優先。",
     "isTrapQuestion": false,
-    "trapNumberType": "none"
+    "trapNumberType": "none",
+    "topicTag": "rules"
   },
   {
     "id": "o197",
@@ -3740,7 +3936,8 @@
     "answer": 1,
     "explanation": "安全走行は速度制限以下で、さらに状況に応じた速度調整が必須。",
     "isTrapQuestion": true,
-    "trapNumberType": "hazardRecognition"
+    "trapNumberType": "hazardRecognition",
+    "topicTag": "rules"
   },
   {
     "id": "o198",
@@ -3759,7 +3956,8 @@
     "answer": 1,
     "explanation": "定期点検はバイク故障による事故予防に不可欠。法定義務。",
     "isTrapQuestion": false,
-    "trapNumberType": "none"
+    "trapNumberType": "none",
+    "topicTag": "maintenance"
   },
   {
     "id": "o199",
@@ -3778,7 +3976,8 @@
     "answer": 1,
     "explanation": "雨天時の視認性向上にはライト点灯と反射材装備が必須。",
     "isTrapQuestion": false,
-    "trapNumberType": "none"
+    "trapNumberType": "none",
+    "topicTag": "hazard_prediction"
   },
   {
     "id": "o200",
@@ -3797,6 +3996,7 @@
     "answer": 1,
     "explanation": "安全走行習慣は毎回の走行前点検と心身状態確認から始まる。これが基本。",
     "isTrapQuestion": false,
-    "trapNumberType": "none"
+    "trapNumberType": "none",
+    "topicTag": "maintenance"
   }
 ]

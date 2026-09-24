@@ -243,6 +243,7 @@ class AnalyticsSnapshot {
     required this.overall,
     required this.stages,
     required this.categories,
+    this.topics = const [],
     required this.weakAreas,
     required this.recommendations,
     required this.dailyHistory,
@@ -265,6 +266,9 @@ class AnalyticsSnapshot {
 
   /// カテゴリ別パフォーマンス
   final List<CategoryPerformance> categories;
+
+  /// トピック（分野）別パフォーマンス
+  final List<CategoryPerformance> topics;
 
   /// 上位5件の弱点（severity降順）
   final List<WeakArea> weakAreas;
@@ -317,6 +321,11 @@ class AnalyticsSnapshot {
             .cast<Map<String, dynamic>>()
             .map(CategoryPerformance.fromJson)
             .toList(),
+        topics: (json['topics'] as List?)
+                ?.cast<Map<String, dynamic>>()
+                .map(CategoryPerformance.fromJson)
+                .toList() ??
+            const [],
         weakAreas: (json['weakAreas'] as List)
             .cast<Map<String, dynamic>>()
             .map(WeakArea.fromJson)
@@ -339,6 +348,7 @@ class AnalyticsSnapshot {
     'overall': overall.toJson(),
     'stages': stages.map((s) => s.toJson()).toList(),
     'categories': categories.map((c) => c.toJson()).toList(),
+    'topics': topics.map((t) => t.toJson()).toList(),
     'weakAreas': weakAreas.map((w) => w.toJson()).toList(),
     'recommendations': recommendations.map((r) => r.toJson()).toList(),
     'dailyHistory': dailyHistory.map((d) => d.toJson()).toList(),

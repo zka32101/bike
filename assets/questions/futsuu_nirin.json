@@ -18,7 +18,8 @@
     "answer": 1,
     "explanation": "濡れた路面は二輪車のタイヤグリップが大幅に低下し、スリップのリスクが最も高い。",
     "isTrapQuestion": false,
-    "trapNumberType": "none"
+    "trapNumberType": "none",
+    "topicTag": "operation"
   },
   {
     "id": "f002",
@@ -39,7 +40,8 @@
     "answer": 0,
     "explanation": "普通二輪免許取得後、1年間の実乗経験を経た後に二人乗りが許可される。",
     "isTrapQuestion": true,
-    "trapNumberType": "twoPersonRiding"
+    "trapNumberType": "twoPersonRiding",
+    "topicTag": "parking"
   },
   {
     "id": "f003",
@@ -59,7 +61,8 @@
     "answer": 2,
     "explanation": "普通二輪車（側車付きを除く）の最大積載量は60kgと定められている。これを超える積載は違反になる。",
     "isTrapQuestion": true,
-    "trapNumberType": "loadLimit"
+    "trapNumberType": "loadLimit",
+    "topicTag": "parking"
   },
   {
     "id": "f004",
@@ -80,7 +83,8 @@
     "answer": 2,
     "explanation": "二輪車の左折は、重心移動を最小限にするため、事前に左側に寄り十分に速度を落とし、大きな回転半径をとることが安全。",
     "isTrapQuestion": false,
-    "trapNumberType": "none"
+    "trapNumberType": "none",
+    "topicTag": "rules"
   },
   {
     "id": "f005",
@@ -101,7 +105,8 @@
     "answer": 0,
     "explanation": "道路交通法により、普通二輪車の最高速度は100km/hに制限されている。",
     "isTrapQuestion": false,
-    "trapNumberType": "none"
+    "trapNumberType": "none",
+    "topicTag": "rules"
   },
   {
     "id": "f006",
@@ -122,7 +127,8 @@
     "answer": 2,
     "explanation": "道路交通法によりヘルメットの着用は運転者、乗客の両方に義務づけられており、適切に装着することが必須。",
     "isTrapQuestion": false,
-    "trapNumberType": "none"
+    "trapNumberType": "none",
+    "topicTag": "parking"
   },
   {
     "id": "f007",
@@ -143,7 +149,8 @@
     "answer": 1,
     "explanation": "二輪車の右折は、スピードを十分に落として重心移動を最小限にしながら、交差点の中央付近を大きく迂回するように右折することが安全。",
     "isTrapQuestion": false,
-    "trapNumberType": "none"
+    "trapNumberType": "none",
+    "topicTag": "rules"
   },
   {
     "id": "f008",
@@ -163,7 +170,8 @@
     "answer": 2,
     "explanation": "雨の日は路面が濡れてグリップが低下するため、段差や溝を避け、通常より走行速度を落とすことが重要。",
     "isTrapQuestion": true,
-    "trapNumberType": "weatherSafety"
+    "trapNumberType": "weatherSafety",
+    "topicTag": "rules"
   },
   {
     "id": "f009",
@@ -184,7 +192,8 @@
     "answer": 1,
     "explanation": "バックする際は必ず周囲を確認し、後ろに障害物や人がいないことを確認してから慎重にバックする必要がある。",
     "isTrapQuestion": false,
-    "trapNumberType": "none"
+    "trapNumberType": "none",
+    "topicTag": "operation"
   },
   {
     "id": "f010",
@@ -205,7 +214,8 @@
     "answer": 1,
     "explanation": "ヘッドライトは道路交通法によって二輪車に必須の装備である。その他のものは装備義務がない。",
     "isTrapQuestion": false,
-    "trapNumberType": "none"
+    "trapNumberType": "none",
+    "topicTag": "hazard_prediction"
   },
   {
     "id": "f011",
@@ -226,7 +236,8 @@
     "answer": 1,
     "explanation": "二輪車の乗降は、停止している場合に限り、左側（車線側）から行うことが安全とされている。",
     "isTrapQuestion": false,
-    "trapNumberType": "none"
+    "trapNumberType": "none",
+    "topicTag": "operation"
   },
   {
     "id": "f012",
@@ -247,7 +258,8 @@
     "answer": 2,
     "explanation": "カーブ内で急ブレーキをかけると、タイヤのグリップが極限に達し、スリップやスピンの危険性が高まる。",
     "isTrapQuestion": true,
-    "trapNumberType": "brakeTechnique"
+    "trapNumberType": "brakeTechnique",
+    "topicTag": "operation"
   },
   {
     "id": "f013",
@@ -268,7 +280,8 @@
     "answer": 3,
     "explanation": "信号のない交差点での右折は、自分の安全、他の車両、歩行者の全てを同時に確認することが必須。",
     "isTrapQuestion": false,
-    "trapNumberType": "none"
+    "trapNumberType": "none",
+    "topicTag": "rules"
   },
   {
     "id": "f014",
@@ -288,7 +301,8 @@
     "answer": 1,
     "explanation": "山道下降時は、エンジンブレーキを活用することでブレーキの過熱を防ぎ、フットブレーキは軽く使うことが安全。",
     "isTrapQuestion": false,
-    "trapNumberType": "none"
+    "trapNumberType": "none",
+    "topicTag": "operation"
   },
   {
     "id": "f015",
@@ -309,7 +323,8 @@
     "answer": 1,
     "explanation": "二輪車のサイドスタンドは左側に立て、エンジンは必ず切った状態で駐車する。",
     "isTrapQuestion": false,
-    "trapNumberType": "none"
+    "trapNumberType": "none",
+    "topicTag": "parking"
   },
   {
     "id": "f016",
@@ -328,7 +343,8 @@
     "answer": 0,
     "explanation": "二段階右折は、大きな交差点で直進して一度交差点を越え、次の交差点で右折する方法である。",
     "isTrapQuestion": false,
-    "trapNumberType": "none"
+    "trapNumberType": "none",
+    "topicTag": "rules"
   },
   {
     "id": "f017",
@@ -349,7 +365,8 @@
     "answer": 0,
     "explanation": "橋の上は遮るものがないため、横風の影響を最も受けやすく、二輪車は特に注意が必要。",
     "isTrapQuestion": true,
-    "trapNumberType": "weatherSafety"
+    "trapNumberType": "weatherSafety",
+    "topicTag": "hazard_prediction"
   },
   {
     "id": "f018",
@@ -370,7 +387,8 @@
     "answer": 1,
     "explanation": "正しいラインで旋回するには、事前に十分に減速し、視点を進む先に置くことで安全な軌跡が得られる。",
     "isTrapQuestion": false,
-    "trapNumberType": "none"
+    "trapNumberType": "none",
+    "topicTag": "operation"
   },
   {
     "id": "f019",
@@ -390,7 +408,8 @@
     "answer": 1,
     "explanation": "普通二輪車では、乗客は16歳以上であることが法で定められている。",
     "isTrapQuestion": true,
-    "trapNumberType": "twoPersonRiding"
+    "trapNumberType": "twoPersonRiding",
+    "topicTag": "parking"
   },
   {
     "id": "f020",
@@ -411,7 +430,8 @@
     "answer": 1,
     "explanation": "スリップ中の急激なハンドル修正は、かえってスリップを悪化させる可能性があり最も危険。",
     "isTrapQuestion": true,
-    "trapNumberType": "brakeTechnique"
+    "trapNumberType": "brakeTechnique",
+    "topicTag": "operation"
   },
   {
     "id": "f021",
@@ -430,7 +450,8 @@
     "answer": 2,
     "explanation": "普通二輪免許では250cc以下の二輪車を運転できる。これを超える排気量は大型二輪免許が必要。",
     "isTrapQuestion": false,
-    "trapNumberType": "none"
+    "trapNumberType": "none",
+    "topicTag": "license_system"
   },
   {
     "id": "f022",
@@ -451,7 +472,8 @@
     "answer": 2,
     "explanation": "ハイビームは夜間で対向車や先行車がない場合に使用し、相手車両が見える場合はロービームに切り替える。",
     "isTrapQuestion": false,
-    "trapNumberType": "none"
+    "trapNumberType": "none",
+    "topicTag": "hazard_prediction"
   },
   {
     "id": "f023",
@@ -472,7 +494,8 @@
     "answer": 1,
     "explanation": "急ハンドルはタイヤのグリップ限界を超え、転倒やスリップの危険性を大幅に高める。",
     "isTrapQuestion": false,
-    "trapNumberType": "none"
+    "trapNumberType": "none",
+    "topicTag": "operation"
   },
   {
     "id": "f024",
@@ -492,7 +515,8 @@
     "answer": 1,
     "explanation": "タイヤの空気圧と溝は二輪車の安全運転に直結する最重要な点検項目。",
     "isTrapQuestion": false,
-    "trapNumberType": "none"
+    "trapNumberType": "none",
+    "topicTag": "maintenance"
   },
   {
     "id": "f025",
@@ -513,7 +537,8 @@
     "answer": 1,
     "explanation": "夜間走行では、ヘッドライトに加えて反射材や懐中電灯を装備することで、より高い視認性が確保できる。",
     "isTrapQuestion": false,
-    "trapNumberType": "none"
+    "trapNumberType": "none",
+    "topicTag": "hazard_prediction"
   },
   {
     "id": "f026",
@@ -532,7 +557,8 @@
     "answer": 1,
     "explanation": "二輪車は白線（特に破線）を踏むとスリップのリスクが高まるため、可能な限り避けるべき。",
     "isTrapQuestion": false,
-    "trapNumberType": "none"
+    "trapNumberType": "none",
+    "topicTag": "operation"
   },
   {
     "id": "f027",
@@ -553,7 +579,8 @@
     "answer": 1,
     "explanation": "ガード下は落下物のリスクや視認性が低下するため、低速で慎重に走行することが重要。",
     "isTrapQuestion": false,
-    "trapNumberType": "none"
+    "trapNumberType": "none",
+    "topicTag": "hazard_prediction"
   },
   {
     "id": "f028",
@@ -573,7 +600,8 @@
     "answer": 1,
     "explanation": "二輪車は必ず許可された駐輪場のみ使用し、駐輪禁止場所への停車は違反になる。",
     "isTrapQuestion": false,
-    "trapNumberType": "none"
+    "trapNumberType": "none",
+    "topicTag": "parking"
   },
   {
     "id": "f029",
@@ -594,7 +622,8 @@
     "answer": 1,
     "explanation": "ミラーだけでは死角が存在するため、肩越しの目視確認を併用することで安全性が高まる。",
     "isTrapQuestion": false,
-    "trapNumberType": "none"
+    "trapNumberType": "none",
+    "topicTag": "operation"
   },
   {
     "id": "f030",
@@ -613,7 +642,8 @@
     "answer": 2,
     "explanation": "普通二輪車は軽自動車税の対象であり、毎年申告が必要。",
     "isTrapQuestion": false,
-    "trapNumberType": "none"
+    "trapNumberType": "none",
+    "topicTag": "license_system"
   },
   {
     "id": "f031",
@@ -634,7 +664,8 @@
     "answer": 2,
     "explanation": "信号待ち中は、万が一他の車両が突入した場合に逃げられるよう、停止線より手前で必要に応じて移動できる位置が安全。",
     "isTrapQuestion": false,
-    "trapNumberType": "none"
+    "trapNumberType": "none",
+    "topicTag": "signs"
   },
   {
     "id": "f032",
@@ -653,7 +684,8 @@
     "answer": 2,
     "explanation": "走行中のヘルメット脱着は極めて危険であり、走行中は常にヘルメットを被ったままにすること。",
     "isTrapQuestion": false,
-    "trapNumberType": "none"
+    "trapNumberType": "none",
+    "topicTag": "hazard_prediction"
   },
   {
     "id": "f033",
@@ -673,7 +705,8 @@
     "answer": 1,
     "explanation": "長距離走行時は定期的に休息をとり、眠気や疲労を適切に管理することが安全運転の鍵。",
     "isTrapQuestion": false,
-    "trapNumberType": "none"
+    "trapNumberType": "none",
+    "topicTag": "hazard_prediction"
   },
   {
     "id": "f034",
@@ -694,7 +727,8 @@
     "answer": 2,
     "explanation": "二輪車の制動は、状況に応じて前後ブレーキをバランスよく使い分けることが安全で効果的。",
     "isTrapQuestion": false,
-    "trapNumberType": "none"
+    "trapNumberType": "none",
+    "topicTag": "operation"
   },
   {
     "id": "f035",
@@ -713,7 +747,8 @@
     "answer": 1,
     "explanation": "普通二輪（250cc以下）は日本の高速道路利用が禁止されている。大型二輪免許が必要。",
     "isTrapQuestion": false,
-    "trapNumberType": "none"
+    "trapNumberType": "none",
+    "topicTag": "license_system"
   },
   {
     "id": "f036",
@@ -734,7 +769,8 @@
     "answer": 1,
     "explanation": "車線変更時は、必ず目視確認をしながらウインカーで十分に合図することが必須。",
     "isTrapQuestion": false,
-    "trapNumberType": "none"
+    "trapNumberType": "none",
+    "topicTag": "rules"
   },
   {
     "id": "f037",
@@ -753,7 +789,8 @@
     "answer": 1,
     "explanation": "普通二輪の積載物は最大60kgであり、且つシートの高さを超えてはいけない。",
     "isTrapQuestion": true,
-    "trapNumberType": "loadLimit"
+    "trapNumberType": "loadLimit",
+    "topicTag": "parking"
   },
   {
     "id": "f038",
@@ -773,7 +810,8 @@
     "answer": 2,
     "explanation": "二輪車の手放し運転は道路交通法によって禁止されており、安全な操作が必須。",
     "isTrapQuestion": false,
-    "trapNumberType": "none"
+    "trapNumberType": "none",
+    "topicTag": "operation"
   },
   {
     "id": "f039",
@@ -794,7 +832,8 @@
     "answer": 1,
     "explanation": "雪道では急ハンドルと急ブレーキが極めて危険であり、スリップや転倒の直接的な原因となる。",
     "isTrapQuestion": false,
-    "trapNumberType": "none"
+    "trapNumberType": "none",
+    "topicTag": "operation"
   },
   {
     "id": "f040",
@@ -813,7 +852,8 @@
     "answer": 1,
     "explanation": "自賠責保険への加入は道路交通法により全ての二輪車に義務づけられている。",
     "isTrapQuestion": false,
-    "trapNumberType": "none"
+    "trapNumberType": "none",
+    "topicTag": "hazard_prediction"
   },
   {
     "id": "f041",
@@ -834,7 +874,8 @@
     "answer": 1,
     "explanation": "急勾配での下りはエンジンブレーキを活用し、ブレーキの過熱を防ぎながら安全に下る。",
     "isTrapQuestion": false,
-    "trapNumberType": "none"
+    "trapNumberType": "none",
+    "topicTag": "operation"
   },
   {
     "id": "f042",
@@ -853,7 +894,8 @@
     "answer": 1,
     "explanation": "乗客が持つ荷物も総積載量20kg以内に含まれるため、事前の確認が必要。",
     "isTrapQuestion": true,
-    "trapNumberType": "loadLimit"
+    "trapNumberType": "loadLimit",
+    "topicTag": "parking"
   },
   {
     "id": "f043",
@@ -873,7 +915,8 @@
     "answer": 1,
     "explanation": "霧の中では低速走行し、ライトや霧灯を活用して視認性を確保することが安全。",
     "isTrapQuestion": false,
-    "trapNumberType": "none"
+    "trapNumberType": "none",
+    "topicTag": "hazard_prediction"
   },
   {
     "id": "f044",
@@ -894,7 +937,8 @@
     "answer": 1,
     "explanation": "一時停止標識がある場所では、完全に停止してから周囲を確認して進むことが必須。",
     "isTrapQuestion": false,
-    "trapNumberType": "none"
+    "trapNumberType": "none",
+    "topicTag": "signs"
   },
   {
     "id": "f045",
@@ -913,7 +957,8 @@
     "answer": 2,
     "explanation": "複数車線では、走行方向や交通流に応じた適切な車線選択が安全で、通常は左側車線を走行する。",
     "isTrapQuestion": false,
-    "trapNumberType": "none"
+    "trapNumberType": "none",
+    "topicTag": "rules"
   },
   {
     "id": "f046",
@@ -934,7 +979,8 @@
     "answer": 1,
     "explanation": "二輪車への児童乗車は6歳以上が条件であり、適切なヘルメット着用が必須。",
     "isTrapQuestion": false,
-    "trapNumberType": "none"
+    "trapNumberType": "none",
+    "topicTag": "hazard_prediction"
   },
   {
     "id": "f047",
@@ -953,7 +999,8 @@
     "answer": 1,
     "explanation": "普通二輪は1年に1回の定期点検が法で義務づけられている。",
     "isTrapQuestion": false,
-    "trapNumberType": "none"
+    "trapNumberType": "none",
+    "topicTag": "maintenance"
   },
   {
     "id": "f048",
@@ -973,7 +1020,8 @@
     "answer": 1,
     "explanation": "飲酒運転は道路交通法により完全に禁止されており、いかなる状況でも許可されない。",
     "isTrapQuestion": false,
-    "trapNumberType": "none"
+    "trapNumberType": "none",
+    "topicTag": "rules"
   },
   {
     "id": "f049",
@@ -994,7 +1042,8 @@
     "answer": 1,
     "explanation": "緊急時でも周囲を判断し、段階的に減速することで二輪車の安定性を保つ。",
     "isTrapQuestion": false,
-    "trapNumberType": "none"
+    "trapNumberType": "none",
+    "topicTag": "hazard_prediction"
   },
   {
     "id": "f050",
@@ -1013,7 +1062,8 @@
     "answer": 2,
     "explanation": "安全な走行姿勢は、背中を張り、視線を先に置き、ハンドルに過度な力を入れないことが基本。",
     "isTrapQuestion": false,
-    "trapNumberType": "none"
+    "trapNumberType": "none",
+    "topicTag": "operation"
   },
   {
     "id": "f051",
@@ -1032,7 +1082,8 @@
     "answer": 2,
     "explanation": "スリップ中にブレーキを踏むと、さらにスリップが悪化する。段階的にアクセルを戻すのが正解。",
     "isTrapQuestion": true,
-    "trapNumberType": "brakeTechnique"
+    "trapNumberType": "brakeTechnique",
+    "topicTag": "operation"
   },
   {
     "id": "f052",
@@ -1051,7 +1102,8 @@
     "answer": 0,
     "explanation": "安全な発進と加速のために、低ギアから段階的にギアを上げることが基本。",
     "isTrapQuestion": false,
-    "trapNumberType": "none"
+    "trapNumberType": "none",
+    "topicTag": "operation"
   },
   {
     "id": "f053",
@@ -1070,7 +1122,8 @@
     "answer": 1,
     "explanation": "ハンドルは軽く握り、腕の力を抜くことで、体の動きに柔軟に対応できる。",
     "isTrapQuestion": false,
-    "trapNumberType": "none"
+    "trapNumberType": "none",
+    "topicTag": "operation"
   },
   {
     "id": "f054",
@@ -1089,7 +1142,8 @@
     "answer": 2,
     "explanation": "前輪スリップ時は、ハンドル操作とアクセルを控えめに、タイヤグリップの回復を待つ。",
     "isTrapQuestion": false,
-    "trapNumberType": "none"
+    "trapNumberType": "none",
+    "topicTag": "operation"
   },
   {
     "id": "f055",
@@ -1108,7 +1162,8 @@
     "answer": 3,
     "explanation": "普通二輪は高速走行禁止だが、もし走行するなら全ての状況が危険。",
     "isTrapQuestion": false,
-    "trapNumberType": "none"
+    "trapNumberType": "none",
+    "topicTag": "rules"
   },
   {
     "id": "f056",
@@ -1127,7 +1182,8 @@
     "answer": 0,
     "explanation": "普通二輪は最大横幅1.0m以下と定められている。",
     "isTrapQuestion": true,
-    "trapNumberType": "loadLimit"
+    "trapNumberType": "loadLimit",
+    "topicTag": "hazard_prediction"
   },
   {
     "id": "f057",
@@ -1146,7 +1202,8 @@
     "answer": 2,
     "explanation": "見通しが悪い場所では、速度を落とし、ハイビームで前方をしっかり確認することが重要。",
     "isTrapQuestion": false,
-    "trapNumberType": "none"
+    "trapNumberType": "none",
+    "topicTag": "rules"
   },
   {
     "id": "f058",
@@ -1165,7 +1222,8 @@
     "answer": 2,
     "explanation": "急ブレーキは危険。段階的なブレーキと方向転換が安全な回避方法。",
     "isTrapQuestion": false,
-    "trapNumberType": "none"
+    "trapNumberType": "none",
+    "topicTag": "operation"
   },
   {
     "id": "f059",
@@ -1184,7 +1242,8 @@
     "answer": 1,
     "explanation": "カーブは事前に減速し、外側のラインで大きく回ることが安全。",
     "isTrapQuestion": false,
-    "trapNumberType": "none"
+    "trapNumberType": "none",
+    "topicTag": "operation"
   },
   {
     "id": "f060",
@@ -1203,7 +1262,8 @@
     "answer": 1,
     "explanation": "ガソリンスタンドは火災の危険があるため、低速走行と急操作の回避が必須。",
     "isTrapQuestion": false,
-    "trapNumberType": "none"
+    "trapNumberType": "none",
+    "topicTag": "operation"
   },
   {
     "id": "f061",
@@ -1222,7 +1282,8 @@
     "answer": 1,
     "explanation": "踏切は停止して確認後、徐行で通過することが法規と安全のため必須。",
     "isTrapQuestion": true,
-    "trapNumberType": "none"
+    "trapNumberType": "none",
+    "topicTag": "rules"
   },
   {
     "id": "f062",
@@ -1241,7 +1302,8 @@
     "answer": 1,
     "explanation": "タイヤパンク時は、徐々に速度を落とし、安全な場所に停止することが重要。",
     "isTrapQuestion": false,
-    "trapNumberType": "none"
+    "trapNumberType": "none",
+    "topicTag": "emergency"
   },
   {
     "id": "f063",
@@ -1260,7 +1322,8 @@
     "answer": 1,
     "explanation": "長時間走行での疲労は、定期的な休息と水分補給で対処することが効果的。",
     "isTrapQuestion": false,
-    "trapNumberType": "none"
+    "trapNumberType": "none",
+    "topicTag": "hazard_prediction"
   },
   {
     "id": "f064",
@@ -1279,7 +1342,8 @@
     "answer": 2,
     "explanation": "逆行走行は道路交通法により完全に禁止されている。",
     "isTrapQuestion": false,
-    "trapNumberType": "none"
+    "trapNumberType": "none",
+    "topicTag": "rules"
   },
   {
     "id": "f065",
@@ -1298,7 +1362,8 @@
     "answer": 2,
     "explanation": "前に重い荷物を積むと、前輪の操舵性が失われ、最も危険。",
     "isTrapQuestion": true,
-    "trapNumberType": "loadLimit"
+    "trapNumberType": "loadLimit",
+    "topicTag": "parking"
   },
   {
     "id": "f066",
@@ -1319,7 +1384,8 @@
     "answer": 1,
     "explanation": "普通二輪での二人乗りは、免許取得後1年の実乗経験が必須条件。",
     "isTrapQuestion": true,
-    "trapNumberType": "twoPersonRiding"
+    "trapNumberType": "twoPersonRiding",
+    "topicTag": "parking"
   },
   {
     "id": "f067",
@@ -1340,7 +1406,8 @@
     "answer": 1,
     "explanation": "普通二輪の最大積載量は60kg。原付（30kg）の2倍。",
     "isTrapQuestion": true,
-    "trapNumberType": "loadLimit"
+    "trapNumberType": "loadLimit",
+    "topicTag": "parking"
   },
   {
     "id": "f068",
@@ -1361,7 +1428,8 @@
     "answer": 1,
     "explanation": "高速道路での二人乗りは20歳以上・免許取得3年以上の厳しい条件。",
     "isTrapQuestion": true,
-    "trapNumberType": "twoPersonRiding"
+    "trapNumberType": "twoPersonRiding",
+    "topicTag": "parking"
   },
   {
     "id": "f069",
@@ -1382,7 +1450,8 @@
     "answer": 0,
     "explanation": "乗客はライダーの操作を信頼し、邪魔しないことが安全の基本。",
     "isTrapQuestion": false,
-    "trapNumberType": "none"
+    "trapNumberType": "none",
+    "topicTag": "parking"
   },
   {
     "id": "f070",
@@ -1403,7 +1472,8 @@
     "answer": 1,
     "explanation": "乗客はライダーの腰に抱きつくが、ハンドルに掴まると操作が阻害される。",
     "isTrapQuestion": true,
-    "trapNumberType": "twoPersonRiding"
+    "trapNumberType": "twoPersonRiding",
+    "topicTag": "parking"
   },
   {
     "id": "f071",
@@ -1424,7 +1494,8 @@
     "answer": 2,
     "explanation": "普通二輪は法定速度（60km/h 一般道、100km/h 高速）に従う。",
     "isTrapQuestion": true,
-    "trapNumberType": "speedLimit"
+    "trapNumberType": "speedLimit",
+    "topicTag": "rules"
   },
   {
     "id": "f072",
@@ -1445,7 +1516,8 @@
     "answer": 1,
     "explanation": "二人乗り時、乗客はライダーと同じ角度に傾くことで安定性が向上。",
     "isTrapQuestion": false,
-    "trapNumberType": "none"
+    "trapNumberType": "none",
+    "topicTag": "parking"
   },
   {
     "id": "f073",
@@ -1466,7 +1538,8 @@
     "answer": 2,
     "explanation": "安全な制動はフロントブレーキ70%・リアブレーキ30%の比率が基本。",
     "isTrapQuestion": true,
-    "trapNumberType": "brakingDistance"
+    "trapNumberType": "brakingDistance",
+    "topicTag": "operation"
   },
   {
     "id": "f074",
@@ -1487,7 +1560,8 @@
     "answer": 2,
     "explanation": "雨天時は路面グリップ低下により、ブレーキング距離が著しく延びる。",
     "isTrapQuestion": false,
-    "trapNumberType": "none"
+    "trapNumberType": "none",
+    "topicTag": "operation"
   },
   {
     "id": "f075",
@@ -1508,7 +1582,8 @@
     "answer": 1,
     "explanation": "急ハンドル操作は重心移動により横転リスクが急増する。",
     "isTrapQuestion": false,
-    "trapNumberType": "none"
+    "trapNumberType": "none",
+    "topicTag": "operation"
   },
   {
     "id": "f076",
@@ -1529,7 +1604,8 @@
     "answer": 1,
     "explanation": "安全走行は周囲の車両・歩行者の行動予測と事前対応が最重要。",
     "isTrapQuestion": false,
-    "trapNumberType": "none"
+    "trapNumberType": "none",
+    "topicTag": "hazard_prediction"
   },
   {
     "id": "f077",
@@ -1550,7 +1626,8 @@
     "answer": 1,
     "explanation": "対向車には右折時に優先権がある。対向車通過後の右折が正解。",
     "isTrapQuestion": true,
-    "trapNumberType": "turningRules"
+    "trapNumberType": "turningRules",
+    "topicTag": "rules"
   },
   {
     "id": "f078",
@@ -1571,7 +1648,8 @@
     "answer": 1,
     "explanation": "積載物の重心はバイク中央部、低い位置が安定性を保つ。",
     "isTrapQuestion": true,
-    "trapNumberType": "loadLimit"
+    "trapNumberType": "loadLimit",
+    "topicTag": "parking"
   },
   {
     "id": "f079",
@@ -1592,7 +1670,8 @@
     "answer": 1,
     "explanation": "豪雨時は視界悪化とグリップ低下が顕著。速度低下が最優先。",
     "isTrapQuestion": false,
-    "trapNumberType": "none"
+    "trapNumberType": "none",
+    "topicTag": "rules"
   },
   {
     "id": "f080",
@@ -1613,7 +1692,8 @@
     "answer": 1,
     "explanation": "危険予測は他者（車・歩行者）の行動を読み、事前対応する能力。",
     "isTrapQuestion": false,
-    "trapNumberType": "none"
+    "trapNumberType": "none",
+    "topicTag": "hazard_prediction"
   },
   {
     "id": "f081",
@@ -1634,7 +1714,8 @@
     "answer": 1,
     "explanation": "夜間の視界確保はハイビームの適切な使用が基本。",
     "isTrapQuestion": true,
-    "trapNumberType": "nightDriving"
+    "trapNumberType": "nightDriving",
+    "topicTag": "hazard_prediction"
   },
   {
     "id": "f082",
@@ -1655,7 +1736,8 @@
     "answer": 1,
     "explanation": "黄点滅は注意信号。周囲確認後、安全なら進行可能。",
     "isTrapQuestion": true,
-    "trapNumberType": "signalAndMarkings"
+    "trapNumberType": "signalAndMarkings",
+    "topicTag": "rules"
   },
   {
     "id": "f083",
@@ -1676,7 +1758,8 @@
     "answer": 2,
     "explanation": "時速60km時のブレーキング距離は約30mが目安。",
     "isTrapQuestion": true,
-    "trapNumberType": "brakingDistance"
+    "trapNumberType": "brakingDistance",
+    "topicTag": "operation"
   },
   {
     "id": "f084",
@@ -1697,7 +1780,8 @@
     "answer": 1,
     "explanation": "免許更新は有効期限の3ヶ月前から可能。早期更新も許可される。",
     "isTrapQuestion": true,
-    "trapNumberType": "licensePeriod"
+    "trapNumberType": "licensePeriod",
+    "topicTag": "license_system"
   },
   {
     "id": "f085",
@@ -1718,7 +1802,8 @@
     "answer": 1,
     "explanation": "緊急時は自身の安全確保が最優先。その後、他者への連絡。",
     "isTrapQuestion": false,
-    "trapNumberType": "none"
+    "trapNumberType": "none",
+    "topicTag": "rules"
   },
   {
     "id": "f086",
@@ -1739,7 +1824,8 @@
     "answer": 1,
     "explanation": "安全走行は周囲の車両・歩行者の行動予測と事前対応が最重要。",
     "isTrapQuestion": false,
-    "trapNumberType": "none"
+    "trapNumberType": "none",
+    "topicTag": "hazard_prediction"
   },
   {
     "id": "f087",
@@ -1760,7 +1846,8 @@
     "answer": 1,
     "explanation": "対向車には右折時に優先権がある。対向車通過後の右折が正解。",
     "isTrapQuestion": true,
-    "trapNumberType": "turningRules"
+    "trapNumberType": "turningRules",
+    "topicTag": "rules"
   },
   {
     "id": "f088",
@@ -1781,7 +1868,8 @@
     "answer": 1,
     "explanation": "積載物の重心はバイク中央部、低い位置が安定性を保つ。",
     "isTrapQuestion": true,
-    "trapNumberType": "loadLimit"
+    "trapNumberType": "loadLimit",
+    "topicTag": "parking"
   },
   {
     "id": "f089",
@@ -1802,7 +1890,8 @@
     "answer": 1,
     "explanation": "豪雨時は視界悪化とグリップ低下が顕著。速度低下が最優先。",
     "isTrapQuestion": false,
-    "trapNumberType": "none"
+    "trapNumberType": "none",
+    "topicTag": "rules"
   },
   {
     "id": "f090",
@@ -1823,7 +1912,8 @@
     "answer": 1,
     "explanation": "危険予測は他者（車・歩行者）の行動を読み、事前対応する能力。",
     "isTrapQuestion": false,
-    "trapNumberType": "none"
+    "trapNumberType": "none",
+    "topicTag": "hazard_prediction"
   },
   {
     "id": "f091",
@@ -1844,7 +1934,8 @@
     "answer": 1,
     "explanation": "夜間の視界確保はハイビームの適切な使用が基本。",
     "isTrapQuestion": true,
-    "trapNumberType": "nightDriving"
+    "trapNumberType": "nightDriving",
+    "topicTag": "hazard_prediction"
   },
   {
     "id": "f092",
@@ -1865,7 +1956,8 @@
     "answer": 1,
     "explanation": "黄点滅は注意信号。周囲確認後、安全なら進行可能。",
     "isTrapQuestion": true,
-    "trapNumberType": "signalAndMarkings"
+    "trapNumberType": "signalAndMarkings",
+    "topicTag": "rules"
   },
   {
     "id": "f093",
@@ -1886,7 +1978,8 @@
     "answer": 2,
     "explanation": "時速60km時のブレーキング距離は約30mが目安。",
     "isTrapQuestion": true,
-    "trapNumberType": "brakingDistance"
+    "trapNumberType": "brakingDistance",
+    "topicTag": "operation"
   },
   {
     "id": "f094",
@@ -1907,7 +2000,8 @@
     "answer": 1,
     "explanation": "免許更新は有効期限の3ヶ月前から可能。早期更新も許可される。",
     "isTrapQuestion": true,
-    "trapNumberType": "licensePeriod"
+    "trapNumberType": "licensePeriod",
+    "topicTag": "license_system"
   },
   {
     "id": "f095",
@@ -1928,7 +2022,8 @@
     "answer": 1,
     "explanation": "緊急時は自身の安全確保が最優先。その後、他者への連絡。",
     "isTrapQuestion": false,
-    "trapNumberType": "none"
+    "trapNumberType": "none",
+    "topicTag": "rules"
   },
   {
     "id": "f096",
@@ -1949,7 +2044,8 @@
     "answer": 1,
     "explanation": "安全走行は周囲の車両・歩行者の行動予測と事前対応が最重要。",
     "isTrapQuestion": false,
-    "trapNumberType": "none"
+    "trapNumberType": "none",
+    "topicTag": "hazard_prediction"
   },
   {
     "id": "f097",
@@ -1970,7 +2066,8 @@
     "answer": 1,
     "explanation": "対向車には右折時に優先権がある。対向車通過後の右折が正解。",
     "isTrapQuestion": true,
-    "trapNumberType": "turningRules"
+    "trapNumberType": "turningRules",
+    "topicTag": "rules"
   },
   {
     "id": "f098",
@@ -1991,7 +2088,8 @@
     "answer": 1,
     "explanation": "積載物の重心はバイク中央部、低い位置が安定性を保つ。",
     "isTrapQuestion": true,
-    "trapNumberType": "loadLimit"
+    "trapNumberType": "loadLimit",
+    "topicTag": "parking"
   },
   {
     "id": "f099",
@@ -2012,7 +2110,8 @@
     "answer": 1,
     "explanation": "豪雨時は視界悪化とグリップ低下が顕著。速度低下が最優先。",
     "isTrapQuestion": false,
-    "trapNumberType": "none"
+    "trapNumberType": "none",
+    "topicTag": "rules"
   },
   {
     "id": "f100",
@@ -2033,7 +2132,8 @@
     "answer": 1,
     "explanation": "危険予測は他者（車・歩行者）の行動を読み、事前対応する能力。",
     "isTrapQuestion": false,
-    "trapNumberType": "none"
+    "trapNumberType": "none",
+    "topicTag": "hazard_prediction"
   },
   {
     "id": "f101",
@@ -2054,7 +2154,8 @@
     "answer": 1,
     "explanation": "夜間の視界確保はハイビームの適切な使用が基本。",
     "isTrapQuestion": true,
-    "trapNumberType": "nightDriving"
+    "trapNumberType": "nightDriving",
+    "topicTag": "hazard_prediction"
   },
   {
     "id": "f102",
@@ -2075,7 +2176,8 @@
     "answer": 1,
     "explanation": "黄点滅は注意信号。周囲確認後、安全なら進行可能。",
     "isTrapQuestion": true,
-    "trapNumberType": "signalAndMarkings"
+    "trapNumberType": "signalAndMarkings",
+    "topicTag": "rules"
   },
   {
     "id": "f103",
@@ -2096,7 +2198,8 @@
     "answer": 2,
     "explanation": "時速60km時のブレーキング距離は約30mが目安。",
     "isTrapQuestion": true,
-    "trapNumberType": "brakingDistance"
+    "trapNumberType": "brakingDistance",
+    "topicTag": "operation"
   },
   {
     "id": "f104",
@@ -2117,7 +2220,8 @@
     "answer": 1,
     "explanation": "免許更新は有効期限の3ヶ月前から可能。早期更新も許可される。",
     "isTrapQuestion": true,
-    "trapNumberType": "licensePeriod"
+    "trapNumberType": "licensePeriod",
+    "topicTag": "license_system"
   },
   {
     "id": "f105",
@@ -2138,7 +2242,8 @@
     "answer": 1,
     "explanation": "緊急時は自身の安全確保が最優先。その後、他者への連絡。",
     "isTrapQuestion": false,
-    "trapNumberType": "none"
+    "trapNumberType": "none",
+    "topicTag": "rules"
   },
   {
     "id": "f106",
@@ -2159,7 +2264,8 @@
     "answer": 1,
     "explanation": "安全走行は周囲の車両・歩行者の行動予測と事前対応が最重要。",
     "isTrapQuestion": false,
-    "trapNumberType": "none"
+    "trapNumberType": "none",
+    "topicTag": "hazard_prediction"
   },
   {
     "id": "f107",
@@ -2180,7 +2286,8 @@
     "answer": 1,
     "explanation": "対向車には右折時に優先権がある。対向車通過後の右折が正解。",
     "isTrapQuestion": true,
-    "trapNumberType": "turningRules"
+    "trapNumberType": "turningRules",
+    "topicTag": "rules"
   },
   {
     "id": "f108",
@@ -2201,7 +2308,8 @@
     "answer": 1,
     "explanation": "積載物の重心はバイク中央部、低い位置が安定性を保つ。",
     "isTrapQuestion": true,
-    "trapNumberType": "loadLimit"
+    "trapNumberType": "loadLimit",
+    "topicTag": "parking"
   },
   {
     "id": "f109",
@@ -2222,7 +2330,8 @@
     "answer": 1,
     "explanation": "豪雨時は視界悪化とグリップ低下が顕著。速度低下が最優先。",
     "isTrapQuestion": false,
-    "trapNumberType": "none"
+    "trapNumberType": "none",
+    "topicTag": "rules"
   },
   {
     "id": "f110",
@@ -2243,7 +2352,8 @@
     "answer": 1,
     "explanation": "危険予測は他者（車・歩行者）の行動を読み、事前対応する能力。",
     "isTrapQuestion": false,
-    "trapNumberType": "none"
+    "trapNumberType": "none",
+    "topicTag": "hazard_prediction"
   },
   {
     "id": "f111",
@@ -2264,7 +2374,8 @@
     "answer": 1,
     "explanation": "夜間の視界確保はハイビームの適切な使用が基本。",
     "isTrapQuestion": true,
-    "trapNumberType": "nightDriving"
+    "trapNumberType": "nightDriving",
+    "topicTag": "hazard_prediction"
   },
   {
     "id": "f112",
@@ -2285,7 +2396,8 @@
     "answer": 1,
     "explanation": "黄点滅は注意信号。周囲確認後、安全なら進行可能。",
     "isTrapQuestion": true,
-    "trapNumberType": "signalAndMarkings"
+    "trapNumberType": "signalAndMarkings",
+    "topicTag": "rules"
   },
   {
     "id": "f113",
@@ -2306,7 +2418,8 @@
     "answer": 2,
     "explanation": "時速60km時のブレーキング距離は約30mが目安。",
     "isTrapQuestion": true,
-    "trapNumberType": "brakingDistance"
+    "trapNumberType": "brakingDistance",
+    "topicTag": "operation"
   },
   {
     "id": "f114",
@@ -2327,7 +2440,8 @@
     "answer": 1,
     "explanation": "免許更新は有効期限の3ヶ月前から可能。早期更新も許可される。",
     "isTrapQuestion": true,
-    "trapNumberType": "licensePeriod"
+    "trapNumberType": "licensePeriod",
+    "topicTag": "license_system"
   },
   {
     "id": "f115",
@@ -2348,7 +2462,8 @@
     "answer": 1,
     "explanation": "緊急時は自身の安全確保が最優先。その後、他者への連絡。",
     "isTrapQuestion": false,
-    "trapNumberType": "none"
+    "trapNumberType": "none",
+    "topicTag": "rules"
   },
   {
     "id": "f116",
@@ -2369,7 +2484,8 @@
     "answer": 1,
     "explanation": "安全走行は周囲の車両・歩行者の行動予測と事前対応が最重要。",
     "isTrapQuestion": false,
-    "trapNumberType": "none"
+    "trapNumberType": "none",
+    "topicTag": "hazard_prediction"
   },
   {
     "id": "f117",
@@ -2390,7 +2506,8 @@
     "answer": 1,
     "explanation": "対向車には右折時に優先権がある。対向車通過後の右折が正解。",
     "isTrapQuestion": true,
-    "trapNumberType": "turningRules"
+    "trapNumberType": "turningRules",
+    "topicTag": "rules"
   },
   {
     "id": "f118",
@@ -2411,7 +2528,8 @@
     "answer": 1,
     "explanation": "積載物の重心はバイク中央部、低い位置が安定性を保つ。",
     "isTrapQuestion": true,
-    "trapNumberType": "loadLimit"
+    "trapNumberType": "loadLimit",
+    "topicTag": "parking"
   },
   {
     "id": "f119",
@@ -2432,7 +2550,8 @@
     "answer": 1,
     "explanation": "豪雨時は視界悪化とグリップ低下が顕著。速度低下が最優先。",
     "isTrapQuestion": false,
-    "trapNumberType": "none"
+    "trapNumberType": "none",
+    "topicTag": "rules"
   },
   {
     "id": "f120",
@@ -2453,7 +2572,8 @@
     "answer": 1,
     "explanation": "危険予測は他者（車・歩行者）の行動を読み、事前対応する能力。",
     "isTrapQuestion": false,
-    "trapNumberType": "none"
+    "trapNumberType": "none",
+    "topicTag": "hazard_prediction"
   },
   {
     "id": "f121",
@@ -2474,7 +2594,8 @@
     "answer": 1,
     "explanation": "夜間の視界確保はハイビームの適切な使用が基本。",
     "isTrapQuestion": true,
-    "trapNumberType": "nightDriving"
+    "trapNumberType": "nightDriving",
+    "topicTag": "hazard_prediction"
   },
   {
     "id": "f122",
@@ -2495,7 +2616,8 @@
     "answer": 1,
     "explanation": "黄点滅は注意信号。周囲確認後、安全なら進行可能。",
     "isTrapQuestion": true,
-    "trapNumberType": "signalAndMarkings"
+    "trapNumberType": "signalAndMarkings",
+    "topicTag": "rules"
   },
   {
     "id": "f123",
@@ -2516,7 +2638,8 @@
     "answer": 2,
     "explanation": "時速60km時のブレーキング距離は約30mが目安。",
     "isTrapQuestion": true,
-    "trapNumberType": "brakingDistance"
+    "trapNumberType": "brakingDistance",
+    "topicTag": "operation"
   },
   {
     "id": "f124",
@@ -2537,7 +2660,8 @@
     "answer": 1,
     "explanation": "免許更新は有効期限の3ヶ月前から可能。早期更新も許可される。",
     "isTrapQuestion": true,
-    "trapNumberType": "licensePeriod"
+    "trapNumberType": "licensePeriod",
+    "topicTag": "license_system"
   },
   {
     "id": "f125",
@@ -2558,7 +2682,8 @@
     "answer": 1,
     "explanation": "緊急時は自身の安全確保が最優先。その後、他者への連絡。",
     "isTrapQuestion": false,
-    "trapNumberType": "none"
+    "trapNumberType": "none",
+    "topicTag": "rules"
   },
   {
     "id": "f126",
@@ -2579,7 +2704,8 @@
     "answer": 1,
     "explanation": "安全走行は周囲の車両・歩行者の行動予測と事前対応が最重要。",
     "isTrapQuestion": false,
-    "trapNumberType": "none"
+    "trapNumberType": "none",
+    "topicTag": "hazard_prediction"
   },
   {
     "id": "f127",
@@ -2600,7 +2726,8 @@
     "answer": 1,
     "explanation": "対向車には右折時に優先権がある。対向車通過後の右折が正解。",
     "isTrapQuestion": true,
-    "trapNumberType": "turningRules"
+    "trapNumberType": "turningRules",
+    "topicTag": "rules"
   },
   {
     "id": "f128",
@@ -2621,7 +2748,8 @@
     "answer": 1,
     "explanation": "積載物の重心はバイク中央部、低い位置が安定性を保つ。",
     "isTrapQuestion": true,
-    "trapNumberType": "loadLimit"
+    "trapNumberType": "loadLimit",
+    "topicTag": "parking"
   },
   {
     "id": "f129",
@@ -2642,7 +2770,8 @@
     "answer": 1,
     "explanation": "豪雨時は視界悪化とグリップ低下が顕著。速度低下が最優先。",
     "isTrapQuestion": false,
-    "trapNumberType": "none"
+    "trapNumberType": "none",
+    "topicTag": "rules"
   },
   {
     "id": "f130",
@@ -2663,7 +2792,8 @@
     "answer": 1,
     "explanation": "危険予測は他者（車・歩行者）の行動を読み、事前対応する能力。",
     "isTrapQuestion": false,
-    "trapNumberType": "none"
+    "trapNumberType": "none",
+    "topicTag": "hazard_prediction"
   },
   {
     "id": "f131",
@@ -2684,7 +2814,8 @@
     "answer": 1,
     "explanation": "夜間の視界確保はハイビームの適切な使用が基本。",
     "isTrapQuestion": true,
-    "trapNumberType": "nightDriving"
+    "trapNumberType": "nightDriving",
+    "topicTag": "hazard_prediction"
   },
   {
     "id": "f132",
@@ -2705,7 +2836,8 @@
     "answer": 1,
     "explanation": "黄点滅は注意信号。周囲確認後、安全なら進行可能。",
     "isTrapQuestion": true,
-    "trapNumberType": "signalAndMarkings"
+    "trapNumberType": "signalAndMarkings",
+    "topicTag": "rules"
   },
   {
     "id": "f133",
@@ -2726,7 +2858,8 @@
     "answer": 2,
     "explanation": "時速60km時のブレーキング距離は約30mが目安。",
     "isTrapQuestion": true,
-    "trapNumberType": "brakingDistance"
+    "trapNumberType": "brakingDistance",
+    "topicTag": "operation"
   },
   {
     "id": "f134",
@@ -2747,7 +2880,8 @@
     "answer": 1,
     "explanation": "免許更新は有効期限の3ヶ月前から可能。早期更新も許可される。",
     "isTrapQuestion": true,
-    "trapNumberType": "licensePeriod"
+    "trapNumberType": "licensePeriod",
+    "topicTag": "license_system"
   },
   {
     "id": "f135",
@@ -2768,7 +2902,8 @@
     "answer": 1,
     "explanation": "緊急時は自身の安全確保が最優先。その後、他者への連絡。",
     "isTrapQuestion": false,
-    "trapNumberType": "none"
+    "trapNumberType": "none",
+    "topicTag": "rules"
   },
   {
     "id": "f136",
@@ -2789,7 +2924,8 @@
     "answer": 1,
     "explanation": "安全走行は周囲の車両・歩行者の行動予測と事前対応が最重要。",
     "isTrapQuestion": false,
-    "trapNumberType": "none"
+    "trapNumberType": "none",
+    "topicTag": "hazard_prediction"
   },
   {
     "id": "f137",
@@ -2810,7 +2946,8 @@
     "answer": 1,
     "explanation": "対向車には右折時に優先権がある。対向車通過後の右折が正解。",
     "isTrapQuestion": true,
-    "trapNumberType": "turningRules"
+    "trapNumberType": "turningRules",
+    "topicTag": "rules"
   },
   {
     "id": "f138",
@@ -2831,7 +2968,8 @@
     "answer": 1,
     "explanation": "積載物の重心はバイク中央部、低い位置が安定性を保つ。",
     "isTrapQuestion": true,
-    "trapNumberType": "loadLimit"
+    "trapNumberType": "loadLimit",
+    "topicTag": "parking"
   },
   {
     "id": "f139",
@@ -2852,7 +2990,8 @@
     "answer": 1,
     "explanation": "豪雨時は視界悪化とグリップ低下が顕著。速度低下が最優先。",
     "isTrapQuestion": false,
-    "trapNumberType": "none"
+    "trapNumberType": "none",
+    "topicTag": "rules"
   },
   {
     "id": "f140",
@@ -2873,7 +3012,8 @@
     "answer": 1,
     "explanation": "危険予測は他者（車・歩行者）の行動を読み、事前対応する能力。",
     "isTrapQuestion": false,
-    "trapNumberType": "none"
+    "trapNumberType": "none",
+    "topicTag": "hazard_prediction"
   },
   {
     "id": "f141",
@@ -2894,7 +3034,8 @@
     "answer": 1,
     "explanation": "夜間の視界確保はハイビームの適切な使用が基本。",
     "isTrapQuestion": true,
-    "trapNumberType": "nightDriving"
+    "trapNumberType": "nightDriving",
+    "topicTag": "hazard_prediction"
   },
   {
     "id": "f142",
@@ -2915,7 +3056,8 @@
     "answer": 1,
     "explanation": "黄点滅は注意信号。周囲確認後、安全なら進行可能。",
     "isTrapQuestion": true,
-    "trapNumberType": "signalAndMarkings"
+    "trapNumberType": "signalAndMarkings",
+    "topicTag": "rules"
   },
   {
     "id": "f143",
@@ -2936,7 +3078,8 @@
     "answer": 2,
     "explanation": "時速60km時のブレーキング距離は約30mが目安。",
     "isTrapQuestion": true,
-    "trapNumberType": "brakingDistance"
+    "trapNumberType": "brakingDistance",
+    "topicTag": "operation"
   },
   {
     "id": "f144",
@@ -2957,7 +3100,8 @@
     "answer": 1,
     "explanation": "免許更新は有効期限の3ヶ月前から可能。早期更新も許可される。",
     "isTrapQuestion": true,
-    "trapNumberType": "licensePeriod"
+    "trapNumberType": "licensePeriod",
+    "topicTag": "license_system"
   },
   {
     "id": "f145",
@@ -2978,7 +3122,8 @@
     "answer": 1,
     "explanation": "緊急時は自身の安全確保が最優先。その後、他者への連絡。",
     "isTrapQuestion": false,
-    "trapNumberType": "none"
+    "trapNumberType": "none",
+    "topicTag": "rules"
   },
   {
     "id": "f146",
@@ -2999,7 +3144,8 @@
     "answer": 1,
     "explanation": "安全走行は周囲の車両・歩行者の行動予測と事前対応が最重要。",
     "isTrapQuestion": false,
-    "trapNumberType": "none"
+    "trapNumberType": "none",
+    "topicTag": "hazard_prediction"
   },
   {
     "id": "f147",
@@ -3020,7 +3166,8 @@
     "answer": 1,
     "explanation": "対向車には右折時に優先権がある。対向車通過後の右折が正解。",
     "isTrapQuestion": true,
-    "trapNumberType": "turningRules"
+    "trapNumberType": "turningRules",
+    "topicTag": "rules"
   },
   {
     "id": "f148",
@@ -3041,7 +3188,8 @@
     "answer": 1,
     "explanation": "積載物の重心はバイク中央部、低い位置が安定性を保つ。",
     "isTrapQuestion": true,
-    "trapNumberType": "loadLimit"
+    "trapNumberType": "loadLimit",
+    "topicTag": "parking"
   },
   {
     "id": "f149",
@@ -3062,7 +3210,8 @@
     "answer": 1,
     "explanation": "豪雨時は視界悪化とグリップ低下が顕著。速度低下が最優先。",
     "isTrapQuestion": false,
-    "trapNumberType": "none"
+    "trapNumberType": "none",
+    "topicTag": "rules"
   },
   {
     "id": "f150",
@@ -3083,7 +3232,8 @@
     "answer": 1,
     "explanation": "危険予測は他者（車・歩行者）の行動を読み、事前対応する能力。",
     "isTrapQuestion": false,
-    "trapNumberType": "none"
+    "trapNumberType": "none",
+    "topicTag": "hazard_prediction"
   },
   {
     "id": "f151",
@@ -3104,7 +3254,8 @@
     "answer": 1,
     "explanation": "夜間の視界確保はハイビームの適切な使用が基本。",
     "isTrapQuestion": true,
-    "trapNumberType": "nightDriving"
+    "trapNumberType": "nightDriving",
+    "topicTag": "hazard_prediction"
   },
   {
     "id": "f152",
@@ -3125,7 +3276,8 @@
     "answer": 1,
     "explanation": "黄点滅は注意信号。周囲確認後、安全なら進行可能。",
     "isTrapQuestion": true,
-    "trapNumberType": "signalAndMarkings"
+    "trapNumberType": "signalAndMarkings",
+    "topicTag": "rules"
   },
   {
     "id": "f153",
@@ -3146,7 +3298,8 @@
     "answer": 2,
     "explanation": "時速60km時のブレーキング距離は約30mが目安。",
     "isTrapQuestion": true,
-    "trapNumberType": "brakingDistance"
+    "trapNumberType": "brakingDistance",
+    "topicTag": "operation"
   },
   {
     "id": "f154",
@@ -3167,7 +3320,8 @@
     "answer": 1,
     "explanation": "免許更新は有効期限の3ヶ月前から可能。早期更新も許可される。",
     "isTrapQuestion": true,
-    "trapNumberType": "licensePeriod"
+    "trapNumberType": "licensePeriod",
+    "topicTag": "license_system"
   },
   {
     "id": "f155",
@@ -3188,7 +3342,8 @@
     "answer": 1,
     "explanation": "緊急時は自身の安全確保が最優先。その後、他者への連絡。",
     "isTrapQuestion": false,
-    "trapNumberType": "none"
+    "trapNumberType": "none",
+    "topicTag": "rules"
   },
   {
     "id": "f156",
@@ -3209,7 +3364,8 @@
     "answer": 1,
     "explanation": "安全走行は周囲の車両・歩行者の行動予測と事前対応が最重要。",
     "isTrapQuestion": false,
-    "trapNumberType": "none"
+    "trapNumberType": "none",
+    "topicTag": "hazard_prediction"
   },
   {
     "id": "f157",
@@ -3230,7 +3386,8 @@
     "answer": 1,
     "explanation": "対向車には右折時に優先権がある。対向車通過後の右折が正解。",
     "isTrapQuestion": true,
-    "trapNumberType": "turningRules"
+    "trapNumberType": "turningRules",
+    "topicTag": "rules"
   },
   {
     "id": "f158",
@@ -3251,7 +3408,8 @@
     "answer": 1,
     "explanation": "積載物の重心はバイク中央部、低い位置が安定性を保つ。",
     "isTrapQuestion": true,
-    "trapNumberType": "loadLimit"
+    "trapNumberType": "loadLimit",
+    "topicTag": "parking"
   },
   {
     "id": "f159",
@@ -3272,7 +3430,8 @@
     "answer": 1,
     "explanation": "豪雨時は視界悪化とグリップ低下が顕著。速度低下が最優先。",
     "isTrapQuestion": false,
-    "trapNumberType": "none"
+    "trapNumberType": "none",
+    "topicTag": "rules"
   },
   {
     "id": "f160",
@@ -3293,7 +3452,8 @@
     "answer": 1,
     "explanation": "危険予測は他者（車・歩行者）の行動を読み、事前対応する能力。",
     "isTrapQuestion": false,
-    "trapNumberType": "none"
+    "trapNumberType": "none",
+    "topicTag": "hazard_prediction"
   },
   {
     "id": "f161",
@@ -3314,7 +3474,8 @@
     "answer": 1,
     "explanation": "夜間の視界確保はハイビームの適切な使用が基本。",
     "isTrapQuestion": true,
-    "trapNumberType": "nightDriving"
+    "trapNumberType": "nightDriving",
+    "topicTag": "hazard_prediction"
   },
   {
     "id": "f162",
@@ -3335,7 +3496,8 @@
     "answer": 1,
     "explanation": "黄点滅は注意信号。周囲確認後、安全なら進行可能。",
     "isTrapQuestion": true,
-    "trapNumberType": "signalAndMarkings"
+    "trapNumberType": "signalAndMarkings",
+    "topicTag": "rules"
   },
   {
     "id": "f163",
@@ -3356,7 +3518,8 @@
     "answer": 2,
     "explanation": "時速60km時のブレーキング距離は約30mが目安。",
     "isTrapQuestion": true,
-    "trapNumberType": "brakingDistance"
+    "trapNumberType": "brakingDistance",
+    "topicTag": "operation"
   },
   {
     "id": "f164",
@@ -3377,7 +3540,8 @@
     "answer": 1,
     "explanation": "免許更新は有効期限の3ヶ月前から可能。早期更新も許可される。",
     "isTrapQuestion": true,
-    "trapNumberType": "licensePeriod"
+    "trapNumberType": "licensePeriod",
+    "topicTag": "license_system"
   },
   {
     "id": "f165",
@@ -3398,7 +3562,8 @@
     "answer": 1,
     "explanation": "緊急時は自身の安全確保が最優先。その後、他者への連絡。",
     "isTrapQuestion": false,
-    "trapNumberType": "none"
+    "trapNumberType": "none",
+    "topicTag": "rules"
   },
   {
     "id": "f166",
@@ -3419,7 +3584,8 @@
     "answer": 1,
     "explanation": "安全走行は周囲の車両・歩行者の行動予測と事前対応が最重要。",
     "isTrapQuestion": false,
-    "trapNumberType": "none"
+    "trapNumberType": "none",
+    "topicTag": "hazard_prediction"
   },
   {
     "id": "f167",
@@ -3440,7 +3606,8 @@
     "answer": 1,
     "explanation": "対向車には右折時に優先権がある。対向車通過後の右折が正解。",
     "isTrapQuestion": true,
-    "trapNumberType": "turningRules"
+    "trapNumberType": "turningRules",
+    "topicTag": "rules"
   },
   {
     "id": "f168",
@@ -3461,7 +3628,8 @@
     "answer": 1,
     "explanation": "積載物の重心はバイク中央部、低い位置が安定性を保つ。",
     "isTrapQuestion": true,
-    "trapNumberType": "loadLimit"
+    "trapNumberType": "loadLimit",
+    "topicTag": "parking"
   },
   {
     "id": "f169",
@@ -3482,7 +3650,8 @@
     "answer": 1,
     "explanation": "豪雨時は視界悪化とグリップ低下が顕著。速度低下が最優先。",
     "isTrapQuestion": false,
-    "trapNumberType": "none"
+    "trapNumberType": "none",
+    "topicTag": "rules"
   },
   {
     "id": "f170",
@@ -3503,7 +3672,8 @@
     "answer": 1,
     "explanation": "危険予測は他者（車・歩行者）の行動を読み、事前対応する能力。",
     "isTrapQuestion": false,
-    "trapNumberType": "none"
+    "trapNumberType": "none",
+    "topicTag": "hazard_prediction"
   },
   {
     "id": "f171",
@@ -3524,7 +3694,8 @@
     "answer": 1,
     "explanation": "夜間の視界確保はハイビームの適切な使用が基本。",
     "isTrapQuestion": true,
-    "trapNumberType": "nightDriving"
+    "trapNumberType": "nightDriving",
+    "topicTag": "hazard_prediction"
   },
   {
     "id": "f172",
@@ -3545,7 +3716,8 @@
     "answer": 1,
     "explanation": "黄点滅は注意信号。周囲確認後、安全なら進行可能。",
     "isTrapQuestion": true,
-    "trapNumberType": "signalAndMarkings"
+    "trapNumberType": "signalAndMarkings",
+    "topicTag": "rules"
   },
   {
     "id": "f173",
@@ -3566,7 +3738,8 @@
     "answer": 2,
     "explanation": "時速60km時のブレーキング距離は約30mが目安。",
     "isTrapQuestion": true,
-    "trapNumberType": "brakingDistance"
+    "trapNumberType": "brakingDistance",
+    "topicTag": "operation"
   },
   {
     "id": "f174",
@@ -3587,7 +3760,8 @@
     "answer": 1,
     "explanation": "免許更新は有効期限の3ヶ月前から可能。早期更新も許可される。",
     "isTrapQuestion": true,
-    "trapNumberType": "licensePeriod"
+    "trapNumberType": "licensePeriod",
+    "topicTag": "license_system"
   },
   {
     "id": "f175",
@@ -3608,7 +3782,8 @@
     "answer": 1,
     "explanation": "緊急時は自身の安全確保が最優先。その後、他者への連絡。",
     "isTrapQuestion": false,
-    "trapNumberType": "none"
+    "trapNumberType": "none",
+    "topicTag": "rules"
   },
   {
     "id": "f176",
@@ -3629,7 +3804,8 @@
     "answer": 1,
     "explanation": "安全走行は周囲の車両・歩行者の行動予測と事前対応が最重要。",
     "isTrapQuestion": false,
-    "trapNumberType": "none"
+    "trapNumberType": "none",
+    "topicTag": "hazard_prediction"
   },
   {
     "id": "f177",
@@ -3650,7 +3826,8 @@
     "answer": 1,
     "explanation": "対向車には右折時に優先権がある。対向車通過後の右折が正解。",
     "isTrapQuestion": true,
-    "trapNumberType": "turningRules"
+    "trapNumberType": "turningRules",
+    "topicTag": "rules"
   },
   {
     "id": "f178",
@@ -3671,7 +3848,8 @@
     "answer": 1,
     "explanation": "積載物の重心はバイク中央部、低い位置が安定性を保つ。",
     "isTrapQuestion": true,
-    "trapNumberType": "loadLimit"
+    "trapNumberType": "loadLimit",
+    "topicTag": "parking"
   },
   {
     "id": "f179",
@@ -3692,7 +3870,8 @@
     "answer": 1,
     "explanation": "豪雨時は視界悪化とグリップ低下が顕著。速度低下が最優先。",
     "isTrapQuestion": false,
-    "trapNumberType": "none"
+    "trapNumberType": "none",
+    "topicTag": "rules"
   },
   {
     "id": "f180",
@@ -3713,7 +3892,8 @@
     "answer": 1,
     "explanation": "危険予測は他者（車・歩行者）の行動を読み、事前対応する能力。",
     "isTrapQuestion": false,
-    "trapNumberType": "none"
+    "trapNumberType": "none",
+    "topicTag": "hazard_prediction"
   },
   {
     "id": "f181",
@@ -3734,7 +3914,8 @@
     "answer": 1,
     "explanation": "夜間の視界確保はハイビームの適切な使用が基本。",
     "isTrapQuestion": true,
-    "trapNumberType": "nightDriving"
+    "trapNumberType": "nightDriving",
+    "topicTag": "hazard_prediction"
   },
   {
     "id": "f182",
@@ -3755,7 +3936,8 @@
     "answer": 1,
     "explanation": "黄点滅は注意信号。周囲確認後、安全なら進行可能。",
     "isTrapQuestion": true,
-    "trapNumberType": "signalAndMarkings"
+    "trapNumberType": "signalAndMarkings",
+    "topicTag": "rules"
   },
   {
     "id": "f183",
@@ -3776,7 +3958,8 @@
     "answer": 2,
     "explanation": "時速60km時のブレーキング距離は約30mが目安。",
     "isTrapQuestion": true,
-    "trapNumberType": "brakingDistance"
+    "trapNumberType": "brakingDistance",
+    "topicTag": "operation"
   },
   {
     "id": "f184",
@@ -3797,7 +3980,8 @@
     "answer": 1,
     "explanation": "免許更新は有効期限の3ヶ月前から可能。早期更新も許可される。",
     "isTrapQuestion": true,
-    "trapNumberType": "licensePeriod"
+    "trapNumberType": "licensePeriod",
+    "topicTag": "license_system"
   },
   {
     "id": "f185",
@@ -3818,7 +4002,8 @@
     "answer": 1,
     "explanation": "緊急時は自身の安全確保が最優先。その後、他者への連絡。",
     "isTrapQuestion": false,
-    "trapNumberType": "none"
+    "trapNumberType": "none",
+    "topicTag": "rules"
   },
   {
     "id": "f186",
@@ -3839,7 +4024,8 @@
     "answer": 1,
     "explanation": "安全走行は周囲の車両・歩行者の行動予測と事前対応が最重要。",
     "isTrapQuestion": false,
-    "trapNumberType": "none"
+    "trapNumberType": "none",
+    "topicTag": "hazard_prediction"
   },
   {
     "id": "f187",
@@ -3860,7 +4046,8 @@
     "answer": 1,
     "explanation": "対向車には右折時に優先権がある。対向車通過後の右折が正解。",
     "isTrapQuestion": true,
-    "trapNumberType": "turningRules"
+    "trapNumberType": "turningRules",
+    "topicTag": "rules"
   },
   {
     "id": "f188",
@@ -3881,7 +4068,8 @@
     "answer": 1,
     "explanation": "積載物の重心はバイク中央部、低い位置が安定性を保つ。",
     "isTrapQuestion": true,
-    "trapNumberType": "loadLimit"
+    "trapNumberType": "loadLimit",
+    "topicTag": "parking"
   },
   {
     "id": "f189",
@@ -3902,7 +4090,8 @@
     "answer": 1,
     "explanation": "豪雨時は視界悪化とグリップ低下が顕著。速度低下が最優先。",
     "isTrapQuestion": false,
-    "trapNumberType": "none"
+    "trapNumberType": "none",
+    "topicTag": "rules"
   },
   {
     "id": "f190",
@@ -3923,7 +4112,8 @@
     "answer": 1,
     "explanation": "危険予測は他者（車・歩行者）の行動を読み、事前対応する能力。",
     "isTrapQuestion": false,
-    "trapNumberType": "none"
+    "trapNumberType": "none",
+    "topicTag": "hazard_prediction"
   },
   {
     "id": "f191",
@@ -3944,7 +4134,8 @@
     "answer": 1,
     "explanation": "夜間の視界確保はハイビームの適切な使用が基本。",
     "isTrapQuestion": true,
-    "trapNumberType": "nightDriving"
+    "trapNumberType": "nightDriving",
+    "topicTag": "hazard_prediction"
   },
   {
     "id": "f192",
@@ -3965,7 +4156,8 @@
     "answer": 1,
     "explanation": "黄点滅は注意信号。周囲確認後、安全なら進行可能。",
     "isTrapQuestion": true,
-    "trapNumberType": "signalAndMarkings"
+    "trapNumberType": "signalAndMarkings",
+    "topicTag": "rules"
   },
   {
     "id": "f193",
@@ -3986,7 +4178,8 @@
     "answer": 2,
     "explanation": "時速60km時のブレーキング距離は約30mが目安。",
     "isTrapQuestion": true,
-    "trapNumberType": "brakingDistance"
+    "trapNumberType": "brakingDistance",
+    "topicTag": "operation"
   },
   {
     "id": "f194",
@@ -4007,7 +4200,8 @@
     "answer": 1,
     "explanation": "免許更新は有効期限の3ヶ月前から可能。早期更新も許可される。",
     "isTrapQuestion": true,
-    "trapNumberType": "licensePeriod"
+    "trapNumberType": "licensePeriod",
+    "topicTag": "license_system"
   },
   {
     "id": "f195",
@@ -4028,7 +4222,8 @@
     "answer": 1,
     "explanation": "緊急時は自身の安全確保が最優先。その後、他者への連絡。",
     "isTrapQuestion": false,
-    "trapNumberType": "none"
+    "trapNumberType": "none",
+    "topicTag": "rules"
   },
   {
     "id": "f196",
@@ -4049,7 +4244,8 @@
     "answer": 1,
     "explanation": "安全走行は周囲の車両・歩行者の行動予測と事前対応が最重要。",
     "isTrapQuestion": false,
-    "trapNumberType": "none"
+    "trapNumberType": "none",
+    "topicTag": "hazard_prediction"
   },
   {
     "id": "f197",
@@ -4070,7 +4266,8 @@
     "answer": 1,
     "explanation": "対向車には右折時に優先権がある。対向車通過後の右折が正解。",
     "isTrapQuestion": true,
-    "trapNumberType": "turningRules"
+    "trapNumberType": "turningRules",
+    "topicTag": "rules"
   },
   {
     "id": "f198",
@@ -4091,7 +4288,8 @@
     "answer": 1,
     "explanation": "積載物の重心はバイク中央部、低い位置が安定性を保つ。",
     "isTrapQuestion": true,
-    "trapNumberType": "loadLimit"
+    "trapNumberType": "loadLimit",
+    "topicTag": "parking"
   },
   {
     "id": "f199",
@@ -4112,7 +4310,8 @@
     "answer": 1,
     "explanation": "豪雨時は視界悪化とグリップ低下が顕著。速度低下が最優先。",
     "isTrapQuestion": false,
-    "trapNumberType": "none"
+    "trapNumberType": "none",
+    "topicTag": "rules"
   },
   {
     "id": "f200",
@@ -4133,6 +4332,7 @@
     "answer": 1,
     "explanation": "危険予測は他者（車・歩行者）の行動を読み、事前対応する能力。",
     "isTrapQuestion": false,
-    "trapNumberType": "none"
+    "trapNumberType": "none",
+    "topicTag": "hazard_prediction"
   }
 ]

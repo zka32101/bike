@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 import '../core/constants/license_category.dart';
+import '../core/constants/question_topic.dart';
 import '../models/analytics_snapshot.dart';
 import '../viewmodels/providers.dart';
 
@@ -89,6 +90,14 @@ class PassRateAnalysisView extends ConsumerWidget {
           // 段階別分析
           analyticsAsync.when(
             data: (snapshot) => _buildStageAnalysis(context, snapshot),
+            loading: () => const SizedBox.shrink(),
+            error: (_, __) => const SizedBox.shrink(),
+          ),
+          const SizedBox(height: 20),
+
+          // 分野別分析
+          analyticsAsync.when(
+            data: (snapshot) => _buildTopicAnalysis(context, snapshot),
             loading: () => const SizedBox.shrink(),
             error: (_, __) => const SizedBox.shrink(),
           ),
@@ -297,6 +306,68 @@ class PassRateAnalysisView extends ConsumerWidget {
                             Theme.of(context).colorScheme.surfaceContainerHighest,
                         valueColor: AlwaysStoppedAnimation<Color>(
                           _getAccuracyColor(stage.stat.accuracy / 100),
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
+              );
+            }).toList(),
+          ],
+        ),
+      ),
+    );
+  }
+
+  Widget _buildTopicAnalysis(BuildContext context, AnalyticsSnapshot snapshot) {
+    if (snapshot.topics.isEmpty) {
+      return const SizedBox.shrink();
+    }
+
+    return Card(
+      child: Padding(
+        padding: const EdgeInsets.all(16),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Text(
+              '分野別分析',
+              style: Theme.of(context).textTheme.titleSmall,
+            ),
+            const SizedBox(height: 12),
+            ...snapshot.topics.map((topic) {
+              final accuracy = topic.stat.accuracy;
+              return Padding(
+                padding: const EdgeInsets.only(bottom: 12),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        Text(
+                          QuestionTopic.labelFor(topic.categoryId),
+                          style: Theme.of(context).textTheme.bodyMedium,
+                        ),
+                        Text(
+                          '${topic.stat.accuracyPercent.toStringAsFixed(1)}% (${topic.stat.correctCount}/${topic.stat.attempts})',
+                          style: Theme.of(context)
+                              .textTheme
+                              .bodySmall
+                              ?.copyWith(fontWeight: FontWeight.bold),
+                        ),
+                      ],
+                    ),
+                    const SizedBox(height: 4),
+                    ClipRRect(
+                      borderRadius: BorderRadius.circular(2),
+                      child: LinearProgressIndicator(
+                        value: accuracy,
+                        minHeight: 4,
+                        backgroundColor:
+                            Theme.of(context).colorScheme.surfaceContainerHighest,
+                        valueColor: AlwaysStoppedAnimation<Color>(
+                          _getAccuracyColor(accuracy),
                         ),
                       ),
                     ),
