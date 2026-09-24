@@ -288,7 +288,7 @@ class PassRateAnalysisView extends ConsumerWidget {
                           style: Theme.of(context).textTheme.bodyMedium,
                         ),
                         Text(
-                          '${stage.stat.accuracy.toStringAsFixed(1)}% (${stage.stat.correctCount}/${stage.stat.attempts})',
+                          '${stage.stat.accuracyPercent.toStringAsFixed(1)}% (${stage.stat.correctCount}/${stage.stat.attempts})',
                           style: Theme.of(context)
                               .textTheme
                               .bodySmall
@@ -300,12 +300,12 @@ class PassRateAnalysisView extends ConsumerWidget {
                     ClipRRect(
                       borderRadius: BorderRadius.circular(2),
                       child: LinearProgressIndicator(
-                        value: stage.stat.accuracy / 100,
+                        value: stage.stat.accuracy,
                         minHeight: 4,
                         backgroundColor:
                             Theme.of(context).colorScheme.surfaceContainerHighest,
                         valueColor: AlwaysStoppedAnimation<Color>(
-                          _getAccuracyColor(stage.stat.accuracy / 100),
+                          _getAccuracyColor(stage.stat.accuracy),
                         ),
                       ),
                     ),
