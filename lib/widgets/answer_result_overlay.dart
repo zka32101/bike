@@ -11,11 +11,13 @@ import 'shake_animation.dart';
 class AnswerResultOverlay extends ConsumerStatefulWidget {
   const AnswerResultOverlay({
     super.key,
+    required this.questionId,
     required this.isCorrect,
     required this.explanation,
     required this.onNext,
   });
 
+  final String questionId;
   final bool isCorrect;
   final String explanation;
   final VoidCallback onNext;
@@ -49,9 +51,33 @@ class _AnswerResultOverlayState extends ConsumerState<AnswerResultOverlay> {
     // Animation complete - could be used for additional feedback if needed
   }
 
+  Future<void> _toggleMastery(bool isMastered) async {
+    final uid = ref.read(currentUidProvider);
+    final masteryService = ref.read(masteryServiceProvider);
+
+    try {
+      if (isMastered) {
+        await masteryService.unmarkAsMastered(uid, widget.questionId);
+      } else {
+        await masteryService.markAsMastered(uid, widget.questionId);
+      }
+      ref.invalidate(masteredQuestionsProvider);
+    } catch (e) {
+      if (mounted) {
+        ScaffoldMessenger.of(context).showSnackBar(
+          SnackBar(content: Text('エラーが発生しました: $e')),
+        );
+      }
+    }
+  }
+
   @override
   Widget build(BuildContext context) {
     final color = widget.isCorrect ? Colors.green : Theme.of(context).colorScheme.error;
+    final masteredAsync = ref.watch(masteredQuestionsProvider);
+    final isMastered = masteredAsync.valueOrNull
+            ?.any((m) => m.questionId == widget.questionId) ??
+        false;
 
     // コンテンツ部分
     final content = Card(
@@ -79,6 +105,19 @@ class _AnswerResultOverlayState extends ConsumerState<AnswerResultOverlay> {
               Text(widget.explanation, textAlign: TextAlign.center),
             ],
             const SizedBox(height: 20),
+            SizedBox(
+              width: double.infinity,
+              child: OutlinedButton.icon(
+                onPressed: () => _toggleMastery(isMastered),
+                icon: Icon(isMastered ? Icons.check_circle : Icons.radio_button_unchecked),
+                label: Text(isMastered ? '記憶した ✓' : '記憶した'),
+                style: OutlinedButton.styleFrom(
+                  foregroundColor:
+                      isMastered ? Theme.of(context).primaryColor : null,
+                ),
+              ),
+            ),
+            const SizedBox(height: 12),
             SizedBox(
               width: double.infinity,
               child: ElevatedButton(
