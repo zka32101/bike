@@ -323,8 +323,22 @@ class DailyQuotaState {
   }
 }
 
-/// 無料枠：1日ノルマ10問まで（実装引き継ぎ書 R④ 参照）。
-const int freeDailyQuotaLimit = 10;
+/// 無料枠：1日ノルマのデフォルト問題数（実装引き継ぎ書 R④ 参照）。
+const int freeDailyQuotaDefault = 10;
+
+/// 免許区分ごとの1日ノルマ目標数。
+///
+/// 区分間で目標数を変える強い理由が現状ないため、全区分とも
+/// [freeDailyQuotaDefault] を使う。将来「原付は5問、普通二輪は15問」等の
+/// 区分別チューニングが必要になった場合はこのMapの値だけを調整すればよい。
+final Map<String, int> dailyQuotaLimitByCategory = {
+  for (final category in LicenseCategory.values) category.name: freeDailyQuotaDefault,
+};
+
+/// 指定した免許区分の1日ノルマ目標数を返す。
+/// 未登録の区分IDが渡された場合はデフォルト値にフォールバックする。
+int dailyQuotaLimitForCategory(String licenseCategoryId) =>
+    dailyQuotaLimitByCategory[licenseCategoryId] ?? freeDailyQuotaDefault;
 
 class DailyQuotaController extends FamilyNotifier<DailyQuotaState, String> {
   late String _licenseCategory;
@@ -360,7 +374,9 @@ class DailyQuotaController extends FamilyNotifier<DailyQuotaState, String> {
     final questionsList = filtered.isEmpty ? all : filtered;
 
     questionsList.shuffle();
-    final quota = questionsList.take(freeDailyQuotaLimit).toList();
+    final quota = questionsList
+        .take(dailyQuotaLimitForCategory(_licenseCategory))
+        .toList();
     state = state.copyWith(questions: quota, loading: false);
   }
 

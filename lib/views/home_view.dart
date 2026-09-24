@@ -14,20 +14,35 @@ import 'trap_dojo_view.dart';
 
 /// ホーム画面：合格予測メーター／今日のノルマ／バイク解放進捗／ひっかけ道場入口。
 /// ホーム→ノルマ→正誤演出＝3タップ以内でAhaに到達する動線の起点。
-class HomeView extends ConsumerWidget {
+class HomeView extends ConsumerStatefulWidget {
   const HomeView({super.key});
 
   @override
-  Widget build(BuildContext context, WidgetRef ref) {
+  ConsumerState<HomeView> createState() => _HomeViewState();
+}
+
+class _HomeViewState extends ConsumerState<HomeView> {
+  /// 今日どの免許区分を練習するか。複数区分を選択しているユーザーのみ
+  /// ホーム画面上部のチップから切り替え可能。画面遷移をまたいだ永続化は
+  /// 行わず、ホームを開くたびに先頭の区分がデフォルトになる。
+  String? _selectedCategoryId;
+
+  @override
+  Widget build(BuildContext context) {
     final userAsync = ref.watch(userControllerProvider);
     final scoreAsync = ref.watch(savedPredictionScoreProvider);
     final answerLogsAsync = ref.watch(answerLogsProvider);
     final bikeProgressAsync = ref.watch(bikeUnlockControllerProvider);
 
     final user = userAsync.valueOrNull;
-    final primaryCategoryId = user?.licenseCategories.isNotEmpty == true
-        ? user!.licenseCategories.first
-        : null;
+    final categories = user?.licenseCategories ?? const <String>[];
+    if (categories.isNotEmpty &&
+        (_selectedCategoryId == null ||
+            !categories.contains(_selectedCategoryId))) {
+      _selectedCategoryId = categories.first;
+    }
+    final primaryCategoryId =
+        categories.isNotEmpty ? _selectedCategoryId : null;
 
     return Scaffold(
       appBar: AppBar(
@@ -54,6 +69,16 @@ class HomeView extends ConsumerWidget {
                   if (primaryCategoryId == null)
                     _NoCategoryCard(context: context)
                   else ...[
+                    if (categories.length > 1) ...[
+                      _CategorySwitcher(
+                        categories: categories,
+                        selectedCategoryId: primaryCategoryId,
+                        onSelected: (categoryId) {
+                          setState(() => _selectedCategoryId = categoryId);
+                        },
+                      ),
+                      const SizedBox(height: 16),
+                    ],
                     PassPredictionMeter(
                       score: scoreAsync.valueOrNull,
                       answeredCount: answerLogsAsync.valueOrNull?.length ?? 0,
@@ -70,7 +95,9 @@ class HomeView extends ConsumerWidget {
                         title: Text(
                           '今日のノルマ（${LicenseCategory.fromId(primaryCategoryId).label}）',
                         ),
-                        subtitle: const Text('無料版は1日10問まで'),
+                        subtitle: Text(
+                          '無料版は1日${dailyQuotaLimitForCategory(primaryCategoryId)}問まで',
+                        ),
                         trailing: const Icon(Icons.chevron_right),
                         onTap: () => Navigator.of(context).push(
                           MaterialPageRoute(
@@ -138,6 +165,36 @@ class HomeView extends ConsumerWidget {
                 ],
               ),
             ),
+    );
+  }
+}
+
+/// 複数の免許区分を選択しているユーザー向けの「今日はどの区分を練習するか」
+/// 切り替えチップ。1区分のみのユーザーには表示されない（呼び出し側で制御）。
+class _CategorySwitcher extends StatelessWidget {
+  const _CategorySwitcher({
+    required this.categories,
+    required this.selectedCategoryId,
+    required this.onSelected,
+  });
+
+  final List<String> categories;
+  final String? selectedCategoryId;
+  final ValueChanged<String> onSelected;
+
+  @override
+  Widget build(BuildContext context) {
+    return Wrap(
+      spacing: 8,
+      runSpacing: 8,
+      children: [
+        for (final categoryId in categories)
+          ChoiceChip(
+            label: Text(LicenseCategory.fromId(categoryId).label),
+            selected: categoryId == selectedCategoryId,
+            onSelected: (_) => onSelected(categoryId),
+          ),
+      ],
     );
   }
 }
