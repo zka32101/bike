@@ -16,7 +16,8 @@
     "answer": 1,
     "explanation": "道路交通法により、原付車（50cc以下）の最高速度は30km/hに制限されている。",
     "isTrapQuestion": true,
-    "trapNumberType": "speedLimit"
+    "trapNumberType": "speedLimit",
+    "topicTag": "rules"
   },
   {
     "id": "g002",
@@ -35,7 +36,8 @@
     "answer": 2,
     "explanation": "原付車（原付一種）は二人乗りが完全に禁止されており、年齢や運転経験にかかわらず例外はない。「20歳以上・免許取得後3年以上」は高速道路での普通・大型自動二輪の二人乗り条件であり、原付には適用されない。",
     "isTrapQuestion": true,
-    "trapNumberType": "twoPersonRiding"
+    "trapNumberType": "twoPersonRiding",
+    "topicTag": "parking"
   },
   {
     "id": "g003",
@@ -54,7 +56,8 @@
     "answer": 2,
     "explanation": "原付車の最大積載量は30kgと定められており、これを超える積載は違反。",
     "isTrapQuestion": true,
-    "trapNumberType": "loadLimit"
+    "trapNumberType": "loadLimit",
+    "topicTag": "parking"
   },
   {
     "id": "g004",
@@ -73,7 +76,8 @@
     "answer": 2,
     "explanation": "原付車（原付一種）は二人乗りが完全に禁止されている一方、積載装置に積める荷物は最大30kgまで認められている。",
     "isTrapQuestion": true,
-    "trapNumberType": "loadLimit"
+    "trapNumberType": "loadLimit",
+    "topicTag": "parking"
   },
   {
     "id": "g005",
@@ -92,7 +96,8 @@
     "answer": 2,
     "explanation": "原付車でも、運転者と乗客の両方にヘルメット着用義務がある。",
     "isTrapQuestion": false,
-    "trapNumberType": "none"
+    "trapNumberType": "none",
+    "topicTag": "rules"
   },
   {
     "id": "g006",
@@ -111,7 +116,8 @@
     "answer": 1,
     "explanation": "山道では原付の性能が限界に達しやすいため、カーブ前の十分な減速と低速走行が必須。",
     "isTrapQuestion": false,
-    "trapNumberType": "none"
+    "trapNumberType": "none",
+    "topicTag": "operation"
   },
   {
     "id": "g007",
@@ -130,7 +136,8 @@
     "answer": 1,
     "explanation": "タイヤの溝と空気圧は原付の安全性に直結し、最も重要な点検項目。",
     "isTrapQuestion": false,
-    "trapNumberType": "none"
+    "trapNumberType": "none",
+    "topicTag": "maintenance"
   },
   {
     "id": "g008",
@@ -149,7 +156,8 @@
     "answer": 1,
     "explanation": "雨の日は白線やマンホール上が極めて滑りやすく、特に注意が必要。",
     "isTrapQuestion": true,
-    "trapNumberType": "weatherSafety"
+    "trapNumberType": "weatherSafety",
+    "topicTag": "hazard_prediction"
   },
   {
     "id": "g009",
@@ -168,7 +176,8 @@
     "answer": 1,
     "explanation": "原付免許では50cc以下の一輪二輪車を運転できる。",
     "isTrapQuestion": false,
-    "trapNumberType": "none"
+    "trapNumberType": "none",
+    "topicTag": "license_system"
   },
   {
     "id": "g010",
@@ -187,7 +196,8 @@
     "answer": 1,
     "explanation": "原付の左折は、十分な減速と大きな回転半径を取ることが安全。",
     "isTrapQuestion": false,
-    "trapNumberType": "none"
+    "trapNumberType": "none",
+    "topicTag": "rules"
   },
   {
     "id": "g011",
@@ -206,7 +216,8 @@
     "answer": 1,
     "explanation": "原付も自転車同様、許可された駐輪場のみ使用が必須。",
     "isTrapQuestion": false,
-    "trapNumberType": "none"
+    "trapNumberType": "none",
+    "topicTag": "parking"
   },
   {
     "id": "g012",
@@ -225,7 +236,8 @@
     "answer": 1,
     "explanation": "原付での急ハンドルは、タイヤグリップの低下により転倒やスリップを引き起こす。",
     "isTrapQuestion": false,
-    "trapNumberType": "none"
+    "trapNumberType": "none",
+    "topicTag": "operation"
   },
   {
     "id": "g013",
@@ -244,7 +256,8 @@
     "answer": 2,
     "explanation": "原付は特定の条件下で徐行して歩道走行できるが、基本は車道走行。",
     "isTrapQuestion": false,
-    "trapNumberType": "none"
+    "trapNumberType": "none",
+    "topicTag": "rules"
   },
   {
     "id": "g014",
@@ -263,7 +276,8 @@
     "answer": 2,
     "explanation": "原付のブレーキは前後をバランスよく使用することで、安定した制動が得られる。",
     "isTrapQuestion": false,
-    "trapNumberType": "none"
+    "trapNumberType": "none",
+    "topicTag": "operation"
   },
   {
     "id": "g015",
@@ -282,7 +296,8 @@
     "answer": 1,
     "explanation": "飲酒運転は原付でも道路交通法により完全に禁止されている。",
     "isTrapQuestion": false,
-    "trapNumberType": "none"
+    "trapNumberType": "none",
+    "topicTag": "rules"
   },
   {
     "id": "g016",
@@ -301,7 +316,8 @@
     "answer": 1,
     "explanation": "夜間走行ではハイビームに加え、反射材を装備することで視認性が大幅に向上。",
     "isTrapQuestion": false,
-    "trapNumberType": "none"
+    "trapNumberType": "none",
+    "topicTag": "hazard_prediction"
   },
   {
     "id": "g017",
@@ -320,7 +336,8 @@
     "answer": 1,
     "explanation": "原付でも自賠責保険への加入が法で義務づけられている。",
     "isTrapQuestion": false,
-    "trapNumberType": "none"
+    "trapNumberType": "none",
+    "topicTag": "hazard_prediction"
   },
   {
     "id": "g018",
@@ -339,7 +356,8 @@
     "answer": 1,
     "explanation": "原付は白線や段差でスリップしやすいため、これらを避けることが重要。",
     "isTrapQuestion": false,
-    "trapNumberType": "none"
+    "trapNumberType": "none",
+    "topicTag": "operation"
   },
   {
     "id": "g019",
@@ -358,7 +376,8 @@
     "answer": 1,
     "explanation": "原付での携帯電話使用は道路交通法により禁止されており、停止中でも使用できない。",
     "isTrapQuestion": false,
-    "trapNumberType": "none"
+    "trapNumberType": "none",
+    "topicTag": "rules"
   },
   {
     "id": "g020",
@@ -377,7 +396,8 @@
     "answer": 1,
     "explanation": "原付でも1年に1回の定期点検が法で義務づけられている。",
     "isTrapQuestion": false,
-    "trapNumberType": "none"
+    "trapNumberType": "none",
+    "topicTag": "maintenance"
   },
   {
     "id": "g021",
@@ -396,7 +416,8 @@
     "answer": 1,
     "explanation": "原付の視認性向上には、目立つウェアの着用と常時ライト点灯が最も効果的。",
     "isTrapQuestion": false,
-    "trapNumberType": "none"
+    "trapNumberType": "none",
+    "topicTag": "hazard_prediction"
   },
   {
     "id": "g022",
@@ -415,7 +436,8 @@
     "answer": 1,
     "explanation": "原付での長距離走行は眠気と疲労による事故リスクが高いため、定期的な休息が必須。",
     "isTrapQuestion": false,
-    "trapNumberType": "none"
+    "trapNumberType": "none",
+    "topicTag": "hazard_prediction"
   },
   {
     "id": "g023",
@@ -434,7 +456,8 @@
     "answer": 1,
     "explanation": "赤信号では原付も完全に停止する必要がある。",
     "isTrapQuestion": false,
-    "trapNumberType": "none"
+    "trapNumberType": "none",
+    "topicTag": "rules"
   },
   {
     "id": "g024",
@@ -453,7 +476,8 @@
     "answer": 1,
     "explanation": "原付への児童乗車は6歳以上が条件で、適切なヘルメット着用が必須。",
     "isTrapQuestion": false,
-    "trapNumberType": "none"
+    "trapNumberType": "none",
+    "topicTag": "parking"
   },
   {
     "id": "g025",
@@ -472,7 +496,8 @@
     "answer": 1,
     "explanation": "原付の右折は、十分な減速と大きな迂回路が安全運転のコツ。",
     "isTrapQuestion": false,
-    "trapNumberType": "none"
+    "trapNumberType": "none",
+    "topicTag": "rules"
   },
   {
     "id": "g026",
@@ -491,7 +516,8 @@
     "answer": 1,
     "explanation": "ガード下は落下物リスクと視認性低下があるため、低速での慎重走行が必須。",
     "isTrapQuestion": false,
-    "trapNumberType": "none"
+    "trapNumberType": "none",
+    "topicTag": "hazard_prediction"
   },
   {
     "id": "g027",
@@ -510,7 +536,8 @@
     "answer": 2,
     "explanation": "車線変更は、必ず目視確認をしながらウインカーで合図することが必須。",
     "isTrapQuestion": false,
-    "trapNumberType": "none"
+    "trapNumberType": "none",
+    "topicTag": "rules"
   },
   {
     "id": "g028",
@@ -529,7 +556,8 @@
     "answer": 1,
     "explanation": "霧の中は低速走行とライト、霧灯で視認性を確保することが安全。",
     "isTrapQuestion": false,
-    "trapNumberType": "none"
+    "trapNumberType": "none",
+    "topicTag": "hazard_prediction"
   },
   {
     "id": "g029",
@@ -548,7 +576,8 @@
     "answer": 1,
     "explanation": "バックミラーだけでは死角があるため、肩越しの目視確認も必須。",
     "isTrapQuestion": false,
-    "trapNumberType": "none"
+    "trapNumberType": "none",
+    "topicTag": "operation"
   },
   {
     "id": "g030",
@@ -567,7 +596,8 @@
     "answer": 1,
     "explanation": "雪道での急ハンドルと急ブレーキは極めて危険であり、スリップ転倒の原因。",
     "isTrapQuestion": false,
-    "trapNumberType": "none"
+    "trapNumberType": "none",
+    "topicTag": "operation"
   },
   {
     "id": "g031",
@@ -586,7 +616,8 @@
     "answer": 1,
     "explanation": "一時停止標識がある場所では完全に停止し、周囲確認後に進むこと。",
     "isTrapQuestion": false,
-    "trapNumberType": "none"
+    "trapNumberType": "none",
+    "topicTag": "signs"
   },
   {
     "id": "g032",
@@ -605,7 +636,8 @@
     "answer": 2,
     "explanation": "信号待ち時は、万が一他の車両が突入した場合に逃げられる位置が安全。",
     "isTrapQuestion": false,
-    "trapNumberType": "none"
+    "trapNumberType": "none",
+    "topicTag": "rules"
   },
   {
     "id": "g033",
@@ -624,7 +656,8 @@
     "answer": 1,
     "explanation": "原付のサイドスタンドは左側に立て、エンジンは切った状態で駐車。",
     "isTrapQuestion": false,
-    "trapNumberType": "none"
+    "trapNumberType": "none",
+    "topicTag": "parking"
   },
   {
     "id": "g034",
@@ -643,7 +676,8 @@
     "answer": 1,
     "explanation": "緊急時でも周囲判断と段階的な減速で、原付の安定性を保つことが重要。",
     "isTrapQuestion": false,
-    "trapNumberType": "none"
+    "trapNumberType": "none",
+    "topicTag": "hazard_prediction"
   },
   {
     "id": "g035",
@@ -662,7 +696,8 @@
     "answer": 1,
     "explanation": "原付の乗り降りは停止時に限り、左側（車線側）から行うことが安全。",
     "isTrapQuestion": false,
-    "trapNumberType": "none"
+    "trapNumberType": "none",
+    "topicTag": "operation"
   },
   {
     "id": "g036",
@@ -681,7 +716,8 @@
     "answer": 1,
     "explanation": "下り坂ではエンジンブレーキを活用することで、ブレーキの過熱を防げる。",
     "isTrapQuestion": false,
-    "trapNumberType": "none"
+    "trapNumberType": "none",
+    "topicTag": "operation"
   },
   {
     "id": "g037",
@@ -700,7 +736,8 @@
     "answer": 2,
     "explanation": "原付の手放し運転は道路交通法により禁止されており、安全な操作が必須。",
     "isTrapQuestion": false,
-    "trapNumberType": "none"
+    "trapNumberType": "none",
+    "topicTag": "operation"
   },
   {
     "id": "g038",
@@ -719,7 +756,8 @@
     "answer": 1,
     "explanation": "安全な走行姿勢は、背中を張り視線を先に置き、ハンドルに過度な力を入れないこと。",
     "isTrapQuestion": false,
-    "trapNumberType": "none"
+    "trapNumberType": "none",
+    "topicTag": "operation"
   },
   {
     "id": "g039",
@@ -738,7 +776,8 @@
     "answer": 1,
     "explanation": "原付は市町村への登録が必須であり、登録証の携行が必要。",
     "isTrapQuestion": false,
-    "trapNumberType": "none"
+    "trapNumberType": "none",
+    "topicTag": "license_system"
   },
   {
     "id": "g040",
@@ -757,7 +796,8 @@
     "answer": 1,
     "explanation": "スリップ予防には段階的な減速と慎重運転が最も効果的。",
     "isTrapQuestion": false,
-    "trapNumberType": "none"
+    "trapNumberType": "none",
+    "topicTag": "operation"
   },
   {
     "id": "g041",
@@ -776,7 +816,8 @@
     "answer": 2,
     "explanation": "坂道ではギアを下げることで、エンジンの力を効果的に使える。",
     "isTrapQuestion": false,
-    "trapNumberType": "none"
+    "trapNumberType": "none",
+    "topicTag": "operation"
   },
   {
     "id": "g042",
@@ -795,7 +836,8 @@
     "answer": 1,
     "explanation": "原付（50cc以下）は高速道路での走行が禁止されている。",
     "isTrapQuestion": true,
-    "trapNumberType": "none"
+    "trapNumberType": "none",
+    "topicTag": "rules"
   },
   {
     "id": "g043",
@@ -814,7 +856,8 @@
     "answer": 1,
     "explanation": "右折禁止標識がある場所での右折は違反。別のルートを選択する必要がある。",
     "isTrapQuestion": false,
-    "trapNumberType": "none"
+    "trapNumberType": "none",
+    "topicTag": "signs"
   },
   {
     "id": "g044",
@@ -833,7 +876,8 @@
     "answer": 1,
     "explanation": "交差点では進路確認と段階的な減速で、危険を最小化できる。",
     "isTrapQuestion": false,
-    "trapNumberType": "none"
+    "trapNumberType": "none",
+    "topicTag": "rules"
   },
   {
     "id": "g045",
@@ -852,7 +896,8 @@
     "answer": 1,
     "explanation": "道路交通法施行令により、原付車（50cc以下）の最高速度は常に30km/h以下。",
     "isTrapQuestion": true,
-    "trapNumberType": "speedLimit"
+    "trapNumberType": "speedLimit",
+    "topicTag": "rules"
   },
   {
     "id": "g046",
@@ -871,7 +916,8 @@
     "answer": 1,
     "explanation": "原付の速度超過違反は反則金5,000円が科される。",
     "isTrapQuestion": true,
-    "trapNumberType": "speedLimit"
+    "trapNumberType": "speedLimit",
+    "topicTag": "license_system"
   },
   {
     "id": "g047",
@@ -890,7 +936,8 @@
     "answer": 1,
     "explanation": "原付の右折は、右折表示を出してから対向車の通過を待つ必要があり、急な右折は危険。",
     "isTrapQuestion": true,
-    "trapNumberType": "turningRules"
+    "trapNumberType": "turningRules",
+    "topicTag": "rules"
   },
   {
     "id": "g048",
@@ -909,7 +956,8 @@
     "answer": 2,
     "explanation": "夜間走行時は、十分な明るさ（125ルクス以上）のヘッドライトが法定要件。",
     "isTrapQuestion": false,
-    "trapNumberType": "none"
+    "trapNumberType": "none",
+    "topicTag": "hazard_prediction"
   },
   {
     "id": "g049",
@@ -928,7 +976,8 @@
     "answer": 1,
     "explanation": "原付での左折は左側に寄り、十分に速度を低下させてから小さくカーブを描くことが安全。",
     "isTrapQuestion": true,
-    "trapNumberType": "turningRules"
+    "trapNumberType": "turningRules",
+    "topicTag": "operation"
   },
   {
     "id": "g050",
@@ -947,7 +996,8 @@
     "answer": 2,
     "explanation": "カーブは進入前に速度を落とし、走行中のブレーキは避けるべき。カーブ内でのブレーキはスリップのリスク。",
     "isTrapQuestion": true,
-    "trapNumberType": "hazardRecognition"
+    "trapNumberType": "hazardRecognition",
+    "topicTag": "operation"
   },
   {
     "id": "g051",
@@ -966,7 +1016,8 @@
     "answer": 1,
     "explanation": "原付一種は年齢や経験に関わらず、いかなる場合も二人乗りが禁止されている。",
     "isTrapQuestion": true,
-    "trapNumberType": "twoPersonRiding"
+    "trapNumberType": "twoPersonRiding",
+    "topicTag": "parking"
   },
   {
     "id": "g052",
@@ -985,7 +1036,8 @@
     "answer": 1,
     "explanation": "原付の積載制限超過は反則金5,000円が科される。",
     "isTrapQuestion": true,
-    "trapNumberType": "loadLimit"
+    "trapNumberType": "loadLimit",
+    "topicTag": "parking"
   },
   {
     "id": "g053",
@@ -1004,7 +1056,8 @@
     "answer": 1,
     "explanation": "雨天時はタイヤグリップが低下し、ブレーキ距離が大幅に延びるため、速度低下が必須。",
     "isTrapQuestion": true,
-    "trapNumberType": "weatherConditions"
+    "trapNumberType": "weatherConditions",
+    "topicTag": "operation"
   },
   {
     "id": "g054",
@@ -1023,7 +1076,8 @@
     "answer": 1,
     "explanation": "霧の中では視界が悪くなるため、スピード低下とライト点灯が必須。",
     "isTrapQuestion": false,
-    "trapNumberType": "none"
+    "trapNumberType": "none",
+    "topicTag": "hazard_prediction"
   },
   {
     "id": "g055",
@@ -1042,7 +1096,8 @@
     "answer": 2,
     "explanation": "転倒防止には、基本操作の習得と低速練習が最も重要で、無理なカーブ走行を避けることが基本。",
     "isTrapQuestion": false,
-    "trapNumberType": "none"
+    "trapNumberType": "none",
+    "topicTag": "operation"
   },
   {
     "id": "g056",
@@ -1061,7 +1116,8 @@
     "answer": 2,
     "explanation": "信号待ち時のエンジン切断は許可されているが、多くのライダーは再スタートの利便性からかけたままにしている。",
     "isTrapQuestion": true,
-    "trapNumberType": "none"
+    "trapNumberType": "none",
+    "topicTag": "rules"
   },
   {
     "id": "g057",
@@ -1080,7 +1136,8 @@
     "answer": 2,
     "explanation": "交差点での右折は、歩行者確認が最優先で、その後対向車確認を行う。",
     "isTrapQuestion": true,
-    "trapNumberType": "turningRules"
+    "trapNumberType": "turningRules",
+    "topicTag": "rules"
   },
   {
     "id": "g058",
@@ -1099,7 +1156,8 @@
     "answer": 1,
     "explanation": "橋、トンネル出口、高架下は風が集中しやすく、横風の影響が大きい危険箇所。",
     "isTrapQuestion": true,
-    "trapNumberType": "hazardRecognition"
+    "trapNumberType": "hazardRecognition",
+    "topicTag": "hazard_prediction"
   },
   {
     "id": "g059",
@@ -1118,7 +1176,8 @@
     "answer": 1,
     "explanation": "エンジンブレーキはタイヤ負荷を低減しながら減速でき、長い下り坂で有効。",
     "isTrapQuestion": false,
-    "trapNumberType": "none"
+    "trapNumberType": "none",
+    "topicTag": "operation"
   },
   {
     "id": "g060",
@@ -1137,7 +1196,8 @@
     "answer": 1,
     "explanation": "ハイビーム使用は夜間での前方視界を著しく向上させ、危険予測に有効。",
     "isTrapQuestion": true,
-    "trapNumberType": "nightDriving"
+    "trapNumberType": "nightDriving",
+    "topicTag": "hazard_prediction"
   },
   {
     "id": "g061",
@@ -1156,7 +1216,8 @@
     "answer": 1,
     "explanation": "雨天時こそウインカーが重要で、消すことは後続車への合図不足につながる。",
     "isTrapQuestion": true,
-    "trapNumberType": "weatherConditions"
+    "trapNumberType": "weatherConditions",
+    "topicTag": "operation"
   },
   {
     "id": "g062",
@@ -1175,7 +1236,8 @@
     "answer": 2,
     "explanation": "夜間追い越しは危険が高いため、十分な距離確保とハイビーム短時間使用で安全に行う。",
     "isTrapQuestion": true,
-    "trapNumberType": "nightDriving"
+    "trapNumberType": "nightDriving",
+    "topicTag": "rules"
   },
   {
     "id": "g063",
@@ -1194,7 +1256,8 @@
     "answer": 1,
     "explanation": "急激なアクセル全開はホイールスピンやバイクの不安定化につながる。",
     "isTrapQuestion": true,
-    "trapNumberType": "hazardRecognition"
+    "trapNumberType": "hazardRecognition",
+    "topicTag": "operation"
   },
   {
     "id": "g064",
@@ -1213,7 +1276,8 @@
     "answer": 2,
     "explanation": "パンク時は急ブレーキを避け、落ち着いて減速し安全な場所に停止することが重要。",
     "isTrapQuestion": true,
-    "trapNumberType": "hazardRecognition"
+    "trapNumberType": "hazardRecognition",
+    "topicTag": "emergency"
   },
   {
     "id": "g065",
@@ -1232,7 +1296,8 @@
     "answer": 2,
     "explanation": "上り坂ではギア選択で速度維持が重要で、ニュートラル走行は制御困難。",
     "isTrapQuestion": true,
-    "trapNumberType": "none"
+    "trapNumberType": "none",
+    "topicTag": "operation"
   },
   {
     "id": "g066",
@@ -1251,7 +1316,8 @@
     "answer": 1,
     "explanation": "急ブレーキは前輪をロックさせスリップの原因となり、危険。",
     "isTrapQuestion": true,
-    "trapNumberType": "brakingDistance"
+    "trapNumberType": "brakingDistance",
+    "topicTag": "operation"
   },
   {
     "id": "g067",
@@ -1270,7 +1336,8 @@
     "answer": 1,
     "explanation": "積載品の脱落防止のため、確実な固定が法律で要求される。",
     "isTrapQuestion": true,
-    "trapNumberType": "loadLimit"
+    "trapNumberType": "loadLimit",
+    "topicTag": "parking"
   },
   {
     "id": "g068",
@@ -1289,7 +1356,8 @@
     "answer": 1,
     "explanation": "赤信号での進行は完全に禁止。周囲に車がなくても違反。",
     "isTrapQuestion": true,
-    "trapNumberType": "signalAndMarkings"
+    "trapNumberType": "signalAndMarkings",
+    "topicTag": "rules"
   },
   {
     "id": "g069",
@@ -1308,7 +1376,8 @@
     "answer": 1,
     "explanation": "黄点滅信号は注意信号で、安全を確認してから進行。",
     "isTrapQuestion": true,
-    "trapNumberType": "signalAndMarkings"
+    "trapNumberType": "signalAndMarkings",
+    "topicTag": "rules"
   },
   {
     "id": "g070",
@@ -1327,7 +1396,8 @@
     "answer": 1,
     "explanation": "相手のハイビームへの対抗はスリップの原因となるため、冷静にローライト切り替えが正解。",
     "isTrapQuestion": true,
-    "trapNumberType": "nightDriving"
+    "trapNumberType": "nightDriving",
+    "topicTag": "operation"
   },
   {
     "id": "g071",
@@ -1346,7 +1416,8 @@
     "answer": 1,
     "explanation": "スリップ時は急操作を避け、落ち着いてアクセルを緩め、バイク自体の安定を優先。",
     "isTrapQuestion": true,
-    "trapNumberType": "weatherConditions"
+    "trapNumberType": "weatherConditions",
+    "topicTag": "operation"
   },
   {
     "id": "g072",
@@ -1365,7 +1436,8 @@
     "answer": 2,
     "explanation": "積載品の重心はバイク中央部、低い位置が安定性を保つ。",
     "isTrapQuestion": true,
-    "trapNumberType": "loadLimit"
+    "trapNumberType": "loadLimit",
+    "topicTag": "parking"
   },
   {
     "id": "g073",
@@ -1384,7 +1456,8 @@
     "answer": 0,
     "explanation": "白線は水を含みやすく、雨天時に特にスリップのリスクが高い。",
     "isTrapQuestion": true,
-    "trapNumberType": "hazardRecognition"
+    "trapNumberType": "hazardRecognition",
+    "topicTag": "operation"
   },
   {
     "id": "g074",
@@ -1403,7 +1476,8 @@
     "answer": 0,
     "explanation": "ハンドルの無理な操作を避け、適切な速度でのカーブ侵入が横転防止の基本。",
     "isTrapQuestion": false,
-    "trapNumberType": "none"
+    "trapNumberType": "none",
+    "topicTag": "operation"
   },
   {
     "id": "g075",
@@ -1422,7 +1496,8 @@
     "answer": 1,
     "explanation": "原付は構造上バックギアを持たず、バックでの移動はマニュアル操作になる。",
     "isTrapQuestion": true,
-    "trapNumberType": "none"
+    "trapNumberType": "none",
+    "topicTag": "maintenance"
   },
   {
     "id": "g076",
@@ -1441,7 +1516,8 @@
     "answer": 1,
     "explanation": "原付免許（原付一種）の有効期限は3年。",
     "isTrapQuestion": true,
-    "trapNumberType": "licensePeriod"
+    "trapNumberType": "licensePeriod",
+    "topicTag": "license_system"
   },
   {
     "id": "g077",
@@ -1460,7 +1536,8 @@
     "answer": 1,
     "explanation": "歩行者通路ではバイクを押して歩くことが原則。",
     "isTrapQuestion": true,
-    "trapNumberType": "signalAndMarkings"
+    "trapNumberType": "signalAndMarkings",
+    "topicTag": "hazard_prediction"
   },
   {
     "id": "g078",
@@ -1479,7 +1556,8 @@
     "answer": 2,
     "explanation": "駐輪は指定場所のみ許可される。路上駐車や禁止場所への駐輪は違反。",
     "isTrapQuestion": true,
-    "trapNumberType": "signalAndMarkings"
+    "trapNumberType": "signalAndMarkings",
+    "topicTag": "parking"
   },
   {
     "id": "g079",
@@ -1498,7 +1576,8 @@
     "answer": 1,
     "explanation": "水溜りはスリップのリスク。速度低下と慎重な走行が必須。",
     "isTrapQuestion": false,
-    "trapNumberType": "none"
+    "trapNumberType": "none",
+    "topicTag": "operation"
   },
   {
     "id": "g080",
@@ -1517,7 +1596,8 @@
     "answer": 1,
     "explanation": "適切なギアチェンジはエンジン保護と効率的な加速に重要。",
     "isTrapQuestion": true,
-    "trapNumberType": "none"
+    "trapNumberType": "none",
+    "topicTag": "operation"
   },
   {
     "id": "g081",
@@ -1536,7 +1616,8 @@
     "answer": 1,
     "explanation": "長距離走行は疲労蓄積のリスク。定期的な休憩で安全確保が必須。",
     "isTrapQuestion": false,
-    "trapNumberType": "none"
+    "trapNumberType": "none",
+    "topicTag": "hazard_prediction"
   },
   {
     "id": "g082",
@@ -1555,7 +1636,8 @@
     "answer": 1,
     "explanation": "急激なクラッチ繋ぎはエンジン停止や急加速につながり危険。",
     "isTrapQuestion": true,
-    "trapNumberType": "hazardRecognition"
+    "trapNumberType": "hazardRecognition",
+    "topicTag": "operation"
   },
   {
     "id": "g083",
@@ -1574,7 +1656,8 @@
     "answer": 1,
     "explanation": "タイヤ空気圧不足はグリップ低下、スリップリスク、走行不安定化を招く。",
     "isTrapQuestion": true,
-    "trapNumberType": "hazardRecognition"
+    "trapNumberType": "hazardRecognition",
+    "topicTag": "maintenance"
   },
   {
     "id": "g084",
@@ -1593,7 +1676,8 @@
     "answer": 1,
     "explanation": "砂利道はタイヤグリップが大幅に低下し、スリップのリスクが極めて高い。",
     "isTrapQuestion": false,
-    "trapNumberType": "none"
+    "trapNumberType": "none",
+    "topicTag": "operation"
   },
   {
     "id": "g085",
@@ -1612,7 +1696,8 @@
     "answer": 1,
     "explanation": "定期的なオイル交換はエンジンの潤滑と冷却を保ち、エンジン寿命延長に必須。",
     "isTrapQuestion": false,
-    "trapNumberType": "none"
+    "trapNumberType": "none",
+    "topicTag": "maintenance"
   },
   {
     "id": "g086",
@@ -1631,7 +1716,8 @@
     "answer": 1,
     "explanation": "急ハンドル操作は重心移動により横転リスクが大幅に増加。",
     "isTrapQuestion": false,
-    "trapNumberType": "none"
+    "trapNumberType": "none",
+    "topicTag": "operation"
   },
   {
     "id": "g087",
@@ -1650,7 +1736,8 @@
     "answer": 2,
     "explanation": "バックミラーは後方の車両・バイク・歩行者確認に不可欠で、安全走行の基本。",
     "isTrapQuestion": false,
-    "trapNumberType": "none"
+    "trapNumberType": "none",
+    "topicTag": "operation"
   },
   {
     "id": "g088",
@@ -1669,7 +1756,8 @@
     "answer": 1,
     "explanation": "長時間連続走行は疲労蓄積により判断力低下と反応時間延長を招く。",
     "isTrapQuestion": false,
-    "trapNumberType": "none"
+    "trapNumberType": "none",
+    "topicTag": "hazard_prediction"
   },
   {
     "id": "g089",
@@ -1688,7 +1776,8 @@
     "answer": 2,
     "explanation": "右左折表示は曲がり始める30m以上前から出すことが法定要件。",
     "isTrapQuestion": true,
-    "trapNumberType": "signalAndMarkings"
+    "trapNumberType": "signalAndMarkings",
+    "topicTag": "rules"
   },
   {
     "id": "g090",
@@ -1707,7 +1796,8 @@
     "answer": 1,
     "explanation": "スタンド立てたまま走行すると、エンジンが自動停止する安全機構が働く。",
     "isTrapQuestion": true,
-    "trapNumberType": "hazardRecognition"
+    "trapNumberType": "hazardRecognition",
+    "topicTag": "operation"
   },
   {
     "id": "g091",
@@ -1726,7 +1816,8 @@
     "answer": 1,
     "explanation": "免許試験に向けた実習は実際の交通状況での危機管理と判断能力の習得が最優先。",
     "isTrapQuestion": false,
-    "trapNumberType": "none"
+    "trapNumberType": "none",
+    "topicTag": "license_system"
   },
   {
     "id": "g092",
@@ -1745,7 +1836,8 @@
     "answer": 0,
     "explanation": "ヘルメットも積載物として扱われ、総積載制限30kgに含まれる。",
     "isTrapQuestion": true,
-    "trapNumberType": "loadLimit"
+    "trapNumberType": "loadLimit",
+    "topicTag": "parking"
   },
   {
     "id": "g093",
@@ -1764,7 +1856,8 @@
     "answer": 1,
     "explanation": "安定した停止のため両足で確実に地面に着くことが基本。",
     "isTrapQuestion": false,
-    "trapNumberType": "none"
+    "trapNumberType": "none",
+    "topicTag": "operation"
   },
   {
     "id": "g094",
@@ -1783,7 +1876,8 @@
     "answer": 1,
     "explanation": "始動前のタイヤ空気圧確認とライト点灯テストは安全走行の基本。",
     "isTrapQuestion": false,
-    "trapNumberType": "none"
+    "trapNumberType": "none",
+    "topicTag": "maintenance"
   },
   {
     "id": "g095",
@@ -1802,7 +1896,8 @@
     "answer": 2,
     "explanation": "スリップ時の急ブレーキはさらなるスリップを招き極めて危険。",
     "isTrapQuestion": true,
-    "trapNumberType": "weatherConditions"
+    "trapNumberType": "weatherConditions",
+    "topicTag": "operation"
   },
   {
     "id": "g096",
@@ -1821,7 +1916,8 @@
     "answer": 1,
     "explanation": "運転免許の更新は有効期限の3ヶ月前から手続き可能。",
     "isTrapQuestion": true,
-    "trapNumberType": "licensePeriod"
+    "trapNumberType": "licensePeriod",
+    "topicTag": "license_system"
   },
   {
     "id": "g097",
@@ -1840,7 +1936,8 @@
     "answer": 0,
     "explanation": "原付のハンドルロックはセキュリティ機構で、キー解錠時にハンドルが固定される。",
     "isTrapQuestion": true,
-    "trapNumberType": "none"
+    "trapNumberType": "none",
+    "topicTag": "operation"
   },
   {
     "id": "g098",
@@ -1859,7 +1956,8 @@
     "answer": 1,
     "explanation": "バイク走行時、歩行者との接触事故ではライダーに重大な法的責任がある。",
     "isTrapQuestion": false,
-    "trapNumberType": "none"
+    "trapNumberType": "none",
+    "topicTag": "emergency"
   },
   {
     "id": "g099",
@@ -1878,7 +1976,8 @@
     "answer": 1,
     "explanation": "心身の不調は判断力低下と反応時間延長を招き、走行は厳禁。",
     "isTrapQuestion": false,
-    "trapNumberType": "none"
+    "trapNumberType": "none",
+    "topicTag": "hazard_prediction"
   },
   {
     "id": "g100",
@@ -1897,7 +1996,8 @@
     "answer": 1,
     "explanation": "医療用含め、一部の薬物は眠気や判断力低下を招き、運転が禁止される場合がある。",
     "isTrapQuestion": true,
-    "trapNumberType": "none"
+    "trapNumberType": "none",
+    "topicTag": "hazard_prediction"
   },
   {
     "id": "g101",
@@ -1916,7 +2016,8 @@
     "answer": 1,
     "explanation": "飲酒運転は道路交通法で完全禁止。少量でも検査対象。",
     "isTrapQuestion": true,
-    "trapNumberType": "none"
+    "trapNumberType": "none",
+    "topicTag": "operation"
   },
   {
     "id": "g102",
@@ -1935,7 +2036,8 @@
     "answer": 1,
     "explanation": "側道からの進入は速度低下と周囲確認が必須の安全手順。",
     "isTrapQuestion": false,
-    "trapNumberType": "none"
+    "trapNumberType": "none",
+    "topicTag": "rules"
   },
   {
     "id": "g103",
@@ -1954,7 +2056,8 @@
     "answer": 1,
     "explanation": "大型車両後方は死角が生じやすく、追従走行時に特に注意が必須。",
     "isTrapQuestion": false,
-    "trapNumberType": "none"
+    "trapNumberType": "none",
+    "topicTag": "hazard_prediction"
   },
   {
     "id": "g104",
@@ -1973,7 +2076,8 @@
     "answer": 1,
     "explanation": "発進は1速ギアから始まり、段階的に変速していくことが基本。",
     "isTrapQuestion": false,
-    "trapNumberType": "none"
+    "trapNumberType": "none",
+    "topicTag": "operation"
   },
   {
     "id": "g105",
@@ -1992,7 +2096,8 @@
     "answer": 1,
     "explanation": "駐車時は歩道側向きが走行開始時の安全確認に有利。",
     "isTrapQuestion": false,
-    "trapNumberType": "none"
+    "trapNumberType": "none",
+    "topicTag": "parking"
   },
   {
     "id": "g106",
@@ -2011,7 +2116,8 @@
     "answer": 2,
     "explanation": "前方車の急停止時に対応できるだけのブレーキ距離確保が最重要。",
     "isTrapQuestion": true,
-    "trapNumberType": "brakingDistance"
+    "trapNumberType": "brakingDistance",
+    "topicTag": "operation"
   },
   {
     "id": "g107",
@@ -2030,7 +2136,8 @@
     "answer": 1,
     "explanation": "走行距離はオイル交換やメンテナンスのタイミング判断に重要。",
     "isTrapQuestion": false,
-    "trapNumberType": "none"
+    "trapNumberType": "none",
+    "topicTag": "maintenance"
   },
   {
     "id": "g108",
@@ -2049,7 +2156,8 @@
     "answer": 3,
     "explanation": "雨天時の視認性向上には色鮮やかな衣装がバイク識別に最も効果的。",
     "isTrapQuestion": true,
-    "trapNumberType": "weatherConditions"
+    "trapNumberType": "weatherConditions",
+    "topicTag": "hazard_prediction"
   },
   {
     "id": "g109",
@@ -2068,7 +2176,8 @@
     "answer": 1,
     "explanation": "走行前のライト点灯確認はヘッドライトとテールライト両方が必須。",
     "isTrapQuestion": false,
-    "trapNumberType": "none"
+    "trapNumberType": "none",
+    "topicTag": "maintenance"
   },
   {
     "id": "g110",
@@ -2087,7 +2196,8 @@
     "answer": 1,
     "explanation": "相手のハイビームへの対抗は判断力低下を招くため、冷静に対応が必須。",
     "isTrapQuestion": true,
-    "trapNumberType": "nightDriving"
+    "trapNumberType": "nightDriving",
+    "topicTag": "hazard_prediction"
   },
   {
     "id": "g111",
@@ -2106,7 +2216,8 @@
     "answer": 1,
     "explanation": "交差点は事故多発地。信号と周囲の車・歩行者確認が最優先。",
     "isTrapQuestion": false,
-    "trapNumberType": "none"
+    "trapNumberType": "none",
+    "topicTag": "rules"
   },
   {
     "id": "g112",
@@ -2125,7 +2236,8 @@
     "answer": 1,
     "explanation": "右折時の対向車には優先権がある。対向車通過後に右折する。",
     "isTrapQuestion": true,
-    "trapNumberType": "turningRules"
+    "trapNumberType": "turningRules",
+    "topicTag": "rules"
   },
   {
     "id": "g113",
@@ -2144,7 +2256,8 @@
     "answer": 1,
     "explanation": "原付のスタンディング走行はハンドル制御困難となり極めて危険。",
     "isTrapQuestion": false,
-    "trapNumberType": "none"
+    "trapNumberType": "none",
+    "topicTag": "operation"
   },
   {
     "id": "g114",
@@ -2163,7 +2276,8 @@
     "answer": 1,
     "explanation": "バイク運転は両手でのハンドル操作が必須。片手は制御困難で危険。",
     "isTrapQuestion": false,
-    "trapNumberType": "none"
+    "trapNumberType": "none",
+    "topicTag": "operation"
   },
   {
     "id": "g115",
@@ -2182,7 +2296,8 @@
     "answer": 1,
     "explanation": "走行中のスマートフォン使用は道路交通法で完全禁止。注意散漫と事故のリスク。",
     "isTrapQuestion": true,
-    "trapNumberType": "none"
+    "trapNumberType": "none",
+    "topicTag": "rules"
   },
   {
     "id": "g116",
@@ -2201,7 +2316,8 @@
     "answer": 1,
     "explanation": "試験対策は交通ルール理解と実交通での正確な判断能力が最優先。",
     "isTrapQuestion": false,
-    "trapNumberType": "none"
+    "trapNumberType": "none",
+    "topicTag": "license_system"
   },
   {
     "id": "g117",
@@ -2220,7 +2336,8 @@
     "answer": 1,
     "explanation": "雨天時のカーブはスリップリスク最高。スピード大幅低下が不可欠。",
     "isTrapQuestion": false,
-    "trapNumberType": "none"
+    "trapNumberType": "none",
+    "topicTag": "operation"
   },
   {
     "id": "g118",
@@ -2239,7 +2356,8 @@
     "answer": 1,
     "explanation": "交通事故発生時は直ちに警察に通報することが法的義務。",
     "isTrapQuestion": true,
-    "trapNumberType": "none"
+    "trapNumberType": "none",
+    "topicTag": "emergency"
   },
   {
     "id": "g119",
@@ -2258,7 +2376,8 @@
     "answer": 1,
     "explanation": "視野死角はこまめなヘッド・アイ・ムーブメントで確認することが基本安全操作。",
     "isTrapQuestion": false,
-    "trapNumberType": "none"
+    "trapNumberType": "none",
+    "topicTag": "hazard_prediction"
   },
   {
     "id": "g120",
@@ -2277,7 +2396,8 @@
     "answer": 1,
     "explanation": "メンテナンス記録はバイク査定時に重要な履歴情報となる。",
     "isTrapQuestion": false,
-    "trapNumberType": "none"
+    "trapNumberType": "none",
+    "topicTag": "maintenance"
   },
   {
     "id": "g121",
@@ -2296,7 +2416,8 @@
     "answer": 1,
     "explanation": "緊急車両には優先権がある。右側に寄り停止することが法的義務。",
     "isTrapQuestion": false,
-    "trapNumberType": "none"
+    "trapNumberType": "none",
+    "topicTag": "emergency"
   },
   {
     "id": "g122",
@@ -2315,7 +2436,8 @@
     "answer": 0,
     "explanation": "歩行者信号が赤でもバイク信号が青なら進行可能。バイクは自動車信号に従う。",
     "isTrapQuestion": true,
-    "trapNumberType": "signalAndMarkings"
+    "trapNumberType": "signalAndMarkings",
+    "topicTag": "rules"
   },
   {
     "id": "g123",
@@ -2334,7 +2456,8 @@
     "answer": 1,
     "explanation": "一時停止は完全停止が法定要件。減速だけでは違反。",
     "isTrapQuestion": true,
-    "trapNumberType": "signalAndMarkings"
+    "trapNumberType": "signalAndMarkings",
+    "topicTag": "signs"
   },
   {
     "id": "g124",
@@ -2353,7 +2476,8 @@
     "answer": 1,
     "explanation": "バイク専用レーンは原付を含むバイク専用で、自動車進入は禁止。",
     "isTrapQuestion": true,
-    "trapNumberType": "signalAndMarkings"
+    "trapNumberType": "signalAndMarkings",
+    "topicTag": "hazard_prediction"
   },
   {
     "id": "g125",
@@ -2372,7 +2496,8 @@
     "answer": 1,
     "explanation": "駐禁標識のある場所の無許可停止は違反で罰金対象。",
     "isTrapQuestion": true,
-    "trapNumberType": "signalAndMarkings"
+    "trapNumberType": "signalAndMarkings",
+    "topicTag": "signs"
   },
   {
     "id": "g126",
@@ -2391,7 +2516,8 @@
     "answer": 1,
     "explanation": "可動式横断歩道は歩行者優先。減速・確認後、安全に通過する。",
     "isTrapQuestion": false,
-    "trapNumberType": "none"
+    "trapNumberType": "none",
+    "topicTag": "rules"
   },
   {
     "id": "g127",
@@ -2410,7 +2536,8 @@
     "answer": 1,
     "explanation": "パンクやエンジン不調時のロードサービス利用は迅速な解決に有効。",
     "isTrapQuestion": false,
-    "trapNumberType": "none"
+    "trapNumberType": "none",
+    "topicTag": "emergency"
   },
   {
     "id": "g128",
@@ -2429,7 +2556,8 @@
     "answer": 1,
     "explanation": "道路交通法の点数制度により、累積点数で免許停止や取消が決定される。",
     "isTrapQuestion": false,
-    "trapNumberType": "none"
+    "trapNumberType": "none",
+    "topicTag": "license_system"
   },
   {
     "id": "g129",
@@ -2448,7 +2576,8 @@
     "answer": 1,
     "explanation": "バイク保険は対人対物賠償リスク対策として重要。未加入は高リスク。",
     "isTrapQuestion": false,
-    "trapNumberType": "none"
+    "trapNumberType": "none",
+    "topicTag": "hazard_prediction"
   },
   {
     "id": "g130",
@@ -2467,7 +2596,8 @@
     "answer": 1,
     "explanation": "ヘルメット未着用は反則金5,000円の違反。着用は法的義務。",
     "isTrapQuestion": true,
-    "trapNumberType": "none"
+    "trapNumberType": "none",
+    "topicTag": "license_system"
   },
   {
     "id": "g131",
@@ -2486,7 +2616,8 @@
     "answer": 1,
     "explanation": "整備記録簿はバイク状態管理と中古売却時の評価向上に有用。",
     "isTrapQuestion": false,
-    "trapNumberType": "none"
+    "trapNumberType": "none",
+    "topicTag": "maintenance"
   },
   {
     "id": "g132",
@@ -2505,7 +2636,8 @@
     "answer": 1,
     "explanation": "バイク寿命は走行距離（数万km目安）と経過年数（5～10年）で判断が一般的。",
     "isTrapQuestion": false,
-    "trapNumberType": "none"
+    "trapNumberType": "none",
+    "topicTag": "maintenance"
   },
   {
     "id": "g133",
@@ -2524,7 +2656,8 @@
     "answer": 1,
     "explanation": "ウインカー長押しは自動消灯機能の警告音で、正常機能。",
     "isTrapQuestion": true,
-    "trapNumberType": "none"
+    "trapNumberType": "none",
+    "topicTag": "hazard_prediction"
   },
   {
     "id": "g134",
@@ -2543,7 +2676,8 @@
     "answer": 1,
     "explanation": "発進はクラッチ完全切断→ギア入れ→クラッチ繋ぎ→アクセルが正確な手順。",
     "isTrapQuestion": true,
-    "trapNumberType": "none"
+    "trapNumberType": "none",
+    "topicTag": "operation"
   },
   {
     "id": "g135",
@@ -2562,7 +2696,8 @@
     "answer": 1,
     "explanation": "安全運転は他者の行動を予測し、事前に対応する危機管理能力が最重要。",
     "isTrapQuestion": false,
-    "trapNumberType": "none"
+    "trapNumberType": "none",
+    "topicTag": "hazard_prediction"
   },
   {
     "id": "g136",
@@ -2581,7 +2716,8 @@
     "answer": 2,
     "explanation": "通勤時は交通量が多く、周囲の状況変化への即座な対応が最重要。",
     "isTrapQuestion": false,
-    "trapNumberType": "none"
+    "trapNumberType": "none",
+    "topicTag": "hazard_prediction"
   },
   {
     "id": "g137",
@@ -2600,7 +2736,8 @@
     "answer": 1,
     "explanation": "停止線の手前で安全に停止することが道路交通法の要件。",
     "isTrapQuestion": true,
-    "trapNumberType": "signalAndMarkings"
+    "trapNumberType": "signalAndMarkings",
+    "topicTag": "signs"
   },
   {
     "id": "g138",
@@ -2619,7 +2756,8 @@
     "answer": 1,
     "explanation": "後退時は歩行者や物体との接触が最大のリスク。十分な確認が必須。",
     "isTrapQuestion": false,
-    "trapNumberType": "none"
+    "trapNumberType": "none",
+    "topicTag": "operation"
   },
   {
     "id": "g139",
@@ -2638,7 +2776,8 @@
     "answer": 1,
     "explanation": "逆走は重大な違反であり、あらゆる状況で禁止。",
     "isTrapQuestion": true,
-    "trapNumberType": "signalAndMarkings"
+    "trapNumberType": "signalAndMarkings",
+    "topicTag": "rules"
   },
   {
     "id": "g140",
@@ -2657,7 +2796,8 @@
     "answer": 1,
     "explanation": "自転車追い越しは十分な横距離とゆっくりな走行が安全。",
     "isTrapQuestion": false,
-    "trapNumberType": "none"
+    "trapNumberType": "none",
+    "topicTag": "rules"
   },
   {
     "id": "g141",
@@ -2676,7 +2816,8 @@
     "answer": 1,
     "explanation": "凍結路面は極めて滑りやすく、走行回避か超低速での走行が必須。",
     "isTrapQuestion": false,
-    "trapNumberType": "none"
+    "trapNumberType": "none",
+    "topicTag": "hazard_prediction"
   },
   {
     "id": "g142",
@@ -2695,7 +2836,8 @@
     "answer": 1,
     "explanation": "交差点進入時は複数の危険要因が重なるため、総合的な確認が必須。",
     "isTrapQuestion": true,
-    "trapNumberType": "hazardRecognition"
+    "trapNumberType": "hazardRecognition",
+    "topicTag": "rules"
   },
   {
     "id": "g143",
@@ -2714,7 +2856,8 @@
     "answer": 1,
     "explanation": "カーブ中のブレーキはスリップやロックの原因となり極めて危険。",
     "isTrapQuestion": true,
-    "trapNumberType": "hazardRecognition"
+    "trapNumberType": "hazardRecognition",
+    "topicTag": "operation"
   },
   {
     "id": "g144",
@@ -2733,7 +2876,8 @@
     "answer": 2,
     "explanation": "ハンドルは両手で軽く保持し、余分な力を入れないことで細かい操作が可能。",
     "isTrapQuestion": true,
-    "trapNumberType": "none"
+    "trapNumberType": "none",
+    "topicTag": "operation"
   },
   {
     "id": "g145",
@@ -2752,7 +2896,8 @@
     "answer": 1,
     "explanation": "信号待ちは横断歩道を侵襲しない停止線手前で停止することが規則。",
     "isTrapQuestion": true,
-    "trapNumberType": "signalAndMarkings"
+    "trapNumberType": "signalAndMarkings",
+    "topicTag": "signs"
   },
   {
     "id": "g146",
@@ -2771,7 +2916,8 @@
     "answer": 1,
     "explanation": "反射板は他の道路利用者による視認性を大幅に向上させ、夜間事故防止に不可欠。",
     "isTrapQuestion": false,
-    "trapNumberType": "none"
+    "trapNumberType": "none",
+    "topicTag": "maintenance"
   },
   {
     "id": "g147",
@@ -2790,7 +2936,8 @@
     "answer": 0,
     "explanation": "ほぼ全ての原付はオートマチック構造で、特別な変速操作が不要。",
     "isTrapQuestion": true,
-    "trapNumberType": "none"
+    "trapNumberType": "none",
+    "topicTag": "maintenance"
   },
   {
     "id": "g148",
@@ -2809,7 +2956,8 @@
     "answer": 2,
     "explanation": "高速でのカーブ走行は遠心力と旋回による重心移動で横転リスクが最大。",
     "isTrapQuestion": false,
-    "trapNumberType": "none"
+    "trapNumberType": "none",
+    "topicTag": "operation"
   },
   {
     "id": "g149",
@@ -2828,7 +2976,8 @@
     "answer": 1,
     "explanation": "左右の方向制御はハンドル操作で行われ、最も重要な操作要素。",
     "isTrapQuestion": false,
-    "trapNumberType": "none"
+    "trapNumberType": "none",
+    "topicTag": "operation"
   },
   {
     "id": "g150",
@@ -2847,7 +2996,8 @@
     "answer": 1,
     "explanation": "下り坂ではブレーキ過熱を避けエンジンブレーキを活用し、ニュートラル走行は避けるべき。",
     "isTrapQuestion": true,
-    "trapNumberType": "hazardRecognition"
+    "trapNumberType": "hazardRecognition",
+    "topicTag": "operation"
   },
   {
     "id": "g151",
@@ -2866,7 +3016,8 @@
     "answer": 1,
     "explanation": "雨天時はライト点灯と反射材が視認性向上に最重要。",
     "isTrapQuestion": false,
-    "trapNumberType": "none"
+    "trapNumberType": "none",
+    "topicTag": "hazard_prediction"
   },
   {
     "id": "g152",
@@ -2885,7 +3036,8 @@
     "answer": 1,
     "explanation": "白線・マンホール・グレーチングなど金属表面や水を含む箇所は特に滑りやすい。",
     "isTrapQuestion": true,
-    "trapNumberType": "hazardRecognition"
+    "trapNumberType": "hazardRecognition",
+    "topicTag": "hazard_prediction"
   },
   {
     "id": "g153",
@@ -2904,7 +3056,8 @@
     "answer": 1,
     "explanation": "ウインカー誤操作に気付いたら即座に解除し、正しい意思表示をすることが重要。",
     "isTrapQuestion": false,
-    "trapNumberType": "none"
+    "trapNumberType": "none",
+    "topicTag": "hazard_prediction"
   },
   {
     "id": "g154",
@@ -2923,7 +3076,8 @@
     "answer": 1,
     "explanation": "カーブ走行時のスリップ防止には、事前減速とタイヤの最適な空気圧維持が必須。",
     "isTrapQuestion": true,
-    "trapNumberType": "hazardRecognition"
+    "trapNumberType": "hazardRecognition",
+    "topicTag": "maintenance"
   },
   {
     "id": "g155",
@@ -2942,7 +3096,8 @@
     "answer": 1,
     "explanation": "蛇行走行は道路交通法違反であり、極めて危険。",
     "isTrapQuestion": true,
-    "trapNumberType": "signalAndMarkings"
+    "trapNumberType": "signalAndMarkings",
+    "topicTag": "operation"
   },
   {
     "id": "g156",
@@ -2961,7 +3116,8 @@
     "answer": 1,
     "explanation": "相手のハイビーム対抗は危険なため、冷静にロービームに切り替え走行継続が正解。",
     "isTrapQuestion": true,
-    "trapNumberType": "nightDriving"
+    "trapNumberType": "nightDriving",
+    "topicTag": "hazard_prediction"
   },
   {
     "id": "g157",
@@ -2980,7 +3136,8 @@
     "answer": 1,
     "explanation": "急加速はホイールスピンを引き起こし、バイクが不安定化して危険。",
     "isTrapQuestion": false,
-    "trapNumberType": "none"
+    "trapNumberType": "none",
+    "topicTag": "hazard_prediction"
   },
   {
     "id": "g158",
@@ -2999,7 +3156,8 @@
     "answer": 1,
     "explanation": "トンネル内はライト点灯で視認性を確保し、速度低下で安全性を高める。",
     "isTrapQuestion": false,
-    "trapNumberType": "none"
+    "trapNumberType": "none",
+    "topicTag": "rules"
   },
   {
     "id": "g159",
@@ -3018,7 +3176,8 @@
     "answer": 1,
     "explanation": "不固定の積載物脱落は後続車への落下物事故につながり、極めて危険。",
     "isTrapQuestion": false,
-    "trapNumberType": "none"
+    "trapNumberType": "none",
+    "topicTag": "parking"
   },
   {
     "id": "g160",
@@ -3037,7 +3196,8 @@
     "answer": 1,
     "explanation": "歩行者自転車混合通路ではバイクを押して歩くことが原則。",
     "isTrapQuestion": true,
-    "trapNumberType": "signalAndMarkings"
+    "trapNumberType": "signalAndMarkings",
+    "topicTag": "hazard_prediction"
   },
   {
     "id": "g161",
@@ -3056,7 +3216,8 @@
     "answer": 1,
     "explanation": "エンジン異音や異臭は重大な機械トラブルの兆候。即座に停止して点検が必須。",
     "isTrapQuestion": false,
-    "trapNumberType": "none"
+    "trapNumberType": "none",
+    "topicTag": "emergency"
   },
   {
     "id": "g162",
@@ -3075,7 +3236,8 @@
     "answer": 1,
     "explanation": "未舗装路はグリップが不安定でスリップリスクが高いため、低速慎重走行が必須。",
     "isTrapQuestion": false,
-    "trapNumberType": "none"
+    "trapNumberType": "none",
+    "topicTag": "operation"
   },
   {
     "id": "g163",
@@ -3094,7 +3256,8 @@
     "answer": 1,
     "explanation": "駐輪禁止区域への駐輪は反則金2,000円の違反。",
     "isTrapQuestion": true,
-    "trapNumberType": "signalAndMarkings"
+    "trapNumberType": "signalAndMarkings",
+    "topicTag": "parking"
   },
   {
     "id": "g164",
@@ -3113,7 +3276,8 @@
     "answer": 1,
     "explanation": "交差点での車線変更時の後方確認は、後続車との接触事故防止に必須。",
     "isTrapQuestion": false,
-    "trapNumberType": "none"
+    "trapNumberType": "none",
+    "topicTag": "rules"
   },
   {
     "id": "g165",
@@ -3132,7 +3296,8 @@
     "answer": 1,
     "explanation": "路肩は駐停車以外の走行が禁止。走行は車道内で行うことが必須。",
     "isTrapQuestion": true,
-    "trapNumberType": "signalAndMarkings"
+    "trapNumberType": "signalAndMarkings",
+    "topicTag": "parking"
   },
   {
     "id": "g166",
@@ -3151,7 +3316,8 @@
     "answer": 1,
     "explanation": "学校・病院前は児童・患者など危険要因が多く、最大警戒と超低速が必須。",
     "isTrapQuestion": false,
-    "trapNumberType": "none"
+    "trapNumberType": "none",
+    "topicTag": "hazard_prediction"
   },
   {
     "id": "g167",
@@ -3170,7 +3336,8 @@
     "answer": 1,
     "explanation": "視認性が低下する薄暮時から夜間まで、ライト点灯が法定要件。",
     "isTrapQuestion": true,
-    "trapNumberType": "nightDriving"
+    "trapNumberType": "nightDriving",
+    "topicTag": "hazard_prediction"
   },
   {
     "id": "g168",
@@ -3189,7 +3356,8 @@
     "answer": 1,
     "explanation": "免許取得後の公道走行練習は、道路交通法完全遵守での走行が必須。",
     "isTrapQuestion": false,
-    "trapNumberType": "none"
+    "trapNumberType": "none",
+    "topicTag": "license_system"
   },
   {
     "id": "g169",
@@ -3208,7 +3376,8 @@
     "answer": 1,
     "explanation": "側溝や段差周辺での転倒・脱輪リスクが特に高い。",
     "isTrapQuestion": false,
-    "trapNumberType": "none"
+    "trapNumberType": "none",
+    "topicTag": "operation"
   },
   {
     "id": "g170",
@@ -3227,7 +3396,8 @@
     "answer": 1,
     "explanation": "故障や事故時は路肩など安全な場所への移動が最優先。",
     "isTrapQuestion": false,
-    "trapNumberType": "none"
+    "trapNumberType": "none",
+    "topicTag": "emergency"
   },
   {
     "id": "g171",
@@ -3246,7 +3416,8 @@
     "answer": 1,
     "explanation": "駐車時のエンジン切断は燃料節約と環境保全のために必須。",
     "isTrapQuestion": true,
-    "trapNumberType": "none"
+    "trapNumberType": "none",
+    "topicTag": "parking"
   },
   {
     "id": "g172",
@@ -3265,7 +3436,8 @@
     "answer": 1,
     "explanation": "道路交通法では歩行者保護が最高の優先順位。衝突回避が最優先。",
     "isTrapQuestion": false,
-    "trapNumberType": "none"
+    "trapNumberType": "none",
+    "topicTag": "rules"
   },
   {
     "id": "g173",
@@ -3284,7 +3456,8 @@
     "answer": 0,
     "explanation": "交差点・横断歩道・カーブ・坂道頂上は視界不足で追越し禁止。",
     "isTrapQuestion": true,
-    "trapNumberType": "signalAndMarkings"
+    "trapNumberType": "signalAndMarkings",
+    "topicTag": "operation"
   },
   {
     "id": "g174",
@@ -3303,7 +3476,8 @@
     "answer": 1,
     "explanation": "段差への激突はタイヤパンク、バイク損傷、転倒のリスクが高い。",
     "isTrapQuestion": false,
-    "trapNumberType": "none"
+    "trapNumberType": "none",
+    "topicTag": "operation"
   },
   {
     "id": "g175",
@@ -3322,7 +3496,8 @@
     "answer": 1,
     "explanation": "消音器脱落は違法な騒音発生により走行禁止。即座に修理が必須。",
     "isTrapQuestion": true,
-    "trapNumberType": "none"
+    "trapNumberType": "none",
+    "topicTag": "emergency"
   },
   {
     "id": "g176",
@@ -3341,7 +3516,8 @@
     "answer": 1,
     "explanation": "スロープなど勾配のある場所は滑りやすく、低速での走行が必須。",
     "isTrapQuestion": false,
-    "trapNumberType": "none"
+    "trapNumberType": "none",
+    "topicTag": "hazard_prediction"
   },
   {
     "id": "g177",
@@ -3360,7 +3536,8 @@
     "answer": 1,
     "explanation": "片手運転は操作困難でバランス喪失のリスク。両手操作が必須。",
     "isTrapQuestion": true,
-    "trapNumberType": "hazardRecognition"
+    "trapNumberType": "hazardRecognition",
+    "topicTag": "operation"
   },
   {
     "id": "g178",
@@ -3379,7 +3556,8 @@
     "answer": 1,
     "explanation": "ウイリーやドーナツ走行は危険且つ違法。厳禁。",
     "isTrapQuestion": true,
-    "trapNumberType": "hazardRecognition"
+    "trapNumberType": "hazardRecognition",
+    "topicTag": "operation"
   },
   {
     "id": "g179",
@@ -3398,7 +3576,8 @@
     "answer": 1,
     "explanation": "走行時は肌露出を避け、目立つウェア着用で保護と視認性を確保。",
     "isTrapQuestion": false,
-    "trapNumberType": "none"
+    "trapNumberType": "none",
+    "topicTag": "hazard_prediction"
   },
   {
     "id": "g180",
@@ -3417,7 +3596,8 @@
     "answer": 1,
     "explanation": "野生動物との遭遇は予測不可。低速で慎重に対応し、衝突回避が優先。",
     "isTrapQuestion": false,
-    "trapNumberType": "none"
+    "trapNumberType": "none",
+    "topicTag": "rules"
   },
   {
     "id": "g181",
@@ -3436,7 +3616,8 @@
     "answer": 1,
     "explanation": "夜間走行は目が疲労しやすい。定期的な休憩で目の疲れをリセット。",
     "isTrapQuestion": false,
-    "trapNumberType": "none"
+    "trapNumberType": "none",
+    "topicTag": "hazard_prediction"
   },
   {
     "id": "g182",
@@ -3455,7 +3636,8 @@
     "answer": 1,
     "explanation": "煽り運転は危険で違法。十分な距離保持が必須。",
     "isTrapQuestion": true,
-    "trapNumberType": "hazardRecognition"
+    "trapNumberType": "hazardRecognition",
+    "topicTag": "rules"
   },
   {
     "id": "g183",
@@ -3474,7 +3656,8 @@
     "answer": 1,
     "explanation": "エンジン停止時は即座に安全な場所への移動が最優先。",
     "isTrapQuestion": false,
-    "trapNumberType": "none"
+    "trapNumberType": "none",
+    "topicTag": "emergency"
   },
   {
     "id": "g184",
@@ -3493,7 +3676,8 @@
     "answer": 1,
     "explanation": "安全走行は速度制限以下で、さらに路面・天候・視界など条件に応じた速度調整が必須。",
     "isTrapQuestion": true,
-    "trapNumberType": "hazardRecognition"
+    "trapNumberType": "hazardRecognition",
+    "topicTag": "rules"
   },
   {
     "id": "g185",
@@ -3512,7 +3696,8 @@
     "answer": 1,
     "explanation": "高い位置への積載は重心が上昇し、バイク安定性が大幅に低下。",
     "isTrapQuestion": true,
-    "trapNumberType": "loadLimit"
+    "trapNumberType": "loadLimit",
+    "topicTag": "parking"
   },
   {
     "id": "g186",
@@ -3531,7 +3716,8 @@
     "answer": 1,
     "explanation": "中央線越えは追越し時のみ許可。それ以外は対向車との衝突リスク。",
     "isTrapQuestion": true,
-    "trapNumberType": "signalAndMarkings"
+    "trapNumberType": "signalAndMarkings",
+    "topicTag": "rules"
   },
   {
     "id": "g187",
@@ -3550,7 +3736,8 @@
     "answer": 2,
     "explanation": "信号機がない交差点では、道幅広い方が優先権。確認して進行。",
     "isTrapQuestion": true,
-    "trapNumberType": "signalAndMarkings"
+    "trapNumberType": "signalAndMarkings",
+    "topicTag": "rules"
   },
   {
     "id": "g188",
@@ -3569,7 +3756,8 @@
     "answer": 2,
     "explanation": "走行中のスマートフォン使用は違反で危険。停止後の使用が必須。",
     "isTrapQuestion": true,
-    "trapNumberType": "hazardRecognition"
+    "trapNumberType": "hazardRecognition",
+    "topicTag": "rules"
   },
   {
     "id": "g189",
@@ -3588,7 +3776,8 @@
     "answer": 1,
     "explanation": "給油時のエンジン切断と静電気除去は火災防止に必須。",
     "isTrapQuestion": false,
-    "trapNumberType": "none"
+    "trapNumberType": "none",
+    "topicTag": "hazard_prediction"
   },
   {
     "id": "g190",
@@ -3607,7 +3796,8 @@
     "answer": 1,
     "explanation": "前方確認は運転の基本義務。不注意での事故は重大な法的責任が生じる。",
     "isTrapQuestion": false,
-    "trapNumberType": "none"
+    "trapNumberType": "none",
+    "topicTag": "emergency"
   },
   {
     "id": "g191",
@@ -3626,7 +3816,8 @@
     "answer": 1,
     "explanation": "安全運転の最高原則は自分と他者の安全。すべての判断がこれに基づく。",
     "isTrapQuestion": false,
-    "trapNumberType": "none"
+    "trapNumberType": "none",
+    "topicTag": "hazard_prediction"
   },
   {
     "id": "g192",
@@ -3645,7 +3836,8 @@
     "answer": 1,
     "explanation": "後方確認不足は、追従や追越時の衝突事故につながり極めて危険。",
     "isTrapQuestion": false,
-    "trapNumberType": "none"
+    "trapNumberType": "none",
+    "topicTag": "rules"
   },
   {
     "id": "g193",
@@ -3664,7 +3856,8 @@
     "answer": 1,
     "explanation": "走行前のルール確認は重大な違反や事故防止に必須。",
     "isTrapQuestion": false,
-    "trapNumberType": "none"
+    "trapNumberType": "none",
+    "topicTag": "rules"
   },
   {
     "id": "g194",
@@ -3683,7 +3876,8 @@
     "answer": 1,
     "explanation": "濡れた路面はタイヤグリップが低下し、ブレーキ距離が大幅に延長される。",
     "isTrapQuestion": true,
-    "trapNumberType": "weatherConditions"
+    "trapNumberType": "weatherConditions",
+    "topicTag": "operation"
   },
   {
     "id": "g195",
@@ -3702,7 +3896,8 @@
     "answer": 1,
     "explanation": "右折車は対向車と歩行者の双方確認が必須。確認不足が事故原因。",
     "isTrapQuestion": false,
-    "trapNumberType": "none"
+    "trapNumberType": "none",
+    "topicTag": "emergency"
   },
   {
     "id": "g196",
@@ -3721,7 +3916,8 @@
     "answer": 1,
     "explanation": "運転中の眠気は極めて危険。定期的休憩による対策が必須。",
     "isTrapQuestion": false,
-    "trapNumberType": "none"
+    "trapNumberType": "none",
+    "topicTag": "hazard_prediction"
   },
   {
     "id": "g197",
@@ -3740,7 +3936,8 @@
     "answer": 1,
     "explanation": "雨天は危険が増加。低速走行と最大警戒が必須。",
     "isTrapQuestion": false,
-    "trapNumberType": "none"
+    "trapNumberType": "none",
+    "topicTag": "hazard_prediction"
   },
   {
     "id": "g198",
@@ -3759,7 +3956,8 @@
     "answer": 1,
     "explanation": "体調不良は判断力低下と反応時間延長を招く。走行回避が必須。",
     "isTrapQuestion": false,
-    "trapNumberType": "none"
+    "trapNumberType": "none",
+    "topicTag": "hazard_prediction"
   },
   {
     "id": "g199",
@@ -3778,7 +3976,8 @@
     "answer": 1,
     "explanation": "工事区間は標識指示に従い、予測不可能な状況への対応が最優先。",
     "isTrapQuestion": false,
-    "trapNumberType": "none"
+    "trapNumberType": "none",
+    "topicTag": "signs"
   },
   {
     "id": "g200",
@@ -3797,6 +3996,7 @@
     "answer": 1,
     "explanation": "安全走行習慣は毎回の走行前点検と心身状態確認から始まる。",
     "isTrapQuestion": false,
-    "trapNumberType": "none"
+    "trapNumberType": "none",
+    "topicTag": "maintenance"
   }
 ]

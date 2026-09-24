@@ -1,3 +1,4 @@
+import '../core/constants/question_topic.dart';
 import '../models/analytics_snapshot.dart';
 import '../models/question.dart';
 import '../models/user_answer_log.dart';
@@ -45,6 +46,7 @@ class DefaultStudyAnalyticsService implements StudyAnalyticsService {
         overall: AccuracyStat(attempts: 0, correctCount: 0),
         stages: [],
         categories: [],
+        topics: [],
         weakAreas: [],
         recommendations: [],
         dailyHistory: [],
@@ -54,6 +56,7 @@ class DefaultStudyAnalyticsService implements StudyAnalyticsService {
     // 累積統計とグループ化
     final byStage = <String, _StatAccumulator>{};
     final byCategory = <String, _StatAccumulator>{};
+    final byTopic = <String, _StatAccumulator>{};
     final byTrapType = <TrapNumberType, _StatAccumulator>{};
     final byDifficulty = <int, _StatAccumulator>{};
     final byDay = <DateTime, _DailyAccumulator>{};
@@ -80,6 +83,11 @@ class DefaultStudyAnalyticsService implements StudyAnalyticsService {
       // カテゴリ別（1つの問題が複数カテゴリに属する場合、全カテゴリにカウント）
       for (final category in meta.licenseCategory) {
         _addToAccumulator(byCategory, category, log.isCorrect);
+      }
+
+      // トピック（分野）別
+      if (meta.topicTag != null && meta.topicTag!.isNotEmpty) {
+        _addToAccumulator(byTopic, meta.topicTag!, log.isCorrect);
       }
 
       // トラップ問題の種別別
@@ -136,6 +144,17 @@ class DefaultStudyAnalyticsService implements StudyAnalyticsService {
         ))
         .toList();
 
+    // トピック（分野）パフォーマンスの構築
+    final topics = byTopic.entries
+        .map((e) => CategoryPerformance(
+          categoryId: e.key,
+          stat: AccuracyStat(
+            attempts: e.value.attempts,
+            correctCount: e.value.correctCount,
+          ),
+        ))
+        .toList();
+
     // 弱点の抽出（複数の角度から）
     final weakAreaCandidates = <WeakArea>[];
 
@@ -180,6 +199,32 @@ class DefaultStudyAnalyticsService implements StudyAnalyticsService {
             kind: WeakAreaKind.category,
             key: 'category:${entry.key}',
             label: entry.key,
+            stat: AccuracyStat(
+              attempts: stat.attempts,
+              correctCount: stat.correctCount,
+            ),
+            severity: severity,
+            sampleQuestionIds: [],
+          ));
+        }
+      }
+    }
+
+    // トピック（分野）別の弱点
+    for (final entry in byTopic.entries) {
+      final stat = entry.value;
+      if (stat.attempts >= minAttemptsForWeakArea) {
+        final accuracy = stat.correctCount / stat.attempts;
+        if (accuracy < weakAreaThreshold) {
+          final severity = _calculateSeverity(
+            accuracy,
+            stat.attempts,
+            totalAttempts,
+          );
+          weakAreaCandidates.add(WeakArea(
+            kind: WeakAreaKind.topic,
+            key: 'topic:${entry.key}',
+            label: QuestionTopic.labelFor(entry.key),
             stat: AccuracyStat(
               attempts: stat.attempts,
               correctCount: stat.correctCount,
@@ -275,6 +320,7 @@ class DefaultStudyAnalyticsService implements StudyAnalyticsService {
       ),
       stages: stages,
       categories: categories,
+      topics: topics,
       weakAreas: weakAreas,
       recommendations: recommendations,
       dailyHistory: dailyHistory,
