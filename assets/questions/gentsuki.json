@@ -97,7 +97,7 @@
     "explanation": "原付車でも、運転者と乗客の両方にヘルメット着用義務がある。",
     "isTrapQuestion": false,
     "trapNumberType": "none",
-    "topicTag": "parking"
+    "topicTag": "rules"
   },
   {
     "id": "g006",
@@ -477,7 +477,7 @@
     "explanation": "原付への児童乗車は6歳以上が条件で、適切なヘルメット着用が必須。",
     "isTrapQuestion": false,
     "trapNumberType": "none",
-    "topicTag": "hazard_prediction"
+    "topicTag": "parking"
   },
   {
     "id": "g025",

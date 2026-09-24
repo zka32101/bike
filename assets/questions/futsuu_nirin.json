@@ -128,7 +128,7 @@
     "explanation": "道路交通法によりヘルメットの着用は運転者、乗客の両方に義務づけられており、適切に装着することが必須。",
     "isTrapQuestion": false,
     "trapNumberType": "none",
-    "topicTag": "parking"
+    "topicTag": "rules"
   },
   {
     "id": "f007",
@@ -685,7 +685,7 @@
     "explanation": "走行中のヘルメット脱着は極めて危険であり、走行中は常にヘルメットを被ったままにすること。",
     "isTrapQuestion": false,
     "trapNumberType": "none",
-    "topicTag": "hazard_prediction"
+    "topicTag": "rules"
   },
   {
     "id": "f033",
@@ -980,7 +980,7 @@
     "explanation": "二輪車への児童乗車は6歳以上が条件であり、適切なヘルメット着用が必須。",
     "isTrapQuestion": false,
     "trapNumberType": "none",
-    "topicTag": "hazard_prediction"
+    "topicTag": "parking"
   },
   {
     "id": "f047",
