@@ -426,16 +426,22 @@ class DailyQuotaController extends FamilyNotifier<DailyQuotaState, String> {
       correctCount: newCorrectCount,
     );
 
+    // 習熟度（合格予測スコア）は毎回の回答で再計算・保存する。
+    // 以前は3問正解のAha Moment時にしか保存しておらず、それ未満で演習を
+    // 中断してホームに戻ると「今の習熟度」が更新されないバグがあったため、
+    // 回答のたびに保存し、ホーム画面側のキャッシュも無効化する。
+    await _updatePredictionScore();
+
     // Aha Moment: 初回3問正解 → 合格予測メーター初表示。
     if (!state.ahaMomentShown && newCorrectCount >= 3) {
-      await _revealPredictionMeter();
+      await _revealAhaMoment();
     }
 
     // バッジチェック：新しく獲得したバッジを自動的にロック解除
     await _checkAndUnlockBadges();
   }
 
-  Future<void> _revealPredictionMeter() async {
+  Future<void> _updatePredictionScore() async {
     final uid = ref.read(currentUidProvider);
     final logs = await ref.read(dataServiceProvider).loadAnswerLogs(uid);
     final questionsById = {for (final q in state.questions) q.id: q};
@@ -469,7 +475,16 @@ class DailyQuotaController extends FamilyNotifier<DailyQuotaState, String> {
       debugPrint('Failed to queue prediction score operation: $e');
     }
 
-    state = state.copyWith(ahaMomentShown: true, predictionScore: score);
+    state = state.copyWith(predictionScore: score);
+
+    // ホーム画面が watch している保存済みスコア／回答ログのキャッシュを
+    // 無効化し、ホームに戻った際に最新の習熟度が反映されるようにする。
+    ref.invalidate(savedPredictionScoreProvider);
+    ref.invalidate(answerLogsProvider);
+  }
+
+  Future<void> _revealAhaMoment() async {
+    state = state.copyWith(ahaMomentShown: true);
 
     await ref.read(analyticsServiceProvider).logEvent(
           AnalyticsEvents.ahaMomentReached,
