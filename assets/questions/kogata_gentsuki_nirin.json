@@ -1,0 +1,2002 @@
+[
+  {
+    "id": "kg001",
+    "licenseCategory": [
+      "kogataGentsukiNirin"
+    ],
+    "stageTag": "第一段階",
+    "difficulty": 1,
+    "questionText": "小型限定普通二輪免許で運転できる自動二輪車の総排気量の上限はどれか。",
+    "choices": [
+      "50cc以下",
+      "90cc以下",
+      "125cc以下",
+      "250cc以下"
+    ],
+    "answer": 2,
+    "explanation": "小型限定普通二輪免許は総排気量125cc以下の自動二輪車(MT・ATを問わない)を運転できる限定免許である。",
+    "isTrapQuestion": true,
+    "trapNumberType": "other",
+    "topicTag": "license_system"
+  },
+  {
+    "id": "kg002",
+    "licenseCategory": [
+      "kogataGentsukiNirin"
+    ],
+    "stageTag": "第二段階",
+    "difficulty": 2,
+    "questionText": "小型限定普通二輪免許で高速自動車国道を走行することについて正しいのはどれか。",
+    "choices": [
+      "排気量125cc以下なので高速道路は走行できない",
+      "普通二輪免許と同じく高速道路を走行できる",
+      "深夜に限り高速道路を走行できる",
+      "同乗者がいなければ高速道路を走行できる"
+    ],
+    "answer": 0,
+    "explanation": "小型限定の条件が付いた普通二輪免許では高速自動車国道・自動車専用道路を走行することはできない。",
+    "isTrapQuestion": true,
+    "trapNumberType": "other",
+    "topicTag": "rules"
+  },
+  {
+    "id": "kg003",
+    "licenseCategory": [
+      "kogataGentsukiNirin"
+    ],
+    "stageTag": "第一段階",
+    "difficulty": 3,
+    "questionText": "小型限定普通二輪免許を持つ運転者が二人乗りをする場合について正しいのはどれか。",
+    "choices": [
+      "いかなる場合も二人乗りは禁止されている",
+      "運転免許を受けていた期間が通算1年以上であれば一般道路で二人乗りができる",
+      "20歳以上であれば免許取得直後でも二人乗りができる",
+      "同乗者が子供であれば期間の制限なく二人乗りができる"
+    ],
+    "answer": 1,
+    "explanation": "原付とは異なり小型限定普通二輪免許では、当該免許を受けていた期間が通算1年以上あれば一般道路で二人乗りが認められる。高速道路での二人乗りにはさらに別の条件がある。",
+    "isTrapQuestion": true,
+    "trapNumberType": "twoPersonRiding",
+    "topicTag": "rules"
+  },
+  {
+    "id": "kg004",
+    "licenseCategory": [
+      "kogataGentsukiNirin"
+    ],
+    "stageTag": "第二段階",
+    "difficulty": 4,
+    "questionText": "小型限定普通二輪車(125cc以下)の法定最高速度について正しいのはどれか。",
+    "choices": [
+      "一律に時速30kmに制限されている",
+      "一般道路では標識のある区分に従い、原付のような一律30km制限はない",
+      "時速40kmに固定されている",
+      "夜間のみ時速60kmまで認められる"
+    ],
+    "answer": 1,
+    "explanation": "原付は法定速度が一律30km/hだが、小型限定普通二輪車は原付のような一律制限はなく、道路標識や法定速度など一般の二輪車と同じ速度区分に従う。",
+    "isTrapQuestion": true,
+    "trapNumberType": "speedLimit",
+    "topicTag": "rules"
+  },
+  {
+    "id": "kg005",
+    "licenseCategory": [
+      "kogataGentsukiNirin"
+    ],
+    "stageTag": "第一段階",
+    "difficulty": 5,
+    "questionText": "小型限定普通二輪免許で交差点を右折する方法について正しいのはどれか。",
+    "choices": [
+      "原付と同様に必ず二段階右折をしなければならない",
+      "小型二輪は二段階右折の対象ではなく、他の車両と同様に一回で右折する",
+      "信号のある交差点でのみ二段階右折が免除される",
+      "125ccちょうどの車両のみ二段階右折が必要"
+    ],
+    "answer": 1,
+    "explanation": "二段階右折の義務があるのは原付(50cc以下)のみで、小型限定普通二輪車を含む自動二輪車は通常の方法(あらかじめ道路の中央または右側端に寄り一回で)で右折する。",
+    "isTrapQuestion": true,
+    "trapNumberType": "twoStageRightTurn",
+    "topicTag": "rules"
+  },
+  {
+    "id": "kg006",
+    "licenseCategory": [
+      "kogataGentsukiNirin"
+    ],
+    "stageTag": "第二段階",
+    "difficulty": 1,
+    "questionText": "自動二輪車の運転者・同乗者のヘルメット着用について正しいのはどれか。",
+    "choices": [
+      "運転者のみ着用義務があり同乗者には義務がない",
+      "運転者・同乗者ともに乗車用ヘルメットの着用が義務付けられている",
+      "時速30km以下で走行する場合は着用しなくてよい",
+      "ヘルメットはあごひもを締めなくても着用したことになる"
+    ],
+    "answer": 1,
+    "explanation": "道路交通法上、二輪車の運転者と同乗者はいずれも乗車用ヘルメットを着用しなければならない。あごひもを確実に締めていない場合は着用とは認められない。",
+    "isTrapQuestion": true,
+    "trapNumberType": "other",
+    "topicTag": "rules"
+  },
+  {
+    "id": "kg007",
+    "licenseCategory": [
+      "kogataGentsukiNirin"
+    ],
+    "stageTag": "第一段階",
+    "difficulty": 2,
+    "questionText": "二輪車の運転者が携帯電話を通話のために手に持って使用しながら運転する行為について正しいのはどれか。",
+    "choices": [
+      "運転に支障がなければ認められる",
+      "停止中であれば常に認められる",
+      "運転中は禁止されており、危険な状態を生じさせた場合はさらに重く処罰される",
+      "時速10km以下の徐行中は認められる"
+    ],
+    "answer": 2,
+    "explanation": "運転中に携帯電話を手に持って通話したり画面を注視したりする行為は禁止されており、交通の危険を生じさせた場合はより重い処分の対象となる。",
+    "isTrapQuestion": true,
+    "trapNumberType": "other",
+    "topicTag": "rules"
+  },
+  {
+    "id": "kg008",
+    "licenseCategory": [
+      "kogataGentsukiNirin"
+    ],
+    "stageTag": "第二段階",
+    "difficulty": 3,
+    "questionText": "夜間、他の車と行き違う際のライトの操作について正しいのはどれか。",
+    "choices": [
+      "上向き(ハイビーム)のままにしておく",
+      "対向車と行き違うときは下向き(ロービーム)に切り替える",
+      "ライトを消灯してすれ違う",
+      "ハザードランプを点灯すればライトの切り替えは不要"
+    ],
+    "answer": 1,
+    "explanation": "対向車と行き違う際や先行車のすぐ後ろを走るときは、相手を眩惑させないよう前照灯を下向きに切り替えなければならない。",
+    "isTrapQuestion": true,
+    "trapNumberType": "other",
+    "topicTag": "rules"
+  },
+  {
+    "id": "kg009",
+    "licenseCategory": [
+      "kogataGentsukiNirin"
+    ],
+    "stageTag": "第一段階",
+    "difficulty": 4,
+    "questionText": "追い越しが禁止されている場所として正しいものはどれか。",
+    "choices": [
+      "見通しのよい直線道路",
+      "トンネルの中(照明があり車両通行帯がある場合を除く)",
+      "幅の広い一方通行路",
+      "駐車場の出入口付近のみ"
+    ],
+    "answer": 1,
+    "explanation": "トンネルの中は原則として追い越しが禁止されている。ただし車両通行帯が設けられている場合など例外もある。",
+    "isTrapQuestion": false,
+    "trapNumberType": "none",
+    "topicTag": "rules"
+  },
+  {
+    "id": "kg010",
+    "licenseCategory": [
+      "kogataGentsukiNirin"
+    ],
+    "stageTag": "第二段階",
+    "difficulty": 5,
+    "questionText": "二輪車の割り込み運転について正しいのはどれか。",
+    "choices": [
+      "進路変更のための合図を出せば、後続車の速度や車間距離にかかわらず割り込んでよい",
+      "後続車が急な減速や急ブレーキを強いられるような割り込みをしてはならない",
+      "二輪車は車体が小さいため割り込みの規制対象外である",
+      "追い越し車線であれば割り込みは自由である"
+    ],
+    "answer": 1,
+    "explanation": "進路変更をする場合でも、後続車が急ブレーキや急ハンドルを強いられるおそれがあるときは進路変更をしてはならない。",
+    "isTrapQuestion": true,
+    "trapNumberType": "other",
+    "topicTag": "rules"
+  },
+  {
+    "id": "kg011",
+    "licenseCategory": [
+      "kogataGentsukiNirin"
+    ],
+    "stageTag": "第一段階",
+    "difficulty": 1,
+    "questionText": "信号が青色の灯火を示しているとき、自動二輪車の進行について正しいのはどれか。",
+    "choices": [
+      "直進、左折、右折のいずれも進行できる",
+      "直進のみ進行できる",
+      "左折のみ進行できる",
+      "右折のみ進行できる"
+    ],
+    "answer": 0,
+    "explanation": "青色の灯火では、自動二輪車を含む車両は直進・左折・右折のいずれも進行することができる(交差点の状況による規制がある場合を除く)。",
+    "isTrapQuestion": false,
+    "trapNumberType": "none",
+    "topicTag": "rules"
+  },
+  {
+    "id": "kg012",
+    "licenseCategory": [
+      "kogataGentsukiNirin"
+    ],
+    "stageTag": "第二段階",
+    "difficulty": 2,
+    "questionText": "黄色の灯火信号に対する自動二輪車の運転者の義務について正しいのはどれか。",
+    "choices": [
+      "急いで交差点を通過しなければならない",
+      "停止位置において安全に停止できない場合を除き、停止位置を越えて進行してはならない",
+      "右折車だけは進行を続けてよい",
+      "夜間は無視してよい"
+    ],
+    "answer": 1,
+    "explanation": "黄色の灯火では、停止位置を越えて進行してはならない。ただし黄色に変わったときに交差点に近接していて安全に停止できない場合は、そのまま進行できる。",
+    "isTrapQuestion": false,
+    "trapNumberType": "none",
+    "topicTag": "rules"
+  },
+  {
+    "id": "kg013",
+    "licenseCategory": [
+      "kogataGentsukiNirin"
+    ],
+    "stageTag": "第一段階",
+    "difficulty": 3,
+    "questionText": "踏切の通過方法について正しいのはどれか。",
+    "choices": [
+      "遮断機が上がっていれば一時停止せず通過できる",
+      "踏切の直前で一時停止し、目と耳で安全確認をしてから通過する",
+      "二輪車は踏切での一時停止義務がない",
+      "警報機が鳴っていなければ確認は不要である"
+    ],
+    "answer": 1,
+    "explanation": "踏切を通過するときは、原則として踏切の直前で一時停止し、自分の目と耳で左右の安全を確認してから通過しなければならない。",
+    "isTrapQuestion": true,
+    "trapNumberType": "other",
+    "topicTag": "rules"
+  },
+  {
+    "id": "kg014",
+    "licenseCategory": [
+      "kogataGentsukiNirin"
+    ],
+    "stageTag": "第二段階",
+    "difficulty": 4,
+    "questionText": "駐停車が禁止されている場所として正しいものはどれか。",
+    "choices": [
+      "火災報知機から1メートル以内の場所",
+      "駐車場の中",
+      "広い駐車帯のある道路",
+      "住宅街の広い道路脇"
+    ],
+    "answer": 0,
+    "explanation": "消火栓や火災報知機から一定距離(1メートル以内)は駐停車が禁止されている。緊急時の使用を妨げないための規制である。",
+    "isTrapQuestion": true,
+    "trapNumberType": "other",
+    "topicTag": "rules"
+  },
+  {
+    "id": "kg015",
+    "licenseCategory": [
+      "kogataGentsukiNirin"
+    ],
+    "stageTag": "第一段階",
+    "difficulty": 5,
+    "questionText": "進路変更をするときの合図の時期について正しいのはどれか。",
+    "choices": [
+      "進路を変える動作を始めると同時でよい",
+      "進路を変えようとする約3秒前に合図を出す",
+      "進路変更後に合図を出せばよい",
+      "合図は任意であり出さなくてもよい"
+    ],
+    "answer": 1,
+    "explanation": "進路変更をしようとする約3秒前に方向指示器等で合図を行い、周囲に自分の意図を知らせなければならない。",
+    "isTrapQuestion": true,
+    "trapNumberType": "other",
+    "topicTag": "rules"
+  },
+  {
+    "id": "kg016",
+    "licenseCategory": [
+      "kogataGentsukiNirin"
+    ],
+    "stageTag": "第二段階",
+    "difficulty": 1,
+    "questionText": "歩行者用道路における自動二輪車の通行について正しいのはどれか。",
+    "choices": [
+      "常に自由に通行できる",
+      "沿道に車庫を持つなど特に通行を認められた場合を除き通行できない",
+      "125cc以下であれば無条件に通行できる",
+      "夜間に限り通行できる"
+    ],
+    "answer": 1,
+    "explanation": "歩行者用道路(歩行者専用道路)は、沿道に車庫があるなど特別な許可を受けた車両を除き、自動二輪車を含む一般車両は通行できない。",
+    "isTrapQuestion": true,
+    "trapNumberType": "other",
+    "topicTag": "rules"
+  },
+  {
+    "id": "kg017",
+    "licenseCategory": [
+      "kogataGentsukiNirin"
+    ],
+    "stageTag": "第一段階",
+    "difficulty": 2,
+    "questionText": "自動二輪車の追い越し方法について正しいのはどれか。",
+    "choices": [
+      "前車の右側を通行して追い越すのが原則である",
+      "前車の左側を通行して追い越すのが原則である",
+      "見通しがよければどちら側からでも自由に追い越してよい",
+      "追い越しは常に禁止されている"
+    ],
+    "answer": 0,
+    "explanation": "追い越しは原則として前車の右側を通行して行う。ただし前車が右折のため道路の中央や右側に寄っているときなどは左側から追い越すことができる。",
+    "isTrapQuestion": true,
+    "trapNumberType": "other",
+    "topicTag": "rules"
+  },
+  {
+    "id": "kg018",
+    "licenseCategory": [
+      "kogataGentsukiNirin"
+    ],
+    "stageTag": "第二段階",
+    "difficulty": 3,
+    "questionText": "駐車禁止の道路標識がある区間での自動二輪車の扱いについて正しいのはどれか。",
+    "choices": [
+      "二輪車は例外的に駐車できる",
+      "自動二輪車も他の車両と同様に駐車が禁止される",
+      "5分以内であれば駐車できる",
+      "運転者がそばにいれば駐車できる"
+    ],
+    "answer": 1,
+    "explanation": "駐車禁止の規制は車両の種類を問わず適用され、自動二輪車も指定された区間で駐車することはできない。",
+    "isTrapQuestion": false,
+    "trapNumberType": "none",
+    "topicTag": "rules"
+  },
+  {
+    "id": "kg019",
+    "licenseCategory": [
+      "kogataGentsukiNirin"
+    ],
+    "stageTag": "第一段階",
+    "difficulty": 4,
+    "questionText": "自動二輪車の乗車定員について正しいのはどれか。",
+    "choices": [
+      "定員は常に運転者1名のみである",
+      "運転者用と同乗者用の座席等が備えられていれば2名まで乗車できる",
+      "何人でも乗車できる",
+      "荷台があれば3名まで乗車できる"
+    ],
+    "answer": 1,
+    "explanation": "自動二輪車は、運転者席のほかに同乗者用の座席と足を置く装置(ステップ)が備えられている場合に限り、運転者を含めて2名まで乗車できる。",
+    "isTrapQuestion": true,
+    "trapNumberType": "other",
+    "topicTag": "rules"
+  },
+  {
+    "id": "kg020",
+    "licenseCategory": [
+      "kogataGentsukiNirin"
+    ],
+    "stageTag": "第二段階",
+    "difficulty": 5,
+    "questionText": "「一時停止」の標識がある場所での正しい行動はどれか。",
+    "choices": [
+      "徐行すれば通過してよい",
+      "停止線の直前で完全に停止し、安全を確認してから進行する",
+      "他の車両がなければ通過してよい",
+      "夜間は適用されない"
+    ],
+    "answer": 1,
+    "explanation": "一時停止の標識がある場所では、停止線の直前で完全に車両を停止させ、左右の安全を確認したうえで進行しなければならない。",
+    "isTrapQuestion": true,
+    "trapNumberType": "other",
+    "topicTag": "rules"
+  },
+  {
+    "id": "kg021",
+    "licenseCategory": [
+      "kogataGentsukiNirin"
+    ],
+    "stageTag": "第一段階",
+    "difficulty": 1,
+    "questionText": "二輪車が路線バス等優先通行帯を通行するときの原則について正しいのはどれか。",
+    "choices": [
+      "路線バス等が近づいてきても優先通行帯からすぐには出なくてよい",
+      "路線バス等が近づいてきたら速やかにその通行帯から出なければならない",
+      "二輪車は優先通行帯を常に走行できない",
+      "優先通行帯は自動二輪車専用である"
+    ],
+    "answer": 1,
+    "explanation": "路線バス等優先通行帯を走行している場合、後方から路線バス等が接近してきたときは速やかにその通行帯から出なければならない。",
+    "isTrapQuestion": true,
+    "trapNumberType": "other",
+    "topicTag": "rules"
+  },
+  {
+    "id": "kg022",
+    "licenseCategory": [
+      "kogataGentsukiNirin"
+    ],
+    "stageTag": "第二段階",
+    "difficulty": 2,
+    "questionText": "自動二輪車の運転者が違反行為をして反則金を納めない場合について正しいのはどれか。",
+    "choices": [
+      "罰則の対象にはならない",
+      "刑事手続きに移行し得る",
+      "反則金は自動的に免除される",
+      "違反点数が半減される"
+    ],
+    "answer": 1,
+    "explanation": "交通反則通告制度により反則金を任意の期間内に納付しない場合は、通常の刑事手続き(検察官への送致等)に移行する可能性がある。",
+    "isTrapQuestion": false,
+    "trapNumberType": "none",
+    "topicTag": "rules"
+  },
+  {
+    "id": "kg023",
+    "licenseCategory": [
+      "kogataGentsukiNirin"
+    ],
+    "stageTag": "第一段階",
+    "difficulty": 3,
+    "questionText": "「徐行」の意味として正しいのはどれか。",
+    "choices": [
+      "直ちに停止できる速度で進行すること",
+      "法定速度いっぱいで進行すること",
+      "完全に停止すること",
+      "時速30km以下で進行すること"
+    ],
+    "answer": 0,
+    "explanation": "徐行とは、車両等が直ちに停止できるような速度で進行することをいい、具体的な数値ではなく状況に応じた速度が求められる。",
+    "isTrapQuestion": true,
+    "trapNumberType": "speedLimit",
+    "topicTag": "rules"
+  },
+  {
+    "id": "kg024",
+    "licenseCategory": [
+      "kogataGentsukiNirin"
+    ],
+    "stageTag": "第二段階",
+    "difficulty": 4,
+    "questionText": "軌道敷内を自動二輪車が通行できる場合について正しいのはどれか。",
+    "choices": [
+      "常に自由に通行できる",
+      "道路工事などのため軌道敷内を通行しなければやむを得ない場合等に限られる",
+      "路面電車が来ていなければいつでも通行できる",
+      "125cc以下の二輪車は無条件に通行できる"
+    ],
+    "answer": 1,
+    "explanation": "軌道敷内の通行は、危険防止のため道路工事などでやむを得ない場合や、標識等で通行が認められている場合などに限られる。",
+    "isTrapQuestion": true,
+    "trapNumberType": "other",
+    "topicTag": "rules"
+  },
+  {
+    "id": "kg025",
+    "licenseCategory": [
+      "kogataGentsukiNirin"
+    ],
+    "stageTag": "第一段階",
+    "difficulty": 5,
+    "questionText": "自動二輪車の積載物の高さの制限について、地上からの高さとして正しいのはどれか。",
+    "choices": [
+      "1.5メートルまで",
+      "2メートルまで",
+      "2.5メートルまで",
+      "制限はない"
+    ],
+    "answer": 1,
+    "explanation": "自動二輪車の積載物の高さは、地上から2メートルを超えないようにすることが原則とされている。",
+    "isTrapQuestion": true,
+    "trapNumberType": "loadLimit",
+    "topicTag": "rules"
+  },
+  {
+    "id": "kg026",
+    "licenseCategory": [
+      "kogataGentsukiNirin"
+    ],
+    "stageTag": "第二段階",
+    "difficulty": 1,
+    "questionText": "横断歩道に歩行者がいるときの自動二輪車の運転者の義務について正しいのはどれか。",
+    "choices": [
+      "歩行者が横断を終えるまで一時停止して待つ",
+      "歩行者がいても速度を落とさず通過してよい",
+      "クラクションを鳴らせば通過してよい",
+      "夜間のみ一時停止義務がある"
+    ],
+    "answer": 0,
+    "explanation": "横断歩道またはその手前で歩行者が横断しようとしているときは、その手前で一時停止し歩行者の通行を妨げてはならない。",
+    "isTrapQuestion": false,
+    "trapNumberType": "none",
+    "topicTag": "rules"
+  },
+  {
+    "id": "kg027",
+    "licenseCategory": [
+      "kogataGentsukiNirin"
+    ],
+    "stageTag": "第一段階",
+    "difficulty": 2,
+    "questionText": "自動二輪車のマフラー(消音器)の改造について正しいのはどれか。",
+    "choices": [
+      "消音器を外して大きな音を出すよう改造してもよい",
+      "基準を超える騒音を発する不正改造は禁止されている",
+      "125cc以下であれば規制の対象外である",
+      "夜間のみ規制される"
+    ],
+    "answer": 1,
+    "explanation": "保安基準に適合しない消音器への改造や取り外しは禁止されており、著しい騒音を発する不正改造車は整備不良として取り締まりの対象になる。",
+    "isTrapQuestion": true,
+    "trapNumberType": "other",
+    "topicTag": "rules"
+  },
+  {
+    "id": "kg028",
+    "licenseCategory": [
+      "kogataGentsukiNirin"
+    ],
+    "stageTag": "第二段階",
+    "difficulty": 3,
+    "questionText": "自動二輪車の運転中の飲酒運転について正しいのはどれか。",
+    "choices": [
+      "少量であれば運転してもよい",
+      "酒気を帯びた状態での運転は一切禁止されている",
+      "125cc以下の二輪車は対象外である",
+      "休憩を挟めば飲酒直後でも運転できる"
+    ],
+    "answer": 1,
+    "explanation": "酒気を帯びた状態での運転は車両の種類を問わず禁止されており、違反した場合は厳しい罰則が科される。",
+    "isTrapQuestion": true,
+    "trapNumberType": "other",
+    "topicTag": "rules"
+  },
+  {
+    "id": "kg029",
+    "licenseCategory": [
+      "kogataGentsukiNirin"
+    ],
+    "stageTag": "第一段階",
+    "difficulty": 4,
+    "questionText": "住宅街の細い道で子供が道路脇で遊んでいるのを見かけたときの対応として正しいのはどれか。",
+    "choices": [
+      "子供は避けてくれるはずなので通常の速度で通過する",
+      "速度を落とし、いつでも止まれるように備えながら通過する",
+      "クラクションを鳴らし続けて注意を促しながら加速する",
+      "子供の横をできるだけ速く通り過ぎる"
+    ],
+    "answer": 1,
+    "explanation": "子供は予測できない動きをすることがあるため、速度を落とし、急な飛び出しにも対応できるよう備えて通過する必要がある。",
+    "isTrapQuestion": false,
+    "trapNumberType": "none",
+    "topicTag": "hazard_prediction"
+  },
+  {
+    "id": "kg030",
+    "licenseCategory": [
+      "kogataGentsukiNirin"
+    ],
+    "stageTag": "第二段階",
+    "difficulty": 5,
+    "questionText": "前方に停車中の路線バスがあり、乗客が乗り降りしている場面での二輪車の注意点はどれか。",
+    "choices": [
+      "バスの後ろに乗客が飛び出してくる可能性を考え、徐行または一時停止する",
+      "バスの前を高速で追い抜く",
+      "バスの左側を確認せず通過する",
+      "乗客がいなくなるまで長時間クラクションを鳴らす"
+    ],
+    "answer": 0,
+    "explanation": "停車中のバスの前後は死角になりやすく、乗り降りした乗客が道路を横断してくる危険があるため、徐行または停止して安全を確認する必要がある。",
+    "isTrapQuestion": false,
+    "trapNumberType": "none",
+    "topicTag": "hazard_prediction"
+  },
+  {
+    "id": "kg031",
+    "licenseCategory": [
+      "kogataGentsukiNirin"
+    ],
+    "stageTag": "第一段階",
+    "difficulty": 1,
+    "questionText": "見通しの悪い交差点に進入するときの二輪車の運転として正しいのはどれか。",
+    "choices": [
+      "速度を落とさずそのまま通過する",
+      "あらかじめ速度を落とし、左右の安全を確認しながら進入する",
+      "対向車がいないことを確認した時点で加速して通過する",
+      "自分が優先道路にいれば確認は不要である"
+    ],
+    "answer": 1,
+    "explanation": "見通しの悪い交差点では出会い頭の事故が起こりやすいため、あらかじめ速度を落とし、左右を確認しながら進入することが重要である。",
+    "isTrapQuestion": true,
+    "trapNumberType": "other",
+    "topicTag": "hazard_prediction"
+  },
+  {
+    "id": "kg032",
+    "licenseCategory": [
+      "kogataGentsukiNirin"
+    ],
+    "stageTag": "第二段階",
+    "difficulty": 2,
+    "questionText": "駐車車両の脇を通過する際に予測すべき危険として最も適切なのはどれか。",
+    "choices": [
+      "駐車車両のドアが急に開く可能性",
+      "駐車車両は絶対に動かないので危険はない",
+      "駐車車両の周囲は減速の必要がない",
+      "駐車車両があると常に安全である"
+    ],
+    "answer": 0,
+    "explanation": "駐車車両のドアが急に開いたり、陰から歩行者が飛び出したりする危険があるため、十分な間隔をあけて速度を落として通過する必要がある。",
+    "isTrapQuestion": true,
+    "trapNumberType": "other",
+    "topicTag": "hazard_prediction"
+  },
+  {
+    "id": "kg033",
+    "licenseCategory": [
+      "kogataGentsukiNirin"
+    ],
+    "stageTag": "第一段階",
+    "difficulty": 3,
+    "questionText": "夜間、対向車のライトがまぶしく前方が見えにくくなったときの対応として正しいのはどれか。",
+    "choices": [
+      "目をつぶって直感で運転する",
+      "視線をやや左前方に向け、速度を落として対応する",
+      "対向車に向けてハイビームで対抗する",
+      "そのままの速度で通過する"
+    ],
+    "answer": 1,
+    "explanation": "対向車のライトで幻惑されたときは、視線をやや左前方の路肩寄りに向けて幻惑を避けつつ、速度を落として安全を確保することが大切である。",
+    "isTrapQuestion": false,
+    "trapNumberType": "none",
+    "topicTag": "hazard_prediction"
+  },
+  {
+    "id": "kg034",
+    "licenseCategory": [
+      "kogataGentsukiNirin"
+    ],
+    "stageTag": "第二段階",
+    "difficulty": 4,
+    "questionText": "二輪車が交差点で左折する際、巻き込み事故を防ぐために特に注意すべき対象はどれか。",
+    "choices": [
+      "対向直進車のみ",
+      "左後方から来る自転車や歩行者",
+      "右折してくる対向車のみ",
+      "上空の信号機"
+    ],
+    "answer": 1,
+    "explanation": "左折時は、左後方から並走してくる自転車や歩行者を巻き込む事故が多いため、あらかじめ左後方を目視確認することが重要である。",
+    "isTrapQuestion": false,
+    "trapNumberType": "none",
+    "topicTag": "hazard_prediction"
+  },
+  {
+    "id": "kg035",
+    "licenseCategory": [
+      "kogataGentsukiNirin"
+    ],
+    "stageTag": "第一段階",
+    "difficulty": 5,
+    "questionText": "強い横風が吹く橋の上を走行するときの二輪車の注意点として正しいのはどれか。",
+    "choices": [
+      "速度を上げて一気に通過する",
+      "ハンドルを軽く握り、速度を落として体勢を安定させる",
+      "風に逆らって大きく車体を傾ける",
+      "橋の上では特に注意する必要はない"
+    ],
+    "answer": 1,
+    "explanation": "横風にあおられるとバランスを崩しやすいため、速度を落とし、ハンドルを適度な力加減で保持して姿勢を安定させることが重要である。",
+    "isTrapQuestion": false,
+    "trapNumberType": "none",
+    "topicTag": "hazard_prediction"
+  },
+  {
+    "id": "kg036",
+    "licenseCategory": [
+      "kogataGentsukiNirin"
+    ],
+    "stageTag": "第二段階",
+    "difficulty": 1,
+    "questionText": "前方の信号が青色から黄色に変わりそうな状況で交差点に近づいているときの正しい対応はどれか。",
+    "choices": [
+      "黄色になる前に無理に加速して通過する",
+      "安全に停止できる場合は速度を調整し、停止に備える",
+      "青色のうちは減速する必要はない",
+      "黄色になったら急ブレーキで必ず止まる"
+    ],
+    "answer": 1,
+    "explanation": "信号が変わりそうな交差点に近づくときは、状況に応じて速度を調整し、安全に停止できるよう備えておくことが望ましい。",
+    "isTrapQuestion": false,
+    "trapNumberType": "none",
+    "topicTag": "hazard_prediction"
+  },
+  {
+    "id": "kg037",
+    "licenseCategory": [
+      "kogataGentsukiNirin"
+    ],
+    "stageTag": "第一段階",
+    "difficulty": 2,
+    "questionText": "先行する自動車が急に速度を落とした場合に考えられる危険はどれか。",
+    "choices": [
+      "前方の障害物や歩行者を避けようとしている可能性がある",
+      "単なる気まぐれなので気にしなくてよい",
+      "自分も同時に加速すればよい",
+      "後方の安全確認は不要である"
+    ],
+    "answer": 0,
+    "explanation": "先行車が急に減速する背景には障害物や歩行者の存在など何らかの理由があることが多く、車間距離を保ちつつ自分も減速して備える必要がある。",
+    "isTrapQuestion": true,
+    "trapNumberType": "other",
+    "topicTag": "hazard_prediction"
+  },
+  {
+    "id": "kg038",
+    "licenseCategory": [
+      "kogataGentsukiNirin"
+    ],
+    "stageTag": "第二段階",
+    "difficulty": 3,
+    "questionText": "見通しの悪いカーブの手前での二輪車の走行として正しいのはどれか。",
+    "choices": [
+      "カーブの内側ぎりぎりを走行する",
+      "あらかじめ十分速度を落とし、対向車がはみ出してくる可能性を考えて走行する",
+      "対向車線にはみ出して走行してよい",
+      "カーブの手前では加速して通過する"
+    ],
+    "answer": 1,
+    "explanation": "見通しの悪いカーブでは対向車がセンターラインをはみ出してくる可能性があるため、速度を落とし進路の左寄りを走行することが安全である。",
+    "isTrapQuestion": false,
+    "trapNumberType": "none",
+    "topicTag": "hazard_prediction"
+  },
+  {
+    "id": "kg039",
+    "licenseCategory": [
+      "kogataGentsukiNirin"
+    ],
+    "stageTag": "第一段階",
+    "difficulty": 4,
+    "questionText": "夕方、太陽が低い位置にあり進行方向がまぶしいときの注意点として正しいのはどれか。",
+    "choices": [
+      "歩行者や自転車が見えにくくなるため速度を落として慎重に走行する",
+      "サングラスをかければ速度を落とす必要はない",
+      "夕方は交通量が少ないので注意は不要",
+      "まぶしさは運転に影響しない"
+    ],
+    "answer": 0,
+    "explanation": "逆光でまぶしいときは歩行者や自転車、路面の状況が見えにくくなるため、速度を落として慎重に走行することが重要である。",
+    "isTrapQuestion": true,
+    "trapNumberType": "other",
+    "topicTag": "hazard_prediction"
+  },
+  {
+    "id": "kg040",
+    "licenseCategory": [
+      "kogataGentsukiNirin"
+    ],
+    "stageTag": "第二段階",
+    "difficulty": 5,
+    "questionText": "先行する自転車を追い越す際の注意点として正しいのはどれか。",
+    "choices": [
+      "自転車との間隔を十分にとって追い越す",
+      "自転車ぎりぎりを通過して素早く追い越す",
+      "追い越し時にクラクションを鳴らし続ける",
+      "自転車の速度に関係なく一気に加速する"
+    ],
+    "answer": 0,
+    "explanation": "自転車はふらつくことがあるため、追い越す際は十分な側方間隔をとり、速度差にも注意して安全に追い越す必要がある。",
+    "isTrapQuestion": false,
+    "trapNumberType": "none",
+    "topicTag": "hazard_prediction"
+  },
+  {
+    "id": "kg041",
+    "licenseCategory": [
+      "kogataGentsukiNirin"
+    ],
+    "stageTag": "第一段階",
+    "difficulty": 1,
+    "questionText": "工事現場の脇を通過するときに予測すべき危険はどれか。",
+    "choices": [
+      "作業員が急に道路側に出てくる可能性",
+      "工事現場付近は常に安全である",
+      "看板は無視してよい",
+      "速度を上げて早く通過すればよい"
+    ],
+    "answer": 0,
+    "explanation": "工事現場付近では作業員の急な飛び出しや資材の落下などの危険が考えられるため、速度を落として注意しながら通過する必要がある。",
+    "isTrapQuestion": true,
+    "trapNumberType": "other",
+    "topicTag": "hazard_prediction"
+  },
+  {
+    "id": "kg042",
+    "licenseCategory": [
+      "kogataGentsukiNirin"
+    ],
+    "stageTag": "第二段階",
+    "difficulty": 2,
+    "questionText": "積雪や凍結のおそれがある早朝の橋の上を走行する際の注意点はどれか。",
+    "choices": [
+      "橋の上は路面が凍結しやすいため特に速度を落とし急な操作を避ける",
+      "橋の上はアスファルトの温度が高く凍結しない",
+      "凍結の心配がある区間ではむしろ加速するとよい",
+      "橋の上では通常の道路と同じ速度でよい"
+    ],
+    "answer": 0,
+    "explanation": "橋の上は外気にさらされやすく路面が凍結しやすいため、早朝などは特に速度を落とし急ブレーキや急ハンドルを避ける必要がある。",
+    "isTrapQuestion": false,
+    "trapNumberType": "none",
+    "topicTag": "hazard_prediction"
+  },
+  {
+    "id": "kg043",
+    "licenseCategory": [
+      "kogataGentsukiNirin"
+    ],
+    "stageTag": "第一段階",
+    "difficulty": 3,
+    "questionText": "後方から接近する緊急自動車のサイレンが聞こえたときの対応として正しいのはどれか。",
+    "choices": [
+      "交差点付近を除き、道路の左側に寄って進路を譲る",
+      "そのまま進路を維持して走行を続ける",
+      "急停止してその場で止まる",
+      "緊急車両を無視して先を急ぐ"
+    ],
+    "answer": 0,
+    "explanation": "緊急自動車が接近してきたときは、交差点を避けて道路の左側に寄り、一時停止するなどして進路を譲らなければならない。",
+    "isTrapQuestion": false,
+    "trapNumberType": "none",
+    "topicTag": "hazard_prediction"
+  },
+  {
+    "id": "kg044",
+    "licenseCategory": [
+      "kogataGentsukiNirin"
+    ],
+    "stageTag": "第二段階",
+    "difficulty": 4,
+    "questionText": "駐車場から道路に出ようとする車を発見したときの二輪車の対応として正しいのはどれか。",
+    "choices": [
+      "自分が優先なので速度を変えず通過する",
+      "その車が急に道路に出てくる可能性を考え速度を落として備える",
+      "クラクションを鳴らせば注意する必要はない",
+      "駐車場の車は動かないと決めつけてよい"
+    ],
+    "answer": 1,
+    "explanation": "駐車場から出ようとする車の運転者が二輪車に気づいていないことがあるため、速度を落とし、相手の動きに備えることが重要である。",
+    "isTrapQuestion": false,
+    "trapNumberType": "none",
+    "topicTag": "hazard_prediction"
+  },
+  {
+    "id": "kg045",
+    "licenseCategory": [
+      "kogataGentsukiNirin"
+    ],
+    "stageTag": "第一段階",
+    "difficulty": 5,
+    "questionText": "雨上がりのマンホールや白線の上を走行する際の注意点はどれか。",
+    "choices": [
+      "これらは乾いた路面より滑りやすいので、なるべく避け急な操作をしない",
+      "マンホールや白線は常に安全である",
+      "速度を上げて一気に通過すればよい",
+      "雨上がりは特に注意する必要はない"
+    ],
+    "answer": 0,
+    "explanation": "雨で濡れたマンホールや路面標示の上はタイヤが滑りやすいため、可能な限り避け、上を通過する際は急な加速・制動・ハンドル操作を控える。",
+    "isTrapQuestion": true,
+    "trapNumberType": "other",
+    "topicTag": "hazard_prediction"
+  },
+  {
+    "id": "kg046",
+    "licenseCategory": [
+      "kogataGentsukiNirin"
+    ],
+    "stageTag": "第二段階",
+    "difficulty": 1,
+    "questionText": "右折待ちの対向車がいる交差点を直進する際の注意点として正しいのはどれか。",
+    "choices": [
+      "対向車の陰から二輪車や歩行者が現れる可能性を考え速度を落とす",
+      "自分は直進なので速度を落とす必要はない",
+      "対向車は必ず自分を待ってくれると考えてよい",
+      "右折車の存在は無視してよい"
+    ],
+    "answer": 0,
+    "explanation": "右折待ちの車の陰に隠れた二輪車や歩行者が見えにくくなることがあるため、速度を落として安全確認をしながら通過する必要がある。",
+    "isTrapQuestion": false,
+    "trapNumberType": "none",
+    "topicTag": "hazard_prediction"
+  },
+  {
+    "id": "kg047",
+    "licenseCategory": [
+      "kogataGentsukiNirin"
+    ],
+    "stageTag": "第一段階",
+    "difficulty": 2,
+    "questionText": "高速で走行中、前方に落下物を発見した場合の適切な対応はどれか。",
+    "choices": [
+      "急ハンドルで避けようとする",
+      "後続車や周囲の安全を確認しつつ、できる範囲で速度を落として回避や停止を図る",
+      "気にせずそのまま走行を続ける",
+      "目をつぶって通過する"
+    ],
+    "answer": 1,
+    "explanation": "落下物を発見した場合、急な操作は転倒を招く危険があるため、周囲の安全を確認しながら速度を落として回避や停止を図ることが望ましい。",
+    "isTrapQuestion": false,
+    "trapNumberType": "none",
+    "topicTag": "hazard_prediction"
+  },
+  {
+    "id": "kg048",
+    "licenseCategory": [
+      "kogataGentsukiNirin"
+    ],
+    "stageTag": "第二段階",
+    "difficulty": 3,
+    "questionText": "住宅街で駐車車両の間から子供の姿が見えたときの対応として正しいのはどれか。",
+    "choices": [
+      "子供が飛び出す危険を考え、あらかじめ速度を落として備える",
+      "見えているなら特に危険はない",
+      "クラクションを鳴らせば速度を落とす必要はない",
+      "子供の横を高速で通過してよい"
+    ],
+    "answer": 0,
+    "explanation": "子供の姿が見えている場合でも急に道路へ飛び出す可能性があるため、あらかじめ速度を落とし、すぐに止まれるように備えておく必要がある。",
+    "isTrapQuestion": false,
+    "trapNumberType": "none",
+    "topicTag": "hazard_prediction"
+  },
+  {
+    "id": "kg049",
+    "licenseCategory": [
+      "kogataGentsukiNirin"
+    ],
+    "stageTag": "第一段階",
+    "difficulty": 4,
+    "questionText": "夜間、対向車のライトが片方しか見えないときに考えられる危険はどれか。",
+    "choices": [
+      "対向車ではなく原付や自転車である可能性があるため注意が必要",
+      "必ず大型トラックであると判断してよい",
+      "特に注意する必要はない",
+      "片方しか見えないのは故障ではないので無視してよい"
+    ],
+    "answer": 0,
+    "explanation": "夜間に前照灯が一つしか見えない場合、原付や自転車、または片方のライトが故障した車両である可能性があり、幅の判断を誤らないよう注意が必要である。",
+    "isTrapQuestion": false,
+    "trapNumberType": "none",
+    "topicTag": "hazard_prediction"
+  },
+  {
+    "id": "kg050",
+    "licenseCategory": [
+      "kogataGentsukiNirin"
+    ],
+    "stageTag": "第二段階",
+    "difficulty": 1,
+    "questionText": "対向車線を走る車が中央線をはみ出して走行しているのを発見した場合の対応はどれか。",
+    "choices": [
+      "速度を落とし、左に寄るなどして安全な距離を確保する",
+      "相手が戻ると信じてそのまま直進する",
+      "対向車に向かって加速する",
+      "気づかないふりをして通過する"
+    ],
+    "answer": 0,
+    "explanation": "対向車が中央線をはみ出している場合、衝突を避けるため速度を落とし、可能な範囲で左側に寄るなどして安全な距離を確保する必要がある。",
+    "isTrapQuestion": false,
+    "trapNumberType": "none",
+    "topicTag": "hazard_prediction"
+  },
+  {
+    "id": "kg051",
+    "licenseCategory": [
+      "kogataGentsukiNirin"
+    ],
+    "stageTag": "第一段階",
+    "difficulty": 2,
+    "questionText": "エンジンをかける前に行うべき日常点検として正しいのはどれか。",
+    "choices": [
+      "タイヤの空気圧やブレーキの効き具合などを確認する",
+      "点検は特に必要ない",
+      "エンジンをかけながら点検すればよい",
+      "点検は月に一度でよい"
+    ],
+    "answer": 0,
+    "explanation": "運転を始める前には、タイヤの空気圧、ブレーキの効き具合、灯火類など、安全に関わる部分を日常点検で確認することが望ましい。",
+    "isTrapQuestion": false,
+    "trapNumberType": "none",
+    "topicTag": "operation"
+  },
+  {
+    "id": "kg052",
+    "licenseCategory": [
+      "kogataGentsukiNirin"
+    ],
+    "stageTag": "第二段階",
+    "difficulty": 3,
+    "questionText": "MT(マニュアルトランスミッション)の125cc二輪車で発進するときの操作手順として正しいのはどれか。",
+    "choices": [
+      "クラッチレバーを握ったままアクセルだけを開ける",
+      "クラッチレバーを握ってギアを1速に入れ、クラッチを徐々につなぎながらアクセルを開ける",
+      "ギアを入れずにアクセルだけで発進する",
+      "クラッチをつないだ状態でギアを入れる"
+    ],
+    "answer": 1,
+    "explanation": "MT車の発進では、クラッチレバーを握った状態で1速に入れ、アクセルを少し開けながらクラッチを徐々につないで滑らかに発進する。",
+    "isTrapQuestion": true,
+    "trapNumberType": "other",
+    "topicTag": "operation"
+  },
+  {
+    "id": "kg053",
+    "licenseCategory": [
+      "kogataGentsukiNirin"
+    ],
+    "stageTag": "第一段階",
+    "difficulty": 4,
+    "questionText": "AT(オートマチック)の小型二輪車の特徴として正しいのはどれか。",
+    "choices": [
+      "クラッチ操作やギアチェンジの操作が不要である",
+      "MT車よりも操作できる速度域が狭い",
+      "クラッチ操作が必須である",
+      "常に手動でギアを変速しなければならない"
+    ],
+    "answer": 0,
+    "explanation": "AT車はクラッチ操作やギアチェンジを運転者が行う必要がなく、アクセルとブレーキ操作を中心に運転できる点が特徴である。",
+    "isTrapQuestion": true,
+    "trapNumberType": "other",
+    "topicTag": "operation"
+  },
+  {
+    "id": "kg054",
+    "licenseCategory": [
+      "kogataGentsukiNirin"
+    ],
+    "stageTag": "第二段階",
+    "difficulty": 1,
+    "questionText": "二輪車のブレーキ操作の基本として正しいのはどれか。",
+    "choices": [
+      "前輪ブレーキのみを使用する",
+      "前輪と後輪のブレーキを状況に応じてバランスよく使う",
+      "後輪ブレーキのみを使用する",
+      "急ブレーキを基本操作とする"
+    ],
+    "answer": 1,
+    "explanation": "二輪車の制動は前輪ブレーキと後輪ブレーキを状況に応じて適切な配分で使うことが基本であり、片方だけに頼るとスリップや転倒の危険が高まる。",
+    "isTrapQuestion": false,
+    "trapNumberType": "none",
+    "topicTag": "operation"
+  },
+  {
+    "id": "kg055",
+    "licenseCategory": [
+      "kogataGentsukiNirin"
+    ],
+    "stageTag": "第一段階",
+    "difficulty": 2,
+    "questionText": "カーブを曲がるときの二輪車の基本姿勢として正しいのはどれか。",
+    "choices": [
+      "カーブの手前で十分減速し、車体を適度に傾けて旋回する",
+      "カーブの中でアクセルを大きく開けて加速しながら曲がる",
+      "車体を傾けずハンドルだけで曲がる",
+      "ブレーキをかけながら車体を大きく傾ける"
+    ],
+    "answer": 0,
+    "explanation": "カーブは手前で十分に減速したうえで、車体を適度に傾けながら一定の速度で旋回するのが基本である。カーブの途中での急な加減速は転倒の危険を高める。",
+    "isTrapQuestion": false,
+    "trapNumberType": "none",
+    "topicTag": "operation"
+  },
+  {
+    "id": "kg056",
+    "licenseCategory": [
+      "kogataGentsukiNirin"
+    ],
+    "stageTag": "第二段階",
+    "difficulty": 3,
+    "questionText": "停車時に両足を地面につけて安定させる基本姿勢として正しいのはどれか。",
+    "choices": [
+      "両足のつま先立ちで支える",
+      "できるだけ足を地面から離しておく",
+      "サイドスタンドを立てたまま乗車を続ける",
+      "片足だけで支え反対の足はステップに置く"
+    ],
+    "answer": 0,
+    "explanation": "停車時はつま先立ちなどで両足を地面につけ、車体を安定させることが基本姿勢とされる。",
+    "isTrapQuestion": false,
+    "trapNumberType": "none",
+    "topicTag": "operation"
+  },
+  {
+    "id": "kg057",
+    "licenseCategory": [
+      "kogataGentsukiNirin"
+    ],
+    "stageTag": "第一段階",
+    "difficulty": 1,
+    "questionText": "低速でのバランスを保つための運転操作として適切なのはどれか。",
+    "choices": [
+      "視線を近くの一点に固定する",
+      "視線をやや先の進行方向に向け、半クラッチとアクセルを微調整する",
+      "ハンドルを強く固定して動かさない",
+      "アクセルを大きく開閉して調整する"
+    ],
+    "answer": 1,
+    "explanation": "低速走行時は視線を先の進行方向に向けてバランスを保ちながら、半クラッチとアクセルの微調整で速度をコントロールすることが望ましい。",
+    "isTrapQuestion": false,
+    "trapNumberType": "none",
+    "topicTag": "operation"
+  },
+  {
+    "id": "kg058",
+    "licenseCategory": [
+      "kogataGentsukiNirin"
+    ],
+    "stageTag": "第二段階",
+    "difficulty": 2,
+    "questionText": "急な下り坂を走行する際の操作として正しいのはどれか。",
+    "choices": [
+      "エンジンブレーキを併用しながら速度を制御する",
+      "ブレーキを使わず惰性で下る",
+      "常にクラッチを切ったまま下る",
+      "できるだけ速く下り切る"
+    ],
+    "answer": 0,
+    "explanation": "急な下り坂ではフットブレーキやハンドブレーキだけに頼らず、エンジンブレーキも併用して速度を制御することが安全である。",
+    "isTrapQuestion": false,
+    "trapNumberType": "none",
+    "topicTag": "operation"
+  },
+  {
+    "id": "kg059",
+    "licenseCategory": [
+      "kogataGentsukiNirin"
+    ],
+    "stageTag": "第一段階",
+    "difficulty": 3,
+    "questionText": "発進前に行うべきミラーおよび目視の確認について正しいのはどれか。",
+    "choices": [
+      "ミラーだけ確認すれば十分である",
+      "ミラーで後方を確認したうえで、死角となる部分を目視でも確認する",
+      "確認は発進後でよい",
+      "後方確認は不要である"
+    ],
+    "answer": 1,
+    "explanation": "発進時はミラーで後方の状況を確認したうえで、ミラーだけでは映らない死角部分を実際に目視して安全を確かめる必要がある。",
+    "isTrapQuestion": false,
+    "trapNumberType": "none",
+    "topicTag": "operation"
+  },
+  {
+    "id": "kg060",
+    "licenseCategory": [
+      "kogataGentsukiNirin"
+    ],
+    "stageTag": "第二段階",
+    "difficulty": 1,
+    "questionText": "低速でのUターン(転回)をする際の基本操作として正しいのはどれか。",
+    "choices": [
+      "視線を進行したい方向に向け、半クラッチとリアブレーキを使いながら小さく回る",
+      "アクセルを一気に開けて素早く回る",
+      "視線をハンドルの先端に固定する",
+      "できるだけ大きな半径で急いで回る"
+    ],
+    "answer": 0,
+    "explanation": "低速でのUターンでは、視線を進みたい方向に向け、半クラッチと後輪ブレーキを併用しながら安定した速度で小さく回ることが基本である。",
+    "isTrapQuestion": false,
+    "trapNumberType": "none",
+    "topicTag": "operation"
+  },
+  {
+    "id": "kg061",
+    "licenseCategory": [
+      "kogataGentsukiNirin"
+    ],
+    "stageTag": "第一段階",
+    "difficulty": 2,
+    "questionText": "二輪車のスタンドについて正しいのはどれか。",
+    "choices": [
+      "走行中はサイドスタンドを出したままでもよい",
+      "発進前にサイドスタンドやセンタースタンドが格納されていることを確認する",
+      "スタンドは駐車時以外使用しない",
+      "センタースタンドは走行中の安定に使う"
+    ],
+    "answer": 1,
+    "explanation": "サイドスタンドを出したまま発進すると、旋回時に接触して転倒する危険があるため、発進前にスタンドが確実に格納されていることを確認する必要がある。",
+    "isTrapQuestion": false,
+    "trapNumberType": "none",
+    "topicTag": "operation"
+  },
+  {
+    "id": "kg062",
+    "licenseCategory": [
+      "kogataGentsukiNirin"
+    ],
+    "stageTag": "第二段階",
+    "difficulty": 1,
+    "questionText": "急ブレーキが必要になった場合の基本操作として正しいのはどれか。",
+    "choices": [
+      "車体を垂直に立てた状態で前後輪ブレーキを同時にしっかりかける",
+      "車体を大きく傾けたままブレーキをかける",
+      "後輪ブレーキだけを強くかける",
+      "ハンドルを切りながら急ブレーキをかける"
+    ],
+    "answer": 0,
+    "explanation": "急ブレーキをかけるときは、車体をできるだけ垂直に保ち、前後輪のブレーキをバランスよく使って制動距離を短くすることが基本である。",
+    "isTrapQuestion": false,
+    "trapNumberType": "none",
+    "topicTag": "operation"
+  },
+  {
+    "id": "kg063",
+    "licenseCategory": [
+      "kogataGentsukiNirin"
+    ],
+    "stageTag": "第一段階",
+    "difficulty": 2,
+    "questionText": "段差を乗り越える際の運転操作として正しいのはどれか。",
+    "choices": [
+      "速度を落とし、体重を後方に少し残してアクセルを一定に保ちながら通過する",
+      "できるだけ速い速度で一気に通過する",
+      "ブレーキをかけながら段差の上で急停止する",
+      "段差の手前で車体を大きく傾ける"
+    ],
+    "answer": 0,
+    "explanation": "段差を乗り越えるときは速度を落とし、前輪が跳ねないよう体重をやや後方に残しながら、アクセルを一定に保って通過することが望ましい。",
+    "isTrapQuestion": false,
+    "trapNumberType": "none",
+    "topicTag": "operation"
+  },
+  {
+    "id": "kg064",
+    "licenseCategory": [
+      "kogataGentsukiNirin"
+    ],
+    "stageTag": "第二段階",
+    "difficulty": 1,
+    "questionText": "二輪車のニーグリップ(膝でタンクを挟む動作)の目的として正しいのはどれか。",
+    "choices": [
+      "車体と一体になり安定した姿勢を保つため",
+      "アクセル操作をしやすくするため",
+      "ブレーキの効きをよくするため",
+      "エンジンを冷却するため"
+    ],
+    "answer": 0,
+    "explanation": "ニーグリップは膝でタンク(車体)を挟み、上半身の力を抜いて車体と一体になった安定した運転姿勢を保つための基本動作である。",
+    "isTrapQuestion": false,
+    "trapNumberType": "none",
+    "topicTag": "operation"
+  },
+  {
+    "id": "kg065",
+    "licenseCategory": [
+      "kogataGentsukiNirin"
+    ],
+    "stageTag": "第一段階",
+    "difficulty": 2,
+    "questionText": "狭い道でのすれ違いにおける二輪車の操作として正しいのはどれか。",
+    "choices": [
+      "speedを上げて一気にすれ違う",
+      "あらかじめ速度を落とし、道路の左側に寄って安全な間隔を確保する",
+      "対向車が止まるまで動かない",
+      "中央付近を維持したまま通過する"
+    ],
+    "answer": 1,
+    "explanation": "狭い道でのすれ違いでは、あらかじめ速度を落とし道路の左側に寄って、対向車との間隔を確保しながら安全に通過することが基本である。",
+    "isTrapQuestion": false,
+    "trapNumberType": "none",
+    "topicTag": "operation"
+  },
+  {
+    "id": "kg066",
+    "licenseCategory": [
+      "kogataGentsukiNirin"
+    ],
+    "stageTag": "第二段階",
+    "difficulty": 1,
+    "questionText": "雨天時のブレーキ操作について正しいのはどれか。",
+    "choices": [
+      "晴天時と同じ力加減で急ブレーキをかけてよい",
+      "路面が滑りやすいため、通常よりも早めに、弱い力から徐々にブレーキをかける",
+      "雨天時はブレーキを使わない方がよい",
+      "後輪ブレーキだけを強くかければよい"
+    ],
+    "answer": 1,
+    "explanation": "雨天時は路面が滑りやすくタイヤのグリップが低下するため、通常よりも早めのタイミングで、弱い力から徐々にブレーキをかけて制動距離の増加に備える必要がある。",
+    "isTrapQuestion": false,
+    "trapNumberType": "none",
+    "topicTag": "operation"
+  },
+  {
+    "id": "kg067",
+    "licenseCategory": [
+      "kogataGentsukiNirin"
+    ],
+    "stageTag": "第一段階",
+    "difficulty": 2,
+    "questionText": "二輪車を押して歩く場合の交通ルール上の扱いとして正しいのはどれか。",
+    "choices": [
+      "エンジンを止めて押して歩く場合、歩行者として扱われることがある",
+      "押して歩いていても常に車両として扱われる",
+      "押して歩く行為自体が禁止されている",
+      "エンジンをかけたまま押すのが正しい"
+    ],
+    "answer": 0,
+    "explanation": "エンジンを止め、かつ足で歩く速度で押して歩いている二輪車の運転者は、一定の条件のもとで歩行者に準じて扱われることがある。",
+    "isTrapQuestion": false,
+    "trapNumberType": "none",
+    "topicTag": "operation"
+  },
+  {
+    "id": "kg068",
+    "licenseCategory": [
+      "kogataGentsukiNirin"
+    ],
+    "stageTag": "第二段階",
+    "difficulty": 1,
+    "questionText": "坂道発進(上り坂)での操作として正しいのはどれか。",
+    "choices": [
+      "後輪ブレーキやリアブレーキを使いながら、クラッチをつなぎつつアクセルを開けて後退を防ぐ",
+      "ブレーキを使わずクラッチだけで発進する",
+      "アクセルを大きく開けて一気に発進する",
+      "サイドスタンドを出したまま発進する"
+    ],
+    "answer": 0,
+    "explanation": "上り坂での発進では、後輪ブレーキを使って車体の後退を防ぎながら、クラッチをつなぎアクセルを調整して滑らかに発進することが望ましい。",
+    "isTrapQuestion": false,
+    "trapNumberType": "none",
+    "topicTag": "operation"
+  },
+  {
+    "id": "kg069",
+    "licenseCategory": [
+      "kogataGentsukiNirin"
+    ],
+    "stageTag": "第一段階",
+    "difficulty": 2,
+    "questionText": "二輪車のギアチェンジ(シフトダウン)を行う適切な場面はどれか。",
+    "choices": [
+      "速度を落とすときやエンジンブレーキを効かせたいとき",
+      "速度を上げているとき",
+      "停止直前にのみ行う",
+      "常に高いギアを維持すればシフトダウンは不要"
+    ],
+    "answer": 0,
+    "explanation": "速度を落とすときやエンジンブレーキを積極的に活用したいときには、適切なタイミングでシフトダウンを行い、エンジン回転数を合わせることが必要である。",
+    "isTrapQuestion": false,
+    "trapNumberType": "none",
+    "topicTag": "operation"
+  },
+  {
+    "id": "kg070",
+    "licenseCategory": [
+      "kogataGentsukiNirin"
+    ],
+    "stageTag": "第二段階",
+    "difficulty": 1,
+    "questionText": "急なカーブの途中で速度が出過ぎていると感じたときの操作として正しいのはどれか。",
+    "choices": [
+      "ハンドルを大きく切って強引に曲がる",
+      "車体を起こしぎみにしながら軽くブレーキをかけ、体勢を立て直してから旋回を続ける",
+      "アクセルを全開にして一気に抜ける",
+      "急ブレーキを強くかけて停止する"
+    ],
+    "answer": 1,
+    "explanation": "カーブの途中で速度超過に気づいた場合、無理に旋回を続けず、車体をやや起こして軽くブレーキで減速し体勢を立て直すことが望ましい。急な操作は転倒の危険を高める。",
+    "isTrapQuestion": false,
+    "trapNumberType": "none",
+    "topicTag": "operation"
+  },
+  {
+    "id": "kg071",
+    "licenseCategory": [
+      "kogataGentsukiNirin"
+    ],
+    "stageTag": "第一段階",
+    "difficulty": 2,
+    "questionText": "二輪車のチェーン駆動車における日常の取り扱いとして正しいのはどれか。",
+    "choices": [
+      "チェーンのたるみや注油の状態を定期的に確認する",
+      "チェーンは一度取り付ければ点検不要である",
+      "チェーンはできるだけ張りをなくす方がよい",
+      "注油はしない方がよい"
+    ],
+    "answer": 0,
+    "explanation": "チェーン駆動の二輪車は、チェーンのたるみ具合や注油状態を定期的に点検し、適切に整備しておく必要がある。",
+    "isTrapQuestion": false,
+    "trapNumberType": "none",
+    "topicTag": "operation"
+  },
+  {
+    "id": "kg072",
+    "licenseCategory": [
+      "kogataGentsukiNirin"
+    ],
+    "stageTag": "第二段階",
+    "difficulty": 1,
+    "questionText": "二輪車のUターン禁止場所での運転として正しいのはどれか。",
+    "choices": [
+      "Uターン禁止の標識がある場所では転回してはならない",
+      "空いていればUターン禁止の場所でも転回してよい",
+      "二輪車はUターン禁止の対象外である",
+      "対向車がいなければ問題ない"
+    ],
+    "answer": 0,
+    "explanation": "転回禁止(Uターン禁止)の標識がある場所では、車両の種類を問わず転回することが禁止されている。",
+    "isTrapQuestion": false,
+    "trapNumberType": "none",
+    "topicTag": "operation"
+  },
+  {
+    "id": "kg073",
+    "licenseCategory": [
+      "kogataGentsukiNirin"
+    ],
+    "stageTag": "第一段階",
+    "difficulty": 2,
+    "questionText": "小型限定普通二輪車(側車付きを除く)の最大積載量について正しいのはどれか。",
+    "choices": [
+      "30kgまで",
+      "60kgまで",
+      "90kgまで",
+      "制限はない"
+    ],
+    "answer": 1,
+    "explanation": "側車付きでない自動二輪車の最大積載量は60kgと定められており、これを超える荷物を積載すると違反となる。",
+    "isTrapQuestion": true,
+    "trapNumberType": "loadLimit",
+    "topicTag": "parking"
+  },
+  {
+    "id": "kg074",
+    "licenseCategory": [
+      "kogataGentsukiNirin"
+    ],
+    "stageTag": "第二段階",
+    "difficulty": 1,
+    "questionText": "駐車禁止標識のある区間に自動二輪車を止めることについて正しいのはどれか。",
+    "choices": [
+      "運転者がすぐ近くにいれば駐車禁止の規制対象外になる",
+      "運転者の有無にかかわらず、駐車禁止の規制が適用される",
+      "5分以内なら駐車禁止区間でも止めてよい",
+      "二輪車は駐車禁止規制の対象外である"
+    ],
+    "answer": 1,
+    "explanation": "駐車禁止の規制は、運転者がその場を離れているかどうかにかかわらず適用され、指定区間に自動二輪車を止めることはできない。",
+    "isTrapQuestion": false,
+    "trapNumberType": "none",
+    "topicTag": "parking"
+  },
+  {
+    "id": "kg075",
+    "licenseCategory": [
+      "kogataGentsukiNirin"
+    ],
+    "stageTag": "第一段階",
+    "difficulty": 2,
+    "questionText": "「駐車」と「停車」の違いとして正しいのはどれか。",
+    "choices": [
+      "駐車は継続的に車両を止めておく状態、停車は人の乗り降りなど短時間の停止",
+      "駐車と停車に違いはない",
+      "停車の方が駐車より長時間の停止を指す",
+      "駐車は違法だが停車は常に合法である"
+    ],
+    "answer": 0,
+    "explanation": "駐車は継続的な停止状態(荷物の積み下ろしで5分を超える場合や運転者がすぐに運転できない状態など)を指し、停車は人の乗り降りなど短時間の停止を指す。",
+    "isTrapQuestion": true,
+    "trapNumberType": "other",
+    "topicTag": "parking"
+  },
+  {
+    "id": "kg076",
+    "licenseCategory": [
+      "kogataGentsukiNirin"
+    ],
+    "stageTag": "第二段階",
+    "difficulty": 1,
+    "questionText": "駐停車禁止場所として正しいものはどれか。",
+    "choices": [
+      "交差点の側端または道路の曲がり角から5メートル以内",
+      "交差点から50メートル以上離れた直線道路",
+      "住宅の車庫前ではない一般の道路脇",
+      "駐車場の中"
+    ],
+    "answer": 0,
+    "explanation": "交差点の側端または道路の曲がり角から5メートル以内の場所は、見通しの確保のため駐停車が禁止されている。",
+    "isTrapQuestion": true,
+    "trapNumberType": "other",
+    "topicTag": "parking"
+  },
+  {
+    "id": "kg077",
+    "licenseCategory": [
+      "kogataGentsukiNirin"
+    ],
+    "stageTag": "第一段階",
+    "difficulty": 2,
+    "questionText": "バス停留所の標示板から10メートル以内での駐停車について正しいのはどれか。",
+    "choices": [
+      "自動二輪車であれば駐停車できる",
+      "原則として駐停車が禁止されている",
+      "バスが来ていなければ駐停車できる",
+      "夜間のみ駐停車が認められる"
+    ],
+    "answer": 1,
+    "explanation": "バスの停留所の標示板から前後10メートル以内は、運行の妨げになるため原則として駐停車が禁止されている。",
+    "isTrapQuestion": true,
+    "trapNumberType": "other",
+    "topicTag": "parking"
+  },
+  {
+    "id": "kg078",
+    "licenseCategory": [
+      "kogataGentsukiNirin"
+    ],
+    "stageTag": "第二段階",
+    "difficulty": 1,
+    "questionText": "自動二輪車を歩道上に駐車することについて正しいのはどれか。",
+    "choices": [
+      "歩行者の通行を妨げなければ自由に駐車できる",
+      "歩道は原則として車両の駐車場所ではなく、指定された場所以外は駐車できない",
+      "二輪車は軽量なので歩道への駐車が認められている",
+      "短時間であれば歩道に駐車してよい"
+    ],
+    "answer": 1,
+    "explanation": "歩道は歩行者のための道路であり、標識などで特に認められた場所を除き、自動二輪車を含む車両を駐車することはできない。",
+    "isTrapQuestion": false,
+    "trapNumberType": "none",
+    "topicTag": "parking"
+  },
+  {
+    "id": "kg079",
+    "licenseCategory": [
+      "kogataGentsukiNirin"
+    ],
+    "stageTag": "第一段階",
+    "difficulty": 2,
+    "questionText": "坂道に自動二輪車を駐車する際の注意点として正しいのはどれか。",
+    "choices": [
+      "ギアをニュートラルに入れたままにする",
+      "スタンドをしっかり立て、車輪止めをするなど動き出しを防ぐ措置をとる",
+      "駐車後の措置は特に必要ない",
+      "できるだけ急な坂道に止める"
+    ],
+    "answer": 1,
+    "explanation": "坂道に駐車する場合、車両が動き出さないようスタンドを確実に立て、必要に応じて輪止めをするなどの措置をとることが望ましい。",
+    "isTrapQuestion": false,
+    "trapNumberType": "none",
+    "topicTag": "parking"
+  },
+  {
+    "id": "kg080",
+    "licenseCategory": [
+      "kogataGentsukiNirin"
+    ],
+    "stageTag": "第二段階",
+    "difficulty": 1,
+    "questionText": "時間制限駐車区間(パーキング・メーター等)における自動二輪車の駐車について正しいのはどれか。",
+    "choices": [
+      "自動二輪車は対象外なので自由に駐車できる",
+      "表示された制限時間内であれば所定の方法により駐車できる",
+      "制限時間を超えても料金を払えば問題ない",
+      "夜間は時間制限が適用されない"
+    ],
+    "answer": 1,
+    "explanation": "時間制限駐車区間では、標示された制限時間の範囲内で、所定の表示方法に従って駐車することが認められている。",
+    "isTrapQuestion": false,
+    "trapNumberType": "none",
+    "topicTag": "parking"
+  },
+  {
+    "id": "kg081",
+    "licenseCategory": [
+      "kogataGentsukiNirin"
+    ],
+    "stageTag": "第一段階",
+    "difficulty": 2,
+    "questionText": "自動二輪車のミラー(後写鏡)を確認する目的として正しいのはどれか。",
+    "choices": [
+      "後方や側方の交通状況を把握するため",
+      "前方の信号を確認するため",
+      "エンジンの状態を確認するため",
+      "タイヤの空気圧を確認するため"
+    ],
+    "answer": 0,
+    "explanation": "後写鏡(ミラー)は、後方や側方から接近する車両・歩行者などの交通状況を把握するために使用する。",
+    "isTrapQuestion": false,
+    "trapNumberType": "none",
+    "topicTag": "parking"
+  },
+  {
+    "id": "kg082",
+    "licenseCategory": [
+      "kogataGentsukiNirin"
+    ],
+    "stageTag": "第二段階",
+    "difficulty": 1,
+    "questionText": "駐車場所として不適切な場所はどれか。",
+    "choices": [
+      "自分の家の車庫",
+      "道路工事区域の端から5メートル以内",
+      "コインパーキングの指定区画",
+      "駐車場に指定された空き地"
+    ],
+    "answer": 1,
+    "explanation": "道路工事区域の端から5メートル以内は、作業の安全確保のため駐停車が禁止されている。",
+    "isTrapQuestion": true,
+    "trapNumberType": "other",
+    "topicTag": "parking"
+  },
+  {
+    "id": "kg083",
+    "licenseCategory": [
+      "kogataGentsukiNirin"
+    ],
+    "stageTag": "第一段階",
+    "difficulty": 2,
+    "questionText": "荷台やリアシートに荷物を積載する際の基本ルールとして正しいのはどれか。",
+    "choices": [
+      "荷崩れしないよう確実に固定し、車幅や視界を妨げないようにする",
+      "荷物は固定しなくても運転に影響しない",
+      "荷物は車幅より大きくはみ出してもよい",
+      "リアシートの荷物は積載制限の対象外である"
+    ],
+    "answer": 0,
+    "explanation": "積載する荷物は、走行中に荷崩れしないよう確実に固定し、運転者の視界や車体の幅を大きく超えないようにする必要がある。",
+    "isTrapQuestion": false,
+    "trapNumberType": "none",
+    "topicTag": "parking"
+  },
+  {
+    "id": "kg084",
+    "licenseCategory": [
+      "kogataGentsukiNirin"
+    ],
+    "stageTag": "第二段階",
+    "difficulty": 1,
+    "questionText": "無余地駐車の禁止(車両の右側に3.5メートル以上の余地がない場所での駐車禁止)について正しいのはどれか。",
+    "choices": [
+      "自動二輪車は車体が小さいため対象外である",
+      "他の車両の通行のため必要な余地がない場所での駐車は禁止されている",
+      "余地の有無にかかわらず自由に駐車できる",
+      "夜間のみ適用される"
+    ],
+    "answer": 1,
+    "explanation": "駐車した車両の右側に、他の車両が通行するために必要な余地(道路の状況に応じた基準)がない場所での駐車は、車両の種類を問わず禁止されている。",
+    "isTrapQuestion": true,
+    "trapNumberType": "other",
+    "topicTag": "parking"
+  },
+  {
+    "id": "kg085",
+    "licenseCategory": [
+      "kogataGentsukiNirin"
+    ],
+    "stageTag": "第一段階",
+    "difficulty": 2,
+    "questionText": "小型限定普通二輪免許で運転できない車両はどれか。",
+    "choices": [
+      "50ccの原動機付自転車",
+      "125cc以下の自動二輪車(MT)",
+      "125cc以下の自動二輪車(AT)",
+      "総排気量400ccの自動二輪車"
+    ],
+    "answer": 3,
+    "explanation": "小型限定普通二輪免許は125cc以下の自動二輪車に限られるため、それを超える排気量の車両(例:400cc)を運転することはできない。",
+    "isTrapQuestion": true,
+    "trapNumberType": "other",
+    "topicTag": "license_system"
+  },
+  {
+    "id": "kg086",
+    "licenseCategory": [
+      "kogataGentsukiNirin"
+    ],
+    "stageTag": "第二段階",
+    "difficulty": 1,
+    "questionText": "小型限定普通二輪免許から限定条件のない普通二輪免許へ移行する場合について正しいのはどれか。",
+    "choices": [
+      "限定条件の解除には技能審査や教習等、所定の手続きが必要である",
+      "自動的に限定は解除される",
+      "年齢が20歳になれば自動的に解除される",
+      "限定解除という制度は存在しない"
+    ],
+    "answer": 0,
+    "explanation": "小型限定の条件を解除して400cc以下の普通二輪免許とするには、教習所での限定解除審査や運転免許試験場での技能試験など所定の手続きを経る必要がある。",
+    "isTrapQuestion": true,
+    "trapNumberType": "other",
+    "topicTag": "license_system"
+  },
+  {
+    "id": "kg087",
+    "licenseCategory": [
+      "kogataGentsukiNirin"
+    ],
+    "stageTag": "第一段階",
+    "difficulty": 2,
+    "questionText": "小型限定普通二輪免許を取得できる年齢について正しいのはどれか。",
+    "choices": [
+      "満14歳以上",
+      "満16歳以上",
+      "満18歳以上",
+      "満20歳以上"
+    ],
+    "answer": 1,
+    "explanation": "普通二輪免許(小型限定を含む)は満16歳以上から取得することができる。",
+    "isTrapQuestion": true,
+    "trapNumberType": "other",
+    "topicTag": "license_system"
+  },
+  {
+    "id": "kg088",
+    "licenseCategory": [
+      "kogataGentsukiNirin"
+    ],
+    "stageTag": "第二段階",
+    "difficulty": 1,
+    "questionText": "原付免許(原動機付自転車免許)から小型限定普通二輪免許にステップアップする場合について正しいのはどれか。",
+    "choices": [
+      "原付免許では小型限定普通二輪車は運転できず、別途小型限定普通二輪免許を取得する必要がある",
+      "原付免許があれば125cc以下の二輪車も運転できる",
+      "原付免許を取得すれば自動的に小型限定普通二輪免許に切り替わる",
+      "原付免許では二人乗りだけが禁止されるが125ccの運転はできる"
+    ],
+    "answer": 0,
+    "explanation": "原付免許で運転できるのは50cc以下の原動機付自転車のみであり、125cc以下の自動二輪車を運転するには小型限定普通二輪免許を別途取得する必要がある。",
+    "isTrapQuestion": true,
+    "trapNumberType": "other",
+    "topicTag": "license_system"
+  },
+  {
+    "id": "kg089",
+    "licenseCategory": [
+      "kogataGentsukiNirin"
+    ],
+    "stageTag": "第一段階",
+    "difficulty": 2,
+    "questionText": "運転免許証の有効期間中に住所が変わった場合の対応として正しいのはどれか。",
+    "choices": [
+      "特に届け出をする必要はない",
+      "警察署等で記載事項の変更の手続きを行う",
+      "免許証を返納しなければならない",
+      "次回更新時にまとめて申告すればよい"
+    ],
+    "answer": 1,
+    "explanation": "運転免許証に記載された住所などが変わった場合は、速やかに警察署等で記載事項変更の手続きを行う必要がある。",
+    "isTrapQuestion": false,
+    "trapNumberType": "none",
+    "topicTag": "license_system"
+  },
+  {
+    "id": "kg090",
+    "licenseCategory": [
+      "kogataGentsukiNirin"
+    ],
+    "stageTag": "第二段階",
+    "difficulty": 1,
+    "questionText": "小型限定普通二輪免許の適性検査(視力等)について正しいのはどれか。",
+    "choices": [
+      "視力検査は不要である",
+      "両眼で0.7以上、片眼それぞれ0.3以上などの基準を満たす必要がある",
+      "片眼が見えなくても取得できる",
+      "色彩識別能力は問われない"
+    ],
+    "answer": 1,
+    "explanation": "普通二輪免許を含む多くの免許では、両眼で0.7以上、かつ片眼でそれぞれ0.3以上の視力があることなどの適性基準を満たす必要がある。",
+    "isTrapQuestion": true,
+    "trapNumberType": "other",
+    "topicTag": "license_system"
+  },
+  {
+    "id": "kg091",
+    "licenseCategory": [
+      "kogataGentsukiNirin"
+    ],
+    "stageTag": "第一段階",
+    "difficulty": 2,
+    "questionText": "初心運転者標識(初心者マーク)の表示義務について、二輪免許での扱いとして正しいのはどれか。",
+    "choices": [
+      "普通二輪免許・小型限定普通二輪免許には初心者マークの表示義務はない",
+      "取得後1年間は必ず表示しなければならない",
+      "二輪車にも自動車と同じ形の初心者マークを貼る義務がある",
+      "初心者マークは任意ではなく罰則付きで義務化されている"
+    ],
+    "answer": 0,
+    "explanation": "初心運転者標識の表示義務は普通自動車免許に関するものであり、普通二輪免許・小型限定普通二輪免許を受けた者に表示義務はない。",
+    "isTrapQuestion": true,
+    "trapNumberType": "other",
+    "topicTag": "license_system"
+  },
+  {
+    "id": "kg092",
+    "licenseCategory": [
+      "kogataGentsukiNirin"
+    ],
+    "stageTag": "第二段階",
+    "difficulty": 1,
+    "questionText": "運転免許の点数制度において、小型限定普通二輪免許の違反点数の扱いについて正しいのはどれか。",
+    "choices": [
+      "二輪車の違反には点数制度が適用されない",
+      "自動車と同様に違反行為の種別・内容に応じて点数が付され、累積により処分の対象となる",
+      "二輪車は違反しても罰則のみで点数はつかない",
+      "点数は免許の種類ごとに完全に別に計算される"
+    ],
+    "answer": 1,
+    "explanation": "小型限定普通二輪免許であっても、違反行為の内容に応じて点数が付され、累積点数に応じて免許の停止・取消しなどの行政処分の対象となる。",
+    "isTrapQuestion": false,
+    "trapNumberType": "none",
+    "topicTag": "license_system"
+  },
+  {
+    "id": "kg093",
+    "licenseCategory": [
+      "kogataGentsukiNirin"
+    ],
+    "stageTag": "第一段階",
+    "difficulty": 2,
+    "questionText": "タイヤの空気圧点検について正しいのはどれか。",
+    "choices": [
+      "指定された空気圧を保つことで安定した走行やグリップが確保できる",
+      "空気圧は低いほど安全である",
+      "空気圧はタイヤの寿命が近づくまで気にしなくてよい",
+      "空気圧の点検は不要である"
+    ],
+    "answer": 0,
+    "explanation": "タイヤの空気圧が適正でないと、操縦安定性の低下や偏摩耗、パンクのリスクが高まるため、指定空気圧を保つよう定期的に点検する必要がある。",
+    "isTrapQuestion": false,
+    "trapNumberType": "none",
+    "topicTag": "maintenance"
+  },
+  {
+    "id": "kg094",
+    "licenseCategory": [
+      "kogataGentsukiNirin"
+    ],
+    "stageTag": "第二段階",
+    "difficulty": 2,
+    "questionText": "エンジンオイルの点検・交換について正しいのはどれか。",
+    "choices": [
+      "一度入れれば交換の必要はない",
+      "走行距離や期間に応じて定期的に点検・交換し、量や汚れを確認する",
+      "オイルの量は多ければ多いほどよい",
+      "オイル交換はエンジンが冷えている必要はない"
+    ],
+    "answer": 1,
+    "explanation": "エンジンオイルは走行距離や使用期間に応じて劣化するため、定期的に点検・交換し、規定量や汚れの状態を確認することが必要である。",
+    "isTrapQuestion": false,
+    "trapNumberType": "none",
+    "topicTag": "maintenance"
+  },
+  {
+    "id": "kg095",
+    "licenseCategory": [
+      "kogataGentsukiNirin"
+    ],
+    "stageTag": "第一段階",
+    "difficulty": 2,
+    "questionText": "ブレーキパッド(ブレーキシュー)の点検について正しいのはどれか。",
+    "choices": [
+      "摩耗の限度を超えるとブレーキの効きが悪化するため定期的に点検する",
+      "ブレーキパッドは交換不要な部品である",
+      "摩耗していても走行には影響しない",
+      "点検は車検のときだけでよい"
+    ],
+    "answer": 0,
+    "explanation": "ブレーキパッドやブレーキシューは使用とともに摩耗するため、摩耗限度を超えて使用すると制動性能が低下する。定期的な点検・交換が必要である。",
+    "isTrapQuestion": false,
+    "trapNumberType": "none",
+    "topicTag": "maintenance"
+  },
+  {
+    "id": "kg096",
+    "licenseCategory": [
+      "kogataGentsukiNirin"
+    ],
+    "stageTag": "第二段階",
+    "difficulty": 2,
+    "questionText": "灯火類(前照灯・尾灯・方向指示器等)の日常点検について正しいのはどれか。",
+    "choices": [
+      "点灯・点滅するかどうかを日常的に確認することが望ましい",
+      "灯火類は車検のときだけ確認すればよい",
+      "昼間は灯火の点検をしなくてよい",
+      "灯火の球切れは走行に影響しない"
+    ],
+    "answer": 0,
+    "explanation": "前照灯、尾灯、方向指示器などの灯火類は、周囲への意思表示や視認性確保に重要なため、日常点検で点灯・点滅を確認することが望ましい。",
+    "isTrapQuestion": false,
+    "trapNumberType": "none",
+    "topicTag": "maintenance"
+  },
+  {
+    "id": "kg097",
+    "licenseCategory": [
+      "kogataGentsukiNirin"
+    ],
+    "stageTag": "第一段階",
+    "difficulty": 2,
+    "questionText": "チェーンやベルトなど駆動系のたるみ点検について正しいのはどれか。",
+    "choices": [
+      "たるみが適正範囲にないと、走行中の脱落や異音、駆動効率の低下につながる",
+      "たるみは多いほど良い",
+      "駆動系の点検は不要である",
+      "たるみが全くない状態が最も安全である"
+    ],
+    "answer": 0,
+    "explanation": "駆動用チェーンやベルトのたるみが適正範囲から外れると、走行中の脱落や異音、駆動効率の低下、部品の早期摩耗につながるため定期点検が必要である。",
+    "isTrapQuestion": false,
+    "trapNumberType": "none",
+    "topicTag": "maintenance"
+  },
+  {
+    "id": "kg098",
+    "licenseCategory": [
+      "kogataGentsukiNirin"
+    ],
+    "stageTag": "第二段階",
+    "difficulty": 2,
+    "questionText": "「二輪車通行止め」の標識がある道路について正しいのはどれか。",
+    "choices": [
+      "原動機付自転車と自動二輪車の通行が禁止されている",
+      "自動二輪車だけが通行できる",
+      "125cc以下の二輪車のみ通行できる",
+      "夜間のみ通行が禁止される"
+    ],
+    "answer": 0,
+    "explanation": "「二輪車通行止め」の標識がある道路は、原動機付自転車と自動二輪車の両方の通行が禁止されている区間であることを示す。",
+    "isTrapQuestion": false,
+    "trapNumberType": "none",
+    "topicTag": "signs"
+  },
+  {
+    "id": "kg099",
+    "licenseCategory": [
+      "kogataGentsukiNirin"
+    ],
+    "stageTag": "第一段階",
+    "difficulty": 2,
+    "questionText": "「最高速度」の標識に表示されている数値の意味として正しいのはどれか。",
+    "choices": [
+      "その道路で出してよい速度の下限を示す",
+      "その道路で出すことができる最高速度を示す",
+      "駐車できる時間を示す",
+      "追い越しができる速度を示す"
+    ],
+    "answer": 1,
+    "explanation": "「最高速度」の標識は、その道路区間で車両が出すことのできる最高速度を示すものであり、これを超えて走行することはできない。",
+    "isTrapQuestion": false,
+    "trapNumberType": "none",
+    "topicTag": "signs"
+  },
+  {
+    "id": "kg100",
+    "licenseCategory": [
+      "kogataGentsukiNirin"
+    ],
+    "stageTag": "第二段階",
+    "difficulty": 2,
+    "questionText": "走行中にエンジンから異音がし、白煙が上がり始めた場合の対応として正しいのはどれか。",
+    "choices": [
+      "安全な場所に速やかに停止し、エンジンを止めて状況を確認する",
+      "そのまま走行を続けて様子を見る",
+      "速度を上げて目的地まで急ぐ",
+      "エンジンをかけたまま放置する"
+    ],
+    "answer": 0,
+    "explanation": "走行中に異音や白煙など異常を感じた場合は、安全な場所に速やかに停止してエンジンを止め、状況を確認することが火災など重大な事故を防ぐために重要である。",
+    "isTrapQuestion": false,
+    "trapNumberType": "none",
+    "topicTag": "emergency"
+  }
+]
