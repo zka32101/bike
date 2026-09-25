@@ -3998,5 +3998,2005 @@
     "isTrapQuestion": false,
     "trapNumberType": "none",
     "topicTag": "maintenance"
+  },
+  {
+    "id": "g201",
+    "licenseCategory": [
+      "gentsuki"
+    ],
+    "stageTag": "第一段階",
+    "difficulty": 1,
+    "questionText": "急ブレーキをかけるとき、原付の操作として最も適切なのはどれか。",
+    "choices": [
+      "前輪ブレーキだけを強く握る",
+      "ハンドルを大きく切りながら止まる",
+      "後輪ブレーキだけを踏む",
+      "前輪と後輪の両方のブレーキを同時にかける"
+    ],
+    "answer": 3,
+    "explanation": "前後輪のブレーキを同時に使うことで車体を安定させながら制動距離を短くできる。片方だけの急な操作は転倒の危険が高い。",
+    "isTrapQuestion": true,
+    "trapNumberType": "other",
+    "topicTag": "operation"
+  },
+  {
+    "id": "g202",
+    "licenseCategory": [
+      "gentsuki"
+    ],
+    "stageTag": "第二段階",
+    "difficulty": 1,
+    "questionText": "下り坂を走行するときの原付の運転方法として正しいのはどれか。",
+    "choices": [
+      "後輪ブレーキだけを使い続けて速度を保つ",
+      "低いギアやエンジンブレーキを活用しながら速度を抑える",
+      "ニュートラルにしてブレーキだけで下る",
+      "エンジンを切って惰性で下る"
+    ],
+    "answer": 1,
+    "explanation": "下り坂ではエンジンブレーキを併用することでブレーキの過熱や効きの低下を防ぎ、安定して速度を抑えられる。",
+    "isTrapQuestion": false,
+    "trapNumberType": "none",
+    "topicTag": "operation"
+  },
+  {
+    "id": "g203",
+    "licenseCategory": [
+      "gentsuki"
+    ],
+    "stageTag": "第一段階",
+    "difficulty": 1,
+    "questionText": "交差点を右左折する際、方向指示器を出す適切なタイミングはどれか。",
+    "choices": [
+      "曲がり始めた直後",
+      "曲がろうとする地点の約30m手前",
+      "交差点の直前で急に出す",
+      "不要、目視だけで十分"
+    ],
+    "answer": 1,
+    "explanation": "右左折の際は、その行為をしようとする地点の約30m手前で合図を出すことが定められている。",
+    "isTrapQuestion": true,
+    "trapNumberType": "other",
+    "topicTag": "operation"
+  },
+  {
+    "id": "g204",
+    "licenseCategory": [
+      "gentsuki"
+    ],
+    "stageTag": "第二段階",
+    "difficulty": 1,
+    "questionText": "発進前に行う確認として適切なのはどれか。",
+    "choices": [
+      "前方だけを見て発進する",
+      "エンジン音だけで安全を判断する",
+      "ミラーで後方を確認し、さらに目視で死角も確認する",
+      "対向車が来なければ何も確認しなくてよい"
+    ],
+    "answer": 2,
+    "explanation": "ミラーには映らない死角があるため、発進前はミラー確認に加えて目視で死角を確認する必要がある。",
+    "isTrapQuestion": false,
+    "trapNumberType": "none",
+    "topicTag": "operation"
+  },
+  {
+    "id": "g205",
+    "licenseCategory": [
+      "gentsuki"
+    ],
+    "stageTag": "第一段階",
+    "difficulty": 2,
+    "questionText": "カーブを曲がるときの原付の走行方法として最も適切なのはどれか。",
+    "choices": [
+      "カーブに入る前に十分減速し、曲がりながらは加速も減速も控える",
+      "カーブの途中で強くブレーキをかけて速度を落とす",
+      "カーブの出口で急加速する",
+      "ハンドルだけを大きく切り、車体は傾けない"
+    ],
+    "answer": 0,
+    "explanation": "カーブでは進入前に減速を終え、旋回中は一定の速度を保つことで安定した走行ができる。カーブ中の急な操作は転倒につながる。",
+    "isTrapQuestion": true,
+    "trapNumberType": "other",
+    "topicTag": "operation"
+  },
+  {
+    "id": "g206",
+    "licenseCategory": [
+      "gentsuki"
+    ],
+    "stageTag": "第二段階",
+    "difficulty": 2,
+    "questionText": "車線内での原付の走行位置として適切なのはどれか。",
+    "choices": [
+      "追い越し以外でも車線の右側に寄って走る",
+      "常に車線の右端を走る",
+      "車線を跨いで走る",
+      "車線の中央よりやや左寄りを走る"
+    ],
+    "answer": 3,
+    "explanation": "追い越しなど特別な場合を除き、車線内のやや左寄りを走行することで対向車や後続車との安全な間隔を保てる。",
+    "isTrapQuestion": false,
+    "trapNumberType": "none",
+    "topicTag": "operation"
+  },
+  {
+    "id": "g207",
+    "licenseCategory": [
+      "gentsuki"
+    ],
+    "stageTag": "第一段階",
+    "difficulty": 2,
+    "questionText": "前方の車を追い越すときの原付の行動として正しいのはどれか。",
+    "choices": [
+      "前の車の左側から追い越す",
+      "見通しの悪いカーブや交差点付近でも追い越してよい",
+      "追い越し前の合図は不要である",
+      "右側の安全を確認し、合図をしてから追い越す"
+    ],
+    "answer": 3,
+    "explanation": "追い越しは原則として右側から行い、後方や対向車の安全を確認したうえで合図を出してから行う必要がある。",
+    "isTrapQuestion": false,
+    "trapNumberType": "none",
+    "topicTag": "operation"
+  },
+  {
+    "id": "g208",
+    "licenseCategory": [
+      "gentsuki"
+    ],
+    "stageTag": "第二段階",
+    "difficulty": 2,
+    "questionText": "濡れた路面での原付の運転として適切なのはどれか。",
+    "choices": [
+      "速度を落とし、急な操作を避けて車間距離を広くとる",
+      "普段より速度を上げて水はねを避ける",
+      "ブレーキを強く一気にかけて止まる",
+      "タイヤの接地を気にせず通常通り走る"
+    ],
+    "answer": 0,
+    "explanation": "濡れた路面はタイヤのグリップが低下するため、速度を落とし、急ブレーキや急ハンドルを避けて車間距離を広くとることが安全につながる。",
+    "isTrapQuestion": true,
+    "trapNumberType": "other",
+    "topicTag": "operation"
+  },
+  {
+    "id": "g209",
+    "licenseCategory": [
+      "gentsuki"
+    ],
+    "stageTag": "第一段階",
+    "difficulty": 2,
+    "questionText": "夜間に原付を運転するときに注意すべきことはどれか。",
+    "choices": [
+      "ライトは常にハイビームのままでよい",
+      "対向車や歩行者に配慮してライトの切り替えを行う",
+      "ライトを消して省電力運転をする",
+      "夜間は速度を上げて早く目的地に着く"
+    ],
+    "answer": 1,
+    "explanation": "夜間は状況に応じてロービームとハイビームを切り替え、対向車や歩行者の視界を妨げないようにする必要がある。",
+    "isTrapQuestion": false,
+    "trapNumberType": "none",
+    "topicTag": "operation"
+  },
+  {
+    "id": "g210",
+    "licenseCategory": [
+      "gentsuki"
+    ],
+    "stageTag": "第二段階",
+    "difficulty": 3,
+    "questionText": "砂利道や砂の浮いた路面を走行するときの操作として最も適切なのはどれか。",
+    "choices": [
+      "車体を大きく傾けて素早く通過する",
+      "なるべく車体を起こしたまま、急なブレーキやハンドル操作を避けて通過する",
+      "タイヤの空気圧を気にせず通常通り走る",
+      "スピードを上げて一気に抜ける"
+    ],
+    "answer": 1,
+    "explanation": "砂利や砂の上はタイヤが滑りやすいため、車体を起こした状態を保ち、急な操作を避けて通過することが安全である。",
+    "isTrapQuestion": true,
+    "trapNumberType": "other",
+    "topicTag": "operation"
+  },
+  {
+    "id": "g211",
+    "licenseCategory": [
+      "gentsuki"
+    ],
+    "stageTag": "第一段階",
+    "difficulty": 1,
+    "questionText": "踏切を通過するときの原付の運転として正しいのはどれか。",
+    "choices": [
+      "踏切内で停止しても問題ない",
+      "遮断機が上がっていれば確認せず渡ってよい",
+      "踏切の手前で一時停止し、安全を確認してから渡る",
+      "スピードを上げて素早く渡る"
+    ],
+    "answer": 2,
+    "explanation": "踏切の手前では一時停止して左右の安全を確認し、踏切内で停止することのないよう通過する必要がある。",
+    "isTrapQuestion": false,
+    "trapNumberType": "none",
+    "topicTag": "operation"
+  },
+  {
+    "id": "g212",
+    "licenseCategory": [
+      "gentsuki"
+    ],
+    "stageTag": "第二段階",
+    "difficulty": 1,
+    "questionText": "大型車の後ろを走行するときに注意すべきことはどれか。",
+    "choices": [
+      "大型車の死角に入らないようにし、前方視界を確保できる車間をとる",
+      "できるだけ近づいて風よけにする",
+      "大型車の左側にぴったり並んで走る",
+      "車間距離は気にしなくてよい"
+    ],
+    "answer": 0,
+    "explanation": "大型車のすぐ後ろは死角になりやすく前方の状況も見えにくいため、死角を避け十分な車間距離を保つことが必要である。",
+    "isTrapQuestion": true,
+    "trapNumberType": "other",
+    "topicTag": "operation"
+  },
+  {
+    "id": "g213",
+    "licenseCategory": [
+      "gentsuki"
+    ],
+    "stageTag": "第一段階",
+    "difficulty": 1,
+    "questionText": "橋の上やトンネルの出口付近で原付が注意すべき自然現象はどれか。",
+    "choices": [
+      "強い横風による車体の煽られ",
+      "気温の変化による視界不良のみ",
+      "路面の凍結が必ず発生する",
+      "特に注意すべき点はない"
+    ],
+    "answer": 0,
+    "explanation": "橋の上やトンネルの出口付近では強い横風が吹くことがあり、車体が煽られてふらつく危険があるため、速度を落として備える必要がある。",
+    "isTrapQuestion": false,
+    "trapNumberType": "none",
+    "topicTag": "operation"
+  },
+  {
+    "id": "g214",
+    "licenseCategory": [
+      "gentsuki"
+    ],
+    "stageTag": "第二段階",
+    "difficulty": 1,
+    "questionText": "信号のない横断歩道に近づくときの原付の運転方法として正しいのはどれか。",
+    "choices": [
+      "歩行者がいなければ確認せず通過してよい",
+      "横断しようとする歩行者がいないか速度を落として確認する",
+      "歩行者がいても止まらず徐行だけすればよい",
+      "横断歩道の手前で加速して先に通過する"
+    ],
+    "answer": 1,
+    "explanation": "信号のない横断歩道に近づくときは速度を落とし、横断しようとする歩行者がいないか確認して、必要なら停止できるようにする。",
+    "isTrapQuestion": false,
+    "trapNumberType": "none",
+    "topicTag": "operation"
+  },
+  {
+    "id": "g215",
+    "licenseCategory": [
+      "gentsuki"
+    ],
+    "stageTag": "第一段階",
+    "difficulty": 2,
+    "questionText": "停車していた乗客降車中の路線バスの横を通過するときの対応として適切なのはどれか。",
+    "choices": [
+      "バスの右側から一気に追い越す",
+      "乗客がいなければ通常速度で通過してよい",
+      "バスの前後から歩行者が出てくる可能性を考え、速度を落として通過する",
+      "バスに近づいたらクラクションを鳴らして急いで通過する"
+    ],
+    "answer": 2,
+    "explanation": "バスの陰から降車した乗客が道路を横断してくる可能性があるため、速度を落として周囲の状況に注意しながら通過する必要がある。",
+    "isTrapQuestion": false,
+    "trapNumberType": "none",
+    "topicTag": "operation"
+  },
+  {
+    "id": "g216",
+    "licenseCategory": [
+      "gentsuki"
+    ],
+    "stageTag": "第二段階",
+    "difficulty": 2,
+    "questionText": "一時停止の標識がある交差点で発進する際の正しい手順はどれか。",
+    "choices": [
+      "一時停止線で完全に停止し、左右の安全を確認してから発進する",
+      "止まらずに徐行のみで通過する",
+      "対向車がなければ停止しなくてもよい",
+      "停止後すぐに発進すればよい"
+    ],
+    "answer": 0,
+    "explanation": "一時停止標識のある場所では必ず停止線で完全に停止し、左右の安全を確認したうえで発進する必要がある。",
+    "isTrapQuestion": true,
+    "trapNumberType": "other",
+    "topicTag": "operation"
+  },
+  {
+    "id": "g217",
+    "licenseCategory": [
+      "gentsuki"
+    ],
+    "stageTag": "第一段階",
+    "difficulty": 2,
+    "questionText": "水たまりのある道路を走行するときに考えられる危険として適切なのはどれか。",
+    "choices": [
+      "水たまりの下に穴やくぼみが隠れている可能性がある",
+      "水たまりは必ず浅いので気にしなくてよい",
+      "水たまりを避ける必要はまったくない",
+      "水たまりの上では速度を上げたほうが安全である"
+    ],
+    "answer": 0,
+    "explanation": "水たまりの下には路面の穴やくぼみが隠れていることがあるため、速度を落として慎重に通過する必要がある。",
+    "isTrapQuestion": false,
+    "trapNumberType": "none",
+    "topicTag": "operation"
+  },
+  {
+    "id": "g218",
+    "licenseCategory": [
+      "gentsuki"
+    ],
+    "stageTag": "第二段階",
+    "difficulty": 2,
+    "questionText": "車線変更を行うときの合図のタイミングとして正しいのはどれか。",
+    "choices": [
+      "車線変更を始めた後に合図を出す",
+      "合図は必要に応じて省略してもよい",
+      "車線変更しようとする約3秒前に合図を出す",
+      "車線変更が終わってから合図を出す"
+    ],
+    "answer": 2,
+    "explanation": "車線変更をしようとするときは、その約3秒前に合図を出して周囲に知らせる必要がある。",
+    "isTrapQuestion": true,
+    "trapNumberType": "other",
+    "topicTag": "operation"
+  },
+  {
+    "id": "g219",
+    "licenseCategory": [
+      "gentsuki"
+    ],
+    "stageTag": "第一段階",
+    "difficulty": 2,
+    "questionText": "見通しの悪い交差点に進入する際の運転方法として適切なのはどれか。",
+    "choices": [
+      "徐行し、左右から出てくる車や歩行者に備える",
+      "速度を落とさず一気に通過する",
+      "目視確認をせずミラーだけで十分である",
+      "対向車がいなければそのまま通過してよい"
+    ],
+    "answer": 0,
+    "explanation": "見通しの悪い交差点では徐行し、左右から不意に出てくる車両や歩行者に対応できるようにしておく必要がある。",
+    "isTrapQuestion": true,
+    "trapNumberType": "other",
+    "topicTag": "operation"
+  },
+  {
+    "id": "g220",
+    "licenseCategory": [
+      "gentsuki"
+    ],
+    "stageTag": "第二段階",
+    "difficulty": 3,
+    "questionText": "原付でUターンをするときに注意すべきことはどれか。",
+    "choices": [
+      "周囲の安全を確認し、合図を出してから行う",
+      "対向車が来ていなければ確認は不要である",
+      "Uターンは合図をしなくてもよい",
+      "見通しの悪い場所でも問題なく行える"
+    ],
+    "answer": 0,
+    "explanation": "Uターンは周囲の交通に大きな影響を与えるため、安全確認と合図を徹底し、見通しの悪い場所では避ける必要がある。",
+    "isTrapQuestion": false,
+    "trapNumberType": "none",
+    "topicTag": "operation"
+  },
+  {
+    "id": "g221",
+    "licenseCategory": [
+      "gentsuki"
+    ],
+    "stageTag": "第一段階",
+    "difficulty": 1,
+    "questionText": "制動距離について正しい説明はどれか。",
+    "choices": [
+      "速度が上がるほど制動距離は長くなる",
+      "速度に関わらず制動距離は一定である",
+      "速度が上がるほど制動距離は短くなる",
+      "制動距離は天候に左右されない"
+    ],
+    "answer": 0,
+    "explanation": "速度が上がるほどブレーキをかけてから停止するまでの制動距離は長くなり、路面状況によってもさらに伸びることがある。",
+    "isTrapQuestion": false,
+    "trapNumberType": "none",
+    "topicTag": "operation"
+  },
+  {
+    "id": "g222",
+    "licenseCategory": [
+      "gentsuki"
+    ],
+    "stageTag": "第二段階",
+    "difficulty": 1,
+    "questionText": "停止線のある交差点で赤信号に変わりそうな黄色信号に気づいたときの対応として正しいのはどれか。",
+    "choices": [
+      "急いで交差点を通過する",
+      "黄色信号では加速してよい",
+      "安全に停止できる場合は停止する",
+      "信号の色に関わらず速度を変える必要はない"
+    ],
+    "answer": 2,
+    "explanation": "黄色信号は原則として停止すべき合図であり、安全に停止できる場合は停止線の手前で停止する必要がある。",
+    "isTrapQuestion": false,
+    "trapNumberType": "none",
+    "topicTag": "operation"
+  },
+  {
+    "id": "g223",
+    "licenseCategory": [
+      "gentsuki"
+    ],
+    "stageTag": "第一段階",
+    "difficulty": 1,
+    "questionText": "原付でカーブの多い山道を走行するときに心がけるべきことはどれか。",
+    "choices": [
+      "カーブでは常に一定の高速で走行する",
+      "カーブの手前でしっかり減速し、見通しの悪いカーブでは対向車にも注意する",
+      "対向車線にはみ出して走行してもよい",
+      "カーブの数が多いほど速度を上げてよい"
+    ],
+    "answer": 1,
+    "explanation": "山道のカーブでは手前での十分な減速と、対向車線へのはみ出しを避けた走行が求められる。",
+    "isTrapQuestion": false,
+    "trapNumberType": "none",
+    "topicTag": "operation"
+  },
+  {
+    "id": "g224",
+    "licenseCategory": [
+      "gentsuki"
+    ],
+    "stageTag": "第二段階",
+    "difficulty": 1,
+    "questionText": "原付のエンジンが冷えている状態で走り出すときに望ましいのはどれか。",
+    "choices": [
+      "最初から高速で走行して早く温める",
+      "しばらく低い速度で走行し、エンジンや各部を慣らしてから通常走行に移る",
+      "エンジンの状態に関係なくいつも通り走ってよい",
+      "冷えている間はブレーキを使わないほうがよい"
+    ],
+    "answer": 1,
+    "explanation": "エンジンが冷えている状態でいきなり高い負荷をかけると調子を崩しやすいため、しばらく低速で走行してから通常の走行に移ることが望ましい。",
+    "isTrapQuestion": false,
+    "trapNumberType": "none",
+    "topicTag": "operation"
+  },
+  {
+    "id": "g225",
+    "licenseCategory": [
+      "gentsuki"
+    ],
+    "stageTag": "第一段階",
+    "difficulty": 2,
+    "questionText": "交差点で対向車が右折待ちをしている場合の直進する原付の心がけとして正しいのはどれか。",
+    "choices": [
+      "対向車は絶対に動かないと考えてよい",
+      "対向車が急に右折してくることも想定し、備えながら通過する",
+      "対向車の存在は無視してよい",
+      "右折待ちの車には気づかなくてもよい"
+    ],
+    "answer": 1,
+    "explanation": "右折待ちの対向車がこちらの通過前後に右折を開始することもあるため、常に備えながら交差点を通過する必要がある。",
+    "isTrapQuestion": false,
+    "trapNumberType": "none",
+    "topicTag": "operation"
+  },
+  {
+    "id": "g226",
+    "licenseCategory": [
+      "gentsuki"
+    ],
+    "stageTag": "第二段階",
+    "difficulty": 2,
+    "questionText": "狭い道路で対向車とすれ違うときの原付の走行として適切なのはどれか。",
+    "choices": [
+      "速度を落とし、必要に応じて左に寄って安全な間隔をとる",
+      "対向車に道を譲らず中央を走り続ける",
+      "対向車を無視してそのままの速度で走る",
+      "すれ違いのときほど速度を上げるべきである"
+    ],
+    "answer": 0,
+    "explanation": "狭い道路ですれ違うときは速度を落とし、左側に寄るなどして安全な間隔を確保することが望ましい。",
+    "isTrapQuestion": true,
+    "trapNumberType": "other",
+    "topicTag": "operation"
+  },
+  {
+    "id": "g227",
+    "licenseCategory": [
+      "gentsuki"
+    ],
+    "stageTag": "第一段階",
+    "difficulty": 2,
+    "questionText": "原付が急な上り坂で一時停止した後、発進するときに注意すべきことはどれか。",
+    "choices": [
+      "上り坂では通常よりゆっくり発進する必要はない",
+      "坂道では発進時の後退を気にしなくてよい",
+      "坂道で後方に下がらないよう、ブレーキと発進操作を適切に行う",
+      "発進時は前方の確認だけで十分である"
+    ],
+    "answer": 2,
+    "explanation": "上り坂での発進時は車体が後方に下がりやすいため、ブレーキ操作とアクセル操作を適切に行い、後退を防ぐ必要がある。",
+    "isTrapQuestion": false,
+    "trapNumberType": "none",
+    "topicTag": "operation"
+  },
+  {
+    "id": "g228",
+    "licenseCategory": [
+      "gentsuki"
+    ],
+    "stageTag": "第二段階",
+    "difficulty": 2,
+    "questionText": "原付で信号のある交差点を直進するとき、青信号になった直後の対応として適切なのはどれか。",
+    "choices": [
+      "青になった瞬間に周囲を確認せず発進する",
+      "青信号でも周囲の安全を確認してから発進する",
+      "青信号のときは他の車両の動きを見る必要はない",
+      "青信号では常に最速で発進すべきである"
+    ],
+    "answer": 1,
+    "explanation": "青信号になっても交差点に進入してくる車両や歩行者がいる可能性があるため、周囲の安全を確認してから発進することが大切である。",
+    "isTrapQuestion": false,
+    "trapNumberType": "none",
+    "topicTag": "operation"
+  },
+  {
+    "id": "g229",
+    "licenseCategory": [
+      "gentsuki"
+    ],
+    "stageTag": "第一段階",
+    "difficulty": 2,
+    "questionText": "前方に駐車中の車がある道路を走行するときに予測すべき危険はどれか。",
+    "choices": [
+      "駐車車両は絶対に動かないという安心感",
+      "駐車車両のドアが急に開く可能性",
+      "駐車車両の陰からは何も出てこないという前提",
+      "速度を上げて一気に通過すれば安全という考え方"
+    ],
+    "answer": 1,
+    "explanation": "駐車中の車のドアが急に開いたり、陰から歩行者が飛び出したりする危険があるため、十分な間隔をとって通過する必要がある。",
+    "isTrapQuestion": true,
+    "trapNumberType": "other",
+    "topicTag": "hazard_prediction"
+  },
+  {
+    "id": "g230",
+    "licenseCategory": [
+      "gentsuki"
+    ],
+    "stageTag": "第二段階",
+    "difficulty": 3,
+    "questionText": "道路脇で遊んでいる子どもを見かけたときに予測すべき危険はどれか。",
+    "choices": [
+      "子どもは常に大人の指示に従って動くという前提",
+      "特に速度を落とす必要はないという判断",
+      "子どもは自動車の接近に必ず気づいているという前提",
+      "子どもが急に道路へ飛び出してくる可能性"
+    ],
+    "answer": 3,
+    "explanation": "子どもは危険予測の判断力が未発達なため、急に道路へ飛び出す可能性を常に考えて速度を落とす必要がある。",
+    "isTrapQuestion": false,
+    "trapNumberType": "none",
+    "topicTag": "hazard_prediction"
+  },
+  {
+    "id": "g231",
+    "licenseCategory": [
+      "gentsuki"
+    ],
+    "stageTag": "第一段階",
+    "difficulty": 1,
+    "questionText": "見通しの悪い交差点に近づくときに予測すべきことはどれか。",
+    "choices": [
+      "見通しが悪くても速度を落とす必要はない",
+      "対向車や横断者は絶対に存在しないという前提",
+      "交差する道路から車や歩行者が出てくる可能性",
+      "交差点の先まで安全が確認できているという前提"
+    ],
+    "answer": 2,
+    "explanation": "見通しの悪い交差点では死角から車両や歩行者が出てくる可能性を常に想定し、徐行して備える必要がある。",
+    "isTrapQuestion": false,
+    "trapNumberType": "none",
+    "topicTag": "hazard_prediction"
+  },
+  {
+    "id": "g232",
+    "licenseCategory": [
+      "gentsuki"
+    ],
+    "stageTag": "第二段階",
+    "difficulty": 1,
+    "questionText": "左折しようとしている大型車の後ろに原付でつく場合、予測すべき危険はどれか。",
+    "choices": [
+      "大型車の陰に入っても視界に影響はないという前提",
+      "大型車は原付より先に動くことは絶対にない",
+      "大型車の左側についていれば安全という考え方",
+      "大型車の左折時に内輪差で巻き込まれる危険"
+    ],
+    "answer": 3,
+    "explanation": "大型車が左折する際は内輪差が大きく、左側にいる二輪車が巻き込まれる危険があるため、車の左側に並ばず後方で待つ必要がある。",
+    "isTrapQuestion": true,
+    "trapNumberType": "other",
+    "topicTag": "hazard_prediction"
+  },
+  {
+    "id": "g233",
+    "licenseCategory": [
+      "gentsuki"
+    ],
+    "stageTag": "第一段階",
+    "difficulty": 1,
+    "questionText": "高齢の歩行者が横断歩道を渡っている場面で予測すべきことはどれか。",
+    "choices": [
+      "高齢者は若者と同じ速さで渡り切るという前提",
+      "高齢者がいても通常の速度で通過してよい",
+      "高齢者は必ず信号の変わり目を正確に把握しているという前提",
+      "歩行速度が遅く、渡り切るまでに時間がかかる可能性"
+    ],
+    "answer": 3,
+    "explanation": "高齢の歩行者は歩行速度が遅い場合があり、渡り切るまでに時間がかかることを想定して余裕をもって待つ必要がある。",
+    "isTrapQuestion": false,
+    "trapNumberType": "none",
+    "topicTag": "hazard_prediction"
+  },
+  {
+    "id": "g234",
+    "licenseCategory": [
+      "gentsuki"
+    ],
+    "stageTag": "第二段階",
+    "difficulty": 1,
+    "questionText": "前方を走る自転車を追い越すときに予測すべき危険はどれか。",
+    "choices": [
+      "自転車は追い越しの合図を必要としないという前提",
+      "自転車は絶対にふらつかないという前提",
+      "自転車との間隔を詰めても問題ないという考え方",
+      "自転車が障害物を避けて急に進路を変える可能性"
+    ],
+    "answer": 3,
+    "explanation": "自転車は路面の悪路や障害物を避けるために急に進路を変えることがあるため、追い越す際は十分な間隔をとる必要がある。",
+    "isTrapQuestion": true,
+    "trapNumberType": "other",
+    "topicTag": "hazard_prediction"
+  },
+  {
+    "id": "g235",
+    "licenseCategory": [
+      "gentsuki"
+    ],
+    "stageTag": "第一段階",
+    "difficulty": 2,
+    "questionText": "雨上がりの路面にある白線やマンホールの上を通るときに予測すべき危険はどれか。",
+    "choices": [
+      "マンホールの上は速度を上げて通過するほうがよい",
+      "白線やマンホールは常に他の路面より滑りにくい",
+      "雨上がりであれば白線の上も安全である",
+      "白線やマンホールは乾いた路面より滑りやすくなっている"
+    ],
+    "answer": 3,
+    "explanation": "白線やマンホールなどの塗装・金属部分は雨で濡れるとグリップが低下し滑りやすくなるため、通過時は車体を傾けないよう注意する。",
+    "isTrapQuestion": false,
+    "trapNumberType": "none",
+    "topicTag": "hazard_prediction"
+  },
+  {
+    "id": "g236",
+    "licenseCategory": [
+      "gentsuki"
+    ],
+    "stageTag": "第二段階",
+    "difficulty": 2,
+    "questionText": "夜間の交差点で原付が注意すべき点として適切なのはどれか。",
+    "choices": [
+      "夜間はどの車からも原付がよく見えているという前提でよい",
+      "原付は車体が小さく灯火も目立ちにくいため、他の車両に気づかれにくいことを想定する",
+      "夜間は速度を上げたほうが安全である",
+      "街灯があれば他の車両からは必ず視認されている"
+    ],
+    "answer": 1,
+    "explanation": "原付は車体が小さく灯火も目立ちにくいため、夜間は他の車両から見落とされやすいことを想定し、早めの合図や位置取りで存在を知らせる必要がある。",
+    "isTrapQuestion": true,
+    "trapNumberType": "other",
+    "topicTag": "hazard_prediction"
+  },
+  {
+    "id": "g237",
+    "licenseCategory": [
+      "gentsuki"
+    ],
+    "stageTag": "第一段階",
+    "difficulty": 2,
+    "questionText": "脇道から一時停止せずに進入してくる車両があるかもしれない場面での予測として適切なのはどれか。",
+    "choices": [
+      "脇道の車両は必ず一時停止を守るという前提でよい",
+      "脇道からの合流には注意を払う必要はない",
+      "一時停止を守らず進入してくる車両もあることを想定し備える",
+      "脇道の車両より自分が優先だから速度を落とさなくてよい"
+    ],
+    "answer": 2,
+    "explanation": "一時停止を怠って進入してくる車両も現実には存在するため、脇道の出口付近では速度を落として備えることが安全である。",
+    "isTrapQuestion": false,
+    "trapNumberType": "none",
+    "topicTag": "hazard_prediction"
+  },
+  {
+    "id": "g238",
+    "licenseCategory": [
+      "gentsuki"
+    ],
+    "stageTag": "第二段階",
+    "difficulty": 2,
+    "questionText": "朝夕の時間帯に太陽の光が低い位置から差し込む道路を走行するときに予測すべきことはどれか。",
+    "choices": [
+      "太陽の光があるときは速度を上げたほうがよい",
+      "逆光の影響は原付には関係がないという前提",
+      "自分も他の運転者も逆光で視界が悪くなっている可能性",
+      "逆光時は歩行者も車両もよく見えているという前提でよい"
+    ],
+    "answer": 2,
+    "explanation": "朝夕の低い日差しは自分だけでなく周囲の運転者の視界も悪化させるため、速度を落として距離に余裕を持つ必要がある。",
+    "isTrapQuestion": false,
+    "trapNumberType": "none",
+    "topicTag": "hazard_prediction"
+  },
+  {
+    "id": "g239",
+    "licenseCategory": [
+      "gentsuki"
+    ],
+    "stageTag": "第一段階",
+    "difficulty": 2,
+    "questionText": "路線バスの後ろを走行しているときに予測すべき危険はどれか。",
+    "choices": [
+      "バスの停車中は速度を上げて追い越すべきという考え方",
+      "バスの後ろには歩行者は絶対に現れないという前提",
+      "バスの陰は視界に影響しないという前提",
+      "バスから降りた乗客が前方や後方から道路を横断してくる可能性"
+    ],
+    "answer": 3,
+    "explanation": "バスの乗客がバスの前後から横断してくることがあるため、バス停付近を通過する際は速度を落として周囲を確認する必要がある。",
+    "isTrapQuestion": false,
+    "trapNumberType": "none",
+    "topicTag": "hazard_prediction"
+  },
+  {
+    "id": "g240",
+    "licenseCategory": [
+      "gentsuki"
+    ],
+    "stageTag": "第二段階",
+    "difficulty": 3,
+    "questionText": "対向車線で右折の合図を出している車がある交差点を直進するときに予測すべきことはどれか。",
+    "choices": [
+      "対向車が自分の直進より先に右折を始める可能性",
+      "対向車は必ずこちらの通過を待ってから曲がるという前提",
+      "右折待ちの車があっても速度を落とす必要はない",
+      "対向車の合図は無視してよい"
+    ],
+    "answer": 0,
+    "explanation": "右折待ちの対向車がタイミングを誤ってこちらの通過前に右折を始めることがあるため、速度を落として備える必要がある。",
+    "isTrapQuestion": false,
+    "trapNumberType": "none",
+    "topicTag": "hazard_prediction"
+  },
+  {
+    "id": "g241",
+    "licenseCategory": [
+      "gentsuki"
+    ],
+    "stageTag": "第一段階",
+    "difficulty": 1,
+    "questionText": "落ち葉が濡れて積もっているカーブを走行するときに予測すべき危険はどれか。",
+    "choices": [
+      "濡れた落ち葉は乾いた路面と同程度の摩擦しかないという前提",
+      "落ち葉の上は速度を上げても問題ないという考え方",
+      "濡れた落ち葉の上は非常に滑りやすくなっている",
+      "落ち葉は原付の走行に影響しないという前提"
+    ],
+    "answer": 2,
+    "explanation": "濡れた落ち葉が積もった路面は氷のように滑りやすくなることがあるため、速度を落とし車体を傾けすぎないよう注意する必要がある。",
+    "isTrapQuestion": false,
+    "trapNumberType": "none",
+    "topicTag": "hazard_prediction"
+  },
+  {
+    "id": "g242",
+    "licenseCategory": [
+      "gentsuki"
+    ],
+    "stageTag": "第二段階",
+    "difficulty": 1,
+    "questionText": "大型トラックとすれ違うときに予測すべき危険はどれか。",
+    "choices": [
+      "速度を上げてすれ違ったほうが安定するという考え方",
+      "トラックとのすれ違いでは風の影響は一切ないという前提",
+      "トラックに近づくほど安全であるという考え方",
+      "すれ違う瞬間に発生する強い風であおられる可能性"
+    ],
+    "answer": 3,
+    "explanation": "大型車とすれ違う瞬間は強い風圧が発生して車体があおられることがあるため、ハンドルをしっかり握り速度を落として備える必要がある。",
+    "isTrapQuestion": true,
+    "trapNumberType": "other",
+    "topicTag": "hazard_prediction"
+  },
+  {
+    "id": "g243",
+    "licenseCategory": [
+      "gentsuki"
+    ],
+    "stageTag": "第一段階",
+    "difficulty": 1,
+    "questionText": "コンビニなどの駐車場出口付近を走行するときに予測すべき危険はどれか。",
+    "choices": [
+      "駐車場の出口は注意する必要がないという前提",
+      "駐車場の出口からは車が出てこないという前提",
+      "駐車場付近では速度を上げてよいという考え方",
+      "駐車場から車が十分確認せずに出てくる可能性"
+    ],
+    "answer": 3,
+    "explanation": "駐車場の出口では運転者の確認が不十分なまま車両が出てくることがあるため、速度を落として備える必要がある。",
+    "isTrapQuestion": false,
+    "trapNumberType": "none",
+    "topicTag": "hazard_prediction"
+  },
+  {
+    "id": "g244",
+    "licenseCategory": [
+      "gentsuki"
+    ],
+    "stageTag": "第二段階",
+    "difficulty": 1,
+    "questionText": "横断歩道の手前で対向車が停止している場面で予測すべきことはどれか。",
+    "choices": [
+      "停止している対向車の前を減速せず通過してよい",
+      "対向車が停止していても歩行者の存在は考えなくてよい",
+      "対向車の停止は自分には関係がないという前提",
+      "対向車の陰に歩行者が横断しようとしている可能性"
+    ],
+    "answer": 3,
+    "explanation": "対向車が横断歩道の手前で停止している場合、その陰に歩行者がいて横断しようとしている可能性があるため、速度を落として確認する必要がある。",
+    "isTrapQuestion": true,
+    "trapNumberType": "other",
+    "topicTag": "hazard_prediction"
+  },
+  {
+    "id": "g245",
+    "licenseCategory": [
+      "gentsuki"
+    ],
+    "stageTag": "第一段階",
+    "difficulty": 2,
+    "questionText": "学校の下校時間帯に通学路を走行するときに予測すべきことはどれか。",
+    "choices": [
+      "児童は車両の接近に必ず気づいているという前提",
+      "下校時間帯でも児童は必ず歩道の内側にいるという前提",
+      "通学路では速度を落とす必要はないという考え方",
+      "駐車車両の間から児童が急に飛び出してくる可能性"
+    ],
+    "answer": 3,
+    "explanation": "下校時間帯の通学路では駐車車両の間から児童が急に飛び出す可能性があるため、速度を落として周囲に注意を払う必要がある。",
+    "isTrapQuestion": false,
+    "trapNumberType": "none",
+    "topicTag": "hazard_prediction"
+  },
+  {
+    "id": "g246",
+    "licenseCategory": [
+      "gentsuki"
+    ],
+    "stageTag": "第二段階",
+    "difficulty": 2,
+    "questionText": "道路の両側に車が駐車している狭い道路を走行するときに予測すべきことはどれか。",
+    "choices": [
+      "対向車と駐車車両の間で行き違いが難しくなる可能性",
+      "駐車車両があっても道幅には影響しないという前提",
+      "狭い道路では速度を上げて素早く通過するほうがよい",
+      "対向車は現れないという前提でよい"
+    ],
+    "answer": 0,
+    "explanation": "両側に駐車車両がある狭い道路では実質的な道幅が狭くなり、対向車との行き違いが難しくなることを想定し、速度を落として備える必要がある。",
+    "isTrapQuestion": true,
+    "trapNumberType": "other",
+    "topicTag": "hazard_prediction"
+  },
+  {
+    "id": "g247",
+    "licenseCategory": [
+      "gentsuki"
+    ],
+    "stageTag": "第一段階",
+    "difficulty": 2,
+    "questionText": "長く晴天が続いた後に降り始めた雨の路面で予測すべき危険はどれか。",
+    "choices": [
+      "路面にたまった油分やほこりが浮き上がり、非常に滑りやすくなる可能性",
+      "降り始めの雨は路面の状態に影響しないという前提",
+      "雨が降り始めた直後の路面は普段より滑りにくいという考え方",
+      "降り始めの雨では速度を上げても問題ないという判断"
+    ],
+    "answer": 0,
+    "explanation": "長い晴天の後に降り始めた雨は、路面にたまった油分やほこりを浮かせて非常に滑りやすい状態を作るため、特に注意が必要である。",
+    "isTrapQuestion": false,
+    "trapNumberType": "none",
+    "topicTag": "hazard_prediction"
+  },
+  {
+    "id": "g248",
+    "licenseCategory": [
+      "gentsuki"
+    ],
+    "stageTag": "第二段階",
+    "difficulty": 2,
+    "questionText": "遮断機が上がっている踏切に近づくときに予測すべきことはどれか。",
+    "choices": [
+      "踏切では左右の確認は不要である",
+      "遮断機が上がっていれば確認せず通過してよい",
+      "踏切の安全確認は遮断機の状態だけで判断してよい",
+      "遮断機が上がっていても電車が接近している可能性があるため確認が必要"
+    ],
+    "answer": 3,
+    "explanation": "遮断機が上がっていても踏切の安全が完全に保証されているとは限らないため、一時停止して左右の安全を確認する必要がある。",
+    "isTrapQuestion": true,
+    "trapNumberType": "other",
+    "topicTag": "hazard_prediction"
+  },
+  {
+    "id": "g249",
+    "licenseCategory": [
+      "gentsuki"
+    ],
+    "stageTag": "第一段階",
+    "difficulty": 2,
+    "questionText": "大型トラックのすぐ後ろに原付でついて走行するときに予測すべき危険はどれか。",
+    "choices": [
+      "トラックのすぐ後ろは死角がないという前提",
+      "トラックの後ろは風の影響を受けず走りやすいという考え方",
+      "前方視界が遮られても問題はないという前提",
+      "前方の視界が遮られ、トラックの急停止や路上の障害物に気づくのが遅れる可能性"
+    ],
+    "answer": 3,
+    "explanation": "大型トラックのすぐ後ろは前方視界が遮られ、トラックが急停止したり路上に障害物があったりしても気づくのが遅れる危険があるため、車間距離を十分にとる必要がある。",
+    "isTrapQuestion": false,
+    "trapNumberType": "none",
+    "topicTag": "hazard_prediction"
+  },
+  {
+    "id": "g250",
+    "licenseCategory": [
+      "gentsuki"
+    ],
+    "stageTag": "第二段階",
+    "difficulty": 3,
+    "questionText": "原付の最高速度に関する規定として正しいのはどれか。",
+    "choices": [
+      "時速40キロメートル以下",
+      "時速50キロメートル以下",
+      "道路の種類によって制限はない",
+      "時速30キロメートル以下"
+    ],
+    "answer": 3,
+    "explanation": "原付一種(50cc以下)の法定最高速度は時速30キロメートルであり、道路の種類にかかわらずこの制限が適用される。",
+    "isTrapQuestion": true,
+    "trapNumberType": "speedLimit",
+    "topicTag": "rules"
+  },
+  {
+    "id": "g251",
+    "licenseCategory": [
+      "gentsuki"
+    ],
+    "stageTag": "第一段階",
+    "difficulty": 1,
+    "questionText": "原付での二人乗りに関する規定として正しいのはどれか。",
+    "choices": [
+      "運転者が18歳以上であれば可能",
+      "同乗者が子どもであれば可能",
+      "免許取得から1年以上経過していれば可能",
+      "二人乗りはどのような場合でも禁止されている"
+    ],
+    "answer": 3,
+    "explanation": "原付一種は構造上定員が一人と定められており、年齢や運転経験にかかわらず二人乗りは一切認められていない。",
+    "isTrapQuestion": true,
+    "trapNumberType": "twoPersonRiding",
+    "topicTag": "rules"
+  },
+  {
+    "id": "g252",
+    "licenseCategory": [
+      "gentsuki"
+    ],
+    "stageTag": "第二段階",
+    "difficulty": 1,
+    "questionText": "原付の積載に関する規定として正しいのはどれか。",
+    "choices": [
+      "荷物の重さに上限は設けられていない",
+      "荷物を積むこと自体が禁止されている",
+      "積載できる荷物の重さは50キログラムまでと定められている",
+      "積載できる荷物の重さは30キログラムまでと定められている"
+    ],
+    "answer": 3,
+    "explanation": "原付一種の積載装置に積める荷物の重量は30キログラムまでと定められている。",
+    "isTrapQuestion": true,
+    "trapNumberType": "loadLimit",
+    "topicTag": "rules"
+  },
+  {
+    "id": "g253",
+    "licenseCategory": [
+      "gentsuki"
+    ],
+    "stageTag": "第一段階",
+    "difficulty": 1,
+    "questionText": "原付が通行できない道路として正しいのはどれか。",
+    "choices": [
+      "生活道路",
+      "一方通行の道路",
+      "住宅街の一般道路",
+      "高速自動車国道"
+    ],
+    "answer": 3,
+    "explanation": "原付一種は高速自動車国道を通行することができず、専用の入口・出口からも進入は認められていない。",
+    "isTrapQuestion": true,
+    "trapNumberType": "other",
+    "topicTag": "rules"
+  },
+  {
+    "id": "g254",
+    "licenseCategory": [
+      "gentsuki"
+    ],
+    "stageTag": "第二段階",
+    "difficulty": 1,
+    "questionText": "原付運転時のヘルメット着用について正しいのはどれか。",
+    "choices": [
+      "運転者には着用義務がなく、任意である",
+      "運転者には着用義務がある",
+      "雨の日のみ着用義務がある",
+      "時速20キロメートル未満なら着用しなくてよい"
+    ],
+    "answer": 1,
+    "explanation": "原付の運転者には乗車用ヘルメットの着用が義務付けられており、速度や天候にかかわらず必ず着用しなければならない。",
+    "isTrapQuestion": false,
+    "trapNumberType": "none",
+    "topicTag": "rules"
+  },
+  {
+    "id": "g255",
+    "licenseCategory": [
+      "gentsuki"
+    ],
+    "stageTag": "第一段階",
+    "difficulty": 2,
+    "questionText": "二段階右折が必要となる条件として正しいのはどれか。",
+    "choices": [
+      "すべての交差点で必ず二段階右折をしなければならない",
+      "二段階右折の標識がある交差点、または片側3車線以上の道路の交差点で必要になる",
+      "二段階右折は原付には適用されない規定である",
+      "信号のない交差点でのみ二段階右折が必要である"
+    ],
+    "answer": 1,
+    "explanation": "二段階右折は、その旨を示す標識がある交差点や、片側3車線以上ある道路の交差点で必要となる。それ以外の通常の交差点では一般的な右折方法でよい。",
+    "isTrapQuestion": true,
+    "trapNumberType": "twoStageRightTurn",
+    "topicTag": "rules"
+  },
+  {
+    "id": "g256",
+    "licenseCategory": [
+      "gentsuki"
+    ],
+    "stageTag": "第二段階",
+    "difficulty": 2,
+    "questionText": "車間距離に関する原付の運転者の義務として正しいのはどれか。",
+    "choices": [
+      "車間距離は速度に関係なく一定でよい",
+      "前車との距離は特に定められていないので自由でよい",
+      "前車が急に停止しても追突しない安全な車間距離を保つ必要がある",
+      "車間距離を詰めるほど安全性が高まる"
+    ],
+    "answer": 2,
+    "explanation": "運転者は、前を走る車が急に停止しても追突を避けられるだけの安全な車間距離を保つ義務がある。",
+    "isTrapQuestion": true,
+    "trapNumberType": "followingDistance",
+    "topicTag": "rules"
+  },
+  {
+    "id": "g257",
+    "licenseCategory": [
+      "gentsuki"
+    ],
+    "stageTag": "第一段階",
+    "difficulty": 2,
+    "questionText": "右左折や進路変更を行うときの合図に関する規定として正しいのはどれか。",
+    "choices": [
+      "定められたタイミングで方向指示器などによる合図を行わなければならない",
+      "合図は運転者の判断で省略できる",
+      "合図は交差点の中でのみ行えばよい",
+      "合図は夜間のみ義務付けられている"
+    ],
+    "answer": 0,
+    "explanation": "右左折や進路変更を行う際は、それぞれ定められたタイミングで方向指示器等による合図を行うことが義務付けられている。",
+    "isTrapQuestion": false,
+    "trapNumberType": "none",
+    "topicTag": "rules"
+  },
+  {
+    "id": "g258",
+    "licenseCategory": [
+      "gentsuki"
+    ],
+    "stageTag": "第二段階",
+    "difficulty": 2,
+    "questionText": "信号機の信号に関する原付の運転者の義務として正しいのはどれか。",
+    "choices": [
+      "原付は信号機の信号に従う義務はない",
+      "原付も四輪車と同様に信号機の信号に従う義務がある",
+      "原付は青信号のときのみ信号に従えばよい",
+      "信号機がある交差点でも自分の判断を優先してよい"
+    ],
+    "answer": 1,
+    "explanation": "原付も他の車両と同様に道路交通法に基づき信号機の信号に従う義務がある。",
+    "isTrapQuestion": false,
+    "trapNumberType": "none",
+    "topicTag": "rules"
+  },
+  {
+    "id": "g259",
+    "licenseCategory": [
+      "gentsuki"
+    ],
+    "stageTag": "第一段階",
+    "difficulty": 2,
+    "questionText": "二輪車の並進(横に並んで走行すること)に関する規定として正しいのはどれか。",
+    "choices": [
+      "常に自由に並進してよい",
+      "並進の可否は運転者の判断に任されている",
+      "二人までなら並進してよい",
+      "並進を認める道路標識がある場所を除き、並進は禁止されている"
+    ],
+    "answer": 3,
+    "explanation": "二輪車の並進は、これを認める道路標識がある区間を除いて禁止されている。",
+    "isTrapQuestion": true,
+    "trapNumberType": "other",
+    "topicTag": "rules"
+  },
+  {
+    "id": "g260",
+    "licenseCategory": [
+      "gentsuki"
+    ],
+    "stageTag": "第二段階",
+    "difficulty": 3,
+    "questionText": "運転中の携帯電話の使用に関する規定として正しいのはどれか。",
+    "choices": [
+      "手に持って通話しながら運転することは禁止されている",
+      "手に持たなければ通話しながら運転してもよい",
+      "停止中であれば手に持って操作してもよい規定は運転中とは別に考える必要がある",
+      "携帯電話の使用は運転中でも制限されていない"
+    ],
+    "answer": 0,
+    "explanation": "運転中に携帯電話を手に持って通話したり画面を注視したりする行為は法律で禁止されている。",
+    "isTrapQuestion": false,
+    "trapNumberType": "none",
+    "topicTag": "rules"
+  },
+  {
+    "id": "g261",
+    "licenseCategory": [
+      "gentsuki"
+    ],
+    "stageTag": "第一段階",
+    "difficulty": 1,
+    "questionText": "原付を運転するときに携帯すべきものとして正しいのはどれか。",
+    "choices": [
+      "車検証(原付には車検制度自体がない)",
+      "健康保険証のみで免許証は不要",
+      "運転免許証",
+      "特に携帯する義務のある書類はない"
+    ],
+    "answer": 2,
+    "explanation": "原付を運転するときは運転免許証を携帯する義務があり、提示を求められた場合に応じられるようにしておく必要がある。",
+    "isTrapQuestion": false,
+    "trapNumberType": "none",
+    "topicTag": "rules"
+  },
+  {
+    "id": "g262",
+    "licenseCategory": [
+      "gentsuki"
+    ],
+    "stageTag": "第二段階",
+    "difficulty": 1,
+    "questionText": "飲酒運転に関する原付の規定として正しいのはどれか。",
+    "choices": [
+      "少量の飲酒であれば運転してもよい",
+      "酒気を帯びた状態での運転は一切認められていない",
+      "原付は車両が小さいため飲酒運転の規制対象外である",
+      "飲酒後、少し休めば運転してよい"
+    ],
+    "answer": 1,
+    "explanation": "原付を含むすべての車両において、酒気を帯びた状態での運転は法律で禁止されている。",
+    "isTrapQuestion": false,
+    "trapNumberType": "none",
+    "topicTag": "rules"
+  },
+  {
+    "id": "g263",
+    "licenseCategory": [
+      "gentsuki"
+    ],
+    "stageTag": "第一段階",
+    "difficulty": 1,
+    "questionText": "「止まれ」の一時停止標識がある場所での運転者の義務として正しいのはどれか。",
+    "choices": [
+      "交通量が少なければ停止しなくてもよい",
+      "停止線の直前で必ず一時停止しなければならない",
+      "徐行すれば停止しなくてもよい",
+      "歩行者がいなければ停止は不要である"
+    ],
+    "answer": 1,
+    "explanation": "一時停止の標識がある場所では、交通状況にかかわらず停止線の直前で必ず一時停止しなければならない。",
+    "isTrapQuestion": true,
+    "trapNumberType": "other",
+    "topicTag": "rules"
+  },
+  {
+    "id": "g264",
+    "licenseCategory": [
+      "gentsuki"
+    ],
+    "stageTag": "第二段階",
+    "difficulty": 1,
+    "questionText": "歩道の通行に関する原付の規定として正しいのはどれか。",
+    "choices": [
+      "歩道の通行は速度を落とせば認められる",
+      "歩道は自由に通行してよい",
+      "歩行者がいなければ歩道を通行してよい",
+      "歩道は原則として通行してはならない"
+    ],
+    "answer": 3,
+    "explanation": "原付は車両であるため、特別な標識がある場所などを除き、歩道を通行することは原則として認められていない。",
+    "isTrapQuestion": true,
+    "trapNumberType": "other",
+    "topicTag": "rules"
+  },
+  {
+    "id": "g265",
+    "licenseCategory": [
+      "gentsuki"
+    ],
+    "stageTag": "第一段階",
+    "difficulty": 2,
+    "questionText": "サイレンを鳴らして接近する緊急自動車がある場合の原付の対応として正しいのはどれか。",
+    "choices": [
+      "緊急自動車を無視してそのまま走行を続けてよい",
+      "道を譲らず進路を優先してよい",
+      "進路を譲るなどして緊急自動車の通行を妨げないようにする",
+      "緊急自動車が近づいても速度を落とす必要はない"
+    ],
+    "answer": 2,
+    "explanation": "サイレンを鳴らして接近する緊急自動車に対しては、交差点を避けて一時停止するなど、進路を譲って通行を妨げないようにしなければならない。",
+    "isTrapQuestion": false,
+    "trapNumberType": "none",
+    "topicTag": "rules"
+  },
+  {
+    "id": "g266",
+    "licenseCategory": [
+      "gentsuki"
+    ],
+    "stageTag": "第二段階",
+    "difficulty": 2,
+    "questionText": "車両通行帯がある道路での原付の走行位置について正しいのはどれか。",
+    "choices": [
+      "右側の車両通行帯を自由に選んでよい",
+      "常に道路の中央を通行してよい",
+      "追い越しなどの場合を除き、道路の左側寄りを通行する",
+      "走行位置に関する規定はない"
+    ],
+    "answer": 2,
+    "explanation": "車両は、追い越しなど特別な場合を除いて道路の左側に寄って通行することが原則とされている。",
+    "isTrapQuestion": false,
+    "trapNumberType": "none",
+    "topicTag": "rules"
+  },
+  {
+    "id": "g267",
+    "licenseCategory": [
+      "gentsuki"
+    ],
+    "stageTag": "第一段階",
+    "difficulty": 2,
+    "questionText": "道路上で複数の車両が速度を競い合う行為に関する規定として正しいのはどれか。",
+    "choices": [
+      "交通量が少なければ問題ない",
+      "公道での速度を競い合う行為(共同危険行為等)は禁止されている",
+      "深夜であれば認められる",
+      "参加者の同意があれば認められる"
+    ],
+    "answer": 1,
+    "explanation": "複数の車両が公道で速度を競い合うなどの共同危険行為は法律で明確に禁止されている。",
+    "isTrapQuestion": false,
+    "trapNumberType": "none",
+    "topicTag": "rules"
+  },
+  {
+    "id": "g268",
+    "licenseCategory": [
+      "gentsuki"
+    ],
+    "stageTag": "第二段階",
+    "difficulty": 2,
+    "questionText": "薬の服用後に原付を運転する場合の注意点として正しいのはどれか。",
+    "choices": [
+      "どんな薬でも運転には影響しないと考えてよい",
+      "眠気などの副作用がある薬を服用した状態での運転は避けるべきである",
+      "処方薬であれば運転に注意する必要はない",
+      "薬の服用と運転の可否は無関係である"
+    ],
+    "answer": 1,
+    "explanation": "眠気などの副作用を伴う薬を服用した状態での運転は正常な運転操作ができないおそれがあるため避けるべきである。",
+    "isTrapQuestion": false,
+    "trapNumberType": "none",
+    "topicTag": "rules"
+  },
+  {
+    "id": "g269",
+    "licenseCategory": [
+      "gentsuki"
+    ],
+    "stageTag": "第一段階",
+    "difficulty": 2,
+    "questionText": "信号のない横断歩道に歩行者がいるときの原付の運転者の義務として正しいのはどれか。",
+    "choices": [
+      "歩行者より車両の通行が優先される",
+      "歩行者の横断を妨げないよう一時停止するなどして道を譲る",
+      "歩行者がいても徐行だけすればよい",
+      "横断歩道の手前で加速してよい"
+    ],
+    "answer": 1,
+    "explanation": "信号のない横断歩道を横断しようとする歩行者がいるときは、運転者は一時停止するなどして歩行者の横断を妨げてはならない。",
+    "isTrapQuestion": true,
+    "trapNumberType": "other",
+    "topicTag": "rules"
+  },
+  {
+    "id": "g270",
+    "licenseCategory": [
+      "gentsuki"
+    ],
+    "stageTag": "第二段階",
+    "difficulty": 3,
+    "questionText": "交差点の側端から5メートル以内における駐車に関する規定として正しいのはどれか。",
+    "choices": [
+      "交差点の側端から5メートル以内でも駐車してよい",
+      "交差点の側端から5メートル以内は駐停車が禁止されている",
+      "交差点付近は駐車禁止だが停車は自由にできる",
+      "5メートル以内の規定は四輪車のみに適用される"
+    ],
+    "answer": 1,
+    "explanation": "交差点の側端から5メートル以内の場所は、見通しを妨げ危険であるため駐停車が禁止されている。",
+    "isTrapQuestion": true,
+    "trapNumberType": "other",
+    "topicTag": "parking"
+  },
+  {
+    "id": "g271",
+    "licenseCategory": [
+      "gentsuki"
+    ],
+    "stageTag": "第一段階",
+    "difficulty": 1,
+    "questionText": "消防用機械器具の置場や消火栓の付近における駐車について正しいのはどれか。",
+    "choices": [
+      "消火栓から5メートル以内は駐車が禁止されている",
+      "消火栓の近くであれば短時間なら駐車してよい",
+      "消防用の設備は駐車禁止の対象にならない",
+      "消火栓からの距離に関する規定はない"
+    ],
+    "answer": 0,
+    "explanation": "消火栓や消防用機械器具の置場から5メートル以内の場所は、緊急時の使用を妨げないよう駐車が禁止されている。",
+    "isTrapQuestion": true,
+    "trapNumberType": "other",
+    "topicTag": "parking"
+  },
+  {
+    "id": "g272",
+    "licenseCategory": [
+      "gentsuki"
+    ],
+    "stageTag": "第二段階",
+    "difficulty": 1,
+    "questionText": "他人の家や施設の出入口付近における駐車について正しいのはどれか。",
+    "choices": [
+      "出入口から3メートル以内は駐車が禁止されている",
+      "出入口付近であれば自由に駐車してよい",
+      "出入口をふさがなければ距離の規定はない",
+      "出入口付近の駐車は禁止されていない"
+    ],
+    "answer": 0,
+    "explanation": "自動車用の出入口から3メートル以内の場所は、車両の出入りを妨げるため駐車が禁止されている。",
+    "isTrapQuestion": true,
+    "trapNumberType": "other",
+    "topicTag": "parking"
+  },
+  {
+    "id": "g273",
+    "licenseCategory": [
+      "gentsuki"
+    ],
+    "stageTag": "第一段階",
+    "difficulty": 1,
+    "questionText": "「駐車」と「停車」の違いとして正しいのはどれか。",
+    "choices": [
+      "運転者がすぐに運転できる状態で短時間停止するのは停車、それ以外の継続的な停止は駐車に区分される",
+      "駐車と停車はまったく同じ意味である",
+      "停車の方が駐車より長い時間の停止を指す",
+      "駐車は違反にならないが停車は必ず違反になる"
+    ],
+    "answer": 0,
+    "explanation": "運転者がすぐに車両を移動できる状態で短時間停止することを「停車」といい、それ以外の継続的な停止や運転者が車両を離れる場合は「駐車」に区分される。",
+    "isTrapQuestion": false,
+    "trapNumberType": "none",
+    "topicTag": "parking"
+  },
+  {
+    "id": "g274",
+    "licenseCategory": [
+      "gentsuki"
+    ],
+    "stageTag": "第二段階",
+    "difficulty": 1,
+    "questionText": "見通しの悪いカーブや坂の頂上付近での駐停車について正しいのはどれか。",
+    "choices": [
+      "カーブや坂の頂上付近に駐停車の規制はない",
+      "見通しが悪くても短時間であれば駐停車してよい",
+      "見通しの悪いカーブや坂の頂上付近は駐停車が禁止されている",
+      "坂の頂上付近は駐車のみ禁止で停車はできる"
+    ],
+    "answer": 2,
+    "explanation": "見通しの悪いカーブの付近や坂の頂上付近は、後続車や対向車から発見が遅れ危険なため駐停車が禁止されている。",
+    "isTrapQuestion": true,
+    "trapNumberType": "other",
+    "topicTag": "parking"
+  },
+  {
+    "id": "g275",
+    "licenseCategory": [
+      "gentsuki"
+    ],
+    "stageTag": "第一段階",
+    "difficulty": 2,
+    "questionText": "歩道に原付を駐車するときの注意点として正しいのはどれか。",
+    "choices": [
+      "歩行者の通行の妨げにならないよう配慮し、認められた方法で駐車する",
+      "歩道であればどこにでも自由に駐車してよい",
+      "歩道上の駐車には規制が一切ない",
+      "歩行者がいなければ通行帯をふさいでもよい"
+    ],
+    "answer": 0,
+    "explanation": "歩道に駐車する場合であっても歩行者の通行を妨げないよう配慮し、決められた方法や場所で駐車する必要がある。",
+    "isTrapQuestion": false,
+    "trapNumberType": "none",
+    "topicTag": "parking"
+  },
+  {
+    "id": "g276",
+    "licenseCategory": [
+      "gentsuki"
+    ],
+    "stageTag": "第二段階",
+    "difficulty": 2,
+    "questionText": "バス停留所の標識から一定距離内における駐車について正しいのはどれか。",
+    "choices": [
+      "バスが来ていなければ停留所付近に駐車してよい",
+      "バス停付近には駐車の規制はない",
+      "停留所の標識から10メートル以内は駐車が禁止されている",
+      "停留所の標識から1メートル以内のみ禁止されている"
+    ],
+    "answer": 2,
+    "explanation": "バスの停留所を表示する標識から10メートル以内の場所は、バスの発着を妨げるため駐車が禁止されている。",
+    "isTrapQuestion": true,
+    "trapNumberType": "other",
+    "topicTag": "parking"
+  },
+  {
+    "id": "g277",
+    "licenseCategory": [
+      "gentsuki"
+    ],
+    "stageTag": "第一段階",
+    "difficulty": 2,
+    "questionText": "有料の駐車区画(パーキングメーターなど)を利用するときの心がけとして正しいのはどれか。",
+    "choices": [
+      "混雑していなければルールを守らなくてよい",
+      "料金を支払えば時間制限を超えて駐車してよい",
+      "定められた時間や料金のルールを守って利用する",
+      "パーキングメーターの表示は目安であり従う必要はない"
+    ],
+    "answer": 2,
+    "explanation": "有料駐車区画では定められた時間や料金のルールを守って利用する必要があり、これを超える駐車は違反となる。",
+    "isTrapQuestion": false,
+    "trapNumberType": "none",
+    "topicTag": "parking"
+  },
+  {
+    "id": "g278",
+    "licenseCategory": [
+      "gentsuki"
+    ],
+    "stageTag": "第二段階",
+    "difficulty": 2,
+    "questionText": "駐車場所を選ぶときに避けるべき場所として適切なのはどれか。",
+    "choices": [
+      "他の車両や歩行者の通行を妨げる場所",
+      "広い駐車場の中の区画線内",
+      "許可された駐輪場や駐車場",
+      "建物の敷地内にある指定駐車スペース"
+    ],
+    "answer": 0,
+    "explanation": "駐車する際は、他の車両や歩行者の通行を妨げる場所を避け、許可された場所に適切に駐車する必要がある。",
+    "isTrapQuestion": false,
+    "trapNumberType": "none",
+    "topicTag": "parking"
+  },
+  {
+    "id": "g279",
+    "licenseCategory": [
+      "gentsuki"
+    ],
+    "stageTag": "第一段階",
+    "difficulty": 2,
+    "questionText": "原付のタイヤを点検するときに確認すべき項目として正しいのはどれか。",
+    "choices": [
+      "タイヤの溝の深さと空気圧",
+      "タイヤの色とメーカー名のみ",
+      "タイヤの製造年だけを確認すればよい",
+      "タイヤは点検しなくても問題ない"
+    ],
+    "answer": 0,
+    "explanation": "タイヤの溝の深さが不足したり空気圧が適正でなかったりするとグリップ力が低下し危険なため、日常点検で確認する必要がある。",
+    "isTrapQuestion": false,
+    "trapNumberType": "none",
+    "topicTag": "maintenance"
+  },
+  {
+    "id": "g280",
+    "licenseCategory": [
+      "gentsuki"
+    ],
+    "stageTag": "第二段階",
+    "difficulty": 3,
+    "questionText": "ブレーキレバーやブレーキペダルの点検で確認すべき項目として正しいのはどれか。",
+    "choices": [
+      "レバーやペダルの適度な遊びと効き具合",
+      "レバーやペダルの色だけを確認すればよい",
+      "ブレーキは点検の対象にならない",
+      "ブレーキランプの点検は不要である"
+    ],
+    "answer": 0,
+    "explanation": "ブレーキレバーやペダルには適度な「遊び」が必要であり、遊びの量や制動の効き具合を点検して異常があれば整備する必要がある。",
+    "isTrapQuestion": true,
+    "trapNumberType": "other",
+    "topicTag": "maintenance"
+  },
+  {
+    "id": "g281",
+    "licenseCategory": [
+      "gentsuki"
+    ],
+    "stageTag": "第一段階",
+    "difficulty": 1,
+    "questionText": "駆動用のチェーンを点検するときに確認すべき項目として正しいのはどれか。",
+    "choices": [
+      "チェーンの点検はエンジンを切らずに行うべきである",
+      "チェーンの色のみ確認すればよい",
+      "チェーンは一度取り付けたら点検不要である",
+      "チェーンのたるみ具合と潤滑の状態"
+    ],
+    "answer": 3,
+    "explanation": "駆動用チェーンはたるみが適正か、また潤滑が十分かを点検し、必要に応じて注油や調整を行う必要がある。",
+    "isTrapQuestion": false,
+    "trapNumberType": "none",
+    "topicTag": "maintenance"
+  },
+  {
+    "id": "g282",
+    "licenseCategory": [
+      "gentsuki"
+    ],
+    "stageTag": "第二段階",
+    "difficulty": 1,
+    "questionText": "灯火類の点検で確認すべき項目として正しいのはどれか。",
+    "choices": [
+      "方向指示器は点検の対象外である",
+      "ヘッドライトの点灯のみ確認すればよい",
+      "昼間は灯火類を点検しなくてよい",
+      "ヘッドライト、テールランプ、ブレーキランプ、方向指示器がすべて正しく点灯するか"
+    ],
+    "answer": 3,
+    "explanation": "ヘッドライトやテールランプ、ブレーキランプ、方向指示器など、すべての灯火類が正しく点灯するかを点検する必要がある。",
+    "isTrapQuestion": false,
+    "trapNumberType": "none",
+    "topicTag": "maintenance"
+  },
+  {
+    "id": "g283",
+    "licenseCategory": [
+      "gentsuki"
+    ],
+    "stageTag": "第一段階",
+    "difficulty": 1,
+    "questionText": "警音器(クラクション)の点検について正しいのはどれか。",
+    "choices": [
+      "警音器は点検の対象ではない",
+      "正常に音が鳴るかを点検する",
+      "警音器は壊れていても運転に支障はない",
+      "警音器の点検は年に一度でよい"
+    ],
+    "answer": 1,
+    "explanation": "警音器は緊急時に周囲へ注意を促すための重要な装備であり、正常に作動するか日常点検で確認する必要がある。",
+    "isTrapQuestion": false,
+    "trapNumberType": "none",
+    "topicTag": "maintenance"
+  },
+  {
+    "id": "g284",
+    "licenseCategory": [
+      "gentsuki"
+    ],
+    "stageTag": "第二段階",
+    "difficulty": 1,
+    "questionText": "ミラー(バックミラー)の点検・調整について正しいのはどれか。",
+    "choices": [
+      "ミラーは一度調整すれば以後確認しなくてよい",
+      "走行前に後方や側方がよく見える角度に調整する",
+      "ミラーが多少割れていても運転に支障はない",
+      "ミラーの調整は走行中に行うべきである"
+    ],
+    "answer": 1,
+    "explanation": "ミラーは走行前に後方や側方がよく見える角度に調整し、破損がないかも確認しておく必要がある。走行中の調整は視線がそれ危険である。",
+    "isTrapQuestion": false,
+    "trapNumberType": "none",
+    "topicTag": "maintenance"
+  },
+  {
+    "id": "g285",
+    "licenseCategory": [
+      "gentsuki"
+    ],
+    "stageTag": "第一段階",
+    "difficulty": 2,
+    "questionText": "エンジンオイルの点検について正しいのはどれか。",
+    "choices": [
+      "エンジンオイルは一度入れたら交換や点検の必要はない",
+      "定期的に量や汚れの状態を確認し、不足していれば補充する",
+      "オイルの量は運転には影響しない",
+      "オイルの点検はエンジンが高温のときに行うのが最も安全である"
+    ],
+    "answer": 1,
+    "explanation": "エンジンオイルは定期的に量や汚れの状態を点検し、不足や劣化があれば補充・交換する必要がある。",
+    "isTrapQuestion": true,
+    "trapNumberType": "other",
+    "topicTag": "maintenance"
+  },
+  {
+    "id": "g286",
+    "licenseCategory": [
+      "gentsuki"
+    ],
+    "stageTag": "第二段階",
+    "difficulty": 2,
+    "questionText": "原付に乗る前の日常点検の習慣について正しいのはどれか。",
+    "choices": [
+      "点検は購入時に一度行えば十分である",
+      "毎回の走行前に主要な箇所を点検する習慣をつけることが望ましい",
+      "点検は販売店に任せておけば運転者は行わなくてよい",
+      "異常がなければ点検の習慣は不要である"
+    ],
+    "answer": 1,
+    "explanation": "タイヤやブレーキ、灯火類などの日常点検は毎回の走行前に行う習慣をつけることで、不具合の早期発見と事故の予防につながる。",
+    "isTrapQuestion": true,
+    "trapNumberType": "other",
+    "topicTag": "maintenance"
+  },
+  {
+    "id": "g287",
+    "licenseCategory": [
+      "gentsuki"
+    ],
+    "stageTag": "第一段階",
+    "difficulty": 2,
+    "questionText": "原付免許を取得できる年齢として正しいのはどれか。",
+    "choices": [
+      "15歳以上",
+      "18歳以上",
+      "16歳以上",
+      "20歳以上"
+    ],
+    "answer": 2,
+    "explanation": "原付免許は満16歳以上であれば取得することができる。",
+    "isTrapQuestion": true,
+    "trapNumberType": "other",
+    "topicTag": "license_system"
+  },
+  {
+    "id": "g288",
+    "licenseCategory": [
+      "gentsuki"
+    ],
+    "stageTag": "第二段階",
+    "difficulty": 2,
+    "questionText": "原付免許取得に必要な視力の基準として正しいのはどれか。",
+    "choices": [
+      "視力の基準は定められていない",
+      "片眼が見えなくても両眼で判断されないため関係ない",
+      "両眼で0.5以上(眼鏡等での矯正を含む)であること",
+      "裸眼視力のみで判断され矯正視力は認められない"
+    ],
+    "answer": 2,
+    "explanation": "原付免許の取得には、眼鏡やコンタクトレンズによる矯正を含めて両眼で0.5以上の視力があることなどの基準が定められている。",
+    "isTrapQuestion": false,
+    "trapNumberType": "none",
+    "topicTag": "license_system"
+  },
+  {
+    "id": "g289",
+    "licenseCategory": [
+      "gentsuki"
+    ],
+    "stageTag": "第一段階",
+    "difficulty": 2,
+    "questionText": "運転免許証の更新に関する一般的な仕組みとして正しいのはどれか。",
+    "choices": [
+      "免許証に有効期限は設けられていない",
+      "更新の案内は一切届かず自分で管理する必要がある",
+      "更新の時期が近づくと更新連絡のはがき等で通知が届く",
+      "更新手続きは一生に一度だけでよい"
+    ],
+    "answer": 2,
+    "explanation": "運転免許証には有効期限があり、更新時期が近づくと更新連絡の通知が届くしくみになっている。",
+    "isTrapQuestion": false,
+    "trapNumberType": "none",
+    "topicTag": "license_system"
+  },
+  {
+    "id": "g290",
+    "licenseCategory": [
+      "gentsuki"
+    ],
+    "stageTag": "第二段階",
+    "difficulty": 3,
+    "questionText": "交通違反や事故によって累積する制度として正しいのはどれか。",
+    "choices": [
+      "累積した点数は運転免許に一切影響しない",
+      "違反をしても点数が累積する制度はない",
+      "違反や事故の内容に応じて点数が付与され、累積すると免許の停止や取消しにつながる制度がある",
+      "事故を起こしても違反点数には反映されない"
+    ],
+    "answer": 2,
+    "explanation": "交通違反や事故には内容に応じた点数が定められており、一定期間内に累積すると免許の停止や取消しなどの処分につながる制度がある。",
+    "isTrapQuestion": true,
+    "trapNumberType": "other",
+    "topicTag": "license_system"
+  },
+  {
+    "id": "g291",
+    "licenseCategory": [
+      "gentsuki"
+    ],
+    "stageTag": "第一段階",
+    "difficulty": 1,
+    "questionText": "運転免許証を紛失した場合の対応として正しいのはどれか。",
+    "choices": [
+      "次の更新のときにまとめて手続きすればよい",
+      "紛失しても特に手続きは不要である",
+      "警察署等で再交付の手続きを行う",
+      "紛失した免許証は自然に失効するので何もしなくてよい"
+    ],
+    "answer": 2,
+    "explanation": "運転免許証を紛失した場合は、警察署や運転免許センター等で再交付の手続きを行う必要がある。",
+    "isTrapQuestion": false,
+    "trapNumberType": "none",
+    "topicTag": "license_system"
+  },
+  {
+    "id": "g292",
+    "licenseCategory": [
+      "gentsuki"
+    ],
+    "stageTag": "第二段階",
+    "difficulty": 1,
+    "questionText": "運転中に交通事故を起こした場合、運転者に義務付けられていることとして正しいのはどれか。",
+    "choices": [
+      "相手に連絡先を伝えればそれ以上の対応は不要である",
+      "軽い事故であれば報告の義務はない",
+      "負傷者の救護と警察への報告を行う義務がある",
+      "事故の程度にかかわらず現場を離れてよい"
+    ],
+    "answer": 2,
+    "explanation": "交通事故を起こした運転者には、負傷者の救護措置を行うとともに、警察に事故の内容を報告する義務が法律で定められている。",
+    "isTrapQuestion": true,
+    "trapNumberType": "other",
+    "topicTag": "emergency"
+  },
+  {
+    "id": "g293",
+    "licenseCategory": [
+      "gentsuki"
+    ],
+    "stageTag": "第一段階",
+    "difficulty": 1,
+    "questionText": "事故現場で二次的な事故を防ぐための行動として正しいのはどれか。",
+    "choices": [
+      "後続車への合図は不要である",
+      "事故現場ではその場から一切動いてはいけない",
+      "可能であれば車両を安全な場所に移動し、後続車に事故の発生を知らせる",
+      "負傷者の救護よりも先に車両の片付けを優先する"
+    ],
+    "answer": 2,
+    "explanation": "事故後は可能な範囲で車両を安全な場所に移し、発煙筒やハザードランプなどで後続車に事故の発生を知らせ、二次的な事故を防ぐことが重要である。",
+    "isTrapQuestion": false,
+    "trapNumberType": "none",
+    "topicTag": "emergency"
+  },
+  {
+    "id": "g294",
+    "licenseCategory": [
+      "gentsuki"
+    ],
+    "stageTag": "第二段階",
+    "difficulty": 2,
+    "questionText": "交通事故や急病人を発見したときに連絡すべき緊急通報先として正しいのはどれか。",
+    "choices": [
+      "警察は110番、救急・消防は119番に連絡する",
+      "どちらの場合も同じ番号に連絡すればよい",
+      "緊急通報は近くの店舗に頼めばよい",
+      "緊急通報先は地域ごとにすべて異なる"
+    ],
+    "answer": 0,
+    "explanation": "事故の通報や事件の場合は110番、けが人や急病人が出た場合の救急要請や火災の場合は119番に連絡する。",
+    "isTrapQuestion": true,
+    "trapNumberType": "other",
+    "topicTag": "emergency"
+  },
+  {
+    "id": "g295",
+    "licenseCategory": [
+      "gentsuki"
+    ],
+    "stageTag": "第一段階",
+    "difficulty": 2,
+    "questionText": "走行中に原付が突然故障し停止した場合の対応として正しいのはどれか。",
+    "choices": [
+      "安全な場所に車両を移動し、ハザードランプなどで周囲に異常を知らせる",
+      "故障した場所にそのまま停止させておいてよい",
+      "後続車への合図をせずに修理を始める",
+      "車道の真ん中で停止したままでも問題ない"
+    ],
+    "answer": 0,
+    "explanation": "走行中に故障した場合は、できるだけ安全な場所へ車両を移動させ、ハザードランプなどを使って周囲に異常を知らせる必要がある。",
+    "isTrapQuestion": false,
+    "trapNumberType": "none",
+    "topicTag": "emergency"
+  },
+  {
+    "id": "g296",
+    "licenseCategory": [
+      "gentsuki"
+    ],
+    "stageTag": "第二段階",
+    "difficulty": 2,
+    "questionText": "意識のない負傷者を見つけたときの対応として適切なのはどれか。",
+    "choices": [
+      "負傷者の状態にかかわらずすぐに車両の移動を最優先する",
+      "むやみに体を大きく動かして揺さぶる",
+      "意識がなければ何もせず立ち去ってよい",
+      "呼吸の有無を確認し、必要に応じて救急への通報や応急手当を行う"
+    ],
+    "answer": 3,
+    "explanation": "意識のない負傷者を見つけた場合は、呼吸の状態を確認し、必要に応じて救急への通報や可能な範囲での応急手当を行うことが求められる。むやみに動かすと状態を悪化させる危険がある。",
+    "isTrapQuestion": false,
+    "trapNumberType": "none",
+    "topicTag": "emergency"
+  },
+  {
+    "id": "g297",
+    "licenseCategory": [
+      "gentsuki"
+    ],
+    "stageTag": "第一段階",
+    "difficulty": 2,
+    "questionText": "燃料周りからの出火など車両火災の危険がある場面での対応として正しいのはどれか。",
+    "choices": [
+      "車両火災の危険がある場合でも通常通り作業してよい",
+      "火が出ていても近づいて確認してから避難すればよい",
+      "燃料付近ではたばこを吸っても問題ない",
+      "火気を近づけず、安全な距離を確保してから対応する"
+    ],
+    "answer": 3,
+    "explanation": "燃料周りからの出火の危険がある場合は、火気を近づけず、まず安全な距離を確保したうえで落ち着いて対応することが重要である。",
+    "isTrapQuestion": false,
+    "trapNumberType": "none",
+    "topicTag": "emergency"
+  },
+  {
+    "id": "g298",
+    "licenseCategory": [
+      "gentsuki"
+    ],
+    "stageTag": "第二段階",
+    "difficulty": 2,
+    "questionText": "「止まれ」を示す逆三角形の標識がある場所での対応として正しいのはどれか。",
+    "choices": [
+      "交通量が少なければ徐行だけでよい",
+      "停止線の直前で必ず一時停止する",
+      "歩行者がいなければ停止しなくてよい",
+      "この標識は四輪車のみに適用される"
+    ],
+    "answer": 1,
+    "explanation": "逆三角形の「止まれ」の標識がある場所では、交通量や歩行者の有無にかかわらず停止線の直前で必ず一時停止しなければならない。",
+    "isTrapQuestion": true,
+    "trapNumberType": "other",
+    "topicTag": "signs"
+  },
+  {
+    "id": "g299",
+    "licenseCategory": [
+      "gentsuki"
+    ],
+    "stageTag": "第一段階",
+    "difficulty": 3,
+    "questionText": "信号機の黄色信号の意味として正しいのはどれか。",
+    "choices": [
+      "安全に停止できる場合は停止しなければならない",
+      "黄色信号は加速してよい合図である",
+      "黄色信号は青信号と同じ扱いである",
+      "黄色信号のときは一時停止が不要になる"
+    ],
+    "answer": 0,
+    "explanation": "黄色信号は、安全に停止することができる場合は停止位置を越えて進行してはならないという意味を持つ信号である。",
+    "isTrapQuestion": false,
+    "trapNumberType": "none",
+    "topicTag": "signs"
+  },
+  {
+    "id": "g300",
+    "licenseCategory": [
+      "gentsuki"
+    ],
+    "stageTag": "第二段階",
+    "difficulty": 3,
+    "questionText": "「二輪車通行止め」の標識がある道路について正しいのはどれか。",
+    "choices": [
+      "二輪車通行止めは自転車にのみ適用される",
+      "原付一種はこの標識の対象外である",
+      "原付を含む二輪車はその道路を通行できない",
+      "この標識があっても二輪車は通行できる"
+    ],
+    "answer": 2,
+    "explanation": "「二輪車通行止め」の標識がある道路は、原付を含めすべての二輪車が通行できないことを示している。",
+    "isTrapQuestion": true,
+    "trapNumberType": "other",
+    "topicTag": "signs"
   }
 ]

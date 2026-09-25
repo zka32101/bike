@@ -4334,5 +4334,2005 @@
     "isTrapQuestion": false,
     "trapNumberType": "none",
     "topicTag": "hazard_prediction"
+  },
+  {
+    "id": "f201",
+    "licenseCategory": [
+      "futsuuNirin"
+    ],
+    "stageTag": "第一段階",
+    "difficulty": 1,
+    "questionText": "普通自動二輪車が信号機のない一般道路を走行するときの法定最高速度として正しいのはどれか。",
+    "choices": [
+      "時速60キロメートル",
+      "時速40キロメートル",
+      "時速80キロメートル",
+      "時速30キロメートル"
+    ],
+    "answer": 0,
+    "explanation": "標識による指定がない一般道路での法定最高速度は時速60キロメートルである。",
+    "isTrapQuestion": false,
+    "trapNumberType": "none",
+    "topicTag": "rules"
+  },
+  {
+    "id": "f202",
+    "licenseCategory": [
+      "futsuuNirin"
+    ],
+    "stageTag": "第一段階",
+    "difficulty": 2,
+    "questionText": "高速道路の本線車道における普通自動二輪車の法定最高速度はどれか。",
+    "choices": [
+      "時速100キロメートル",
+      "時速120キロメートル",
+      "時速90キロメートル",
+      "時速80キロメートル"
+    ],
+    "answer": 0,
+    "explanation": "普通自動二輪車が高速道路の本線車道を走行する場合の法定最高速度は時速100キロメートルである。一般道路の速度と混同しないよう注意する。",
+    "isTrapQuestion": true,
+    "trapNumberType": "speedLimit",
+    "topicTag": "rules"
+  },
+  {
+    "id": "f203",
+    "licenseCategory": [
+      "futsuuNirin"
+    ],
+    "stageTag": "第一段階",
+    "difficulty": 2,
+    "questionText": "普通自動二輪車で二人乗りをする場合、一般道路においてはいつから可能になるか。",
+    "choices": [
+      "免許取得後3年を経過すれば可能",
+      "満20歳になれば免許期間に関係なく可能",
+      "免許取得後1年を経過すれば可能",
+      "免許を取得した直後から可能"
+    ],
+    "answer": 2,
+    "explanation": "一般道路での二人乗りは、普通自動二輪免許を取得してから1年間の初心運転者期間を経過すれば可能となる。高速道路での条件とは異なる点に注意。",
+    "isTrapQuestion": true,
+    "trapNumberType": "twoPersonRiding",
+    "topicTag": "rules"
+  },
+  {
+    "id": "f204",
+    "licenseCategory": [
+      "futsuuNirin"
+    ],
+    "stageTag": "第二段階",
+    "difficulty": 5,
+    "questionText": "高速道路で普通自動二輪車が二人乗りをするために必要な条件として正しいのはどれか。",
+    "choices": [
+      "運転者が20歳以上、かつ当該免許の保有期間が通算3年以上であること",
+      "特に年齢や経験年数の条件はない",
+      "同乗者が20歳以上であればよい",
+      "運転者が18歳以上であればよい"
+    ],
+    "answer": 0,
+    "explanation": "高速道路での二人乗りには、運転者が20歳以上であり、かつ普通自動二輪免許(小型限定を除く)などの免許保有期間が通算3年以上であることが必要とされる。一般道路の1年条件と混同しやすいので注意。",
+    "isTrapQuestion": true,
+    "trapNumberType": "twoPersonRiding",
+    "topicTag": "rules"
+  },
+  {
+    "id": "f205",
+    "licenseCategory": [
+      "futsuuNirin"
+    ],
+    "stageTag": "第二段階",
+    "difficulty": 4,
+    "questionText": "普通自動二輪車(126cc超400cc以下)が右折方法の指定がある交差点を通行する場合の右折方法として正しいのはどれか。",
+    "choices": [
+      "右折は禁止されており、必ず迂回する",
+      "自動車と同じく交差点の中央付近を回る小回り右折を行う",
+      "原動機付自転車と同じく二段階右折をしなければならない",
+      "対向車線に入って先に右折してよい"
+    ],
+    "answer": 1,
+    "explanation": "二段階右折の指定は主に原動機付自転車を対象とするものであり、普通自動二輪車は自動車と同様に交差点の中央付近を通る通常の右折方法をとる。",
+    "isTrapQuestion": true,
+    "trapNumberType": "twoStageRightTurn",
+    "topicTag": "rules"
+  },
+  {
+    "id": "f206",
+    "licenseCategory": [
+      "futsuuNirin"
+    ],
+    "stageTag": "第一段階",
+    "difficulty": 1,
+    "questionText": "トンネルの中での追い越しについて正しいのはどれか。",
+    "choices": [
+      "車両通行帯の有無にかかわらずどこでも追い越せる",
+      "車両通行帯が設けられているトンネルを除き、原則として追い越しは禁止されている",
+      "トンネルの長さが100メートル以上の場合のみ禁止される",
+      "二輪車に限り追い越しが認められている"
+    ],
+    "answer": 1,
+    "explanation": "トンネル内は見通しが悪く危険なため、車両通行帯が設けられている区間を除いて追い越しが禁止されている。",
+    "isTrapQuestion": false,
+    "trapNumberType": "none",
+    "topicTag": "rules"
+  },
+  {
+    "id": "f207",
+    "licenseCategory": [
+      "futsuuNirin"
+    ],
+    "stageTag": "第二段階",
+    "difficulty": 2,
+    "questionText": "追い越しが禁止されている場所として誤っているのはどれか。",
+    "choices": [
+      "道路の曲がり角付近",
+      "上り坂の頂上付近",
+      "勾配の急な下り坂",
+      "見通しのきく直線の一般道路"
+    ],
+    "answer": 3,
+    "explanation": "見通しのきく直線道路は追い越し禁止場所には該当しない。急な下り坂、曲がり角付近、坂の頂上付近などは対向車や前方の見通しが悪いため追い越しが禁止されている。",
+    "isTrapQuestion": false,
+    "trapNumberType": "none",
+    "topicTag": "rules"
+  },
+  {
+    "id": "f208",
+    "licenseCategory": [
+      "futsuuNirin"
+    ],
+    "stageTag": "第一段階",
+    "difficulty": 1,
+    "questionText": "対面する信号が黄色の灯火を表示しているときの意味として正しいのはどれか。",
+    "choices": [
+      "急いで交差点を通過しなければならない",
+      "歩行者だけが優先して進める合図である",
+      "安全に停止できない場合を除き、停止位置から先へ進んではならない",
+      "警笛を鳴らしながらであれば進行できる"
+    ],
+    "answer": 2,
+    "explanation": "黄色信号は、安全に停止することができない場合を除き、停止位置を越えて進行してはならないことを意味する。",
+    "isTrapQuestion": false,
+    "trapNumberType": "none",
+    "topicTag": "rules"
+  },
+  {
+    "id": "f209",
+    "licenseCategory": [
+      "futsuuNirin"
+    ],
+    "stageTag": "第一段階",
+    "difficulty": 1,
+    "questionText": "信号機の赤色灯火が点滅しているときの通行方法として正しいのはどれか。",
+    "choices": [
+      "他の交通に注意しながら徐行して通行する",
+      "停止位置で一時停止し、安全を確認した後に進行できる",
+      "対面する信号がある間は通行できない",
+      "その信号機は故障しているため無視してよい"
+    ],
+    "answer": 1,
+    "explanation": "赤色の点滅信号は、他の交通に注意しながら一時停止し、安全を確認したうえで進行しなければならないことを意味する。",
+    "isTrapQuestion": false,
+    "trapNumberType": "none",
+    "topicTag": "rules"
+  },
+  {
+    "id": "f210",
+    "licenseCategory": [
+      "futsuuNirin"
+    ],
+    "stageTag": "第一段階",
+    "difficulty": 1,
+    "questionText": "踏切を通過するときの正しい方法はどれか。",
+    "choices": [
+      "見通しがよければ停止せずそのまま通過してよい",
+      "直前で一時停止し、目と耳で安全を確かめてから通過する",
+      "二輪車は自動車と異なり一時停止の義務はない",
+      "遮断機が上がっていれば安全確認は不要である"
+    ],
+    "answer": 1,
+    "explanation": "踏切の直前では原則として一時停止し、左右の安全を確認したうえで通過しなければならない。",
+    "isTrapQuestion": true,
+    "trapNumberType": "other",
+    "topicTag": "rules"
+  },
+  {
+    "id": "f211",
+    "licenseCategory": [
+      "futsuuNirin"
+    ],
+    "stageTag": "第二段階",
+    "difficulty": 1,
+    "questionText": "緊急自動車が接近してきたとき、交差点付近を走行していた二輪車がとるべき行動として正しいのはどれか。",
+    "choices": [
+      "交差点を避けて道路の左側に寄り、一時停止して進路を譲る",
+      "そのまま元の速度で走行を続ける",
+      "反対車線に出て緊急自動車を追い越す",
+      "交差点をできるだけ早く通過してから道を譲る"
+    ],
+    "answer": 0,
+    "explanation": "緊急自動車が接近したときは、交差点を避けて道路の左側に寄り、一時停止して進路を譲らなければならない。",
+    "isTrapQuestion": false,
+    "trapNumberType": "none",
+    "topicTag": "rules"
+  },
+  {
+    "id": "f212",
+    "licenseCategory": [
+      "futsuuNirin"
+    ],
+    "stageTag": "第一段階",
+    "difficulty": 1,
+    "questionText": "普通自動二輪車を運転するときのヘルメットのあごひもの扱いとして正しいのはどれか。",
+    "choices": [
+      "暑い時期は外して走行してもよい",
+      "確実に締め、脱げないようにしなければならない",
+      "同乗者だけ確実に締めればよい",
+      "緩めに締めても着用したことになる"
+    ],
+    "answer": 1,
+    "explanation": "ヘルメットはあごひもを確実に締め、走行中に脱げることのないよう正しく着用しなければならない。",
+    "isTrapQuestion": false,
+    "trapNumberType": "none",
+    "topicTag": "rules"
+  },
+  {
+    "id": "f213",
+    "licenseCategory": [
+      "futsuuNirin"
+    ],
+    "stageTag": "第二段階",
+    "difficulty": 4,
+    "questionText": "運転中の停止距離について正しい説明はどれか。",
+    "choices": [
+      "空走距離と制動距離を合わせたものを停止距離という",
+      "停止距離は速度に関係なく一定である",
+      "制動距離だけを停止距離という",
+      "空走距離だけを停止距離という"
+    ],
+    "answer": 0,
+    "explanation": "危険を感じてから実際にブレーキが効き始めるまでに進む空走距離と、ブレーキが効き始めてから停止するまでの制動距離を合わせたものを停止距離という。",
+    "isTrapQuestion": true,
+    "trapNumberType": "followingDistance",
+    "topicTag": "rules"
+  },
+  {
+    "id": "f214",
+    "licenseCategory": [
+      "futsuuNirin"
+    ],
+    "stageTag": "第二段階",
+    "difficulty": 5,
+    "questionText": "速度が2倍になった場合、制動距離はおおむねどうなるか。",
+    "choices": [
+      "約4倍になる",
+      "約3倍になる",
+      "約2倍になる",
+      "ほとんど変わらない"
+    ],
+    "answer": 0,
+    "explanation": "制動距離は速度の2乗にほぼ比例して長くなるため、速度が2倍になると制動距離はおよそ4倍になる。速度に応じて十分な車間距離をとる必要がある。",
+    "isTrapQuestion": true,
+    "trapNumberType": "followingDistance",
+    "topicTag": "rules"
+  },
+  {
+    "id": "f215",
+    "licenseCategory": [
+      "futsuuNirin"
+    ],
+    "stageTag": "第一段階",
+    "difficulty": 1,
+    "questionText": "学校や幼稚園などの付近に設けられている「スクールゾーン」を走行するときの心構えとして正しいのはどれか。",
+    "choices": [
+      "自動車は規制対象だが二輪車は対象外である",
+      "時間帯にかかわらず一定の速度で走行してよい",
+      "児童等の飛び出しを予測し、速度を落として通行する",
+      "標識がなければ特に注意する必要はない"
+    ],
+    "answer": 2,
+    "explanation": "スクールゾーンでは児童の飛び出しなどが予測されるため、速度を落として周囲に注意しながら通行する必要がある。",
+    "isTrapQuestion": false,
+    "trapNumberType": "none",
+    "topicTag": "rules"
+  },
+  {
+    "id": "f216",
+    "licenseCategory": [
+      "futsuuNirin"
+    ],
+    "stageTag": "第一段階",
+    "difficulty": 1,
+    "questionText": "横断歩道の直前に歩行者が横断しようとしているときの対応として正しいのはどれか。",
+    "choices": [
+      "警音器を鳴らして横断をやめさせる",
+      "歩行者が横断を終えるまで一時停止して待つ",
+      "歩行者用信号がなければ止まる必要はない",
+      "速度を落とさず先に通過してよい"
+    ],
+    "answer": 1,
+    "explanation": "横断歩道を横断しようとする歩行者がいるときは、その通行を妨げないよう一時停止して待たなければならない。",
+    "isTrapQuestion": false,
+    "trapNumberType": "none",
+    "topicTag": "rules"
+  },
+  {
+    "id": "f217",
+    "licenseCategory": [
+      "futsuuNirin"
+    ],
+    "stageTag": "第一段階",
+    "difficulty": 1,
+    "questionText": "普通自動二輪車を運転中、携帯電話について正しいのはどれか。",
+    "choices": [
+      "走行中に手に持って通話したり画面を注視したりしてはならない",
+      "停止中であっても操作は一切禁止される",
+      "片手運転であれば通話をしながら運転してもよい",
+      "音声通話のみ常に認められている"
+    ],
+    "answer": 0,
+    "explanation": "走行中に携帯電話を手に持って通話したり、画面を注視したりする行為は禁止されている。",
+    "isTrapQuestion": true,
+    "trapNumberType": "other",
+    "topicTag": "rules"
+  },
+  {
+    "id": "f218",
+    "licenseCategory": [
+      "futsuuNirin"
+    ],
+    "stageTag": "第二段階",
+    "difficulty": 5,
+    "questionText": "酒気を帯びた状態での運転に関する記述として正しいのはどれか。",
+    "choices": [
+      "少量であれば違反にならない場合がある",
+      "同乗者がいなければ問題にならない",
+      "体質的にアルコールに強ければ違反にならない",
+      "酒気帯びの基準に達していなくても、酒気を帯びて正常な運転ができないおそれがあるときは運転してはならない"
+    ],
+    "answer": 3,
+    "explanation": "呼気中アルコール濃度が酒気帯びの基準値未満であっても、酒気を帯びて正常な運転ができないおそれがある状態での運転は禁止されている。",
+    "isTrapQuestion": true,
+    "trapNumberType": "other",
+    "topicTag": "rules"
+  },
+  {
+    "id": "f219",
+    "licenseCategory": [
+      "futsuuNirin"
+    ],
+    "stageTag": "第一段階",
+    "difficulty": 1,
+    "questionText": "車両通行帯のない道路を通行するときの原則として正しいのはどれか。",
+    "choices": [
+      "通行位置に決まりはない",
+      "道路の左側に寄って通行する",
+      "道路の右側に寄って通行する",
+      "道路の中央に寄って通行する"
+    ],
+    "answer": 1,
+    "explanation": "車両通行帯のない道路では、道路の左側に寄って通行することが原則とされている(キープレフトの原則)。",
+    "isTrapQuestion": true,
+    "trapNumberType": "other",
+    "topicTag": "rules"
+  },
+  {
+    "id": "f220",
+    "licenseCategory": [
+      "futsuuNirin"
+    ],
+    "stageTag": "第二段階",
+    "difficulty": 2,
+    "questionText": "一方通行の道路における通行について正しいのはどれか。",
+    "choices": [
+      "交通量が少ない時間帯は逆走が認められる",
+      "一方通行の規制は自動車専用道路のみに適用される",
+      "指定された方向以外へは進行してはならない",
+      "二輪車であれば逆走してもよい場合がある"
+    ],
+    "answer": 2,
+    "explanation": "一方通行の道路では、標識・標示によって指定された方向以外に進行することは禁止されている。",
+    "isTrapQuestion": false,
+    "trapNumberType": "none",
+    "topicTag": "rules"
+  },
+  {
+    "id": "f221",
+    "licenseCategory": [
+      "futsuuNirin"
+    ],
+    "stageTag": "第一段階",
+    "difficulty": 1,
+    "questionText": "転回(Uターン)が禁止されている場所の説明として正しいのはどれか。",
+    "choices": [
+      "転回禁止の標識がある場所では転回してはならない",
+      "転回禁止の規制は普通自動車のみに適用される",
+      "転回禁止場所でも徐行すれば転回できる",
+      "見通しがよければ標識があっても転回してよい"
+    ],
+    "answer": 0,
+    "explanation": "転回禁止の標識や交通の状況から危険と認められる場所での転回(Uターン)は禁止されている。",
+    "isTrapQuestion": true,
+    "trapNumberType": "other",
+    "topicTag": "rules"
+  },
+  {
+    "id": "f222",
+    "licenseCategory": [
+      "futsuuNirin"
+    ],
+    "stageTag": "第一段階",
+    "difficulty": 1,
+    "questionText": "夜間、トンネル内を走行するときの前照灯の扱いとして正しいのはどれか。",
+    "choices": [
+      "対向車がいないときのみ点灯すればよい",
+      "前照灯の点灯は自動車のみの義務である",
+      "トンネル内が明るければ消灯してもよい",
+      "必ず前照灯を点灯させなければならない"
+    ],
+    "answer": 3,
+    "explanation": "夜間やトンネルの中を通行するときは、他の交通の安全のため前照灯を点灯させなければならない。",
+    "isTrapQuestion": false,
+    "trapNumberType": "none",
+    "topicTag": "rules"
+  },
+  {
+    "id": "f223",
+    "licenseCategory": [
+      "futsuuNirin"
+    ],
+    "stageTag": "第二段階",
+    "difficulty": 2,
+    "questionText": "バス専用通行帯が指定されている区間における普通自動二輪車の通行について正しいのはどれか。",
+    "choices": [
+      "二輪車は常にバス専用通行帯を通行してよい",
+      "追い越しのときだけ通行帯に入ってもよい",
+      "夜間に限り通行が認められる",
+      "指定車両でない限り、その通行帯を通行してはならない(原則)"
+    ],
+    "answer": 3,
+    "explanation": "バス専用通行帯が指定されている区間では、指定された車両以外の通行が制限されるため、普通自動二輪車は原則として通行できない。",
+    "isTrapQuestion": true,
+    "trapNumberType": "other",
+    "topicTag": "rules"
+  },
+  {
+    "id": "f224",
+    "licenseCategory": [
+      "futsuuNirin"
+    ],
+    "stageTag": "第一段階",
+    "difficulty": 1,
+    "questionText": "優先道路と交差する交差点で、優先道路を通行していない道路から進入する場合の心構えとして正しいのはどれか。",
+    "choices": [
+      "徐行すれば優先道路の車両より先に通行してよい",
+      "二輪車は常に優先される",
+      "優先道路を通行する車両の進行を妨げてはならない",
+      "先に交差点に入った方が優先される"
+    ],
+    "answer": 2,
+    "explanation": "優先道路が指定されている交差点では、そうでない道路から進入する車両は、優先道路を通行する車両の進行を妨げてはならない。",
+    "isTrapQuestion": false,
+    "trapNumberType": "none",
+    "topicTag": "rules"
+  },
+  {
+    "id": "f225",
+    "licenseCategory": [
+      "futsuuNirin"
+    ],
+    "stageTag": "第一段階",
+    "difficulty": 4,
+    "questionText": "速度規制の標識が設けられていない一般道路(車両通行帯のない道路)での最高速度に関する説明として正しいのはどれか。",
+    "choices": [
+      "二輪車には一般道路の速度制限は適用されない",
+      "最高速度は道路の広さによって毎回異なり定めがない",
+      "法定最高速度である時速60キロメートルが適用される",
+      "住宅地であっても時速80キロメートルまで認められる"
+    ],
+    "answer": 2,
+    "explanation": "速度規制の標識がない一般道路では、法定最高速度である時速60キロメートルが適用される。",
+    "isTrapQuestion": true,
+    "trapNumberType": "speedLimit",
+    "topicTag": "rules"
+  },
+  {
+    "id": "f226",
+    "licenseCategory": [
+      "futsuuNirin"
+    ],
+    "stageTag": "第一段階",
+    "difficulty": 1,
+    "questionText": "「徐行」の意味として正しいのはどれか。",
+    "choices": [
+      "完全に停止すること",
+      "ブレーキを使わずに惰性で走行すること",
+      "時速30キロメートル以下で走行すること",
+      "危険を感じたら止まれるような速度で走行すること"
+    ],
+    "answer": 3,
+    "explanation": "徐行とは、直ちに停止できるような速度で運転することをいい、具体的な速度の数値は定められていない。",
+    "isTrapQuestion": true,
+    "trapNumberType": "other",
+    "topicTag": "rules"
+  },
+  {
+    "id": "f227",
+    "licenseCategory": [
+      "futsuuNirin"
+    ],
+    "stageTag": "第二段階",
+    "difficulty": 3,
+    "questionText": "進路を変更する際の合図を出すタイミングとして正しいのはどれか。",
+    "choices": [
+      "進路を変え終えた直後",
+      "進路を変えようとする約3秒前",
+      "合図は同乗者がいる場合のみ必要",
+      "合図のタイミングに決まりはない"
+    ],
+    "answer": 1,
+    "explanation": "進路変更をしようとするときは、その行為をする約3秒前に合図を出さなければならない。",
+    "isTrapQuestion": true,
+    "trapNumberType": "other",
+    "topicTag": "rules"
+  },
+  {
+    "id": "f228",
+    "licenseCategory": [
+      "futsuuNirin"
+    ],
+    "stageTag": "第一段階",
+    "difficulty": 1,
+    "questionText": "「二輪の自動車・原動機付自転車通行止め」を表す標識がある道路について正しいのはどれか。",
+    "choices": [
+      "原付のみ通行できない",
+      "夜間のみ通行が制限される",
+      "普通自動二輪車を含む二輪車は通行できない",
+      "側車付きの二輪車のみ通行できる"
+    ],
+    "answer": 2,
+    "explanation": "この標識が設置されている道路は、原動機付自転車を含む二輪の自動車全般の通行が禁止されている。",
+    "isTrapQuestion": false,
+    "trapNumberType": "none",
+    "topicTag": "rules"
+  },
+  {
+    "id": "f229",
+    "licenseCategory": [
+      "futsuuNirin"
+    ],
+    "stageTag": "第一段階",
+    "difficulty": 1,
+    "questionText": "警音器(クラクション)を鳴らしてよい場面として正しいのはどれか。",
+    "choices": [
+      "渋滞にいらだったとき",
+      "追い越しをする直前に必ず鳴らす",
+      "対向車のライトがまぶしいとき",
+      "「警笛鳴らせ」の標識がある場所や危険を防止するためやむを得ないとき"
+    ],
+    "answer": 3,
+    "explanation": "警音器は「警笛鳴らせ」の標識がある場所を通行するときや、危険を防止するためやむを得ないときに鳴らすものとされている。",
+    "isTrapQuestion": false,
+    "trapNumberType": "none",
+    "topicTag": "rules"
+  },
+  {
+    "id": "f230",
+    "licenseCategory": [
+      "futsuuNirin"
+    ],
+    "stageTag": "第二段階",
+    "difficulty": 1,
+    "questionText": "初心運転者標識(初心者マーク)を付けた自動車に対する二輪車の運転者の義務として正しいのはどれか。",
+    "choices": [
+      "幅寄せや割り込みをしてはならない",
+      "特別な配慮は不要である",
+      "追い越しは常に禁止される",
+      "初心者マークの車には道を譲る義務はない"
+    ],
+    "answer": 0,
+    "explanation": "初心運転者標識を付けた自動車に対しては、危険防止のためやむを得ない場合を除き、幅寄せや前方への割り込みをしてはならない。",
+    "isTrapQuestion": false,
+    "trapNumberType": "none",
+    "topicTag": "rules"
+  },
+  {
+    "id": "f231",
+    "licenseCategory": [
+      "futsuuNirin"
+    ],
+    "stageTag": "第二段階",
+    "difficulty": 3,
+    "questionText": "路線バス等優先通行帯における普通自動二輪車の通行について正しいのはどれか。",
+    "choices": [
+      "優先通行帯は自動車専用であり二輪車は最初から通行できない",
+      "路線バスが接近してきても通行帯にとどまってよい",
+      "路線バス等が接近してきたときは速やかにその通行帯から出なければならない",
+      "夜間は優先通行帯の規制が解除される"
+    ],
+    "answer": 2,
+    "explanation": "路線バス等優先通行帯を通行している場合でも、後方から路線バス等が接近してきたときは、速やかにその通行帯の外に出なければならない。",
+    "isTrapQuestion": false,
+    "trapNumberType": "none",
+    "topicTag": "rules"
+  },
+  {
+    "id": "f232",
+    "licenseCategory": [
+      "futsuuNirin"
+    ],
+    "stageTag": "第一段階",
+    "difficulty": 2,
+    "questionText": "「警笛区間」の標識がある山道などで、見通しの悪い曲がり角を通行するときの対応として正しいのはどれか。",
+    "choices": [
+      "対向車がいないことが確実なら何もしなくてよい",
+      "速度を上げて素早く通過する",
+      "警音器を鳴らして自分の存在を知らせる",
+      "必ず一時停止しなければならない"
+    ],
+    "answer": 2,
+    "explanation": "警笛区間に指定された見通しの悪い曲がり角などでは、警音器を鳴らして自車の存在を対向車などに知らせることとされている。",
+    "isTrapQuestion": true,
+    "trapNumberType": "other",
+    "topicTag": "rules"
+  },
+  {
+    "id": "f233",
+    "licenseCategory": [
+      "futsuuNirin"
+    ],
+    "stageTag": "第二段階",
+    "difficulty": 5,
+    "questionText": "運転免許の効力が停止されている期間中に普通自動二輪車を運転した場合について正しいのはどれか。",
+    "choices": [
+      "免許停止中でも自分の判断で運転してよい期間がある",
+      "軽微な違反として反則金のみで済む",
+      "運転歴が長ければ問題にならない",
+      "無免許運転として扱われ、罰則の対象となる"
+    ],
+    "answer": 3,
+    "explanation": "運転免許の効力停止中に運転する行為は無免許運転に当たり、厳しい罰則の対象となる。",
+    "isTrapQuestion": true,
+    "trapNumberType": "other",
+    "topicTag": "rules"
+  },
+  {
+    "id": "f234",
+    "licenseCategory": [
+      "futsuuNirin"
+    ],
+    "stageTag": "第一段階",
+    "difficulty": 2,
+    "questionText": "雨で濡れたマンホールのふたの上を通過するときに二輪車が特に注意すべき危険はどれか。",
+    "choices": [
+      "ライトが反射して見えにくくなること",
+      "タイヤの空気圧が下がること",
+      "タイヤが滑りやすくなること",
+      "エンジンが停止しやすくなること"
+    ],
+    "answer": 2,
+    "explanation": "濡れたマンホールのふたなどの金属面は非常に滑りやすく、急なハンドル操作やブレーキでタイヤが滑る危険が高い。",
+    "isTrapQuestion": false,
+    "trapNumberType": "none",
+    "topicTag": "hazard_prediction"
+  },
+  {
+    "id": "f235",
+    "licenseCategory": [
+      "futsuuNirin"
+    ],
+    "stageTag": "第一段階",
+    "difficulty": 2,
+    "questionText": "住宅街の道路脇に停まっている自動車の横を通過するとき、二輪車が特に警戒すべき危険はどれか。",
+    "choices": [
+      "路面の白線の反射",
+      "自車のミラーの振動",
+      "対向車のヘッドライト",
+      "運転席側のドアが急に開くこと"
+    ],
+    "answer": 3,
+    "explanation": "駐停車中の車のドアが急に開き、それを避けようとして転倒したり後続車と接触したりする危険があるため、車の側方は十分な間隔をとって通過する。",
+    "isTrapQuestion": false,
+    "trapNumberType": "none",
+    "topicTag": "hazard_prediction"
+  },
+  {
+    "id": "f236",
+    "licenseCategory": [
+      "futsuuNirin"
+    ],
+    "stageTag": "第二段階",
+    "difficulty": 4,
+    "questionText": "大型トラックのすぐ後ろを走行しているとき、二輪車の運転者が予測すべき危険として正しいのはどれか。",
+    "choices": [
+      "トラックの荷台に追突されること",
+      "トラックが必ず急発進すること",
+      "後方から二輪車が接近しにくくなること",
+      "トラックの死角に入り、運転者から自車が見えにくくなること"
+    ],
+    "answer": 3,
+    "explanation": "大型車のすぐ後ろに位置すると、トラックの運転者から二輪車が見えにくい死角に入りやすく、急停止や進路変更に対応できない危険がある。",
+    "isTrapQuestion": true,
+    "trapNumberType": "other",
+    "topicTag": "hazard_prediction"
+  },
+  {
+    "id": "f237",
+    "licenseCategory": [
+      "futsuuNirin"
+    ],
+    "stageTag": "第一段階",
+    "difficulty": 2,
+    "questionText": "見通しの悪いカーブに近づくとき、対向車線から出てくるかもしれない車両に備えて二輪車がとるべき走行位置はどれか。",
+    "choices": [
+      "カーブの外側から進入し、事前に速度を落として対応できるようにする",
+      "対向車線にはみ出して見通しを確保する",
+      "できるだけ道路の中央に寄って走る",
+      "カーブの内側ぎりぎりを走る"
+    ],
+    "answer": 0,
+    "explanation": "見通しの悪いカーブでは対向車がはみ出してくる可能性を考え、事前に減速し、進入位置を工夫していつでも対応できるようにしておく必要がある。",
+    "isTrapQuestion": false,
+    "trapNumberType": "none",
+    "topicTag": "hazard_prediction"
+  },
+  {
+    "id": "f238",
+    "licenseCategory": [
+      "futsuuNirin"
+    ],
+    "stageTag": "第二段階",
+    "difficulty": 3,
+    "questionText": "夕暮れ時(薄暮)の運転で二輪車が特に注意すべき危険はどれか。",
+    "choices": [
+      "歩行者が急に増えること",
+      "周囲の明るさが変化し、他の車から自車が発見されにくくなること",
+      "気温が下がりタイヤの空気圧が上がること",
+      "対向車のライトで自車が見えやすくなること"
+    ],
+    "answer": 1,
+    "explanation": "薄暮時間帯は明るさが急激に変化し、ドライバーの目が順応しきれないため、二輪車のような車体の小さい車両が発見されにくくなる危険がある。",
+    "isTrapQuestion": false,
+    "trapNumberType": "none",
+    "topicTag": "hazard_prediction"
+  },
+  {
+    "id": "f239",
+    "licenseCategory": [
+      "futsuuNirin"
+    ],
+    "stageTag": "第一段階",
+    "difficulty": 2,
+    "questionText": "橋の上やトンネルの出入口付近を走行するとき、二輪車が特に警戒すべき危険はどれか。",
+    "choices": [
+      "急な横風による車体のふらつき",
+      "エンジン音が大きく聞こえること",
+      "路面が常に乾燥していること",
+      "対向車線が突然広がること"
+    ],
+    "answer": 0,
+    "explanation": "橋の上やトンネルの出入口は風の通り道になりやすく、突風によって車体が大きくふらつくことがあるため、ハンドルをしっかり保持して備える。",
+    "isTrapQuestion": false,
+    "trapNumberType": "none",
+    "topicTag": "hazard_prediction"
+  },
+  {
+    "id": "f240",
+    "licenseCategory": [
+      "futsuuNirin"
+    ],
+    "stageTag": "第二段階",
+    "difficulty": 3,
+    "questionText": "交差点の手前で自分の前を走る車が急にブレーキをかけたとき、後続の二輪車が事前に予測しておくべきこととして正しいのはどれか。",
+    "choices": [
+      "自分は前車より先に交差点へ進入してよいこと",
+      "前車のブレーキランプは信用しなくてよいこと",
+      "前車の先に歩行者や自転車が飛び出す可能性があること",
+      "前車は絶対に急ブレーキをかけないと考えてよい"
+    ],
+    "answer": 2,
+    "explanation": "前車が急ブレーキをかける背景には、その先に歩行者や自転車の飛び出しなど見えない危険が存在する可能性があるため、常に十分な車間距離を保つ必要がある。",
+    "isTrapQuestion": false,
+    "trapNumberType": "none",
+    "topicTag": "hazard_prediction"
+  },
+  {
+    "id": "f241",
+    "licenseCategory": [
+      "futsuuNirin"
+    ],
+    "stageTag": "第一段階",
+    "difficulty": 2,
+    "questionText": "秋から冬にかけて、街路樹の落ち葉が積もった路面を走行するときの注意点として正しいのはどれか。",
+    "choices": [
+      "落ち葉の上ではむしろブレーキが効きやすくなる",
+      "落ち葉は乾いていればグリップに影響しない",
+      "落ち葉は二輪車の走行に一切関係がない",
+      "濡れた落ち葉の上は非常に滑りやすいため速度を落とす"
+    ],
+    "answer": 3,
+    "explanation": "濡れた落ち葉が積もった路面は油分を含んだような滑りやすい状態になりやすく、急ハンドルや急ブレーキは避け、速度を落として通過する必要がある。",
+    "isTrapQuestion": false,
+    "trapNumberType": "none",
+    "topicTag": "hazard_prediction"
+  },
+  {
+    "id": "f242",
+    "licenseCategory": [
+      "futsuuNirin"
+    ],
+    "stageTag": "第一段階",
+    "difficulty": 2,
+    "questionText": "ガソリンスタンドの出入口付近の路面で特に注意すべき危険はどれか。",
+    "choices": [
+      "対向車線が突然拡幅される",
+      "油分がこぼれていることがあり、タイヤが滑りやすい",
+      "標識が設置できない区域である",
+      "路面が常に高温になっている"
+    ],
+    "answer": 1,
+    "explanation": "ガソリンスタンドの出入口付近は油分がこぼれて路面が滑りやすくなっていることがあり、二輪車は特に注意して通過する必要がある。",
+    "isTrapQuestion": true,
+    "trapNumberType": "other",
+    "topicTag": "hazard_prediction"
+  },
+  {
+    "id": "f243",
+    "licenseCategory": [
+      "futsuuNirin"
+    ],
+    "stageTag": "第二段階",
+    "difficulty": 5,
+    "questionText": "対向車線に右折待ちの車が停止している交差点を直進するとき、二輪車が予測すべき最も大きな危険はどれか。",
+    "choices": [
+      "自分の車体が右折車から見えやすくなること",
+      "右折待ちの車の陰から対向の二輪車や自転車が現れること",
+      "信号が突然赤に変わること",
+      "右折待ちの車が急にバックしてくること"
+    ],
+    "answer": 1,
+    "explanation": "右折待ちの車の陰は死角になりやすく、その陰から対向してくる二輪車や自転車が急に現れることがあるため、速度を落として備える必要がある。",
+    "isTrapQuestion": true,
+    "trapNumberType": "other",
+    "topicTag": "hazard_prediction"
+  },
+  {
+    "id": "f244",
+    "licenseCategory": [
+      "futsuuNirin"
+    ],
+    "stageTag": "第一段階",
+    "difficulty": 2,
+    "questionText": "駐輪してある自転車の横を通過するときに二輪車が警戒すべき危険はどれか。",
+    "choices": [
+      "自転車が急に車道側にふらついて出てくること",
+      "自転車には反射材が付いていないこと",
+      "自転車の横は必ず速度を上げて通過すべきこと",
+      "自転車には一切近づいてはいけないこと"
+    ],
+    "answer": 0,
+    "explanation": "駐輪していた自転車が急に動き出したり、車道側にふらついて進路を塞いだりすることがあるため、間隔をとって通過する必要がある。",
+    "isTrapQuestion": false,
+    "trapNumberType": "none",
+    "topicTag": "hazard_prediction"
+  },
+  {
+    "id": "f245",
+    "licenseCategory": [
+      "futsuuNirin"
+    ],
+    "stageTag": "第二段階",
+    "difficulty": 3,
+    "questionText": "見通しの悪い丁字路の交差点に進入するとき、二輪車の運転者が予測すべき危険として適切なのはどれか。",
+    "choices": [
+      "丁字路では必ず自分が優先されること",
+      "一時停止の標識があっても徐行すればよいこと",
+      "対向車は存在しないと考えてよいこと",
+      "左右から車両や歩行者が出てくる可能性があること"
+    ],
+    "answer": 3,
+    "explanation": "見通しの悪い丁字路では左右の道路から車両や歩行者が突然現れる可能性があるため、一時停止や徐行によって安全を確認する必要がある。",
+    "isTrapQuestion": false,
+    "trapNumberType": "none",
+    "topicTag": "hazard_prediction"
+  },
+  {
+    "id": "f246",
+    "licenseCategory": [
+      "futsuuNirin"
+    ],
+    "stageTag": "第一段階",
+    "difficulty": 2,
+    "questionText": "工事現場付近を通行するときに二輪車が特に警戒すべき危険はどれか。",
+    "choices": [
+      "工事車両は必ず徐行していること",
+      "路面の凹凸や砂利でタイヤが取られること",
+      "誘導員の合図は無視してよいこと",
+      "工事現場では速度制限がないこと"
+    ],
+    "answer": 1,
+    "explanation": "工事現場付近は路面が荒れていたり砂利や鉄板があったりしてタイヤが取られやすいため、速度を落として慎重に通行する必要がある。",
+    "isTrapQuestion": true,
+    "trapNumberType": "other",
+    "topicTag": "hazard_prediction"
+  },
+  {
+    "id": "f247",
+    "licenseCategory": [
+      "futsuuNirin"
+    ],
+    "stageTag": "第二段階",
+    "difficulty": 3,
+    "questionText": "住宅街の細い路地から広い道路に出るとき、二輪車が予測すべき危険はどれか。",
+    "choices": [
+      "路地から出るときは徐行の必要がないこと",
+      "広い道路側の車両には必ず止まる義務があること",
+      "左右の見通しが悪く、車両や歩行者を見落としやすいこと",
+      "広い道路に出れば注意力は不要になること"
+    ],
+    "answer": 2,
+    "explanation": "住宅街の細い路地は塀や駐車車両で見通しが悪いことが多く、広い道路に出る際には車両や歩行者を見落としやすいため、徐行して安全確認を行う必要がある。",
+    "isTrapQuestion": true,
+    "trapNumberType": "other",
+    "topicTag": "hazard_prediction"
+  },
+  {
+    "id": "f248",
+    "licenseCategory": [
+      "futsuuNirin"
+    ],
+    "stageTag": "第一段階",
+    "difficulty": 3,
+    "questionText": "強い横風が吹く日に橋の上を走行しているとき、二輪車の運転者がとるべき対応として最も適切なのはどれか。",
+    "choices": [
+      "両手をハンドルから離してバランスをとる",
+      "ハンドルを強く握り、速度を落として風に備える",
+      "速度を上げて早く通過する",
+      "風上側に体を大きく傾けたまま固定する"
+    ],
+    "answer": 1,
+    "explanation": "強風時はあらかじめ速度を落とし、ハンドルをしっかり保持して突風による車体のふらつきに備えることが安全である。",
+    "isTrapQuestion": true,
+    "trapNumberType": "other",
+    "topicTag": "hazard_prediction"
+  },
+  {
+    "id": "f249",
+    "licenseCategory": [
+      "futsuuNirin"
+    ],
+    "stageTag": "第二段階",
+    "difficulty": 5,
+    "questionText": "夜間、対向車のライトがまぶしく感じられるときに二輪車の運転者がとるべき行動として正しいのはどれか。",
+    "choices": [
+      "視線を対向車のライトからそらし、道路の左端の方に向ける",
+      "ライトを直視して相手に注意を促す",
+      "目を閉じて数秒間走行する",
+      "ヘッドライトを上向きのまま維持する"
+    ],
+    "answer": 0,
+    "explanation": "対向車のライトをまぶしく感じたときは、直視を避けて視線をやや左前方の路肩側に向け、幻惑による事故を防ぐ必要がある。",
+    "isTrapQuestion": false,
+    "trapNumberType": "none",
+    "topicTag": "hazard_prediction"
+  },
+  {
+    "id": "f250",
+    "licenseCategory": [
+      "futsuuNirin"
+    ],
+    "stageTag": "第一段階",
+    "difficulty": 2,
+    "questionText": "商店街に近い道路を走行しているとき、二輪車が特に予測すべき危険はどれか。",
+    "choices": [
+      "商店街の道路には危険がまったく存在しないこと",
+      "速度を上げて短時間で通過すべきこと",
+      "歩行者や自転車が予告なく車道に出てくること",
+      "自動車だけを警戒すればよいこと"
+    ],
+    "answer": 2,
+    "explanation": "商店街の周辺は歩行者や自転車の往来が多く、予告なく車道側に出てくることがあるため、速度を落として周囲に注意を払う必要がある。",
+    "isTrapQuestion": false,
+    "trapNumberType": "none",
+    "topicTag": "hazard_prediction"
+  },
+  {
+    "id": "f251",
+    "licenseCategory": [
+      "futsuuNirin"
+    ],
+    "stageTag": "第二段階",
+    "difficulty": 3,
+    "questionText": "駐車場の出入口付近の歩道を横切って走行するとき、二輪車が最も警戒すべき危険はどれか。",
+    "choices": [
+      "駐車場の看板の色",
+      "駐車料金の精算機の位置",
+      "出入口の路面の傾斜が急なこと",
+      "歩道を歩く歩行者との接触"
+    ],
+    "answer": 3,
+    "explanation": "駐車場の出入口では歩道を横切るため、歩行者の存在に気づかず接触する危険がある。歩道の手前で一時停止し歩行者の通行を妨げないようにする必要がある。",
+    "isTrapQuestion": true,
+    "trapNumberType": "other",
+    "topicTag": "hazard_prediction"
+  },
+  {
+    "id": "f252",
+    "licenseCategory": [
+      "futsuuNirin"
+    ],
+    "stageTag": "第一段階",
+    "difficulty": 2,
+    "questionText": "signalのない交差点近くで、路上駐車している車の陰から子どもが飛び出す危険を減らすために二輪車がとるべき行動はどれか。",
+    "choices": [
+      "駐車車両の反対側は確認しなくてよい",
+      "クラクションを鳴らし続けて通過する",
+      "駐車車両にできるだけ近づいて速度を上げる",
+      "駐車車両から間隔をとり、あらかじめ速度を落としておく"
+    ],
+    "answer": 3,
+    "explanation": "駐車車両の陰から子どもなどが飛び出す危険を考え、あらかじめ側方の間隔をとり速度を落としておくことで、とっさの対応がしやすくなる。",
+    "isTrapQuestion": true,
+    "trapNumberType": "other",
+    "topicTag": "hazard_prediction"
+  },
+  {
+    "id": "f253",
+    "licenseCategory": [
+      "futsuuNirin"
+    ],
+    "stageTag": "第二段階",
+    "difficulty": 5,
+    "questionText": "見通しの良い直線道路で、はるか前方の信号が青色から黄色に変わったのが見えたとき、二輪車が予測すべき状況として正しいのはどれか。",
+    "choices": [
+      "前方の車列が急に停止し始める可能性があること",
+      "信号の変化は自分の走行には関係がないこと",
+      "信号が変わっても前方の車は減速しないと考えてよいこと",
+      "自分は必ず先に交差点を通過できること"
+    ],
+    "answer": 0,
+    "explanation": "遠方の信号が変わるのを確認したときは、前方の車列が減速・停止を始める可能性を予測し、早めに速度を落として備える必要がある。",
+    "isTrapQuestion": false,
+    "trapNumberType": "none",
+    "topicTag": "hazard_prediction"
+  },
+  {
+    "id": "f254",
+    "licenseCategory": [
+      "futsuuNirin"
+    ],
+    "stageTag": "第一段階",
+    "difficulty": 2,
+    "questionText": "路肩に停車していたタクシーの後部座席のドアが開こうとしているのを見かけたとき、二輪車がとるべき行動として正しいのはどれか。",
+    "choices": [
+      "クラクションだけ鳴らして速度は変えない",
+      "反対車線に大きくはみ出して通過する",
+      "そのままの速度で構わず通過する",
+      "速度を落とすか、十分な間隔をとって通過する"
+    ],
+    "answer": 3,
+    "explanation": "乗客が降りるために後部座席のドアが開く可能性があるため、速度を落とすか十分な側方間隔をとって通過することが安全である。",
+    "isTrapQuestion": true,
+    "trapNumberType": "other",
+    "topicTag": "hazard_prediction"
+  },
+  {
+    "id": "f255",
+    "licenseCategory": [
+      "futsuuNirin"
+    ],
+    "stageTag": "第二段階",
+    "difficulty": 3,
+    "questionText": "高速道路の合流地点で本線に入ろうとする車がある場合、本線を走行中の二輪車が予測すべき危険はどれか。",
+    "choices": [
+      "合流車が急に速度を落として車線変更してくること",
+      "合流車は必ず自分より先に行くこと",
+      "合流地点では速度を上げるべきであること",
+      "合流車には注意を払う必要がないこと"
+    ],
+    "answer": 0,
+    "explanation": "合流地点では、合流しようとする車が加減速しながら車線変更してくることが予測されるため、後方や側方の確認を怠らず備える必要がある。",
+    "isTrapQuestion": false,
+    "trapNumberType": "none",
+    "topicTag": "hazard_prediction"
+  },
+  {
+    "id": "f256",
+    "licenseCategory": [
+      "futsuuNirin"
+    ],
+    "stageTag": "第一段階",
+    "difficulty": 4,
+    "questionText": "早朝、路面に霜や薄い氷が張っている可能性がある橋の上を走行するときの注意点として正しいのはどれか。",
+    "choices": [
+      "凍結の心配があるときほど速度を上げて素早く通過する",
+      "凍結の有無は目視では判断できないため気にしなくてよい",
+      "橋の上は路面が冷えやすく凍結しやすいため、速度を落として慎重に走行する",
+      "橋の上は他の路面より凍結しにくいので通常通り走行してよい"
+    ],
+    "answer": 2,
+    "explanation": "橋の上は地面からの熱が伝わりにくく他の路面より冷えやすいため、霜や薄氷による凍結が起きやすい。速度を落として慎重に走行する必要がある。",
+    "isTrapQuestion": true,
+    "trapNumberType": "other",
+    "topicTag": "hazard_prediction"
+  },
+  {
+    "id": "f257",
+    "licenseCategory": [
+      "futsuuNirin"
+    ],
+    "stageTag": "第二段階",
+    "difficulty": 5,
+    "questionText": "前方を走る自転車が手信号を出さずに急に進路を左に変えたとき、二輪車の運転者がとるべき対応として正しいのはどれか。",
+    "choices": [
+      "自転車の動きにかかわらず速度と進路を変えない",
+      "自転車の予測できない動きに備え、あらかじめ十分な間隔をとって走行する",
+      "自転車の後方にできるだけ接近して走行する",
+      "警音器を鳴らして自転車を追い越そうとする"
+    ],
+    "answer": 1,
+    "explanation": "自転車は手信号を出さずに進路を変えることも多いため、常に予測できない動きに備え、追い越す際も十分な側方間隔をとる必要がある。",
+    "isTrapQuestion": true,
+    "trapNumberType": "other",
+    "topicTag": "hazard_prediction"
+  },
+  {
+    "id": "f258",
+    "licenseCategory": [
+      "futsuuNirin"
+    ],
+    "stageTag": "第一段階",
+    "difficulty": 1,
+    "questionText": "普通自動二輪車でカーブを曲がるときの基本的な操作として正しいのはどれか。",
+    "choices": [
+      "カーブの中で急ハンドルを切って向きを変える",
+      "カーブの中でアクセルとブレーキを同時に強くかける",
+      "カーブでは常に最大限加速する",
+      "カーブに入る前に十分減速し、カーブの中では一定の速度を保つ"
+    ],
+    "answer": 3,
+    "explanation": "カーブでは進入前に十分速度を落とし、カーブの中では一定の速度を保ちながら滑らかに通過することが基本である。",
+    "isTrapQuestion": false,
+    "trapNumberType": "none",
+    "topicTag": "operation"
+  },
+  {
+    "id": "f259",
+    "licenseCategory": [
+      "futsuuNirin"
+    ],
+    "stageTag": "第二段階",
+    "difficulty": 3,
+    "questionText": "普通自動二輪車の制動(ブレーキ)操作について正しいのはどれか。",
+    "choices": [
+      "前輪と後輪のブレーキを状況に応じてバランスよく使う",
+      "後輪ブレーキだけを使い、前輪ブレーキは使わない",
+      "急ブレーキ以外ではブレーキを使わない",
+      "前輪ブレーキだけを使い、後輪ブレーキは使わない"
+    ],
+    "answer": 0,
+    "explanation": "安定した制動を行うためには、前輪ブレーキと後輪ブレーキを状況に応じてバランスよく使うことが基本である。",
+    "isTrapQuestion": false,
+    "trapNumberType": "none",
+    "topicTag": "operation"
+  },
+  {
+    "id": "f260",
+    "licenseCategory": [
+      "futsuuNirin"
+    ],
+    "stageTag": "第一段階",
+    "difficulty": 2,
+    "questionText": "普通自動二輪車の乗り降りについて正しいのはどれか。",
+    "choices": [
+      "車体が停止していることを確認し、左側から乗り降りする",
+      "右側から乗り降りするのが基本である",
+      "乗り降りする側は特に決まっていない",
+      "走行中でも安全であれば乗り降りしてよい"
+    ],
+    "answer": 0,
+    "explanation": "二輪車の乗り降りは、車体が完全に停止していることを確認したうえで、車道側とは反対の左側から行うことが基本とされている。",
+    "isTrapQuestion": true,
+    "trapNumberType": "other",
+    "topicTag": "operation"
+  },
+  {
+    "id": "f261",
+    "licenseCategory": [
+      "futsuuNirin"
+    ],
+    "stageTag": "第二段階",
+    "difficulty": 3,
+    "questionText": "下り坂を走行するときのエンジンブレーキの利用について正しいのはどれか。",
+    "choices": [
+      "下り坂では常に最高速ギアを使用する",
+      "低いギアに入れてエンジンブレーキを活用し、フットブレーキの多用を避ける",
+      "下り坂ではニュートラルにしてブレーキだけで減速する",
+      "エンジンブレーキは二輪車には使用できない"
+    ],
+    "answer": 1,
+    "explanation": "長い下り坂ではフットブレーキばかりに頼るとブレーキが過熱して効きが悪くなるため、低いギアに入れてエンジンブレーキを積極的に活用する。",
+    "isTrapQuestion": false,
+    "trapNumberType": "none",
+    "topicTag": "operation"
+  },
+  {
+    "id": "f262",
+    "licenseCategory": [
+      "futsuuNirin"
+    ],
+    "stageTag": "第一段階",
+    "difficulty": 3,
+    "questionText": "急な上り坂で信号待ちから発進するときの操作として適切なのはどれか。",
+    "choices": [
+      "アクセルを一気に全開にして発進する",
+      "後輪ブレーキとクラッチ操作を使い、後退を防ぎながら滑らかに発進する",
+      "前輪ブレーキだけをかけたまま発進する",
+      "エンジンを切ったまま惰性で発進する"
+    ],
+    "answer": 1,
+    "explanation": "上り坂での発進時は、後輪ブレーキで車体の後退を防ぎながらクラッチとアクセルを合わせて滑らかに発進する操作が求められる。",
+    "isTrapQuestion": false,
+    "trapNumberType": "none",
+    "topicTag": "operation"
+  },
+  {
+    "id": "f263",
+    "licenseCategory": [
+      "futsuuNirin"
+    ],
+    "stageTag": "第二段階",
+    "difficulty": 5,
+    "questionText": "低速でのUターンや取り回しの際に安定を保つための基本操作として正しいのはどれか。",
+    "choices": [
+      "両足を地面につけたまま曲がる",
+      "視線を近くのハンドル先端に固定する",
+      "視線を曲がっていく先の進行方向に向ける",
+      "アクセルを完全に戻し惰性のみで曲がる"
+    ],
+    "answer": 2,
+    "explanation": "低速走行時は視線を進みたい方向に向けることで、車体を無理なくその方向へ誘導しやすくなり、バランスを保ちやすい。",
+    "isTrapQuestion": true,
+    "trapNumberType": "other",
+    "topicTag": "operation"
+  },
+  {
+    "id": "f264",
+    "licenseCategory": [
+      "futsuuNirin"
+    ],
+    "stageTag": "第一段階",
+    "difficulty": 2,
+    "questionText": "雨天時の普通自動二輪車の運転操作について正しいのはどれか。",
+    "choices": [
+      "路面が濡れていてもタイヤのグリップに変化はない",
+      "雨天時こそ速度を上げて早めに目的地に着くべきである",
+      "急発進・急ブレーキ・急ハンドルを避け、通常より緩やかな操作を心がける",
+      "ブレーキは前輪だけを強く使うようにする"
+    ],
+    "answer": 2,
+    "explanation": "雨天時はタイヤのグリップが低下するため、急発進・急ブレーキ・急ハンドルなどの急操作を避け、通常より緩やかな操作を心がける必要がある。",
+    "isTrapQuestion": false,
+    "trapNumberType": "none",
+    "topicTag": "operation"
+  },
+  {
+    "id": "f265",
+    "licenseCategory": [
+      "futsuuNirin"
+    ],
+    "stageTag": "第二段階",
+    "difficulty": 2,
+    "questionText": "二輪車を運転するときの正しいステップ(足)の位置はどれか。",
+    "choices": [
+      "片足だけをステップに乗せて走行する",
+      "両足を地面につけたまま走行する",
+      "つま先をステップに乗せ、しっかりと車体を挟むように保持する",
+      "足の位置は走行に影響しないため自由でよい"
+    ],
+    "answer": 2,
+    "explanation": "走行中は両足をステップに乗せ、ニーグリップなどで車体を安定させることで、操作性とバランスを保つことができる。",
+    "isTrapQuestion": true,
+    "trapNumberType": "other",
+    "topicTag": "operation"
+  },
+  {
+    "id": "f266",
+    "licenseCategory": [
+      "futsuuNirin"
+    ],
+    "stageTag": "第一段階",
+    "difficulty": 2,
+    "questionText": "交差点で進路変更や右左折をする前に必ず行うべき基本操作はどれか。",
+    "choices": [
+      "後方確認は一切不要である",
+      "合図を出してからミラーを確認する",
+      "合図と同時に一気に進路を変える",
+      "ミラーで後方を確認し、必要に応じて目視で確認したうえで合図を出す"
+    ],
+    "answer": 3,
+    "explanation": "進路変更や右左折の前は、まずミラーで後方を確認し、死角がある場合は目視でも確認したうえで、余裕をもって合図を出す必要がある。",
+    "isTrapQuestion": true,
+    "trapNumberType": "other",
+    "topicTag": "operation"
+  },
+  {
+    "id": "f267",
+    "licenseCategory": [
+      "futsuuNirin"
+    ],
+    "stageTag": "第二段階",
+    "difficulty": 3,
+    "questionText": "同乗者を乗せて走行するときの運転操作について正しいのはどれか。",
+    "choices": [
+      "重量やバランスの変化を考慮し、発進・制動・旋回をより緩やかに行う",
+      "一人乗りのときと全く同じ感覚で急発進・急ブレーキをしてよい",
+      "同乗者がいるときはブレーキを強くかけるほうが安全である",
+      "同乗者の体重は走行に影響しないため無視してよい"
+    ],
+    "answer": 0,
+    "explanation": "同乗者を乗せると車両全体の重量やバランスが変化するため、発進や制動、旋回などの操作はより緩やかに行う必要がある。",
+    "isTrapQuestion": false,
+    "trapNumberType": "none",
+    "topicTag": "operation"
+  },
+  {
+    "id": "f268",
+    "licenseCategory": [
+      "futsuuNirin"
+    ],
+    "stageTag": "第一段階",
+    "difficulty": 2,
+    "questionText": "夜間、対向車と行き違うときのライトの操作として正しいのはどれか。",
+    "choices": [
+      "夜間はライトの操作をする必要がない",
+      "対向車と行き違うときは早めにライトを下向きに切り替える",
+      "対向車が近づいても上向きのライトを維持する",
+      "対向車にはライトを消灯して対応する"
+    ],
+    "answer": 1,
+    "explanation": "対向車と行き違うときは、相手の運転者を幻惑させないよう早めにライトを下向き(すれ違い用)に切り替える必要がある。",
+    "isTrapQuestion": false,
+    "trapNumberType": "none",
+    "topicTag": "operation"
+  },
+  {
+    "id": "f269",
+    "licenseCategory": [
+      "futsuuNirin"
+    ],
+    "stageTag": "第二段階",
+    "difficulty": 4,
+    "questionText": "強い横風を受けながら走行するときの車体の保持方法として正しいのはどれか。",
+    "choices": [
+      "ハンドルをしっかりと握り、風上側にわずかに車体を傾けて直進を保つ",
+      "風に逆らわず車体を完全に垂直に保ち、ハンドルはできるだけ軽く握る",
+      "風下側に大きく体を傾けたまま走行する",
+      "横風のときはアクセルを大きく開けて対抗する"
+    ],
+    "answer": 0,
+    "explanation": "横風を受けるときはハンドルをしっかり握り、風上側にわずかに車体を傾けることで、風に流されずに直進姿勢を保ちやすくなる。",
+    "isTrapQuestion": false,
+    "trapNumberType": "none",
+    "topicTag": "operation"
+  },
+  {
+    "id": "f270",
+    "licenseCategory": [
+      "futsuuNirin"
+    ],
+    "stageTag": "第一段階",
+    "difficulty": 1,
+    "questionText": "普通自動二輪車のクラッチ操作の基本として正しいのはどれか。",
+    "choices": [
+      "クラッチはブレーキと同時に強く握る",
+      "走行中は常にクラッチレバーを握り続ける",
+      "クラッチは半クラッチを使いながら滑らかにつなぐ",
+      "発進時は急にクラッチをつないでよい"
+    ],
+    "answer": 2,
+    "explanation": "発進時などは半クラッチの状態を経て滑らかにクラッチをつなぐことで、エンストや急発進を防ぐことができる。",
+    "isTrapQuestion": false,
+    "trapNumberType": "none",
+    "topicTag": "operation"
+  },
+  {
+    "id": "f271",
+    "licenseCategory": [
+      "futsuuNirin"
+    ],
+    "stageTag": "第二段階",
+    "difficulty": 5,
+    "questionText": "見通しの悪いカーブの手前で速度を落とすタイミングとして正しいのはどれか。",
+    "choices": [
+      "速度を落とすタイミングは特に決まっていない",
+      "カーブの中に入ってから徐々に速度を落とす",
+      "カーブに入る前の直線部分で十分に速度を落としておく",
+      "カーブを抜けた後に速度を落とす"
+    ],
+    "answer": 2,
+    "explanation": "カーブの中でブレーキをかけると転倒の危険が高まるため、カーブに入る前の直線部分で十分に速度を落としておくことが基本である。",
+    "isTrapQuestion": true,
+    "trapNumberType": "other",
+    "topicTag": "operation"
+  },
+  {
+    "id": "f272",
+    "licenseCategory": [
+      "futsuuNirin"
+    ],
+    "stageTag": "第一段階",
+    "difficulty": 2,
+    "questionText": "普通自動二輪車で急な進路変更を避けるための日常的な操作として正しいのはどれか。",
+    "choices": [
+      "進路変更は常に直前に一気に行う",
+      "後方確認をせずに進路を変える",
+      "早め早めに周囲の状況を確認し、余裕をもって進路を決める",
+      "周囲の車の動きは気にしなくてよい"
+    ],
+    "answer": 2,
+    "explanation": "急な進路変更は転倒や接触の危険を高めるため、早めに周囲の状況を確認し、余裕をもって進路を決めることが基本である。",
+    "isTrapQuestion": false,
+    "trapNumberType": "none",
+    "topicTag": "operation"
+  },
+  {
+    "id": "f273",
+    "licenseCategory": [
+      "futsuuNirin"
+    ],
+    "stageTag": "第二段階",
+    "difficulty": 2,
+    "questionText": "荷物を積載した状態で走行するときの操作上の注意点として正しいのはどれか。",
+    "choices": [
+      "荷物の重さやバランスに関係なく通常どおり運転してよい",
+      "荷物の固定状態は走行前に確認する必要がない",
+      "荷物を積んだときほど速度を上げてバランスを取る",
+      "荷崩れを防ぎ、重心の変化を意識して速度や車体操作をより慎重に行う"
+    ],
+    "answer": 3,
+    "explanation": "荷物を積載すると重心やバランスが変化するため、荷崩れを防ぐとともに、速度や車体操作をより慎重に行う必要がある。",
+    "isTrapQuestion": true,
+    "trapNumberType": "loadLimit",
+    "topicTag": "operation"
+  },
+  {
+    "id": "f274",
+    "licenseCategory": [
+      "futsuuNirin"
+    ],
+    "stageTag": "第一段階",
+    "difficulty": 2,
+    "questionText": "普通自動二輪車のエンジンをかけたまま長時間アイドリングさせることについて、運転操作上注意すべき点はどれか。",
+    "choices": [
+      "アイドリング中は必ずスタンドを外しておく",
+      "アイドリング中はハンドルロックをかけたままでよい",
+      "アイドリング中は特に何も注意する必要はない",
+      "エンジンをかけたまま車両から離れず、発進時は周囲の安全を再確認する"
+    ],
+    "answer": 3,
+    "explanation": "エンジンをかけた状態で車両を離れることは危険であり、また再発進の際は周囲の状況が変わっている可能性があるため、安全を再確認する必要がある。",
+    "isTrapQuestion": false,
+    "trapNumberType": "none",
+    "topicTag": "operation"
+  },
+  {
+    "id": "f275",
+    "licenseCategory": [
+      "futsuuNirin"
+    ],
+    "stageTag": "第二段階",
+    "difficulty": 4,
+    "questionText": "路面が濡れている交差点で信号待ちから発進するときの操作として正しいのはどれか。",
+    "choices": [
+      "発進時の操作は乾燥路面と変える必要はない",
+      "アクセルを急に大きく開けて発進する",
+      "タイヤの空転を防ぐため、アクセルを緩やかに開けて発進する",
+      "後輪ブレーキを強くかけたまま発進する"
+    ],
+    "answer": 2,
+    "explanation": "濡れた路面では急なアクセル操作によって後輪が空転しやすいため、アクセルを緩やかに開けて滑らかに発進することが安全である。",
+    "isTrapQuestion": true,
+    "trapNumberType": "other",
+    "topicTag": "operation"
+  },
+  {
+    "id": "f276",
+    "licenseCategory": [
+      "futsuuNirin"
+    ],
+    "stageTag": "第一段階",
+    "difficulty": 1,
+    "questionText": "信号待ちなどで停止しているときの足の使い方として正しいのはどれか。",
+    "choices": [
+      "停止するたびにエンジンを切る",
+      "ブレーキをかけたまま両足を地面につけて車体を支える",
+      "停止中はハンドルから両手を離す",
+      "停止中も両足をステップに乗せたままにする"
+    ],
+    "answer": 1,
+    "explanation": "停止時はブレーキで車両を止めた状態を保ちながら、両足を地面につけて車体をしっかり支えることが基本である。",
+    "isTrapQuestion": false,
+    "trapNumberType": "none",
+    "topicTag": "operation"
+  },
+  {
+    "id": "f277",
+    "licenseCategory": [
+      "futsuuNirin"
+    ],
+    "stageTag": "第一段階",
+    "difficulty": 2,
+    "questionText": "普通自動二輪車(側車付きを除く)の最大積載量として正しいのはどれか。",
+    "choices": [
+      "60キログラム",
+      "30キログラム",
+      "90キログラム",
+      "120キログラム"
+    ],
+    "answer": 0,
+    "explanation": "側車付きを除く普通自動二輪車の最大積載量は60キログラムと定められており、これを超える積載は違反となる。",
+    "isTrapQuestion": true,
+    "trapNumberType": "loadLimit",
+    "topicTag": "parking"
+  },
+  {
+    "id": "f278",
+    "licenseCategory": [
+      "futsuuNirin"
+    ],
+    "stageTag": "第二段階",
+    "difficulty": 4,
+    "questionText": "普通自動二輪車に荷物を積むときの積載の高さの制限として正しいのはどれか。",
+    "choices": [
+      "高さの制限はない",
+      "地上から3メートル以内",
+      "地上から1メートル以内",
+      "地上から2メートル以内"
+    ],
+    "answer": 3,
+    "explanation": "二輪車の積載は、原則として地上から2メートルを超えないようにしなければならない。",
+    "isTrapQuestion": true,
+    "trapNumberType": "loadLimit",
+    "topicTag": "parking"
+  },
+  {
+    "id": "f279",
+    "licenseCategory": [
+      "futsuuNirin"
+    ],
+    "stageTag": "第一段階",
+    "difficulty": 2,
+    "questionText": "駐停車が禁止されている場所として正しいのはどれか。",
+    "choices": [
+      "交差点の端から10メートル以内の部分",
+      "交差点付近には駐停車の規制はない",
+      "交差点の端から5メートル以内の部分",
+      "交差点の端から3メートル以内の部分"
+    ],
+    "answer": 2,
+    "explanation": "交差点の側端から5メートル以内の部分は、見通しの確保や車両の通行を妨げないため駐停車が禁止されている。",
+    "isTrapQuestion": true,
+    "trapNumberType": "other",
+    "topicTag": "parking"
+  },
+  {
+    "id": "f280",
+    "licenseCategory": [
+      "futsuuNirin"
+    ],
+    "stageTag": "第一段階",
+    "difficulty": 2,
+    "questionText": "横断歩道の前後何メートル以内が駐停車禁止とされているか。",
+    "choices": [
+      "前後2メートル以内",
+      "前後5メートル以内",
+      "横断歩道付近に駐停車の規制はない",
+      "前後10メートル以内"
+    ],
+    "answer": 1,
+    "explanation": "横断歩道またはその前後5メートル以内の部分は、歩行者の横断を妨げないよう駐停車が禁止されている。",
+    "isTrapQuestion": true,
+    "trapNumberType": "other",
+    "topicTag": "parking"
+  },
+  {
+    "id": "f281",
+    "licenseCategory": [
+      "futsuuNirin"
+    ],
+    "stageTag": "第一段階",
+    "difficulty": 2,
+    "questionText": "消火栓や消防用防火水槽の取り入れ口から何メートル以内が駐車禁止とされているか。",
+    "choices": [
+      "5メートル以内",
+      "1メートル以内",
+      "10メートル以内",
+      "3メートル以内"
+    ],
+    "answer": 0,
+    "explanation": "消火栓や防火水槽の取り入れ口から5メートル以内の部分は、緊急時の消火活動を妨げないよう駐車が禁止されている。",
+    "isTrapQuestion": true,
+    "trapNumberType": "other",
+    "topicTag": "parking"
+  },
+  {
+    "id": "f282",
+    "licenseCategory": [
+      "futsuuNirin"
+    ],
+    "stageTag": "第二段階",
+    "difficulty": 2,
+    "questionText": "サイドスタンドを使って普通自動二輪車を駐車するときの注意点として正しいのはどれか。",
+    "choices": [
+      "柔らかい地面や傾斜のある場所でも特に問題はない",
+      "アスファルトのように硬く安定した平らな場所を選ぶ",
+      "スタンドを立てたままエンジンをかけて発進準備をしてよい",
+      "スタンドは右側に立てるのが基本である"
+    ],
+    "answer": 1,
+    "explanation": "サイドスタンドで駐車する際は、地面が柔らかいとスタンドが沈み込み車両が倒れる危険があるため、硬く安定した平らな場所を選ぶ必要がある。",
+    "isTrapQuestion": false,
+    "trapNumberType": "none",
+    "topicTag": "parking"
+  },
+  {
+    "id": "f283",
+    "licenseCategory": [
+      "futsuuNirin"
+    ],
+    "stageTag": "第一段階",
+    "difficulty": 2,
+    "questionText": "「駐車禁止」の規制標識がある道路について正しいのはどれか。",
+    "choices": [
+      "駐車はできないが、短時間の停車は認められる",
+      "夜間に限り駐車できる",
+      "駐車も停車もいずれも一切できない",
+      "二輪車には適用されない"
+    ],
+    "answer": 0,
+    "explanation": "「駐車禁止」の標識がある場所では駐車が禁止されるが、人の乗り降りや短時間の荷物の積み下ろしなどの停車は認められる場合がある。",
+    "isTrapQuestion": false,
+    "trapNumberType": "none",
+    "topicTag": "parking"
+  },
+  {
+    "id": "f284",
+    "licenseCategory": [
+      "futsuuNirin"
+    ],
+    "stageTag": "第二段階",
+    "difficulty": 4,
+    "questionText": "「駐停車禁止」の規制標識がある道路について正しいのはどれか。",
+    "choices": [
+      "駐車のみ禁止され、停車は認められる",
+      "駐車・停車のいずれも禁止される",
+      "5分以内であれば停車が認められる",
+      "二輪車には適用されない"
+    ],
+    "answer": 1,
+    "explanation": "「駐停車禁止」の標識がある場所では、駐車だけでなく停車も一切禁止されている。",
+    "isTrapQuestion": true,
+    "trapNumberType": "other",
+    "topicTag": "parking"
+  },
+  {
+    "id": "f285",
+    "licenseCategory": [
+      "futsuuNirin"
+    ],
+    "stageTag": "第一段階",
+    "difficulty": 2,
+    "questionText": "駐車と停車の違いに関する説明として正しいのはどれか。",
+    "choices": [
+      "駐車と停車には法律上の区別がない",
+      "運転者がすぐに運転できる状態で5分を超えずに待つことは停車にあたる",
+      "荷物の積み下ろしのための短時間の停止は駐車にあたる",
+      "駐車は昼間のみ、停車は夜間のみ適用される概念である"
+    ],
+    "answer": 1,
+    "explanation": "運転者が車両を離れずに、すぐ運転できる状態で継続的に停止していないものは停車にあたり、人待ちや荷待ちなどで車両を離れる、または継続的に停止する場合は駐車にあたる。",
+    "isTrapQuestion": false,
+    "trapNumberType": "none",
+    "topicTag": "parking"
+  },
+  {
+    "id": "f286",
+    "licenseCategory": [
+      "futsuuNirin"
+    ],
+    "stageTag": "第二段階",
+    "difficulty": 4,
+    "questionText": "上り坂の途中でやむを得ず普通自動二輪車を駐車するときの注意点として正しいのはどれか。",
+    "choices": [
+      "ギアをニュートラルに入れたまま離れる",
+      "エンジンをかけたままにしておく",
+      "前輪を道路の外側(縁石側)に向けるなどして、車両が動き出さないようにする",
+      "前輪を進行方向にまっすぐ向けて駐車すればよい"
+    ],
+    "answer": 2,
+    "explanation": "坂道で駐車する場合は、万一動き出しても被害が少なくなるよう前輪を縁石側に向けるなどの措置をとる必要がある。",
+    "isTrapQuestion": false,
+    "trapNumberType": "none",
+    "topicTag": "parking"
+  },
+  {
+    "id": "f287",
+    "licenseCategory": [
+      "futsuuNirin"
+    ],
+    "stageTag": "第一段階",
+    "difficulty": 2,
+    "questionText": "二輪車専用の駐車場が近くにある場所で、指定されたスペース以外(歩道上など)に駐車した場合について正しいのはどれか。",
+    "choices": [
+      "短時間であれば歩道上への駐車も認められる",
+      "駐輪場がある場所では罰則が科されない",
+      "二輪車は小型なので歩道上への駐車も自由である",
+      "歩行者の通行を妨げる場所への駐車は違反となる"
+    ],
+    "answer": 3,
+    "explanation": "二輪車であっても、歩道など歩行者の通行を妨げる場所への駐車は交通の妨げとなり違反となる。",
+    "isTrapQuestion": true,
+    "trapNumberType": "other",
+    "topicTag": "parking"
+  },
+  {
+    "id": "f288",
+    "licenseCategory": [
+      "futsuuNirin"
+    ],
+    "stageTag": "第一段階",
+    "difficulty": 1,
+    "questionText": "夜間、道路上に普通自動二輪車を駐車するときに必要な措置として正しいのはどれか。",
+    "choices": [
+      "灯火をつける必要はなく、真っ暗な状態でよい",
+      "他の交通から見えるよう、規定に従って灯火をつけるなどの措置をとる",
+      "夜間は駐車自体が全面的に禁止されている",
+      "月明かりがあれば灯火の措置は不要である"
+    ],
+    "answer": 1,
+    "explanation": "夜間に道路上で駐車する場合は、他の交通から見落とされないよう、駐車灯をつけるなど規定に従った灯火の措置をとる必要がある。",
+    "isTrapQuestion": true,
+    "trapNumberType": "other",
+    "topicTag": "parking"
+  },
+  {
+    "id": "f289",
+    "licenseCategory": [
+      "futsuuNirin"
+    ],
+    "stageTag": "第二段階",
+    "difficulty": 5,
+    "questionText": "普通自動二輪車の積載物の長さの制限に関する原則として正しいのはどれか。",
+    "choices": [
+      "車体の長さの2倍までいくらでもよい",
+      "車体の長さにその10分の1を加えた長さまで",
+      "車体の長さの半分までしか積めない",
+      "積載物の長さに制限はない"
+    ],
+    "answer": 1,
+    "explanation": "積載物の長さは、原則として自動車の長さにその10分の1の長さを加えたものを超えてはならないとされている。",
+    "isTrapQuestion": true,
+    "trapNumberType": "loadLimit",
+    "topicTag": "parking"
+  },
+  {
+    "id": "f290",
+    "licenseCategory": [
+      "futsuuNirin"
+    ],
+    "stageTag": "第一段階",
+    "difficulty": 2,
+    "questionText": "商店の前など一般の交通の妨げになりやすい場所に短時間だけ普通自動二輪車を止める場合の考え方として正しいのはどれか。",
+    "choices": [
+      "二輪車は自動車より小さいので規制の対象外である",
+      "短時間であれば駐停車禁止場所でも自由に止めてよい",
+      "駐停車が禁止されている場所では短時間でも止めてはならない",
+      "店の許可があれば道路上のどこでも止めてよい"
+    ],
+    "answer": 2,
+    "explanation": "駐停車禁止の場所では、たとえ短時間であっても駐車・停車をしてはならない。",
+    "isTrapQuestion": false,
+    "trapNumberType": "none",
+    "topicTag": "parking"
+  },
+  {
+    "id": "f291",
+    "licenseCategory": [
+      "futsuuNirin"
+    ],
+    "stageTag": "第一段階",
+    "difficulty": 2,
+    "questionText": "普通自動二輪免許の運転免許証の有効期間の更新について正しいのはどれか。",
+    "choices": [
+      "有効期間満了までに更新手続きを行う必要がある",
+      "更新の必要はなく、一度取得すれば生涯有効である",
+      "更新は違反をした者だけが行えばよい",
+      "更新手続きは免許を取得した都道府県でしか行えない"
+    ],
+    "answer": 0,
+    "explanation": "運転免許証には有効期間が定められており、その満了前に更新手続きを行わなければ失効してしまう。",
+    "isTrapQuestion": true,
+    "trapNumberType": "other",
+    "topicTag": "license_system"
+  },
+  {
+    "id": "f292",
+    "licenseCategory": [
+      "futsuuNirin"
+    ],
+    "stageTag": "第一段階",
+    "difficulty": 1,
+    "questionText": "普通自動二輪車を運転するときに携帯していなければならないものはどれか。",
+    "choices": [
+      "自賠責保険証明書のコピーのみで足りる",
+      "運転免許証",
+      "点検整備記録簿",
+      "自動車検査証の写し"
+    ],
+    "answer": 1,
+    "explanation": "運転中は運転免許証を必ず携帯していなければならず、提示を求められた場合はこれを提示する義務がある。",
+    "isTrapQuestion": false,
+    "trapNumberType": "none",
+    "topicTag": "license_system"
+  },
+  {
+    "id": "f293",
+    "licenseCategory": [
+      "futsuuNirin"
+    ],
+    "stageTag": "第二段階",
+    "difficulty": 4,
+    "questionText": "普通自動二輪免許における「AT小型限定」等の免許の条件について正しいのはどれか。",
+    "choices": [
+      "条件が付された免許でも、条件に反する車両を運転してよい",
+      "条件は罰則とは関係がないため無視してよい",
+      "免許証に記載された条件に従って運転しなければならない",
+      "AT限定の条件はごく一部の都道府県だけに適用される"
+    ],
+    "answer": 2,
+    "explanation": "運転免許証にAT限定などの条件が付されている場合、その条件に従って運転しなければならず、条件に反する運転は違反となる。",
+    "isTrapQuestion": false,
+    "trapNumberType": "none",
+    "topicTag": "license_system"
+  },
+  {
+    "id": "f294",
+    "licenseCategory": [
+      "futsuuNirin"
+    ],
+    "stageTag": "第一段階",
+    "difficulty": 1,
+    "questionText": "運転免許証を他人に貸したり、他人の免許証を借りて運転したりすることについて正しいのはどれか。",
+    "choices": [
+      "いかなる場合も禁止されている",
+      "緊急時に限り認められる",
+      "家族間であれば認められる",
+      "短時間であれば認められる"
+    ],
+    "answer": 0,
+    "explanation": "運転免許は本人のみが運転できる資格であり、他人に貸したり借りたりして運転することは禁止されている。",
+    "isTrapQuestion": true,
+    "trapNumberType": "other",
+    "topicTag": "license_system"
+  },
+  {
+    "id": "f295",
+    "licenseCategory": [
+      "futsuuNirin"
+    ],
+    "stageTag": "第二段階",
+    "difficulty": 4,
+    "questionText": "違反行為を繰り返して累積点数が一定の基準に達した場合の措置として正しいのはどれか。",
+    "choices": [
+      "累積点数は毎年自動的にゼロに戻る",
+      "反則金を納めれば点数は加算されない",
+      "累積点数に関係なく免許は維持される",
+      "免許の停止や取消しなどの行政処分を受けることがある"
+    ],
+    "answer": 3,
+    "explanation": "違反や事故によって累積した点数が一定の基準に達すると、免許の停止や取消しといった行政処分の対象となる。",
+    "isTrapQuestion": false,
+    "trapNumberType": "none",
+    "topicTag": "license_system"
+  },
+  {
+    "id": "f296",
+    "licenseCategory": [
+      "futsuuNirin"
+    ],
+    "stageTag": "第一段階",
+    "difficulty": 2,
+    "questionText": "運転免許証の更新時に行われる適性検査の内容として正しいのはどれか。",
+    "choices": [
+      "適性検査は初回取得時のみで更新時には不要である",
+      "筆記試験のみが行われる",
+      "実技試験が必ず課される",
+      "視力等の身体的な条件を確認する適性検査が行われる"
+    ],
+    "answer": 3,
+    "explanation": "運転免許証の更新時には、視力など運転に必要な身体的条件を満たしているかを確認する適性検査が行われる。",
+    "isTrapQuestion": false,
+    "trapNumberType": "none",
+    "topicTag": "license_system"
+  },
+  {
+    "id": "f297",
+    "licenseCategory": [
+      "futsuuNirin"
+    ],
+    "stageTag": "第二段階",
+    "difficulty": 5,
+    "questionText": "普通自動二輪免許を取得してから間もない運転者(初心運転者期間中)の心構えとして正しいのはどれか。",
+    "choices": [
+      "自分の技能を過信せず、基本に忠実な運転を心がける",
+      "初心運転者期間は普通自動二輪免許には存在しない",
+      "初心運転者期間中は特別な注意をする必要がない",
+      "経験がなくても他のベテラン運転者と全く同じ感覚で走行してよい"
+    ],
+    "answer": 0,
+    "explanation": "免許取得から間もない時期は運転技能や危険予測の経験が少ないため、自分の技能を過信せず、基本に忠実な運転を心がけることが重要である。",
+    "isTrapQuestion": false,
+    "trapNumberType": "none",
+    "topicTag": "license_system"
+  },
+  {
+    "id": "f298",
+    "licenseCategory": [
+      "futsuuNirin"
+    ],
+    "stageTag": "第一段階",
+    "difficulty": 1,
+    "questionText": "円形で中央に斜めの赤い線が入った「通行止め」の標識がある道路について正しいのはどれか。",
+    "choices": [
+      "二輪車に限り通行が認められている",
+      "夜間のみ通行できない",
+      "歩行者以外は通行できるが二輪車は通行できる",
+      "すべての車両及び歩行者が通行できない"
+    ],
+    "answer": 3,
+    "explanation": "「通行止め」の標識は、歩行者を含むすべての通行を禁止することを示している。",
+    "isTrapQuestion": false,
+    "trapNumberType": "none",
+    "topicTag": "signs"
+  },
+  {
+    "id": "f299",
+    "licenseCategory": [
+      "futsuuNirin"
+    ],
+    "stageTag": "第一段階",
+    "difficulty": 2,
+    "questionText": "普通自動二輪車の日常点検で確認すべき項目として適切なのはどれか。",
+    "choices": [
+      "チェーンのたるみは点検の対象外である",
+      "点検はディーラーでの定期点検だけで十分である",
+      "エンジンオイルの色以外は確認しなくてよい",
+      "タイヤの空気圧や溝の深さ、ブレーキの効き具合、灯火類の点灯を確認する"
+    ],
+    "answer": 3,
+    "explanation": "安全な走行のため、日常点検ではタイヤの空気圧や溝の深さ、ブレーキの効き具合、灯火類の点灯、チェーンのたるみなどを確認することが重要である。",
+    "isTrapQuestion": false,
+    "trapNumberType": "none",
+    "topicTag": "maintenance"
+  },
+  {
+    "id": "f300",
+    "licenseCategory": [
+      "futsuuNirin"
+    ],
+    "stageTag": "第二段階",
+    "difficulty": 4,
+    "questionText": "運転中に交通事故を起こしてしまった場合、運転者に課せられる義務として正しいのはどれか。",
+    "choices": [
+      "負傷者がいなければ何もする必要はない",
+      "自分に過失がなければ現場を離れてよい",
+      "後日都合のよいときに警察へ連絡すればよい",
+      "直ちに運転を停止し、負傷者の救護と危険防止の措置を行い、警察官へ報告しなければならない"
+    ],
+    "answer": 3,
+    "explanation": "交通事故を起こした運転者は、直ちに車両の運転を停止して負傷者の救護や危険防止の措置を講じ、警察官へ事故の内容を報告する義務がある。",
+    "isTrapQuestion": false,
+    "trapNumberType": "none",
+    "topicTag": "emergency"
   }
 ]
