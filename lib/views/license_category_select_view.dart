@@ -35,7 +35,8 @@ class _LicenseCategorySelectViewState
   @override
   Widget build(BuildContext context) {
     final userAsync = ref.watch(userControllerProvider);
-    final isFree = userAsync.valueOrNull?.purchaseStatus == PurchaseStatus.free;
+    final user = userAsync.valueOrNull;
+    final isFree = user?.purchaseStatus == PurchaseStatus.free;
 
     return Scaffold(
       appBar: AppBar(title: const Text('免許区分を選ぶ')),
@@ -69,6 +70,7 @@ class _LicenseCategorySelectViewState
                     _CategoryTile(
                       category: category,
                       selected: _selected.contains(category),
+                      accessLabel: _accessLabel(user, category),
                       onChanged: (checked) {
                         setState(() {
                           if (checked) {
@@ -112,17 +114,31 @@ class _LicenseCategorySelectViewState
       ),
     );
   }
+
+  /// 各区分の現在の利用可否を短いラベルで表す（購入していないのに解放
+  /// されていると誤解しないよう、選択画面の時点で明示する）。
+  String _accessLabel(AppUser? user, LicenseCategory category) {
+    if (user != null && user.hasAccessToCategory(category.name)) {
+      return '解放済み';
+    }
+    if (category == LicenseCategory.gentsuki) {
+      return '無料版は先頭$freeGentsukiPreviewCount問のみ・他はパス購入で解放';
+    }
+    return 'パス購入が必要';
+  }
 }
 
 class _CategoryTile extends StatelessWidget {
   const _CategoryTile({
     required this.category,
     required this.selected,
+    required this.accessLabel,
     required this.onChanged,
   });
 
   final LicenseCategory category;
   final bool selected;
+  final String accessLabel;
   final ValueChanged<bool> onChanged;
 
   @override
@@ -132,6 +148,10 @@ class _CategoryTile extends StatelessWidget {
         value: selected,
         onChanged: (v) => onChanged(v ?? false),
         title: Text(category.label),
+        subtitle: Text(
+          accessLabel,
+          style: Theme.of(context).textTheme.bodySmall,
+        ),
         controlAffinity: ListTileControlAffinity.leading,
       ),
     );
