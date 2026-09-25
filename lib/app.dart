@@ -4,6 +4,7 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'core/theme.dart';
 import 'views/home_view.dart';
 import 'views/onboarding_view.dart';
+import 'views/sign_in_view.dart';
 import 'viewmodels/providers.dart';
 
 /// ルートの [ScaffoldMessengerState] への参照。
@@ -53,10 +54,10 @@ class BikeLicenseKoreApp extends ConsumerWidget {
 }
 
 /// 起動時の入口を出し分ける。
-/// まず Firebase Auth の匿名ログイン完了（[authReadyProvider]）を待ってから
-/// ユーザーデータを読み込む。これを待たずに [userControllerProvider] を
-/// 組み立てると、ログイン未完了の一瞬に [currentUidProvider] が
-/// 'unknown_uid' を返し、その UID でユーザーが作成されてしまう競合状態が
+/// まず Firebase Auth（Googleサインインのみ）の準備完了（[authReadyProvider]）
+/// を待ってからユーザーデータを読み込む。これを待たずに
+/// [userControllerProvider] を組み立てると、[currentUidProvider] が一瞬
+/// 不安定な値を返し、その UID でユーザーが作成されてしまう競合状態が
 /// 起きていたため（認証初期化に失敗しているように見える不具合の原因）。
 class _StartupGate extends ConsumerWidget {
   const _StartupGate();
@@ -71,7 +72,9 @@ class _StartupGate extends ConsumerWidget {
 
     final authAsync = ref.watch(authReadyProvider);
     return authAsync.when(
-      data: (_) => const _AuthedStartupGate(),
+      // uid が null = まだGoogleサインインしていない（エラーではない）。
+      data: (uid) =>
+          uid != null ? const _AuthedStartupGate() : const SignInView(),
       loading: () => const Scaffold(
         body: Center(child: CircularProgressIndicator()),
       ),

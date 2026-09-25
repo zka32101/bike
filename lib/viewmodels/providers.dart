@@ -118,20 +118,18 @@ final networkQueueProcessorProvider =
 // Authentication
 // ---------------------------------------------------------------------------
 
-/// ユーザー認証準備（アプリ起動時に一度だけ実行）
-/// Firebase 初期化は main.dart で既に済んでいる前提
-/// app.dart でこのプロバイダーを ref.read() して、Auth初期化を保証する
-final authReadyProvider = FutureProvider<String>((ref) async {
-  // Firebase Auth Service を初期化し、匿名ログインを実行
-  final authService = FirebaseAuthService();
-  await authService.initialize();
+/// 認証サービス（Googleサインインのみ）。シングルトンとして保持し、
+/// 内部で使う GoogleSignIn インスタンスが毎回作り直されないようにする。
+final authServiceProvider = Provider<AuthService>((ref) => FirebaseAuthService());
 
-  final uid = authService.currentUid;
-  if (uid == null) {
-    throw Exception('Failed to get UID after Firebase Auth initialization');
-  }
-
-  return uid;
+/// ユーザー認証準備（アプリ起動時に一度だけ実行）。
+/// Firebase 初期化は main.dart で既に済んでいる前提。
+/// すでにGoogleサインイン済みならそのUIDを返す。未サインインの場合は
+/// エラーにせず null を返し、呼び出し側（app.dart）でサインイン画面へ誘導する。
+final authReadyProvider = FutureProvider<String?>((ref) async {
+  final authService = ref.watch(authServiceProvider);
+  await authService.waitForAuthReady();
+  return authService.currentUid;
 });
 
 /// Auth状態の変化を監視（StreamProvider）
