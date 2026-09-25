@@ -57,7 +57,8 @@ class _ExamDateSettingViewState extends ConsumerState<ExamDateSettingView> {
 
     return Scaffold(
       appBar: AppBar(title: const Text('教習の状況（任意）')),
-      body: Padding(
+      body: SafeArea(
+        child: Padding(
         padding: const EdgeInsets.all(20),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
@@ -146,7 +147,9 @@ class _ExamDateSettingViewState extends ConsumerState<ExamDateSettingView> {
                 },
                 child: const Text('あとで設定する'),
               ),
+            const SizedBox(height: 8),
           ],
+        ),
         ),
       ),
     );

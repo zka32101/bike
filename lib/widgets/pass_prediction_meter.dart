@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+import '../core/constants/license_category.dart';
 import '../models/pass_prediction_score.dart';
 import '../services/prediction_score_service.dart';
 
@@ -72,7 +73,7 @@ class PassPredictionMeter extends StatelessWidget {
                   for (final entry in score!.breakdown.entries)
                     Chip(
                       label: Text(
-                        '${entry.key} ${(entry.value * 100).toStringAsFixed(0)}%',
+                        '${_categoryLabel(entry.key)} ${(entry.value * 100).toStringAsFixed(0)}%',
                       ),
                     ),
                 ],
@@ -82,5 +83,14 @@ class PassPredictionMeter extends StatelessWidget {
         ),
       ),
     );
+  }
+
+  /// 内訳キーは LicenseCategory.name（例: "gentsuki"）だが、未知の値が
+  /// 来た場合に備えてフォールバックする。
+  String _categoryLabel(String categoryId) {
+    for (final category in LicenseCategory.values) {
+      if (category.name == categoryId) return category.label;
+    }
+    return categoryId;
   }
 }

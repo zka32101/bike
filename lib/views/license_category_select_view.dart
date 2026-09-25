@@ -39,7 +39,8 @@ class _LicenseCategorySelectViewState
 
     return Scaffold(
       appBar: AppBar(title: const Text('免許区分を選ぶ')),
-      body: Padding(
+      body: SafeArea(
+        child: Padding(
         padding: const EdgeInsets.all(20),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
@@ -106,6 +107,7 @@ class _LicenseCategorySelectViewState
               ),
             ),
           ],
+        ),
         ),
       ),
     );

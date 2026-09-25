@@ -1,0 +1,2002 @@
+[
+  {
+    "id": "at001",
+    "licenseCategory": [
+      "atGentei"
+    ],
+    "stageTag": "第一段階",
+    "difficulty": 1,
+    "questionText": "AT限定免許について正しいのはどれか。",
+    "choices": [
+      "AT限定免許ではAT車もMT車もどちらも運転できる",
+      "125cc以下のAT車専用の別区分の免許である",
+      "AT限定免許は普通二輪免許とは別に取得する必要がある",
+      "排気量にかかわらずAT車のみ運転できる条件付き免許である"
+    ],
+    "answer": 3,
+    "explanation": "AT限定は排気量区分（小型・普通・大型）にAT車のみという条件が付いた形態であり、独立した免許区分ではない。",
+    "isTrapQuestion": false,
+    "trapNumberType": "none",
+    "topicTag": "license_system"
+  },
+  {
+    "id": "at002",
+    "licenseCategory": [
+      "atGentei"
+    ],
+    "stageTag": "第一段階",
+    "difficulty": 1,
+    "questionText": "AT限定普通二輪免許でMT車（クラッチ操作が必要な車両）を運転した場合はどうなるか。",
+    "choices": [
+      "届け出をすれば運転できる",
+      "125cc以下であれば問題ない",
+      "免許の条件に違反するため取り締まりの対象となる",
+      "AT限定免許の範囲内なので問題ない"
+    ],
+    "answer": 2,
+    "explanation": "免許に付された「AT車に限る」という条件に違反する運転となり、免許条件違反として取り締まりの対象になる。",
+    "isTrapQuestion": true,
+    "trapNumberType": "other",
+    "topicTag": "license_system"
+  },
+  {
+    "id": "at003",
+    "licenseCategory": [
+      "atGentei"
+    ],
+    "stageTag": "第一段階",
+    "difficulty": 1,
+    "questionText": "AT限定免許を持つ人が、限定を解除してMT車も運転できるようにするための一般的な方法はどれか。",
+    "choices": [
+      "一定年数の経過を待てば自動的に解除される",
+      "解除はできない制度になっている",
+      "警察署に申請書を提出するだけで即日解除される",
+      "教習所等でMT車の技能教習・審査を受けて限定解除の手続きを行う"
+    ],
+    "answer": 3,
+    "explanation": "AT限定の解除には、指定自動車教習所等でMT車の技能を修得し、審査等の手続きを経る必要がある。",
+    "isTrapQuestion": false,
+    "trapNumberType": "none",
+    "topicTag": "license_system"
+  },
+  {
+    "id": "at004",
+    "licenseCategory": [
+      "atGentei"
+    ],
+    "stageTag": "第一段階",
+    "difficulty": 1,
+    "questionText": "AT限定免許は、普通二輪・大型二輪のどちらの区分にも付けることができる条件か。",
+    "choices": [
+      "普通二輪にのみ付けることができる",
+      "大型二輪にのみ付けることができる",
+      "どちらの区分にも付けることができる",
+      "小型限定にのみ付けることができる"
+    ],
+    "answer": 2,
+    "explanation": "AT限定は排気量区分を問わず付与される運転条件であり、小型・普通・大型のいずれの二輪免許にも設定されうる。",
+    "isTrapQuestion": false,
+    "trapNumberType": "none",
+    "topicTag": "license_system"
+  },
+  {
+    "id": "at005",
+    "licenseCategory": [
+      "atGentei"
+    ],
+    "stageTag": "第一段階",
+    "difficulty": 1,
+    "questionText": "普通自動車のAT限定免許を持っていれば、二輪のAT車も運転できるか。",
+    "choices": [
+      "排気量50cc以下なら運転できる",
+      "AT車同士なので運転できる",
+      "普通免許があれば二輪も含めて運転できる",
+      "運転できない。二輪の免許を別に取得する必要がある"
+    ],
+    "answer": 3,
+    "explanation": "自動車の運転免許と二輪車の運転免許は別区分であり、普通自動車AT限定免許だけでは二輪車を運転する資格は得られない。",
+    "isTrapQuestion": false,
+    "trapNumberType": "none",
+    "topicTag": "license_system"
+  },
+  {
+    "id": "at006",
+    "licenseCategory": [
+      "atGentei"
+    ],
+    "stageTag": "第一段階",
+    "difficulty": 2,
+    "questionText": "AT限定免許の技能教習・審査で重視される内容として適切なのはどれか。",
+    "choices": [
+      "クラッチ操作によるギアチェンジのタイミング",
+      "ペダルによる変速操作",
+      "キックスターターでの始動操作",
+      "スロットル操作による速度コントロールや低速でのバランス走行"
+    ],
+    "answer": 3,
+    "explanation": "AT車にはクラッチ操作がないため、AT限定の教習・審査ではスロットルワークや低速バランスなどAT特有の操作が重視される。",
+    "isTrapQuestion": false,
+    "trapNumberType": "none",
+    "topicTag": "license_system"
+  },
+  {
+    "id": "at007",
+    "licenseCategory": [
+      "atGentei"
+    ],
+    "stageTag": "第一段階",
+    "difficulty": 1,
+    "questionText": "運転免許証の条件欄に「AT車に限る」と記載されている場合の意味として正しいのはどれか。",
+    "choices": [
+      "高速道路ではAT限定の条件が適用されないという意味",
+      "AT車の購入時にのみ有効な条件",
+      "その二輪免許でクラッチ操作を要する車両を運転してはならないという条件",
+      "大型二輪にのみ適用される特別な注意書き"
+    ],
+    "answer": 2,
+    "explanation": "条件欄の記載は運転できる車両の範囲を限定するものであり、AT限定の場合はクラッチ操作を要する車両の運転が禁止される。",
+    "isTrapQuestion": false,
+    "trapNumberType": "none",
+    "topicTag": "license_system"
+  },
+  {
+    "id": "at008",
+    "licenseCategory": [
+      "atGentei"
+    ],
+    "stageTag": "第一段階",
+    "difficulty": 1,
+    "questionText": "AT限定免許で運転できる車両の例として正しいものはどれか。",
+    "choices": [
+      "足でクラッチ操作を行う一般的なMT二輪車",
+      "レバー操作でクラッチを切るMT大型二輪車",
+      "センターキーで発進するスクーター型のAT二輪車",
+      "手動でギアを踏み替えるロータリー式のMT車"
+    ],
+    "answer": 2,
+    "explanation": "AT限定免許ではクラッチ操作を必要としないAT車（スクーター等）が運転対象となる。",
+    "isTrapQuestion": false,
+    "trapNumberType": "none",
+    "topicTag": "license_system"
+  },
+  {
+    "id": "at009",
+    "licenseCategory": [
+      "atGentei"
+    ],
+    "stageTag": "第一段階",
+    "difficulty": 2,
+    "questionText": "AT車のみを運転する条件がついた普通二輪免許で、原動機付自転車（原付一種）を運転することはできるか。",
+    "choices": [
+      "運転できる。上位免許には下位区分の運転資格が含まれる",
+      "AT車限定なので原付は運転できない",
+      "運転できない。別途原付免許が必要である",
+      "許可を受けた場合のみ運転できる"
+    ],
+    "answer": 0,
+    "explanation": "普通二輪免許（AT限定を含む）を持っていれば、原動機付自転車を含む下位区分の車両を運転する資格も含まれている。",
+    "isTrapQuestion": true,
+    "trapNumberType": "other",
+    "topicTag": "rules"
+  },
+  {
+    "id": "at010",
+    "licenseCategory": [
+      "atGentei"
+    ],
+    "stageTag": "第一段階",
+    "difficulty": 2,
+    "questionText": "二人乗りをする場合、AT限定を含む普通二輪免許での条件として正しいのはどれか。",
+    "choices": [
+      "二人乗りはAT車に限り禁止されている",
+      "年齢が20歳以上であれば免許取得直後でも可能",
+      "免許取得後1年以上の運転経験が必要である",
+      "免許取得直後から二人乗りができる"
+    ],
+    "answer": 2,
+    "explanation": "普通二輪免許（AT限定含む）で二人乗りをするには、免許取得後1年以上の運転経験を積む必要がある。",
+    "isTrapQuestion": true,
+    "trapNumberType": "twoPersonRiding",
+    "topicTag": "rules"
+  },
+  {
+    "id": "at011",
+    "licenseCategory": [
+      "atGentei"
+    ],
+    "stageTag": "第二段階",
+    "difficulty": 3,
+    "questionText": "高速道路で二人乗りをする場合に必要な運転経験年数として正しいのはどれか。",
+    "choices": [
+      "2年以上",
+      "1年以上",
+      "経験年数の規定はない",
+      "3年以上"
+    ],
+    "answer": 3,
+    "explanation": "高速道路での二人乗りは、一般道路より厳しく、運転経験3年以上であることが必要とされている。",
+    "isTrapQuestion": true,
+    "trapNumberType": "twoPersonRiding",
+    "topicTag": "rules"
+  },
+  {
+    "id": "at012",
+    "licenseCategory": [
+      "atGentei"
+    ],
+    "stageTag": "第一段階",
+    "difficulty": 2,
+    "questionText": "AT限定普通二輪車の最大積載量として正しいのはどれか。",
+    "choices": [
+      "100kg",
+      "90kg",
+      "30kg",
+      "60kg"
+    ],
+    "answer": 3,
+    "explanation": "普通二輪車（側車付きを除く）の積載制限は60kgであり、これを超える積載は違反となる。",
+    "isTrapQuestion": true,
+    "trapNumberType": "loadLimit",
+    "topicTag": "rules"
+  },
+  {
+    "id": "at013",
+    "licenseCategory": [
+      "atGentei"
+    ],
+    "stageTag": "第一段階",
+    "difficulty": 1,
+    "questionText": "二輪車の法定最高速度（高速道路以外）として正しいのはどれか。",
+    "choices": [
+      "時速80km",
+      "時速50km",
+      "時速60km",
+      "時速40km"
+    ],
+    "answer": 2,
+    "explanation": "標識等で特に指定がない場合、一般道路における自動車・二輪車の法定最高速度は時速60kmである。",
+    "isTrapQuestion": true,
+    "trapNumberType": "speedLimit",
+    "topicTag": "rules"
+  },
+  {
+    "id": "at014",
+    "licenseCategory": [
+      "atGentei"
+    ],
+    "stageTag": "第二段階",
+    "difficulty": 3,
+    "questionText": "交差点で二段階右折が義務付けられている車両として正しいものはどれか。",
+    "choices": [
+      "AT限定大型二輪車",
+      "AT限定を問わずすべての二輪車",
+      "AT限定普通二輪車",
+      "原動機付自転車"
+    ],
+    "answer": 3,
+    "explanation": "二段階右折が義務付けられるのは原動機付自転車であり、普通・大型二輪車（AT限定含む）は交差点の状況に応じた小回り右折または二段階右折を行う。",
+    "isTrapQuestion": true,
+    "trapNumberType": "twoStageRightTurn",
+    "topicTag": "rules"
+  },
+  {
+    "id": "at015",
+    "licenseCategory": [
+      "atGentei"
+    ],
+    "stageTag": "第一段階",
+    "difficulty": 2,
+    "questionText": "前車に続いて走行する際の車間距離の基本的な考え方として正しいのはどれか。",
+    "choices": [
+      "急停止しても追突しない距離を保つ",
+      "前車との距離は常に一定でよい",
+      "二輪車には車間距離の規定が適用されない",
+      "速度が上がるほど車間距離を詰めてよい"
+    ],
+    "answer": 0,
+    "explanation": "車間距離は、前車が急停止した場合でも安全に停止できる距離を保つ必要があり、速度が上がるほど長く取る必要がある。",
+    "isTrapQuestion": true,
+    "trapNumberType": "followingDistance",
+    "topicTag": "rules"
+  },
+  {
+    "id": "at016",
+    "licenseCategory": [
+      "atGentei"
+    ],
+    "stageTag": "第一段階",
+    "difficulty": 1,
+    "questionText": "信号のない横断歩道に歩行者がいるとき、運転者が取るべき行動として正しいのはどれか。",
+    "choices": [
+      "クラクションを鳴らして歩行者に道を譲らせる",
+      "横断歩道の手前で一時停止し、歩行者の通行を妨げないようにする",
+      "歩行者が完全に渡り終わるまで停止する義務はない",
+      "歩行者がいても徐行すれば通過してよい"
+    ],
+    "answer": 1,
+    "explanation": "横断歩道を横断しようとする歩行者等がいるときは、その手前で一時停止し、歩行者の通行を妨げてはならない。",
+    "isTrapQuestion": false,
+    "trapNumberType": "none",
+    "topicTag": "rules"
+  },
+  {
+    "id": "at017",
+    "licenseCategory": [
+      "atGentei"
+    ],
+    "stageTag": "第一段階",
+    "difficulty": 2,
+    "questionText": "追い越しが禁止されている場所として正しいものはどれか。",
+    "choices": [
+      "片側3車線の直線道路",
+      "見通しのよい直線の一般道路",
+      "駐車場の出入口付近",
+      "トンネル内（車両通行帯のないもの）"
+    ],
+    "answer": 3,
+    "explanation": "車両通行帯のないトンネル内や交差点の手前30m以内などは追い越しが禁止されている。",
+    "isTrapQuestion": true,
+    "trapNumberType": "other",
+    "topicTag": "rules"
+  },
+  {
+    "id": "at018",
+    "licenseCategory": [
+      "atGentei"
+    ],
+    "stageTag": "第一段階",
+    "difficulty": 1,
+    "questionText": "踏切の手前での運転者の義務として正しいのはどれか。",
+    "choices": [
+      "遮断機が上がっていれば停止せず通過してよい",
+      "二輪車は踏切での一時停止義務が免除される",
+      "踏切の直前で一時停止し、安全を確認してから進行する",
+      "見通しがよければ徐行のみで通過してよい"
+    ],
+    "answer": 2,
+    "explanation": "踏切の直前では一時停止し、左右の安全を確認してから進行しなければならない（信号機により停止不要とされる場合を除く）。",
+    "isTrapQuestion": false,
+    "trapNumberType": "none",
+    "topicTag": "rules"
+  },
+  {
+    "id": "at019",
+    "licenseCategory": [
+      "atGentei"
+    ],
+    "stageTag": "第一段階",
+    "difficulty": 2,
+    "questionText": "駐停車禁止場所として正しいものはどれか。",
+    "choices": [
+      "商店街のアーケード内",
+      "駐車場の敷地内",
+      "住宅街の細い道路",
+      "消火栓から5m以内の場所"
+    ],
+    "answer": 3,
+    "explanation": "消火栓、消防用防火水槽の取入口から5m以内は駐停車が禁止されている。",
+    "isTrapQuestion": true,
+    "trapNumberType": "other",
+    "topicTag": "rules"
+  },
+  {
+    "id": "at020",
+    "licenseCategory": [
+      "atGentei"
+    ],
+    "stageTag": "第一段階",
+    "difficulty": 2,
+    "questionText": "駐車禁止場所として正しいものはどれか。",
+    "choices": [
+      "駐車場や車庫の出入口から3m以内",
+      "一般の住宅の玄関前",
+      "商業施設の駐車場内",
+      "公園の敷地内の私有地"
+    ],
+    "answer": 0,
+    "explanation": "自動車専用出入口から3m以内は駐車禁止場所とされている。",
+    "isTrapQuestion": true,
+    "trapNumberType": "other",
+    "topicTag": "rules"
+  },
+  {
+    "id": "at021",
+    "licenseCategory": [
+      "atGentei"
+    ],
+    "stageTag": "第一段階",
+    "difficulty": 1,
+    "questionText": "飲酒運転に関する記述として正しいのはどれか。",
+    "choices": [
+      "酒気を帯びた状態での運転は一律に禁止されている",
+      "呼気アルコール濃度が基準値未満なら罰則の対象外である",
+      "運転者以外が酒気を帯びていても同乗できない",
+      "少量の飲酒であれば二輪車の運転は問題ない"
+    ],
+    "answer": 0,
+    "explanation": "道路交通法では、酒気を帯びた状態での運転そのものが禁止されており、量にかかわらず違反となる。",
+    "isTrapQuestion": false,
+    "trapNumberType": "none",
+    "topicTag": "rules"
+  },
+  {
+    "id": "at022",
+    "licenseCategory": [
+      "atGentei"
+    ],
+    "stageTag": "第一段階",
+    "difficulty": 1,
+    "questionText": "携帯電話の使用に関する規定として正しいのはどれか。",
+    "choices": [
+      "走行中に手で保持して通話することは禁止されている",
+      "イヤホンを使えば走行中の通話操作は自由に行える",
+      "停止していれば信号待ち中でも使用してはならない",
+      "二輪車の走行中は携帯電話の使用が特別に許可されている"
+    ],
+    "answer": 0,
+    "explanation": "走行中に携帯電話を手で保持して通話したり、画面を注視したりする行為は道路交通法で禁止されている。",
+    "isTrapQuestion": false,
+    "trapNumberType": "none",
+    "topicTag": "rules"
+  },
+  {
+    "id": "at023",
+    "licenseCategory": [
+      "atGentei"
+    ],
+    "stageTag": "第一段階",
+    "difficulty": 1,
+    "questionText": "シートベルトに相当する二輪車の安全装備義務として正しいのはどれか。",
+    "choices": [
+      "ヘルメットの着用は任意である",
+      "高速道路以外ではヘルメット着用は不要である",
+      "同乗者のみヘルメット着用が義務である",
+      "運転者・同乗者ともにヘルメットの着用が義務付けられている"
+    ],
+    "answer": 3,
+    "explanation": "二輪車の運転者・同乗者は、走行するすべての道路でヘルメットを着用しなければならない。",
+    "isTrapQuestion": true,
+    "trapNumberType": "other",
+    "topicTag": "rules"
+  },
+  {
+    "id": "at024",
+    "licenseCategory": [
+      "atGentei"
+    ],
+    "stageTag": "第一段階",
+    "difficulty": 1,
+    "questionText": "二輪車の灯火に関する記述として正しいのはどれか。",
+    "choices": [
+      "尾灯が点灯していれば前照灯は不要である",
+      "AT車は灯火の義務が免除される",
+      "夜間は前照灯及び尾灯（テールランプ）をつけて走行しなければならない",
+      "市街地の明るい道路では前照灯を消してもよい"
+    ],
+    "answer": 2,
+    "explanation": "夜間走行時は前照灯・尾灯など保安基準で定められた灯火を点灯させなければならない。",
+    "isTrapQuestion": false,
+    "trapNumberType": "none",
+    "topicTag": "rules"
+  },
+  {
+    "id": "at025",
+    "licenseCategory": [
+      "atGentei"
+    ],
+    "stageTag": "第一段階",
+    "difficulty": 2,
+    "questionText": "車両通行帯がある道路で、二輪車が通行すべき位置として正しいのはどれか。",
+    "choices": [
+      "どの車両通行帯でも自由に選んでよい",
+      "最も左側の車両通行帯を通行するのが原則である",
+      "常に最も右側の車両通行帯を通行しなければならない",
+      "追い越し車線を常時走行してよい"
+    ],
+    "answer": 1,
+    "explanation": "特別な事情がない限り、二輪車を含む車両は最も左側の車両通行帯を通行するのが原則である。",
+    "isTrapQuestion": false,
+    "trapNumberType": "none",
+    "topicTag": "rules"
+  },
+  {
+    "id": "at026",
+    "licenseCategory": [
+      "atGentei"
+    ],
+    "stageTag": "第一段階",
+    "difficulty": 1,
+    "questionText": "徐行すべき場所として正しいのはどれか。",
+    "choices": [
+      "信号機のある広い交差点",
+      "高速道路の本線",
+      "見通しのきかない交差点",
+      "片側2車線以上の直線道路"
+    ],
+    "answer": 2,
+    "explanation": "見通しのきかない交差点や道路の曲がり角付近などは徐行すべき場所として定められている。",
+    "isTrapQuestion": true,
+    "trapNumberType": "other",
+    "topicTag": "rules"
+  },
+  {
+    "id": "at027",
+    "licenseCategory": [
+      "atGentei"
+    ],
+    "stageTag": "第一段階",
+    "difficulty": 2,
+    "questionText": "警音器（クラクション）を鳴らさなければならない場面として正しいのはどれか。",
+    "choices": [
+      "駐車場に進入するとき常に",
+      "対向車とすれ違うとき常に",
+      "他の車両を追い越すとき常に",
+      "「警笛鳴らせ」の標識がある区間"
+    ],
+    "answer": 3,
+    "explanation": "警音器は「警笛鳴らせ」の標識・標示がある場所などで鳴らすことが義務付けられており、それ以外でのむやみな使用は禁止されている。",
+    "isTrapQuestion": true,
+    "trapNumberType": "other",
+    "topicTag": "rules"
+  },
+  {
+    "id": "at028",
+    "licenseCategory": [
+      "atGentei"
+    ],
+    "stageTag": "第一段階",
+    "difficulty": 1,
+    "questionText": "二輪車の法定点検・整備に関する運転者の義務として正しいのはどれか。",
+    "choices": [
+      "点検・整備はすべて販売店任せでよく、運転者に義務はない",
+      "AT車は構造が単純なため点検義務が免除される",
+      "日常点検を行い、整備不良の状態で運転しないようにする義務がある",
+      "車検を受けていれば日常点検は不要である"
+    ],
+    "answer": 2,
+    "explanation": "運転者には日常点検を行い、整備不良の車両を運転しない義務がある。",
+    "isTrapQuestion": false,
+    "trapNumberType": "none",
+    "topicTag": "rules"
+  },
+  {
+    "id": "at029",
+    "licenseCategory": [
+      "atGentei"
+    ],
+    "stageTag": "第一段階",
+    "difficulty": 1,
+    "questionText": "信号の意味として正しいものはどれか。",
+    "choices": [
+      "黄色の灯火は赤信号と同じ効力を持たない",
+      "黄色の灯火は加速して交差点を通過せよという合図である",
+      "黄色の灯火は、原則として車両は停止位置を越えて進行してはならない",
+      "黄色の灯火では歩行者のみが停止すればよい"
+    ],
+    "answer": 2,
+    "explanation": "黄色の灯火では、安全に停止できない場合を除き、車両は停止位置を越えて進行してはならない。",
+    "isTrapQuestion": false,
+    "trapNumberType": "none",
+    "topicTag": "rules"
+  },
+  {
+    "id": "at030",
+    "licenseCategory": [
+      "atGentei"
+    ],
+    "stageTag": "第一段階",
+    "difficulty": 1,
+    "questionText": "「一時停止」の標識がある交差点での義務として正しいのはどれか。",
+    "choices": [
+      "停止線の直前で必ず一時停止し、安全を確認する",
+      "見通しがよければ徐行するだけでよい",
+      "対向車がいなければ停止しなくてよい",
+      "AT車は制動距離が短いため停止義務が緩和される"
+    ],
+    "answer": 0,
+    "explanation": "「一時停止」の標識がある場所では、車両は停止線の直前で必ず一時停止しなければならない。",
+    "isTrapQuestion": true,
+    "trapNumberType": "other",
+    "topicTag": "rules"
+  },
+  {
+    "id": "at031",
+    "licenseCategory": [
+      "atGentei"
+    ],
+    "stageTag": "第二段階",
+    "difficulty": 3,
+    "questionText": "路線バス等の優先通行帯を、指定車両以外が通行する際の原則として正しいのはどれか。",
+    "choices": [
+      "優先通行帯は追い越し専用の車線である",
+      "後方からバス等が接近してきたときは速やかにその通行帯の外に出る",
+      "バスが来ても速度を上げて先行してよい",
+      "優先通行帯には二輪車も含め一切進入できない"
+    ],
+    "answer": 1,
+    "explanation": "路線バス等優先通行帯では、指定車両以外の車両は後方からバス等が接近した場合、速やかにその通行帯から出なければならない。",
+    "isTrapQuestion": false,
+    "trapNumberType": "none",
+    "topicTag": "rules"
+  },
+  {
+    "id": "at032",
+    "licenseCategory": [
+      "atGentei"
+    ],
+    "stageTag": "第二段階",
+    "difficulty": 3,
+    "questionText": "高速道路を走行できるAT限定二輪免許の条件として正しいのはどれか。",
+    "choices": [
+      "普通・大型のAT限定二輪免許であれば高速道路を走行できる",
+      "125cc超のAT車のみ高速道路を走行できない",
+      "小型限定を除きAT限定では高速道路の走行が禁止される",
+      "AT限定免許では高速道路を走行できない"
+    ],
+    "answer": 0,
+    "explanation": "普通・大型二輪のAT限定免許であれば、通常の二輪免許と同様に高速道路を走行できる（原付・小型限定は対象外）。",
+    "isTrapQuestion": true,
+    "trapNumberType": "other",
+    "topicTag": "rules"
+  },
+  {
+    "id": "at033",
+    "licenseCategory": [
+      "atGentei"
+    ],
+    "stageTag": "第一段階",
+    "difficulty": 2,
+    "questionText": "交差点の手前で進路を変えて右左折の準備をする際の合図のタイミングとして正しいのはどれか。",
+    "choices": [
+      "右左折しようとする地点から30m手前で合図を出す",
+      "右左折を開始した直後に合図を出す",
+      "合図は交差点内に入ってから出せばよい",
+      "見通しがよければ合図を省略してよい"
+    ],
+    "answer": 0,
+    "explanation": "右左折の合図は、右左折しようとする地点の30m手前で行うことが定められている。",
+    "isTrapQuestion": true,
+    "trapNumberType": "other",
+    "topicTag": "rules"
+  },
+  {
+    "id": "at034",
+    "licenseCategory": [
+      "atGentei"
+    ],
+    "stageTag": "第二段階",
+    "difficulty": 5,
+    "questionText": "環状交差点（ラウンドアバウト）における二輪車の通行方法として正しいのはどれか。",
+    "choices": [
+      "反時計回りに一方通行で通行する",
+      "環状交差点では一時停止が常に必要である",
+      "徐行しながら時計回りに進行し、環道内の車両を優先させる",
+      "環道内では速度制限が適用されない"
+    ],
+    "answer": 2,
+    "explanation": "環状交差点では車両は徐行しながら時計回り（右回り）に進行し、既に環道を通行している車両の進行を妨げてはならない。",
+    "isTrapQuestion": true,
+    "trapNumberType": "other",
+    "topicTag": "rules"
+  },
+  {
+    "id": "at035",
+    "licenseCategory": [
+      "atGentei"
+    ],
+    "stageTag": "第二段階",
+    "difficulty": 3,
+    "questionText": "停止距離（空走距離＋制動距離）についての記述として正しいのはどれか。",
+    "choices": [
+      "速度が2倍になっても制動距離は変わらない",
+      "制動距離は速度に比例して直線的に増える",
+      "速度が2倍になると制動距離はおよそ4倍になる",
+      "空走距離は速度に関係なく一定である"
+    ],
+    "answer": 2,
+    "explanation": "制動距離は速度の2乗にほぼ比例して増加するため、速度が2倍になると制動距離はおよそ4倍になる。",
+    "isTrapQuestion": false,
+    "trapNumberType": "none",
+    "topicTag": "rules"
+  },
+  {
+    "id": "at036",
+    "licenseCategory": [
+      "atGentei"
+    ],
+    "stageTag": "第二段階",
+    "difficulty": 3,
+    "questionText": "原動機付自転車と比較した普通・大型AT限定二輪車の高速道路通行に関する記述で正しいのはどれか。",
+    "choices": [
+      "原付・普通・大型のいずれも高速道路を通行できない",
+      "原付のみ高速道路を通行できる",
+      "AT限定はすべて高速道路の通行資格がない",
+      "原付は高速道路を通行できないが、普通・大型のAT限定二輪車は通行できる"
+    ],
+    "answer": 3,
+    "explanation": "原動機付自転車は高速道路（自動車専用道路）を通行できないが、普通・大型二輪車（AT限定含む）は通行できる。",
+    "isTrapQuestion": true,
+    "trapNumberType": "other",
+    "topicTag": "rules"
+  },
+  {
+    "id": "at037",
+    "licenseCategory": [
+      "atGentei"
+    ],
+    "stageTag": "第二段階",
+    "difficulty": 3,
+    "questionText": "駐車車両を避けるため中央線をはみ出して通行する場合の注意点として正しいのはどれか。",
+    "choices": [
+      "駐車車両があれば常に中央線をはみ出してよい",
+      "対向車の有無を十分確認し、安全な場合のみ最小限はみ出して通行する",
+      "はみ出し通行は理由を問わず全面禁止である",
+      "AT車であれば中央線を越えて通行しても問題ない"
+    ],
+    "answer": 1,
+    "explanation": "やむを得ず中央線をはみ出す場合は、対向車の安全を十分確認したうえで必要最小限の範囲にとどめなければならない。",
+    "isTrapQuestion": true,
+    "trapNumberType": "other",
+    "topicTag": "rules"
+  },
+  {
+    "id": "at038",
+    "licenseCategory": [
+      "atGentei"
+    ],
+    "stageTag": "第二段階",
+    "difficulty": 3,
+    "questionText": "原動機付自転車を含む二輪車が守るべき最低速度規制について正しいのはどれか。",
+    "choices": [
+      "一般道路では最低速度の規制は原則として定められていない",
+      "高速道路の本線車道と同じ最低速度規制が適用される",
+      "一般道路でも常に時速30km以上で走行しなければならない",
+      "AT車は最低速度規制の対象外という特例がある"
+    ],
+    "answer": 0,
+    "explanation": "最低速度の規制は主に高速道路の本線車道で定められており、一般道路では原則として最低速度の規制はない。",
+    "isTrapQuestion": true,
+    "trapNumberType": "other",
+    "topicTag": "rules"
+  },
+  {
+    "id": "at039",
+    "licenseCategory": [
+      "atGentei"
+    ],
+    "stageTag": "第一段階",
+    "difficulty": 2,
+    "questionText": "交差点付近で駐車車両の陰から歩行者が飛び出してくる危険を予測する際、二輪車の運転者が取るべき行動として正しいのはどれか。",
+    "choices": [
+      "駐車車両との間隔を詰めて素早く通過する",
+      "駐車車両に近づく前に速度を落とし、いつでも止まれる状態にする",
+      "クラクションを鳴らし続ければ速度を落とす必要はない",
+      "駐車車両の陰は見通しがよいため速度を上げてよい"
+    ],
+    "answer": 1,
+    "explanation": "駐車車両の陰からの歩行者・自転車の飛び出しは予測しづらい危険であり、事前に速度を落とし対応できる状態を保つことが重要。",
+    "isTrapQuestion": false,
+    "trapNumberType": "none",
+    "topicTag": "hazard_prediction"
+  },
+  {
+    "id": "at040",
+    "licenseCategory": [
+      "atGentei"
+    ],
+    "stageTag": "第一段階",
+    "difficulty": 1,
+    "questionText": "見通しの悪い交差点に進入する際の危険予測として、最も適切な行動はどれか。",
+    "choices": [
+      "信号がなければ確認は不要である",
+      "見えないからこそ速度を上げて早く通過する",
+      "対向車が来なければ確認せず進入してよい",
+      "速度を十分落とし、左右の安全を確認しながら進入する"
+    ],
+    "answer": 3,
+    "explanation": "見通しの悪い交差点では、速度を落として左右の安全を確認しながら進入することで、出会い頭の事故を防げる。",
+    "isTrapQuestion": true,
+    "trapNumberType": "other",
+    "topicTag": "hazard_prediction"
+  },
+  {
+    "id": "at041",
+    "licenseCategory": [
+      "atGentei"
+    ],
+    "stageTag": "第一段階",
+    "difficulty": 2,
+    "questionText": "雨天時の二輪車走行で特に注意すべき危険として正しいのはどれか。",
+    "choices": [
+      "雨天時はタイヤの摩擦係数が上がる",
+      "雨天時はドライ路面よりブレーキが効きやすくなる",
+      "マンホールや白線（路面標示）はタイヤが滑りやすくなる",
+      "雨天時は車間距離を詰めても安全性は変わらない"
+    ],
+    "answer": 2,
+    "explanation": "雨天時、マンホールの蓋や白線などの塗装面は特に滑りやすくなり、スリップの危険が高まる。",
+    "isTrapQuestion": false,
+    "trapNumberType": "none",
+    "topicTag": "hazard_prediction"
+  },
+  {
+    "id": "at042",
+    "licenseCategory": [
+      "atGentei"
+    ],
+    "stageTag": "第一段階",
+    "difficulty": 2,
+    "questionText": "大型車の後ろを走行しているとき、二輪車の運転者が注意すべき危険として正しいのはどれか。",
+    "choices": [
+      "大型車の後ろは視界が良好になる",
+      "大型車の後ろは風の影響を受けないため安全である",
+      "大型車の死角に入りやすく、前方の状況も見えにくくなる",
+      "大型車の後方であれば車間距離を詰めても問題ない"
+    ],
+    "answer": 2,
+    "explanation": "大型車の後方は運転者の死角に入りやすいうえ、前方の信号や障害物の視界も遮られるため、車間距離を保ち位置取りに注意する必要がある。",
+    "isTrapQuestion": false,
+    "trapNumberType": "none",
+    "topicTag": "hazard_prediction"
+  },
+  {
+    "id": "at043",
+    "licenseCategory": [
+      "atGentei"
+    ],
+    "stageTag": "第一段階",
+    "difficulty": 1,
+    "questionText": "子どもが多い住宅街の道路を走行する際の危険予測として適切なのはどれか。",
+    "choices": [
+      "住宅街では法定速度を超えて走行してもよい",
+      "子どもは注意して行動するはずなので通常の速度でよい",
+      "見える範囲に子どもがいなければ注意は不要である",
+      "ボールが飛び出す可能性を考え、あらかじめ速度を落として走行する"
+    ],
+    "answer": 3,
+    "explanation": "住宅街ではボール遊びをしている子どもが急に道路に飛び出す可能性があり、あらかじめ速度を落として備える必要がある。",
+    "isTrapQuestion": false,
+    "trapNumberType": "none",
+    "topicTag": "hazard_prediction"
+  },
+  {
+    "id": "at044",
+    "licenseCategory": [
+      "atGentei"
+    ],
+    "stageTag": "第二段階",
+    "difficulty": 4,
+    "questionText": "対向車線から右折待ちをしている車両がある交差点を直進する際の危険予測として正しいのはどれか。",
+    "choices": [
+      "右折待ち車両の陰からの危険は二輪車には関係ない",
+      "右折車が無理に発進してくる可能性を考え、速度と進路に注意する",
+      "右折待ち車両がいる場合は速度を上げて先に通過すべきである",
+      "右折待ち車両は必ず自分の通過を待ってくれるので注意不要"
+    ],
+    "answer": 1,
+    "explanation": "右折待ち車両は対向車の切れ目を見て発進しようとするため、直進する二輪車を見落として発進してくることがあり注意が必要。",
+    "isTrapQuestion": false,
+    "trapNumberType": "none",
+    "topicTag": "hazard_prediction"
+  },
+  {
+    "id": "at045",
+    "licenseCategory": [
+      "atGentei"
+    ],
+    "stageTag": "第二段階",
+    "difficulty": 4,
+    "questionText": "坂道の下りでAT車特有の注意点として正しいのはどれか。",
+    "choices": [
+      "AT車はMT車よりエンジンブレーキが強く効くため速度管理が容易である",
+      "エンジンブレーキの効きがMT車より弱いため、フットブレーキの活用を意識する",
+      "AT車には下り坂特有の注意点はない",
+      "下り坂ではブレーキを使わず惰性で走行するのが基本である"
+    ],
+    "answer": 1,
+    "explanation": "AT車（CVT等）はギアを選んで意図的な減速をしにくく、エンジンブレーキの効きがMT車ほど明確でないため、下り坂ではブレーキ操作でしっかり速度をコントロールする必要がある。",
+    "isTrapQuestion": true,
+    "trapNumberType": "other",
+    "topicTag": "hazard_prediction"
+  },
+  {
+    "id": "at046",
+    "licenseCategory": [
+      "atGentei"
+    ],
+    "stageTag": "第二段階",
+    "difficulty": 4,
+    "questionText": "路面電車の軌道敷（線路）を横断・並走する際の危険として正しいのはどれか。",
+    "choices": [
+      "軌道敷は二輪車の通行が禁止されているため考慮不要である",
+      "レール部分は濡れていると特に滑りやすく、直角に近い角度で通過するのが望ましい",
+      "レールに対して斜めに進入するほうが安全である",
+      "軌道敷はアスファルトより滑りにくいので注意不要である"
+    ],
+    "answer": 1,
+    "explanation": "濡れたレールは非常に滑りやすく、斜めに進入するとタイヤが取られやすいため、できるだけ直角に近い角度で通過するのが安全。",
+    "isTrapQuestion": true,
+    "trapNumberType": "other",
+    "topicTag": "hazard_prediction"
+  },
+  {
+    "id": "at047",
+    "licenseCategory": [
+      "atGentei"
+    ],
+    "stageTag": "第二段階",
+    "difficulty": 4,
+    "questionText": "交差点右折時、対向直進の二輪車を見落としやすい理由として正しいのはどれか。",
+    "choices": [
+      "対向車線に二輪車がいる場合、右折車には確認義務がない",
+      "二輪車は必ず徐行しているため見落とされることはない",
+      "二輪車は車幅が広いため右折車から見えやすい",
+      "二輪車は車体が小さく速度の判断がしにくいため、他の車両より見落とされやすい"
+    ],
+    "answer": 3,
+    "explanation": "二輪車は車体が小さく速度・距離感がつかみにくいため、右折しようとする対向車から見落とされやすく、これを前提に自ら備える必要がある。",
+    "isTrapQuestion": false,
+    "trapNumberType": "none",
+    "topicTag": "hazard_prediction"
+  },
+  {
+    "id": "at048",
+    "licenseCategory": [
+      "atGentei"
+    ],
+    "stageTag": "第一段階",
+    "difficulty": 2,
+    "questionText": "強い横風が吹く橋の上などを走行する際の注意点として正しいのはどれか。",
+    "choices": [
+      "横風の影響を受けやすいのでできるだけ速度を上げて一気に通過する",
+      "横風は二輪車の走行にほとんど影響しない",
+      "ハンドルをしっかり保持し、速度を落として通過する",
+      "横風対策としてハンドルを緩く握るのがよい"
+    ],
+    "answer": 2,
+    "explanation": "橋の上などの強風区間では、車体が振られやすいためハンドルをしっかり保持し、速度を落として安全に通過する。",
+    "isTrapQuestion": false,
+    "trapNumberType": "none",
+    "topicTag": "hazard_prediction"
+  },
+  {
+    "id": "at049",
+    "licenseCategory": [
+      "atGentei"
+    ],
+    "stageTag": "第一段階",
+    "difficulty": 1,
+    "questionText": "先行車が急に速度を落とした場合に考えられる危険として、二輪車の運転者が予測すべきことは何か。",
+    "choices": [
+      "先行車との車間が十分であれば確認は不要である",
+      "前方に障害物や歩行者、渋滞などがある可能性を考え、自分も速やかに減速する",
+      "先行車の減速は誤操作であることが多いので無視してよい",
+      "先行車が減速しても自車の速度を維持してよい"
+    ],
+    "answer": 1,
+    "explanation": "先行車の急な減速には前方に危険要因がある可能性が高く、二輪車の運転者も速やかに状況を確認し減速する必要がある。",
+    "isTrapQuestion": false,
+    "trapNumberType": "none",
+    "topicTag": "hazard_prediction"
+  },
+  {
+    "id": "at050",
+    "licenseCategory": [
+      "atGentei"
+    ],
+    "stageTag": "第二段階",
+    "difficulty": 4,
+    "questionText": "駐車場や狭い場所でAT車を取り回す際に特に注意すべき危険として正しいのはどれか。",
+    "choices": [
+      "AT車はクラッチ操作がある分、MT車より低速での操作が難しい",
+      "AT車は低速走行時に限りブレーキが効かなくなる",
+      "AT車の低速取り回しにはMT車と同様のクラッチ操作が必要である",
+      "スロットルを不用意に開けすぎると急発進しやすいため、低速では慎重に操作する"
+    ],
+    "answer": 3,
+    "explanation": "AT車はスロットル操作のみで駆動力が伝わるため、低速時にアクセルを開けすぎると急発進しやすく、取り回し時は慎重なスロットル操作が必要。",
+    "isTrapQuestion": true,
+    "trapNumberType": "other",
+    "topicTag": "hazard_prediction"
+  },
+  {
+    "id": "at051",
+    "licenseCategory": [
+      "atGentei"
+    ],
+    "stageTag": "第一段階",
+    "difficulty": 2,
+    "questionText": "交差点で信号が青に変わった直後に発進する際の危険予測として適切なのはどれか。",
+    "choices": [
+      "青に変わった瞬間はすべての交通が停止しているので安全である",
+      "青信号になれば安全確認をせず即座に発進してよい",
+      "自分の信号が青である以上、他の車両の動きは考慮不要である",
+      "赤信号を無視して進入してくる車両があり得ることを考え、周囲を確認してから発進する"
+    ],
+    "answer": 3,
+    "explanation": "信号が青になった直後でも、赤信号を無視して交差点に進入してくる車両がある可能性を考え、確認してから発進することが重要。",
+    "isTrapQuestion": true,
+    "trapNumberType": "other",
+    "topicTag": "hazard_prediction"
+  },
+  {
+    "id": "at052",
+    "licenseCategory": [
+      "atGentei"
+    ],
+    "stageTag": "第二段階",
+    "difficulty": 4,
+    "questionText": "夜間走行時に対向車のライトで眩惑（げんわく）された場合の対応として正しいのはどれか。",
+    "choices": [
+      "対向車のライトを直視して距離を測る",
+      "ハイビームのまま対向車に近づけば問題ない",
+      "眩惑されても速度はそのまま維持してよい",
+      "視線をやや左前方に向け、速度を落として対応する"
+    ],
+    "answer": 3,
+    "explanation": "対向車のライトで眩惑されたときは、視線を左前方の路肩寄りに向けて直視を避け、速度を落として安全を確保する。",
+    "isTrapQuestion": false,
+    "trapNumberType": "none",
+    "topicTag": "hazard_prediction"
+  },
+  {
+    "id": "at053",
+    "licenseCategory": [
+      "atGentei"
+    ],
+    "stageTag": "第二段階",
+    "difficulty": 4,
+    "questionText": "二輪車で急な下り坂のカーブに進入する際の危険予測として正しいのはどれか。",
+    "choices": [
+      "カーブの手前で十分に減速し、遠心力とブレーキの影響を考慮する",
+      "カーブ内ではブレーキをかけるほど安定する",
+      "下り坂のカーブでは加速してから曲がるのが安全である",
+      "カーブ内で速度を落とせば十分であり、手前での減速は不要"
+    ],
+    "answer": 0,
+    "explanation": "下り坂のカーブはカーブ中の急ブレーキが転倒につながりやすいため、カーブの手前で十分に減速しておくことが重要。",
+    "isTrapQuestion": false,
+    "trapNumberType": "none",
+    "topicTag": "hazard_prediction"
+  },
+  {
+    "id": "at054",
+    "licenseCategory": [
+      "atGentei"
+    ],
+    "stageTag": "第一段階",
+    "difficulty": 2,
+    "questionText": "交差点で自転車横断帯付近を通過する際の危険予測として正しいのはどれか。",
+    "choices": [
+      "自転車が信号や一時停止を守らず横断してくる可能性を考慮する",
+      "自転車は必ず徐行するため注意不要である",
+      "自転車横断帯付近では速度を落とす必要はない",
+      "自転車横断帯は歩行者専用なので二輪車は考慮しなくてよい"
+    ],
+    "answer": 0,
+    "explanation": "自転車は交通ルールを守らず横断してくることがあるため、自転車横断帯付近では速度を落とし、その動きに注意する必要がある。",
+    "isTrapQuestion": false,
+    "trapNumberType": "none",
+    "topicTag": "hazard_prediction"
+  },
+  {
+    "id": "at055",
+    "licenseCategory": [
+      "atGentei"
+    ],
+    "stageTag": "第二段階",
+    "difficulty": 4,
+    "questionText": "トンネル出入口付近を走行する際の危険予測として正しいのはどれか。",
+    "choices": [
+      "トンネル内外の明るさの違いは二輪車の運転に影響しない",
+      "明暗の急な変化により視界が一時的に低下することを考え速度を落とす",
+      "サングラスをすれば明暗差の影響は一切ない",
+      "トンネル出入口では常に視界が良好なので速度を上げてよい"
+    ],
+    "answer": 1,
+    "explanation": "トンネルの出入口では急激な明暗の変化により一時的に視界が低下するため、あらかじめ速度を落として備える必要がある。",
+    "isTrapQuestion": true,
+    "trapNumberType": "other",
+    "topicTag": "hazard_prediction"
+  },
+  {
+    "id": "at056",
+    "licenseCategory": [
+      "atGentei"
+    ],
+    "stageTag": "第一段階",
+    "difficulty": 2,
+    "questionText": "荷物を積んだトラックの近くを走行する際に注意すべき危険として正しいのはどれか。",
+    "choices": [
+      "積み荷が落下・飛散する可能性を考慮し、車間や側方の距離をとる",
+      "トラックの直後は視界がよく安全な位置取りである",
+      "トラックの近くは風の影響を受けないため安全である",
+      "積み荷は必ず固定されているため注意不要である"
+    ],
+    "answer": 0,
+    "explanation": "トラックからの積み荷の落下・飛散はまれにあり得る危険であり、車間距離や側方間隔を十分に取ることが望ましい。",
+    "isTrapQuestion": false,
+    "trapNumberType": "none",
+    "topicTag": "hazard_prediction"
+  },
+  {
+    "id": "at057",
+    "licenseCategory": [
+      "atGentei"
+    ],
+    "stageTag": "第一段階",
+    "difficulty": 2,
+    "questionText": "路上駐車の多い商店街を走行する際の危険予測として正しいのはどれか。",
+    "choices": [
+      "駐車車両のドアが急に開く可能性を考え、側方に十分な間隔をとる",
+      "駐車車両の横は必ず安全なので間隔を詰めてよい",
+      "ドアが開く危険は自動車のみに関係し二輪車には無関係である",
+      "商店街では歩行者以外の危険を考慮しなくてよい"
+    ],
+    "answer": 0,
+    "explanation": "駐車中の車両からドアが急に開く「ドア開放事故」の危険があるため、側方に十分な間隔をとって走行する必要がある。",
+    "isTrapQuestion": false,
+    "trapNumberType": "none",
+    "topicTag": "hazard_prediction"
+  },
+  {
+    "id": "at058",
+    "licenseCategory": [
+      "atGentei"
+    ],
+    "stageTag": "第一段階",
+    "difficulty": 2,
+    "questionText": "交差点手前で先行の自動車が急ハンドルを切った場合、二輪車の運転者が予測すべき危険として正しいのはどれか。",
+    "choices": [
+      "先行車の運転ミスであり自車には無関係な事象",
+      "急ハンドルは常に信号無視を意味する",
+      "先行車が急ハンドルを切っても速度を落とす必要はない",
+      "前方に道路の陥没や落下物、動物などの障害物がある可能性"
+    ],
+    "answer": 3,
+    "explanation": "先行車の急な進路変更は前方の障害物を避けた可能性があり、二輪車も速度を落とし状況を確認する必要がある。",
+    "isTrapQuestion": false,
+    "trapNumberType": "none",
+    "topicTag": "hazard_prediction"
+  },
+  {
+    "id": "at059",
+    "licenseCategory": [
+      "atGentei"
+    ],
+    "stageTag": "第一段階",
+    "difficulty": 2,
+    "questionText": "砂利道や落ち葉の積もった路面を走行する際の危険予測として正しいのはどれか。",
+    "choices": [
+      "落ち葉の上は乾いたアスファルトより摩擦が大きい",
+      "砂利道ではむしろ急ハンドルで素早く通過するのが安全",
+      "砂利道でも通常どおりの速度・操作で問題ない",
+      "急なブレーキやハンドル操作を避け、速度を落として直線的に通過する"
+    ],
+    "answer": 3,
+    "explanation": "砂利や落ち葉の積もった路面はタイヤのグリップが低下するため、速度を落とし急な操作を避けて直線的に通過するのが安全。",
+    "isTrapQuestion": false,
+    "trapNumberType": "none",
+    "topicTag": "hazard_prediction"
+  },
+  {
+    "id": "at060",
+    "licenseCategory": [
+      "atGentei"
+    ],
+    "stageTag": "第二段階",
+    "difficulty": 4,
+    "questionText": "見通しの悪いカーブの先に危険物（落下物や事故車両など）がある可能性を考えた運転として正しいのはどれか。",
+    "choices": [
+      "対向車線に何もなければ自車線の先も安全と判断してよい",
+      "カーブの先が見えるまで速度を控えめにし、すぐに対応できる状態を保つ",
+      "カーブの先の危険は予測できないため対策のしようがない",
+      "見通しが悪いほど速度を上げて早く通過すべきである"
+    ],
+    "answer": 1,
+    "explanation": "見通しの悪いカーブでは先の状況が分からないため、速度を控えめにしていつでも止まれる状態で進行することが重要。",
+    "isTrapQuestion": false,
+    "trapNumberType": "none",
+    "topicTag": "hazard_prediction"
+  },
+  {
+    "id": "at061",
+    "licenseCategory": [
+      "atGentei"
+    ],
+    "stageTag": "第一段階",
+    "difficulty": 1,
+    "questionText": "AT車の発進操作の基本として正しいのはどれか。",
+    "choices": [
+      "MT車と同様にクラッチレバーを操作しながら発進する",
+      "ギアを手動で1速に入れてから発進する",
+      "発進時は必ず後輪ブレーキのみを使用する",
+      "クラッチ操作は不要で、スロットルを緩やかに開けて発進する"
+    ],
+    "answer": 3,
+    "explanation": "AT車には遠心クラッチなどが内蔵されておりクラッチ操作が不要なため、スロットルを緩やかに開けるだけで発進できる。",
+    "isTrapQuestion": true,
+    "trapNumberType": "other",
+    "topicTag": "operation"
+  },
+  {
+    "id": "at062",
+    "licenseCategory": [
+      "atGentei"
+    ],
+    "stageTag": "第一段階",
+    "difficulty": 2,
+    "questionText": "AT車のスロットル操作に関する注意点として正しいのはどれか。",
+    "choices": [
+      "低速時はスロットルを大きく開けるほど安全である",
+      "AT車はスロットルを開けても急加速することはない",
+      "急激にスロットルを開けると急加速し、バランスを崩しやすい",
+      "スロットルは一気に開けたほうが安定して発進できる"
+    ],
+    "answer": 2,
+    "explanation": "AT車はクラッチの繋がりが自動で行われるため、スロットルを急に開けると想定以上の急加速につながりやすく、慎重な操作が必要。",
+    "isTrapQuestion": true,
+    "trapNumberType": "other",
+    "topicTag": "operation"
+  },
+  {
+    "id": "at063",
+    "licenseCategory": [
+      "atGentei"
+    ],
+    "stageTag": "第一段階",
+    "difficulty": 2,
+    "questionText": "AT車のエンジンブレーキに関する記述として正しいのはどれか。",
+    "choices": [
+      "AT車はMT車よりエンジンブレーキが強く効く",
+      "エンジンブレーキが弱い分、前輪ブレーキを使用してはならない",
+      "MT車に比べてエンジンブレーキの効きが弱い傾向があり、フットブレーキを積極的に使う",
+      "AT車にはエンジンブレーキという概念が存在しない"
+    ],
+    "answer": 2,
+    "explanation": "AT車はギアを選んでエンジンブレーキを積極的にかける操作がしにくいため、MT車に比べて効きが弱い傾向があり、フットブレーキの活用が重要になる。",
+    "isTrapQuestion": true,
+    "trapNumberType": "other",
+    "topicTag": "operation"
+  },
+  {
+    "id": "at064",
+    "licenseCategory": [
+      "atGentei"
+    ],
+    "stageTag": "第一段階",
+    "difficulty": 1,
+    "questionText": "信号待ちなどでAT車を停止させる際の操作として適切なのはどれか。",
+    "choices": [
+      "ブレーキをかけてスロットルを戻し、しっかり停止する",
+      "スロットルを開けたままブレーキだけで停止する",
+      "停止時はギアをニュートラルに入れ替える操作が必須である",
+      "停止中もクラッチレバーを握り続ける必要がある"
+    ],
+    "answer": 0,
+    "explanation": "AT車は停止時にスロットルを戻し、前後輪のブレーキを適切に使って確実に停止することが基本操作となる。",
+    "isTrapQuestion": false,
+    "trapNumberType": "none",
+    "topicTag": "operation"
+  },
+  {
+    "id": "at065",
+    "licenseCategory": [
+      "atGentei"
+    ],
+    "stageTag": "第一段階",
+    "difficulty": 2,
+    "questionText": "AT車における前輪ブレーキと後輪ブレーキの一般的な使い方として正しいのはどれか。",
+    "choices": [
+      "急制動時は後輪ブレーキだけを強くかける",
+      "前後輪のブレーキをバランスよく併用し、状況に応じて配分を調整する",
+      "後輪ブレーキのみを使用し、前輪ブレーキは使わない",
+      "前輪ブレーキのみを使用し、後輪ブレーキは使わない"
+    ],
+    "answer": 1,
+    "explanation": "制動力の大部分は前輪が担うが、安定した減速には前後輪ブレーキを適切に併用することが重要である。",
+    "isTrapQuestion": false,
+    "trapNumberType": "none",
+    "topicTag": "operation"
+  },
+  {
+    "id": "at066",
+    "licenseCategory": [
+      "atGentei"
+    ],
+    "stageTag": "第一段階",
+    "difficulty": 1,
+    "questionText": "スクーター型AT車のセンタースタンドを立てる際の一般的な操作として正しいのはどれか。",
+    "choices": [
+      "エンジンをかけたままスタンドを操作する",
+      "車体を大きく傾けたままスタンドを踏み込む",
+      "車体を垂直に近い状態に保ちながらスタンドを踏み込んで立てる",
+      "スタンドは走行中に立てても問題ない"
+    ],
+    "answer": 2,
+    "explanation": "センタースタンドは車体をできるだけ垂直に近い状態に保ちながら踏み込んで立てるのが基本操作である。",
+    "isTrapQuestion": false,
+    "trapNumberType": "none",
+    "topicTag": "operation"
+  },
+  {
+    "id": "at067",
+    "licenseCategory": [
+      "atGentei"
+    ],
+    "stageTag": "第一段階",
+    "difficulty": 2,
+    "questionText": "カーブを曲がるときの二輪車の基本的な操作として正しいのはどれか。",
+    "choices": [
+      "カーブの中でブレーキを強くかけながら曲がる",
+      "カーブでは加速しながら向きを変えるのが基本である",
+      "カーブの手前で十分に減速し、カーブ中は一定の速度を保つ",
+      "カーブの半径にかかわらず同じ速度で進入してよい"
+    ],
+    "answer": 2,
+    "explanation": "カーブでは進入前に十分減速し、カーブ中は急なブレーキやアクセル操作を避けて安定した速度で通過するのが基本。",
+    "isTrapQuestion": false,
+    "trapNumberType": "none",
+    "topicTag": "operation"
+  },
+  {
+    "id": "at068",
+    "licenseCategory": [
+      "atGentei"
+    ],
+    "stageTag": "第二段階",
+    "difficulty": 4,
+    "questionText": "AT車での急な坂道発進時に注意すべき操作として正しいのはどれか。",
+    "choices": [
+      "坂道発進ではスロットルを一気に全開にするのが基本である",
+      "坂道発進では常にフロントブレーキのみを使う",
+      "AT車は坂道発進時に特別な操作を要しない",
+      "後方への車体のずり下がりを防ぐため、リアブレーキを使いながらスロットルを調整する"
+    ],
+    "answer": 3,
+    "explanation": "坂道発進ではリアブレーキで車体の後退を防ぎながら、スロットルを緩やかに開けて発進することが基本操作となる。",
+    "isTrapQuestion": false,
+    "trapNumberType": "none",
+    "topicTag": "operation"
+  },
+  {
+    "id": "at069",
+    "licenseCategory": [
+      "atGentei"
+    ],
+    "stageTag": "第一段階",
+    "difficulty": 1,
+    "questionText": "二輪車の基本姿勢（ライディングポジション）として適切なのはどれか。",
+    "choices": [
+      "ニーグリップを意識し、力を抜いて自然な姿勢で座る",
+      "肩や腕に力を入れてハンドルを強く握りしめる",
+      "常にハンドルに体重を大きく預けた前傾姿勢を保つ",
+      "足はステップから離して開いたまま走行する"
+    ],
+    "answer": 0,
+    "explanation": "安定した走行のためには、ニーグリップで車体を安定させつつ、上半身の余計な力を抜いた自然な姿勢を保つことが重要。",
+    "isTrapQuestion": false,
+    "trapNumberType": "none",
+    "topicTag": "operation"
+  },
+  {
+    "id": "at070",
+    "licenseCategory": [
+      "atGentei"
+    ],
+    "stageTag": "第二段階",
+    "difficulty": 4,
+    "questionText": "AT車で低速のUターンを行う際のポイントとして正しいのはどれか。",
+    "choices": [
+      "スロットルを大きく開けて勢いで回るのがよい",
+      "半クラッチに相当する微妙なスロットルコントロールとリアブレーキの併用でバランスを保つ",
+      "低速Uターンではブレーキを一切使わない",
+      "視線は常にハンドル付近を見ておく"
+    ],
+    "answer": 1,
+    "explanation": "AT車はクラッチレバーがない分、スロットルの微妙な開閉とリアブレーキの軽い併用で速度を微調整し、バランスを保ちながら低速旋回する。",
+    "isTrapQuestion": true,
+    "trapNumberType": "other",
+    "topicTag": "operation"
+  },
+  {
+    "id": "at071",
+    "licenseCategory": [
+      "atGentei"
+    ],
+    "stageTag": "第一段階",
+    "difficulty": 2,
+    "questionText": "二輪車のギアが存在しないAT車（無段変速機＝CVT）の特徴として正しいのはどれか。",
+    "choices": [
+      "変速比は常に固定されている",
+      "決まった段数のギアを手動で選択して変速する",
+      "CVTには駆動系のベルトが使用されていない",
+      "エンジン回転数と車速の関係が自動で無段階に変化する"
+    ],
+    "answer": 3,
+    "explanation": "CVT（無段変速機）は決まった変速段を持たず、プーリーとベルトによりエンジン回転数と車速の関係を無段階に自動制御する。",
+    "isTrapQuestion": true,
+    "trapNumberType": "other",
+    "topicTag": "operation"
+  },
+  {
+    "id": "at072",
+    "licenseCategory": [
+      "atGentei"
+    ],
+    "stageTag": "第二段階",
+    "difficulty": 2,
+    "questionText": "停止直前のブレーキ操作として適切なのはどれか。",
+    "choices": [
+      "停止直前までブレーキを強くかけ続けるのがよい",
+      "停止直前はブレーキを完全に離す",
+      "完全に停止する直前にブレーキを少し緩め、衝撃を和らげる",
+      "停止直前は急にブレーキを強める"
+    ],
+    "answer": 2,
+    "explanation": "停止する直前にわずかにブレーキを緩めることで、前のめりの衝撃を抑え、スムーズに停止できる。",
+    "isTrapQuestion": false,
+    "trapNumberType": "none",
+    "topicTag": "operation"
+  },
+  {
+    "id": "at073",
+    "licenseCategory": [
+      "atGentei"
+    ],
+    "stageTag": "第一段階",
+    "difficulty": 2,
+    "questionText": "二輪車のギアチェンジ（AT車にはない操作だが対比として理解すべき点）に関する記述で、AT限定免許で理解しておくべき正しい知識はどれか。",
+    "choices": [
+      "AT車は変速の概念自体が存在しない単一ギアの車両である",
+      "AT限定免許ではギアという概念を理解する必要はない",
+      "AT車はクラッチ操作なしに自動で変速比が調整されるため、運転者はスロットルとブレーキの操作に集中できる",
+      "AT車も手動でクラッチを操作しなければ変速できない"
+    ],
+    "answer": 2,
+    "explanation": "AT車はクラッチ操作が不要な分、運転者はスロットルとブレーキの操作、車体の安定に集中しやすいという特徴がある。",
+    "isTrapQuestion": false,
+    "trapNumberType": "none",
+    "topicTag": "operation"
+  },
+  {
+    "id": "at074",
+    "licenseCategory": [
+      "atGentei"
+    ],
+    "stageTag": "第一段階",
+    "difficulty": 2,
+    "questionText": "視線の配り方として、二輪車運転時に適切なのはどれか。",
+    "choices": [
+      "カーブでは曲がりたい方向と逆側を見る",
+      "進行方向の遠くを見ながら、近くの状況も周辺視野で捉える",
+      "視線はハンドル操作に合わせて左右に大きく振る",
+      "常にすぐ前方のタイヤ付近だけを注視する"
+    ],
+    "answer": 1,
+    "explanation": "二輪車の運転では進行方向の遠くを見て進路を予測しつつ、周辺視野で近くの状況も把握することが基本とされる。",
+    "isTrapQuestion": false,
+    "trapNumberType": "none",
+    "topicTag": "operation"
+  },
+  {
+    "id": "at075",
+    "licenseCategory": [
+      "atGentei"
+    ],
+    "stageTag": "第一段階",
+    "difficulty": 2,
+    "questionText": "AT車のリアブレーキ（後輪ブレーキ）の役割として適切なのはどれか。",
+    "choices": [
+      "リアブレーキのみで急制動すべきである",
+      "低速時の細かい速度調整や車体を安定させる目的で使う",
+      "高速からの急制動時には一切使用しない",
+      "リアブレーキはAT車には搭載されていない"
+    ],
+    "answer": 1,
+    "explanation": "リアブレーキは低速での微妙な速度コントロールや、車体の安定に有効であり、フロントブレーキと組み合わせて使う。",
+    "isTrapQuestion": false,
+    "trapNumberType": "none",
+    "topicTag": "operation"
+  },
+  {
+    "id": "at076",
+    "licenseCategory": [
+      "atGentei"
+    ],
+    "stageTag": "第二段階",
+    "difficulty": 4,
+    "questionText": "段差を乗り越える際の二輪車の基本操作として正しいのはどれか。",
+    "choices": [
+      "段差の手前でブレーキを強くかけたまま通過する",
+      "段差を通過する際はハンドルを大きく切るのがよい",
+      "段差はできるだけ高速で一気に通過するのが安全である",
+      "段差の手前で速度を落とし、体を少し浮かせるようにして衝撃を吸収する"
+    ],
+    "answer": 3,
+    "explanation": "段差を通過する際は速度を落とし、腰を浮かせるなどして衝撃を吸収することで、転倒やパンクのリスクを減らせる。",
+    "isTrapQuestion": false,
+    "trapNumberType": "none",
+    "topicTag": "operation"
+  },
+  {
+    "id": "at077",
+    "licenseCategory": [
+      "atGentei"
+    ],
+    "stageTag": "第一段階",
+    "difficulty": 1,
+    "questionText": "AT車のミラー確認に関する基本として正しいのはどれか。",
+    "choices": [
+      "AT車はクラッチ操作がない分、ミラー確認を省略してよい",
+      "後方確認はミラーではなく音で判断すればよい",
+      "ミラーは駐車時にのみ使用すればよい",
+      "発進前や進路変更前など、ミラーで後方の安全を必ず確認する"
+    ],
+    "answer": 3,
+    "explanation": "発進・進路変更・右左折の前には、ミラーによる後方確認と必要に応じた目視確認を行うことが安全運転の基本である。",
+    "isTrapQuestion": false,
+    "trapNumberType": "none",
+    "topicTag": "operation"
+  },
+  {
+    "id": "at078",
+    "licenseCategory": [
+      "atGentei"
+    ],
+    "stageTag": "第二段階",
+    "difficulty": 4,
+    "questionText": "二輪車の急ブレーキ時に転倒を避けるための操作として正しいのはどれか。",
+    "choices": [
+      "急ブレーキ時は前輪ブレーキのみを強くかける",
+      "急ブレーキ時はハンドルを大きく切って回避する",
+      "急ブレーキ時は車体を大きく傾けたまま止まる",
+      "前後輪のブレーキを同時に使い、ハンドルをまっすぐに保つ"
+    ],
+    "answer": 3,
+    "explanation": "急制動時は前後輪のブレーキをバランスよく使い、車体とハンドルをできるだけまっすぐに保つことで転倒のリスクを減らせる。",
+    "isTrapQuestion": false,
+    "trapNumberType": "none",
+    "topicTag": "operation"
+  },
+  {
+    "id": "at079",
+    "licenseCategory": [
+      "atGentei"
+    ],
+    "stageTag": "第一段階",
+    "difficulty": 2,
+    "questionText": "狭い道でのすれ違いにおける二輪車の操作として適切なのはどれか。",
+    "choices": [
+      "speed（速度）を落とし、できるだけ左に寄って安全な間隔を確保する",
+      "すれ違い時はできるだけ加速して早く通過する",
+      "対向車が来ても速度を維持したまま中央付近を走行する",
+      "狭い道では対向車の有無を確認する必要はない"
+    ],
+    "answer": 0,
+    "explanation": "狭い道での対向車とのすれ違いでは、速度を落として左に寄り、十分な間隔を確保することが基本となる。",
+    "isTrapQuestion": false,
+    "trapNumberType": "none",
+    "topicTag": "operation"
+  },
+  {
+    "id": "at080",
+    "licenseCategory": [
+      "atGentei"
+    ],
+    "stageTag": "第一段階",
+    "difficulty": 1,
+    "questionText": "二輪車におけるニーグリップの目的として正しいのはどれか。",
+    "choices": [
+      "エンジンの冷却効果を高めるための動作である",
+      "タンクを両膝で挟み、車体と一体化して安定させるため",
+      "ブレーキ操作を強化するための動作である",
+      "ハンドル操作を補助するため両手でタンクを挟む動作である"
+    ],
+    "answer": 1,
+    "explanation": "ニーグリップは両膝でタンク付近を挟み、車体と体を一体化させることで走行安定性を高める基本動作である。",
+    "isTrapQuestion": false,
+    "trapNumberType": "none",
+    "topicTag": "operation"
+  },
+  {
+    "id": "at081",
+    "licenseCategory": [
+      "atGentei"
+    ],
+    "stageTag": "第二段階",
+    "difficulty": 5,
+    "questionText": "路面のわだち（轍）がある道路を走行する際の操作として正しいのはどれか。",
+    "choices": [
+      "わだちの中では速度を上げて一気に抜けるのがよい",
+      "わだちに沿ってハンドルを取られないよう、車体をまっすぐ保ちながら通過する",
+      "わだちがある道路では前輪ブレーキのみを使う",
+      "わだちを避けるため急にハンドルを切って車線をまたぐ"
+    ],
+    "answer": 1,
+    "explanation": "わだちにタイヤが取られるとふらつきの原因になるため、車体をまっすぐ保ちながら慎重に通過する必要がある。",
+    "isTrapQuestion": false,
+    "trapNumberType": "none",
+    "topicTag": "operation"
+  },
+  {
+    "id": "at082",
+    "licenseCategory": [
+      "atGentei"
+    ],
+    "stageTag": "第一段階",
+    "difficulty": 1,
+    "questionText": "AT車で駐車時にエンジンを切った後の基本操作として正しいのはどれか。",
+    "choices": [
+      "ハンドルロックをかけ、サイドスタンドまたはセンタースタンドで確実に固定する",
+      "駐車時はブレーキレバーを握ったままにしておけば固定できる",
+      "エンジンを切ればスタンドは立てなくてもよい",
+      "ハンドルロックは走行中に使用する装置である"
+    ],
+    "answer": 0,
+    "explanation": "駐車時はスタンドで車体を確実に固定し、盗難防止のためハンドルロックをかけることが基本操作である。",
+    "isTrapQuestion": false,
+    "trapNumberType": "none",
+    "topicTag": "operation"
+  },
+  {
+    "id": "at083",
+    "licenseCategory": [
+      "atGentei"
+    ],
+    "stageTag": "第一段階",
+    "difficulty": 2,
+    "questionText": "交差点を左折する際の二輪車の基本的な進路取りとして正しいのはどれか。",
+    "choices": [
+      "あらかじめ道路の左端に寄り、大きく膨らまずに小回りで曲がる",
+      "対向車線側に一度出てから左折する",
+      "交差点の中央付近まで進んでから左折する",
+      "左折時は右側に寄ってから急に左へ切る"
+    ],
+    "answer": 0,
+    "explanation": "左折時は事前に道路の左端に寄せ、巻き込み防止のため大きく膨らまず小回りで曲がるのが基本である。",
+    "isTrapQuestion": false,
+    "trapNumberType": "none",
+    "topicTag": "operation"
+  },
+  {
+    "id": "at084",
+    "licenseCategory": [
+      "atGentei"
+    ],
+    "stageTag": "第一段階",
+    "difficulty": 2,
+    "questionText": "急なカーブでの視線移動として適切なのはどれか。",
+    "choices": [
+      "視線は常に自分の前輪付近に固定する",
+      "カーブでは視線を動かさず正面のみを見る",
+      "曲がろうとする方向の先を見ることで、自然に車体とハンドルがついてくる",
+      "カーブの入り口付近だけを見続ける"
+    ],
+    "answer": 2,
+    "explanation": "カーブでは曲がろうとする方向の先（進行したい先）を見ることで、自然な操作で車体がその方向に向かいやすくなる。",
+    "isTrapQuestion": false,
+    "trapNumberType": "none",
+    "topicTag": "operation"
+  },
+  {
+    "id": "at085",
+    "licenseCategory": [
+      "atGentei"
+    ],
+    "stageTag": "第一段階",
+    "difficulty": 2,
+    "questionText": "駐車の定義として正しいのはどれか。",
+    "choices": [
+      "貨物の積み下ろしのための停止は必ず駐車に該当する",
+      "運転者が車両を離れなければ駐車には該当しない",
+      "継続的に車両を停止させ、すぐに運転できない状態にすること",
+      "5分以内であれば駐車には該当しない"
+    ],
+    "answer": 2,
+    "explanation": "駐車とは、車両が継続的に停止し、運転者がすぐに運転できない状態（車両を離れている等）にあることをいう。",
+    "isTrapQuestion": false,
+    "trapNumberType": "none",
+    "topicTag": "parking"
+  },
+  {
+    "id": "at086",
+    "licenseCategory": [
+      "atGentei"
+    ],
+    "stageTag": "第一段階",
+    "difficulty": 2,
+    "questionText": "停車の定義として正しいのはどれか。",
+    "choices": [
+      "5分を超える停止はすべて停車に分類される",
+      "停車中は運転者が車両を離れてもよい",
+      "駐車に当たらない短時間の停止で、運転者がすぐに運転できる状態にあること",
+      "停車には時間の制限が一切ない"
+    ],
+    "answer": 2,
+    "explanation": "停車とは、駐車に当たらない程度の短時間の停止であり、運転者が車両からすぐに離れず、いつでも運転できる状態を指す。",
+    "isTrapQuestion": true,
+    "trapNumberType": "other",
+    "topicTag": "parking"
+  },
+  {
+    "id": "at087",
+    "licenseCategory": [
+      "atGentei"
+    ],
+    "stageTag": "第二段階",
+    "difficulty": 5,
+    "questionText": "駐車禁止場所として正しいものはどれか。",
+    "choices": [
+      "一般の商店街の歩道",
+      "火災報知機から1m以内の場所",
+      "駐車場の敷地内の指定区画",
+      "私有地である月極駐車場"
+    ],
+    "answer": 1,
+    "explanation": "火災報知機から1m以内は駐車禁止場所として指定されている。",
+    "isTrapQuestion": true,
+    "trapNumberType": "other",
+    "topicTag": "parking"
+  },
+  {
+    "id": "at088",
+    "licenseCategory": [
+      "atGentei"
+    ],
+    "stageTag": "第一段階",
+    "difficulty": 2,
+    "questionText": "駐停車禁止場所として正しいものはどれか。",
+    "choices": [
+      "交差点の側端から10m以上離れた直線区間",
+      "横断歩道から10m以上離れた場所",
+      "一方通行の道路であればどこでも駐停車できる",
+      "交差点の側端または道路の曲がり角から5m以内"
+    ],
+    "answer": 3,
+    "explanation": "交差点の側端または道路の曲がり角から5m以内は駐停車禁止場所として定められている。",
+    "isTrapQuestion": true,
+    "trapNumberType": "other",
+    "topicTag": "parking"
+  },
+  {
+    "id": "at089",
+    "licenseCategory": [
+      "atGentei"
+    ],
+    "stageTag": "第二段階",
+    "difficulty": 5,
+    "questionText": "坂道にAT車を駐車する際の注意点として正しいのはどれか。",
+    "choices": [
+      "AT車には駐車時のブレーキ確保という概念がない",
+      "坂道であればどこにでも自由に駐車できる",
+      "ギアがない分、スタンドをしっかり効かせ、可能であれば輪止め等で補助する",
+      "AT車は坂道でも自然にブレーキがかかり続けるため何もしなくてよい"
+    ],
+    "answer": 2,
+    "explanation": "AT車にはMT車のようなギアによる歯止め効果がないため、坂道駐車ではスタンドの効きを確認し、必要に応じて輪止めなどで補助することが望ましい。",
+    "isTrapQuestion": true,
+    "trapNumberType": "other",
+    "topicTag": "parking"
+  },
+  {
+    "id": "at090",
+    "licenseCategory": [
+      "atGentei"
+    ],
+    "stageTag": "第二段階",
+    "difficulty": 5,
+    "questionText": "バス停留所の標識から一定距離内での駐停車に関する規定として正しいのはどれか。",
+    "choices": [
+      "バス停から10m以内でも停車であれば常に可能",
+      "停留所の標示板から10m以内は、運行時間中は原則として駐停車が禁止される",
+      "バス停の規定は自動車のみに適用され二輪車は対象外である",
+      "バス停付近は時間帯にかかわらず常に駐停車が自由である"
+    ],
+    "answer": 1,
+    "explanation": "バス、路面電車の停留所の標示板から10m以内は、運行時間中、原則として駐停車が禁止されている。",
+    "isTrapQuestion": true,
+    "trapNumberType": "other",
+    "topicTag": "parking"
+  },
+  {
+    "id": "at091",
+    "licenseCategory": [
+      "atGentei"
+    ],
+    "stageTag": "第一段階",
+    "difficulty": 2,
+    "questionText": "二輪車を歩道に駐車することについて正しいのはどれか。",
+    "choices": [
+      "歩道の端であれば二輪車の駐車は常に認められる",
+      "歩道は原則として車両の駐停車が禁止されている",
+      "歩道であれば時間の制限なく駐車してよい",
+      "二輪車は車体が小さいため歩道に自由に駐車できる"
+    ],
+    "answer": 1,
+    "explanation": "歩道は歩行者のための通行空間であり、車両（二輪車を含む）の駐停車は原則として禁止されている。",
+    "isTrapQuestion": false,
+    "trapNumberType": "none",
+    "topicTag": "parking"
+  },
+  {
+    "id": "at092",
+    "licenseCategory": [
+      "atGentei"
+    ],
+    "stageTag": "第二段階",
+    "difficulty": 5,
+    "questionText": "道路上に駐車する際、夜間に必要となる保安上の措置として正しいのはどれか。",
+    "choices": [
+      "二輪車は夜間駐車時の灯火義務が免除される",
+      "駐車中は前照灯を含むすべての灯火を消灯しなければならない",
+      "夜間の駐車では灯火に関する規定は適用されない",
+      "他の交通の妨げにならないよう、尾灯など保安基準に定める灯火をつける"
+    ],
+    "answer": 3,
+    "explanation": "夜間、道路上に駐車する際は、他の交通の安全のため保安基準で定める灯火（尾灯等）をつけることが求められる場合がある。",
+    "isTrapQuestion": false,
+    "trapNumberType": "none",
+    "topicTag": "parking"
+  },
+  {
+    "id": "at093",
+    "licenseCategory": [
+      "atGentei"
+    ],
+    "stageTag": "第一段階",
+    "difficulty": 3,
+    "questionText": "路上駐車をする際の車両の向きとして適切なのはどれか。",
+    "choices": [
+      "AT車は向きを問わず自由に駐車できる",
+      "道路の右側端に進行方向と逆向きで駐車してもよい",
+      "道路の左側端に沿って、交通の流れに沿った向きで駐車する",
+      "駐車の向きに関する規定は特にない"
+    ],
+    "answer": 2,
+    "explanation": "駐車する際は道路の左側端に沿い、交通の流れと同じ向きで停めるのが原則である。",
+    "isTrapQuestion": false,
+    "trapNumberType": "none",
+    "topicTag": "parking"
+  },
+  {
+    "id": "at094",
+    "licenseCategory": [
+      "atGentei"
+    ],
+    "stageTag": "第一段階",
+    "difficulty": 3,
+    "questionText": "駐車場出入口や車庫前に無断で駐車することの問題点として正しいのはどれか。",
+    "choices": [
+      "他車の出入りを妨げるため、駐停車禁止場所として法律で規定されている",
+      "短時間であれば車庫前に駐車しても問題ない",
+      "車庫前の駐車禁止は自動車のみに適用される",
+      "私有地の出入口であれば駐車しても違反にはならない"
+    ],
+    "answer": 0,
+    "explanation": "自動車専用の出入口から3m以内は駐車禁止場所として法律で定められており、他車の通行を妨げる駐車は違反となる。",
+    "isTrapQuestion": false,
+    "trapNumberType": "none",
+    "topicTag": "parking"
+  },
+  {
+    "id": "at095",
+    "licenseCategory": [
+      "atGentei"
+    ],
+    "stageTag": "第二段階",
+    "difficulty": 5,
+    "questionText": "荷物の積み下ろしのために継続して5分を超えて停止する場合の扱いとして正しいのはどれか。",
+    "choices": [
+      "原則として「駐車」に該当し、駐車禁止場所では行うことができない",
+      "積み下ろしは二輪車には関係のない規定である",
+      "積み下ろし中は駐停車禁止場所であっても例外的に認められる",
+      "積み下ろし目的であれば時間にかかわらず「停車」として扱われる"
+    ],
+    "answer": 0,
+    "explanation": "人の乗降のための停止を除き、5分を超える荷物の積み下ろし等のための継続的な停止は「駐車」に該当し、駐車禁止場所では行えない。",
+    "isTrapQuestion": true,
+    "trapNumberType": "other",
+    "topicTag": "parking"
+  },
+  {
+    "id": "at096",
+    "licenseCategory": [
+      "atGentei"
+    ],
+    "stageTag": "第一段階",
+    "difficulty": 3,
+    "questionText": "AT限定普通二輪車を駐車する際のスタンドの使い方として適切なのはどれか。",
+    "choices": [
+      "AT車はスタンドを使わずに自立するよう設計されている",
+      "平坦な場所ではセンタースタンド、傾斜のある場所ではサイドスタンドの向きにも注意する",
+      "スタンドはどちらを使っても駐車の安定性に差はない",
+      "サイドスタンドは走行中にも使用してよい装置である"
+    ],
+    "answer": 1,
+    "explanation": "駐車の安定のため、平坦な場所ではセンタースタンドを使うと安定しやすく、傾斜地ではサイドスタンドの向きや路面状況にも注意する必要がある。",
+    "isTrapQuestion": false,
+    "trapNumberType": "none",
+    "topicTag": "parking"
+  },
+  {
+    "id": "at097",
+    "licenseCategory": [
+      "atGentei"
+    ],
+    "stageTag": "第二段階",
+    "difficulty": 5,
+    "questionText": "AT車（スクーター等）の日常点検で特に確認すべき項目として正しいのはどれか。",
+    "choices": [
+      "ギアオイルの量（MT車特有の項目）",
+      "クラッチディスクの摩耗状態",
+      "クラッチワイヤーの張り具合",
+      "駆動ベルトやウエイトローラーなど、CVT機構の摩耗状態"
+    ],
+    "answer": 3,
+    "explanation": "AT車はCVT（無段変速機）を採用しているため、MT車のクラッチ関連部品の代わりに駆動ベルトやウエイトローラーなどの摩耗を点検する必要がある。",
+    "isTrapQuestion": true,
+    "trapNumberType": "other",
+    "topicTag": "maintenance"
+  },
+  {
+    "id": "at098",
+    "licenseCategory": [
+      "atGentei"
+    ],
+    "stageTag": "第一段階",
+    "difficulty": 3,
+    "questionText": "AT車のブレーキ液（油圧ブレーキの場合）の点検に関する記述として正しいのはどれか。",
+    "choices": [
+      "AT車には油圧ブレーキが採用されないためブレーキ液の点検は不要である",
+      "ブレーキ液の点検は車検のときにのみ行えばよい",
+      "ブレーキ液は一度補充すれば交換する必要がない",
+      "液量が規定範囲内にあるか、変色や漏れがないかを定期的に確認する"
+    ],
+    "answer": 3,
+    "explanation": "油圧式ブレーキを採用するAT車では、ブレーキ液の量や劣化状態（変色等）を日常的に点検することが安全上重要である。",
+    "isTrapQuestion": false,
+    "trapNumberType": "none",
+    "topicTag": "maintenance"
+  },
+  {
+    "id": "at099",
+    "licenseCategory": [
+      "atGentei"
+    ],
+    "stageTag": "第一段階",
+    "difficulty": 3,
+    "questionText": "「二輪車二人乗り通行禁止」の標識がある区間での通行として正しいのはどれか。",
+    "choices": [
+      "夜間に限りこの標識の効力はなくなる",
+      "AT限定二輪車はこの標識の対象外である",
+      "AT限定であっても、その区間では二輪車の二人乗りをしてはならない",
+      "二人乗り通行禁止の標識は原付にのみ適用される"
+    ],
+    "answer": 2,
+    "explanation": "「二輪車二人乗り通行禁止」の標識がある区間では、AT限定を含むすべての二輪車が二人乗りで通行することを禁止される。",
+    "isTrapQuestion": true,
+    "trapNumberType": "twoPersonRiding",
+    "topicTag": "signs"
+  },
+  {
+    "id": "at100",
+    "licenseCategory": [
+      "atGentei"
+    ],
+    "stageTag": "第二段階",
+    "difficulty": 5,
+    "questionText": "走行中にエンジンが突然停止した場合の対応として正しいのはどれか。",
+    "choices": [
+      "エンジンが止まっても速度を維持できるので何もしなくてよい",
+      "その場で急ブレーキをかけて停止する",
+      "後方確認をせずすぐに車線変更して路肩に寄せる",
+      "あわてずクラクションやハザードで周囲に知らせつつ、安全な場所へ寄せて停止する"
+    ],
+    "answer": 3,
+    "explanation": "走行中の突然のエンジン停止では、まず落ち着いて周囲に注意を促しながら安全確認のうえ道路の左側や路肩など安全な場所に車両を寄せて停止することが重要。",
+    "isTrapQuestion": false,
+    "trapNumberType": "none",
+    "topicTag": "emergency"
+  }
+]

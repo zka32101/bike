@@ -9,6 +9,7 @@ import 'analytics_dashboard_view.dart';
 import 'daily_quota_view.dart';
 import 'exam_date_setting_view.dart';
 import 'settings_view.dart';
+import 'study_mode_view.dart';
 
 /// ホーム画面：合格予測メーター／今日のノルマ。
 /// ホーム→ノルマ→正誤演出＝3タップ以内でAhaに到達する動線の起点。
@@ -53,7 +54,8 @@ class _HomeViewState extends ConsumerState<HomeView> {
           ),
         ],
       ),
-      body: userAsync.isLoading
+      body: SafeArea(
+        child: userAsync.isLoading
           ? const Center(child: CircularProgressIndicator())
           : RefreshIndicator(
               onRefresh: () async {
@@ -61,7 +63,7 @@ class _HomeViewState extends ConsumerState<HomeView> {
                 ref.invalidate(answerLogsProvider);
               },
               child: ListView(
-                padding: const EdgeInsets.all(20),
+                padding: const EdgeInsets.fromLTRB(20, 20, 20, 32),
                 children: [
                   if (primaryCategoryId == null)
                     _NoCategoryCard(context: context)
@@ -114,6 +116,22 @@ class _HomeViewState extends ConsumerState<HomeView> {
                     Card(
                       child: ListTile(
                         contentPadding: const EdgeInsets.all(16),
+                        leading: const Icon(Icons.menu_book, size: 32),
+                        title: const Text('学習モード'),
+                        subtitle: const Text('問題・正解・解説を読んで学習'),
+                        trailing: const Icon(Icons.chevron_right),
+                        onTap: () => Navigator.of(context).push(
+                          MaterialPageRoute(
+                            builder: (_) =>
+                                StudyModeView(licenseCategory: primaryCategoryId),
+                          ),
+                        ),
+                      ),
+                    ),
+                    const SizedBox(height: 12),
+                    Card(
+                      child: ListTile(
+                        contentPadding: const EdgeInsets.all(16),
                         leading: const Icon(Icons.insights, size: 32),
                         title: const Text('学習分析'),
                         subtitle: const Text('弱点と伸びを確認'),
@@ -129,6 +147,7 @@ class _HomeViewState extends ConsumerState<HomeView> {
                 ],
               ),
             ),
+      ),
     );
   }
 }
