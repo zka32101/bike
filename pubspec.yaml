@@ -22,6 +22,9 @@ dependencies:
   firebase_crashlytics: ^3.4.13
   firebase_remote_config: ^4.3.14
 
+  # 認証（Googleサインインのみ）
+  google_sign_in: ^6.2.1
+
   # 課金（期間パス・非消費型）
   purchases_flutter: ^8.0.0
 

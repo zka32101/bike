@@ -1,72 +1,75 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/foundation.dart';
+import 'package:google_sign_in/google_sign_in.dart';
 
 /// Firebase Authentication を通じたユーザー認証サービス。
-/// 匿名ログイン（メールアドレス・パスワード不要）で、ユーザーIDを取得。
+/// Googleアカウントによるサインインのみをサポートする（匿名ログインは廃止）。
 abstract class AuthService {
   /// 現在のユーザー UID を取得
   /// null = 未ログイン
   String? get currentUid;
 
-  /// 匿名ログイン（初回起動時に自動実行）
-  /// すでにログイン済みの場合は何もしない。
-  Future<String> signInAnonymously();
+  /// Googleアカウントでサインイン。ユーザーがキャンセルした場合は null を返す。
+  Future<String?> signInWithGoogle();
 
-  /// ログアウト（テスト・デバッグ用）
+  /// ログアウト
   Future<void> signOut();
 
   /// 現在のAuth状態を Stream で監視
   Stream<User?> get authStateChanges;
 
-  /// 認証が準備完了したか
+  /// 起動時のAuth状態確認（すでにサインイン済みなら何もしない。
+  /// 未サインインの場合もエラーにはせず、呼び出し側でサインイン画面へ誘導する）。
   Future<void> waitForAuthReady();
 }
 
-/// Firebase Authentication を使った実装
+/// Firebase Authentication + Google Sign-In を使った実装
 class FirebaseAuthService implements AuthService {
   FirebaseAuthService({
     FirebaseAuth? auth,
-  }) : _auth = auth ?? FirebaseAuth.instance;
+    GoogleSignIn? googleSignIn,
+  })  : _auth = auth ?? FirebaseAuth.instance,
+        _googleSignIn = googleSignIn ??
+            GoogleSignIn(
+              // Android で Firebase の ID トークンを取得するために必須
+              // （google-services.json の oauth_client / client_type=3 と対応）。
+              serverClientId:
+                  '904710115227-365vjghmsgk5oj9ibk44p8t9ncauv39i.apps.googleusercontent.com',
+            );
 
   final FirebaseAuth _auth;
-  bool _initialized = false;
-
-  /// 初期化：初回起動時に匿名ログインを実行
-  Future<void> initialize() async {
-    if (_initialized) return;
-
-    try {
-      // すでにログイン済みかを確認
-      if (_auth.currentUser == null) {
-        await signInAnonymously();
-      }
-      _initialized = true;
-    } catch (e) {
-      if (kDebugMode) {
-        debugPrint('Failed to initialize auth: $e');
-      }
-      rethrow;
-    }
-  }
+  final GoogleSignIn _googleSignIn;
 
   @override
   String? get currentUid => _auth.currentUser?.uid;
 
   @override
-  Future<String> signInAnonymously() async {
+  Future<String?> signInWithGoogle() async {
     try {
-      final userCredential = await _auth.signInAnonymously();
+      final googleUser = await _googleSignIn.signIn();
+      if (googleUser == null) {
+        // ユーザーがサインインをキャンセルした。
+        return null;
+      }
+
+      final googleAuth = await googleUser.authentication;
+      final credential = GoogleAuthProvider.credential(
+        accessToken: googleAuth.accessToken,
+        idToken: googleAuth.idToken,
+      );
+
+      final userCredential = await _auth.signInWithCredential(credential);
       final uid = userCredential.user?.uid;
       if (uid == null) {
-        throw Exception('Failed to get UID after anonymous sign-in');
+        throw Exception('Failed to get UID after Google sign-in');
       }
       if (kDebugMode) {
-        debugPrint('Signed in anonymously with UID: $uid');
+        debugPrint('Signed in with Google, UID: $uid');
       }
       return uid;
     } catch (e) {
       if (kDebugMode) {
-        debugPrint('Anonymous sign-in failed: $e');
+        debugPrint('Google sign-in failed: $e');
       }
       rethrow;
     }
@@ -75,6 +78,7 @@ class FirebaseAuthService implements AuthService {
   @override
   Future<void> signOut() async {
     try {
+      await _googleSignIn.signOut();
       await _auth.signOut();
       if (kDebugMode) {
         debugPrint('Signed out');
@@ -92,28 +96,27 @@ class FirebaseAuthService implements AuthService {
 
   @override
   Future<void> waitForAuthReady() async {
-    await initialize();
+    // Google Sign-In はユーザー操作が必要なため、ここでは何もしない。
+    // すでにサインイン済みなら _auth.currentUser が非nullになっている。
   }
 }
 
 /// テスト用スタブ実装
 class StubAuthService implements AuthService {
-  String? _currentUid;
+  StubAuthService({String? initialUid}) : _currentUid = initialUid;
 
-  StubAuthService({
-    String? initialUid,
-  }) : _currentUid = initialUid ?? 'stub-user-123';
+  String? _currentUid;
 
   @override
   String? get currentUid => _currentUid;
 
   @override
-  Future<String> signInAnonymously() async {
-    _currentUid ??= 'stub-user-${DateTime.now().millisecondsSinceEpoch}';
+  Future<String?> signInWithGoogle() async {
+    _currentUid = 'stub-google-user-${DateTime.now().millisecondsSinceEpoch}';
     if (kDebugMode) {
-      debugPrint('Stub: Signed in anonymously with UID: $_currentUid');
+      debugPrint('Stub: Signed in with Google, UID: $_currentUid');
     }
-    return _currentUid!;
+    return _currentUid;
   }
 
   @override
@@ -128,7 +131,5 @@ class StubAuthService implements AuthService {
   Stream<User?> get authStateChanges => Stream.value(null);
 
   @override
-  Future<void> waitForAuthReady() async {
-    await signInAnonymously();
-  }
+  Future<void> waitForAuthReady() async {}
 }
