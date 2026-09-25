@@ -6,13 +6,11 @@ import '../viewmodels/providers.dart';
 import '../widgets/pass_prediction_meter.dart';
 import '../widgets/pass_rate_card.dart';
 import 'analytics_dashboard_view.dart';
-import 'bike_unlock_view.dart';
 import 'daily_quota_view.dart';
 import 'exam_date_setting_view.dart';
 import 'settings_view.dart';
-import 'trap_dojo_view.dart';
 
-/// ホーム画面：合格予測メーター／今日のノルマ／バイク解放進捗／ひっかけ道場入口。
+/// ホーム画面：合格予測メーター／今日のノルマ。
 /// ホーム→ノルマ→正誤演出＝3タップ以内でAhaに到達する動線の起点。
 class HomeView extends ConsumerStatefulWidget {
   const HomeView({super.key});
@@ -32,7 +30,6 @@ class _HomeViewState extends ConsumerState<HomeView> {
     final userAsync = ref.watch(userControllerProvider);
     final scoreAsync = ref.watch(savedPredictionScoreProvider);
     final answerLogsAsync = ref.watch(answerLogsProvider);
-    final bikeProgressAsync = ref.watch(bikeUnlockControllerProvider);
 
     final user = userAsync.valueOrNull;
     final categories = user?.licenseCategories ?? const <String>[];
@@ -86,17 +83,23 @@ class _HomeViewState extends ConsumerState<HomeView> {
                     const SizedBox(height: 16),
                     const PassRateCard(),
                     const SizedBox(height: 16),
-                    _ExamCountdownCard(examDate: user?.examDate),
+                    _ExamCountdownCard(
+                      examDate: user?.examDatesByCategory[primaryCategoryId],
+                    ),
                     const SizedBox(height: 16),
                     Card(
                       child: ListTile(
                         contentPadding: const EdgeInsets.all(16),
                         leading: const Icon(Icons.checklist_rtl, size: 32),
                         title: Text(
-                          '今日のノルマ（${LicenseCategory.fromId(primaryCategoryId).label}）',
+                          '問題を解く（${LicenseCategory.fromId(primaryCategoryId).label}）',
                         ),
                         subtitle: Text(
-                          '無料版は1日${dailyQuotaLimitForCategory(primaryCategoryId)}問まで',
+                          (user?.hasAccessToCategory(primaryCategoryId) ?? false)
+                              ? '未習得問題からランダム出題'
+                              : primaryCategoryId == LicenseCategory.gentsuki.name
+                                  ? '無料版は最初の$freeGentsukiPreviewCount問だけ解けます'
+                                  : 'パス購入で解放されます',
                         ),
                         trailing: const Icon(Icons.chevron_right),
                         onTap: () => Navigator.of(context).push(
@@ -106,45 +109,6 @@ class _HomeViewState extends ConsumerState<HomeView> {
                           ),
                         ),
                       ),
-                    ),
-                    const SizedBox(height: 12),
-                    Card(
-                      child: ListTile(
-                        contentPadding: const EdgeInsets.all(16),
-                        leading: const Icon(Icons.sports_martial_arts, size: 32),
-                        title: const Text('ひっかけ道場'),
-                        subtitle: const Text('誤答はボス化して再挑戦キューへ'),
-                        trailing: const Icon(Icons.chevron_right),
-                        onTap: () => Navigator.of(context).push(
-                          MaterialPageRoute(
-                            builder: (_) =>
-                                TrapDojoView(licenseCategory: primaryCategoryId),
-                          ),
-                        ),
-                      ),
-                    ),
-                    const SizedBox(height: 12),
-                    bikeProgressAsync.when(
-                      data: (progress) {
-                        final unlockedCount =
-                            progress.where((p) => p.isUnlocked).length;
-                        return Card(
-                          child: ListTile(
-                            contentPadding: const EdgeInsets.all(16),
-                            leading: const Icon(Icons.two_wheeler, size: 32),
-                            title: const Text('バイク解放'),
-                            subtitle: Text('$unlockedCount / ${progress.length} 台解放中'),
-                            trailing: const Icon(Icons.chevron_right),
-                            onTap: () => Navigator.of(context).push(
-                              MaterialPageRoute(
-                                builder: (_) => const BikeUnlockView(),
-                              ),
-                            ),
-                          ),
-                        );
-                      },
-                      loading: () => const SizedBox.shrink(),
-                      error: (_, __) => const SizedBox.shrink(),
                     ),
                     const SizedBox(height: 12),
                     Card(

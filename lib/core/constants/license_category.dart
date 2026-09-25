@@ -20,17 +20,3 @@ enum LicenseCategory {
   static LicenseCategory fromId(String id) =>
       LicenseCategory.values.firstWhere((e) => e.name == id);
 }
-
-/// バイク解放グリッドの段階（原付→…→大型二輪）。
-enum BikeTier {
-  gentsuki('原付', requiredCorrectCount: 0),
-  cc125('125cc', requiredCorrectCount: 20),
-  cc250('250cc', requiredCorrectCount: 50),
-  cc400('400cc', requiredCorrectCount: 90),
-  ogata('大型二輪', requiredCorrectCount: 150);
-
-  const BikeTier(this.label, {required this.requiredCorrectCount});
-
-  final String label;
-  final int requiredCorrectCount;
-}

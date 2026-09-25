@@ -60,9 +60,18 @@ dev_dependencies:
   build_runner: ^2.4.8
   json_serializable: ^6.7.1
   freezed: ^2.5.0
+  flutter_launcher_icons: ^0.14.1
 
 flutter:
   uses-material-design: true
   assets:
     - assets/questions/
     - assets/lottie/
+
+flutter_launcher_icons:
+  android: true
+  # iOS プロジェクトに Assets.xcassets が未生成のため無効化
+  # （iOSビルドに着手する際は ios/ を Flutter 標準構成で再生成してから有効化する）
+  ios: false
+  image_path: "assets/icon/app_icon.png"
+  min_sdk_android: 21

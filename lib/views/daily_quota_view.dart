@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 import '../models/pass_prediction_score.dart';
+import '../services/google_mobile_ads_service.dart';
 import '../viewmodels/providers.dart';
 import '../widgets/answer_result_overlay.dart';
 import '../widgets/pass_prediction_meter.dart';
@@ -25,35 +26,38 @@ class DailyQuotaView extends ConsumerWidget {
         ref.read(dailyQuotaControllerProvider(licenseCategory).notifier);
 
     return Scaffold(
-      appBar: AppBar(title: const Text('今日のノルマ')),
+      appBar: AppBar(title: const Text('問題を解く')),
       body: state.loading
           ? const Center(child: CircularProgressIndicator())
-          : state.questions.isEmpty
-              ? const Center(child: Text('この区分の問題がまだありません'))
-              : Stack(
-                  children: [
-                    if (state.isQuotaCompleted)
-                      _QuotaCompletedView(
-                        correctCount: state.correctCount,
-                        total: state.questions.length,
-                      )
-                    else ...[
-                      _QuestionBody(state: state, controller: controller),
-                      if (state.lastResult != AnswerResult.none)
-                        // Aha Moment（初回3問正解の瞬間）は合格予測メーターを
-                        // 表示する専用シートを、通常の正誤演出の代わりに出す。
-                        state.ahaMomentShown && state.correctCount == 3
-                            ? _AhaMomentSheet(
-                                score: state.predictionScore,
-                                onContinue: controller.advanceToNextQuestion,
-                              )
-                            : _QuestionResultLayer(
-                                state: state,
-                                controller: controller,
-                              ),
-                    ],
-                  ],
-                ),
+          : state.locked
+              ? _LockedView(licenseCategory: licenseCategory)
+              : state.questions.isEmpty
+                  ? const Center(child: Text('この区分の問題がまだありません'))
+                  : Stack(
+                      children: [
+                        if (state.isQuotaCompleted)
+                          _QuotaCompletedView(
+                            correctCount: state.correctCount,
+                            total: state.questions.length,
+                            licenseCategory: licenseCategory,
+                          )
+                        else ...[
+                          _QuestionBody(state: state, controller: controller),
+                          if (state.lastResult != AnswerResult.none)
+                            // Aha Moment（初回3問正解の瞬間）は合格予測メーターを
+                            // 表示する専用シートを、通常の正誤演出の代わりに出す。
+                            state.ahaMomentShown && state.correctCount == 3
+                                ? _AhaMomentSheet(
+                                    score: state.predictionScore,
+                                    onContinue: controller.advanceToNextQuestion,
+                                  )
+                                : _QuestionResultLayer(
+                                    state: state,
+                                    controller: controller,
+                                  ),
+                        ],
+                      ],
+                    ),
     );
   }
 }
@@ -176,16 +180,87 @@ class _AhaMomentSheet extends StatelessWidget {
   }
 }
 
-class _QuotaCompletedView extends ConsumerWidget {
-  const _QuotaCompletedView({required this.correctCount, required this.total});
+/// 対象区分にフルアクセスがない場合の入口（原付以外の無料ユーザー向け）。
+class _LockedView extends ConsumerWidget {
+  const _LockedView({required this.licenseCategory});
 
-  final int correctCount;
-  final int total;
+  final String licenseCategory;
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    // 【広告制御】ノルマ完走後の結果画面でのみインタースティシャル対象
-    // （実際の広告SDK呼び出しはSDK導入時に canShowInterstitial を確認して行う）。
+    return Center(
+      child: Padding(
+        padding: const EdgeInsets.all(24),
+        child: Column(
+          mainAxisSize: MainAxisSize.min,
+          children: [
+            const Icon(Icons.lock_outline, size: 56),
+            const SizedBox(height: 16),
+            const Text(
+              'この区分はパス購入で解放されます',
+              style: TextStyle(fontWeight: FontWeight.bold),
+              textAlign: TextAlign.center,
+            ),
+            const SizedBox(height: 24),
+            ElevatedButton(
+              onPressed: () => Navigator.of(context).push(
+                MaterialPageRoute(
+                  builder: (_) => PaywallView(categoryId: licenseCategory),
+                ),
+              ),
+              child: const Text('プランを見る'),
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+}
+
+class _QuotaCompletedView extends ConsumerStatefulWidget {
+  const _QuotaCompletedView({
+    required this.correctCount,
+    required this.total,
+    required this.licenseCategory,
+  });
+
+  final int correctCount;
+  final int total;
+  final String licenseCategory;
+
+  @override
+  ConsumerState<_QuotaCompletedView> createState() => _QuotaCompletedViewState();
+}
+
+class _QuotaCompletedViewState extends ConsumerState<_QuotaCompletedView> {
+  @override
+  void initState() {
+    super.initState();
+    // 【広告制御】ノルマ完走後の結果画面でのみインタースティシャルを検討する。
+    // AdGateService.canShowInterstitial が true の場合のみ・無料ユーザーのみ。
+    WidgetsBinding.instance.addPostFrameCallback((_) => _maybeShowInterstitial());
+  }
+
+  void _maybeShowInterstitial() {
+    final user = ref.read(userControllerProvider).valueOrNull;
+    if (user == null || user.hasAccessToCategory(widget.licenseCategory)) return;
+
+    final adGate = ref.read(adGateServiceProvider);
+    if (!adGate.canShowInterstitial) return;
+
+    GoogleMobileAdsService().loadInterstitialAd(
+      onAdLoaded: () {
+        adGate.markInterstitialShown();
+        GoogleMobileAdsService().showInterstitialAd(onAdDismissed: () {});
+      },
+      onAdFailedToLoad: (_) {},
+    );
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    final correctCount = widget.correctCount;
+    final total = widget.total;
     return Center(
       child: Padding(
         padding: const EdgeInsets.all(24),
@@ -195,7 +270,7 @@ class _QuotaCompletedView extends ConsumerWidget {
             const Icon(Icons.emoji_events, size: 72, color: Colors.amber),
             const SizedBox(height: 16),
             Text(
-              '今日のノルマ完走！',
+              '練習完了！',
               style: Theme.of(context).textTheme.headlineSmall,
             ),
             const SizedBox(height: 8),

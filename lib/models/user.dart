@@ -5,9 +5,10 @@ class AppUser {
     required this.uid,
     this.licenseCategories = const [],
     this.trainingStage,
-    this.examDate,
+    this.examDatesByCategory = const {},
     this.streakCount = 0,
     this.purchaseStatus = PurchaseStatus.free,
+    this.unlockedCategoryId,
     DateTime? createdAt,
     DateTime? updatedAt,
   })  : createdAt = createdAt ?? DateTime.now(),
@@ -21,9 +22,15 @@ class AppUser {
   /// 教習所の進行段階。任意入力・スキップ可。
   final String? trainingStage;
 
-  final DateTime? examDate;
+  /// 免許区分ごとの試験日（キー=LicenseCategory.name）。任意入力・区分ごとに管理。
+  final Map<String, DateTime> examDatesByCategory;
+
   final int streakCount;
   final PurchaseStatus purchaseStatus;
+
+  /// [purchaseStatus] が [PurchaseStatus.singleCategoryPass] のときのみ意味を持つ。
+  /// 単一区分パスでどの区分を解放したかを保持する。
+  final String? unlockedCategoryId;
 
   /// データ作成日時（コンフリクト解決用）
   final DateTime createdAt;
@@ -31,16 +38,22 @@ class AppUser {
   /// データ最終更新日時（コンフリクト解決用・Last-Write-Wins）
   final DateTime updatedAt;
 
-  /// 無料枠：区分1つまで無料。2区分目以降は単一/全区分パスが必要。
-  bool get hasFreeCategoryOnly =>
-      purchaseStatus == PurchaseStatus.free && licenseCategories.length <= 1;
+  /// 指定した免許区分の全問題にフルアクセスできるか（無料プレビュー枠は含まない）。
+  bool hasAccessToCategory(String categoryId) {
+    if (purchaseStatus == PurchaseStatus.allCategorySetPass) return true;
+    if (purchaseStatus == PurchaseStatus.singleCategoryPass) {
+      return unlockedCategoryId == categoryId;
+    }
+    return false;
+  }
 
   AppUser copyWith({
     List<String>? licenseCategories,
     String? trainingStage,
-    DateTime? examDate,
+    Map<String, DateTime>? examDatesByCategory,
     int? streakCount,
     PurchaseStatus? purchaseStatus,
+    String? unlockedCategoryId,
     DateTime? createdAt,
     DateTime? updatedAt,
   }) {
@@ -48,9 +61,10 @@ class AppUser {
       uid: uid,
       licenseCategories: licenseCategories ?? this.licenseCategories,
       trainingStage: trainingStage ?? this.trainingStage,
-      examDate: examDate ?? this.examDate,
+      examDatesByCategory: examDatesByCategory ?? this.examDatesByCategory,
       streakCount: streakCount ?? this.streakCount,
       purchaseStatus: purchaseStatus ?? this.purchaseStatus,
+      unlockedCategoryId: unlockedCategoryId ?? this.unlockedCategoryId,
       createdAt: createdAt ?? this.createdAt,
       updatedAt: updatedAt ?? DateTime.now(), // Always update timestamp on modification
     );
@@ -62,14 +76,24 @@ class AppUser {
       json['licenseCategories'] as List? ?? [],
     ),
     trainingStage: json['trainingStage'] as String?,
-    examDate: json['examDate'] != null
-        ? DateTime.parse(json['examDate'] as String)
-        : null,
+    examDatesByCategory: json['examDatesByCategory'] != null
+        ? (json['examDatesByCategory'] as Map<String, dynamic>).map(
+            (key, value) => MapEntry(key, DateTime.parse(value as String)),
+          )
+        // 旧形式（単一の examDate フィールド）からの読み込み互換。
+        // 区分が特定できないため、選択済み区分の先頭に割り当てる。
+        : json['examDate'] != null && (json['licenseCategories'] as List?)?.isNotEmpty == true
+            ? {
+                (json['licenseCategories'] as List).first as String:
+                    DateTime.parse(json['examDate'] as String),
+              }
+            : const {},
     streakCount: json['streakCount'] as int? ?? 0,
     purchaseStatus: PurchaseStatus.values.firstWhere(
       (e) => e.name == (json['purchaseStatus'] as String? ?? 'free'),
       orElse: () => PurchaseStatus.free,
     ),
+    unlockedCategoryId: json['unlockedCategoryId'] as String?,
     createdAt: json['createdAt'] != null
         ? DateTime.parse(json['createdAt'] as String)
         : null,
@@ -82,9 +106,12 @@ class AppUser {
     'uid': uid,
     'licenseCategories': licenseCategories,
     'trainingStage': trainingStage,
-    'examDate': examDate?.toIso8601String(),
+    'examDatesByCategory': examDatesByCategory.map(
+      (key, value) => MapEntry(key, value.toIso8601String()),
+    ),
     'streakCount': streakCount,
     'purchaseStatus': purchaseStatus.name,
+    'unlockedCategoryId': unlockedCategoryId,
     'createdAt': createdAt.toIso8601String(),
     'updatedAt': updatedAt.toIso8601String(),
   };
