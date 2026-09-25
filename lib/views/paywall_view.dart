@@ -50,7 +50,12 @@ class PaywallView extends ConsumerWidget {
               const Spacer(),
               TextButton(
                 onPressed: () async {
-                  await ref.read(purchaseServiceProvider).restorePurchases();
+                  final status =
+                      await ref.read(purchaseServiceProvider).restorePurchases();
+                  await ref
+                      .read(userControllerProvider.notifier)
+                      .setPurchaseStatus(status, categoryId: categoryId);
+                  ref.invalidate(dailyQuotaControllerProvider);
                 },
                 child: const Text('購入を復元'),
               ),
@@ -92,6 +97,13 @@ class PaywallView extends ConsumerWidget {
           status,
           categoryId: targetCategoryId,
         );
+
+    // dailyQuotaControllerProvider は購入前に一度開かれていると
+    // ロック状態のまま state がキャッシュされ続ける（build() が
+    // 一度しか呼ばれないため）。購入直後に全区分分をinvalidateして、
+    // 次に開いたときは必ず最新の購入状態で出題し直させる。
+    ref.invalidate(dailyQuotaControllerProvider);
+
     await ref.read(analyticsServiceProvider).logEvent(
       AnalyticsEvents.paywallConverted,
       parameters: {'plan': isSet ? 'all_category_set' : 'single_category'},
