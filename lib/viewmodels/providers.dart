@@ -270,6 +270,39 @@ final questionsProvider =
       .loadQuestions(licenseCategory: query.licenseCategory, stageTag: query.stageTag);
 });
 
+/// 学習モード（クイズ形式ではなく問題文・正解・解説を一覧で読む機能）の結果。
+/// [locked] が true の場合は無料版でフルアクセス権のない区分（原付以外）で、
+/// [questions] は空になる。
+class StudyModeResult {
+  const StudyModeResult({required this.locked, required this.questions});
+  final bool locked;
+  final List<Question> questions;
+}
+
+/// 学習モードで表示する問題一覧。出題(ランダム/日次ノルマ)とは独立しており、
+/// 対象区分の全問題をID順に返す（無料/購入の制限は [DailyQuotaController]
+/// と同じルールを適用する）。
+final studyModeQuestionsProvider =
+    FutureProvider.family<StudyModeResult, String>((ref, licenseCategory) async {
+  final user = ref.watch(userControllerProvider).valueOrNull;
+  final hasAccess = user?.hasAccessToCategory(licenseCategory) ?? false;
+
+  final all = await ref.watch(
+    questionsProvider(QuestionQuery(licenseCategory: licenseCategory)).future,
+  );
+
+  if (hasAccess) {
+    return StudyModeResult(locked: false, questions: all);
+  }
+  if (licenseCategory == LicenseCategory.gentsuki.name) {
+    return StudyModeResult(
+      locked: false,
+      questions: all.take(freeGentsukiPreviewCount).toList(),
+    );
+  }
+  return const StudyModeResult(locked: true, questions: []);
+});
+
 // ---------------------------------------------------------------------------
 // Answer logs & Prediction score
 // ---------------------------------------------------------------------------
@@ -363,6 +396,12 @@ class DailyQuotaState {
 /// 原付以外の区分はフルアクセス（購入）がない限り一切解けない。
 const int freeGentsukiPreviewCount = 30;
 
+/// 問題データ（assets/questions/*.json）の stageTag に実際に使われている値。
+/// ExamDateSettingView の教習段階選択肢には「卒業検定前」「未定」もあるが、
+/// これらは問題データ側に対応する stageTag が存在しないため出題フィルタには
+/// 使わない（使うと該当0件になってしまう）。
+const Set<String> validQuestionStageTags = {'第一段階', '第二段階'};
+
 class DailyQuotaController extends FamilyNotifier<DailyQuotaState, String> {
   late String _licenseCategory;
 
@@ -383,7 +422,13 @@ class DailyQuotaController extends FamilyNotifier<DailyQuotaState, String> {
       questionsProvider(
         QuestionQuery(
           licenseCategory: _licenseCategory,
-          stageTag: user?.trainingStage,
+          // 問題データの stageTag は「第一段階」「第二段階」のみ。
+          // 「卒業検定前」「未定」を選んでいるユーザーにこれをそのまま
+          // フィルタとして渡すと該当0件になり出題が空になってしまうため、
+          // 問題データ側に存在する値のときだけフィルタを適用する。
+          stageTag: validQuestionStageTags.contains(user?.trainingStage)
+              ? user?.trainingStage
+              : null,
         ),
       ).future,
     );

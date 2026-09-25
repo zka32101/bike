@@ -58,10 +58,10 @@ class LocalDataService implements DataService {
 
   static const Map<String, String> _questionAssetByCategory = {
     'gentsuki': 'assets/questions/gentsuki.json',
-    'kogataGentsukiNirin': 'assets/questions/futsuu_nirin.json',
+    'kogataGentsukiNirin': 'assets/questions/kogata_gentsuki_nirin.json',
     'futsuuNirin': 'assets/questions/futsuu_nirin.json',
     'ogataNirin': 'assets/questions/ogata_nirin.json',
-    'atGentei': 'assets/questions/futsuu_nirin.json',
+    'atGentei': 'assets/questions/at_gentei.json',
   };
 
   final Map<String, List<Question>> _questionCache = {};

@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 import '../core/constants/analytics_events.dart';
+import '../core/constants/license_category.dart';
 import '../viewmodels/providers.dart';
 
 /// ペイウォール：期間パス（非消費型・買い切り）。サブスクではない。
@@ -10,47 +11,52 @@ import '../viewmodels/providers.dart';
 class PaywallView extends ConsumerWidget {
   const PaywallView({super.key, this.categoryId});
 
-  /// 単一区分パス購入時に解放する区分。ロック画面からの遷移時はその区分、
-  /// 設定画面からの一般遷移時はユーザーの最初の選択区分が渡される。
+  /// 単一区分パス購入時に解放する区分。ロック画面からの遷移時はその区分が
+  /// 渡され、その場合はピッカーを出さずそのまま購入する。設定画面からの
+  /// 一般遷移時（null）は、ユーザーが複数区分を選択していれば購入直前に
+  /// どの区分を解放するかを選ばせる。
   final String? categoryId;
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     return Scaffold(
       appBar: AppBar(title: const Text('プランを選ぶ')),
-      body: Padding(
-        padding: const EdgeInsets.all(20),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.stretch,
-          children: [
-            Text(
-              '広告なしで合格まで学習し放題',
-              style: Theme.of(context).textTheme.titleLarge,
-              textAlign: TextAlign.center,
-            ),
-            const SizedBox(height: 24),
-            _PlanCard(
-              title: '単一区分パス',
-              price: '¥980',
-              description: '選んだ1区分を合格まで無制限・広告完全非表示',
-              onTap: () => _purchase(context, ref, isSet: false),
-            ),
-            const SizedBox(height: 16),
-            _PlanCard(
-              title: '全区分セットパス',
-              price: '¥1,980',
-              description: '複数区分を並行/段階取得する人向け',
-              highlighted: true,
-              onTap: () => _purchase(context, ref, isSet: true),
-            ),
-            const Spacer(),
-            TextButton(
-              onPressed: () async {
-                await ref.read(purchaseServiceProvider).restorePurchases();
-              },
-              child: const Text('購入を復元'),
-            ),
-          ],
+      body: SafeArea(
+        child: Padding(
+          padding: const EdgeInsets.all(20),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.stretch,
+            children: [
+              Text(
+                '広告なしで合格まで学習し放題',
+                style: Theme.of(context).textTheme.titleLarge,
+                textAlign: TextAlign.center,
+              ),
+              const SizedBox(height: 24),
+              _PlanCard(
+                title: '単一区分パス',
+                price: '¥980',
+                description: '選んだ1区分を合格まで無制限・広告完全非表示',
+                onTap: () => _purchase(context, ref, isSet: false),
+              ),
+              const SizedBox(height: 16),
+              _PlanCard(
+                title: '全区分セットパス',
+                price: '¥1,980',
+                description: '複数区分を並行/段階取得する人向け',
+                highlighted: true,
+                onTap: () => _purchase(context, ref, isSet: true),
+              ),
+              const Spacer(),
+              TextButton(
+                onPressed: () async {
+                  await ref.read(purchaseServiceProvider).restorePurchases();
+                },
+                child: const Text('購入を復元'),
+              ),
+              const SizedBox(height: 8),
+            ],
+          ),
         ),
       ),
     );
@@ -61,16 +67,27 @@ class PaywallView extends ConsumerWidget {
     WidgetRef ref, {
     required bool isSet,
   }) async {
+    String? targetCategoryId = categoryId;
+
+    // 単一区分パスかつ対象区分が未確定（ロック画面経由ではない一般遷移）の
+    // 場合は、購入直前にどの区分を解放するか選んでもらう。
+    if (!isSet && targetCategoryId == null) {
+      final user = ref.read(userControllerProvider).valueOrNull;
+      final categories = user?.licenseCategories ?? const <String>[];
+      if (categories.length > 1) {
+        final picked = await _pickCategory(context, categories);
+        if (picked == null) return; // ユーザーがキャンセル
+        targetCategoryId = picked;
+      } else if (categories.isNotEmpty) {
+        targetCategoryId = categories.first;
+      }
+    }
+
     final purchaseService = ref.read(purchaseServiceProvider);
     final status = isSet
         ? await purchaseService.purchaseAllCategorySetPass()
         : await purchaseService.purchaseSingleCategoryPass();
 
-    final user = ref.read(userControllerProvider).valueOrNull;
-    final targetCategoryId = categoryId ??
-        (user != null && user.licenseCategories.isNotEmpty
-            ? user.licenseCategories.first
-            : null);
     await ref.read(userControllerProvider.notifier).setPurchaseStatus(
           status,
           categoryId: targetCategoryId,
@@ -81,6 +98,26 @@ class PaywallView extends ConsumerWidget {
     );
 
     if (context.mounted) Navigator.of(context).pop();
+  }
+
+  /// 単一区分パスでどの区分を解放するかを選ばせるダイアログ。
+  Future<String?> _pickCategory(
+    BuildContext context,
+    List<String> categories,
+  ) {
+    return showDialog<String>(
+      context: context,
+      builder: (dialogContext) => SimpleDialog(
+        title: const Text('どの区分を解放しますか？'),
+        children: [
+          for (final id in categories)
+            SimpleDialogOption(
+              onPressed: () => Navigator.of(dialogContext).pop(id),
+              child: Text(LicenseCategory.fromId(id).label),
+            ),
+        ],
+      ),
+    );
   }
 }
 

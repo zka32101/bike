@@ -5,6 +5,7 @@ import '../core/constants/license_category.dart';
 import '../models/user.dart';
 import '../viewmodels/providers.dart';
 import 'exam_date_setting_view.dart';
+import 'help_view.dart';
 import 'license_category_select_view.dart';
 import 'paywall_view.dart';
 
@@ -115,11 +116,14 @@ class SettingsView extends ConsumerWidget {
                 ? const Icon(Icons.chevron_right)
                 : const Icon(Icons.check_circle, color: Colors.green),
             onTap: () => Navigator.of(context).push(
-              MaterialPageRoute(
-                builder: (_) => PaywallView(
-                  categoryId: categories.isNotEmpty ? categories.first : null,
-                ),
-              ),
+              MaterialPageRoute(builder: (_) => const PaywallView()),
+            ),
+          ),
+          ListTile(
+            leading: const Icon(Icons.help_outline),
+            title: const Text('アプリの使い方'),
+            onTap: () => Navigator.of(context).push(
+              MaterialPageRoute(builder: (_) => const HelpView()),
             ),
           ),
         ],

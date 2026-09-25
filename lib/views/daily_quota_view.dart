@@ -27,37 +27,39 @@ class DailyQuotaView extends ConsumerWidget {
 
     return Scaffold(
       appBar: AppBar(title: const Text('問題を解く')),
-      body: state.loading
-          ? const Center(child: CircularProgressIndicator())
-          : state.locked
-              ? _LockedView(licenseCategory: licenseCategory)
-              : state.questions.isEmpty
-                  ? const Center(child: Text('この区分の問題がまだありません'))
-                  : Stack(
-                      children: [
-                        if (state.isQuotaCompleted)
-                          _QuotaCompletedView(
-                            correctCount: state.correctCount,
-                            total: state.questions.length,
-                            licenseCategory: licenseCategory,
-                          )
-                        else ...[
-                          _QuestionBody(state: state, controller: controller),
-                          if (state.lastResult != AnswerResult.none)
-                            // Aha Moment（初回3問正解の瞬間）は合格予測メーターを
-                            // 表示する専用シートを、通常の正誤演出の代わりに出す。
-                            state.ahaMomentShown && state.correctCount == 3
-                                ? _AhaMomentSheet(
-                                    score: state.predictionScore,
-                                    onContinue: controller.advanceToNextQuestion,
-                                  )
-                                : _QuestionResultLayer(
-                                    state: state,
-                                    controller: controller,
-                                  ),
+      body: SafeArea(
+        child: state.loading
+            ? const Center(child: CircularProgressIndicator())
+            : state.locked
+                ? _LockedView(licenseCategory: licenseCategory)
+                : state.questions.isEmpty
+                    ? const Center(child: Text('この区分の問題がまだありません'))
+                    : Stack(
+                        children: [
+                          if (state.isQuotaCompleted)
+                            _QuotaCompletedView(
+                              correctCount: state.correctCount,
+                              total: state.questions.length,
+                              licenseCategory: licenseCategory,
+                            )
+                          else ...[
+                            _QuestionBody(state: state, controller: controller),
+                            if (state.lastResult != AnswerResult.none)
+                              // Aha Moment（初回3問正解の瞬間）は合格予測メーターを
+                              // 表示する専用シートを、通常の正誤演出の代わりに出す。
+                              state.ahaMomentShown && state.correctCount == 3
+                                  ? _AhaMomentSheet(
+                                      score: state.predictionScore,
+                                      onContinue: controller.advanceToNextQuestion,
+                                    )
+                                  : _QuestionResultLayer(
+                                      state: state,
+                                      controller: controller,
+                                    ),
+                          ],
                         ],
-                      ],
-                    ),
+                      ),
+      ),
     );
   }
 }
@@ -87,6 +89,7 @@ class _QuestionBody extends ConsumerWidget {
           const SizedBox(height: 24),
           Expanded(
             child: ListView.separated(
+              padding: const EdgeInsets.only(bottom: 16),
               itemCount: question.choices.length,
               separatorBuilder: (_, __) => const SizedBox(height: 12),
               itemBuilder: (context, i) {
