@@ -358,10 +358,10 @@ class DefaultStudyAnalyticsService implements StudyAnalyticsService {
 
       switch (area.kind) {
         case WeakAreaKind.trapType:
-          // トラップ問題は道場で練習
-          action = ReviewActionType.trapDojo;
+          // ひっかけ道場は無効化中のため、通常の復習に誘導する。
+          action = ReviewActionType.masteryReview;
           title = '${area.label}を克服する';
-          body = '${area.label}に特化した問題を道場で練習してみましょう。';
+          body = '${area.label}に関する問題を復習してみましょう。';
           break;
         case WeakAreaKind.stage:
           // ステージ別は段階別ドリル

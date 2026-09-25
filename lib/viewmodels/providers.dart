@@ -7,7 +7,6 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import '../core/constants/analytics_events.dart';
 import '../core/constants/license_category.dart';
 import '../models/analytics_snapshot.dart';
-import '../models/bike_unlock_progress.dart';
 import '../models/pass_prediction_score.dart';
 import '../models/question.dart';
 import '../models/achievement_badge.dart';
@@ -140,11 +139,24 @@ final authStateProvider = StreamProvider<User?>((ref) async* {
   yield* FirebaseAuth.instance.authStateChanges();
 });
 
+/// Firebase認証が失敗しオフライン継続を選択した場合のフォールバックUID。
+/// 端末に永続化された安定したID（main() で SharedPreferences から読み込み・
+/// 生成した値で override される）。
+final localFallbackUidProvider = Provider<String>((ref) {
+  throw UnimplementedError('localFallbackUidProvider must be overridden in main()');
+});
+
+/// 起動画面で「オフラインで続ける」を選択したかどうか。
+/// true の場合、Firebase認証なしで [localFallbackUidProvider] を使って続行する。
+final offlineModeAcceptedProvider = StateProvider<bool>((ref) => false);
+
 /// 現在ログイン中のユーザーUID
 /// 同期的にアクセス。authReadyProvider が初期化を保証していること前提。
+/// Firebase未ログインの場合（オフライン継続時）はローカル固定UIDにフォールバックする。
 final currentUidProvider = Provider<String>((ref) {
   final currentUser = FirebaseAuth.instance.currentUser;
-  return currentUser?.uid ?? 'unknown_uid';
+  if (currentUser != null) return currentUser.uid;
+  return ref.watch(localFallbackUidProvider);
 });
 
 // ---------------------------------------------------------------------------
@@ -196,18 +208,34 @@ class UserController extends AsyncNotifier<AppUser> {
     await _saveUserToLocalAndFirestore(updated);
   }
 
-  Future<void> setExamDate(DateTime? date) async {
+  /// 指定した免許区分の試験日を設定・更新する（区分ごとに個別管理）。
+  /// [date] が null の場合はその区分の試験日を削除する。
+  Future<void> setExamDateForCategory(String categoryId, DateTime? date) async {
     final current = state.valueOrNull;
     if (current == null) return;
-    final updated = current.copyWith(examDate: date);
+    final updatedMap = {...current.examDatesByCategory};
+    if (date == null) {
+      updatedMap.remove(categoryId);
+    } else {
+      updatedMap[categoryId] = date;
+    }
+    final updated = current.copyWith(examDatesByCategory: updatedMap);
     state = AsyncData(updated);
     await _saveUserToLocalAndFirestore(updated);
   }
 
-  Future<void> setPurchaseStatus(PurchaseStatus status) async {
+  Future<void> setPurchaseStatus(
+    PurchaseStatus status, {
+    String? categoryId,
+  }) async {
     final current = state.valueOrNull;
     if (current == null) return;
-    final updated = current.copyWith(purchaseStatus: status);
+    final updated = current.copyWith(
+      purchaseStatus: status,
+      unlockedCategoryId: status == PurchaseStatus.singleCategoryPass
+          ? categoryId
+          : current.unlockedCategoryId,
+    );
     state = AsyncData(updated);
     await _saveUserToLocalAndFirestore(updated);
   }
@@ -286,6 +314,7 @@ class DailyQuotaState {
     this.ahaMomentShown = false,
     this.predictionScore,
     this.loading = true,
+    this.locked = false,
   });
 
   final List<Question> questions;
@@ -295,6 +324,10 @@ class DailyQuotaState {
   final bool ahaMomentShown;
   final PassPredictionScore? predictionScore;
   final bool loading;
+
+  /// 無料版でフルアクセス権のない区分を開いた場合 true。
+  /// この場合 [questions] は空で、UI側はパス購入への導線を表示する。
+  final bool locked;
 
   Question? get currentQuestion =>
       currentIndex < questions.length ? questions[currentIndex] : null;
@@ -310,6 +343,7 @@ class DailyQuotaState {
     bool? ahaMomentShown,
     PassPredictionScore? predictionScore,
     bool? loading,
+    bool? locked,
   }) {
     return DailyQuotaState(
       questions: questions ?? this.questions,
@@ -319,26 +353,15 @@ class DailyQuotaState {
       ahaMomentShown: ahaMomentShown ?? this.ahaMomentShown,
       predictionScore: predictionScore ?? this.predictionScore,
       loading: loading ?? this.loading,
+      locked: locked ?? this.locked,
     );
   }
 }
 
-/// 無料枠：1日ノルマのデフォルト問題数（実装引き継ぎ書 R④ 参照）。
-const int freeDailyQuotaDefault = 10;
-
-/// 免許区分ごとの1日ノルマ目標数。
-///
-/// 区分間で目標数を変える強い理由が現状ないため、全区分とも
-/// [freeDailyQuotaDefault] を使う。将来「原付は5問、普通二輪は15問」等の
-/// 区分別チューニングが必要になった場合はこのMapの値だけを調整すればよい。
-final Map<String, int> dailyQuotaLimitByCategory = {
-  for (final category in LicenseCategory.values) category.name: freeDailyQuotaDefault,
-};
-
-/// 指定した免許区分の1日ノルマ目標数を返す。
-/// 未登録の区分IDが渡された場合はデフォルト値にフォールバックする。
-int dailyQuotaLimitForCategory(String licenseCategoryId) =>
-    dailyQuotaLimitByCategory[licenseCategoryId] ?? freeDailyQuotaDefault;
+/// 無料版で原付（gentsuki）区分のみ解ける固定プレビュー問題数。
+/// 200問中、先頭固定30問（g001〜g030）が常に対象（日次リセットなし）。
+/// 原付以外の区分はフルアクセス（購入）がない限り一切解けない。
+const int freeGentsukiPreviewCount = 30;
 
 class DailyQuotaController extends FamilyNotifier<DailyQuotaState, String> {
   late String _licenseCategory;
@@ -365,19 +388,32 @@ class DailyQuotaController extends FamilyNotifier<DailyQuotaState, String> {
       ).future,
     );
 
+    final hasAccess = user?.hasAccessToCategory(_licenseCategory) ?? false;
+
+    List<Question> pool;
+    if (hasAccess) {
+      pool = all;
+    } else if (_licenseCategory == LicenseCategory.gentsuki.name) {
+      // 無料版：原付の先頭固定30問のみ（生涯を通じて常にこの範囲）。
+      pool = all.take(freeGentsukiPreviewCount).toList();
+    } else {
+      // 無料版：原付以外の区分は購入するまで一切解けない。
+      state = state.copyWith(questions: const [], loading: false, locked: true);
+      return;
+    }
+
     // マスター済み問題を除外
     final masteredIds = await ref.read(masteryServiceProvider).loadMasteredQuestions(uid);
     final masteredIdSet = {for (final m in masteredIds) m.questionId};
-    final filtered = all.where((q) => !masteredIdSet.contains(q.id)).toList();
+    final filtered = pool.where((q) => !masteredIdSet.contains(q.id)).toList();
 
-    // マスター済み問題が全てなら、全問題から開始
-    final questionsList = filtered.isEmpty ? all : filtered;
+    // マスター済み問題が全てなら、対象プールから開始
+    final questionsList = filtered.isEmpty ? pool : filtered;
 
+    // フルアクセスの場合はランダム出題（上限なし）、無料プレビューの場合は
+    // 固定30問プール内でシャッフルするのみ（プール自体が上限のため追加のtakeは不要）。
     questionsList.shuffle();
-    final quota = questionsList
-        .take(dailyQuotaLimitForCategory(_licenseCategory))
-        .toList();
-    state = state.copyWith(questions: quota, loading: false);
+    state = state.copyWith(questions: questionsList, loading: false, locked: false);
   }
 
   /// 回答ログをローカル＆キューに保存
@@ -500,6 +536,12 @@ class DailyQuotaController extends FamilyNotifier<DailyQuotaState, String> {
     // 無効化し、ホームに戻った際に最新の習熟度が反映されるようにする。
     ref.invalidate(savedPredictionScoreProvider);
     ref.invalidate(answerLogsProvider);
+
+    // analyticsSnapshotProvider は answerLogsProvider を watch していないため、
+    // 明示的に invalidate しないと回答後も学習分析画面が古い集計結果のまま
+    // になってしまう（キャッシュ自体のfingerprint判定は正しいが、
+    // Riverpodプロバイダーが再ビルドされないと判定自体が走らない）。
+    ref.invalidate(analyticsSnapshotProvider);
   }
 
   Future<void> _revealAhaMoment() async {
@@ -623,120 +665,6 @@ class DailyQuotaController extends FamilyNotifier<DailyQuotaState, String> {
 final dailyQuotaControllerProvider =
     NotifierProvider.family<DailyQuotaController, DailyQuotaState, String>(
   DailyQuotaController.new,
-);
-
-// ---------------------------------------------------------------------------
-// Bike Unlock（憧れバイク解放）
-// ---------------------------------------------------------------------------
-
-class BikeUnlockController extends AsyncNotifier<List<BikeUnlockProgress>> {
-  @override
-  Future<List<BikeUnlockProgress>> build() async {
-    final uid = ref.read(currentUidProvider);
-    final saved = await ref.read(dataServiceProvider).loadBikeUnlockProgress(uid);
-    final savedIds = saved.map((p) => p.bikeId).toSet();
-
-    // 未保存のTierは未解放状態で補完して常に全Tierを返す。
-    final all = [
-      ...saved,
-      for (final tier in BikeTier.values)
-        if (!savedIds.contains(tier.name))
-          BikeUnlockProgress(
-            uid: uid,
-            bikeId: tier.name,
-            requiredCorrectCount: tier.requiredCorrectCount,
-          ),
-    ];
-    all.sort((a, b) => BikeTier.values
-        .indexWhere((t) => t.name == a.bikeId)
-        .compareTo(BikeTier.values.indexWhere((t) => t.name == b.bikeId)));
-    return all;
-  }
-
-  /// 通算正解数から到達可能なTierを解放する。バイク解放を1段階早める
-  /// リワード広告の分だけ `bonusCorrectCount` を上乗せできる。
-  Future<void> refreshFromTotalCorrectCount(
-    int totalCorrectCount, {
-    int bonusCorrectCount = 0,
-  }) async {
-    final uid = ref.read(currentUidProvider);
-    final current = state.valueOrNull ?? await build();
-    final effectiveCount = totalCorrectCount + bonusCorrectCount;
-
-    final updated = <BikeUnlockProgress>[];
-    for (final progress in current) {
-      if (!progress.isUnlocked &&
-          effectiveCount >= progress.requiredCorrectCount) {
-        final unlocked = BikeUnlockProgress(
-          uid: uid,
-          bikeId: progress.bikeId,
-          unlockedAt: DateTime.now(),
-          requiredCorrectCount: progress.requiredCorrectCount,
-        );
-        await ref.read(dataServiceProvider).saveBikeUnlockProgress(unlocked);
-
-        // キューに登録（エラーが出てもアプリは続行）
-        try {
-          final queueService = await ref.read(syncQueueServiceProvider.future);
-          final operation = QueuedOperation(
-            id: 'bikeProgress_${uid}_${DateTime.now().millisecondsSinceEpoch}',
-            type: 'saveBikeProgress',
-            data: {
-              'uid': uid,
-              'progress': (updated + [unlocked]).map((p) => p.toJson()).toList(),
-            },
-            queuedAt: DateTime.now(),
-            lastAttemptAt: DateTime.now(),
-            retryCount: 0,
-          );
-          await queueService.enqueue(operation);
-        } catch (e) {
-          debugPrint('Failed to queue bike progress operation: $e');
-        }
-
-        await ref.read(analyticsServiceProvider).logEvent(
-          AnalyticsEvents.bikeUnlocked,
-          parameters: {'bike_id': progress.bikeId},
-        );
-
-        // バイク解放時のハプティクスフィードバック
-        try {
-          await HapticFeedback.heavyImpact();
-        } catch (_) {
-          // Haptics not available on this device
-        }
-
-        updated.add(unlocked);
-      } else {
-        updated.add(progress);
-      }
-    }
-    state = AsyncData(updated);
-
-    // 全バイク進捗をキューに登録
-    try {
-      final queueService = await ref.read(syncQueueServiceProvider.future);
-      final operation = QueuedOperation(
-        id: 'bikeProgressFull_${uid}_${DateTime.now().millisecondsSinceEpoch}',
-        type: 'saveBikeProgress',
-        data: {
-          'uid': uid,
-          'progress': updated.map((p) => p.toJson()).toList(),
-        },
-        queuedAt: DateTime.now(),
-        lastAttemptAt: DateTime.now(),
-        retryCount: 0,
-      );
-      await queueService.enqueue(operation);
-    } catch (e) {
-      debugPrint('Failed to queue bike progress full sync: $e');
-    }
-  }
-}
-
-final bikeUnlockControllerProvider =
-    AsyncNotifierProvider<BikeUnlockController, List<BikeUnlockProgress>>(
-  BikeUnlockController.new,
 );
 
 // ---------------------------------------------------------------------------

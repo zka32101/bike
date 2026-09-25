@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
+import '../core/constants/license_category.dart';
 import '../models/user.dart';
 import '../viewmodels/providers.dart';
 import 'exam_date_setting_view.dart';
@@ -15,6 +16,7 @@ class SettingsView extends ConsumerWidget {
   Widget build(BuildContext context, WidgetRef ref) {
     final userAsync = ref.watch(userControllerProvider);
     final user = userAsync.valueOrNull;
+    final categories = user?.licenseCategories ?? const <String>[];
 
     return Scaffold(
       appBar: AppBar(title: const Text('設定')),
@@ -23,23 +25,51 @@ class SettingsView extends ConsumerWidget {
           ListTile(
             leading: const Icon(Icons.checklist),
             title: const Text('免許区分の管理'),
-            subtitle: Text(user?.licenseCategories.join(' / ') ?? '未設定'),
+            subtitle: Text(
+              categories.isNotEmpty
+                  ? categories
+                      .map((id) => LicenseCategory.fromId(id).label)
+                      .join(' / ')
+                  : '未設定',
+            ),
             onTap: () => Navigator.of(context).push(
               MaterialPageRoute(builder: (_) => const LicenseCategorySelectView()),
             ),
           ),
-          ListTile(
-            leading: const Icon(Icons.event),
-            title: const Text('教習段階・試験日'),
-            subtitle: Text(
-              user?.examDate != null
-                  ? '${user!.examDate!.year}/${user.examDate!.month}/${user.examDate!.day}'
-                  : '未設定',
+          if (categories.length <= 1)
+            ListTile(
+              leading: const Icon(Icons.event),
+              title: const Text('教習段階・試験日'),
+              subtitle: Text(
+                categories.isEmpty || user?.examDatesByCategory[categories.first] == null
+                    ? '未設定'
+                    : _formatDate(user!.examDatesByCategory[categories.first]!),
+              ),
+              onTap: () => Navigator.of(context).push(
+                MaterialPageRoute(builder: (_) => const ExamDateSettingView()),
+              ),
+            )
+          else ...[
+            const Padding(
+              padding: EdgeInsets.fromLTRB(16, 16, 16, 4),
+              child: Text('教習段階・試験日（区分ごと）', style: TextStyle(fontWeight: FontWeight.bold)),
             ),
-            onTap: () => Navigator.of(context).push(
-              MaterialPageRoute(builder: (_) => const ExamDateSettingView()),
-            ),
-          ),
+            for (final categoryId in categories)
+              ListTile(
+                leading: const Icon(Icons.event),
+                title: Text(LicenseCategory.fromId(categoryId).label),
+                subtitle: Text(
+                  user?.examDatesByCategory[categoryId] == null
+                      ? '未設定'
+                      : _formatDate(user!.examDatesByCategory[categoryId]!),
+                ),
+                onTap: () => Navigator.of(context).push(
+                  MaterialPageRoute(
+                    builder: (_) => ExamDateSettingView(categoryId: categoryId),
+                  ),
+                ),
+              ),
+          ],
           ListTile(
             leading: const Icon(Icons.volume_up),
             title: const Text('効果音'),
@@ -85,13 +115,19 @@ class SettingsView extends ConsumerWidget {
                 ? const Icon(Icons.chevron_right)
                 : const Icon(Icons.check_circle, color: Colors.green),
             onTap: () => Navigator.of(context).push(
-              MaterialPageRoute(builder: (_) => const PaywallView()),
+              MaterialPageRoute(
+                builder: (_) => PaywallView(
+                  categoryId: categories.isNotEmpty ? categories.first : null,
+                ),
+              ),
             ),
           ),
         ],
       ),
     );
   }
+
+  String _formatDate(DateTime date) => '${date.year}/${date.month}/${date.day}';
 
   String _planLabel(PurchaseStatus? status) {
     switch (status) {

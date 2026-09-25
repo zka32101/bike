@@ -69,8 +69,11 @@ class LocalFirestoreSyncService implements FirestoreSyncService {
               'uid': user.uid,
               'licenseCategories': user.licenseCategories,
               'trainingStage': user.trainingStage,
-              'examDate': user.examDate?.toIso8601String(),
+              'examDatesByCategory': user.examDatesByCategory.map(
+                (key, value) => MapEntry(key, value.toIso8601String()),
+              ),
               'purchaseStatus': user.purchaseStatus.name,
+              'unlockedCategoryId': user.unlockedCategoryId,
               'createdAt': user.createdAt.toIso8601String(),
               'updatedAt': DateTime.now().toIso8601String(),
             },
@@ -100,11 +103,16 @@ class LocalFirestoreSyncService implements FirestoreSyncService {
         uid: data['uid'] as String,
         licenseCategories: List<String>.from(data['licenseCategories'] as List? ?? []),
         trainingStage: data['trainingStage'] as String?,
-        examDate: data['examDate'] != null ? DateTime.parse(data['examDate'] as String) : null,
+        examDatesByCategory: data['examDatesByCategory'] != null
+            ? (data['examDatesByCategory'] as Map<String, dynamic>).map(
+                (key, value) => MapEntry(key, DateTime.parse(value as String)),
+              )
+            : const {},
         purchaseStatus: PurchaseStatus.values.firstWhere(
           (e) => e.name == data['purchaseStatus'],
           orElse: () => PurchaseStatus.free,
         ),
+        unlockedCategoryId: data['unlockedCategoryId'] as String?,
         createdAt: data['createdAt'] != null
             ? DateTime.parse(data['createdAt'] as String)
             : DateTime.now(),

@@ -10,7 +10,8 @@ import 'exam_date_setting_view.dart';
 ///
 /// 【差別化の重心】表示順は普通二輪・大型二輪を先頭に置き、原付は
 /// 入口として残しつつ主役にしない（企画設計書 v1.1）。
-/// 無料枠は区分1つまで。2つ目以降を選ぶとペイウォールへ誘導する。
+/// 区分の選択自体は制限しない。無料でフルアクセスできるのは原付の
+/// 先頭30問のみで、他区分・原付の残り問題はパス購入で解放される。
 class LicenseCategorySelectView extends ConsumerStatefulWidget {
   const LicenseCategorySelectView({super.key});
 
@@ -51,7 +52,8 @@ class _LicenseCategorySelectViewState
               Padding(
                 padding: const EdgeInsets.only(top: 8),
                 child: Text(
-                  '無料版では1区分まで対策できます。2区分目以降はパスが必要です。',
+                  '無料版は原付の最初の30問のみ無料で解けます。'
+                  '他の区分・原付の残り問題はパス購入で解放されます。',
                   style: Theme.of(context)
                       .textTheme
                       .bodySmall

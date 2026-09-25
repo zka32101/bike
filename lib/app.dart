@@ -22,22 +22,6 @@ class BikeLicenseKoreApp extends ConsumerWidget {
   Widget build(BuildContext context, WidgetRef ref) {
     final scaffoldMessengerKey = ref.watch(scaffoldMessengerKeyProvider);
 
-    // アプリ起動時に Firebase Auth 初期化を実行
-    // エラー時は同期的にスナックバーを表示して続行
-    ref.listen(authReadyProvider, (previous, next) {
-      next.when(
-        data: (uid) {
-          debugPrint('Auth initialized with UID: $uid');
-        },
-        loading: () {},
-        error: (error, stackTrace) {
-          scaffoldMessengerKey.currentState?.showSnackBar(
-            SnackBar(content: Text('認証初期化に失敗: $error')),
-          );
-        },
-      );
-    });
-
     // アプリ起動時にネットワークキュープロセッサーを初期化
     // これでオフラインキューの自動処理が開始される
     ref.listen(networkQueueProcessorProvider, (previous, next) {
@@ -69,11 +53,69 @@ class BikeLicenseKoreApp extends ConsumerWidget {
 }
 
 /// 起動時の入口を出し分ける。
+/// まず Firebase Auth の匿名ログイン完了（[authReadyProvider]）を待ってから
+/// ユーザーデータを読み込む。これを待たずに [userControllerProvider] を
+/// 組み立てると、ログイン未完了の一瞬に [currentUidProvider] が
+/// 'unknown_uid' を返し、その UID でユーザーが作成されてしまう競合状態が
+/// 起きていたため（認証初期化に失敗しているように見える不具合の原因）。
+class _StartupGate extends ConsumerWidget {
+  const _StartupGate();
+
+  @override
+  Widget build(BuildContext context, WidgetRef ref) {
+    // オフライン継続を選択済みなら、Firebase認証の結果を待たずに進む
+    // （currentUidProvider がローカル固定UIDにフォールバックする）。
+    if (ref.watch(offlineModeAcceptedProvider)) {
+      return const _AuthedStartupGate();
+    }
+
+    final authAsync = ref.watch(authReadyProvider);
+    return authAsync.when(
+      data: (_) => const _AuthedStartupGate(),
+      loading: () => const Scaffold(
+        body: Center(child: CircularProgressIndicator()),
+      ),
+      error: (error, stackTrace) => Scaffold(
+        body: Center(
+          child: Padding(
+            padding: const EdgeInsets.all(24),
+            child: Column(
+              mainAxisSize: MainAxisSize.min,
+              children: [
+                const Icon(Icons.error_outline, size: 48, color: Colors.red),
+                const SizedBox(height: 16),
+                const Text(
+                  '認証の初期化に失敗しました',
+                  style: TextStyle(fontWeight: FontWeight.bold),
+                ),
+                const SizedBox(height: 8),
+                Text('$error', textAlign: TextAlign.center),
+                const SizedBox(height: 16),
+                ElevatedButton(
+                  onPressed: () => ref.invalidate(authReadyProvider),
+                  child: const Text('再試行'),
+                ),
+                const SizedBox(height: 8),
+                TextButton(
+                  onPressed: () =>
+                      ref.read(offlineModeAcceptedProvider.notifier).state = true,
+                  child: const Text('オフラインで続ける（データはこの端末のみに保存されます）'),
+                ),
+              ],
+            ),
+          ),
+        ),
+      ),
+    );
+  }
+}
+
+/// 認証完了後の入口の出し分け。
 /// 免許区分を1つ以上選択済み（オンボーディング完了済み）なら直接ホームへ、
 /// 未選択なら従来どおりオンボーディングへ。ユーザー情報はローカルに
 /// 永続化されているため、この判定はネットワーク接続を必要としない。
-class _StartupGate extends ConsumerWidget {
-  const _StartupGate();
+class _AuthedStartupGate extends ConsumerWidget {
+  const _AuthedStartupGate();
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {

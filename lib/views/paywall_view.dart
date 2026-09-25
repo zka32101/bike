@@ -8,7 +8,11 @@ import '../viewmodels/providers.dart';
 /// - 単一区分パス：¥980（合格まで無制限・広告完全非表示）
 /// - 全区分セットパス：¥1,980
 class PaywallView extends ConsumerWidget {
-  const PaywallView({super.key});
+  const PaywallView({super.key, this.categoryId});
+
+  /// 単一区分パス購入時に解放する区分。ロック画面からの遷移時はその区分、
+  /// 設定画面からの一般遷移時はユーザーの最初の選択区分が渡される。
+  final String? categoryId;
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
@@ -62,7 +66,15 @@ class PaywallView extends ConsumerWidget {
         ? await purchaseService.purchaseAllCategorySetPass()
         : await purchaseService.purchaseSingleCategoryPass();
 
-    await ref.read(userControllerProvider.notifier).setPurchaseStatus(status);
+    final user = ref.read(userControllerProvider).valueOrNull;
+    final targetCategoryId = categoryId ??
+        (user != null && user.licenseCategories.isNotEmpty
+            ? user.licenseCategories.first
+            : null);
+    await ref.read(userControllerProvider.notifier).setPurchaseStatus(
+          status,
+          categoryId: targetCategoryId,
+        );
     await ref.read(analyticsServiceProvider).logEvent(
       AnalyticsEvents.paywallConverted,
       parameters: {'plan': isSet ? 'all_category_set' : 'single_category'},
