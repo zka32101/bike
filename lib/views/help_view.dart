@@ -1,17 +1,25 @@
 import 'package:flutter/material.dart';
 
-/// アプリ全体の使い方・仕組みを説明するヘルプ画面。設定から開く。
+/// アプリ全体の使い方・仕組みを説明するヘルプ画面。
+/// 設定画面から開けるほか、初回オンボーディングの最後にも表示される
+/// （[onContinue] が渡されている場合は続行ボタンを表示する）。
 class HelpView extends StatelessWidget {
-  const HelpView({super.key});
+  const HelpView({super.key, this.onContinue});
+
+  /// 指定されている場合、末尾に「次へ」ボタンを表示し、初回導線として使う。
+  final VoidCallback? onContinue;
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(title: const Text('アプリの使い方')),
       body: SafeArea(
-        child: ListView(
-          padding: const EdgeInsets.fromLTRB(20, 20, 20, 32),
-          children: const [
+        child: Column(
+          children: [
+            Expanded(
+              child: ListView(
+                padding: const EdgeInsets.fromLTRB(20, 20, 20, 32),
+                children: const [
             _HelpSection(
               title: '無料でできること',
               body: '原付区分の最初の30問は、期間の制限なくいつでも無料で解けます。'
@@ -48,11 +56,25 @@ class HelpView extends StatelessWidget {
                   '複数区分を選んでいる場合は、区分ごとに別々の日付を'
                   '管理できます。',
             ),
-            _HelpSection(
-              title: '広告について',
-              body: '無料版では、練習を1回終えるとまれに広告が表示されることが'
-                  'あります。パスを購入すると広告は表示されなくなります。',
+                  _HelpSection(
+                    title: '広告について',
+                    body: '無料版では、練習を1回終えるとまれに広告が表示されることが'
+                        'あります。パスを購入すると広告は表示されなくなります。',
+                  ),
+                ],
+              ),
             ),
+            if (onContinue != null)
+              Padding(
+                padding: const EdgeInsets.fromLTRB(20, 0, 20, 20),
+                child: SizedBox(
+                  width: double.infinity,
+                  child: ElevatedButton(
+                    onPressed: onContinue,
+                    child: const Text('次へ'),
+                  ),
+                ),
+              ),
           ],
         ),
       ),

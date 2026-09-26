@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+import 'help_view.dart';
 import 'license_category_select_view.dart';
 
 const _slides = [
@@ -36,8 +37,17 @@ class _OnboardingViewState extends State<OnboardingView> {
         curve: Curves.easeOut,
       );
     } else {
-      Navigator.of(context).pushReplacement(
-        MaterialPageRoute(builder: (_) => const LicenseCategorySelectView()),
+      // 免許区分選択の前に、アプリの使い方を一度見せてから進めてもらう。
+      Navigator.of(context).push(
+        MaterialPageRoute(
+          builder: (_) => HelpView(
+            onContinue: () => Navigator.of(context).pushReplacement(
+              MaterialPageRoute(
+                builder: (_) => const LicenseCategorySelectView(),
+              ),
+            ),
+          ),
+        ),
       );
     }
   }
