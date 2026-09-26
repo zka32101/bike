@@ -1998,5 +1998,4005 @@
     "isTrapQuestion": false,
     "trapNumberType": "none",
     "topicTag": "emergency"
+  },
+  {
+    "id": "at101",
+    "licenseCategory": [
+      "atGentei"
+    ],
+    "stageTag": "第一段階",
+    "difficulty": 2,
+    "questionText": "125cc以下のスクーターに乗るため、小型限定普通二輪免許（AT限定）を取得した。この免許で運転できる二輪車の総排気量の上限として正しいのはどれか。",
+    "choices": [
+      "50cc以下",
+      "250cc以下",
+      "400cc以下",
+      "125cc以下"
+    ],
+    "answer": 3,
+    "explanation": "小型限定普通二輪免許は総排気量125cc以下の二輪車が対象で、AT限定の場合はそのうちAT車に限られる。",
+    "isTrapQuestion": true,
+    "trapNumberType": "other",
+    "topicTag": "license_system"
+  },
+  {
+    "id": "at102",
+    "licenseCategory": [
+      "atGentei"
+    ],
+    "stageTag": "第一段階",
+    "difficulty": 2,
+    "questionText": "AT限定の普通二輪免許（小型限定なし）で運転できる二輪車の総排気量の範囲として正しいのはどれか。",
+    "choices": [
+      "排気量に関係なくすべてのAT二輪車",
+      "400cc以下のAT二輪車",
+      "250cc以下のAT二輪車",
+      "125cc以下のAT二輪車"
+    ],
+    "answer": 1,
+    "explanation": "普通二輪免許の対象は総排気量400cc以下の二輪車で、AT限定ではそのうちクラッチ操作のないAT車に限られる。",
+    "isTrapQuestion": true,
+    "trapNumberType": "other",
+    "topicTag": "license_system"
+  },
+  {
+    "id": "at103",
+    "licenseCategory": [
+      "atGentei"
+    ],
+    "stageTag": "第二段階",
+    "difficulty": 5,
+    "questionText": "AT限定大型二輪免許を持つ人が、総排気量1200ccのAT二輪車を運転することについて正しいのはどれか。",
+    "choices": [
+      "AT限定大型二輪は750cc以下に限られるので運転できない",
+      "AT限定大型二輪は650cc以下に限られるので運転できない",
+      "1000ccを超える車両は限定解除をしないと運転できない",
+      "AT車であれば排気量の上限はないので運転できる"
+    ],
+    "answer": 3,
+    "explanation": "かつてはAT限定大型二輪に650cc以下という制限があったが、制度改正により撤廃され、現在はAT車であれば排気量を問わず運転できる。",
+    "isTrapQuestion": true,
+    "trapNumberType": "other",
+    "topicTag": "license_system"
+  },
+  {
+    "id": "at104",
+    "licenseCategory": [
+      "atGentei"
+    ],
+    "stageTag": "第一段階",
+    "difficulty": 1,
+    "questionText": "普通二輪免許（AT限定を含む）を取得できる年齢として正しいのはどれか。",
+    "choices": [
+      "15歳以上",
+      "18歳以上",
+      "16歳以上",
+      "20歳以上"
+    ],
+    "answer": 2,
+    "explanation": "普通二輪免許は16歳から取得できる。AT限定であっても年齢要件は同じである。",
+    "isTrapQuestion": false,
+    "trapNumberType": "none",
+    "topicTag": "license_system"
+  },
+  {
+    "id": "at105",
+    "licenseCategory": [
+      "atGentei"
+    ],
+    "stageTag": "第一段階",
+    "difficulty": 1,
+    "questionText": "大型二輪免許（AT限定を含む）を取得できる年齢として正しいのはどれか。",
+    "choices": [
+      "18歳以上",
+      "21歳以上",
+      "20歳以上",
+      "16歳以上"
+    ],
+    "answer": 0,
+    "explanation": "大型二輪免許は18歳以上で取得できる。AT限定でも同じである。",
+    "isTrapQuestion": false,
+    "trapNumberType": "none",
+    "topicTag": "license_system"
+  },
+  {
+    "id": "at106",
+    "licenseCategory": [
+      "atGentei"
+    ],
+    "stageTag": "第一段階",
+    "difficulty": 2,
+    "questionText": "二輪免許の取得過程における仮運転免許（仮免許）について正しいのはどれか。",
+    "choices": [
+      "原付免許を持っていれば二輪の仮免許が不要になる",
+      "AT限定二輪免許に限り仮免許を取得できる",
+      "教習所の第一段階修了時に二輪用の仮免許が交付される",
+      "二輪免許には仮免許の制度がなく、路上での練習運転はできない"
+    ],
+    "answer": 3,
+    "explanation": "仮免許は四輪（大型・中型・準中型・普通）にある制度で、二輪免許には仮免許がない。",
+    "isTrapQuestion": true,
+    "trapNumberType": "other",
+    "topicTag": "license_system"
+  },
+  {
+    "id": "at107",
+    "licenseCategory": [
+      "atGentei"
+    ],
+    "stageTag": "第一段階",
+    "difficulty": 2,
+    "questionText": "AT限定の普通二輪免許を取得した人が、この免許で運転できる車両として正しいものはどれか。",
+    "choices": [
+      "小型特殊自動車",
+      "クラッチ操作が必要な250cc二輪車",
+      "400ccを超えるAT二輪車",
+      "AT車の普通自動車"
+    ],
+    "answer": 0,
+    "explanation": "普通二輪免許では普通二輪車のほか、小型特殊自動車と原動機付自転車も運転できる。四輪の普通自動車は運転できない。",
+    "isTrapQuestion": true,
+    "trapNumberType": "other",
+    "topicTag": "license_system"
+  },
+  {
+    "id": "at108",
+    "licenseCategory": [
+      "atGentei"
+    ],
+    "stageTag": "第一段階",
+    "difficulty": 1,
+    "questionText": "二輪車を運転するときの運転免許証の取り扱いとして正しいのはどれか。",
+    "choices": [
+      "免許番号を覚えていれば携帯しなくてよい",
+      "近所を運転するだけなら携帯しなくてよい",
+      "運転するときは必ず免許証を携帯しなければならない",
+      "コピーを携帯していれば原本は自宅に置いてよい"
+    ],
+    "answer": 2,
+    "explanation": "運転者には免許証の携帯義務があり、コピーや番号の記憶では代わりにならない。",
+    "isTrapQuestion": false,
+    "trapNumberType": "none",
+    "topicTag": "license_system"
+  },
+  {
+    "id": "at109",
+    "licenseCategory": [
+      "atGentei"
+    ],
+    "stageTag": "第一段階",
+    "difficulty": 1,
+    "questionText": "二輪免許を初めて取得した人の「初心運転者期間」として正しいのはどれか。",
+    "choices": [
+      "免許を取得した日から1年間",
+      "免許を取得した日から3年間",
+      "免許を取得した日から6か月間",
+      "免許を取得した日から2年間"
+    ],
+    "answer": 0,
+    "explanation": "初心運転者期間は免許取得後1年間で、この間に一定以上の違反をすると初心運転者講習の対象となる。",
+    "isTrapQuestion": false,
+    "trapNumberType": "none",
+    "topicTag": "license_system"
+  },
+  {
+    "id": "at110",
+    "licenseCategory": [
+      "atGentei"
+    ],
+    "stageTag": "第一段階",
+    "difficulty": 2,
+    "questionText": "二輪免許を取得して1年未満の人の初心者マーク（初心運転者標識）について正しいのはどれか。",
+    "choices": [
+      "ヘルメットに表示しなければならない",
+      "二輪車には初心者マークの表示義務はない",
+      "AT限定免許の場合だけ表示義務がある",
+      "取得後1年間は車体の前後に表示しなければならない"
+    ],
+    "answer": 1,
+    "explanation": "初心者マークの表示義務は準中型自動車・普通自動車の初心運転者に課されるもので、二輪車には表示義務はない。",
+    "isTrapQuestion": true,
+    "trapNumberType": "other",
+    "topicTag": "license_system"
+  },
+  {
+    "id": "at111",
+    "licenseCategory": [
+      "atGentei"
+    ],
+    "stageTag": "第一段階",
+    "difficulty": 2,
+    "questionText": "免許証の更新のお知らせが届いた。更新手続きを受けられる期間として正しいのはどれか（特例を除く）。",
+    "choices": [
+      "有効期間満了年の誕生日の1か月前から誕生日の1か月後まで",
+      "誕生日の前後1週間だけ",
+      "有効期間満了日の前日までのいつでも",
+      "有効期間満了年の誕生日の3か月前から誕生日まで"
+    ],
+    "answer": 0,
+    "explanation": "免許の更新は、更新年の誕生日の1か月前から1か月後までの期間に行う。",
+    "isTrapQuestion": true,
+    "trapNumberType": "licensePeriod",
+    "topicTag": "license_system"
+  },
+  {
+    "id": "at112",
+    "licenseCategory": [
+      "atGentei"
+    ],
+    "stageTag": "第二段階",
+    "difficulty": 3,
+    "questionText": "違反点数による行政処分の基本的な仕組みとして正しいのはどれか。",
+    "choices": [
+      "違反点数は毎年1月1日にすべてゼロに戻る",
+      "罰金を支払えば違反点数は加算されない",
+      "違反点数は免許の更新時にだけ計算される",
+      "過去3年以内の違反・事故の点数を累積し、一定の点数に達すると免許停止や取消しの処分を受ける"
+    ],
+    "answer": 3,
+    "explanation": "行政処分は原則として過去3年間の累積点数と前歴の有無によって決まる。反則金の納付で点数が消えることはない。",
+    "isTrapQuestion": false,
+    "trapNumberType": "none",
+    "topicTag": "license_system"
+  },
+  {
+    "id": "at113",
+    "licenseCategory": [
+      "atGentei"
+    ],
+    "stageTag": "第二段階",
+    "difficulty": 5,
+    "questionText": "小型限定普通二輪免許（AT限定）しか持っていない人が、250ccのスクーター（AT車）を運転した場合の扱いとして正しいのはどれか。",
+    "choices": [
+      "運転できる排気量を超えているため無免許運転となる",
+      "AT車なので免許条件違反にはならず問題ない",
+      "免許条件違反として反則金を払えば済む",
+      "届け出をすれば運転できる"
+    ],
+    "answer": 0,
+    "explanation": "AT車であっても125ccを超える二輪車は小型限定免許の範囲外なので無免許運転となる。AT限定でMT車を運転する「条件違反」とは扱いが異なる。",
+    "isTrapQuestion": true,
+    "trapNumberType": "other",
+    "topicTag": "license_system"
+  },
+  {
+    "id": "at114",
+    "licenseCategory": [
+      "atGentei"
+    ],
+    "stageTag": "第一段階",
+    "difficulty": 1,
+    "questionText": "免許停止処分を受けている期間中に二輪車を運転した場合の扱いとして正しいのはどれか。",
+    "choices": [
+      "原付区分の範囲内なら処分期間中も問題ない",
+      "無免許運転となる",
+      "停止期間の残りが1週間以内なら運転してよい",
+      "AT車であれば運転してもよい"
+    ],
+    "answer": 1,
+    "explanation": "免許停止中は運転資格がないため、どの車両を運転しても無免許運転となる。",
+    "isTrapQuestion": false,
+    "trapNumberType": "none",
+    "topicTag": "license_system"
+  },
+  {
+    "id": "at115",
+    "licenseCategory": [
+      "atGentei"
+    ],
+    "stageTag": "第一段階",
+    "difficulty": 2,
+    "questionText": "引っ越しで住所が変わった場合の運転免許証の手続きとして正しいのはどれか。",
+    "choices": [
+      "旧住所の警察署でしか手続きできない",
+      "速やかに新しい住所地を管轄する公安委員会に届け出て記載事項を変更する",
+      "免許証を一度返納して取り直す必要がある",
+      "次回の更新まで手続きは不要である"
+    ],
+    "answer": 1,
+    "explanation": "住所・氏名などの記載事項が変わったときは、速やかに住所地の公安委員会（警察署等）に届け出なければならない。",
+    "isTrapQuestion": false,
+    "trapNumberType": "none",
+    "topicTag": "license_system"
+  },
+  {
+    "id": "at116",
+    "licenseCategory": [
+      "atGentei"
+    ],
+    "stageTag": "第一段階",
+    "difficulty": 2,
+    "questionText": "AT限定大型二輪免許で運転できる車両の組み合わせとして正しいのはどれか。",
+    "choices": [
+      "大型のAT二輪車とAT車の普通自動車",
+      "排気量を問わないすべての二輪車（MT車を含む）",
+      "排気量を問わないAT二輪車、原動機付自転車、小型特殊自動車",
+      "大型のAT二輪車だけ"
+    ],
+    "answer": 2,
+    "explanation": "大型二輪免許では普通二輪車・原付・小型特殊も運転でき、AT限定の場合は二輪車がAT車に限られる。四輪の普通自動車は含まれない。",
+    "isTrapQuestion": true,
+    "trapNumberType": "other",
+    "topicTag": "license_system"
+  },
+  {
+    "id": "at117",
+    "licenseCategory": [
+      "atGentei"
+    ],
+    "stageTag": "第一段階",
+    "difficulty": 3,
+    "questionText": "250ccのAT二輪車で走行中、進もうとする道路の入口に「二輪の自動車以外の自動車通行止め」の標識があった。正しいのはどれか。",
+    "choices": [
+      "二輪車は徐行すれば通行できる",
+      "原動機付自転車だけが通行できない",
+      "二輪車を含むすべての自動車が通行できない",
+      "大型・普通自動二輪車は通行できるが、四輪の自動車は通行できない"
+    ],
+    "answer": 3,
+    "explanation": "この標識は二輪の自動車以外の自動車（四輪車など）の通行を禁止するもので、自動二輪車は通行できる。",
+    "isTrapQuestion": true,
+    "trapNumberType": "signalAndMarkings",
+    "topicTag": "signs"
+  },
+  {
+    "id": "at118",
+    "licenseCategory": [
+      "atGentei"
+    ],
+    "stageTag": "第二段階",
+    "difficulty": 4,
+    "questionText": "AT限定普通二輪免許で250ccのスクーターを運転中、「大型自動二輪車及び普通自動二輪車通行止め」の標識がある道路に差しかかった。正しい行動はどれか。",
+    "choices": [
+      "エンジンを切って押して歩けば歩道を通行できる",
+      "徐行すれば通行できる",
+      "AT車はこの規制の対象外なので通行できる",
+      "AT車であっても普通自動二輪車に該当するため、この道路には進入しない"
+    ],
+    "answer": 3,
+    "explanation": "この規制は自動二輪車の構造（AT・MT）を区別しない。スクーターでも排気量が125ccを超えれば普通自動二輪車として通行止めの対象になる。",
+    "isTrapQuestion": true,
+    "trapNumberType": "signalAndMarkings",
+    "topicTag": "signs"
+  },
+  {
+    "id": "at119",
+    "licenseCategory": [
+      "atGentei"
+    ],
+    "stageTag": "第一段階",
+    "difficulty": 2,
+    "questionText": "二輪車で交通事故を起こしたとき、運転者がまず行うべき措置として正しいのはどれか。",
+    "choices": [
+      "直ちに運転を停止し、負傷者を救護して二次事故を防ぐ措置をとる",
+      "けががなさそうなら警察に連絡せず立ち去る",
+      "その場で相手と示談の話し合いを始める",
+      "保険会社に連絡し、指示があるまで何もしない"
+    ],
+    "answer": 0,
+    "explanation": "事故の際は運転を停止し、負傷者の救護と道路上の危険防止を行い、警察官に報告する義務がある。",
+    "isTrapQuestion": false,
+    "trapNumberType": "none",
+    "topicTag": "emergency"
+  },
+  {
+    "id": "at120",
+    "licenseCategory": [
+      "atGentei"
+    ],
+    "stageTag": "第二段階",
+    "difficulty": 4,
+    "questionText": "事故現場で、反応がなく普段どおりの呼吸もしていない負傷者に対し、救急車が来るまで胸骨圧迫を続けることにした。圧迫の強さとテンポとして正しいのはどれか。",
+    "choices": [
+      "胸が約1cm沈む程度の強さで、1分間に60回のテンポで圧迫する",
+      "呼吸の確認ができるまで圧迫はせず待つ",
+      "1分間に30回程度を目安に、ゆっくり強く圧迫する",
+      "胸が約5cm沈む強さで、1分間に100〜120回のテンポで絶え間なく圧迫する"
+    ],
+    "answer": 3,
+    "explanation": "胸骨圧迫は胸の真ん中を約5cm沈む強さで、1分間に100〜120回のテンポで、中断をできるだけ少なくして続ける。",
+    "isTrapQuestion": true,
+    "trapNumberType": "other",
+    "topicTag": "emergency"
+  },
+  {
+    "id": "at121",
+    "licenseCategory": [
+      "atGentei"
+    ],
+    "stageTag": "第一段階",
+    "difficulty": 2,
+    "questionText": "二輪車のタイヤの空気圧を点検する方法として適切なのはどれか。",
+    "choices": [
+      "前輪だけ点検すれば後輪は点検しなくてよい",
+      "走行前のタイヤが冷えている状態で、指定された空気圧になっているか確認する",
+      "空気圧は見た目でつぶれていなければ測らなくてよい",
+      "長距離を走った直後の温まった状態で測るのが最も正確である"
+    ],
+    "answer": 1,
+    "explanation": "走行直後はタイヤが温まり空気圧が高めに出るため、冷えた状態で指定空気圧を確認するのが基本である。",
+    "isTrapQuestion": false,
+    "trapNumberType": "none",
+    "topicTag": "maintenance"
+  },
+  {
+    "id": "at122",
+    "licenseCategory": [
+      "atGentei"
+    ],
+    "stageTag": "第二段階",
+    "difficulty": 5,
+    "questionText": "スクーター型AT車の多くに使われているVベルト（駆動ベルト）について正しいのはどれか。",
+    "choices": [
+      "一度取り付ければ車両の寿命まで交換不要である",
+      "摩耗しても走行性能には影響しない",
+      "チェーンと同じように走行前に給油する必要がある",
+      "使用とともに摩耗する消耗品なので、定期的に点検し必要に応じて交換する"
+    ],
+    "answer": 3,
+    "explanation": "Vベルトは摩耗・劣化する消耗品で、放置すると加速不良や走行中の切断につながるため定期点検と交換が必要である。",
+    "isTrapQuestion": true,
+    "trapNumberType": "other",
+    "topicTag": "maintenance"
+  },
+  {
+    "id": "at123",
+    "licenseCategory": [
+      "atGentei"
+    ],
+    "stageTag": "第一段階",
+    "difficulty": 1,
+    "questionText": "運転前のブレーキレバーの点検として適切なのはどれか。",
+    "choices": [
+      "レバーがグリップに付くまで握れる状態が正常である",
+      "レバーの点検は整備工場で年に1回行えば十分である",
+      "レバーに適切な遊びがあり、握ったときに十分な手応えがあるか確認する",
+      "遊びが全くないほど良い状態である"
+    ],
+    "answer": 2,
+    "explanation": "ブレーキレバーは適切な遊びがあり、握り込んだときにしっかりした手応えがあることを運転前に確認する。",
+    "isTrapQuestion": false,
+    "trapNumberType": "none",
+    "topicTag": "maintenance"
+  },
+  {
+    "id": "at124",
+    "licenseCategory": [
+      "atGentei"
+    ],
+    "stageTag": "第一段階",
+    "difficulty": 2,
+    "questionText": "灯火類の日常点検として適切なのはどれか。",
+    "choices": [
+      "前照灯が点けば制動灯の確認は不要である",
+      "方向指示器は走行中に確認すれば十分である",
+      "前輪・後輪それぞれのブレーキを操作して、どちらでも制動灯が点灯するか確認する",
+      "昼間しか運転しないなら灯火類の点検は不要である"
+    ],
+    "answer": 2,
+    "explanation": "制動灯は前後どちらのブレーキでも点灯する必要がある。前照灯・尾灯・方向指示器も運転前に点検する。",
+    "isTrapQuestion": false,
+    "trapNumberType": "none",
+    "topicTag": "maintenance"
+  },
+  {
+    "id": "at125",
+    "licenseCategory": [
+      "atGentei"
+    ],
+    "stageTag": "第一段階",
+    "difficulty": 2,
+    "questionText": "火災報知機の近くに二輪車を止めることについて正しいのはどれか。",
+    "choices": [
+      "火災報知機から5m以内は停車も禁止である",
+      "火災報知機の周辺には駐車の規制はない",
+      "火災報知機から3m以内は駐停車禁止である",
+      "火災報知機から1m以内は駐車禁止である"
+    ],
+    "answer": 3,
+    "explanation": "火災報知機から1m以内の場所は駐車禁止場所である（停車は禁止されていない）。",
+    "isTrapQuestion": true,
+    "trapNumberType": "other",
+    "topicTag": "parking"
+  },
+  {
+    "id": "at126",
+    "licenseCategory": [
+      "atGentei"
+    ],
+    "stageTag": "第一段階",
+    "difficulty": 3,
+    "questionText": "道路工事の区域の近くに駐車する場合の規制として正しいのはどれか。",
+    "choices": [
+      "工事区域の端から5m以内は駐車禁止である",
+      "工事区域の端から1m以内は駐車禁止である",
+      "工事区域の端から3m以内は駐車禁止である",
+      "工事区域の端から10m以内は駐停車禁止である"
+    ],
+    "answer": 0,
+    "explanation": "道路工事の区域の端から5m以内の場所は駐車禁止である。",
+    "isTrapQuestion": true,
+    "trapNumberType": "other",
+    "topicTag": "parking"
+  },
+  {
+    "id": "at127",
+    "licenseCategory": [
+      "atGentei"
+    ],
+    "stageTag": "第二段階",
+    "difficulty": 3,
+    "questionText": "二輪車を止めようとした場所の近くに消火栓がある。駐車が禁止される範囲として正しいのはどれか。",
+    "choices": [
+      "その位置から5m以内は駐車禁止である",
+      "その位置から3m以内は駐停車禁止である",
+      "その位置から1m以内だけが駐車禁止である",
+      "その位置の真上以外であれば駐車してよい"
+    ],
+    "answer": 0,
+    "explanation": "消火栓、指定消防水利の標識の位置、消防用防火水槽の取り入れ口から5m以内は駐車禁止である。",
+    "isTrapQuestion": true,
+    "trapNumberType": "other",
+    "topicTag": "parking"
+  },
+  {
+    "id": "at128",
+    "licenseCategory": [
+      "atGentei"
+    ],
+    "stageTag": "第一段階",
+    "difficulty": 2,
+    "questionText": "同乗者を降ろすため、踏切の手前5mの場所に一時的に停止することについて正しいのはどれか。",
+    "choices": [
+      "遮断機が上がっていれば停止してよい",
+      "踏切とその端から前後10m以内は停車も禁止されているため、そこで止まってはならない",
+      "人の乗り降りのための停止なので問題ない",
+      "5分以内であれば停止してよい"
+    ],
+    "answer": 1,
+    "explanation": "踏切とその端から前後10m以内は駐停車禁止場所であり、人の乗り降りのための短時間の停止もできない。",
+    "isTrapQuestion": true,
+    "trapNumberType": "other",
+    "topicTag": "parking"
+  },
+  {
+    "id": "at129",
+    "licenseCategory": [
+      "atGentei"
+    ],
+    "stageTag": "第一段階",
+    "difficulty": 2,
+    "questionText": "横断歩道の手前4mの場所で、知人を乗せるために停止することについて正しいのはどれか。",
+    "choices": [
+      "歩行者がいなければ停止してよい",
+      "横断歩道とその端から前後5m以内は駐停車禁止なので、停止してはならない",
+      "人の乗り降りなので駐停車禁止場所でも停止できる",
+      "横断歩道の手前3mより離れていれば問題ない"
+    ],
+    "answer": 1,
+    "explanation": "横断歩道・自転車横断帯とその端から前後5m以内は駐停車禁止場所である。",
+    "isTrapQuestion": true,
+    "trapNumberType": "other",
+    "topicTag": "parking"
+  },
+  {
+    "id": "at130",
+    "licenseCategory": [
+      "atGentei"
+    ],
+    "stageTag": "第二段階",
+    "difficulty": 5,
+    "questionText": "路面電車が走る道路で、安全地帯の近くに二輪車を止めて知人から荷物を受け取ろうとしている。駐停車が禁止されている範囲として正しいのはどれか。",
+    "choices": [
+      "安全地帯の前後3m以内だけが駐停車禁止である",
+      "安全地帯の左側と、その前後10m以内は駐停車禁止である",
+      "路面電車が来ていなければ安全地帯の左側に停車してよい",
+      "安全地帯の右側だけが駐停車禁止である"
+    ],
+    "answer": 1,
+    "explanation": "安全地帯の左側の部分と、その前後10m以内の部分は駐停車禁止場所である。",
+    "isTrapQuestion": true,
+    "trapNumberType": "other",
+    "topicTag": "parking"
+  },
+  {
+    "id": "at131",
+    "licenseCategory": [
+      "atGentei"
+    ],
+    "stageTag": "第二段階",
+    "difficulty": 5,
+    "questionText": "標識による指定がない道路で駐車する場合、車の右側の道路上に残さなければならない余地として正しいのはどれか。",
+    "choices": [
+      "1.5m以上",
+      "5.5m以上",
+      "2.5m以上",
+      "3.5m以上"
+    ],
+    "answer": 3,
+    "explanation": "駐車するときは原則として車の右側に3.5m以上の余地を残さなければならない。",
+    "isTrapQuestion": true,
+    "trapNumberType": "other",
+    "topicTag": "parking"
+  },
+  {
+    "id": "at132",
+    "licenseCategory": [
+      "atGentei"
+    ],
+    "stageTag": "第二段階",
+    "difficulty": 4,
+    "questionText": "幅が1mほどある白線1本の路側帯の横で、二輪車を止めて地図を確認したい。止め方として正しいのはどれか。",
+    "choices": [
+      "路側帯の中央に止め、左右に余地を残す",
+      "路側帯には入らず、車道の左端に沿って止める",
+      "路側帯に入り、車の左側に0.75m以上の余地をあけて止める",
+      "路側帯の左端いっぱいに寄せて止める"
+    ],
+    "answer": 2,
+    "explanation": "白線1本の路側帯で幅が0.75mを超える場合は、中に入って車の左側に0.75m以上の余地をあけて駐停車する。",
+    "isTrapQuestion": true,
+    "trapNumberType": "other",
+    "topicTag": "parking"
+  },
+  {
+    "id": "at133",
+    "licenseCategory": [
+      "atGentei"
+    ],
+    "stageTag": "第二段階",
+    "difficulty": 4,
+    "questionText": "店の前の道路に、白の実線と破線が並んで引かれた路側帯がある。ここで二輪車を駐停車するときの方法として正しいのはどれか。",
+    "choices": [
+      "二輪車に限り路側帯の中に止めてよい",
+      "路側帯の幅が1mを超えていれば中に入って止めてよい",
+      "路側帯の中には入らず、車道の左端に沿って止める",
+      "路側帯に入り、左側に0.75m以上の余地をあけて止める"
+    ],
+    "answer": 2,
+    "explanation": "実線と破線の路側帯は「駐停車禁止路側帯」であり、中に入っての駐停車はできないため車道の左端に沿って止める。",
+    "isTrapQuestion": true,
+    "trapNumberType": "signalAndMarkings",
+    "topicTag": "parking"
+  },
+  {
+    "id": "at134",
+    "licenseCategory": [
+      "atGentei"
+    ],
+    "stageTag": "第二段階",
+    "difficulty": 5,
+    "questionText": "2本の実線で示された路側帯について、二輪車の運転者が理解しておくべき内容として正しいのはどれか。",
+    "choices": [
+      "幅が広ければ中に入って駐車できる",
+      "歩行者用路側帯なので、中に入って駐停車することはできない",
+      "二輪車は通行できるが四輪車は通行できない",
+      "荷物の積み下ろしの間だけ中に入って停車できる"
+    ],
+    "answer": 1,
+    "explanation": "2本の実線の路側帯は歩行者用路側帯で、車両は中に入って駐停車できない。路側帯の中は二輪車が通行する場所でもない。",
+    "isTrapQuestion": true,
+    "trapNumberType": "other",
+    "topicTag": "parking"
+  },
+  {
+    "id": "at135",
+    "licenseCategory": [
+      "atGentei"
+    ],
+    "stageTag": "第一段階",
+    "difficulty": 1,
+    "questionText": "二輪車で二人乗りをする場合の同乗者のヘルメットについて正しいのはどれか。",
+    "choices": [
+      "同乗者は帽子をかぶっていれば問題ない",
+      "同乗者が大人ならかぶらせる義務はない",
+      "同乗者は短い距離ならかぶらなくてよい",
+      "運転者は同乗者にも乗車用ヘルメットをかぶらせなければならない"
+    ],
+    "answer": 3,
+    "explanation": "運転者は自分がヘルメットをかぶるだけでなく、同乗者にも乗車用ヘルメットをかぶらせなければならない。",
+    "isTrapQuestion": false,
+    "trapNumberType": "none",
+    "topicTag": "parking"
+  },
+  {
+    "id": "at136",
+    "licenseCategory": [
+      "atGentei"
+    ],
+    "stageTag": "第一段階",
+    "difficulty": 2,
+    "questionText": "二人乗りの条件を満たした運転者が同乗者を乗せる場合、車両側の条件として正しいのはどれか。",
+    "choices": [
+      "後部に同乗者用の座席などの乗車装置がある車両でなければならない",
+      "荷台があれば荷台にまたがらせてよい",
+      "ステップがなくても座る場所があればよい",
+      "125cc以下の車両でなければならない"
+    ],
+    "answer": 0,
+    "explanation": "二人乗りは同乗者用の乗車装置（座席など）を備えた車両で行う。荷台などに乗せることはできない。",
+    "isTrapQuestion": true,
+    "trapNumberType": "twoPersonRiding",
+    "topicTag": "parking"
+  },
+  {
+    "id": "at137",
+    "licenseCategory": [
+      "atGentei"
+    ],
+    "stageTag": "第一段階",
+    "difficulty": 2,
+    "questionText": "同乗者を乗せる方法として適切なのはどれか。",
+    "choices": [
+      "横向きに座らせると乗り降りしやすく安全である",
+      "同乗者用の座席にまたがらせ、足をステップに乗せ、運転者の腰や車体のグリップにしっかりつかまらせる",
+      "同乗者はつかまらずに腕を組んでいる方が安定する",
+      "同乗者の荷物は同乗者に手で持たせておく"
+    ],
+    "answer": 1,
+    "explanation": "同乗者は正しくまたがってステップに足を乗せ、運転者や車体につかまる姿勢をとらせる。横座りや手荷物を持たせるのは危険である。",
+    "isTrapQuestion": false,
+    "trapNumberType": "none",
+    "topicTag": "parking"
+  },
+  {
+    "id": "at138",
+    "licenseCategory": [
+      "atGentei"
+    ],
+    "stageTag": "第一段階",
+    "difficulty": 2,
+    "questionText": "二人乗りで走行する場合の車両の特性として正しいのはどれか。",
+    "choices": [
+      "ブレーキの効きが良くなり制動距離が短くなる",
+      "重心が下がるため一人乗りよりカーブで安定する",
+      "車両全体が重くなるため制動距離が長くなり、早めのブレーキが必要になる",
+      "加速が鋭くなるため発進時は注意しなくてよい"
+    ],
+    "answer": 2,
+    "explanation": "二人乗りでは車両の重量が増え、止まるまでの距離が長くなりハンドル操作も重くなるため、早めの減速と穏やかな操作が必要になる。",
+    "isTrapQuestion": false,
+    "trapNumberType": "none",
+    "topicTag": "parking"
+  },
+  {
+    "id": "at139",
+    "licenseCategory": [
+      "atGentei"
+    ],
+    "stageTag": "第一段階",
+    "difficulty": 3,
+    "questionText": "キャンプ道具を普通二輪車の荷台に積み上げて出かける。積載物の高さの限度として正しいのはどれか。",
+    "choices": [
+      "地上から1.5mまで",
+      "地上から3.8mまで",
+      "地上から2.5mまで",
+      "地上から2mまで"
+    ],
+    "answer": 3,
+    "explanation": "二輪車（大型・普通二輪、原付）の積載物の高さは地上から2mが限度である。",
+    "isTrapQuestion": true,
+    "trapNumberType": "loadLimit",
+    "topicTag": "parking"
+  },
+  {
+    "id": "at140",
+    "licenseCategory": [
+      "atGentei"
+    ],
+    "stageTag": "第二段階",
+    "difficulty": 4,
+    "questionText": "長い釣りざおのケースを普通二輪車の荷台に積んで運ぶ。積載物の長さの限度として正しいのはどれか。",
+    "choices": [
+      "積載装置の長さに0.5mを加えた長さまで",
+      "積載装置（荷台）の長さに0.3mを加えた長さまで",
+      "車体の全長と同じ長さまで",
+      "積載装置の長さに1mを加えた長さまで"
+    ],
+    "answer": 1,
+    "explanation": "二輪車の積載物の長さは、積載装置の長さに0.3mを加えたものが限度である。",
+    "isTrapQuestion": true,
+    "trapNumberType": "loadLimit",
+    "topicTag": "parking"
+  },
+  {
+    "id": "at141",
+    "licenseCategory": [
+      "atGentei"
+    ],
+    "stageTag": "第二段階",
+    "difficulty": 5,
+    "questionText": "横幅のある箱を普通二輪車の荷台にくくり付けて運ぶ。積載物の幅の限度として正しいのはどれか。",
+    "choices": [
+      "ハンドルの幅と同じ幅まで",
+      "積載装置の幅に1mを加えた幅まで",
+      "積載装置（荷台）の幅に0.3mを加えた幅まで",
+      "積載装置の幅に0.5mを加えた幅まで"
+    ],
+    "answer": 2,
+    "explanation": "二輪車の積載物の幅は、積載装置の幅に0.3mを加えたものが限度である。",
+    "isTrapQuestion": true,
+    "trapNumberType": "loadLimit",
+    "topicTag": "parking"
+  },
+  {
+    "id": "at142",
+    "licenseCategory": [
+      "atGentei"
+    ],
+    "stageTag": "第一段階",
+    "difficulty": 1,
+    "questionText": "通勤用のかばんや買い物袋を二輪車に積んで走るときの注意として正しいのはどれか。",
+    "choices": [
+      "ナンバープレートは荷物で隠れても走行中なら問題ない",
+      "ロープで固定するより手で押さえる方が確実である",
+      "荷物はハンドルに掛けるのが最も安定する",
+      "ハンドル操作の妨げにならず、方向指示器やナンバープレートが隠れないように積む"
+    ],
+    "answer": 3,
+    "explanation": "荷物はしっかり固定し、運転操作の妨げや灯火・番号標の視認の妨げにならないように積む。",
+    "isTrapQuestion": false,
+    "trapNumberType": "none",
+    "topicTag": "parking"
+  },
+  {
+    "id": "at143",
+    "licenseCategory": [
+      "atGentei"
+    ],
+    "stageTag": "第二段階",
+    "difficulty": 3,
+    "questionText": "パーキング・メーターが設置された時間制限駐車区間に駐車する場合の方法として正しいのはどれか。",
+    "choices": [
+      "時間を過ぎても料金を追加すれば何時間でも駐車できる",
+      "メーターを作動させなくても短時間なら問題ない",
+      "パーキング・メーターを作動させ、表示された時間内に駐車を終える",
+      "二輪車はパーキング・メーターの区間に駐車できない"
+    ],
+    "answer": 2,
+    "explanation": "時間制限駐車区間ではパーキング・メーター等を作動させ、指定された時間内に限って駐車できる。",
+    "isTrapQuestion": false,
+    "trapNumberType": "none",
+    "topicTag": "parking"
+  },
+  {
+    "id": "at144",
+    "licenseCategory": [
+      "atGentei"
+    ],
+    "stageTag": "第二段階",
+    "difficulty": 5,
+    "questionText": "友人が来るのを待つため、運転者が二輪車にまたがったまま道路上で継続的に止まっている状態の扱いとして正しいのはどれか。",
+    "choices": [
+      "人待ちのための継続的な停止なので駐車にあたる",
+      "エンジンをかけていれば停車にあたる",
+      "運転者がすぐ運転できる状態なので停車にあたる",
+      "5分以内であれば停車にあたる"
+    ],
+    "answer": 0,
+    "explanation": "客待ち・荷待ちなどの理由による継続的な停止は、運転者が乗っていても駐車にあたる。人の乗り降りのための停止とは区別される。",
+    "isTrapQuestion": true,
+    "trapNumberType": "other",
+    "topicTag": "parking"
+  },
+  {
+    "id": "at145",
+    "licenseCategory": [
+      "atGentei"
+    ],
+    "stageTag": "第二段階",
+    "difficulty": 4,
+    "questionText": "エンジンの故障で道路上に止め、修理業者の到着を待っている状態の扱いとして正しいのはどれか。",
+    "choices": [
+      "故障による継続的な停止なので駐車にあたる",
+      "故障の場合はどこに止めても規制の対象外となる",
+      "故障ならやむを得ないので停車にあたる",
+      "運転者がそばにいれば停車にあたる"
+    ],
+    "answer": 0,
+    "explanation": "故障その他の理由による継続的な停止は駐車にあたる。やむを得ない場合でも、できるだけ交通の妨げにならない場所に移動させる。",
+    "isTrapQuestion": true,
+    "trapNumberType": "other",
+    "topicTag": "parking"
+  },
+  {
+    "id": "at146",
+    "licenseCategory": [
+      "atGentei"
+    ],
+    "stageTag": "第一段階",
+    "difficulty": 2,
+    "questionText": "「駐車禁止」の標識の下に「8-20」と表示された補助標識がある場合の意味として正しいのはどれか。",
+    "choices": [
+      "20時から翌8時までの間は停車もできない",
+      "8分から20分までの駐車が認められる",
+      "8時から20時までの間は駐車してはならない",
+      "8時から20時までの間だけ駐車できる"
+    ],
+    "answer": 2,
+    "explanation": "補助標識の時間表示は規制が適用される時間帯を示す。「8-20」は8時から20時まで駐車禁止という意味である。",
+    "isTrapQuestion": true,
+    "trapNumberType": "signalAndMarkings",
+    "topicTag": "parking"
+  },
+  {
+    "id": "at147",
+    "licenseCategory": [
+      "atGentei"
+    ],
+    "stageTag": "第一段階",
+    "difficulty": 1,
+    "questionText": "歩道や路側帯のない道路で二輪車を駐停車する方法として正しいのはどれか。",
+    "choices": [
+      "左端から1m以上あけて止める",
+      "道路の左端に沿って、他の交通の妨げにならないように止める",
+      "道路の右端に寄せて止める",
+      "道路の中央付近に止める"
+    ],
+    "answer": 1,
+    "explanation": "歩道や路側帯のない道路では、道路の左端に沿って駐停車する。",
+    "isTrapQuestion": false,
+    "trapNumberType": "none",
+    "topicTag": "parking"
+  },
+  {
+    "id": "at148",
+    "licenseCategory": [
+      "atGentei"
+    ],
+    "stageTag": "第一段階",
+    "difficulty": 2,
+    "questionText": "勾配の急な上り坂の途中で、同乗者を降ろすために停止することについて正しいのはどれか。",
+    "choices": [
+      "人の乗り降りのための停止は坂道でも認められている",
+      "上り坂の途中なら停車してよいが、下り坂は禁止である",
+      "勾配の急な坂は駐停車禁止場所なので停止してはならない",
+      "ハザードランプを点ければ停止してよい"
+    ],
+    "answer": 2,
+    "explanation": "坂の頂上付近と勾配の急な坂は、上り・下りを問わず駐停車禁止場所である。",
+    "isTrapQuestion": true,
+    "trapNumberType": "other",
+    "topicTag": "parking"
+  },
+  {
+    "id": "at149",
+    "licenseCategory": [
+      "atGentei"
+    ],
+    "stageTag": "第二段階",
+    "difficulty": 3,
+    "questionText": "標識などで最高速度が指定されていない高速自動車国道の本線車道における、普通自動二輪車の法定最高速度として正しいのはどれか。",
+    "choices": [
+      "60km/h",
+      "100km/h",
+      "80km/h",
+      "120km/h"
+    ],
+    "answer": 1,
+    "explanation": "高速自動車国道の本線車道での大型・普通自動二輪車の法定最高速度は100km/hである。",
+    "isTrapQuestion": true,
+    "trapNumberType": "speedLimit",
+    "topicTag": "rules"
+  },
+  {
+    "id": "at150",
+    "licenseCategory": [
+      "atGentei"
+    ],
+    "stageTag": "第二段階",
+    "difficulty": 4,
+    "questionText": "250ccのスクーターで右折しようとしている交差点に「原動機付自転車の右折方法（二段階）」の標識があった。右折の方法として正しいのはどれか。",
+    "choices": [
+      "標識は原動機付自転車が対象なので、あらかじめ道路の中央に寄り、交差点の中心の内側を徐行して右折する",
+      "交差点の手前で押して歩き、横断歩道を渡って右折する",
+      "この交差点では二輪車は右折できない",
+      "AT車も原付と同じく二段階右折をしなければならない"
+    ],
+    "answer": 0,
+    "explanation": "二段階右折の義務があるのは原動機付自転車だけで、普通自動二輪車は通常の小回り右折を行う。",
+    "isTrapQuestion": true,
+    "trapNumberType": "twoStageRightTurn",
+    "topicTag": "rules"
+  },
+  {
+    "id": "at151",
+    "licenseCategory": [
+      "atGentei"
+    ],
+    "stageTag": "第一段階",
+    "difficulty": 2,
+    "questionText": "同一方向に進行しながら進路を変える場合の合図を出す時期として正しいのはどれか。",
+    "choices": [
+      "進路を変えようとする地点の30m手前",
+      "進路を変えようとするときの約10秒前",
+      "進路を変えようとするときの約3秒前",
+      "進路を変え始めると同時"
+    ],
+    "answer": 2,
+    "explanation": "進路変更の合図は、進路を変えようとするときの約3秒前に出す。右左折の合図（30m手前）と区別して覚える。",
+    "isTrapQuestion": true,
+    "trapNumberType": "other",
+    "topicTag": "rules"
+  },
+  {
+    "id": "at152",
+    "licenseCategory": [
+      "atGentei"
+    ],
+    "stageTag": "第一段階",
+    "difficulty": 1,
+    "questionText": "左側の車線へ移り終えた後の方向指示器の扱いとして正しいのはどれか。",
+    "choices": [
+      "進路変更後も約10秒間は出し続ける",
+      "次の交差点に着くまで出し続ける",
+      "後続車が追いついてきたらやめる",
+      "進路変更が終わったら速やかにやめる"
+    ],
+    "answer": 3,
+    "explanation": "合図は行為が終わったら速やかにやめなければならない。出しっぱなしは周囲の誤解を招く。",
+    "isTrapQuestion": false,
+    "trapNumberType": "none",
+    "topicTag": "rules"
+  },
+  {
+    "id": "at153",
+    "licenseCategory": [
+      "atGentei"
+    ],
+    "stageTag": "第一段階",
+    "difficulty": 2,
+    "questionText": "手による合図で、徐行または停止することを後続車に知らせる方法として正しいのはどれか。",
+    "choices": [
+      "腕を垂直に上に伸ばす",
+      "腕を車の外に出して水平に伸ばす",
+      "手のひらを後ろに向けて左右に振る",
+      "腕を車の外に出して斜め下に伸ばす"
+    ],
+    "answer": 3,
+    "explanation": "徐行・停止の手による合図は、腕を車体の外に出して斜め下に伸ばす。",
+    "isTrapQuestion": false,
+    "trapNumberType": "none",
+    "topicTag": "rules"
+  },
+  {
+    "id": "at154",
+    "licenseCategory": [
+      "atGentei"
+    ],
+    "stageTag": "第一段階",
+    "difficulty": 1,
+    "questionText": "前方の信号機が黄色の灯火の点滅をしている場合の意味として正しいのはどれか。",
+    "choices": [
+      "他の交通に注意して進むことができる",
+      "直進のみでき、右左折はできない",
+      "停止位置で必ず一時停止しなければならない",
+      "徐行しなければ進めない"
+    ],
+    "answer": 0,
+    "explanation": "黄色の点滅信号は、他の交通に注意して進行できることを意味する。一時停止の義務があるのは赤色の点滅である。",
+    "isTrapQuestion": true,
+    "trapNumberType": "signalAndMarkings",
+    "topicTag": "rules"
+  },
+  {
+    "id": "at155",
+    "licenseCategory": [
+      "atGentei"
+    ],
+    "stageTag": "第一段階",
+    "difficulty": 1,
+    "questionText": "前方の信号機が赤色の灯火の点滅をしている場合の意味として正しいのはどれか。",
+    "choices": [
+      "他の交通に注意すれば停止せずに進める",
+      "徐行すれば一時停止しなくてよい",
+      "停止位置で一時停止し、安全を確認した後に進むことができる",
+      "赤信号と同じで青に変わるまで進めない"
+    ],
+    "answer": 2,
+    "explanation": "赤色の点滅信号では、停止位置で一時停止し、安全を確かめてから進行する。",
+    "isTrapQuestion": false,
+    "trapNumberType": "none",
+    "topicTag": "rules"
+  },
+  {
+    "id": "at156",
+    "licenseCategory": [
+      "atGentei"
+    ],
+    "stageTag": "第一段階",
+    "difficulty": 2,
+    "questionText": "交差点に近づいたとき、信号が青から黄色に変わった。正しい対応はどれか。",
+    "choices": [
+      "後続車がいなければ進んでよい",
+      "停止位置を越えていても必ずその場で急停止する",
+      "停止位置で止まる。ただし停止位置に近づいていて安全に止まれない場合はそのまま進める",
+      "黄色は注意して進めの意味なので、加速して通過する"
+    ],
+    "answer": 2,
+    "explanation": "黄色信号は原則として停止位置から先に進めない。ただし安全に停止できない場合に限り進行できる。",
+    "isTrapQuestion": true,
+    "trapNumberType": "signalAndMarkings",
+    "topicTag": "rules"
+  },
+  {
+    "id": "at157",
+    "licenseCategory": [
+      "atGentei"
+    ],
+    "stageTag": "第一段階",
+    "difficulty": 3,
+    "questionText": "赤色の灯火とともに右向きの青色の矢印が表示されている交差点で、普通自動二輪車を運転している場合の対応として正しいのはどれか。",
+    "choices": [
+      "二輪車は原付と同じく右折できない",
+      "赤信号なので青色に変わるまで待たなければならない",
+      "矢印の方向に従って右折できる",
+      "二段階右折の方法で右折しなければならない"
+    ],
+    "answer": 2,
+    "explanation": "右向き矢印では自動車は右折できる。二段階右折が必要な原動機付自転車は右向き矢印に従って右折できないが、普通自動二輪車は進める。",
+    "isTrapQuestion": true,
+    "trapNumberType": "signalAndMarkings",
+    "topicTag": "rules"
+  },
+  {
+    "id": "at158",
+    "licenseCategory": [
+      "atGentei"
+    ],
+    "stageTag": "第二段階",
+    "difficulty": 4,
+    "questionText": "交差点で警察官が腕を水平に上げる手信号をしている。警察官の身体の正面に対面する方向から進行してきた場合の意味として正しいのはどれか。",
+    "choices": [
+      "青色の灯火の信号と同じ意味である",
+      "徐行して進んでよいという意味である",
+      "黄色の灯火の信号と同じ意味である",
+      "赤色の灯火の信号と同じ意味である"
+    ],
+    "answer": 3,
+    "explanation": "腕を水平に上げた手信号では、身体の正面・背面に対面する交通は赤信号、身体の向きと平行する交通は青信号と同じ意味になる。",
+    "isTrapQuestion": true,
+    "trapNumberType": "signalAndMarkings",
+    "topicTag": "rules"
+  },
+  {
+    "id": "at159",
+    "licenseCategory": [
+      "atGentei"
+    ],
+    "stageTag": "第一段階",
+    "difficulty": 1,
+    "questionText": "交差点の信号機の表示と、警察官の手信号が異なっている場合の対応として正しいのはどれか。",
+    "choices": [
+      "両方が一致するまで交差点の手前で待つ",
+      "警察官の手信号に従う",
+      "信号機の表示に従う",
+      "安全と思う方を自分で選んで従う"
+    ],
+    "answer": 1,
+    "explanation": "信号機の表示と警察官等の手信号が異なるときは、警察官等の手信号に従わなければならない。",
+    "isTrapQuestion": false,
+    "trapNumberType": "none",
+    "topicTag": "rules"
+  },
+  {
+    "id": "at160",
+    "licenseCategory": [
+      "atGentei"
+    ],
+    "stageTag": "第一段階",
+    "difficulty": 2,
+    "questionText": "信号機のない交差点で、自分が通行している道路と交差する道路が優先道路である場合の通行方法として正しいのはどれか。",
+    "choices": [
+      "警音器を鳴らして自分の進行を知らせれば進める",
+      "先に交差点に着いた方が優先なので、そのまま進んでよい",
+      "二輪車は車体が小さいので優先道路の車両より先に進んでよい",
+      "徐行するなどして、優先道路を通行する車両の進行を妨げないようにする"
+    ],
+    "answer": 3,
+    "explanation": "交差する道路が優先道路であるときは、徐行するなどしてその道路を通行する車両等の進行を妨げてはならない。",
+    "isTrapQuestion": false,
+    "trapNumberType": "none",
+    "topicTag": "rules"
+  },
+  {
+    "id": "at161",
+    "licenseCategory": [
+      "atGentei"
+    ],
+    "stageTag": "第一段階",
+    "difficulty": 2,
+    "questionText": "信号機がなく、優先道路の指定もない交差点で、道幅が同じくらいの道路から左方向と右方向の車両がほぼ同時に交差点に近づいている。正しい考え方はどれか。",
+    "choices": [
+      "二輪車は四輪車に優先される",
+      "右方から来る車両の進行を妨げてはならない",
+      "速度の速い車両が優先される",
+      "左方から来る車両の進行を妨げてはならない"
+    ],
+    "answer": 3,
+    "explanation": "同じような道幅の交差点では、左方から進行してくる車両等の進行を妨げてはならない（左方優先）。",
+    "isTrapQuestion": true,
+    "trapNumberType": "other",
+    "topicTag": "rules"
+  },
+  {
+    "id": "at162",
+    "licenseCategory": [
+      "atGentei"
+    ],
+    "stageTag": "第一段階",
+    "difficulty": 1,
+    "questionText": "交差点で右折しようとしたところ、対向車線から直進車が近づいてきた。正しい対応はどれか。",
+    "choices": [
+      "先に交差点に入っていれば右折車が優先される",
+      "直進車の進行を妨げないよう、その通過を待ってから右折する",
+      "合図を出していれば右折車が優先される",
+      "二輪車なら直進車の前を素早く横切ってよい"
+    ],
+    "answer": 1,
+    "explanation": "右折車は、先に交差点に入っていても対向の直進車や左折車の進行を妨げてはならない。",
+    "isTrapQuestion": false,
+    "trapNumberType": "none",
+    "topicTag": "rules"
+  },
+  {
+    "id": "at163",
+    "licenseCategory": [
+      "atGentei"
+    ],
+    "stageTag": "第一段階",
+    "difficulty": 2,
+    "questionText": "交差点付近を走行中に、後方から緊急自動車がサイレンを鳴らして近づいてきた。正しい対応はどれか。",
+    "choices": [
+      "交差点内でその場に一時停止する",
+      "そのまま同じ速度で走り続ける",
+      "速度を上げて交差点を早く通過し、その先で止まる",
+      "交差点を避け、道路の左側に寄って一時停止する"
+    ],
+    "answer": 3,
+    "explanation": "交差点やその付近では、交差点を避けて道路の左側に寄り一時停止する。交差点付近以外では左側に寄って進路を譲る。",
+    "isTrapQuestion": false,
+    "trapNumberType": "none",
+    "topicTag": "rules"
+  },
+  {
+    "id": "at164",
+    "licenseCategory": [
+      "atGentei"
+    ],
+    "stageTag": "第一段階",
+    "difficulty": 2,
+    "questionText": "停留所で止まっていた路線バスが、発進のため方向指示器で合図をした。後方から近づいた二輪車の対応として正しいのはどれか。",
+    "choices": [
+      "バスより先に通過するため加速する",
+      "急ブレーキや急ハンドルが必要な場合を除き、バスの進路変更を妨げてはならない",
+      "警音器を鳴らしてバスに発進を待たせる",
+      "バスの右側を通過すれば問題ない"
+    ],
+    "answer": 1,
+    "explanation": "路線バス等が発進の合図をしたときは、急ブレーキ等をしなければならない場合を除き、その進路の変更を妨げてはならない。",
+    "isTrapQuestion": false,
+    "trapNumberType": "none",
+    "topicTag": "rules"
+  },
+  {
+    "id": "at165",
+    "licenseCategory": [
+      "atGentei"
+    ],
+    "stageTag": "第一段階",
+    "difficulty": 3,
+    "questionText": "前の車が右折するため道路の中央（一方通行路では右端）に寄って進んでいる。この車を追い越す方法として正しいのはどれか。",
+    "choices": [
+      "前の車の左側を通行して追い越す",
+      "前の車の右側を通行して追い越す",
+      "警音器を鳴らして前の車を左に寄せさせてから右側を追い越す",
+      "どのような場合でも追い越してはならない"
+    ],
+    "answer": 0,
+    "explanation": "追越しは右側からが原則だが、前車が右折のため中央（右端）に寄って通行しているときは、その左側を通行しなければならない。",
+    "isTrapQuestion": true,
+    "trapNumberType": "other",
+    "topicTag": "rules"
+  },
+  {
+    "id": "at166",
+    "licenseCategory": [
+      "atGentei"
+    ],
+    "stageTag": "第二段階",
+    "difficulty": 5,
+    "questionText": "前の車が、さらにその前を走る自動車を追い越そうとしている。このときの行動として正しいのはどれか。",
+    "choices": [
+      "合図を出していれば追い越してよい",
+      "前の車を追い越してはならない",
+      "二輪車であれば車線内ですり抜けて追い越してよい",
+      "前の車に続いて同時に追い越してよい"
+    ],
+    "answer": 1,
+    "explanation": "前車が自動車を追い越そうとしているときに、その車を追い越すこと（二重追越し）は禁止されている。",
+    "isTrapQuestion": true,
+    "trapNumberType": "other",
+    "topicTag": "rules"
+  },
+  {
+    "id": "at167",
+    "licenseCategory": [
+      "atGentei"
+    ],
+    "stageTag": "第二段階",
+    "difficulty": 5,
+    "questionText": "横断歩道の手前30m以内の場所で、前方を走る自転車の側方を通過してその前方に出ることについて正しいのはどれか。",
+    "choices": [
+      "自転車を追い越す場合は必ず警音器を鳴らさなければならない",
+      "横断歩道の手前30m以内では、二輪車は自転車の後ろを徐行しなければならない",
+      "横断歩道の手前30m以内では、自転車を含むすべての車両を追い越してはならない",
+      "軽車両は規制の対象外なので、安全を確かめれば側方を通過して前方に出てもよい"
+    ],
+    "answer": 3,
+    "explanation": "横断歩道等の手前30m以内で前方の車両の側方を通過して前に出ることが禁止されているのは、軽車両を除く車両である。自転車の場合は十分な間隔をとって安全に通過する。",
+    "isTrapQuestion": true,
+    "trapNumberType": "other",
+    "topicTag": "rules"
+  },
+  {
+    "id": "at168",
+    "licenseCategory": [
+      "atGentei"
+    ],
+    "stageTag": "第二段階",
+    "difficulty": 5,
+    "questionText": "標識による指定がない場合に、追越しが禁止されていない場所はどれか。",
+    "choices": [
+      "上り坂の頂上付近",
+      "道路の曲がり角付近",
+      "勾配の急な上り坂",
+      "勾配の急な下り坂"
+    ],
+    "answer": 2,
+    "explanation": "追越し禁止場所は、道路の曲がり角付近、上り坂の頂上付近、勾配の急な下り坂などである。勾配の急な上り坂は追越し禁止場所ではない（駐停車は禁止）。",
+    "isTrapQuestion": true,
+    "trapNumberType": "other",
+    "topicTag": "rules"
+  },
+  {
+    "id": "at169",
+    "licenseCategory": [
+      "atGentei"
+    ],
+    "stageTag": "第一段階",
+    "difficulty": 2,
+    "questionText": "追越しを終えて元の車線に戻るときの方法として正しいのはどれか。",
+    "choices": [
+      "合図は出さずに素早く戻る",
+      "追い越したらすぐに元の車線に戻る",
+      "追い越した車の直前に入って減速し、合図の代わりにする",
+      "追い越した車との間に十分な距離がとれてから、合図をして緩やかに戻る"
+    ],
+    "answer": 3,
+    "explanation": "追い越した車の前に急に入ると危険なので、十分な車間をとったうえで合図をして徐々に左に戻る。",
+    "isTrapQuestion": false,
+    "trapNumberType": "none",
+    "topicTag": "rules"
+  },
+  {
+    "id": "at170",
+    "licenseCategory": [
+      "atGentei"
+    ],
+    "stageTag": "第一段階",
+    "difficulty": 1,
+    "questionText": "直線道路を走行中、後方の車が右側に出て自車を追い越し始めた。このときの運転として正しいのはどれか。",
+    "choices": [
+      "道路の中央に寄って進路をふさぐ",
+      "急ブレーキで減速して相手に知らせる",
+      "追越しが終わるまで速度を上げてはならない",
+      "抜かれないように速度を上げる"
+    ],
+    "answer": 2,
+    "explanation": "追越しをされるときは、速度を上げてはならない。追越しに十分な余地がない場合はできるだけ左に寄って進路を譲る。",
+    "isTrapQuestion": false,
+    "trapNumberType": "none",
+    "topicTag": "rules"
+  },
+  {
+    "id": "at171",
+    "licenseCategory": [
+      "atGentei"
+    ],
+    "stageTag": "第二段階",
+    "difficulty": 5,
+    "questionText": "踏切の手前に来たところ、踏切に設置された信号機が青色を表示していた。二輪車でこの踏切を渡るときの方法として正しいのはどれか。",
+    "choices": [
+      "警音器を鳴らしてから通過しなければならない",
+      "信号に関係なく必ず踏切の直前で一時停止しなければならない",
+      "一時停止をしないで通過できるが、安全を確かめる必要はある",
+      "青色であれば左右の安全確認も不要である"
+    ],
+    "answer": 2,
+    "explanation": "信号機のある踏切で青信号の場合は一時停止の必要はないが、安全確認をして通過する。",
+    "isTrapQuestion": true,
+    "trapNumberType": "other",
+    "topicTag": "rules"
+  },
+  {
+    "id": "at172",
+    "licenseCategory": [
+      "atGentei"
+    ],
+    "stageTag": "第一段階",
+    "difficulty": 1,
+    "questionText": "踏切に差しかかったところ、警報機が鳴り始め遮断機が下り始めた。正しい対応はどれか。",
+    "choices": [
+      "二輪車なら遮断機の横をすり抜けてよい",
+      "列車が見えなければ通過してよい",
+      "遮断機が下り切る前に急いで通過する",
+      "踏切に入らず、停止位置で止まる"
+    ],
+    "answer": 3,
+    "explanation": "警報機が鳴っているときや遮断機が下り始めているときは、踏切に入ってはならない。",
+    "isTrapQuestion": false,
+    "trapNumberType": "none",
+    "topicTag": "rules"
+  },
+  {
+    "id": "at173",
+    "licenseCategory": [
+      "atGentei"
+    ],
+    "stageTag": "第一段階",
+    "difficulty": 2,
+    "questionText": "警報機のない踏切の手前で一時停止し、左右の安全を確かめた。これから踏切を渡るときの進み方として適切なのはどれか。",
+    "choices": [
+      "踏切内で一度止まって左右を確認する",
+      "落輪しないよう左端に寄りすぎず、踏切の中ほどを通過する",
+      "線路と平行になるよう斜めに進入する",
+      "対向車を避けるため、できるだけ左端に寄って通過する"
+    ],
+    "answer": 1,
+    "explanation": "踏切の左端は落輪のおそれがあるため、左寄りを避けて通過する。踏切内での停止は危険である。",
+    "isTrapQuestion": false,
+    "trapNumberType": "none",
+    "topicTag": "rules"
+  },
+  {
+    "id": "at174",
+    "licenseCategory": [
+      "atGentei"
+    ],
+    "stageTag": "第二段階",
+    "difficulty": 5,
+    "questionText": "片側2車線の道路で、信号のない横断歩道の手前に左車線の乗用車が止まっている。右車線を走る二輪車がその乗用車の横を通って前へ出るときの方法として正しいのはどれか。",
+    "choices": [
+      "歩行者が見えなければそのまま通過してよい",
+      "警音器を鳴らしてから通過する",
+      "その車の前方に出る前に一時停止しなければならない",
+      "徐行すれば一時停止は不要である"
+    ],
+    "answer": 2,
+    "explanation": "横断歩道等の手前で停止している車両の側方を通過してその前方に出ようとするときは、前方に出る前に一時停止しなければならない。",
+    "isTrapQuestion": true,
+    "trapNumberType": "other",
+    "topicTag": "rules"
+  },
+  {
+    "id": "at175",
+    "licenseCategory": [
+      "atGentei"
+    ],
+    "stageTag": "第一段階",
+    "difficulty": 2,
+    "questionText": "横断歩道に近づいたとき、横断しようとする人がいないことが明らかでない場合の運転方法として正しいのはどれか。",
+    "choices": [
+      "歩行者の姿が見えなければ速度を落とさなくてよい",
+      "警音器を鳴らして注意を促しながら通過する",
+      "必ず一時停止しなければならない",
+      "横断歩道の手前で停止できるような速度で進む"
+    ],
+    "answer": 3,
+    "explanation": "横断する人がいないことが明らかな場合を除き、横断歩道の手前で停止できるような速度で進行しなければならない。",
+    "isTrapQuestion": false,
+    "trapNumberType": "none",
+    "topicTag": "rules"
+  },
+  {
+    "id": "at176",
+    "licenseCategory": [
+      "atGentei"
+    ],
+    "stageTag": "第一段階",
+    "difficulty": 2,
+    "questionText": "路面電車の安全地帯に歩行者がいる場合、その側方を通過する方法として正しいのはどれか。",
+    "choices": [
+      "徐行して通過する",
+      "歩行者がいなくなるまで停止して待つ",
+      "一時停止してから通過する",
+      "警音器を鳴らして通過する"
+    ],
+    "answer": 0,
+    "explanation": "安全地帯に歩行者がいるときは徐行しなければならない。",
+    "isTrapQuestion": false,
+    "trapNumberType": "none",
+    "topicTag": "rules"
+  },
+  {
+    "id": "at177",
+    "licenseCategory": [
+      "atGentei"
+    ],
+    "stageTag": "第二段階",
+    "difficulty": 5,
+    "questionText": "停留所で路面電車が止まっていて、乗り降りする人がいる。安全地帯はない。二輪車の対応として正しいのはどれか。",
+    "choices": [
+      "乗降客の間を縫うように徐行して通過する",
+      "路面電車の左側を警音器を鳴らしながら通過する",
+      "路面電車の右側を徐行して通過する",
+      "乗降客や道路を横断する人がいなくなるまで、路面電車の後方で停止して待つ"
+    ],
+    "answer": 3,
+    "explanation": "安全地帯のない停留所で乗り降りする人がいるときは、路面電車の後方で停止し、乗降客や横断者がいなくなるまで待つ。",
+    "isTrapQuestion": false,
+    "trapNumberType": "none",
+    "topicTag": "rules"
+  },
+  {
+    "id": "at178",
+    "licenseCategory": [
+      "atGentei"
+    ],
+    "stageTag": "第一段階",
+    "difficulty": 1,
+    "questionText": "白や黄色のつえを持った人が道路を歩いている。二輪車の運転者の対応として正しいのはどれか。",
+    "choices": [
+      "警音器を鳴らして自分の存在を知らせる",
+      "速度を上げて早く通り過ぎる",
+      "歩行者の後ろを同じ速度でついていく",
+      "一時停止か徐行をして、安全に通れるようにする"
+    ],
+    "answer": 3,
+    "explanation": "つえを持った視覚障害者などが通行しているときは、一時停止か徐行をしてその通行を妨げないようにする。",
+    "isTrapQuestion": false,
+    "trapNumberType": "none",
+    "topicTag": "rules"
+  },
+  {
+    "id": "at179",
+    "licenseCategory": [
+      "atGentei"
+    ],
+    "stageTag": "第一段階",
+    "difficulty": 2,
+    "questionText": "児童や幼児の乗り降りのため停車している通学通園バスの側方を通過する方法として正しいのはどれか。",
+    "choices": [
+      "バスが発進するまで必ず停止して待つ",
+      "警音器を鳴らして通過する",
+      "バスの反対車線を通れば速度を落とさなくてよい",
+      "徐行して安全を確かめながら通過する"
+    ],
+    "answer": 3,
+    "explanation": "児童・幼児の乗降のため停車中の通学通園バスの側方を通るときは、徐行して安全を確かめなければならない。",
+    "isTrapQuestion": false,
+    "trapNumberType": "none",
+    "topicTag": "rules"
+  },
+  {
+    "id": "at180",
+    "licenseCategory": [
+      "atGentei"
+    ],
+    "stageTag": "第一段階",
+    "difficulty": 2,
+    "questionText": "高齢運転者標識（高齢者マーク）を付けた車が前方を走行している。してはならない行為はどれか。",
+    "choices": [
+      "安全な場所で右側から追い越すこと",
+      "十分な車間距離をとって後ろを走ること",
+      "危険を避けるためやむを得ない場合を除き、幅寄せや割り込みをすること",
+      "同じ速度で後方を走ること"
+    ],
+    "answer": 2,
+    "explanation": "高齢者マークなどの標識を付けた車に対しては、やむを得ない場合を除き、幅寄せや割り込みをしてはならない。",
+    "isTrapQuestion": false,
+    "trapNumberType": "none",
+    "topicTag": "rules"
+  },
+  {
+    "id": "at181",
+    "licenseCategory": [
+      "atGentei"
+    ],
+    "stageTag": "第一段階",
+    "difficulty": 1,
+    "questionText": "歩行者のそばを通過するときの方法として正しいのはどれか。",
+    "choices": [
+      "速度を上げて短時間で通過する",
+      "歩行者との間に安全な間隔をあけるか、徐行する",
+      "警音器を鳴らして歩行者に道をあけさせる",
+      "歩行者に近づいて存在を知らせる"
+    ],
+    "answer": 1,
+    "explanation": "歩行者の側方を通過するときは、安全な間隔をあけるか徐行しなければならない。",
+    "isTrapQuestion": false,
+    "trapNumberType": "none",
+    "topicTag": "rules"
+  },
+  {
+    "id": "at182",
+    "licenseCategory": [
+      "atGentei"
+    ],
+    "stageTag": "第一段階",
+    "difficulty": 2,
+    "questionText": "道路沿いのガソリンスタンドに入るため、歩道を横切ろうとしている。正しい方法はどれか。",
+    "choices": [
+      "歩道の直前で一時停止し、歩行者の通行を妨げないようにする",
+      "警音器を鳴らして歩行者に知らせてから横切る",
+      "歩道の上を走って駐車場の入口まで進む",
+      "歩行者がいなければ徐行で通過してよい"
+    ],
+    "answer": 0,
+    "explanation": "道路外の施設に出入りするため歩道等を横切るときは、歩行者の有無にかかわらず、その直前で一時停止しなければならない。",
+    "isTrapQuestion": false,
+    "trapNumberType": "none",
+    "topicTag": "rules"
+  },
+  {
+    "id": "at183",
+    "licenseCategory": [
+      "atGentei"
+    ],
+    "stageTag": "第二段階",
+    "difficulty": 5,
+    "questionText": "「歩行者用道路」の標識がある道路を二輪車で通行することについて正しいのはどれか。",
+    "choices": [
+      "原則として通行できず、特に通行を認められた車両は歩行者に注意して徐行しなければならない",
+      "エンジンをかけたまま押して歩けば通行できる",
+      "二輪車は歩行者用道路の対象外なので通行できる",
+      "徐行すればどの車両でも通行できる"
+    ],
+    "answer": 0,
+    "explanation": "歩行者用道路は原則として車両通行禁止で、沿道に車庫を持つなど特に許可を受けた車両は徐行して通行する。",
+    "isTrapQuestion": false,
+    "trapNumberType": "none",
+    "topicTag": "rules"
+  },
+  {
+    "id": "at184",
+    "licenseCategory": [
+      "atGentei"
+    ],
+    "stageTag": "第一段階",
+    "difficulty": 1,
+    "questionText": "一方通行の標識がある道路を、二輪車で標識の示す方向と逆向きに走行することについて正しいのはどれか。",
+    "choices": [
+      "徐行すれば逆向きに走行してよい",
+      "AT車であれば規制の対象外である",
+      "二輪車も一方通行の規制を受けるので、逆向きに走行してはならない",
+      "二輪車は車体が小さいので逆向きに走行してよい"
+    ],
+    "answer": 2,
+    "explanation": "一方通行の規制は自動二輪車にも適用される。補助標識で除外されている車両以外は逆向きに通行できない。",
+    "isTrapQuestion": false,
+    "trapNumberType": "none",
+    "topicTag": "rules"
+  },
+  {
+    "id": "at185",
+    "licenseCategory": [
+      "atGentei"
+    ],
+    "stageTag": "第一段階",
+    "difficulty": 3,
+    "questionText": "片側3車線の道路（車両通行帯あり）で、右折や追越しをしないとき普通自動二輪車の走行車線として正しいのはどれか。",
+    "choices": [
+      "速度に応じて左側または中央の通行帯を走り、最も右側の通行帯はあけておく",
+      "二輪車は車線の区別なく路側帯を走る",
+      "どの通行帯を走ってもよい",
+      "二輪車は常に最も右側の通行帯を走らなければならない"
+    ],
+    "answer": 0,
+    "explanation": "片側3以上の車両通行帯がある道路では、最も右側の通行帯は追越しなどのためにあけておき、速度に応じてそれ以外の通行帯を通行する。",
+    "isTrapQuestion": true,
+    "trapNumberType": "other",
+    "topicTag": "rules"
+  },
+  {
+    "id": "at186",
+    "licenseCategory": [
+      "atGentei"
+    ],
+    "stageTag": "第一段階",
+    "difficulty": 1,
+    "questionText": "車両通行帯の境界線が黄色の線で示されている場合の意味として正しいのはどれか。",
+    "choices": [
+      "黄色の線は二輪車専用の通行帯を示す",
+      "黄色の線は追越しのためなら越えてよい",
+      "その黄色の線を越えて進路を変更してはならない",
+      "黄色の線は工事中を示す仮の線である"
+    ],
+    "answer": 2,
+    "explanation": "車両通行帯の境界の黄色の線は進路変更禁止を示す。右左折や工事などやむを得ない場合を除き越えてはならない。",
+    "isTrapQuestion": true,
+    "trapNumberType": "signalAndMarkings",
+    "topicTag": "rules"
+  },
+  {
+    "id": "at187",
+    "licenseCategory": [
+      "atGentei"
+    ],
+    "stageTag": "第一段階",
+    "difficulty": 2,
+    "questionText": "片側1車線の道路で前を走る遅いトラックを追い越したいが、中央線は黄色の実線である。正しい考え方はどれか。",
+    "choices": [
+      "追越しのために道路の右側部分にはみ出して通行してはならない",
+      "黄色の実線は夜間だけ規制される",
+      "二輪車であれば中央線をはみ出して追い越してよい",
+      "黄色の実線は駐車禁止を示している"
+    ],
+    "answer": 0,
+    "explanation": "黄色の中央線は「追越しのための右側部分はみ出し通行禁止」を示す。",
+    "isTrapQuestion": false,
+    "trapNumberType": "none",
+    "topicTag": "rules"
+  },
+  {
+    "id": "at188",
+    "licenseCategory": [
+      "atGentei"
+    ],
+    "stageTag": "第一段階",
+    "difficulty": 2,
+    "questionText": "酒気帯び運転の基準値として正しいのはどれか。",
+    "choices": [
+      "呼気1リットル中のアルコール濃度が0.25mg以上",
+      "呼気1リットル中のアルコール濃度が0.5mg以上",
+      "呼気1リットル中のアルコール濃度が1.0mg以上",
+      "呼気1リットル中のアルコール濃度が0.15mg以上"
+    ],
+    "answer": 3,
+    "explanation": "呼気1リットル中0.15mg以上のアルコールを身体に保有した状態での運転が酒気帯び運転として処罰される。基準値未満でも酒気を帯びての運転自体が禁止されている。",
+    "isTrapQuestion": false,
+    "trapNumberType": "none",
+    "topicTag": "rules"
+  },
+  {
+    "id": "at189",
+    "licenseCategory": [
+      "atGentei"
+    ],
+    "stageTag": "第一段階",
+    "difficulty": 2,
+    "questionText": "飲酒運転に関連して、運転者以外の人も罰せられる場合として正しいのはどれか。",
+    "choices": [
+      "飲酒運転の車の後ろを走っていた場合",
+      "飲酒運転をしている車とすれ違った場合",
+      "飲酒運転を知らずに同じ店で食事をした場合",
+      "酒を飲んだ人に車両を提供したり、運転を依頼してその車に同乗した場合"
+    ],
+    "answer": 3,
+    "explanation": "酒気を帯びた人への車両提供、酒類の提供、運転を要求・依頼しての同乗は、それぞれ罰則の対象になる。",
+    "isTrapQuestion": false,
+    "trapNumberType": "none",
+    "topicTag": "rules"
+  },
+  {
+    "id": "at190",
+    "licenseCategory": [
+      "atGentei"
+    ],
+    "stageTag": "第一段階",
+    "difficulty": 1,
+    "questionText": "かぜ薬を飲んで強い眠気を感じている。二輪車の運転について正しいのはどれか。",
+    "choices": [
+      "近い距離なら運転してもよい",
+      "AT車なら操作が簡単なので運転してよい",
+      "ヘルメットのシールドを開けて風に当たれば運転してよい",
+      "正常な運転ができないおそれがあるので運転してはならない"
+    ],
+    "answer": 3,
+    "explanation": "過労・病気・薬の影響などで正常な運転ができないおそれがあるときは、運転してはならない。",
+    "isTrapQuestion": false,
+    "trapNumberType": "none",
+    "topicTag": "rules"
+  },
+  {
+    "id": "at191",
+    "licenseCategory": [
+      "atGentei"
+    ],
+    "stageTag": "第一段階",
+    "difficulty": 1,
+    "questionText": "二輪車用の乗車用ヘルメットの選び方として適切なのはどれか。",
+    "choices": [
+      "デザイン重視で工事用ヘルメットを使ってもよい",
+      "PS(c)マークやJISマークなど安全基準に適合したものを選ぶ",
+      "あごひもが付いていないものの方が脱げにくい",
+      "軽ければ規格に関係なくどれでもよい"
+    ],
+    "answer": 1,
+    "explanation": "ヘルメットは安全基準を満たしたもの（PS(c)マーク、JISマーク付きなど）を選び、あごひもを確実に締めて着用する。",
+    "isTrapQuestion": false,
+    "trapNumberType": "none",
+    "topicTag": "rules"
+  },
+  {
+    "id": "at192",
+    "licenseCategory": [
+      "atGentei"
+    ],
+    "stageTag": "第二段階",
+    "difficulty": 5,
+    "questionText": "道路にある路面電車の軌道敷内を二輪車が通行することについて正しいのはどれか。",
+    "choices": [
+      "路面電車が走っていないときはいつでも通行できる",
+      "軌道敷内は横切ることもできない",
+      "二輪車は軌道敷内を通行しなければならない",
+      "原則として通行できないが、右左折・横断・転回のため横切る場合や標識で認められた場合などは通行できる"
+    ],
+    "answer": 3,
+    "explanation": "車両は原則として軌道敷内を通行できない。右左折・横断・転回のため横切るとき、標識で認められているとき、危険防止のためやむを得ないときなどは例外である。",
+    "isTrapQuestion": true,
+    "trapNumberType": "other",
+    "topicTag": "rules"
+  },
+  {
+    "id": "at193",
+    "licenseCategory": [
+      "atGentei"
+    ],
+    "stageTag": "第一段階",
+    "difficulty": 2,
+    "questionText": "交差点で右折するときの通行方法として正しいのはどれか（二段階右折の対象でない二輪車の場合）。",
+    "choices": [
+      "交差点の中心の外側を速度を落とさずに曲がる",
+      "道路の左端に寄ったまま大回りで右折する",
+      "対向車線に入ってから右折する",
+      "あらかじめ道路の中央に寄り、交差点の中心のすぐ内側を徐行して曲がる"
+    ],
+    "answer": 3,
+    "explanation": "右折するときは、あらかじめできるだけ道路の中央に寄り、交差点の中心のすぐ内側を徐行しながら通行する。",
+    "isTrapQuestion": true,
+    "trapNumberType": "turningRules",
+    "topicTag": "rules"
+  },
+  {
+    "id": "at194",
+    "licenseCategory": [
+      "atGentei"
+    ],
+    "stageTag": "第二段階",
+    "difficulty": 4,
+    "questionText": "一方通行の道路を走行中、次の交差点で右折する。右折の準備として正しい通行方法はどれか。",
+    "choices": [
+      "一方通行路でも道路の中央に寄って右折する",
+      "道路の左端に寄ったまま右折する",
+      "あらかじめ道路の右端に寄り、交差点の中心の内側を徐行して右折する",
+      "一方通行路では右折できない"
+    ],
+    "answer": 2,
+    "explanation": "一方通行の道路で右折するときは、あらかじめできるだけ道路の右端に寄って右折する。",
+    "isTrapQuestion": true,
+    "trapNumberType": "turningRules",
+    "topicTag": "rules"
+  },
+  {
+    "id": "at195",
+    "licenseCategory": [
+      "atGentei"
+    ],
+    "stageTag": "第一段階",
+    "difficulty": 2,
+    "questionText": "転回（Uターン）をする場合の合図を出す時期として正しいのはどれか。",
+    "choices": [
+      "転回を始めると同時",
+      "転回しようとするときの約10秒前",
+      "転回しようとする地点から30m手前の地点に達したとき",
+      "転回しようとする地点から3m手前"
+    ],
+    "answer": 2,
+    "explanation": "転回の合図は右折と同じく、その行為をしようとする地点から30m手前の地点に達したときに行う。",
+    "isTrapQuestion": true,
+    "trapNumberType": "turningRules",
+    "topicTag": "rules"
+  },
+  {
+    "id": "at196",
+    "licenseCategory": [
+      "atGentei"
+    ],
+    "stageTag": "第二段階",
+    "difficulty": 3,
+    "questionText": "高速道路の本線車道を走行中、路肩や路側帯を通行することについて正しいのはどれか。",
+    "choices": [
+      "追越しのためなら路肩を通行できる",
+      "二輪車は渋滞時に限り路肩を通行できる",
+      "故障などやむを得ない場合を除き、路肩や路側帯を通行してはならない",
+      "速度を落とせばいつでも路肩を通行できる"
+    ],
+    "answer": 2,
+    "explanation": "高速道路では、故障その他やむを得ない場合以外に路肩・路側帯を通行したり、そこに停止したりしてはならない。",
+    "isTrapQuestion": false,
+    "trapNumberType": "none",
+    "topicTag": "rules"
+  },
+  {
+    "id": "at197",
+    "licenseCategory": [
+      "atGentei"
+    ],
+    "stageTag": "第二段階",
+    "difficulty": 2,
+    "questionText": "高速道路の本線車道に合流するときの方法として正しいのはどれか。",
+    "choices": [
+      "加速車線の入口で一度停止してから合流する",
+      "加速車線で十分に速度を上げ、本線車道を走る車の進行を妨げないように合流する",
+      "本線車道の車より合流車が優先される",
+      "加速車線の途中で本線に入ってはならず、加速車線の終わりで必ず停止する"
+    ],
+    "answer": 1,
+    "explanation": "本線車道に入るときは、加速車線で十分加速し、本線車道を通行する車両の進行を妨げないようにする。",
+    "isTrapQuestion": false,
+    "trapNumberType": "none",
+    "topicTag": "rules"
+  },
+  {
+    "id": "at198",
+    "licenseCategory": [
+      "atGentei"
+    ],
+    "stageTag": "第二段階",
+    "difficulty": 4,
+    "questionText": "晴れた日の乾いた路面の高速道路を100km/hで走行しているときの車間距離の目安として適切なのはどれか。",
+    "choices": [
+      "約100m",
+      "約50m",
+      "約200m",
+      "約30m"
+    ],
+    "answer": 0,
+    "explanation": "乾燥した路面で高速道路を走る場合、100km/hでは約100mがおおよその車間距離の目安とされる。路面が濡れているときはさらに長くとる。",
+    "isTrapQuestion": true,
+    "trapNumberType": "followingDistance",
+    "topicTag": "rules"
+  },
+  {
+    "id": "at199",
+    "licenseCategory": [
+      "atGentei"
+    ],
+    "stageTag": "第二段階",
+    "difficulty": 2,
+    "questionText": "高速道路の本線車道で禁止されている行為として正しいのはどれか。",
+    "choices": [
+      "休憩のためサービスエリアに入ること",
+      "追越車線を使った追越し",
+      "加速車線からの合流",
+      "転回や後退、中央分離帯を横切ること"
+    ],
+    "answer": 3,
+    "explanation": "高速道路の本線車道では、転回・後退・中央分離帯の横断が禁止されている。",
+    "isTrapQuestion": false,
+    "trapNumberType": "none",
+    "topicTag": "rules"
+  },
+  {
+    "id": "at200",
+    "licenseCategory": [
+      "atGentei"
+    ],
+    "stageTag": "第一段階",
+    "difficulty": 2,
+    "questionText": "日中の走行であっても、前照灯などの点灯が義務付けられる状況として正しいのはどれか。",
+    "choices": [
+      "トンネルの中や濃い霧などで、50m（高速道路では200m）先が見えない場所を通行するとき",
+      "曇りの日に市街地を走行するとき",
+      "日中に交通量の多い幹線道路を走るとき",
+      "晴れた日の高速道路を走るとき"
+    ],
+    "answer": 0,
+    "explanation": "昼間でもトンネル内や濃霧などで視界が悪い場所（50m先が見えない程度、高速道路では200m）を通行するときは灯火をつけなければならない。",
+    "isTrapQuestion": false,
+    "trapNumberType": "none",
+    "topicTag": "rules"
+  },
+  {
+    "id": "at201",
+    "licenseCategory": [
+      "atGentei"
+    ],
+    "stageTag": "第一段階",
+    "difficulty": 1,
+    "questionText": "夜間、郊外の道路で前照灯を上向きにして走っていたところ、前方から対向車が近づいてきた。前照灯の操作として正しいのはどれか。",
+    "choices": [
+      "前照灯を消して尾灯だけにする",
+      "前照灯を減光するか、下向きに切り替える",
+      "点滅させて相手に合図を送る",
+      "上向きにして自分の存在を知らせる"
+    ],
+    "answer": 1,
+    "explanation": "夜間に対向車と行き違うときや他の車の直後を通行するときは、前照灯を減光するか下向きにしなければならない。",
+    "isTrapQuestion": false,
+    "trapNumberType": "none",
+    "topicTag": "rules"
+  },
+  {
+    "id": "at202",
+    "licenseCategory": [
+      "atGentei"
+    ],
+    "stageTag": "第一段階",
+    "difficulty": 1,
+    "questionText": "中央線がある一般道路での二輪車の通行区分として正しいのはどれか。",
+    "choices": [
+      "道路の中央付近を中央線をまたいで通行する",
+      "道路の中央から左の部分を通行する",
+      "道路の右側部分を通行する",
+      "空いている方を自由に選んで通行する"
+    ],
+    "answer": 1,
+    "explanation": "車両は道路の中央（中央線があるときは中央線）から左の部分を通行するのが原則である。",
+    "isTrapQuestion": false,
+    "trapNumberType": "none",
+    "topicTag": "rules"
+  },
+  {
+    "id": "at203",
+    "licenseCategory": [
+      "atGentei"
+    ],
+    "stageTag": "第二段階",
+    "difficulty": 5,
+    "questionText": "中央線のある道路で、道路の中央から右の部分にはみ出して通行することが認められる場合として正しいのはどれか。",
+    "choices": [
+      "渋滞している車列を二輪車で追い越す場合",
+      "道路工事などで左側部分だけでは通行するのに十分な幅がない場合",
+      "急いでいる用事がある場合",
+      "中央線が黄色の区間で追越しをする場合"
+    ],
+    "answer": 1,
+    "explanation": "一方通行の場合や、工事などで左側部分の幅が十分でない場合などは、右側部分にはみ出して通行できる。その場合もはみ出し方はできるだけ少なくする。",
+    "isTrapQuestion": true,
+    "trapNumberType": "other",
+    "topicTag": "rules"
+  },
+  {
+    "id": "at204",
+    "licenseCategory": [
+      "atGentei"
+    ],
+    "stageTag": "第一段階",
+    "difficulty": 2,
+    "questionText": "交差点内を通行中に信号が青から黄色に変わった場合の対応として正しいのはどれか。",
+    "choices": [
+      "そのまま進んで速やかに交差点の外に出る",
+      "交差点の手前まで後退する",
+      "交差点内でその場に停止する",
+      "黄色の間は交差点内で様子を見る"
+    ],
+    "answer": 0,
+    "explanation": "すでに交差点に入っているときに信号が変わった場合は、そのまま進行して速やかに交差点から出る。",
+    "isTrapQuestion": false,
+    "trapNumberType": "none",
+    "topicTag": "rules"
+  },
+  {
+    "id": "at205",
+    "licenseCategory": [
+      "atGentei"
+    ],
+    "stageTag": "第一段階",
+    "difficulty": 2,
+    "questionText": "信号が青であっても、前方が渋滞していて交差点内で止まってしまうおそれがある場合の対応として正しいのはどれか。",
+    "choices": [
+      "交差点に入らず、手前で待つ",
+      "信号が青なので交差点に入ってよい",
+      "交差点内に入って待ち、前が動いたら進む",
+      "二輪車なら車の間をすり抜けて進んでよい"
+    ],
+    "answer": 0,
+    "explanation": "前方の車両の状況により交差点内で停止するおそれがあるときは、信号が青でも交差点に入ってはならない。",
+    "isTrapQuestion": false,
+    "trapNumberType": "none",
+    "topicTag": "rules"
+  },
+  {
+    "id": "at206",
+    "licenseCategory": [
+      "atGentei"
+    ],
+    "stageTag": "第一段階",
+    "difficulty": 3,
+    "questionText": "道路に「停止禁止部分」の標示がある場所の手前で前方が渋滞している。正しい対応はどれか。",
+    "choices": [
+      "その部分で停止するおそれがある場合は、標示の中に入らないようにする",
+      "標示の上で停止しても短時間なら問題ない",
+      "二輪車はこの標示の規制を受けない",
+      "標示の中では徐行すれば停止してよい"
+    ],
+    "answer": 0,
+    "explanation": "停止禁止部分の標示がある場所は、前方の状況によりその中で停止するおそれがあるときは入ってはならない。",
+    "isTrapQuestion": true,
+    "trapNumberType": "signalAndMarkings",
+    "topicTag": "rules"
+  },
+  {
+    "id": "at207",
+    "licenseCategory": [
+      "atGentei"
+    ],
+    "stageTag": "第一段階",
+    "difficulty": 1,
+    "questionText": "雨上がりの道路で、水たまりのそばを歩行者が歩いている。正しい運転方法はどれか。",
+    "choices": [
+      "水たまりの中央を速い速度で通過する",
+      "泥水をはねて迷惑をかけないよう、速度を落とすなどして通過する",
+      "歩行者が避けるだろうからそのままの速度で通過する",
+      "警音器を鳴らして歩行者を遠ざける"
+    ],
+    "answer": 1,
+    "explanation": "ぬかるみや水たまりのある場所では、泥や水をはねて他人に迷惑をかけないよう、徐行するなどして通行する。",
+    "isTrapQuestion": false,
+    "trapNumberType": "none",
+    "topicTag": "rules"
+  },
+  {
+    "id": "at208",
+    "licenseCategory": [
+      "atGentei"
+    ],
+    "stageTag": "第一段階",
+    "difficulty": 1,
+    "questionText": "保護者が付いていない小さな子どもが道路の端を一人で歩いている。二輪車の運転者の対応として正しいのはどれか。",
+    "choices": [
+      "一時停止か徐行をして、子どもが安全に通行できるようにする",
+      "子どもの近くを素早く通り抜ける",
+      "子どもから目を離さずに同じ速度で通過する",
+      "警音器を鳴らして子どもに注意を促す"
+    ],
+    "answer": 0,
+    "explanation": "付き添いのない児童・幼児が歩いているときは、一時停止か徐行をしてその通行を妨げないようにしなければならない。",
+    "isTrapQuestion": false,
+    "trapNumberType": "none",
+    "topicTag": "rules"
+  },
+  {
+    "id": "at209",
+    "licenseCategory": [
+      "atGentei"
+    ],
+    "stageTag": "第二段階",
+    "difficulty": 4,
+    "questionText": "渋滞で停止している車列の左側を二輪車で進んでいたところ、車列の切れ目で対向の右折車に道を譲るため車が止まっている。予測すべき危険として最も適切なのはどれか。",
+    "choices": [
+      "車列の陰から右折車が出てきて、自車の進路をふさぐおそれがある",
+      "車列が止まっているので横から出てくる車はいない",
+      "渋滞中は速度が低いので危険は少ない",
+      "右折車は二輪車を必ず確認してから曲がる"
+    ],
+    "answer": 0,
+    "explanation": "車列の切れ目は対向右折車や路外へ出入りする車が横切る場所になりやすい。右折車からは車列の陰の二輪車が見えにくいため、切れ目の手前で速度を落とし停止できるようにする。",
+    "isTrapQuestion": true,
+    "trapNumberType": "hazardRecognition",
+    "topicTag": "hazard_prediction"
+  },
+  {
+    "id": "at210",
+    "licenseCategory": [
+      "atGentei"
+    ],
+    "stageTag": "第一段階",
+    "difficulty": 2,
+    "questionText": "交差点で左折しようとしている大型トラックの左側を二輪車で進んでいる。最も注意すべき危険はどれか。",
+    "choices": [
+      "トラックの荷台から荷物が後方へ落ちてくるおそれがある",
+      "トラックが後退してくるおそれがある",
+      "トラックが急に右へ進路を変えるおそれがある",
+      "トラックの内輪差によって巻き込まれるおそれがある"
+    ],
+    "answer": 3,
+    "explanation": "大型車は左折時に後輪が前輪より内側を通るため、左側にいる二輪車が巻き込まれやすい。左折する大型車の左側には並ばず、後方で待つ。",
+    "isTrapQuestion": false,
+    "trapNumberType": "none",
+    "topicTag": "hazard_prediction"
+  },
+  {
+    "id": "at211",
+    "licenseCategory": [
+      "atGentei"
+    ],
+    "stageTag": "第一段階",
+    "difficulty": 2,
+    "questionText": "停留所に停車中の路線バスの右側を通過しようとしている。予測すべき危険として最も適切なのはどれか。",
+    "choices": [
+      "バスが急に後退してくるおそれがある",
+      "バスを降りた人がバスの前方から道路を横断してくるおそれがある",
+      "停車中のバスの周辺では歩行者は動かない",
+      "バスの屋根の上から物が落ちてくるおそれがある"
+    ],
+    "answer": 1,
+    "explanation": "停車中のバスの前方は死角になり、降車した人が横断してくることがある。速度を落とし、すぐ止まれるように通過する。",
+    "isTrapQuestion": false,
+    "trapNumberType": "none",
+    "topicTag": "hazard_prediction"
+  },
+  {
+    "id": "at212",
+    "licenseCategory": [
+      "atGentei"
+    ],
+    "stageTag": "第一段階",
+    "difficulty": 1,
+    "questionText": "片側1車線の道路を走行中、対向車線だけが渋滞して車が止まっている。予測すべき危険として適切なのはどれか。",
+    "choices": [
+      "止まっている車は動かないので注意は不要である",
+      "止まっている車の間から歩行者や自転車が道路を横断してくるおそれがある",
+      "渋滞の先頭で事故が起きていても自分には関係ない",
+      "対向車線が渋滞しているので自車線は安全に速度を上げられる"
+    ],
+    "answer": 1,
+    "explanation": "渋滞している車列の間は歩行者や自転車が横断しやすく、自車の前に突然現れることがある。速度を控えめにして進む。",
+    "isTrapQuestion": false,
+    "trapNumberType": "none",
+    "topicTag": "hazard_prediction"
+  },
+  {
+    "id": "at213",
+    "licenseCategory": [
+      "atGentei"
+    ],
+    "stageTag": "第一段階",
+    "difficulty": 2,
+    "questionText": "雨の日に交差点を通過する際、特に滑りやすく注意が必要な路面として正しいのはどれか。",
+    "choices": [
+      "路面の標示ペイントは雨の日ほど滑りにくくなる",
+      "マンホールのふたや道路工事の鉄板、横断歩道などの白い標示の上",
+      "水たまりのない場所はすべて乾燥路と同じである",
+      "舗装が新しいアスファルトの部分は雨でも全く滑らない"
+    ],
+    "answer": 1,
+    "explanation": "雨の日は、金属のふたや鉄板、標示ペイントの上がとくに滑りやすい。その上ではブレーキやハンドルの操作を控える。",
+    "isTrapQuestion": false,
+    "trapNumberType": "none",
+    "topicTag": "hazard_prediction"
+  },
+  {
+    "id": "at214",
+    "licenseCategory": [
+      "atGentei"
+    ],
+    "stageTag": "第一段階",
+    "difficulty": 1,
+    "questionText": "雨が降り始めたばかりの道路の状態として、とくに注意すべき点はどれか。",
+    "choices": [
+      "路面の油やほこりが雨水と混じって浮き上がり、非常に滑りやすくなっている",
+      "降り始めは路面がまだ乾いているので普段どおり走れる",
+      "雨の降り始めはタイヤのグリップが増す",
+      "降り始めより大雨のときの方が必ず滑りやすい"
+    ],
+    "answer": 0,
+    "explanation": "降り始めの雨は路面の油分やほこりを浮かせ、とくに滑りやすい。速度を落とし、急な操作を避ける。",
+    "isTrapQuestion": true,
+    "trapNumberType": "weatherConditions",
+    "topicTag": "hazard_prediction"
+  },
+  {
+    "id": "at215",
+    "licenseCategory": [
+      "atGentei"
+    ],
+    "stageTag": "第一段階",
+    "difficulty": 2,
+    "questionText": "夜間、街灯の少ない道路を走行しているときに注意すべき危険として正しいのはどれか。",
+    "choices": [
+      "夜間は交通量が少ないので歩行者も道路に出てこない",
+      "反射材を付けていない自転車は通行が禁止されているので現れない",
+      "前照灯を上向きにすれば歩行者を見落とすことはない",
+      "暗い色の服を着た歩行者は発見が遅れやすい"
+    ],
+    "answer": 3,
+    "explanation": "夜間は暗い服装の歩行者や無灯火の自転車の発見が遅れやすい。前照灯の照らす範囲で止まれる速度で走る。",
+    "isTrapQuestion": false,
+    "trapNumberType": "none",
+    "topicTag": "hazard_prediction"
+  },
+  {
+    "id": "at216",
+    "licenseCategory": [
+      "atGentei"
+    ],
+    "stageTag": "第二段階",
+    "difficulty": 4,
+    "questionText": "夜間、対向車の前照灯と自車の前照灯が重なる付近を走行するときに注意すべき現象として正しいのはどれか。",
+    "choices": [
+      "光が重なるので歩行者がとくによく見える",
+      "自車の前照灯が相手の目に入らなくなる",
+      "対向車の前照灯で路面の凹凸が見えやすくなる",
+      "両方のライトの間にいる歩行者などが見えなくなることがある"
+    ],
+    "answer": 3,
+    "explanation": "対向車と自車のライトが交差する付近では、その間にいる歩行者などが光に溶け込んで見えなくなる（蒸発現象）ことがある。速度を落として注意する。",
+    "isTrapQuestion": true,
+    "trapNumberType": "nightDriving",
+    "topicTag": "hazard_prediction"
+  },
+  {
+    "id": "at217",
+    "licenseCategory": [
+      "atGentei"
+    ],
+    "stageTag": "第一段階",
+    "difficulty": 2,
+    "questionText": "四輪車の斜め後方を並ぶように走り続けることの危険として正しいのはどれか。",
+    "choices": [
+      "四輪車が必ず二輪車を確認しているので危険はない",
+      "並んで走ると互いの速度が上がりやすい",
+      "四輪車の排気ガスで視界が悪くなるおそれがある",
+      "四輪車の運転者のミラーの死角に入り、進路変更のときに気付かれないおそれがある"
+    ],
+    "answer": 3,
+    "explanation": "四輪車の斜め後方はミラーに映りにくい死角である。死角に長くとどまらず、相手から見える位置を走る。",
+    "isTrapQuestion": false,
+    "trapNumberType": "none",
+    "topicTag": "hazard_prediction"
+  },
+  {
+    "id": "at218",
+    "licenseCategory": [
+      "atGentei"
+    ],
+    "stageTag": "第一段階",
+    "difficulty": 1,
+    "questionText": "路上に駐車している車のすぐ横を通過するときに予測すべき危険として適切なのはどれか。",
+    "choices": [
+      "駐車車両は動かないので横ぎりぎりを通ってよい",
+      "駐車車両の横では速度を上げて早く通過した方が安全である",
+      "駐車車両には人が乗っていないので危険はない",
+      "駐車車両のドアが急に開くおそれがある"
+    ],
+    "answer": 3,
+    "explanation": "駐車車両の運転者が急にドアを開けることがある。ドアの開く幅以上の間隔をとるか、速度を落として通過する。",
+    "isTrapQuestion": false,
+    "trapNumberType": "none",
+    "topicTag": "hazard_prediction"
+  },
+  {
+    "id": "at219",
+    "licenseCategory": [
+      "atGentei"
+    ],
+    "stageTag": "第一段階",
+    "difficulty": 2,
+    "questionText": "二輪車で交差点を左折するときに予測すべき危険として適切なのはどれか。",
+    "choices": [
+      "左折時の危険は右後方から来る車だけである",
+      "横断歩道の歩行者は二輪車を見て必ず止まる",
+      "左後方から直進してくる自転車や、横断歩道を渡る歩行者と交錯するおそれがある",
+      "左折時は左側に車両がいることはないので確認は不要である"
+    ],
+    "answer": 2,
+    "explanation": "左折時は左後方から来る自転車や横断歩行者に注意し、直前にミラーと目視で左後方を確認する。",
+    "isTrapQuestion": false,
+    "trapNumberType": "none",
+    "topicTag": "hazard_prediction"
+  },
+  {
+    "id": "at220",
+    "licenseCategory": [
+      "atGentei"
+    ],
+    "stageTag": "第一段階",
+    "difficulty": 1,
+    "questionText": "住宅街の道路を走行中、前方の路地からボールが転がり出てきた。予測すべき危険として最も適切なのはどれか。",
+    "choices": [
+      "ボールを追って子どもが飛び出してくるおそれがある",
+      "ボールは風で転がってきただけなので気にしなくてよい",
+      "ボールをよければ危険はない",
+      "子どもは車の音を聞けば飛び出さない"
+    ],
+    "answer": 0,
+    "explanation": "ボールの後には子どもが追いかけて飛び出してくることが多い。直ちに減速し、停止できるよう備える。",
+    "isTrapQuestion": false,
+    "trapNumberType": "none",
+    "topicTag": "hazard_prediction"
+  },
+  {
+    "id": "at221",
+    "licenseCategory": [
+      "atGentei"
+    ],
+    "stageTag": "第一段階",
+    "difficulty": 1,
+    "questionText": "信号のない横断歩道を高齢の歩行者がゆっくり渡っている。予測すべきこととして適切なのはどれか。",
+    "choices": [
+      "途中で立ち止まったり引き返したりするおそれがある",
+      "横断し終わるまで待つ必要はない",
+      "二輪車の接近に気付いてすぐに道をあける",
+      "一定の速さで確実に渡り切る"
+    ],
+    "answer": 0,
+    "explanation": "高齢者は横断の途中で立ち止まったり引き返したりすることがある。横断が終わるまで停止して待つ。",
+    "isTrapQuestion": false,
+    "trapNumberType": "none",
+    "topicTag": "hazard_prediction"
+  },
+  {
+    "id": "at222",
+    "licenseCategory": [
+      "atGentei"
+    ],
+    "stageTag": "第一段階",
+    "difficulty": 3,
+    "questionText": "信号のない交差点に近づいている。交差する道路には「一時停止」の標識があり、そちらから車が近づいてくる。適切な考え方はどれか。",
+    "choices": [
+      "警音器を鳴らし続ければ相手は止まる",
+      "自分が優先なので速度を上げて先に通過する",
+      "相手が一時停止せずに出てくる可能性も考え、速度を控えて様子を見る",
+      "相手には一時停止の義務があるので必ず止まると考えてよい"
+    ],
+    "answer": 2,
+    "explanation": "相手に一時停止義務があっても、見落としや無視で出てくることがある。「相手は止まるはず」と思い込まず、いつでも止まれるように備える。",
+    "isTrapQuestion": true,
+    "trapNumberType": "other",
+    "topicTag": "hazard_prediction"
+  },
+  {
+    "id": "at223",
+    "licenseCategory": [
+      "atGentei"
+    ],
+    "stageTag": "第一段階",
+    "difficulty": 1,
+    "questionText": "前方の信号が青から黄色に変わりそうな状況で、先行車に続いて走行している。予測すべきこととして適切なのはどれか。",
+    "choices": [
+      "先行車に続けば自分も必ず通過できる",
+      "信号の変わり目では先行車との車間を詰めた方が安全である",
+      "先行車が停止位置で急に止まり、追突するおそれがある",
+      "先行車は必ず加速して交差点を通過する"
+    ],
+    "answer": 2,
+    "explanation": "信号の変わり目では先行車が急停止することがある。車間距離を十分にとり、先行車の動きに備える。",
+    "isTrapQuestion": false,
+    "trapNumberType": "none",
+    "topicTag": "hazard_prediction"
+  },
+  {
+    "id": "at224",
+    "licenseCategory": [
+      "atGentei"
+    ],
+    "stageTag": "第一段階",
+    "difficulty": 2,
+    "questionText": "前方を走るタクシーが、左の歩道に手を挙げている人に向かって急に速度を落とした。予測すべきこととして適切なのはどれか。",
+    "choices": [
+      "客を乗せるときは必ず合図を出してから停止する",
+      "タクシーは二輪車に進路を譲るために減速した",
+      "タクシーが左に寄って急停止したり、客を乗せた後に急に発進・転回したりするおそれがある",
+      "タクシーはそのまま同じ速度で走り続ける"
+    ],
+    "answer": 2,
+    "explanation": "空車のタクシーは客を見つけると合図が遅れたまま急停止することがある。車間距離をとり、側方通過時は乗降や発進にも注意する。",
+    "isTrapQuestion": false,
+    "trapNumberType": "none",
+    "topicTag": "hazard_prediction"
+  },
+  {
+    "id": "at225",
+    "licenseCategory": [
+      "atGentei"
+    ],
+    "stageTag": "第一段階",
+    "difficulty": 2,
+    "questionText": "対向車線側に駐車車両があり、その後ろから対向車が近づいてきている。予測すべき危険として適切なのはどれか。",
+    "choices": [
+      "対向車が駐車車両を避けるため、中央線をはみ出して自車線に出てくるおそれがある",
+      "対向車は二輪車を見れば必ずはみ出しをやめる",
+      "対向車は駐車車両の後ろで必ず停止して待つ",
+      "駐車車両があるのは対向車線なので自分には関係ない"
+    ],
+    "answer": 0,
+    "explanation": "障害物のある側の対向車がはみ出してくることがある。速度を落として道路の左寄りを走り、無理に行き違わない。",
+    "isTrapQuestion": false,
+    "trapNumberType": "none",
+    "topicTag": "hazard_prediction"
+  },
+  {
+    "id": "at226",
+    "licenseCategory": [
+      "atGentei"
+    ],
+    "stageTag": "第一段階",
+    "difficulty": 1,
+    "questionText": "走行中に車線変更をするときの安全確認として適切なのはどれか。",
+    "choices": [
+      "ミラーで後方を確認したうえで、死角になる斜め後方を直接目視で確認する",
+      "ミラーに何も映っていなければ目視は不要である",
+      "合図を出せば後方確認は省略してよい",
+      "前方だけを見ていれば後続車が避けてくれる"
+    ],
+    "answer": 0,
+    "explanation": "ミラーには映らない死角があるため、車線変更の前には目視による確認が欠かせない。",
+    "isTrapQuestion": false,
+    "trapNumberType": "none",
+    "topicTag": "hazard_prediction"
+  },
+  {
+    "id": "at227",
+    "licenseCategory": [
+      "atGentei"
+    ],
+    "stageTag": "第一段階",
+    "difficulty": 1,
+    "questionText": "右に曲がる見通しのよいカーブに、速度を落とさないまま進入したときに起こりやすい危険として正しいのはどれか。",
+    "choices": [
+      "見通しのよいカーブでは速度を落とす必要はない",
+      "右カーブでは内側に倒れ込むことしか起こらない",
+      "速度が高いほど車体が安定し曲がりやすくなる",
+      "遠心力で外側に膨らみ、対向車線にはみ出すおそれがある"
+    ],
+    "answer": 3,
+    "explanation": "カーブで速度が高すぎると遠心力で外側に膨らみ、右カーブでは対向車線にはみ出すおそれがある。カーブ手前で十分減速する。",
+    "isTrapQuestion": false,
+    "trapNumberType": "none",
+    "topicTag": "hazard_prediction"
+  },
+  {
+    "id": "at228",
+    "licenseCategory": [
+      "atGentei"
+    ],
+    "stageTag": "第二段階",
+    "difficulty": 3,
+    "questionText": "冬の早朝、晴れていて乾いているように見える道路を走行している。とくに注意が必要な場所として正しいのはどれか。",
+    "choices": [
+      "工事で新しく舗装された明るい場所",
+      "日当たりのよい直線道路の中央部",
+      "交通量の多い交差点の中央",
+      "橋の上やトンネルの出入口、日陰の部分"
+    ],
+    "answer": 3,
+    "explanation": "橋の上や日陰、トンネルの出入口は気温が下がりやすく、他が乾いていても凍結していることがある。",
+    "isTrapQuestion": true,
+    "trapNumberType": "weatherConditions",
+    "topicTag": "hazard_prediction"
+  },
+  {
+    "id": "at229",
+    "licenseCategory": [
+      "atGentei"
+    ],
+    "stageTag": "第二段階",
+    "difficulty": 3,
+    "questionText": "霧が発生して見通しが悪い道路を走行するときの運転方法として適切なのはどれか。",
+    "choices": [
+      "前照灯を下向きにつけて速度を落とし、道路の中央線やガードレールなどを目安に走る",
+      "前照灯を上向きにすると遠くまでよく見える",
+      "先行車に接近してその尾灯を頼りに走る",
+      "霧の中では速度を上げて早く抜け出す方がよい"
+    ],
+    "answer": 0,
+    "explanation": "霧の中で上向きの前照灯は光が乱反射してかえって見えにくい。下向きにして速度を落とし、車間を十分にとる。必要に応じて警音器を使う。",
+    "isTrapQuestion": true,
+    "trapNumberType": "weatherConditions",
+    "topicTag": "hazard_prediction"
+  },
+  {
+    "id": "at230",
+    "licenseCategory": [
+      "atGentei"
+    ],
+    "stageTag": "第一段階",
+    "difficulty": 2,
+    "questionText": "踏切の先の道路が渋滞している。踏切に入る前に確認すべきこととして正しいのはどれか。",
+    "choices": [
+      "踏切を渡った先に、自車が入れるだけの余地があるかどうか",
+      "遮断機が上がっていれば先の渋滞は関係ない",
+      "二輪車は小さいので踏切内で止まっても問題ない",
+      "踏切内で渋滞が解消するのを待てばよい"
+    ],
+    "answer": 0,
+    "explanation": "踏切の先に余地がないまま入ると踏切内で停止してしまうおそれがある。前方に十分な余地があることを確認してから入る。",
+    "isTrapQuestion": false,
+    "trapNumberType": "none",
+    "topicTag": "hazard_prediction"
+  },
+  {
+    "id": "at231",
+    "licenseCategory": [
+      "atGentei"
+    ],
+    "stageTag": "第一段階",
+    "difficulty": 2,
+    "questionText": "道路工事をしている区間を通過するときに注意すべき危険として適切なのはどれか。",
+    "choices": [
+      "工事車両は必ず二輪車に道を譲る",
+      "路面の段差や砂、鉄板などでタイヤが滑ったりハンドルをとられたりするおそれがある",
+      "工事区間は交通整理があるので危険はない",
+      "工事区間では速度を上げて早く通過する方がよい"
+    ],
+    "answer": 1,
+    "explanation": "工事区間は段差・砂・鉄板など二輪車にとって不安定な要素が多い。速度を落とし、急な操作を避ける。",
+    "isTrapQuestion": false,
+    "trapNumberType": "none",
+    "topicTag": "hazard_prediction"
+  },
+  {
+    "id": "at232",
+    "licenseCategory": [
+      "atGentei"
+    ],
+    "stageTag": "第二段階",
+    "difficulty": 4,
+    "questionText": "交差点で右折待ちをしていると、対向車線の大型トラックが止まって「先にどうぞ」と合図をしてくれた。適切な考え方はどれか。",
+    "choices": [
+      "トラックが譲ってくれたのだから、すぐに右折してよい",
+      "トラックの運転者が安全を確認しているので自分の確認は不要である",
+      "合図をもらった以上、他の車両が来ることはない",
+      "トラックの陰から直進してくる二輪車などがいるおそれがあるので、見えない部分を確かめながら少しずつ進む"
+    ],
+    "answer": 3,
+    "explanation": "譲ってくれた車の陰は死角になり、その横を直進してくる二輪車などと衝突する事故が多い。相手の好意に頼らず、自分で安全を確かめる。",
+    "isTrapQuestion": true,
+    "trapNumberType": "hazardRecognition",
+    "topicTag": "hazard_prediction"
+  },
+  {
+    "id": "at233",
+    "licenseCategory": [
+      "atGentei"
+    ],
+    "stageTag": "第一段階",
+    "difficulty": 2,
+    "questionText": "交差点に近づいたとき、横断歩道の歩行者用信号が青の点滅を始めた。予測すべきこととして適切なのはどれか。",
+    "choices": [
+      "歩行者は点滅を見て必ず横断をやめる",
+      "点滅中は横断歩道に誰も入らない",
+      "急いで横断しようと、歩行者が走って横断歩道に入ってくるおそれがある",
+      "歩行者用信号の点滅は車両には関係ない"
+    ],
+    "answer": 2,
+    "explanation": "歩行者用信号の点滅時は駆け込み横断が起こりやすい。横断歩道付近では速度を落とす。",
+    "isTrapQuestion": false,
+    "trapNumberType": "none",
+    "topicTag": "hazard_prediction"
+  },
+  {
+    "id": "at234",
+    "licenseCategory": [
+      "atGentei"
+    ],
+    "stageTag": "第一段階",
+    "difficulty": 2,
+    "questionText": "住宅街の道路で、左側の民家の駐車場に停まっている車のブレーキランプが点灯した。予測すべき危険として適切なのはどれか。",
+    "choices": [
+      "その車が道路に向かって後退してくるおそれがある",
+      "道路を走る車が優先なので相手は出てこない",
+      "二輪車は音が大きいので相手は必ず気付く",
+      "ブレーキランプの点灯は停車中を示すので動かない"
+    ],
+    "answer": 0,
+    "explanation": "駐車場の車のランプ点灯は発進や後退の前触れである。後退する車からは二輪車が見えにくいので、減速して動きを確かめる。",
+    "isTrapQuestion": false,
+    "trapNumberType": "none",
+    "topicTag": "hazard_prediction"
+  },
+  {
+    "id": "at235",
+    "licenseCategory": [
+      "atGentei"
+    ],
+    "stageTag": "第一段階",
+    "difficulty": 2,
+    "questionText": "歩道を走っていた自転車の前方に、歩道上の障害物が見えた。予測すべきこととして適切なのはどれか。",
+    "choices": [
+      "自転車は後方の二輪車を必ず確認してから車道に出る",
+      "自転車が障害物を避けるため、急に車道に出てくるおそれがある",
+      "自転車は歩道を走っているので車道に出てくることはない",
+      "自転車は障害物の手前で必ず止まる"
+    ],
+    "answer": 1,
+    "explanation": "歩道上の障害物や歩行者を避けるため、自転車が後方を確認せずに車道へ出てくることがある。間隔をとり減速する。",
+    "isTrapQuestion": false,
+    "trapNumberType": "none",
+    "topicTag": "hazard_prediction"
+  },
+  {
+    "id": "at236",
+    "licenseCategory": [
+      "atGentei"
+    ],
+    "stageTag": "第一段階",
+    "difficulty": 1,
+    "questionText": "スマートフォンを見ながら歩いている歩行者が道路端にいる。適切な対応はどれか。",
+    "choices": [
+      "歩行者のすぐ横を速い速度で通過する",
+      "警音器を連続して鳴らしながら接近する",
+      "周囲に気付かず急に進路を変えたり道路に出たりするおそれがあるので、速度を落として間隔をとる",
+      "歩行者は二輪車の音で必ず気付くので注意は不要である"
+    ],
+    "answer": 2,
+    "explanation": "注意が散漫な歩行者は予測できない動きをすることがある。減速し、十分な間隔をとって通過する。",
+    "isTrapQuestion": false,
+    "trapNumberType": "none",
+    "topicTag": "hazard_prediction"
+  },
+  {
+    "id": "at237",
+    "licenseCategory": [
+      "atGentei"
+    ],
+    "stageTag": "第一段階",
+    "difficulty": 2,
+    "questionText": "前の車に接近しすぎて走行することの危険として適切なのはどれか。",
+    "choices": [
+      "前方の路面の穴や落下物が見えず、発見したときには避けられないおそれがある",
+      "前の車の風よけになるため、むしろ安全である",
+      "接近していれば前の車の急停止にも対応しやすい",
+      "前方の信号が見やすくなる"
+    ],
+    "answer": 0,
+    "explanation": "車間距離が短いと前車の急停止に対応できないだけでなく、前方の路面状況も見えにくくなる。十分な車間をとる。",
+    "isTrapQuestion": false,
+    "trapNumberType": "none",
+    "topicTag": "hazard_prediction"
+  },
+  {
+    "id": "at238",
+    "licenseCategory": [
+      "atGentei"
+    ],
+    "stageTag": "第二段階",
+    "difficulty": 4,
+    "questionText": "高速道路の加速車線から本線車道に合流しようとしている。予測すべき危険として適切なのはどれか。",
+    "choices": [
+      "本線車道の車は必ず合流車に道を譲る",
+      "本線車道の車は速度が高いため、加速不足で合流すると後続車に追突されるおそれがある",
+      "加速車線では速度を上げずに合流する方が安全である",
+      "本線の車との速度差は大きいほど安全である"
+    ],
+    "answer": 1,
+    "explanation": "本線車道の車との速度差が大きいまま合流すると追突の危険が高い。加速車線で十分加速し、本線の流れと間隔を確かめて合流する。",
+    "isTrapQuestion": false,
+    "trapNumberType": "none",
+    "topicTag": "hazard_prediction"
+  },
+  {
+    "id": "at239",
+    "licenseCategory": [
+      "atGentei"
+    ],
+    "stageTag": "第二段階",
+    "difficulty": 4,
+    "questionText": "高速道路を走行中、前方の見通しのよい区間の先で車が渋滞しているのが見えた。適切な対応はどれか。",
+    "choices": [
+      "早めに減速し、ブレーキを数回に分けて後続車に知らせ、渋滞の最後尾での追突に備える",
+      "渋滞の直前まで速度を保ち、最後尾で一気に止まる",
+      "後続車に知らせる必要はないので自分だけ減速する",
+      "路肩を使って渋滞の先頭まで進む"
+    ],
+    "answer": 0,
+    "explanation": "高速道路の渋滞最後尾は追突事故が起こりやすい。早めに減速し、ブレーキ灯の点滅やハザードランプなどで後続車に知らせる。",
+    "isTrapQuestion": false,
+    "trapNumberType": "none",
+    "topicTag": "hazard_prediction"
+  },
+  {
+    "id": "at240",
+    "licenseCategory": [
+      "atGentei"
+    ],
+    "stageTag": "第一段階",
+    "difficulty": 1,
+    "questionText": "長時間走り続けて眠気を感じ始めた。適切な対応はどれか。",
+    "choices": [
+      "安全な場所で休憩をとり、眠気が取れてから運転を再開する",
+      "速度を上げて早く目的地に着くようにする",
+      "音楽を大音量で聞きながら走る",
+      "ヘルメットのシールドを開けて風を当てながら走り続ける"
+    ],
+    "answer": 0,
+    "explanation": "眠気や疲労は判断や操作を遅らせる。無理をせず早めに休憩をとる。",
+    "isTrapQuestion": false,
+    "trapNumberType": "none",
+    "topicTag": "hazard_prediction"
+  },
+  {
+    "id": "at241",
+    "licenseCategory": [
+      "atGentei"
+    ],
+    "stageTag": "第二段階",
+    "difficulty": 3,
+    "questionText": "片側が崖になっている狭い山道で対向車とすれ違うときの注意点として適切なのはどれか。",
+    "choices": [
+      "警音器を鳴らし続けて相手を下がらせる",
+      "路肩が崩れやすいことがあるので、路肩に寄りすぎず、必要に応じて安全な場所で停止して行き違う",
+      "対向車に道を譲る必要はない",
+      "崖側の路肩ぎりぎりに寄って速度を落とさず行き違う"
+    ],
+    "answer": 1,
+    "explanation": "山道の路肩はもろいことがある。寄りすぎに注意し、行き違いが難しければ待避所などで止まって譲り合う。",
+    "isTrapQuestion": false,
+    "trapNumberType": "none",
+    "topicTag": "hazard_prediction"
+  },
+  {
+    "id": "at242",
+    "licenseCategory": [
+      "atGentei"
+    ],
+    "stageTag": "第一段階",
+    "difficulty": 1,
+    "questionText": "緊急自動車のサイレンが聞こえるが、どの方向から来るのか分からない。交差点に近づいているときの対応として適切なのはどれか。",
+    "choices": [
+      "速度を落として周囲を確認し、緊急自動車の進路を妨げないよう交差点を避けて左に寄れるよう準備する",
+      "交差点の中央で停止して待つ",
+      "方向が分からないのでそのまま走り続ける",
+      "サイレンの方向が分かるまで速度を上げて交差点を通過する"
+    ],
+    "answer": 0,
+    "explanation": "サイレンが聞こえたら減速して周囲をよく確認し、交差点付近では交差点を避けて左側に寄り一時停止できるよう備える。",
+    "isTrapQuestion": false,
+    "trapNumberType": "none",
+    "topicTag": "hazard_prediction"
+  },
+  {
+    "id": "at243",
+    "licenseCategory": [
+      "atGentei"
+    ],
+    "stageTag": "第一段階",
+    "difficulty": 2,
+    "questionText": "交差点を右折して横断歩道を通過しようとしている。とくに注意すべき危険として適切なのはどれか。",
+    "choices": [
+      "右折時は対向車だけに注意すればよい",
+      "右折した先の横断歩道を渡っている歩行者や自転車と交錯するおそれがある",
+      "横断歩道の歩行者は右折車を見て必ず止まる",
+      "右折先の横断歩道は信号で守られているので確認は不要である"
+    ],
+    "answer": 1,
+    "explanation": "右折時は対向車に気をとられて、曲がった先の横断歩道を渡る歩行者や自転車を見落としやすい。",
+    "isTrapQuestion": false,
+    "trapNumberType": "none",
+    "topicTag": "hazard_prediction"
+  },
+  {
+    "id": "at244",
+    "licenseCategory": [
+      "atGentei"
+    ],
+    "stageTag": "第一段階",
+    "difficulty": 1,
+    "questionText": "夕方、西日が正面から差し込む道路を走行している。注意すべき危険として適切なのはどれか。",
+    "choices": [
+      "西日で路面が乾くので制動距離が短くなる",
+      "逆光のときは周囲の車からも自車がよく見える",
+      "まぶしさで信号や前方の歩行者が見えにくくなり、発見が遅れるおそれがある",
+      "明るいので前照灯を消していても周囲から見えやすい"
+    ],
+    "answer": 2,
+    "explanation": "逆光ではまぶしさで信号や歩行者が見えにくく、対向車からも二輪車が見えにくい。速度を落とし、慎重に確認する。",
+    "isTrapQuestion": true,
+    "trapNumberType": "weatherSafety",
+    "topicTag": "hazard_prediction"
+  },
+  {
+    "id": "at245",
+    "licenseCategory": [
+      "atGentei"
+    ],
+    "stageTag": "第二段階",
+    "difficulty": 3,
+    "questionText": "昼間、明るい道路から長いトンネルに入るときに注意すべきこととして適切なのはどれか。",
+    "choices": [
+      "トンネルに入るとすぐに目が慣れるので減速は不要である",
+      "トンネル内は明るさが一定なので速度を上げてもよい",
+      "入った直後は目が暗さに慣れず見えにくいので、手前で速度を落としてから進入する",
+      "トンネル内では前照灯をつける必要はない"
+    ],
+    "answer": 2,
+    "explanation": "明るい場所から暗い場所に入ると目が慣れるまで時間がかかる（暗順応）。進入前に減速し、前照灯をつけて走る。",
+    "isTrapQuestion": false,
+    "trapNumberType": "none",
+    "topicTag": "hazard_prediction"
+  },
+  {
+    "id": "at246",
+    "licenseCategory": [
+      "atGentei"
+    ],
+    "stageTag": "第一段階",
+    "difficulty": 1,
+    "questionText": "見通しの悪いT字路の角にカーブミラーが設置されている。カーブミラーの使い方として適切なのはどれか。",
+    "choices": [
+      "ミラーに何も映っていなければ減速せずに進んでよい",
+      "ミラーに映る車は実際より近くにいる",
+      "ミラーがある交差点では徐行の必要はない",
+      "ミラーに車が映っていなくても、死角や見えにくい車がある可能性を考えて慎重に進む"
+    ],
+    "answer": 3,
+    "explanation": "カーブミラーの像は小さく、距離や速度が分かりにくい。また映らない範囲もあるため、ミラーだけに頼らず安全確認を行う。",
+    "isTrapQuestion": true,
+    "trapNumberType": "other",
+    "topicTag": "hazard_prediction"
+  },
+  {
+    "id": "at247",
+    "licenseCategory": [
+      "atGentei"
+    ],
+    "stageTag": "第二段階",
+    "difficulty": 4,
+    "questionText": "信号待ちで停止している車列の左側を、二輪車でゆっくり前へ進もうとしている。予測すべき危険として最も適切なのはどれか。",
+    "choices": [
+      "信号待ちの車からは二輪車がよく見えている",
+      "車列の左側は二輪車の専用スペースなので他の車は入ってこない",
+      "車列の車が左折のため急に左に寄ったり、同乗者がドアを開けたりするおそれがある",
+      "停止している車は動かないので安全に前へ出られる"
+    ],
+    "answer": 2,
+    "explanation": "停止中の車列の左側は、左折車の巻き込みや急なドア開放、歩行者の横断などの危険がある。無理に前へ出ない。",
+    "isTrapQuestion": true,
+    "trapNumberType": "other",
+    "topicTag": "hazard_prediction"
+  },
+  {
+    "id": "at248",
+    "licenseCategory": [
+      "atGentei"
+    ],
+    "stageTag": "第一段階",
+    "difficulty": 1,
+    "questionText": "前方を高齢者が乗る自転車がふらつきながら走っている。適切な対応はどれか。",
+    "choices": [
+      "すぐ横をすり抜けて追い越す",
+      "自転車の後ろに接近して存在を知らせる",
+      "自転車が急に進路を変えることを考え、十分な間隔をとるか、速度を落として後方で様子を見る",
+      "警音器を鳴らして道の端に寄せさせる"
+    ],
+    "answer": 2,
+    "explanation": "ふらつく自転車は予測しにくい動きをする。十分な側方間隔をとれないときは、無理に追い越さず後方で待つ。",
+    "isTrapQuestion": false,
+    "trapNumberType": "none",
+    "topicTag": "hazard_prediction"
+  },
+  {
+    "id": "at249",
+    "licenseCategory": [
+      "atGentei"
+    ],
+    "stageTag": "第一段階",
+    "difficulty": 2,
+    "questionText": "後続車が車間を詰めて追い上げてきた。適切な対応はどれか。",
+    "choices": [
+      "無理に速度を上げず、安全な場所で左に寄るなどして先に行かせる",
+      "急ブレーキをかけて後続車に注意を促す",
+      "速度を上げて後続車を引き離す",
+      "道路の中央に寄って追い越されないようにする"
+    ],
+    "answer": 0,
+    "explanation": "後続車に追い上げられても張り合わず、安全な場所で進路を譲る。急ブレーキは追突を招き危険である。",
+    "isTrapQuestion": false,
+    "trapNumberType": "none",
+    "topicTag": "hazard_prediction"
+  },
+  {
+    "id": "at250",
+    "licenseCategory": [
+      "atGentei"
+    ],
+    "stageTag": "第二段階",
+    "difficulty": 4,
+    "questionText": "交差点で右折待ちをしていると、対向車が前照灯を一瞬点滅させた（パッシング）。適切な考え方はどれか。",
+    "choices": [
+      "パッシングは必ず「止まれ」という意味なので、その場で待ち続ける",
+      "パッシングは必ず「先に行ってよい」という意味なので、すぐ右折する",
+      "パッシングをされたら警音器で応答しなければならない",
+      "パッシングの意味は状況によって異なるので、先に行ってよいと決めつけず相手の動きを確かめる"
+    ],
+    "answer": 3,
+    "explanation": "パッシングは「お先にどうぞ」の場合も「こちらが先に行く」の場合もある。意味を決めつけず、相手の動きと周囲の安全を確認してから行動する。",
+    "isTrapQuestion": true,
+    "trapNumberType": "other",
+    "topicTag": "hazard_prediction"
+  },
+  {
+    "id": "at251",
+    "licenseCategory": [
+      "atGentei"
+    ],
+    "stageTag": "第一段階",
+    "difficulty": 2,
+    "questionText": "夕暮れ時の走行で適切な対応はどれか。",
+    "choices": [
+      "周囲が暗くなり始めたら早めに前照灯をつけ、自車の存在を知らせる",
+      "完全に暗くなるまで前照灯はつけない方がよい",
+      "夕暮れ時は目が慣れているので見落としは起きにくい",
+      "夕暮れ時は歩行者が少ないので速度を上げてよい"
+    ],
+    "answer": 0,
+    "explanation": "夕暮れ時は見えにくく、他の車や歩行者からも二輪車が見落とされやすい。早めのライト点灯で存在を知らせる。",
+    "isTrapQuestion": false,
+    "trapNumberType": "none",
+    "topicTag": "hazard_prediction"
+  },
+  {
+    "id": "at252",
+    "licenseCategory": [
+      "atGentei"
+    ],
+    "stageTag": "第二段階",
+    "difficulty": 3,
+    "questionText": "上り坂の頂上付近に差しかかったが、その先の道路の状況が見えない。適切な運転方法はどれか。",
+    "choices": [
+      "中央線寄りを走って見通しを確保する",
+      "見えない部分には何もないと考えて同じ速度で進む",
+      "頂上の先に停止車両や歩行者がいる可能性を考え、速度を落として進む",
+      "坂の頂上を越えたらすぐ下りなので加速しておく"
+    ],
+    "answer": 2,
+    "explanation": "上り坂の頂上付近は先が見えず、その先に渋滞や障害物があることもある。徐行して進み、追越しもしない。",
+    "isTrapQuestion": false,
+    "trapNumberType": "none",
+    "topicTag": "hazard_prediction"
+  },
+  {
+    "id": "at253",
+    "licenseCategory": [
+      "atGentei"
+    ],
+    "stageTag": "第一段階",
+    "difficulty": 1,
+    "questionText": "スクーター型AT車のエンジンを始動するときの操作として適切なのはどれか。",
+    "choices": [
+      "ブレーキはかけずに、動き出したらブレーキをかける",
+      "またがらずに車体の横に立ってスロットルを開けながら始動する",
+      "ブレーキレバーを握って車輪が動かないようにしてから始動する",
+      "スロットルを大きく開けた状態で始動する"
+    ],
+    "answer": 2,
+    "explanation": "AT車は始動直後にスロットルが開いていると急に動き出すことがある。ブレーキをかけ、スロットルが閉じていることを確かめてから始動する。",
+    "isTrapQuestion": false,
+    "trapNumberType": "none",
+    "topicTag": "operation"
+  },
+  {
+    "id": "at254",
+    "licenseCategory": [
+      "atGentei"
+    ],
+    "stageTag": "第一段階",
+    "difficulty": 2,
+    "questionText": "サイドスタンドを立てたままAT二輪車を発進させようとした場合について正しいのはどれか。",
+    "choices": [
+      "AT車にはサイドスタンドの払い忘れの危険はない",
+      "サイドスタンドを立てたままの方が停止時に安定する",
+      "サイドスタンドは走り出せば自動的に戻るので気にしなくてよい",
+      "スタンドを払わずに発進すると、カーブなどでスタンドが路面に接触して転倒するおそれがある"
+    ],
+    "answer": 3,
+    "explanation": "サイドスタンドの払い忘れは転倒事故の原因になる。発進前に必ずスタンドが戻っていることを確認する（安全装置でエンジンが止まる車種もある）。",
+    "isTrapQuestion": false,
+    "trapNumberType": "none",
+    "topicTag": "operation"
+  },
+  {
+    "id": "at255",
+    "licenseCategory": [
+      "atGentei"
+    ],
+    "stageTag": "第一段階",
+    "difficulty": 2,
+    "questionText": "センタースタンドを立てたAT二輪車をスタンドから降ろすときの方法として適切なのはどれか。",
+    "choices": [
+      "エンジンをかけてスロットルを開け、走り出す力で降ろす",
+      "後輪を持ち上げて横に倒すように降ろす",
+      "車体に乗ったまま後ろへ体重をかけて降ろす",
+      "ハンドルを両手で持ち、車体を前方へ押し出すようにして降ろす"
+    ],
+    "answer": 3,
+    "explanation": "センタースタンドから降ろすときはハンドルを持って車体を前に押し出す。降ろした直後に車体が動くのでブレーキをかけられるようにしておく。",
+    "isTrapQuestion": false,
+    "trapNumberType": "none",
+    "topicTag": "operation"
+  },
+  {
+    "id": "at256",
+    "licenseCategory": [
+      "atGentei"
+    ],
+    "stageTag": "第一段階",
+    "difficulty": 1,
+    "questionText": "AT二輪車を押して歩く（取り回す）ときの方法として適切なのはどれか。",
+    "choices": [
+      "後ろから荷台を押して進む",
+      "車体の右側に立ち、片手でハンドルを持って押す",
+      "エンジンを止め、車体の左側に立ってハンドルを両手で持ち、車体をやや自分側に傾けて押す",
+      "エンジンをかけたままスロットルを少し開けて歩く"
+    ],
+    "answer": 2,
+    "explanation": "取り回しはエンジンを止めて行い、車体の左側に立ってハンドルを両手で持つ。AT車はエンジンがかかったままスロットルに触れると急発進するおそれがある。",
+    "isTrapQuestion": false,
+    "trapNumberType": "none",
+    "topicTag": "operation"
+  },
+  {
+    "id": "at257",
+    "licenseCategory": [
+      "atGentei"
+    ],
+    "stageTag": "第一段階",
+    "difficulty": 1,
+    "questionText": "二輪車にまたがるときの手順として適切なのはどれか。",
+    "choices": [
+      "後方確認は発進時に行えばよいので、まず車体の右側からまたがる",
+      "エンジンをかけ、スロットルを開けてからまたがる",
+      "車体を大きく右に傾けてから飛び乗る",
+      "後方の安全を確かめ、ブレーキをかけて車体を安定させてから、車体の左側からまたがる"
+    ],
+    "answer": 3,
+    "explanation": "乗車は後方の安全を確認し、ブレーキで車体を固定して左側から行う。",
+    "isTrapQuestion": false,
+    "trapNumberType": "none",
+    "topicTag": "operation"
+  },
+  {
+    "id": "at258",
+    "licenseCategory": [
+      "atGentei"
+    ],
+    "stageTag": "第一段階",
+    "difficulty": 2,
+    "questionText": "スクーター型AT車で正しい乗車姿勢をとるためのポイントとして適切なのはどれか。",
+    "choices": [
+      "片足を路面近くに下ろしてバランスをとる",
+      "ハンドルに体重を預けて腕をまっすぐ伸ばす",
+      "足をフロアボードの前方に投げ出してくつろいだ姿勢をとる",
+      "足をフロアボードにしっかり置いて下半身を安定させ、肘を軽く曲げて上半身の力を抜く"
+    ],
+    "answer": 3,
+    "explanation": "スクーター型はニーグリップがしにくいため、足をフロアボードに置いて下半身を安定させ、腕の力を抜いてハンドル操作をしやすくする。",
+    "isTrapQuestion": false,
+    "trapNumberType": "none",
+    "topicTag": "operation"
+  },
+  {
+    "id": "at259",
+    "licenseCategory": [
+      "atGentei"
+    ],
+    "stageTag": "第一段階",
+    "difficulty": 1,
+    "questionText": "夏の暑い日に二輪車で出かける。服装の選び方として適切なのはどれか。",
+    "choices": [
+      "グローブは操作感が悪くなるので着けない",
+      "すそが広がった動きやすいズボンをはく",
+      "体の露出が少ない長袖・長ズボンにグローブを着け、くるぶしが隠れる靴をはく",
+      "夏は半袖・半ズボンとサンダルで涼しくする"
+    ],
+    "answer": 2,
+    "explanation": "転倒時のけがを軽くするため、露出の少ない服装とグローブ、足を保護する靴を着用する。すその広いズボンは巻き込みの危険がある。",
+    "isTrapQuestion": false,
+    "trapNumberType": "none",
+    "topicTag": "operation"
+  },
+  {
+    "id": "at260",
+    "licenseCategory": [
+      "atGentei"
+    ],
+    "stageTag": "第一段階",
+    "difficulty": 1,
+    "questionText": "出発前にヘルメットをかぶろうとしている。事故のときに頭を守るための着用の仕方として正しいのはどれか。",
+    "choices": [
+      "頭に合ったサイズのものを深くかぶり、あごひもを確実に締める",
+      "あごひもは苦しいので緩めておく",
+      "近所を走るときはあごひもを締めなくてよい",
+      "少し大きめのものを浅くかぶる"
+    ],
+    "answer": 0,
+    "explanation": "ヘルメットはサイズの合ったものを正しくかぶり、あごひもを確実に締めないと、事故のときに脱げて役に立たない。",
+    "isTrapQuestion": false,
+    "trapNumberType": "none",
+    "topicTag": "operation"
+  },
+  {
+    "id": "at261",
+    "licenseCategory": [
+      "atGentei"
+    ],
+    "stageTag": "第一段階",
+    "difficulty": 1,
+    "questionText": "バックミラーの調整方法として適切なのはどれか。",
+    "choices": [
+      "車体から降りた状態で調整する",
+      "走行中に片手で調整する",
+      "運転姿勢をとった状態で、後方の様子がよく見えるように調整する",
+      "自分の腕や肩が大きく映るように調整する"
+    ],
+    "answer": 2,
+    "explanation": "ミラーは乗車して運転姿勢をとった状態で、後方がよく見えるよう走行前に調整する。",
+    "isTrapQuestion": false,
+    "trapNumberType": "none",
+    "topicTag": "operation"
+  },
+  {
+    "id": "at262",
+    "licenseCategory": [
+      "atGentei"
+    ],
+    "stageTag": "第二段階",
+    "difficulty": 3,
+    "questionText": "渋滞などで極低速走行を続けるとき、AT車で速度を安定させる方法として適切なのはどれか。",
+    "choices": [
+      "スロットルを一定に保ちながら後輪ブレーキを軽くかけて速度を調整する",
+      "前輪ブレーキだけを強くかけ続ける",
+      "エンジンを止めて惰性で進む",
+      "スロットルを開け閉めして断続的に加速と停止を繰り返す"
+    ],
+    "answer": 0,
+    "explanation": "AT車には半クラッチがないため、極低速ではスロットルを一定に保ち後輪ブレーキで速度を調整すると車体が安定しやすい。",
+    "isTrapQuestion": false,
+    "trapNumberType": "none",
+    "topicTag": "operation"
+  },
+  {
+    "id": "at263",
+    "licenseCategory": [
+      "atGentei"
+    ],
+    "stageTag": "第一段階",
+    "difficulty": 3,
+    "questionText": "雨で濡れた路面でブレーキをかけるときの操作として適切なのはどれか。",
+    "choices": [
+      "後輪ブレーキだけを一気に強くかける",
+      "乾いた路面と同じように前輪ブレーキを強くかける",
+      "乾いた路面のときよりも早めに、前輪ブレーキをやや控えめにして前後輪を穏やかにかける",
+      "濡れた路面ではブレーキを使わずエンジンブレーキだけで止まる"
+    ],
+    "answer": 2,
+    "explanation": "濡れた路面では車輪がロックしやすいため、早めに穏やかにブレーキをかけ、前輪ブレーキの割合を乾燥時より控えめにする。",
+    "isTrapQuestion": true,
+    "trapNumberType": "brakeTechnique",
+    "topicTag": "operation"
+  },
+  {
+    "id": "at264",
+    "licenseCategory": [
+      "atGentei"
+    ],
+    "stageTag": "第一段階",
+    "difficulty": 2,
+    "questionText": "停止するときにブレーキを数回に分けてかける理由として正しいのはどれか。",
+    "choices": [
+      "エンジンの回転を上げるため",
+      "制動灯を点滅させて後続車に停止することを知らせ、追突を防ぐため",
+      "ブレーキの摩耗を防ぐため",
+      "前輪を浮かせて止まりやすくするため"
+    ],
+    "answer": 1,
+    "explanation": "ブレーキを数回に分けて使うと制動灯が点滅し、後続車の注意をひいて追突を防ぐ効果がある。また車輪のロックも防ぎやすい。",
+    "isTrapQuestion": false,
+    "trapNumberType": "none",
+    "topicTag": "operation"
+  },
+  {
+    "id": "at265",
+    "licenseCategory": [
+      "atGentei"
+    ],
+    "stageTag": "第一段階",
+    "difficulty": 2,
+    "questionText": "カーブを安全に通過するための速度調整の方法として適切なのはどれか。",
+    "choices": [
+      "カーブの手前の直線部分で十分に減速し、カーブ中は急ブレーキをかけない",
+      "カーブに入ってから強くブレーキをかけて減速する",
+      "カーブの途中で速度を大きく上げて一気に抜ける",
+      "カーブではブレーキもスロットルも操作してはならない"
+    ],
+    "answer": 0,
+    "explanation": "カーブ中の急ブレーキはスリップや転倒の原因になる。車体がまっすぐな手前の直線で減速を済ませる。",
+    "isTrapQuestion": false,
+    "trapNumberType": "none",
+    "topicTag": "operation"
+  },
+  {
+    "id": "at266",
+    "licenseCategory": [
+      "atGentei"
+    ],
+    "stageTag": "第一段階",
+    "difficulty": 1,
+    "questionText": "二輪車でカーブを曲がるときの基本的な乗り方（リーンウィズ）として正しいのはどれか。",
+    "choices": [
+      "車体と体を同じ角度に傾ける",
+      "車体を傾けずに体だけを内側に傾ける",
+      "体を車体より外側に傾ける",
+      "体を起こしたままハンドルだけで曲がる"
+    ],
+    "answer": 0,
+    "explanation": "リーンウィズは車体と体を一体にして同じ角度に傾ける基本的な曲がり方である。",
+    "isTrapQuestion": false,
+    "trapNumberType": "none",
+    "topicTag": "operation"
+  },
+  {
+    "id": "at267",
+    "licenseCategory": [
+      "atGentei"
+    ],
+    "stageTag": "第一段階",
+    "difficulty": 2,
+    "questionText": "カーブの走行で「スローイン・ファストアウト」と呼ばれる考え方として正しいのはどれか。",
+    "choices": [
+      "カーブ全体を一定の高い速度で走り抜ける",
+      "カーブの手前で十分減速して進入し、出口に向けて車体を起こしながら徐々に加速する",
+      "カーブの途中で一度停止してから加速する",
+      "カーブの入口で加速し、出口で急減速する"
+    ],
+    "answer": 1,
+    "explanation": "カーブは入口で速度を落とし、出口が見えてから車体を起こしつつ少しずつ加速するのが安全な走り方である。",
+    "isTrapQuestion": false,
+    "trapNumberType": "none",
+    "topicTag": "operation"
+  },
+  {
+    "id": "at268",
+    "licenseCategory": [
+      "atGentei"
+    ],
+    "stageTag": "第二段階",
+    "difficulty": 4,
+    "questionText": "舗装が途切れ、砂利が敷かれた道がしばらく続いている。この区間を走るときの操作として適切なのはどれか。",
+    "choices": [
+      "ハンドルを強く押さえつけて進路を固定する",
+      "低めの速度でスロットルを一定に保ち、ハンドルを強く握りしめず、急な操作を避ける",
+      "前輪ブレーキを強くかけながら進む",
+      "速度を上げて一気に通過すると安定する"
+    ],
+    "answer": 1,
+    "explanation": "砂利道ではタイヤが滑りやすい。低速でスロットルを一定にし、ハンドルは軽く持って車体の動きに任せ、急ブレーキ・急ハンドルを避ける。",
+    "isTrapQuestion": false,
+    "trapNumberType": "none",
+    "topicTag": "operation"
+  },
+  {
+    "id": "at269",
+    "licenseCategory": [
+      "atGentei"
+    ],
+    "stageTag": "第一段階",
+    "difficulty": 2,
+    "questionText": "AT車で上り坂を走行するときの操作として適切なのはどれか。",
+    "choices": [
+      "上り坂ではスロットルを戻して惰性で登る",
+      "上り坂では車体を左右に振って勢いをつける",
+      "上り坂では後輪ブレーキをかけながら登る",
+      "速度が落ちないようにスロットルを適度に開けて、一定の速度を保つ"
+    ],
+    "answer": 3,
+    "explanation": "AT車はスロットル操作だけで変速されるため、上り坂では速度が落ちないようスロットルを適度に開けて速度を保つ。",
+    "isTrapQuestion": false,
+    "trapNumberType": "none",
+    "topicTag": "operation"
+  },
+  {
+    "id": "at270",
+    "licenseCategory": [
+      "atGentei"
+    ],
+    "stageTag": "第二段階",
+    "difficulty": 4,
+    "questionText": "山道の長い下り坂で、ブレーキレバーを握り続けたまま下っていた。このような使い方で起こるおそれのある現象として正しいのはどれか。",
+    "choices": [
+      "ブレーキが冷えて効きが良くなりすぎる",
+      "エンジンの回転が上がって速度が自然に落ちる",
+      "ブレーキが過熱して効きが悪くなるフェード現象が起こることがある",
+      "タイヤの空気圧が下がって制動距離が短くなる"
+    ],
+    "answer": 2,
+    "explanation": "ブレーキを長く使い続けると過熱して効きが悪くなる。AT車はエンジンブレーキが弱めなので、坂の手前で減速し前後ブレーキを併用して断続的に使う。",
+    "isTrapQuestion": true,
+    "trapNumberType": "brakeTechnique",
+    "topicTag": "operation"
+  },
+  {
+    "id": "at271",
+    "licenseCategory": [
+      "atGentei"
+    ],
+    "stageTag": "第一段階",
+    "difficulty": 1,
+    "questionText": "幅の狭い直線コース（一本橋など）を低速で安定して走るためのポイントとして適切なのはどれか。",
+    "choices": [
+      "足元の前輪をじっと見ながら走る",
+      "スロットルを大きく開け閉めして速度を調整する",
+      "視線を遠くに向け、スロットルを一定に保って後輪ブレーキで速度を調整する",
+      "ハンドルを強く握りしめて車体を固定する"
+    ],
+    "answer": 2,
+    "explanation": "低速走行では視線を先に向けるとバランスがとりやすい。スロットルを一定にして後輪ブレーキで速度を調整する。",
+    "isTrapQuestion": false,
+    "trapNumberType": "none",
+    "topicTag": "operation"
+  },
+  {
+    "id": "at272",
+    "licenseCategory": [
+      "atGentei"
+    ],
+    "stageTag": "第二段階",
+    "difficulty": 4,
+    "questionText": "連続する障害物を左右に避けて進むスラロームの操作として適切なのはどれか。",
+    "choices": [
+      "ハンドルだけを大きく切って車体は傾けない",
+      "車体の傾きを使って向きを変え、スロットルとブレーキでリズムよく速度を調整する",
+      "スロットルを全開にしたまま進む",
+      "障害物ごとに停止して向きを変える"
+    ],
+    "answer": 1,
+    "explanation": "スラロームでは車体を左右に傾けて進路を変え、スロットルの開閉とブレーキでリズムよく速度を調整する。",
+    "isTrapQuestion": false,
+    "trapNumberType": "none",
+    "topicTag": "operation"
+  },
+  {
+    "id": "at273",
+    "licenseCategory": [
+      "atGentei"
+    ],
+    "stageTag": "第一段階",
+    "difficulty": 1,
+    "questionText": "直角に曲がる狭い道（クランク）を通過するときの操作として適切なのはどれか。",
+    "choices": [
+      "十分に減速し、曲がる先へ視線を向けながら低速で進む",
+      "速度を上げて勢いで曲がる",
+      "足を地面について引きずりながら曲がる",
+      "前輪の真下を見ながらハンドルを切る"
+    ],
+    "answer": 0,
+    "explanation": "狭い道の曲がり角では、進入前に減速し、視線を曲がる先に向けて低速で操作する。",
+    "isTrapQuestion": false,
+    "trapNumberType": "none",
+    "topicTag": "operation"
+  },
+  {
+    "id": "at274",
+    "licenseCategory": [
+      "atGentei"
+    ],
+    "stageTag": "第一段階",
+    "difficulty": 2,
+    "questionText": "道路の左端に止めていた二輪車で走り出そうとしている。発進直前の安全確認として適切なのはどれか。",
+    "choices": [
+      "ミラーの確認だけで十分である",
+      "ミラーで後方を確認し、最後に右後方を直接目視で確かめてから合図をして発進する",
+      "合図を出せば後方の車が止まってくれるので確認は不要である",
+      "前方だけを確認すれば後方確認は不要である"
+    ],
+    "answer": 1,
+    "explanation": "発進時は右後方から来る車両との事故が多い。ミラーに加え、死角になる右後方を目視で確かめる。",
+    "isTrapQuestion": false,
+    "trapNumberType": "none",
+    "topicTag": "operation"
+  },
+  {
+    "id": "at275",
+    "licenseCategory": [
+      "atGentei"
+    ],
+    "stageTag": "第一段階",
+    "difficulty": 1,
+    "questionText": "多くの二輪車の方向指示器について注意すべき点として正しいのはどれか。",
+    "choices": [
+      "曲がり終わってもスイッチが自動で戻らないことが多いので、手で戻す必要がある",
+      "曲がり終われば必ず自動で消える",
+      "方向指示器は昼間は使わなくてよい",
+      "つけたままにしておいても周囲の誤解は生まない"
+    ],
+    "answer": 0,
+    "explanation": "二輪車の多くは方向指示器が自動で戻らない。消し忘れは周囲に誤解を与えて危険なので、行為が終わったら確実に消す。",
+    "isTrapQuestion": false,
+    "trapNumberType": "none",
+    "topicTag": "operation"
+  },
+  {
+    "id": "at276",
+    "licenseCategory": [
+      "atGentei"
+    ],
+    "stageTag": "第一段階",
+    "difficulty": 2,
+    "questionText": "駐輪場で自分の二輪車が横倒しになっていた。車体を引き起こす方法として適切なのはどれか。",
+    "choices": [
+      "腰を伸ばしたまま上から持ち上げる",
+      "エンジンをかけたまま、スロットルを開けて起こす",
+      "エンジンを止め、腰を落として脚の力を使い、車体を体に引き寄せるようにして起こす",
+      "腕の力だけで一気に引き上げる"
+    ],
+    "answer": 2,
+    "explanation": "車体を起こすときはエンジンを止め、腰を落として脚の力を使う。腕だけで起こそうとすると腰を痛めたり再び倒したりする。",
+    "isTrapQuestion": false,
+    "trapNumberType": "none",
+    "topicTag": "operation"
+  },
+  {
+    "id": "at277",
+    "licenseCategory": [
+      "atGentei"
+    ],
+    "stageTag": "第二段階",
+    "difficulty": 3,
+    "questionText": "高速道路など速度の高い道路で、走行風の影響を小さくする乗り方として適切なのはどれか。",
+    "choices": [
+      "足をステップから下ろして重心を下げる",
+      "上体を起こして風を正面から受ける",
+      "ハンドルから片手を離して体を支える",
+      "上体をやや前に傾け、ニーグリップなどで下半身を安定させる"
+    ],
+    "answer": 3,
+    "explanation": "高速走行では上体を少し前に倒して風の抵抗を減らし、下半身でしっかり車体を支える。スクーターでは足をフロアに踏ん張って安定させる。",
+    "isTrapQuestion": false,
+    "trapNumberType": "none",
+    "topicTag": "operation"
+  },
+  {
+    "id": "at278",
+    "licenseCategory": [
+      "atGentei"
+    ],
+    "stageTag": "第二段階",
+    "difficulty": 3,
+    "questionText": "高速道路で車線を変更するときの手順として適切なのはどれか。",
+    "choices": [
+      "一度に2つ以上の車線をまたいで移動する",
+      "合図と同時に急ハンドルで移動する",
+      "ミラーと目視で後方を確認し、約3秒前に合図を出して、緩やかに進路を変える",
+      "ミラーだけを見て合図は出さずに移動する"
+    ],
+    "answer": 2,
+    "explanation": "高速道路では後続車の速度が高いため、十分な確認と早めの合図のうえで緩やかに進路を変える。",
+    "isTrapQuestion": false,
+    "trapNumberType": "none",
+    "topicTag": "operation"
+  },
+  {
+    "id": "at279",
+    "licenseCategory": [
+      "atGentei"
+    ],
+    "stageTag": "第一段階",
+    "difficulty": 1,
+    "questionText": "ハンドルの握り方として適切なのはどれか。",
+    "choices": [
+      "グリップの端を軽く握り、手首を下げ気味にして肘を軽く曲げる",
+      "片手をハンドルから離しておく",
+      "肘をまっすぐ伸ばして腕を突っ張る",
+      "グリップの内側を力いっぱい握りしめる"
+    ],
+    "answer": 0,
+    "explanation": "ハンドルは力を入れすぎずに握り、肘を軽く曲げておくと路面からの衝撃を吸収し、的確な操作ができる。",
+    "isTrapQuestion": false,
+    "trapNumberType": "none",
+    "topicTag": "operation"
+  },
+  {
+    "id": "at280",
+    "licenseCategory": [
+      "atGentei"
+    ],
+    "stageTag": "第二段階",
+    "difficulty": 4,
+    "questionText": "ABS（アンチロック・ブレーキ・システム）付きの二輪車に乗り換えた。ABSについての理解として正しいのはどれか。",
+    "choices": [
+      "ABS付きの車両ではカーブ中に急ブレーキをかけても安全である",
+      "ABSがあればどんな路面でも転倒することはない",
+      "ABS付きなら車間距離を短くしてもよい",
+      "ABSは車輪のロックを抑える装置で、制動距離が必ず短くなるわけではないので過信しない"
+    ],
+    "answer": 3,
+    "explanation": "ABSは急ブレーキ時の車輪のロックを防ぐ装置だが、砂利道や濡れた路面などでは制動距離が長くなることもある。基本的な安全運転は変わらない。",
+    "isTrapQuestion": true,
+    "trapNumberType": "brakeTechnique",
+    "topicTag": "operation"
+  },
+  {
+    "id": "at281",
+    "licenseCategory": [
+      "atGentei"
+    ],
+    "stageTag": "第二段階",
+    "difficulty": 4,
+    "questionText": "前後輪連動ブレーキ（コンビブレーキなど）を装備したAT二輪車について正しいのはどれか。",
+    "choices": [
+      "前輪ブレーキを使うと後輪ブレーキが解除される",
+      "連動ブレーキ付きの車両は雨の日でも制動距離が変わらない",
+      "後輪ブレーキのレバーを操作すると、前輪ブレーキも同時に一部作動する仕組みがある",
+      "連動ブレーキ付きの車両はブレーキの点検が不要である"
+    ],
+    "answer": 2,
+    "explanation": "前後連動ブレーキは、主に後輪ブレーキ側の操作で前輪ブレーキも作動させ、前後のバランスよく制動できるようにした装置である。仕組みを理解して過信せずに使う。",
+    "isTrapQuestion": true,
+    "trapNumberType": "other",
+    "topicTag": "operation"
+  },
+  {
+    "id": "at282",
+    "licenseCategory": [
+      "atGentei"
+    ],
+    "stageTag": "第一段階",
+    "difficulty": 1,
+    "questionText": "前方の障害物を避けるために進路を変えるときの操作として適切なのはどれか。",
+    "choices": [
+      "障害物の直前で急ブレーキと急ハンドルを同時に行う",
+      "速度を上げて勢いで横をすり抜ける",
+      "障害物の直前で急ハンドルを切ってよける",
+      "早めに発見して減速し、合図と安全確認をしたうえで緩やかに進路を変える"
+    ],
+    "answer": 3,
+    "explanation": "急ハンドルは転倒や後続車との接触の原因になる。早めの発見と減速、緩やかな進路変更で避ける。",
+    "isTrapQuestion": false,
+    "trapNumberType": "none",
+    "topicTag": "operation"
+  },
+  {
+    "id": "at283",
+    "licenseCategory": [
+      "atGentei"
+    ],
+    "stageTag": "第二段階",
+    "difficulty": 4,
+    "questionText": "カーブの途中でやむを得ず減速しなければならなくなった。操作として適切なのはどれか。",
+    "choices": [
+      "できるだけ車体を起こしながら、前後のブレーキを穏やかにかける",
+      "車体を深く傾けたまま前輪ブレーキを強くかける",
+      "ハンドルを大きく切って車体を急に起こす",
+      "スロットルを急に全閉にし、後輪ブレーキを強くかける"
+    ],
+    "answer": 0,
+    "explanation": "車体が傾いた状態での強いブレーキはスリップの原因になる。やむを得ず減速するときは車体を起こしながら穏やかにブレーキをかける。",
+    "isTrapQuestion": true,
+    "trapNumberType": "brakeTechnique",
+    "topicTag": "operation"
+  },
+  {
+    "id": "at284",
+    "licenseCategory": [
+      "atGentei"
+    ],
+    "stageTag": "第一段階",
+    "difficulty": 1,
+    "questionText": "停止線のある場所で停止するときの位置として正しいのはどれか。",
+    "choices": [
+      "停止線を少し越えた位置で止まる",
+      "停止線の直前で止まる",
+      "停止線の上にタイヤがかかる位置で止まる",
+      "停止線から10m以上手前で止まる"
+    ],
+    "answer": 1,
+    "explanation": "停止線がある場合は、その直前で停止する。停止線を越えると横断歩行者などの妨げになる。",
+    "isTrapQuestion": false,
+    "trapNumberType": "none",
+    "topicTag": "operation"
+  },
+  {
+    "id": "at285",
+    "licenseCategory": [
+      "atGentei"
+    ],
+    "stageTag": "第一段階",
+    "difficulty": 2,
+    "questionText": "重量のある大型スクーターを押して歩くときの注意点として適切なのはどれか。",
+    "choices": [
+      "勢いがついたら足で止める",
+      "車体を大きく自分と反対側に傾けて押す",
+      "車体が傾くと支えにくいので、まっすぐに近い状態を保ち、止まるときは前輪ブレーキを使う",
+      "坂道では手を離して車体の自然な動きに任せる"
+    ],
+    "answer": 2,
+    "explanation": "重い車両ほど傾くと支えきれなくなる。車体を立て気味に保ち、停止には前輪ブレーキを使う。",
+    "isTrapQuestion": false,
+    "trapNumberType": "none",
+    "topicTag": "operation"
+  },
+  {
+    "id": "at286",
+    "licenseCategory": [
+      "atGentei"
+    ],
+    "stageTag": "第一段階",
+    "difficulty": 1,
+    "questionText": "二輪車の運転中にハンドルから手を離すことについて正しいのはどれか。",
+    "choices": [
+      "低速なら片手に荷物を持って運転してよい",
+      "手による合図をする場合などを除き、両手でハンドルを握って運転する",
+      "直線道路なら両手を離してもよい",
+      "AT車はクラッチ操作がないので片手運転でよい"
+    ],
+    "answer": 1,
+    "explanation": "片手運転や手放し運転は確実な操作ができず危険である。手信号など必要な場合を除き両手でハンドルを握る。",
+    "isTrapQuestion": false,
+    "trapNumberType": "none",
+    "topicTag": "operation"
+  },
+  {
+    "id": "at287",
+    "licenseCategory": [
+      "atGentei"
+    ],
+    "stageTag": "第一段階",
+    "difficulty": 3,
+    "questionText": "同じカーブを曲がる場合、速度と車体の傾きの関係として正しいのはどれか。",
+    "choices": [
+      "速度が低いほど、車体を大きく傾ける必要がある",
+      "速度が高いほど、車体を大きく傾けなければ曲がれなくなる",
+      "速度に関係なく車体の傾きは同じである",
+      "速度が高いほど、車体を傾けずに曲がれる"
+    ],
+    "answer": 1,
+    "explanation": "速度が高いほど遠心力が大きくなり、大きく傾けないと曲がれなくなる。傾けすぎはスリップにつながるので、カーブ手前で速度を落とす。",
+    "isTrapQuestion": true,
+    "trapNumberType": "other",
+    "topicTag": "operation"
+  },
+  {
+    "id": "at288",
+    "licenseCategory": [
+      "atGentei"
+    ],
+    "stageTag": "第二段階",
+    "difficulty": 4,
+    "questionText": "同じカーブに進入する速度を2倍にした場合、車体に働く遠心力の大きさはどうなるか。",
+    "choices": [
+      "速度に関係なく変わらない",
+      "約8倍になる",
+      "約2倍になる",
+      "約4倍になる"
+    ],
+    "answer": 3,
+    "explanation": "遠心力は速度の二乗に比例するため、速度が2倍になると約4倍になる。またカーブの半径が小さい（急な）ほど大きくなる。",
+    "isTrapQuestion": true,
+    "trapNumberType": "other",
+    "topicTag": "operation"
+  },
+  {
+    "id": "at289",
+    "licenseCategory": [
+      "atGentei"
+    ],
+    "stageTag": "第二段階",
+    "difficulty": 4,
+    "questionText": "乾いた路面で、40km/hで走っていたときと比べて80km/hで走っているときの制動距離はどうなるか。",
+    "choices": [
+      "約3倍になる",
+      "約2倍になる",
+      "ほとんど変わらない",
+      "約4倍になる"
+    ],
+    "answer": 3,
+    "explanation": "制動距離はおおむね速度の二乗に比例するため、速度が2倍になると約4倍になる。",
+    "isTrapQuestion": true,
+    "trapNumberType": "brakingDistance",
+    "topicTag": "operation"
+  },
+  {
+    "id": "at290",
+    "licenseCategory": [
+      "atGentei"
+    ],
+    "stageTag": "第一段階",
+    "difficulty": 1,
+    "questionText": "疲れているときに、危険を感じてからブレーキが効き始めるまでの空走距離はどうなるか。",
+    "choices": [
+      "判断が遅れるため、空走距離が長くなる",
+      "空走距離は路面の状態だけで決まる",
+      "疲れていても空走距離は変わらない",
+      "疲れているときは空走距離が短くなる"
+    ],
+    "answer": 0,
+    "explanation": "空走距離は運転者の反応時間によって変わる。疲労や飲酒、考え事などで反応が遅れると長くなる。",
+    "isTrapQuestion": true,
+    "trapNumberType": "brakingDistance",
+    "topicTag": "operation"
+  },
+  {
+    "id": "at291",
+    "licenseCategory": [
+      "atGentei"
+    ],
+    "stageTag": "第一段階",
+    "difficulty": 1,
+    "questionText": "雨の日に二輪車を運転するときの操作の基本として適切なのはどれか。",
+    "choices": [
+      "ブレーキは強く一気にかけた方が滑りにくい",
+      "スロットル、ブレーキ、ハンドルの操作をいずれも穏やかに行う",
+      "急なハンドル操作で水たまりをよける",
+      "雨の日は滑りにくいので普段どおりに操作する"
+    ],
+    "answer": 1,
+    "explanation": "雨の日は路面が滑りやすいため、急加速・急ブレーキ・急ハンドルを避け、すべての操作を穏やかに行う。",
+    "isTrapQuestion": false,
+    "trapNumberType": "none",
+    "topicTag": "operation"
+  },
+  {
+    "id": "at292",
+    "licenseCategory": [
+      "atGentei"
+    ],
+    "stageTag": "第一段階",
+    "difficulty": 2,
+    "questionText": "雨具（レインウェア）を着て二輪車に乗るときの注意点として適切なのはどれか。",
+    "choices": [
+      "すそや袖がばたついて車輪などに巻き込まれないようにし、周囲から見えやすい明るい色を選ぶ",
+      "目立たない暗い色の方が雨の日には適している",
+      "すそは長く広がっている方が雨を防げて安全である",
+      "雨具を着るとヘルメットはかぶらなくてよい"
+    ],
+    "answer": 0,
+    "explanation": "雨具のすそが車輪や駆動部に巻き込まれると危険である。雨の日は視界が悪いため、目立つ色のものを選ぶ。",
+    "isTrapQuestion": false,
+    "trapNumberType": "none",
+    "topicTag": "operation"
+  },
+  {
+    "id": "at293",
+    "licenseCategory": [
+      "atGentei"
+    ],
+    "stageTag": "第一段階",
+    "difficulty": 2,
+    "questionText": "二輪車から離れるときの措置として正しいのはどれか。",
+    "choices": [
+      "エンジンを止め、キーを抜いてハンドルロックをかけるなど、他人に勝手に運転されないようにする",
+      "キーを付けたままでもハンドルロックをかければよい",
+      "エンジンをかけたまま離れれば盗難防止になる",
+      "短時間ならエンジンをかけたまま離れてよい"
+    ],
+    "answer": 0,
+    "explanation": "車両から離れるときは、エンジンを止め、ブレーキをかけるなど停止状態を保つ措置をとり、キーを抜いて盗難防止の措置をとる。",
+    "isTrapQuestion": false,
+    "trapNumberType": "none",
+    "topicTag": "operation"
+  },
+  {
+    "id": "at294",
+    "licenseCategory": [
+      "atGentei"
+    ],
+    "stageTag": "第二段階",
+    "difficulty": 3,
+    "questionText": "AT車で、ブレーキをかけた状態のままスロットルを大きく開けた場合に起こるおそれがあることとして正しいのはどれか。",
+    "choices": [
+      "エンジンが自動的に停止するので危険はない",
+      "ブレーキの効きが良くなる",
+      "ブレーキを緩めた瞬間に急発進したり、駆動系に無理な力がかかったりする",
+      "後退するおそれがある"
+    ],
+    "answer": 2,
+    "explanation": "AT車はスロットルを開けると駆動力が伝わるため、ブレーキで押さえたまま開けるとブレーキを離した瞬間に飛び出すおそれがある。発進時はブレーキを緩めながらスロットルを少しずつ開ける。",
+    "isTrapQuestion": true,
+    "trapNumberType": "other",
+    "topicTag": "operation"
+  },
+  {
+    "id": "at295",
+    "licenseCategory": [
+      "atGentei"
+    ],
+    "stageTag": "第一段階",
+    "difficulty": 3,
+    "questionText": "走行中にブレーキをかけたときの二輪車の荷重の変化として正しいのはどれか。",
+    "choices": [
+      "荷重が前輪にかかるため、前輪ブレーキの効果が大きくなる",
+      "荷重が車体の左右に移り、横滑りしやすくなる",
+      "ブレーキをかけても前後の荷重は変わらない",
+      "荷重が後輪にかかるため、後輪ブレーキの効果が大きくなる"
+    ],
+    "answer": 0,
+    "explanation": "制動時は荷重が前輪に移るため、前輪ブレーキの制動力が大きくなる。その分、前輪をロックさせない繊細な操作が必要になる。",
+    "isTrapQuestion": true,
+    "trapNumberType": "brakeTechnique",
+    "topicTag": "operation"
+  },
+  {
+    "id": "at296",
+    "licenseCategory": [
+      "atGentei"
+    ],
+    "stageTag": "第二段階",
+    "difficulty": 2,
+    "questionText": "路面が凍結しているおそれがある日に二輪車を運転することについて適切なのはどれか。",
+    "choices": [
+      "AT車は凍結路面でも滑らない",
+      "できるだけ運転を控え、やむを得ず運転する場合は速度を落として急な操作を一切避ける",
+      "凍結路面では速度を上げた方が車体が安定する",
+      "凍結路面ではブレーキを強くかけた方がすぐ止まれる"
+    ],
+    "answer": 1,
+    "explanation": "二輪車は凍結路面で非常に転倒しやすい。運転を控えるのが原則で、走る場合は低速で急操作を避ける。",
+    "isTrapQuestion": true,
+    "trapNumberType": "weatherConditions",
+    "topicTag": "operation"
+  },
+  {
+    "id": "at297",
+    "licenseCategory": [
+      "atGentei"
+    ],
+    "stageTag": "第二段階",
+    "difficulty": 3,
+    "questionText": "夜間に走行するときの速度の考え方として適切なのはどれか。",
+    "choices": [
+      "交通量が少ないので昼間より速度を上げてよい",
+      "前照灯を上向きにすれば昼間と同じ速度で走れる",
+      "夜間は視界に関係なく法定速度で走ればよい",
+      "前照灯で照らされる範囲内で安全に停止できる速度で走る"
+    ],
+    "answer": 3,
+    "explanation": "夜間は見える範囲が限られるため、前照灯の照らす範囲内で止まれる速度に抑える。",
+    "isTrapQuestion": true,
+    "trapNumberType": "nightDriving",
+    "topicTag": "operation"
+  },
+  {
+    "id": "at298",
+    "licenseCategory": [
+      "atGentei"
+    ],
+    "stageTag": "第二段階",
+    "difficulty": 4,
+    "questionText": "急ブレーキで後輪がロックして滑り始めたときの対処として適切なのはどれか。",
+    "choices": [
+      "スロットルを全開にして立て直す",
+      "ハンドルを大きく切って向きを変える",
+      "後輪ブレーキを緩めてタイヤのグリップを回復させる",
+      "後輪ブレーキをさらに強くかけ続ける"
+    ],
+    "answer": 2,
+    "explanation": "車輪がロックしたらブレーキを緩めてタイヤの回転を回復させる。ロックしたまま強くかけ続けると横滑りして転倒のおそれがある。",
+    "isTrapQuestion": true,
+    "trapNumberType": "brakeTechnique",
+    "topicTag": "operation"
+  },
+  {
+    "id": "at299",
+    "licenseCategory": [
+      "atGentei"
+    ],
+    "stageTag": "第二段階",
+    "difficulty": 5,
+    "questionText": "バッテリーが上がって始動できなくなったスクーター型AT車の扱いとして正しいのはどれか。",
+    "choices": [
+      "MT車と同じように押しがけで簡単に始動できる",
+      "坂道で惰性をつければ必ず始動できる",
+      "遠心クラッチなどの構造のため、一般に押しがけによる始動はできない",
+      "スロットルを全開にして押せば始動できる"
+    ],
+    "answer": 2,
+    "explanation": "スクーター型AT車の多くは遠心クラッチを使っており、車輪を回してもエンジンに回転が伝わらないため押しがけはできない。キックスターター付きならそれを使い、なければ充電や交換で対応する。",
+    "isTrapQuestion": true,
+    "trapNumberType": "other",
+    "topicTag": "operation"
+  },
+  {
+    "id": "at300",
+    "licenseCategory": [
+      "atGentei"
+    ],
+    "stageTag": "第一段階",
+    "difficulty": 2,
+    "questionText": "交差点を低速で曲がるときの操作として適切なのはどれか。",
+    "choices": [
+      "前輪の真下を見ながら曲がる",
+      "速度を上げて車体を大きく傾けて曲がる",
+      "曲がりながら急ブレーキで速度を調整する",
+      "十分に減速し、曲がる方向に視線を向け、車体を大きく傾けずにハンドル操作も使って曲がる"
+    ],
+    "answer": 3,
+    "explanation": "低速では車体を大きく傾けにくいため、視線を先に向けてハンドル操作も併用して曲がる。",
+    "isTrapQuestion": false,
+    "trapNumberType": "none",
+    "topicTag": "operation"
   }
 ]
