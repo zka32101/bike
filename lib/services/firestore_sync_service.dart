@@ -73,7 +73,7 @@ class LocalFirestoreSyncService implements FirestoreSyncService {
                 (key, value) => MapEntry(key, value.toIso8601String()),
               ),
               'purchaseStatus': user.purchaseStatus.name,
-              'unlockedCategoryId': user.unlockedCategoryId,
+              'unlockedCategoryIds': user.unlockedCategoryIds,
               'createdAt': user.createdAt.toIso8601String(),
               'updatedAt': DateTime.now().toIso8601String(),
             },
@@ -112,7 +112,11 @@ class LocalFirestoreSyncService implements FirestoreSyncService {
           (e) => e.name == data['purchaseStatus'],
           orElse: () => PurchaseStatus.free,
         ),
-        unlockedCategoryId: data['unlockedCategoryId'] as String?,
+        unlockedCategoryIds: data['unlockedCategoryIds'] != null
+            ? List<String>.from(data['unlockedCategoryIds'] as List)
+            : data['unlockedCategoryId'] != null
+                ? [data['unlockedCategoryId'] as String]
+                : const [],
         createdAt: data['createdAt'] != null
             ? DateTime.parse(data['createdAt'] as String)
             : DateTime.now(),

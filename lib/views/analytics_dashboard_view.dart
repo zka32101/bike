@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 import '../core/constants/analytics_events.dart';
+import '../core/constants/license_category.dart';
+import '../core/constants/question_topic.dart';
 import '../models/analytics_snapshot.dart';
 import '../viewmodels/providers.dart';
 import '../widgets/analytics/overall_summary_card.dart';
@@ -154,7 +156,9 @@ class AnalyticsDashboardView extends ConsumerWidget {
             ),
           ),
 
-          // ステージ別パフォーマンス
+          // 出題分野別パフォーマンス
+          // （教習段階「第一段階」等での区分はデータが薄く実用性が低いため、
+          // 標識・法規・運転操作などの出題分野別で表示する）
           SliverPadding(
             padding: const EdgeInsets.symmetric(horizontal: 20),
             sliver: SliverToBoxAdapter(
@@ -162,17 +166,17 @@ class AnalyticsDashboardView extends ConsumerWidget {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Text(
-                    '段階別',
+                    '出題分野別',
                     style: Theme.of(context).textTheme.titleMedium,
                   ),
                   const SizedBox(height: 12),
                   AccuracyBarList(
-                    items: data.stages
-                        .map((s) => AccuracyBarItem(
-                          label: s.stageTag,
-                          accuracy: s.stat.accuracy,
-                          attempts: s.stat.attempts,
-                          correctCount: s.stat.correctCount,
+                    items: data.topics
+                        .map((t) => AccuracyBarItem(
+                          label: QuestionTopic.labelFor(t.categoryId),
+                          accuracy: t.stat.accuracy,
+                          attempts: t.stat.attempts,
+                          correctCount: t.stat.correctCount,
                         ))
                         .toList(),
                   ),
@@ -207,7 +211,7 @@ class AnalyticsDashboardView extends ConsumerWidget {
                   AccuracyBarList(
                     items: data.categories
                         .map((c) => AccuracyBarItem(
-                          label: c.categoryId,
+                          label: LicenseCategory.fromId(c.categoryId).label,
                           accuracy: c.stat.accuracy,
                           attempts: c.stat.attempts,
                           correctCount: c.stat.correctCount,

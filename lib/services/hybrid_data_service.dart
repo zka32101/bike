@@ -249,4 +249,9 @@ class HybridDataService extends DataService {
       stageTag: stageTag,
     );
   }
+
+  @override
+  Future<List<Question>> loadQuestionsByIds(List<String> ids) {
+    return _localDataService.loadQuestionsByIds(ids);
+  }
 }

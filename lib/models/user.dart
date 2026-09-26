@@ -8,7 +8,7 @@ class AppUser {
     this.examDatesByCategory = const {},
     this.streakCount = 0,
     this.purchaseStatus = PurchaseStatus.free,
-    this.unlockedCategoryId,
+    this.unlockedCategoryIds = const [],
     DateTime? createdAt,
     DateTime? updatedAt,
   })  : createdAt = createdAt ?? DateTime.now(),
@@ -29,8 +29,9 @@ class AppUser {
   final PurchaseStatus purchaseStatus;
 
   /// [purchaseStatus] が [PurchaseStatus.singleCategoryPass] のときのみ意味を持つ。
-  /// 単一区分パスでどの区分を解放したかを保持する。
-  final String? unlockedCategoryId;
+  /// 単一区分パスを複数回購入した場合に備え、解放済みの区分を複数保持できる
+  /// ようにする（1つ目購入後に2つ目を購入しても1つ目の解放状態を失わない）。
+  final List<String> unlockedCategoryIds;
 
   /// データ作成日時（コンフリクト解決用）
   final DateTime createdAt;
@@ -42,7 +43,7 @@ class AppUser {
   bool hasAccessToCategory(String categoryId) {
     if (purchaseStatus == PurchaseStatus.allCategorySetPass) return true;
     if (purchaseStatus == PurchaseStatus.singleCategoryPass) {
-      return unlockedCategoryId == categoryId;
+      return unlockedCategoryIds.contains(categoryId);
     }
     return false;
   }
@@ -53,7 +54,7 @@ class AppUser {
     Map<String, DateTime>? examDatesByCategory,
     int? streakCount,
     PurchaseStatus? purchaseStatus,
-    String? unlockedCategoryId,
+    List<String>? unlockedCategoryIds,
     DateTime? createdAt,
     DateTime? updatedAt,
   }) {
@@ -64,7 +65,7 @@ class AppUser {
       examDatesByCategory: examDatesByCategory ?? this.examDatesByCategory,
       streakCount: streakCount ?? this.streakCount,
       purchaseStatus: purchaseStatus ?? this.purchaseStatus,
-      unlockedCategoryId: unlockedCategoryId ?? this.unlockedCategoryId,
+      unlockedCategoryIds: unlockedCategoryIds ?? this.unlockedCategoryIds,
       createdAt: createdAt ?? this.createdAt,
       updatedAt: updatedAt ?? DateTime.now(), // Always update timestamp on modification
     );
@@ -93,7 +94,12 @@ class AppUser {
       (e) => e.name == (json['purchaseStatus'] as String? ?? 'free'),
       orElse: () => PurchaseStatus.free,
     ),
-    unlockedCategoryId: json['unlockedCategoryId'] as String?,
+    unlockedCategoryIds: json['unlockedCategoryIds'] != null
+        ? List<String>.from(json['unlockedCategoryIds'] as List)
+        // 旧形式（単一の unlockedCategoryId フィールド）からの読み込み互換。
+        : json['unlockedCategoryId'] != null
+            ? [json['unlockedCategoryId'] as String]
+            : const [],
     createdAt: json['createdAt'] != null
         ? DateTime.parse(json['createdAt'] as String)
         : null,
@@ -111,7 +117,7 @@ class AppUser {
     ),
     'streakCount': streakCount,
     'purchaseStatus': purchaseStatus.name,
-    'unlockedCategoryId': unlockedCategoryId,
+    'unlockedCategoryIds': unlockedCategoryIds,
     'createdAt': createdAt.toIso8601String(),
     'updatedAt': updatedAt.toIso8601String(),
   };

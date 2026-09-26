@@ -11,14 +11,14 @@ import 'purchase_service.dart';
 ///
 /// 非消費型パス（non-consumable）:
 /// - single_category_pass_980: ¥980（1区分・合格まで無制限・広告非表示）
-/// - all_category_set_pass_1980: ¥1,980（全区分・合格まで無制限・広告非表示）
+/// - all_category_set_pass_1800: ¥1,800（全区分・合格まで無制限・広告非表示）
 ///
 /// オフラインモード:
 /// - 購入直後は端末キャッシュから読み込み（オフライン対応）
 /// - 定期的に RevenueCat サーバーと同期
 class RevenueCatPurchaseService implements PurchaseService {
   static const String _singleCategoryProductId = 'single_category_pass_980';
-  static const String _allCategorySetProductId = 'all_category_set_pass_1980';
+  static const String _allCategorySetProductId = 'all_category_set_pass_1800';
 
   RevenueCatPurchaseService();
 
@@ -39,7 +39,7 @@ class RevenueCatPurchaseService implements PurchaseService {
     }
   }
 
-  /// 全区分セットパス（¥1,980）を購入
+  /// 全区分セットパス（¥1,800）を購入
   @override
   Future<PurchaseStatus> purchaseAllCategorySetPass() async {
     try {

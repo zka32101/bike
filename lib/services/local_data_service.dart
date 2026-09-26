@@ -28,6 +28,10 @@ abstract class DataService {
     String? stageTag,
   });
 
+  /// 指定した問題IDのみを区分をまたいで取得する（復習推奨など、
+  /// 特定の弱点問題だけをピンポイントで出題したい場合に使う）。
+  Future<List<Question>> loadQuestionsByIds(List<String> ids);
+
   Future<void> appendAnswerLog(UserAnswerLog log);
   /// ログを読み込む（オプション：[since] 以降のログのみ）
   Future<List<UserAnswerLog>> loadAnswerLogs(
@@ -104,6 +108,30 @@ class LocalDataService implements DataService {
         .where((q) => q.licenseCategory.contains(licenseCategory))
         .where((q) => stageTag == null || stageTag.isEmpty || q.stageTag == stageTag)
         .toList();
+  }
+
+  @override
+  Future<List<Question>> loadQuestionsByIds(List<String> ids) async {
+    if (ids.isEmpty) return [];
+    final idSet = ids.toSet();
+    final found = <String, Question>{};
+    for (final asset in _questionAssetByCategory.values) {
+      if (found.length == idSet.length) break;
+      List<Question>? pool = _questionCache[asset];
+      if (pool == null) {
+        final raw = await rootBundle.loadString(asset);
+        final list = jsonDecode(raw) as List;
+        pool = list
+            .map((e) => Question.fromJson(e as Map<String, dynamic>))
+            .toList();
+        _questionCache[asset] = pool;
+      }
+      for (final q in pool) {
+        if (idSet.contains(q.id)) found[q.id] = q;
+      }
+    }
+    // 呼び出し側が渡した順序（重大度順など）を維持する。
+    return [for (final id in ids) if (found[id] != null) found[id]!];
   }
 
   @override
