@@ -186,6 +186,11 @@ enum ReviewActionType {
   trapDojo,
   stageDrill,
   masteryReview,
+
+  /// 弱点の該当問題（[ReviewRecommendation.sampleQuestionIds]）だけを
+  /// ピンポイントで復習する。区分の全問題を出すのではなく、実際に
+  /// 間違えた問題のみを対象にする。
+  targetedReview,
 }
 
 /// 学習の弱点に基づく復習推奨
@@ -196,6 +201,7 @@ class ReviewRecommendation {
     required this.body,
     required this.action,
     required this.payload,
+    this.sampleQuestionIds = const [],
   });
 
   /// 関連する弱点のキー
@@ -213,6 +219,9 @@ class ReviewRecommendation {
   /// ナビゲーション用のペイロード（例: {'licenseCategory': '普通二輪'}）
   final Map<String, String> payload;
 
+  /// [ReviewActionType.targetedReview] で復習対象とする問題IDのサンプル。
+  final List<String> sampleQuestionIds;
+
   factory ReviewRecommendation.fromJson(Map<String, dynamic> json) =>
       ReviewRecommendation(
         weakAreaKey: json['weakAreaKey'] as String,
@@ -223,6 +232,9 @@ class ReviewRecommendation {
           orElse: () => ReviewActionType.dailyQuota,
         ),
         payload: Map<String, String>.from(json['payload'] as Map),
+        sampleQuestionIds: json['sampleQuestionIds'] != null
+            ? List<String>.from(json['sampleQuestionIds'] as List)
+            : const [],
       );
 
   Map<String, dynamic> toJson() => {
@@ -231,6 +243,7 @@ class ReviewRecommendation {
     'body': body,
     'action': action.name,
     'payload': payload,
+    'sampleQuestionIds': sampleQuestionIds,
   };
 }
 

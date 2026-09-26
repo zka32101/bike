@@ -1,7 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:google_mobile_ads/google_mobile_ads.dart';
 
 import '../core/constants/license_category.dart';
+import '../models/user.dart';
+import '../services/google_mobile_ads_service.dart';
 import '../viewmodels/providers.dart';
 import '../widgets/pass_prediction_meter.dart';
 import '../widgets/pass_rate_card.dart';
@@ -147,6 +150,50 @@ class _HomeViewState extends ConsumerState<HomeView> {
                 ],
               ),
             ),
+      ),
+      bottomNavigationBar:
+          user?.purchaseStatus == PurchaseStatus.free ? const _HomeBannerAdBar() : null,
+    );
+  }
+}
+
+/// 無料ユーザーのホーム画面下部に表示するバナー広告。
+/// パス購入済みユーザーには表示しない（広告なしが購入の価値）。
+class _HomeBannerAdBar extends StatefulWidget {
+  const _HomeBannerAdBar();
+
+  @override
+  State<_HomeBannerAdBar> createState() => _HomeBannerAdBarState();
+}
+
+class _HomeBannerAdBarState extends State<_HomeBannerAdBar> {
+  BannerAd? _bannerAd;
+
+  @override
+  void initState() {
+    super.initState();
+    GoogleMobileAdsService().loadBannerAd(
+      onAdLoaded: (ad) {
+        if (mounted) setState(() => _bannerAd = ad);
+      },
+    );
+  }
+
+  @override
+  void dispose() {
+    _bannerAd?.dispose();
+    super.dispose();
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    final ad = _bannerAd;
+    if (ad == null) return const SizedBox.shrink();
+    return SafeArea(
+      child: SizedBox(
+        width: ad.size.width.toDouble(),
+        height: ad.size.height.toDouble(),
+        child: AdWidget(ad: ad),
       ),
     );
   }

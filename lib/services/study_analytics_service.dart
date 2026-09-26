@@ -1,3 +1,4 @@
+import '../core/constants/license_category.dart';
 import '../core/constants/question_topic.dart';
 import '../models/analytics_snapshot.dart';
 import '../models/question.dart';
@@ -79,15 +80,30 @@ class DefaultStudyAnalyticsService implements StudyAnalyticsService {
 
       // ステージ別
       _addToAccumulator(byStage, meta.stageTag, log.isCorrect);
+      if (!log.isCorrect) {
+        dailyQuestionSamples
+            .putIfAbsent('stage:${meta.stageTag}', () => [])
+            .add(log.questionId);
+      }
 
       // カテゴリ別（1つの問題が複数カテゴリに属する場合、全カテゴリにカウント）
       for (final category in meta.licenseCategory) {
         _addToAccumulator(byCategory, category, log.isCorrect);
+        if (!log.isCorrect) {
+          dailyQuestionSamples
+              .putIfAbsent('category:$category', () => [])
+              .add(log.questionId);
+        }
       }
 
       // トピック（分野）別
       if (meta.topicTag != null && meta.topicTag!.isNotEmpty) {
         _addToAccumulator(byTopic, meta.topicTag!, log.isCorrect);
+        if (!log.isCorrect) {
+          dailyQuestionSamples
+              .putIfAbsent('topic:${meta.topicTag}', () => [])
+              .add(log.questionId);
+        }
       }
 
       // トラップ問題の種別別
@@ -97,6 +113,11 @@ class DefaultStudyAnalyticsService implements StudyAnalyticsService {
 
       // 難易度別
       _addToAccumulator(byDifficulty, meta.difficulty, log.isCorrect);
+      if (!log.isCorrect) {
+        dailyQuestionSamples
+            .putIfAbsent('difficulty:${meta.difficulty}', () => [])
+            .add(log.questionId);
+      }
 
       // 日別（timestampを日付に丸める）
       final dayKey = DateTime(
@@ -169,16 +190,19 @@ class DefaultStudyAnalyticsService implements StudyAnalyticsService {
             stat.attempts,
             totalAttempts,
           );
+          final key = 'stage:${entry.key}';
           weakAreaCandidates.add(WeakArea(
             kind: WeakAreaKind.stage,
-            key: 'stage:${entry.key}',
+            key: key,
             label: entry.key,
             stat: AccuracyStat(
               attempts: stat.attempts,
               correctCount: stat.correctCount,
             ),
             severity: severity,
-            sampleQuestionIds: [],
+            sampleQuestionIds: (dailyQuestionSamples[key] ?? [])
+                .take(maxSampleQuestions)
+                .toList(),
           ));
         }
       }
@@ -195,16 +219,19 @@ class DefaultStudyAnalyticsService implements StudyAnalyticsService {
             stat.attempts,
             totalAttempts,
           );
+          final key = 'category:${entry.key}';
           weakAreaCandidates.add(WeakArea(
             kind: WeakAreaKind.category,
-            key: 'category:${entry.key}',
-            label: entry.key,
+            key: key,
+            label: LicenseCategory.fromId(entry.key).label,
             stat: AccuracyStat(
               attempts: stat.attempts,
               correctCount: stat.correctCount,
             ),
             severity: severity,
-            sampleQuestionIds: [],
+            sampleQuestionIds: (dailyQuestionSamples[key] ?? [])
+                .take(maxSampleQuestions)
+                .toList(),
           ));
         }
       }
@@ -221,16 +248,19 @@ class DefaultStudyAnalyticsService implements StudyAnalyticsService {
             stat.attempts,
             totalAttempts,
           );
+          final key = 'topic:${entry.key}';
           weakAreaCandidates.add(WeakArea(
             kind: WeakAreaKind.topic,
-            key: 'topic:${entry.key}',
+            key: key,
             label: QuestionTopic.labelFor(entry.key),
             stat: AccuracyStat(
               attempts: stat.attempts,
               correctCount: stat.correctCount,
             ),
             severity: severity,
-            sampleQuestionIds: [],
+            sampleQuestionIds: (dailyQuestionSamples[key] ?? [])
+                .take(maxSampleQuestions)
+                .toList(),
           ));
         }
       }
@@ -248,16 +278,17 @@ class DefaultStudyAnalyticsService implements StudyAnalyticsService {
             totalAttempts,
           );
           final label = _trapTypeLabel(entry.key);
+          final key = 'trap:${entry.key.name}';
           weakAreaCandidates.add(WeakArea(
             kind: WeakAreaKind.trapType,
-            key: 'trap:${entry.key.name}',
+            key: key,
             label: label,
             stat: AccuracyStat(
               attempts: stat.attempts,
               correctCount: stat.correctCount,
             ),
             severity: severity,
-            sampleQuestionIds: (dailyQuestionSamples[label] ?? [])
+            sampleQuestionIds: (dailyQuestionSamples[key] ?? [])
                 .take(maxSampleQuestions)
                 .toList(),
           ));
@@ -276,16 +307,19 @@ class DefaultStudyAnalyticsService implements StudyAnalyticsService {
             stat.attempts,
             totalAttempts,
           );
+          final key = 'difficulty:${entry.key}';
           weakAreaCandidates.add(WeakArea(
             kind: WeakAreaKind.difficulty,
-            key: 'difficulty:${entry.key}',
+            key: key,
             label: '難易度${entry.key}',
             stat: AccuracyStat(
               attempts: stat.attempts,
               correctCount: stat.correctCount,
             ),
             severity: severity,
-            sampleQuestionIds: [],
+            sampleQuestionIds: (dailyQuestionSamples[key] ?? [])
+                .take(maxSampleQuestions)
+                .toList(),
           ));
         }
       }
@@ -349,54 +383,45 @@ class DefaultStudyAnalyticsService implements StudyAnalyticsService {
   ) {
     final recommendations = <ReviewRecommendation>[];
     for (final area in weakAreas) {
-      late ReviewActionType action;
+      // カテゴリ別（区分別）は「全区分の全問題」しか導線がなく、押しても
+      // 弱点の復習にならないため復習推奨のボタン自体を出さない。
+      if (area.kind == WeakAreaKind.category) continue;
+
+      // 実際に間違えた問題のサンプルが取れていない場合、押しても復習する
+      // 対象が無く「全問出るだけ」になってしまうため推奨自体を出さない。
+      if (area.sampleQuestionIds.isEmpty) continue;
+
       late String title;
       late String body;
-      final payload = <String, String>{
-        'weakAreaKind': area.kind.name,
-      };
 
       switch (area.kind) {
         case WeakAreaKind.trapType:
-          // ひっかけ道場は無効化中のため、通常の復習に誘導する。
-          action = ReviewActionType.masteryReview;
           title = '${area.label}を克服する';
-          body = '${area.label}に関する問題を復習してみましょう。';
+          body = '${area.label}に関する、実際に間違えた問題だけを復習します。';
           break;
         case WeakAreaKind.stage:
-          // ステージ別は段階別ドリル
-          action = ReviewActionType.stageDrill;
           title = '${area.label}を集中練習';
-          body = '${area.label}の出題パターンを集中的に学習します。';
-          payload['stageTag'] = area.label;
-          break;
-        case WeakAreaKind.category:
-          // カテゴリ別は日々のノルマで集中
-          action = ReviewActionType.dailyQuota;
-          title = '${area.label}で正答率向上';
-          body = '${area.label}の問題を重点的に出題します。';
-          payload['licenseCategory'] = area.label;
+          body = '${area.label}で間違えた問題だけを集中的に復習します。';
           break;
         case WeakAreaKind.difficulty:
-          // 難問は通常の学習
-          action = ReviewActionType.dailyQuota;
           title = '難問への対応力を強化';
-          body = 'より難しい問題に挑戦して、合格ラインを目指しましょう。';
+          body = '間違えた難問だけをピンポイントで復習します。';
           break;
         case WeakAreaKind.topic:
-          // トピック別は今後対応
-          action = ReviewActionType.masteryReview;
           title = '${area.label}を復習';
-          body = 'このテーマについて、詳しく学習してみましょう。';
+          body = '${area.label}で間違えた問題だけを復習します。';
           break;
+        case WeakAreaKind.category:
+          continue; // 上でスキップ済み（到達しない）
       }
 
       recommendations.add(ReviewRecommendation(
         weakAreaKey: area.key,
         title: title,
         body: body,
-        action: action,
-        payload: payload,
+        action: ReviewActionType.targetedReview,
+        payload: {'weakAreaKind': area.kind.name},
+        sampleQuestionIds: area.sampleQuestionIds,
       ));
     }
     return recommendations;

@@ -23,6 +23,7 @@ class LicenseCategorySelectView extends ConsumerStatefulWidget {
 class _LicenseCategorySelectViewState
     extends ConsumerState<LicenseCategorySelectView> {
   final Set<LicenseCategory> _selected = {};
+  bool _selectionInitialized = false;
 
   static const _displayOrder = [
     LicenseCategory.futsuuNirin,
@@ -37,6 +38,17 @@ class _LicenseCategorySelectViewState
     final userAsync = ref.watch(userControllerProvider);
     final user = userAsync.valueOrNull;
     final isFree = user?.purchaseStatus == PurchaseStatus.free;
+
+    // 設定画面から再度この画面を開いたとき、既存の選択状態を引き継ぐ。
+    // これをしないと、ここで保存した時点で未チェックの既存区分が
+    // 選択解除されたものとして扱われ、既に選んでいた区分が消えてしまう。
+    if (!_selectionInitialized && user != null) {
+      _selectionInitialized = true;
+      for (final id in user.licenseCategories) {
+        final category = LicenseCategory.fromId(id);
+        _selected.add(category);
+      }
+    }
 
     return Scaffold(
       appBar: AppBar(title: const Text('免許区分を選ぶ')),

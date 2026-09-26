@@ -86,6 +86,12 @@ class FirestoreDataService implements DataService {
   }
 
   @override
+  Future<List<Question>> loadQuestionsByIds(List<String> ids) async {
+    final localService = LocalDataService();
+    return localService.loadQuestionsByIds(ids);
+  }
+
+  @override
   Future<void> appendAnswerLog(UserAnswerLog log) async {
     await _firestore
         .collection(_usersCollection)

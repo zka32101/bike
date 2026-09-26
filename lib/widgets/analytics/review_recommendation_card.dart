@@ -5,6 +5,7 @@ import '../../core/constants/analytics_events.dart';
 import '../../models/analytics_snapshot.dart';
 import '../../viewmodels/providers.dart';
 import '../../views/daily_quota_view.dart';
+import '../../views/review_questions_view.dart';
 import '../../views/trap_dojo_view.dart';
 
 /// 復習推奨カード
@@ -69,6 +70,10 @@ class ReviewRecommendationCard extends ConsumerWidget {
       case ReviewActionType.masteryReview:
         iconData = Icons.bookmark;
         color = Colors.amber;
+        break;
+      case ReviewActionType.targetedReview:
+        iconData = Icons.fact_check;
+        color = Colors.teal;
         break;
     }
 
@@ -143,6 +148,18 @@ class ReviewRecommendationCard extends ConsumerWidget {
           ),
         );
         Navigator.of(context).pop();
+        break;
+
+      case ReviewActionType.targetedReview:
+        // 実際に間違えた問題だけをピンポイントで復習する。
+        Navigator.of(context).push(
+          MaterialPageRoute(
+            builder: (_) => ReviewQuestionsView(
+              title: recommendation.title,
+              questionIds: recommendation.sampleQuestionIds,
+            ),
+          ),
+        );
         break;
     }
   }

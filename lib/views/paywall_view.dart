@@ -7,7 +7,7 @@ import '../viewmodels/providers.dart';
 
 /// ペイウォール：期間パス（非消費型・買い切り）。サブスクではない。
 /// - 単一区分パス：¥980（合格まで無制限・広告完全非表示）
-/// - 全区分セットパス：¥1,980
+/// - 全区分セットパス：¥1,800
 class PaywallView extends ConsumerWidget {
   const PaywallView({super.key, this.categoryId});
 
@@ -42,7 +42,7 @@ class PaywallView extends ConsumerWidget {
               const SizedBox(height: 16),
               _PlanCard(
                 title: '全区分セットパス',
-                price: '¥1,980',
+                price: '¥1,800',
                 description: '複数区分を並行/段階取得する人向け',
                 highlighted: true,
                 onTap: () => _purchase(context, ref, isSet: true),
@@ -79,12 +79,17 @@ class PaywallView extends ConsumerWidget {
     if (!isSet && targetCategoryId == null) {
       final user = ref.read(userControllerProvider).valueOrNull;
       final categories = user?.licenseCategories ?? const <String>[];
-      if (categories.length > 1) {
-        final picked = await _pickCategory(context, categories);
+      // 既に解放済みの区分を選んでも購入が無駄になるため、
+      // まだ解放していない区分のみをピッカーの対象にする。
+      final purchasable = categories
+          .where((c) => !(user?.hasAccessToCategory(c) ?? false))
+          .toList();
+      if (purchasable.length > 1) {
+        final picked = await _pickCategory(context, purchasable);
         if (picked == null) return; // ユーザーがキャンセル
         targetCategoryId = picked;
-      } else if (categories.isNotEmpty) {
-        targetCategoryId = categories.first;
+      } else if (purchasable.isNotEmpty) {
+        targetCategoryId = purchasable.first;
       }
     }
 

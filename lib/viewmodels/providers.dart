@@ -230,9 +230,10 @@ class UserController extends AsyncNotifier<AppUser> {
     if (current == null) return;
     final updated = current.copyWith(
       purchaseStatus: status,
-      unlockedCategoryId: status == PurchaseStatus.singleCategoryPass
-          ? categoryId
-          : current.unlockedCategoryId,
+      unlockedCategoryIds:
+          status == PurchaseStatus.singleCategoryPass && categoryId != null
+              ? {...current.unlockedCategoryIds, categoryId}.toList()
+              : current.unlockedCategoryIds,
     );
     state = AsyncData(updated);
     await _saveUserToLocalAndFirestore(updated);
@@ -400,6 +401,10 @@ const int freeGentsukiPreviewCount = 30;
 /// 使わない（使うと該当0件になってしまう）。
 const Set<String> validQuestionStageTags = {'第一段階', '第二段階'};
 
+/// 「問題を解く」1回あたりの出題数。ランダム出題は常にこの件数を上限に
+/// 一区切りとし、完了後にホームへ戻って再度開くと新しい10問が出題される。
+const int questionsPerSession = 10;
+
 class DailyQuotaController extends FamilyNotifier<DailyQuotaState, String> {
   late String _licenseCategory;
 
@@ -453,10 +458,11 @@ class DailyQuotaController extends FamilyNotifier<DailyQuotaState, String> {
     // マスター済み問題が全てなら、対象プールから開始
     final questionsList = filtered.isEmpty ? pool : filtered;
 
-    // フルアクセスの場合はランダム出題（上限なし）、無料プレビューの場合は
-    // 固定30問プール内でシャッフルするのみ（プール自体が上限のため追加のtakeは不要）。
+    // ランダム出題した上で、1回の「問題を解く」は10問ずつで一区切りにする
+    // （プールが10問未満ならそのまま全問）。
     questionsList.shuffle();
-    state = state.copyWith(questions: questionsList, loading: false, locked: false);
+    final sessionQuestions = questionsList.take(questionsPerSession).toList();
+    state = state.copyWith(questions: sessionQuestions, loading: false, locked: false);
   }
 
   /// 回答ログをローカル＆キューに保存
