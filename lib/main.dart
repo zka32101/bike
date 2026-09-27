@@ -50,27 +50,43 @@ void main() async {
   //   ),
   // );
 
-  runApp(
-    ProviderScope(
-      overrides: [
-        // ハイブリッドデータサービス：Firestore 優先、ローカルにフォールバック
-        dataServiceProvider.overrideWithValue(
-          HybridDataService(
-            localDataService: LocalDataService(),
-            firestoreSyncService: LocalFirestoreSyncService(),
-          ),
+  // ProviderScope を先にコンテナとして作り、runApp前に復習リマインダー通知の
+  // 初期化（プラグイン初期化・通知タップ時のコールバック登録）を行う。
+  final container = ProviderContainer(
+    overrides: [
+      // ハイブリッドデータサービス：Firestore 優先、ローカルにフォールバック
+      dataServiceProvider.overrideWithValue(
+        HybridDataService(
+          localDataService: LocalDataService(),
+          firestoreSyncService: LocalFirestoreSyncService(),
         ),
+      ),
 
-        // Firebase Analytics を計測サービスとして使用
-        analyticsServiceProvider
-            .overrideWithValue(FirebaseAnalyticsService()),
+      // Firebase Analytics を計測サービスとして使用
+      analyticsServiceProvider.overrideWithValue(FirebaseAnalyticsService()),
 
-        // RevenueCat を購入サービスとして使用
-        // TODO(revenuecat-setup): Purchases.configure() 有効化後にコメント解除
-        // purchaseServiceProvider.overrideWithValue(RevenueCatPurchaseService()),
+      // RevenueCat を購入サービスとして使用
+      // TODO(revenuecat-setup): Purchases.configure() 有効化後にコメント解除
+      // purchaseServiceProvider.overrideWithValue(RevenueCatPurchaseService()),
 
-        localFallbackUidProvider.overrideWithValue(localFallbackUid),
-      ],
+      localFallbackUidProvider.overrideWithValue(localFallbackUid),
+    ],
+  );
+
+  final navigatorKey = container.read(navigatorKeyProvider);
+  try {
+    await container.read(reviewReminderServiceProvider).initialize(
+          onNotificationTapped: (questionId) =>
+              openReviewQuestionFromNotification(navigatorKey, questionId),
+        );
+    await container.read(reviewReminderServiceProvider).requestPermission();
+  } catch (e) {
+    debugPrint('Failed to initialize review reminder notifications: $e');
+  }
+
+  runApp(
+    UncontrolledProviderScope(
+      container: container,
       child: const BikeLicenseKoreApp(),
     ),
   );

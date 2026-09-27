@@ -7,6 +7,13 @@
          この権限を宣言しないため、アプリ側での宣言が必須） -->
     <uses-permission android:name="com.android.vending.BILLING"/>
 
+    <!-- 復習リマインダー通知（スペースドリピティション）に必要な権限 -->
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS"/>
+    <uses-permission android:name="android.permission.SCHEDULE_EXACT_ALARM"/>
+    <uses-permission android:name="android.permission.USE_EXACT_ALARM"/>
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"/>
+    <uses-permission android:name="android.permission.VIBRATE"/>
+
     <application
         android:label="原付・バイク免許コレ"
         android:name="${applicationName}"
@@ -42,6 +49,30 @@
         <meta-data
             android:name="com.google.android.gms.ads.APPLICATION_ID"
             android:value="${admobAppId}"/>
+
+        <!-- flutter_local_notifications: スケジュール済み通知の発火・端末再起動後の
+             再スケジュールに必要な標準レシーバー -->
+        <receiver android:exported="false"
+            android:name="com.dexterous.flutterlocalnotifications.ScheduledNotificationReceiver" />
+        <receiver android:exported="false"
+            android:name="com.dexterous.flutterlocalnotifications.ScheduledNotificationBootReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED"/>
+                <action android:name="android.intent.action.MY_PACKAGE_REPLACED"/>
+                <action android:name="android.intent.action.QUICKBOOT_POWERON"/>
+                <action android:name="com.htc.intent.action.QUICKBOOT_POWERON"/>
+            </intent-filter>
+        </receiver>
+
+        <!-- ホーム画面ウィジェット「今日の1問」 -->
+        <receiver android:name=".DailyQuestionWidgetProvider" android:exported="false">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE"/>
+            </intent-filter>
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/daily_question_widget_info"/>
+        </receiver>
     </application>
 
     <queries>

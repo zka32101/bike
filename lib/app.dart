@@ -4,6 +4,7 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'core/theme.dart';
 import 'views/home_view.dart';
 import 'views/onboarding_view.dart';
+import 'views/review_questions_view.dart';
 import 'views/sign_in_view.dart';
 import 'viewmodels/providers.dart';
 
@@ -16,12 +17,38 @@ final scaffoldMessengerKeyProvider =
   (ref) => GlobalKey<ScaffoldMessengerState>(),
 );
 
+/// ルートの [NavigatorState] への参照。
+/// 復習リマインダー通知タップ時など、Widgetツリー外（プラグインの
+/// コールバック）から画面遷移する必要がある場合に使う。
+final navigatorKeyProvider = Provider<GlobalKey<NavigatorState>>(
+  (ref) => GlobalKey<NavigatorState>(),
+);
+
+/// 復習リマインダー通知がタップされたときに呼ぶ。指定の問題IDだけを
+/// 表示する復習画面を開く。
+void openReviewQuestionFromNotification(
+  GlobalKey<NavigatorState> navigatorKey,
+  String questionId,
+) {
+  final navigatorState = navigatorKey.currentState;
+  if (navigatorState == null) return;
+  navigatorState.push(
+    MaterialPageRoute(
+      builder: (_) => ReviewQuestionsView(
+        title: '復習リマインダー',
+        questionIds: [questionId],
+      ),
+    ),
+  );
+}
+
 class BikeLicenseKoreApp extends ConsumerWidget {
   const BikeLicenseKoreApp({super.key});
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     final scaffoldMessengerKey = ref.watch(scaffoldMessengerKeyProvider);
+    final navigatorKey = ref.watch(navigatorKeyProvider);
 
     // アプリ起動時にネットワークキュープロセッサーを初期化
     // これでオフラインキューの自動処理が開始される
@@ -44,6 +71,7 @@ class BikeLicenseKoreApp extends ConsumerWidget {
     return MaterialApp(
       title: '原付・バイク免許コレ！',
       debugShowCheckedModeBanner: false,
+      navigatorKey: navigatorKey,
       scaffoldMessengerKey: scaffoldMessengerKey,
       theme: AppTheme.light(),
       darkTheme: AppTheme.dark(),

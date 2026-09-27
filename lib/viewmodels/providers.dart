@@ -41,6 +41,10 @@ import '../models/export_models.dart';
 import '../services/debug_analytics_service.dart';
 import '../services/notification_service_impl.dart';
 import '../services/export_service_impl.dart';
+import '../services/streak_service.dart';
+import '../services/exam_plan_service.dart';
+import '../services/review_reminder_service.dart';
+import '../services/daily_question_widget_service.dart';
 
 // ---------------------------------------------------------------------------
 // Service層 Provider（差し替え可能。main.dart の overrides で本番実装に切替）
@@ -63,6 +67,19 @@ final masteryServiceProvider = Provider<MasteryService>((ref) => LocalMasterySer
 
 final achievementServiceProvider =
     Provider<AchievementService>((ref) => LocalAchievementService());
+
+final streakServiceProvider = Provider<StreakService>((ref) => const StreakService());
+
+final examPlanServiceProvider =
+    Provider<ExamPlanService>((ref) => const ExamPlanService());
+
+/// アプリ全体で単一インスタンスを共有する（プラグインの状態を持つため）。
+/// main.dart で initialize() を呼んでから使う。
+final reviewReminderServiceProvider =
+    Provider<ReviewReminderService>((ref) => ReviewReminderService());
+
+final dailyQuestionWidgetServiceProvider =
+    Provider<DailyQuestionWidgetService>((ref) => const DailyQuestionWidgetService());
 
 final soundEffectsServiceProvider = FutureProvider<SoundEffectsService>((ref) async {
   final service = LocalSoundEffectsService();
@@ -222,6 +239,21 @@ class UserController extends AsyncNotifier<AppUser> {
     await _saveUserToLocalAndFirestore(updated);
   }
 
+  /// 連続学習日数（ストリーク）と最終学習日を更新する。
+  Future<void> updateStreak({
+    required int streakCount,
+    required DateTime lastStudyDate,
+  }) async {
+    final current = state.valueOrNull;
+    if (current == null) return;
+    final updated = current.copyWith(
+      streakCount: streakCount,
+      lastStudyDate: lastStudyDate,
+    );
+    state = AsyncData(updated);
+    await _saveUserToLocalAndFirestore(updated);
+  }
+
   Future<void> setPurchaseStatus(
     PurchaseStatus status, {
     String? categoryId,
@@ -267,6 +299,30 @@ final questionsProvider =
   return ref
       .read(dataServiceProvider)
       .loadQuestions(licenseCategory: query.licenseCategory, stageTag: query.stageTag);
+});
+
+/// 試験日から逆算した1日あたりの学習ノルマ。試験日未設定の区分は null。
+final examPlanProvider =
+    FutureProvider.family<ExamPlan?, String>((ref, categoryId) async {
+  final user = ref.watch(userControllerProvider).valueOrNull;
+  final examDate = user?.examDatesByCategory[categoryId];
+  if (examDate == null) return null;
+
+  final uid = ref.read(currentUidProvider);
+  final allQuestions = await ref.watch(
+    questionsProvider(QuestionQuery(licenseCategory: categoryId)).future,
+  );
+  final masteredIds = await ref.read(masteryServiceProvider).loadMasteredQuestionsInCategory(
+        uid,
+        allQuestions.map((q) => q.id).toList(),
+      );
+  final unmasteredCount = allQuestions.length - masteredIds.length;
+
+  return ref.read(examPlanServiceProvider).calculatePlan(
+        examDate: examDate,
+        unmasteredCount: unmasteredCount,
+        now: DateTime.now(),
+      );
 });
 
 /// 学習モード（クイズ形式ではなく問題文・正解・解説を一覧で読む機能）の結果。
@@ -463,6 +519,16 @@ class DailyQuotaController extends FamilyNotifier<DailyQuotaState, String> {
     questionsList.shuffle();
     final sessionQuestions = questionsList.take(questionsPerSession).toList();
     state = state.copyWith(questions: sessionQuestions, loading: false, locked: false);
+
+    // ホーム画面ウィジェット「今日の1問」を更新する（失敗してもアプリ本体の
+    // 動作には影響させない）。
+    try {
+      await ref
+          .read(dailyQuestionWidgetServiceProvider)
+          .updateWithQuestions(pool);
+    } catch (e) {
+      debugPrint('Failed to update home screen widget: $e');
+    }
   }
 
   /// 回答ログをローカル＆キューに保存
@@ -543,6 +609,49 @@ class DailyQuotaController extends FamilyNotifier<DailyQuotaState, String> {
 
     // バッジチェック：新しく獲得したバッジを自動的にロック解除
     await _checkAndUnlockBadges();
+
+    // 連続学習日数（ストリーク）の更新
+    await _updateStreak(now);
+
+    // 間違えた問題は忘却曲線に沿って復習リマインダー通知をスケジュールする。
+    // 通知権限がない・スケジュールに失敗しても学習フロー自体は継続させる。
+    if (!isCorrect) {
+      try {
+        await ref.read(reviewReminderServiceProvider).scheduleReviewForQuestion(
+              questionId: question.id,
+              questionText: question.questionText,
+              answeredAt: now,
+            );
+      } catch (e) {
+        debugPrint('Failed to schedule review reminder: $e');
+      }
+    }
+  }
+
+  /// 連続学習日数を更新する。同日中の2回目以降の回答では書き込みをスキップ
+  /// し、SharedPreferences への不要な書き込みを避ける。
+  Future<void> _updateStreak(DateTime now) async {
+    final user = ref.read(userControllerProvider).valueOrNull;
+    if (user == null) return;
+
+    final streakService = ref.read(streakServiceProvider);
+    if (streakService.isAlreadyStudiedToday(
+      lastStudyDate: user.lastStudyDate,
+      now: now,
+    )) {
+      return;
+    }
+
+    final nextStreak = streakService.calculateNextStreak(
+      currentStreak: user.streakCount,
+      lastStudyDate: user.lastStudyDate,
+      now: now,
+    );
+
+    await ref.read(userControllerProvider.notifier).updateStreak(
+          streakCount: nextStreak,
+          lastStudyDate: now,
+        );
   }
 
   Future<void> _updatePredictionScore() async {

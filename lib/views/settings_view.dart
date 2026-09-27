@@ -161,16 +161,11 @@ class SettingsView extends ConsumerWidget {
           ElevatedButton(
             onPressed: () async {
               Navigator.pop(dialogContext);
-              // OS許可をリクエスト
-              final notificationService =
-                  ref.read(notificationServiceProvider);
+              // OS許可をリクエスト（復習リマインダー通知の権限と共通）
               final granted =
-                  await notificationService.requestNotificationPermission();
+                  await ref.read(reviewReminderServiceProvider).requestPermission();
 
               if (granted && dialogContext.mounted) {
-                // 許可が取得できたらテスト通知を送信
-                await notificationService.sendTestNotification();
-
                 ScaffoldMessenger.of(dialogContext).showSnackBar(
                   const SnackBar(content: Text('通知がオンになりました')),
                 );

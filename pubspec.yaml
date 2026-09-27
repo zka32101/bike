@@ -45,6 +45,10 @@ dependencies:
 
   # 通知
   flutter_local_notifications: ^17.1.0
+  timezone: ^0.9.4
+
+  # ホーム画面ウィジェット（Android: 今日の1問）
+  home_widget: ^0.10.0
 
   # ネットワーク状態監視（オフライン対応）
   connectivity_plus: ^6.0.0

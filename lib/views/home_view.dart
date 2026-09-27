@@ -11,7 +11,9 @@ import '../widgets/pass_rate_card.dart';
 import 'analytics_dashboard_view.dart';
 import 'daily_quota_view.dart';
 import 'exam_date_setting_view.dart';
+import 'mock_exam_view.dart';
 import 'settings_view.dart';
+import 'sign_quiz_view.dart';
 import 'study_mode_view.dart';
 
 /// ホーム画面：合格予測メーター／今日のノルマ。
@@ -81,6 +83,10 @@ class _HomeViewState extends ConsumerState<HomeView> {
                       ),
                       const SizedBox(height: 16),
                     ],
+                    if ((user?.streakCount ?? 0) > 0) ...[
+                      _StreakBadge(streakCount: user!.streakCount),
+                      const SizedBox(height: 16),
+                    ],
                     PassPredictionMeter(
                       score: scoreAsync.valueOrNull,
                       answeredCount: answerLogsAsync.valueOrNull?.length ?? 0,
@@ -90,6 +96,7 @@ class _HomeViewState extends ConsumerState<HomeView> {
                     const SizedBox(height: 16),
                     _ExamCountdownCard(
                       examDate: user?.examDatesByCategory[primaryCategoryId],
+                      licenseCategoryId: primaryCategoryId,
                     ),
                     const SizedBox(height: 16),
                     Card(
@@ -142,6 +149,37 @@ class _HomeViewState extends ConsumerState<HomeView> {
                         onTap: () => Navigator.of(context).push(
                           MaterialPageRoute(
                             builder: (_) => const AnalyticsDashboardView(),
+                          ),
+                        ),
+                      ),
+                    ),
+                    const SizedBox(height: 12),
+                    Card(
+                      child: ListTile(
+                        contentPadding: const EdgeInsets.all(16),
+                        leading: const Icon(Icons.timer, size: 32),
+                        title: const Text('本番模擬テスト'),
+                        subtitle: const Text('30問・20分・合格ライン90%の通し試験'),
+                        trailing: const Icon(Icons.chevron_right),
+                        onTap: () => Navigator.of(context).push(
+                          MaterialPageRoute(
+                            builder: (_) =>
+                                MockExamView(licenseCategory: primaryCategoryId),
+                          ),
+                        ),
+                      ),
+                    ),
+                    const SizedBox(height: 12),
+                    Card(
+                      child: ListTile(
+                        contentPadding: const EdgeInsets.all(16),
+                        leading: const Icon(Icons.signpost, size: 32),
+                        title: const Text('標識クイズ'),
+                        subtitle: const Text('標識の絵を見て名称・意味を当てる'),
+                        trailing: const Icon(Icons.chevron_right),
+                        onTap: () => Navigator.of(context).push(
+                          MaterialPageRoute(
+                            builder: (_) => const SignQuizView(),
                           ),
                         ),
                       ),
@@ -255,12 +293,45 @@ class _NoCategoryCard extends StatelessWidget {
   }
 }
 
-class _ExamCountdownCard extends StatelessWidget {
-  const _ExamCountdownCard({required this.examDate});
-  final DateTime? examDate;
+/// 連続学習日数（ストリーク）バッジ。streakCount が0のときは呼び出し側で
+/// 非表示にするため、ここでは1以上のみ想定する。
+class _StreakBadge extends StatelessWidget {
+  const _StreakBadge({required this.streakCount});
+  final int streakCount;
 
   @override
   Widget build(BuildContext context) {
+    return Card(
+      color: Theme.of(context).colorScheme.primaryContainer,
+      child: Padding(
+        padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 12),
+        child: Row(
+          children: [
+            const Icon(Icons.local_fire_department, color: Colors.deepOrange),
+            const SizedBox(width: 12),
+            Text(
+              '$streakCount日連続学習中！',
+              style: Theme.of(context).textTheme.titleMedium?.copyWith(
+                    fontWeight: FontWeight.bold,
+                  ),
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+}
+
+class _ExamCountdownCard extends ConsumerWidget {
+  const _ExamCountdownCard({
+    required this.examDate,
+    required this.licenseCategoryId,
+  });
+  final DateTime? examDate;
+  final String? licenseCategoryId;
+
+  @override
+  Widget build(BuildContext context, WidgetRef ref) {
     if (examDate == null) {
       return Card(
         child: ListTile(
@@ -277,12 +348,30 @@ class _ExamCountdownCard extends StatelessWidget {
         ),
       );
     }
+
+    final categoryId = licenseCategoryId;
+    final planAsync = categoryId == null
+        ? null
+        : ref.watch(examPlanProvider(categoryId));
+
+    final subtitle = switch (planAsync) {
+      null => const Text('残日数÷未習得問題数でノルマを逆算しています'),
+      AsyncData(:final value) when value == null =>
+        const Text('試験日を過ぎています。設定を見直してください'),
+      AsyncData(:final value) when value!.unmasteredCount == 0 =>
+        const Text('未習得問題はありません。この調子で維持しましょう！'),
+      AsyncData(:final value) =>
+        Text('1日${value!.dailyGoal}問解けば試験日までに間に合うペースです'),
+      AsyncError() => const Text('残日数÷未習得問題数でノルマを逆算しています'),
+      _ => const Text('ノルマを計算しています…'),
+    };
+
     final daysLeft = examDate!.difference(DateTime.now()).inDays;
     return Card(
       child: ListTile(
         leading: const Icon(Icons.event_available),
         title: Text('試験日まであと$daysLeft日'),
-        subtitle: const Text('残日数÷未習得問題数でノルマを逆算しています'),
+        subtitle: subtitle,
       ),
     );
   }

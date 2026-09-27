@@ -7,6 +7,7 @@ class AppUser {
     this.trainingStage,
     this.examDatesByCategory = const {},
     this.streakCount = 0,
+    this.lastStudyDate,
     this.purchaseStatus = PurchaseStatus.free,
     this.unlockedCategoryIds = const [],
     DateTime? createdAt,
@@ -26,6 +27,10 @@ class AppUser {
   final Map<String, DateTime> examDatesByCategory;
 
   final int streakCount;
+
+  /// 直近で学習した日（日付のみ意味を持つ。ストリーク計算に使用）。
+  final DateTime? lastStudyDate;
+
   final PurchaseStatus purchaseStatus;
 
   /// [purchaseStatus] が [PurchaseStatus.singleCategoryPass] のときのみ意味を持つ。
@@ -53,6 +58,7 @@ class AppUser {
     String? trainingStage,
     Map<String, DateTime>? examDatesByCategory,
     int? streakCount,
+    DateTime? lastStudyDate,
     PurchaseStatus? purchaseStatus,
     List<String>? unlockedCategoryIds,
     DateTime? createdAt,
@@ -64,6 +70,7 @@ class AppUser {
       trainingStage: trainingStage ?? this.trainingStage,
       examDatesByCategory: examDatesByCategory ?? this.examDatesByCategory,
       streakCount: streakCount ?? this.streakCount,
+      lastStudyDate: lastStudyDate ?? this.lastStudyDate,
       purchaseStatus: purchaseStatus ?? this.purchaseStatus,
       unlockedCategoryIds: unlockedCategoryIds ?? this.unlockedCategoryIds,
       createdAt: createdAt ?? this.createdAt,
@@ -90,6 +97,9 @@ class AppUser {
               }
             : const {},
     streakCount: json['streakCount'] as int? ?? 0,
+    lastStudyDate: json['lastStudyDate'] != null
+        ? DateTime.parse(json['lastStudyDate'] as String)
+        : null,
     purchaseStatus: PurchaseStatus.values.firstWhere(
       (e) => e.name == (json['purchaseStatus'] as String? ?? 'free'),
       orElse: () => PurchaseStatus.free,
@@ -116,6 +126,7 @@ class AppUser {
       (key, value) => MapEntry(key, value.toIso8601String()),
     ),
     'streakCount': streakCount,
+    'lastStudyDate': lastStudyDate?.toIso8601String(),
     'purchaseStatus': purchaseStatus.name,
     'unlockedCategoryIds': unlockedCategoryIds,
     'createdAt': createdAt.toIso8601String(),
