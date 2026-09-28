@@ -8,6 +8,9 @@ import '../viewmodels/providers.dart';
 /// ひっかけ道場：二輪特有の間違えやすい数字を対戦形式で反復。
 /// 誤答は自動でボス化し再挑戦キューに積まれる。
 ///
+/// 現在ホーム画面・学習分析からの導線が無くUIから到達不能（将来の再有効化に
+/// 備えてコードを保持）。
+///
 /// 【広告制御・厳守】ボス戦中は AdBlockingContext.trapDojoBossBattle を
 /// 保持し、広告表示を一切許可しない。
 class TrapDojoView extends ConsumerStatefulWidget {

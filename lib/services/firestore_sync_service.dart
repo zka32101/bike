@@ -24,6 +24,9 @@ abstract class FirestoreSyncService {
   /// 回答ログをFirestoreから読み込み
   Future<List<UserAnswerLog>> loadAnswerLogs(String uid);
 
+  // バイク解放・ひっかけ道場はUIから非表示/削除済み（将来の再有効化に備えて
+  // 同期コードのみ保持）。
+
   /// バイク解放進捗をFirestoreに保存
   Future<void> saveBikeProgress(String uid, List<BikeUnlockProgress> progress);
 
@@ -204,7 +207,7 @@ class LocalFirestoreSyncService implements FirestoreSyncService {
   }
 
   // ───────────────────────────────────────────────────────────────────────
-  // バイク解放進捗
+  // バイク解放進捗（UIから削除済み・将来の再有効化に備えて同期処理のみ保持）
   // ───────────────────────────────────────────────────────────────────────
 
   @override
@@ -277,7 +280,7 @@ class LocalFirestoreSyncService implements FirestoreSyncService {
   }
 
   // ───────────────────────────────────────────────────────────────────────
-  // ひっかけ道場
+  // ひっかけ道場（UIから非表示・将来の再有効化に備えて同期処理のみ保持）
   // ───────────────────────────────────────────────────────────────────────
 
   @override

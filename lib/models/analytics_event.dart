@@ -13,11 +13,11 @@ enum AnalyticsEventType {
   quizSessionCompleted,
   dailyQuotaMet,
 
-  // バイク解放
+  // バイク解放（UIから削除済み・将来の再有効化に備えて計測コードのみ保持）
   bikeUnlocked,
   bikeProgressUpdated,
 
-  // ひっかけ道場
+  // ひっかけ道場（UIから非表示・将来の再有効化に備えて計測コードのみ保持）
   trapDojoSessionStarted,
   trapDojoSessionCompleted,
   trapDojoBossDefeated,

@@ -10,10 +10,10 @@ class AnalyticsEvents {
   /// 1日ノルマ完走。
   static const String dailyQuotaCompleted = 'daily_quota_completed';
 
-  /// ひっかけ道場のボス撃破。
+  /// ひっかけ道場のボス撃破（機能はUIから非表示・将来の再有効化に備えて計測コードのみ保持）。
   static const String trapBossDefeated = 'trap_boss_defeated';
 
-  /// バイク解放。
+  /// バイク解放（機能はUIから削除済み・将来の再有効化に備えて計測コードのみ保持）。
   static const String bikeUnlocked = 'bike_unlocked';
 
   /// ペイウォール経由の課金成立。

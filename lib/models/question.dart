@@ -47,7 +47,8 @@ class Question {
   final int answer;
   final String explanation;
 
-  /// ひっかけ道場の対象問題か。
+  /// ひっかけ（二輪特有の間違えやすい数字等）を含む問題か。
+  /// 学習分析の弱点分析（トラップ種別）で使用（ひっかけ道場画面自体はUIから非表示）。
   final bool isTrapQuestion;
 
   /// ひっかけの種類（isTrapQuestion=true のときのみ意味を持つ）。

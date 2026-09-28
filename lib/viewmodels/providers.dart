@@ -826,7 +826,7 @@ final dailyQuotaControllerProvider =
 );
 
 // ---------------------------------------------------------------------------
-// Trap Dojo（ひっかけ道場）
+// Trap Dojo（ひっかけ道場）※UIから非表示・将来の再有効化に備えてコードのみ保持
 // ---------------------------------------------------------------------------
 
 class TrapDojoController extends AsyncNotifier<List<TrapDojoSession>> {

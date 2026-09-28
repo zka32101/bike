@@ -238,7 +238,7 @@ class AnalyticsEvents {
     );
   }
 
-  /// バイク解放
+  /// バイク解放（UIから削除済み・将来の再有効化に備えて計測コードのみ保持）
   static AnalyticsEvent bikeUnlocked({
     required String userId,
     required String bikeCategory,
