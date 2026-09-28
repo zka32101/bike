@@ -19,8 +19,26 @@ class GoogleMobileAdsService {
 
   GoogleMobileAdsService._internal();
 
-  // テスト用 Ad Unit ID (Google 公式)
-  // Production 環境では AdMob から実 ID を取得して設定
+  // 本番 Ad Unit ID は --dart-define で渡す（未指定ならGoogle公式テストIDのまま）。
+  // 例: flutter build apk --release \
+  //       --dart-define=ADMOB_BANNER_AD_UNIT_ID_ANDROID=ca-app-pub-xxxx/yyyy \
+  //       --dart-define=ADMOB_INTERSTITIAL_AD_UNIT_ID_ANDROID=ca-app-pub-xxxx/zzzz
+  // build-flutter-apk スキルの build.ps1 はこのフラグを渡さないため、本番IDが
+  // 用意できたら上記コマンドで手動ビルドすること（AndroidManifest.xmlのAdMob
+  // App ID同様、実IDが決まるまではテストIDのまま安全に動作する）。
+  static const String _bannerAdUnitIdAndroid =
+      String.fromEnvironment('ADMOB_BANNER_AD_UNIT_ID_ANDROID');
+  static const String _bannerAdUnitIdIos =
+      String.fromEnvironment('ADMOB_BANNER_AD_UNIT_ID_IOS');
+  static const String _interstitialAdUnitIdAndroid =
+      String.fromEnvironment('ADMOB_INTERSTITIAL_AD_UNIT_ID_ANDROID');
+  static const String _interstitialAdUnitIdIos =
+      String.fromEnvironment('ADMOB_INTERSTITIAL_AD_UNIT_ID_IOS');
+  static const String _rewardedAdUnitIdAndroid =
+      String.fromEnvironment('ADMOB_REWARDED_AD_UNIT_ID_ANDROID');
+  static const String _rewardedAdUnitIdIos =
+      String.fromEnvironment('ADMOB_REWARDED_AD_UNIT_ID_IOS');
+
   static final String _testBannerAdUnitId = Platform.isAndroid
       ? 'ca-app-pub-3940256099942544/6300978111'
       : 'ca-app-pub-3940256099942544/2934735716';
@@ -32,6 +50,24 @@ class GoogleMobileAdsService {
   static final String _testRewardedAdUnitId = Platform.isAndroid
       ? 'ca-app-pub-3940256099942544/5224354917'
       : 'ca-app-pub-3940256099942544/1712485313';
+
+  static String get _bannerAdUnitId {
+    final id = Platform.isAndroid ? _bannerAdUnitIdAndroid : _bannerAdUnitIdIos;
+    return id.isNotEmpty ? id : _testBannerAdUnitId;
+  }
+
+  static String get _interstitialAdUnitId {
+    final id = Platform.isAndroid
+        ? _interstitialAdUnitIdAndroid
+        : _interstitialAdUnitIdIos;
+    return id.isNotEmpty ? id : _testInterstitialAdUnitId;
+  }
+
+  static String get _rewardedAdUnitId {
+    final id =
+        Platform.isAndroid ? _rewardedAdUnitIdAndroid : _rewardedAdUnitIdIos;
+    return id.isNotEmpty ? id : _testRewardedAdUnitId;
+  }
 
   BannerAd? _bannerAd;
   InterstitialAd? _interstitialAd;
@@ -64,7 +100,7 @@ class GoogleMobileAdsService {
   }) async {
     try {
       final bannerAd = BannerAd(
-        adUnitId: customAdUnitId ?? _testBannerAdUnitId,
+        adUnitId: customAdUnitId ?? _bannerAdUnitId,
         size: AdSize.banner,
         request: const AdRequest(),
         listener: BannerAdListener(
@@ -98,7 +134,7 @@ class GoogleMobileAdsService {
   }) async {
     try {
       await InterstitialAd.load(
-        adUnitId: customAdUnitId ?? _testInterstitialAdUnitId,
+        adUnitId: customAdUnitId ?? _interstitialAdUnitId,
         request: const AdRequest(),
         adLoadCallback: InterstitialAdLoadCallback(
           onAdLoaded: (ad) {
@@ -156,7 +192,7 @@ class GoogleMobileAdsService {
   }) async {
     try {
       await RewardedAd.load(
-        adUnitId: customAdUnitId ?? _testRewardedAdUnitId,
+        adUnitId: customAdUnitId ?? _rewardedAdUnitId,
         request: const AdRequest(),
         rewardedAdLoadCallback: RewardedAdLoadCallback(
           onAdLoaded: (ad) {
