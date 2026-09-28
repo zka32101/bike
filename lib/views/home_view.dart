@@ -4,6 +4,7 @@ import 'package:google_mobile_ads/google_mobile_ads.dart';
 
 import '../core/constants/license_category.dart';
 import '../models/user.dart';
+import '../services/daily_question_widget_service.dart';
 import '../services/google_mobile_ads_service.dart';
 import '../viewmodels/providers.dart';
 import '../widgets/pass_prediction_meter.dart';
@@ -31,6 +32,9 @@ class _HomeViewState extends ConsumerState<HomeView> {
   /// 行わず、ホームを開くたびに先頭の区分がデフォルトになる。
   String? _selectedCategoryId;
 
+  /// ホームウィジェット更新の重複呼び出しを避けるための直近更新区分。
+  String? _widgetUpdatedForCategoryId;
+
   @override
   Widget build(BuildContext context) {
     final userAsync = ref.watch(userControllerProvider);
@@ -46,6 +50,23 @@ class _HomeViewState extends ConsumerState<HomeView> {
     }
     final primaryCategoryId =
         categories.isNotEmpty ? _selectedCategoryId : null;
+
+    // ホーム画面ウィジェット「今日の1問」を、選択中区分の問題が読み込まれ
+    // 次第（区分切り替え時も含め）更新する。ref.listenは登録時点で既に
+    // 解決済みの値には反応しないため、現在値を直接読んで都度更新する
+    // （区分が変わらない限り同じ問題一覧なので、呼び直しても実質no-op）。
+    if (primaryCategoryId != null) {
+      final questionsForWidget = ref
+          .watch(questionsProvider(QuestionQuery(licenseCategory: primaryCategoryId)))
+          .valueOrNull;
+      if (questionsForWidget != null &&
+          _widgetUpdatedForCategoryId != primaryCategoryId) {
+        _widgetUpdatedForCategoryId = primaryCategoryId;
+        WidgetsBinding.instance.addPostFrameCallback((_) {
+          DailyQuestionWidgetService().updateWithQuestions(questionsForWidget);
+        });
+      }
+    }
 
     return Scaffold(
       appBar: AppBar(
