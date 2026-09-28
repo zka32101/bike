@@ -9,6 +9,8 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
+  flutter_localizations:
+    sdk: flutter
   cupertino_icons: ^1.0.6
 
   # 状態管理
@@ -57,8 +59,8 @@ dependencies:
   freezed_annotation: ^2.4.1
   json_annotation: ^4.9.0
 
-  # 国際化（日付フォーマット等）
-  intl: ^0.19.0
+  # 国際化（日付フォーマット等）。flutter_localizations (SDK) が固定するバージョンに合わせる。
+  intl: ^0.20.2
 
 dev_dependencies:
   flutter_test:
@@ -71,6 +73,7 @@ dev_dependencies:
 
 flutter:
   uses-material-design: true
+  generate: true
   assets:
     - assets/questions/
     - assets/lottie/

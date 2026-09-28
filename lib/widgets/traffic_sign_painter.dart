@@ -414,7 +414,7 @@ class _SymbolPainter {
       case SignSymbol.slippery:
         _slippery();
       case SignSymbol.pedestrian:
-        _pedestrian(0, 0, 1, _fillPaint, _stroke);
+        _pedestrian(-0.04, 0.02, 1.12, _fillPaint, _stroke);
       case SignSymbol.bicycle:
         _bicycle();
       case SignSymbol.turnRightArrow:
@@ -576,7 +576,7 @@ class _SymbolPainter {
 
   /// 直進と右折の2方向を示す太い矢印。
   void _arrowStraightRight() {
-    const x0 = -0.32;
+    const x0 = -0.4;
     final shaft = _stroke(0.34, cap: StrokeCap.butt);
     // 直進の軸と矢じり
     _line(x0, 0.95, x0, -0.4, shaft);
@@ -590,18 +590,18 @@ class _SymbolPainter {
     );
     // 右折の枝と矢じり
     final branch = Path();
-    final s0 = p(x0, 0.5);
+    final s0 = p(x0, 0.6);
     final ctrl = p(x0, 0.2);
-    final e = p(x0 + 0.5, 0.2);
+    final e = p(x0 + 0.62, 0.2);
     branch
       ..moveTo(s0.dx, s0.dy)
       ..quadraticBezierTo(ctrl.dx, ctrl.dy, e.dx, e.dy);
     canvas.drawPath(branch, shaft);
     canvas.drawPath(
       _poly([
-        [x0 + 1.2, 0.2],
-        [x0 + 0.48, -0.3],
-        [x0 + 0.48, 0.7],
+        [x0 + 1.3, 0.2],
+        [x0 + 0.6, -0.3],
+        [x0 + 0.6, 0.7],
       ]),
       _fillPaint,
     );
