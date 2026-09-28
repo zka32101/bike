@@ -28,10 +28,11 @@ android {
         versionName = flutter.versionName
         multiDexEnabled = true
 
-        // AdMob App ID。ADMOB_APP_ID_ANDROID が未設定ならGoogle公式テストIDのまま。
-        // 本番公開前に実際のAdMob App IDを環境変数（またはCIのSecret）で渡すこと。
+        // AdMob App ID。「原付・バイク免許コレ！」用に発行済み（2026-09-28）。
+        // App IDはアプリ識別用の公開情報のためデフォルト値として埋め込み、
+        // 環境変数 ADMOB_APP_ID_ANDROID で上書きも可能にしておく。
         manifestPlaceholders["admobAppId"] =
-            System.getenv("ADMOB_APP_ID_ANDROID") ?: "ca-app-pub-3940256099942544~3347511713"
+            System.getenv("ADMOB_APP_ID_ANDROID") ?: "ca-app-pub-5058227312086483~9215678835"
     }
 
     signingConfigs {
