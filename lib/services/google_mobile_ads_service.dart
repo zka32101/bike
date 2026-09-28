@@ -19,23 +19,27 @@ class GoogleMobileAdsService {
 
   GoogleMobileAdsService._internal();
 
-  // 本番 Ad Unit ID は --dart-define で渡す（未指定ならGoogle公式テストIDのまま）。
-  // 例: flutter build apk --release \
-  //       --dart-define=ADMOB_BANNER_AD_UNIT_ID_ANDROID=ca-app-pub-xxxx/yyyy \
-  //       --dart-define=ADMOB_INTERSTITIAL_AD_UNIT_ID_ANDROID=ca-app-pub-xxxx/zzzz
-  // build-flutter-apk スキルの build.ps1 はこのフラグを渡さないため、本番IDが
-  // 用意できたら上記コマンドで手動ビルドすること（AndroidManifest.xmlのAdMob
-  // App ID同様、実IDが決まるまではテストIDのまま安全に動作する）。
-  static const String _bannerAdUnitIdAndroid =
-      String.fromEnvironment('ADMOB_BANNER_AD_UNIT_ID_ANDROID');
+  // 本番 Ad Unit ID（Android）。「原付・バイク免許コレ！」用に AdMob で発行済み
+  // （2026-09-28、App ID: ca-app-pub-5058227312086483~9215678835）。
+  // 広告ユニットIDはアプリ識別用の公開情報のためデフォルト値として埋め込み、
+  // --dart-define=ADMOB_BANNER_AD_UNIT_ID_ANDROID=... 等で上書きも可能にしておく。
+  // iOS用IDは未発行（iOSアプリをAdMobに追加後に設定すること）。
+  static const String _bannerAdUnitIdAndroid = String.fromEnvironment(
+    'ADMOB_BANNER_AD_UNIT_ID_ANDROID',
+    defaultValue: 'ca-app-pub-5058227312086483/6564630614',
+  );
   static const String _bannerAdUnitIdIos =
       String.fromEnvironment('ADMOB_BANNER_AD_UNIT_ID_IOS');
-  static const String _interstitialAdUnitIdAndroid =
-      String.fromEnvironment('ADMOB_INTERSTITIAL_AD_UNIT_ID_ANDROID');
+  static const String _interstitialAdUnitIdAndroid = String.fromEnvironment(
+    'ADMOB_INTERSTITIAL_AD_UNIT_ID_ANDROID',
+    defaultValue: 'ca-app-pub-5058227312086483/8853725911',
+  );
   static const String _interstitialAdUnitIdIos =
       String.fromEnvironment('ADMOB_INTERSTITIAL_AD_UNIT_ID_IOS');
-  static const String _rewardedAdUnitIdAndroid =
-      String.fromEnvironment('ADMOB_REWARDED_AD_UNIT_ID_ANDROID');
+  static const String _rewardedAdUnitIdAndroid = String.fromEnvironment(
+    'ADMOB_REWARDED_AD_UNIT_ID_ANDROID',
+    defaultValue: 'ca-app-pub-5058227312086483/3963352158',
+  );
   static const String _rewardedAdUnitIdIos =
       String.fromEnvironment('ADMOB_REWARDED_AD_UNIT_ID_IOS');
 

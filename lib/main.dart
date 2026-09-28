@@ -18,17 +18,18 @@ import 'services/local_data_service.dart';
 import 'services/revenuecat_purchase_service.dart';
 import 'viewmodels/providers.dart';
 
-// RevenueCat API キー（iOS/Android）。--dart-define で渡す（未指定なら
-// 空文字列のまま＝StubPurchaseServiceにフォールバックし、課金は一切発生しない）。
-// 設定方法: https://docs.revenuecat.com/docs/getting-started
-// 例: flutter build apk --release \
-//       --dart-define=REVENUECAT_API_KEY_ANDROID=goog_xxxxxxxx
-// build-flutter-apk スキルの build.ps1 はこのフラグを渡さないため、
-// RevenueCatダッシュボードでAPIキーを取得できたら上記コマンドで手動ビルドすること。
+// RevenueCat API キー（iOS/Android）。
+// Android: RevenueCat「Your WIsh」プロジェクト > Bikeアプリ（com.yourwish.bikelicense）の
+// Public API Key（2026-09-28 発行）。公開APIキーはクライアントアプリへの埋め込みを
+// 前提とした非秘匿情報のため、ソースに直接デフォルト値として持たせる
+// （--dart-define=REVENUECAT_API_KEY_ANDROID=... で上書きも可能）。
+// iOS用キーは未発行（iOSアプリをRevenueCatに追加後に設定すること）。
 const String _revenueCatApiKeyiOS =
     String.fromEnvironment('REVENUECAT_API_KEY_IOS');
-const String _revenueCatApiKeyAndroid =
-    String.fromEnvironment('REVENUECAT_API_KEY_ANDROID');
+const String _revenueCatApiKeyAndroid = String.fromEnvironment(
+  'REVENUECAT_API_KEY_ANDROID',
+  defaultValue: 'goog_LjzTdMuZdNmzxihVbMgpNlTQWaQ',
+);
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
