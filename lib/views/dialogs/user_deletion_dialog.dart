@@ -53,8 +53,7 @@ class _UserDeletionDialogState extends ConsumerState<UserDeletionDialog> {
         const SizedBox(height: 12),
         _buildDeletedDataItem('あなたのプロフィール情報'),
         _buildDeletedDataItem('回答ログ'),
-        _buildDeletedDataItem('バイク解放進捗'),
-        _buildDeletedDataItem('ひっかけ道場記録'),
+        _buildDeletedDataItem('学習進捗データ'),
         _buildDeletedDataItem('合格予測スコア'),
         const SizedBox(height: 16),
         const Text(
