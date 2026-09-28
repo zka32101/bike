@@ -4,6 +4,7 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import '../core/constants/license_category.dart';
 import '../core/constants/question_topic.dart';
 import '../core/constants/topic_summaries.dart';
+import '../l10n/generated/app_localizations.dart';
 import '../models/question.dart';
 import '../viewmodels/providers.dart';
 import 'paywall_view.dart';
@@ -30,12 +31,13 @@ class _StudyModeViewState extends ConsumerState<StudyModeView> {
     final masteredAsync = ref.watch(masteredQuestionsProvider);
     final categoryLabel = LicenseCategory.fromId(widget.licenseCategory).label;
 
+    final l10n = AppLocalizations.of(context);
     return Scaffold(
-      appBar: AppBar(title: Text('学習モード（$categoryLabel）')),
+      appBar: AppBar(title: Text(l10n.studyModeTitleWithCategory(categoryLabel))),
       body: SafeArea(
         child: resultAsync.when(
           loading: () => const Center(child: CircularProgressIndicator()),
-          error: (e, _) => Center(child: Text('読み込みに失敗しました: $e')),
+          error: (e, _) => Center(child: Text(l10n.commonLoadError(e.toString()))),
           data: (result) {
             if (result.locked) {
               return Center(
@@ -46,9 +48,9 @@ class _StudyModeViewState extends ConsumerState<StudyModeView> {
                     children: [
                       const Icon(Icons.lock_outline, size: 56),
                       const SizedBox(height: 16),
-                      const Text(
-                        'この区分はパス購入で解放されます',
-                        style: TextStyle(fontWeight: FontWeight.bold),
+                      Text(
+                        l10n.commonCategoryLocked,
+                        style: const TextStyle(fontWeight: FontWeight.bold),
                         textAlign: TextAlign.center,
                       ),
                       const SizedBox(height: 24),
@@ -59,7 +61,7 @@ class _StudyModeViewState extends ConsumerState<StudyModeView> {
                                 PaywallView(categoryId: widget.licenseCategory),
                           ),
                         ),
-                        child: const Text('プランを見る'),
+                        child: Text(l10n.commonViewPlans),
                       ),
                     ],
                   ),
@@ -67,7 +69,7 @@ class _StudyModeViewState extends ConsumerState<StudyModeView> {
               );
             }
             if (result.questions.isEmpty) {
-              return const Center(child: Text('この区分の問題がまだありません'));
+              return Center(child: Text(l10n.commonNoQuestionsInCategory));
             }
 
             final masteredIds = masteredAsync.valueOrNull
@@ -89,12 +91,12 @@ class _StudyModeViewState extends ConsumerState<StudyModeView> {
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     Text(
-                      '問題一覧（${questions.length}問）',
+                      l10n.studyModeQuestionList(questions.length),
                       style: Theme.of(context).textTheme.titleMedium,
                     ),
                     Row(
                       children: [
-                        const Text('未習得のみ'),
+                        Text(l10n.studyModeUnmasteredOnly),
                         Switch(
                           value: _unmasteredOnly,
                           onChanged: (v) => setState(() => _unmasteredOnly = v),
@@ -104,9 +106,9 @@ class _StudyModeViewState extends ConsumerState<StudyModeView> {
                   ],
                 ),
                 if (questions.isEmpty)
-                  const Padding(
-                    padding: EdgeInsets.symmetric(vertical: 24),
-                    child: Text('すべて「覚えた」にチェック済みです。お疲れさまでした！'),
+                  Padding(
+                    padding: const EdgeInsets.symmetric(vertical: 24),
+                    child: Text(l10n.studyModeAllMastered),
                   )
                 else
                   for (var i = 0; i < questions.length; i++)
@@ -148,7 +150,7 @@ class _TopicSummarySection extends StatelessWidget {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        Text('分野別まとめ', style: Theme.of(context).textTheme.titleMedium),
+        Text(AppLocalizations.of(context).studyModeTopicSummaries, style: Theme.of(context).textTheme.titleMedium),
         const SizedBox(height: 8),
         Card(
           child: Column(
@@ -247,7 +249,11 @@ class _StudyQuestionCard extends ConsumerWidget {
               icon: Icon(
                 isMastered ? Icons.check_circle : Icons.radio_button_unchecked,
               ),
-              label: Text(isMastered ? '覚えた ✓' : '覚えた'),
+              label: Text(
+                isMastered
+                    ? AppLocalizations.of(context).commonMastered
+                    : AppLocalizations.of(context).commonMarkMastered,
+              ),
               style: OutlinedButton.styleFrom(
                 foregroundColor: isMastered ? Theme.of(context).primaryColor : null,
               ),

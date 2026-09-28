@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
+import '../l10n/generated/app_localizations.dart';
 import '../models/pass_prediction_score.dart';
 import '../services/google_mobile_ads_service.dart';
 import '../viewmodels/providers.dart';
@@ -26,14 +27,14 @@ class DailyQuotaView extends ConsumerWidget {
         ref.read(dailyQuotaControllerProvider(licenseCategory).notifier);
 
     return Scaffold(
-      appBar: AppBar(title: const Text('問題を解く')),
+      appBar: AppBar(title: Text(AppLocalizations.of(context).menuAnswerQuestions)),
       body: SafeArea(
         child: state.loading
             ? const Center(child: CircularProgressIndicator())
             : state.locked
                 ? _LockedView(licenseCategory: licenseCategory)
                 : state.questions.isEmpty
-                    ? const Center(child: Text('この区分の問題がまだありません'))
+                    ? Center(child: Text(AppLocalizations.of(context).commonNoQuestionsInCategory))
                     : Stack(
                         children: [
                           if (state.isQuotaCompleted)
@@ -83,7 +84,10 @@ class _QuestionBody extends ConsumerWidget {
             value: state.currentIndex / state.questions.length,
           ),
           const SizedBox(height: 8),
-          Text('${state.currentIndex + 1} / ${state.questions.length}問'),
+          Text(AppLocalizations.of(context).dailyQuotaProgress(
+            state.currentIndex + 1,
+            state.questions.length,
+          )),
           const SizedBox(height: 20),
           Text(question.questionText, style: Theme.of(context).textTheme.titleLarge),
           const SizedBox(height: 24),
@@ -151,7 +155,7 @@ class _AhaMomentSheet extends StatelessWidget {
           mainAxisSize: MainAxisSize.min,
           children: [
             Text(
-              '🎉 3問正解！',
+              AppLocalizations.of(context).dailyQuotaAhaTitle,
               style: Theme.of(context)
                   .textTheme
                   .headlineMedium
@@ -164,16 +168,16 @@ class _AhaMomentSheet extends StatelessWidget {
               width: double.infinity,
               child: ElevatedButton(
                 onPressed: onContinue,
-                child: const Text('続ける'),
+                child: Text(AppLocalizations.of(context).dailyQuotaContinue),
               ),
             ),
             TextButton(
               onPressed: () => Navigator.of(context).push(
                 MaterialPageRoute(builder: (_) => const PaywallView()),
               ),
-              child: const Text(
-                '広告なしで続けるプランを見る',
-                style: TextStyle(color: Colors.white70),
+              child: Text(
+                AppLocalizations.of(context).dailyQuotaSeeAdFreePlans,
+                style: const TextStyle(color: Colors.white70),
               ),
             ),
           ],
@@ -199,9 +203,9 @@ class _LockedView extends ConsumerWidget {
           children: [
             const Icon(Icons.lock_outline, size: 56),
             const SizedBox(height: 16),
-            const Text(
-              'この区分はパス購入で解放されます',
-              style: TextStyle(fontWeight: FontWeight.bold),
+            Text(
+              AppLocalizations.of(context).commonCategoryLocked,
+              style: const TextStyle(fontWeight: FontWeight.bold),
               textAlign: TextAlign.center,
             ),
             const SizedBox(height: 24),
@@ -211,7 +215,7 @@ class _LockedView extends ConsumerWidget {
                   builder: (_) => PaywallView(categoryId: licenseCategory),
                 ),
               ),
-              child: const Text('プランを見る'),
+              child: Text(AppLocalizations.of(context).commonViewPlans),
             ),
           ],
         ),
@@ -273,15 +277,15 @@ class _QuotaCompletedViewState extends ConsumerState<_QuotaCompletedView> {
             const Icon(Icons.emoji_events, size: 72, color: Colors.amber),
             const SizedBox(height: 16),
             Text(
-              '練習完了！',
+              AppLocalizations.of(context).dailyQuotaCompleted,
               style: Theme.of(context).textTheme.headlineSmall,
             ),
             const SizedBox(height: 8),
-            Text('$correctCount / $total 問正解'),
+            Text(AppLocalizations.of(context).dailyQuotaCorrectCount(correctCount, total)),
             const SizedBox(height: 24),
             ElevatedButton(
               onPressed: () => Navigator.of(context).pop(),
-              child: const Text('ホームに戻る'),
+              child: Text(AppLocalizations.of(context).commonHome),
             ),
           ],
         ),

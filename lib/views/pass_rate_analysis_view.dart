@@ -3,6 +3,7 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 import '../core/constants/license_category.dart';
 import '../core/constants/question_topic.dart';
+import '../l10n/generated/app_localizations.dart';
 import '../models/analytics_snapshot.dart';
 import '../viewmodels/providers.dart';
 
@@ -18,12 +19,12 @@ class PassRateAnalysisView extends ConsumerWidget {
     final analyticsAsync = ref.watch(analyticsSnapshotProvider);
 
     return Scaffold(
-      appBar: AppBar(title: const Text('合格率分析')),
+      appBar: AppBar(title: Text(AppLocalizations.of(context).passRateTitle)),
       body: ScaffoldMessenger(
         child: scoreAsync.when(
           data: (score) => _buildContent(context, ref, score, answersAsync, analyticsAsync),
           loading: () => const Center(child: CircularProgressIndicator()),
-          error: (e, _) => Center(child: Text('読み込みに失敗しました: $e')),
+          error: (e, _) => Center(child: Text(AppLocalizations.of(context).commonLoadError(e.toString()))),
         ),
       ),
     );
@@ -46,13 +47,13 @@ class PassRateAnalysisView extends ConsumerWidget {
               const Icon(Icons.info_outline, size: 48),
               const SizedBox(height: 16),
               Text(
-                'まだ十分な回答データがありません',
+                AppLocalizations.of(context).passRateNoData,
                 style: Theme.of(context).textTheme.titleMedium,
                 textAlign: TextAlign.center,
               ),
               const SizedBox(height: 8),
               Text(
-                '10問以上回答して、分析を確認してください。',
+                AppLocalizations.of(context).passRateNoDataHint,
                 style: Theme.of(context).textTheme.bodySmall,
                 textAlign: TextAlign.center,
               ),
@@ -114,7 +115,7 @@ class PassRateAnalysisView extends ConsumerWidget {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Text(
-              '合格予測スコア',
+              AppLocalizations.of(context).passRatePredictionScore,
               style: Theme.of(context).textTheme.titleMedium,
             ),
             const SizedBox(height: 16),
@@ -130,7 +131,7 @@ class PassRateAnalysisView extends ConsumerWidget {
                   ),
                   const SizedBox(height: 8),
                   Text(
-                    _getScoreInterpretation(score.score),
+                    _getScoreInterpretation(context, score.score),
                     style: Theme.of(context).textTheme.bodyMedium,
                   ),
                 ],
@@ -164,19 +165,19 @@ class PassRateAnalysisView extends ConsumerWidget {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Text(
-              '正答率統計',
+              AppLocalizations.of(context).passRateAccuracyStats,
               style: Theme.of(context).textTheme.titleSmall,
             ),
             const SizedBox(height: 12),
             _buildStatRow(
               context,
-              '正答数',
+              AppLocalizations.of(context).passRateCorrectCount,
               '$correctCount / $totalAttempts',
             ),
             const SizedBox(height: 8),
             _buildStatRow(
               context,
-              '正答率',
+              AppLocalizations.of(context).passRateAccuracy,
               '${accuracy.toStringAsFixed(1)}%',
             ),
           ],
@@ -197,7 +198,7 @@ class PassRateAnalysisView extends ConsumerWidget {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Text(
-              '区分別分析',
+              AppLocalizations.of(context).passRateByCategory,
               style: Theme.of(context).textTheme.titleSmall,
             ),
             const SizedBox(height: 12),
@@ -270,7 +271,7 @@ class PassRateAnalysisView extends ConsumerWidget {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Text(
-              '段階別分析',
+              AppLocalizations.of(context).passRateByStage,
               style: Theme.of(context).textTheme.titleSmall,
             ),
             const SizedBox(height: 12),
@@ -331,7 +332,7 @@ class PassRateAnalysisView extends ConsumerWidget {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Text(
-              '分野別分析',
+              AppLocalizations.of(context).passRateByTopic,
               style: Theme.of(context).textTheme.titleSmall,
             ),
             const SizedBox(height: 12),
@@ -420,15 +421,16 @@ class PassRateAnalysisView extends ConsumerWidget {
     }
   }
 
-  String _getScoreInterpretation(double score) {
+  String _getScoreInterpretation(BuildContext context, double score) {
+    final l10n = AppLocalizations.of(context);
     if (score >= 80) {
-      return '合格まであと一歩！';
+      return l10n.passRateAlmostThere;
     } else if (score >= 60) {
-      return '順調に進んでいます';
+      return l10n.passRateOnTrack;
     } else if (score >= 40) {
-      return 'もっと練習が必要です';
+      return l10n.passRateNeedPractice;
     } else {
-      return 'コツコツ続けましょう';
+      return l10n.passRateKeepGoing;
     }
   }
 }

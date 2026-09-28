@@ -3,6 +3,7 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:google_mobile_ads/google_mobile_ads.dart';
 
 import '../core/constants/license_category.dart';
+import '../l10n/generated/app_localizations.dart';
 import '../models/user.dart';
 import '../services/daily_question_widget_service.dart';
 import '../services/google_mobile_ads_service.dart';
@@ -71,9 +72,10 @@ class _HomeViewState extends ConsumerState<HomeView> {
       }
     }
 
+    final l10n = AppLocalizations.of(context);
     return Scaffold(
       appBar: AppBar(
-        title: const Text('原付・バイク免許コレ！'),
+        title: Text(l10n.appTitle),
         actions: [
           IconButton(
             icon: const Icon(Icons.settings),
@@ -128,14 +130,16 @@ class _HomeViewState extends ConsumerState<HomeView> {
                         contentPadding: const EdgeInsets.all(16),
                         leading: const Icon(Icons.checklist_rtl, size: 32),
                         title: Text(
-                          '問題を解く（${LicenseCategory.fromId(primaryCategoryId).label}）',
+                          l10n.homeAnswerQuestionsWithCategory(
+                            LicenseCategory.fromId(primaryCategoryId).label,
+                          ),
                         ),
                         subtitle: Text(
                           (user?.hasAccessToCategory(primaryCategoryId) ?? false)
-                              ? '未習得問題からランダム出題'
+                              ? l10n.homeAnswerQuestionsSubtitle
                               : primaryCategoryId == LicenseCategory.gentsuki.name
-                                  ? '無料版は最初の$freeGentsukiPreviewCount問だけ解けます'
-                                  : 'パス購入で解放されます',
+                                  ? l10n.homeFreePreviewLimit(freeGentsukiPreviewCount)
+                                  : l10n.homeUnlockWithPass,
                         ),
                         trailing: const Icon(Icons.chevron_right),
                         onTap: () => Navigator.of(context).push(
@@ -151,8 +155,8 @@ class _HomeViewState extends ConsumerState<HomeView> {
                       child: ListTile(
                         contentPadding: const EdgeInsets.all(16),
                         leading: const Icon(Icons.menu_book, size: 32),
-                        title: const Text('学習モード'),
-                        subtitle: const Text('問題・正解・解説を読んで学習'),
+                        title: Text(l10n.menuStudyMode),
+                        subtitle: Text(l10n.homeStudyModeSubtitle),
                         trailing: const Icon(Icons.chevron_right),
                         onTap: () => Navigator.of(context).push(
                           MaterialPageRoute(
@@ -167,8 +171,8 @@ class _HomeViewState extends ConsumerState<HomeView> {
                       child: ListTile(
                         contentPadding: const EdgeInsets.all(16),
                         leading: const Icon(Icons.insights, size: 32),
-                        title: const Text('学習分析'),
-                        subtitle: const Text('弱点と伸びを確認'),
+                        title: Text(l10n.menuAnalytics),
+                        subtitle: Text(l10n.homeAnalyticsSubtitle),
                         trailing: const Icon(Icons.chevron_right),
                         onTap: () => Navigator.of(context).push(
                           MaterialPageRoute(
@@ -182,11 +186,12 @@ class _HomeViewState extends ConsumerState<HomeView> {
                       child: ListTile(
                         contentPadding: const EdgeInsets.all(16),
                         leading: const Icon(Icons.timer, size: 32),
-                        title: const Text('本番模擬テスト'),
+                        title: Text(l10n.menuMockExam),
                         subtitle: Text(
-                          '${mockExamQuestionCountFor(primaryCategoryId)}問・'
-                          '${mockExamTimeLimitSecondsFor(primaryCategoryId) ~/ 60}分・'
-                          '合格ライン90%（パス購入で利用可）',
+                          l10n.homeMockExamSubtitle(
+                            mockExamQuestionCountFor(primaryCategoryId),
+                            mockExamTimeLimitSecondsFor(primaryCategoryId) ~/ 60,
+                          ),
                         ),
                         trailing: const Icon(Icons.chevron_right),
                         onTap: () => Navigator.of(context).push(
@@ -202,8 +207,8 @@ class _HomeViewState extends ConsumerState<HomeView> {
                       child: ListTile(
                         contentPadding: const EdgeInsets.all(16),
                         leading: const Icon(Icons.signpost, size: 32),
-                        title: const Text('標識クイズ'),
-                        subtitle: const Text('標識の絵を見て名称・意味を当てる'),
+                        title: Text(l10n.menuSignQuiz),
+                        subtitle: Text(l10n.homeSignQuizSubtitle),
                         trailing: const Icon(Icons.chevron_right),
                         onTap: () => Navigator.of(context).push(
                           MaterialPageRoute(
@@ -217,8 +222,8 @@ class _HomeViewState extends ConsumerState<HomeView> {
                       child: ListTile(
                         contentPadding: const EdgeInsets.all(16),
                         leading: const Icon(Icons.warning_amber, size: 32),
-                        title: const Text('ヒッかけ問題クイズ'),
-                        subtitle: const Text('引っかけ問題だけを集中的に練習'),
+                        title: Text(l10n.menuTrapQuiz),
+                        subtitle: Text(l10n.homeTrapQuizSubtitle),
                         trailing: const Icon(Icons.chevron_right),
                         onTap: () => Navigator.of(context).push(
                           MaterialPageRoute(
@@ -232,8 +237,8 @@ class _HomeViewState extends ConsumerState<HomeView> {
                       child: ListTile(
                         contentPadding: const EdgeInsets.all(16),
                         leading: const Icon(Icons.pin, size: 32),
-                        title: const Text('数字・距離クイズ'),
-                        subtitle: const Text('制限速度・制動距離・車間距離などの数値を練習'),
+                        title: Text(l10n.menuNumberQuiz),
+                        subtitle: Text(l10n.homeNumberQuizSubtitle),
                         trailing: const Icon(Icons.chevron_right),
                         onTap: () => Navigator.of(context).push(
                           MaterialPageRoute(
@@ -336,13 +341,13 @@ class _NoCategoryCard extends StatelessWidget {
         padding: const EdgeInsets.all(20),
         child: Column(
           children: [
-            const Text('免許区分が未設定です。設定から選んでください。'),
+            Text(AppLocalizations.of(context).homeNoCategory),
             const SizedBox(height: 12),
             ElevatedButton(
               onPressed: () => Navigator.of(context).push(
                 MaterialPageRoute(builder: (_) => const SettingsView()),
               ),
-              child: const Text('区分を設定する'),
+              child: Text(AppLocalizations.of(context).homeSetCategory),
             ),
           ],
         ),
@@ -368,7 +373,7 @@ class _StreakBadge extends StatelessWidget {
             const Icon(Icons.local_fire_department, color: Colors.deepOrange),
             const SizedBox(width: 12),
             Text(
-              '$streakCount日連続学習中！',
+              AppLocalizations.of(context).homeStreak(streakCount),
               style: Theme.of(context).textTheme.titleMedium?.copyWith(
                     fontWeight: FontWeight.bold,
                   ),
@@ -394,14 +399,14 @@ class _ExamCountdownCard extends ConsumerWidget {
       return Card(
         child: ListTile(
           leading: const Icon(Icons.event_available),
-          title: const Text('試験日を登録すると逆算ノルマを自動計算します'),
+          title: Text(AppLocalizations.of(context).homeExamDatePrompt),
           trailing: TextButton(
             onPressed: () => Navigator.of(context).push(
               MaterialPageRoute(
                 builder: (_) => const ExamDateSettingView(),
               ),
             ),
-            child: const Text('設定'),
+            child: Text(AppLocalizations.of(context).homeExamDateSet),
           ),
         ),
       );
@@ -412,23 +417,24 @@ class _ExamCountdownCard extends ConsumerWidget {
         ? null
         : ref.watch(examPlanProvider(categoryId));
 
+    final l10n = AppLocalizations.of(context);
     final subtitle = switch (planAsync) {
-      null => const Text('残日数÷未習得問題数でノルマを逆算しています'),
+      null => Text(l10n.homeQuotaExplanation),
       AsyncData(:final value) when value == null =>
-        const Text('試験日を過ぎています。設定を見直してください'),
+        Text(l10n.homeExamDatePassed),
       AsyncData(:final value) when value!.unmasteredCount == 0 =>
-        const Text('未習得問題はありません。この調子で維持しましょう！'),
+        Text(l10n.homeNoUnmastered),
       AsyncData(:final value) =>
-        Text('1日${value!.dailyGoal}問解けば試験日までに間に合うペースです'),
-      AsyncError() => const Text('残日数÷未習得問題数でノルマを逆算しています'),
-      _ => const Text('ノルマを計算しています…'),
+        Text(l10n.homeDailyGoalPace(value!.dailyGoal)),
+      AsyncError() => Text(l10n.homeQuotaExplanation),
+      _ => Text(l10n.homeQuotaCalculating),
     };
 
     final daysLeft = examDate!.difference(DateTime.now()).inDays;
     return Card(
       child: ListTile(
         leading: const Icon(Icons.event_available),
-        title: Text('試験日まであと$daysLeft日'),
+        title: Text(l10n.homeExamCountdown(daysLeft)),
         subtitle: subtitle,
       ),
     );

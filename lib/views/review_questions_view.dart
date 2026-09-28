@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
+import '../l10n/generated/app_localizations.dart';
 import '../models/question.dart';
 import '../viewmodels/providers.dart';
 
@@ -23,15 +24,16 @@ class ReviewQuestionsView extends ConsumerWidget {
     final questionsAsync = ref.watch(_reviewQuestionsProvider(questionIds));
     final masteredAsync = ref.watch(masteredQuestionsProvider);
 
+    final l10n = AppLocalizations.of(context);
     return Scaffold(
       appBar: AppBar(title: Text(title)),
       body: SafeArea(
         child: questionsAsync.when(
           loading: () => const Center(child: CircularProgressIndicator()),
-          error: (e, _) => Center(child: Text('読み込みに失敗しました: $e')),
+          error: (e, _) => Center(child: Text(l10n.commonLoadError(e.toString()))),
           data: (questions) {
             if (questions.isEmpty) {
-              return const Center(child: Text('復習対象の問題が見つかりませんでした'));
+              return Center(child: Text(l10n.reviewNotFound));
             }
             final masteredIds = masteredAsync.valueOrNull
                     ?.map((m) => m.questionId)
@@ -42,7 +44,7 @@ class ReviewQuestionsView extends ConsumerWidget {
               padding: const EdgeInsets.fromLTRB(16, 16, 16, 32),
               children: [
                 Text(
-                  '間違えた問題 ${questions.length}問だけを復習します',
+                  l10n.reviewHeader(questions.length),
                   style: Theme.of(context).textTheme.titleSmall,
                 ),
                 const SizedBox(height: 12),
@@ -141,7 +143,11 @@ class _ReviewQuestionCard extends ConsumerWidget {
               icon: Icon(
                 isMastered ? Icons.check_circle : Icons.radio_button_unchecked,
               ),
-              label: Text(isMastered ? '覚えた ✓' : '覚えた'),
+              label: Text(
+                isMastered
+                    ? AppLocalizations.of(context).commonMastered
+                    : AppLocalizations.of(context).commonMarkMastered,
+              ),
               style: OutlinedButton.styleFrom(
                 foregroundColor: isMastered ? Theme.of(context).primaryColor : null,
               ),

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
+import '../l10n/generated/app_localizations.dart';
 import '../models/question.dart';
 import '../services/ad_gate_service.dart';
 import '../viewmodels/providers.dart';
@@ -47,13 +48,14 @@ class _TrapDojoViewState extends ConsumerState<TrapDojoView> {
       questionsProvider(QuestionQuery(licenseCategory: widget.licenseCategory)),
     );
 
+    final l10n = AppLocalizations.of(context);
     return Scaffold(
-      appBar: AppBar(title: const Text('ひっかけ道場')),
+      appBar: AppBar(title: Text(l10n.trapDojoTitle)),
       body: questionsAsync.when(
         data: (all) {
           final trapQuestions = all.where((q) => q.isTrapQuestion).toList();
           if (trapQuestions.isEmpty) {
-            return const Center(child: Text('この区分のひっかけ問題は準備中です'));
+            return Center(child: Text(l10n.trapDojoNotReady));
           }
           if (_index >= trapQuestions.length) {
             return Center(
@@ -62,11 +64,11 @@ class _TrapDojoViewState extends ConsumerState<TrapDojoView> {
                 children: [
                   const Icon(Icons.military_tech, size: 64, color: Colors.amber),
                   const SizedBox(height: 12),
-                  const Text('今日の道場は完了！'),
+                  Text(l10n.trapDojoCompleted),
                   const SizedBox(height: 20),
                   ElevatedButton(
                     onPressed: () => Navigator.of(context).pop(),
-                    child: const Text('ホームに戻る'),
+                    child: Text(l10n.commonHome),
                   ),
                 ],
               ),
@@ -82,7 +84,7 @@ class _TrapDojoViewState extends ConsumerState<TrapDojoView> {
                   children: [
                     const Icon(Icons.local_fire_department, color: Colors.deepOrange),
                     const SizedBox(width: 8),
-                    Text('ボス ${_index + 1} / ${trapQuestions.length}'),
+                    Text(l10n.trapDojoBossProgress(_index + 1, trapQuestions.length)),
                   ],
                 ),
                 const SizedBox(height: 16),
@@ -118,7 +120,7 @@ class _TrapDojoViewState extends ConsumerState<TrapDojoView> {
                           if (_lastCorrect) _index++;
                           // 不正解時はボスが居座り再挑戦（キューの先頭に留まる）。
                         }),
-                        child: Text(_lastCorrect ? '次のボスへ' : 'もう一度挑む'),
+                        child: Text(_lastCorrect ? l10n.trapDojoNextBoss : l10n.commonRetry),
                       ),
                     ),
                   ),
@@ -127,7 +129,7 @@ class _TrapDojoViewState extends ConsumerState<TrapDojoView> {
           );
         },
         loading: () => const Center(child: CircularProgressIndicator()),
-        error: (e, _) => Center(child: Text('読み込みに失敗しました: $e')),
+        error: (e, _) => Center(child: Text(l10n.commonLoadError(e.toString()))),
       ),
     );
   }

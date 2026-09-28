@@ -4,6 +4,7 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import '../core/constants/analytics_events.dart';
 import '../core/constants/license_category.dart';
 import '../core/constants/question_topic.dart';
+import '../l10n/generated/app_localizations.dart';
 import '../models/analytics_snapshot.dart';
 import '../viewmodels/providers.dart';
 import '../widgets/analytics/overall_summary_card.dart';
@@ -24,9 +25,10 @@ class AnalyticsDashboardView extends ConsumerWidget {
     final isLoading = snapshot.isLoading;
     final hasError = snapshot.isRefreshing || snapshot.hasError;
 
+    final l10n = AppLocalizations.of(context);
     return Scaffold(
       appBar: AppBar(
-        title: const Text('学習分析'),
+        title: Text(l10n.menuAnalytics),
         actions: [
           // 再読み込みボタン
           if (!isLoading)
@@ -37,19 +39,19 @@ class AnalyticsDashboardView extends ConsumerWidget {
                     .refresh(force: true);
               },
               icon: const Icon(Icons.refresh),
-              tooltip: '再計算',
+              tooltip: l10n.analyticsRecalculate,
             ),
         ],
       ),
       body: snapshot.when(
         data: (data) => _buildContent(context, ref, data),
-        loading: () => const Center(
+        loading: () => Center(
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              CircularProgressIndicator(),
-              SizedBox(height: 16),
-              Text('分析データを計算中...'),
+              const CircularProgressIndicator(),
+              const SizedBox(height: 16),
+              Text(l10n.analyticsCalculating),
             ],
           ),
         ),
@@ -61,7 +63,7 @@ class AnalyticsDashboardView extends ConsumerWidget {
               children: [
                 const Icon(Icons.error_outline, size: 48, color: Colors.red),
                 const SizedBox(height: 16),
-                const Text('分析データの読み込みに失敗しました'),
+                Text(l10n.analyticsLoadFailed),
                 const SizedBox(height: 8),
                 Text(
                   error.toString(),
@@ -73,7 +75,7 @@ class AnalyticsDashboardView extends ConsumerWidget {
                   onPressed: () {
                     ref.invalidate(analyticsSnapshotProvider);
                   },
-                  child: const Text('再度お試しください'),
+                  child: Text(l10n.analyticsRetry),
                 ),
               ],
             ),
@@ -99,6 +101,8 @@ class AnalyticsDashboardView extends ConsumerWidget {
           );
     });
 
+    final l10n = AppLocalizations.of(context);
+
     // データ不足の場合の案内
     if (data.overall.attempts < 10) {
       return Center(
@@ -113,13 +117,13 @@ class AnalyticsDashboardView extends ConsumerWidget {
                 color: Theme.of(context).colorScheme.primary,
               ),
               const SizedBox(height: 16),
-              const Text(
-                '分析データが不足しています',
-                style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
+              Text(
+                l10n.analyticsInsufficientData,
+                style: const TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
               ),
               const SizedBox(height: 8),
               Text(
-                'あと${10 - data.overall.attempts}問で分析が表示されます。\nもう少し学習を進めてください！',
+                l10n.analyticsRemainingQuestions(10 - data.overall.attempts),
                 textAlign: TextAlign.center,
                 style: Theme.of(context).textTheme.bodyMedium,
               ),
@@ -127,7 +131,7 @@ class AnalyticsDashboardView extends ConsumerWidget {
               ElevatedButton.icon(
                 onPressed: () => Navigator.of(context).pop(),
                 icon: const Icon(Icons.arrow_back),
-                label: const Text('ホームに戻る'),
+                label: Text(l10n.commonHome),
               ),
             ],
           ),
@@ -166,7 +170,7 @@ class AnalyticsDashboardView extends ConsumerWidget {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Text(
-                    '出題分野別',
+                    l10n.analyticsByTopic,
                     style: Theme.of(context).textTheme.titleMedium,
                   ),
                   const SizedBox(height: 12),
@@ -198,11 +202,11 @@ class AnalyticsDashboardView extends ConsumerWidget {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       Text(
-                        '区分別',
+                        l10n.analyticsByCategory,
                         style: Theme.of(context).textTheme.titleMedium,
                       ),
                       Text(
-                        '※複数区分に該当する問題があるため、\n合計は全問題数と異なる場合があります',
+                        l10n.analyticsCategoryNote,
                         style: Theme.of(context).textTheme.bodySmall,
                       ),
                     ],
@@ -234,7 +238,7 @@ class AnalyticsDashboardView extends ConsumerWidget {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Text(
-                      '弱点TOP${data.weakAreas.length}',
+                      l10n.analyticsWeakTop(data.weakAreas.length),
                       style: Theme.of(context).textTheme.titleMedium,
                     ),
                     const SizedBox(height: 12),
@@ -264,7 +268,7 @@ class AnalyticsDashboardView extends ConsumerWidget {
               padding: const EdgeInsets.symmetric(horizontal: 20),
               sliver: SliverToBoxAdapter(
                 child: Text(
-                  'おすすめ復習',
+                  l10n.analyticsRecommendedReview,
                   style: Theme.of(context).textTheme.titleMedium,
                 ),
               ),

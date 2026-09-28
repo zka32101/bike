@@ -5,6 +5,7 @@ import '../core/constants/license_category.dart';
 import '../models/user.dart';
 import '../viewmodels/providers.dart';
 import 'exam_date_setting_view.dart';
+import 'exam_info_view.dart';
 import 'help_view.dart';
 import 'license_category_select_view.dart';
 import 'paywall_view.dart';
@@ -124,6 +125,14 @@ class SettingsView extends ConsumerWidget {
             title: const Text('アプリの使い方'),
             onTap: () => Navigator.of(context).push(
               MaterialPageRoute(builder: (_) => const HelpView()),
+            ),
+          ),
+          ListTile(
+            leading: const Icon(Icons.menu_book_outlined),
+            title: const Text('本番試験について'),
+            subtitle: const Text('出題数・制限時間・合格ラインなどの詳細'),
+            onTap: () => Navigator.of(context).push(
+              MaterialPageRoute(builder: (_) => const ExamInfoView()),
             ),
           ),
         ],

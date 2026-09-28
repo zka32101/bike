@@ -1,0 +1,215 @@
+{
+  "@@locale": "ja",
+  "appTitle": "原付・バイク免許コレ！",
+  "@appTitle": {
+    "description": "アプリ名（ホーム画面AppBarタイトル等）"
+  },
+  "navHome": "ホーム",
+  "navSettings": "設定",
+  "menuAnswerQuestions": "問題を解く",
+  "menuStudyMode": "学習モード",
+  "menuAnalytics": "学習分析",
+  "menuMockExam": "本番模擬テスト",
+  "menuSignQuiz": "標識クイズ",
+  "menuTrapQuiz": "ヒッかけ問題クイズ",
+  "menuNumberQuiz": "数字・距離クイズ",
+  "settingsTitle": "設定",
+  "settingsNotifications": "通知",
+  "settingsPlan": "プラン",
+  "settingsHelp": "アプリの使い方",
+  "commonBack": "戻る",
+  "commonCancel": "キャンセル",
+  "commonConfirm": "確認",
+  "commonRetry": "もう一度挑戦",
+  "commonClose": "閉じる",
+  "commonNext": "次へ",
+  "commonStart": "開始",
+  "commonHome": "ホームに戻る",
+  "commonLoadError": "読み込みに失敗しました: {error}",
+  "@commonLoadError": {
+    "placeholders": {
+      "error": {
+        "type": "String"
+      }
+    }
+  },
+  "commonNoQuestionsInCategory": "この区分の問題がまだありません",
+  "commonCategoryLocked": "この区分はパス購入で解放されます",
+  "commonViewPlans": "プランを見る",
+  "commonMarkMastered": "覚えた",
+  "commonMastered": "覚えた ✓",
+  "homeAnswerQuestionsWithCategory": "問題を解く（{category}）",
+  "@homeAnswerQuestionsWithCategory": {
+    "placeholders": {
+      "category": {
+        "type": "String"
+      }
+    }
+  },
+  "homeAnswerQuestionsSubtitle": "未習得問題からランダム出題",
+  "homeFreePreviewLimit": "無料版は最初の{count}問だけ解けます",
+  "@homeFreePreviewLimit": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "homeUnlockWithPass": "パス購入で解放されます",
+  "homeStudyModeSubtitle": "問題・正解・解説を読んで学習",
+  "homeAnalyticsSubtitle": "弱点と伸びを確認",
+  "homeMockExamSubtitle": "{count}問・{minutes}分・合格ライン90%（パス購入で利用可）",
+  "@homeMockExamSubtitle": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      },
+      "minutes": {
+        "type": "int"
+      }
+    }
+  },
+  "homeSignQuizSubtitle": "標識の絵を見て名称・意味を当てる",
+  "homeTrapQuizSubtitle": "引っかけ問題だけを集中的に練習",
+  "homeNumberQuizSubtitle": "制限速度・制動距離・車間距離などの数値を練習",
+  "homeNoCategory": "免許区分が未設定です。設定から選んでください。",
+  "homeSetCategory": "区分を設定する",
+  "homeStreak": "{days}日連続学習中！",
+  "@homeStreak": {
+    "placeholders": {
+      "days": {
+        "type": "int"
+      }
+    }
+  },
+  "homeExamDatePrompt": "試験日を登録すると逆算ノルマを自動計算します",
+  "homeExamDateSet": "設定",
+  "homeQuotaExplanation": "残日数÷未習得問題数でノルマを逆算しています",
+  "homeExamDatePassed": "試験日を過ぎています。設定を見直してください",
+  "homeNoUnmastered": "未習得問題はありません。この調子で維持しましょう！",
+  "homeDailyGoalPace": "1日{count}問解けば試験日までに間に合うペースです",
+  "@homeDailyGoalPace": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "homeQuotaCalculating": "ノルマを計算しています…",
+  "homeExamCountdown": "試験日まであと{days}日",
+  "@homeExamCountdown": {
+    "placeholders": {
+      "days": {
+        "type": "int"
+      }
+    }
+  },
+  "dailyQuotaProgress": "{current} / {total}問",
+  "@dailyQuotaProgress": {
+    "placeholders": {
+      "current": {
+        "type": "int"
+      },
+      "total": {
+        "type": "int"
+      }
+    }
+  },
+  "dailyQuotaAhaTitle": "🎉 3問正解！",
+  "dailyQuotaContinue": "続ける",
+  "dailyQuotaSeeAdFreePlans": "広告なしで続けるプランを見る",
+  "dailyQuotaCompleted": "練習完了！",
+  "dailyQuotaCorrectCount": "{correct} / {total} 問正解",
+  "@dailyQuotaCorrectCount": {
+    "placeholders": {
+      "correct": {
+        "type": "int"
+      },
+      "total": {
+        "type": "int"
+      }
+    }
+  },
+  "studyModeTitleWithCategory": "学習モード（{category}）",
+  "@studyModeTitleWithCategory": {
+    "placeholders": {
+      "category": {
+        "type": "String"
+      }
+    }
+  },
+  "studyModeQuestionList": "問題一覧（{count}問）",
+  "@studyModeQuestionList": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "studyModeUnmasteredOnly": "未習得のみ",
+  "studyModeAllMastered": "すべて「覚えた」にチェック済みです。お疲れさまでした！",
+  "studyModeTopicSummaries": "分野別まとめ",
+  "analyticsRecalculate": "再計算",
+  "analyticsCalculating": "分析データを計算中...",
+  "analyticsLoadFailed": "分析データの読み込みに失敗しました",
+  "analyticsRetry": "再度お試しください",
+  "analyticsInsufficientData": "分析データが不足しています",
+  "analyticsRemainingQuestions": "あと{count}問で分析が表示されます。\nもう少し学習を進めてください！",
+  "@analyticsRemainingQuestions": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "analyticsByTopic": "出題分野別",
+  "analyticsByCategory": "区分別",
+  "analyticsCategoryNote": "※複数区分に該当する問題があるため、\n合計は全問題数と異なる場合があります",
+  "analyticsWeakTop": "弱点TOP{count}",
+  "@analyticsWeakTop": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "analyticsRecommendedReview": "おすすめ復習",
+  "passRateTitle": "合格率分析",
+  "passRateNoData": "まだ十分な回答データがありません",
+  "passRateNoDataHint": "10問以上回答して、分析を確認してください。",
+  "passRatePredictionScore": "合格予測スコア",
+  "passRateAccuracyStats": "正答率統計",
+  "passRateCorrectCount": "正答数",
+  "passRateAccuracy": "正答率",
+  "passRateByCategory": "区分別分析",
+  "passRateByStage": "段階別分析",
+  "passRateByTopic": "分野別分析",
+  "passRateAlmostThere": "合格まであと一歩！",
+  "passRateOnTrack": "順調に進んでいます",
+  "passRateNeedPractice": "もっと練習が必要です",
+  "passRateKeepGoing": "コツコツ続けましょう",
+  "trapDojoTitle": "ひっかけ道場",
+  "trapDojoNotReady": "この区分のひっかけ問題は準備中です",
+  "trapDojoCompleted": "今日の道場は完了！",
+  "trapDojoBossProgress": "ボス {current} / {total}",
+  "@trapDojoBossProgress": {
+    "placeholders": {
+      "current": {
+        "type": "int"
+      },
+      "total": {
+        "type": "int"
+      }
+    }
+  },
+  "trapDojoNextBoss": "次のボスへ",
+  "reviewNotFound": "復習対象の問題が見つかりませんでした",
+  "reviewHeader": "間違えた問題 {count}問だけを復習します",
+  "@reviewHeader": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  }
+}
