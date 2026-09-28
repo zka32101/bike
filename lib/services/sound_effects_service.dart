@@ -5,7 +5,8 @@ import 'package:just_audio/just_audio.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 /// 音声効果の管理サービス。
-/// 正解・不正解・バイク解放などのSEを再生。
+/// 正解・不正解などのSEを再生。バイク解放音はUIから削除済みの機能用
+/// （将来の再有効化に備えてメソッドのみ保持、現在は呼び出し元なし）。
 abstract class SoundEffectsService {
   /// SE有効化（ミュート状態）を取得
   bool get isMuted;
@@ -19,7 +20,7 @@ abstract class SoundEffectsService {
   /// 不正解音を再生
   Future<void> playIncorrectSound();
 
-  /// バイク解放音を再生
+  /// バイク解放音を再生（UIから削除済み・現在呼び出し元なし）
   Future<void> playBikeUnlockSound();
 }
 

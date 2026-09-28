@@ -83,6 +83,9 @@ class PerformanceCacheService {
     return _getCacheEntry<List<UserAnswerLog>>('answerLogs_$uid');
   }
 
+  // バイク解放・ひっかけ道場はUIから非表示/削除済み（将来の再有効化に備えて
+  // キャッシュ処理のみ保持）。
+
   /// バイク解放進捗をキャッシュに保存
   void cacheBikeUnlockProgress(String uid, List<BikeUnlockProgress> progress,
       {int? ttlSeconds}) {

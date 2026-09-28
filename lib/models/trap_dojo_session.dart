@@ -1,4 +1,5 @@
 /// ひっかけ道場：誤答は自動でボス化し再挑戦キューに積まれる。
+/// 現在ホーム画面・学習分析からは呼び出されずUIから到達不能（将来の再有効化に備えてコードを保持）。
 class TrapDojoSession {
   TrapDojoSession({
     required this.uid,

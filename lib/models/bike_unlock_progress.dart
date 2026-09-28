@@ -1,3 +1,5 @@
+/// バイク解放進捗。バイク解放機能はUIから削除済み
+/// （将来の再有効化に備えてモデルのみ保持）。
 class BikeUnlockProgress {
   BikeUnlockProgress({
     required this.uid,
@@ -8,7 +10,7 @@ class BikeUnlockProgress {
 
   final String uid;
 
-  /// BikeTier.name（原付/125/250/400/大型）。
+  /// バイク種別ID（原付/125/250/400/大型）。
   final String bikeId;
   final DateTime? unlockedAt;
   final int requiredCorrectCount;

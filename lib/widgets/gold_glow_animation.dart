@@ -4,6 +4,8 @@ import 'package:flutter/material.dart';
 
 /// バイク解放時のゴールド光演出アニメーション。
 /// 金色のグロー効果とパルスアニメーション。
+/// バイク解放機能はUIから削除済みで現在どこからも呼び出されない
+/// （将来の再有効化に備えてウィジェットのみ保持）。
 class GoldGlowAnimation extends StatefulWidget {
   const GoldGlowAnimation({
     super.key,
@@ -76,6 +78,8 @@ class _GoldGlowAnimationState extends State<GoldGlowAnimation>
 }
 
 /// スターバーストアニメーション（バイク解放時のスター演出）。
+/// バイク解放機能はUIから削除済みで現在どこからも呼び出されない
+/// （将来の再有効化に備えてウィジェットのみ保持）。
 class StarBurstAnimation extends StatefulWidget {
   const StarBurstAnimation({
     super.key,

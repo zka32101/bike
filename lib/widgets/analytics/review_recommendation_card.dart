@@ -60,6 +60,8 @@ class ReviewRecommendationCard extends ConsumerWidget {
         color = Colors.blue;
         break;
       case ReviewActionType.trapDojo:
+        // study_analytics_serviceはもうこのactionを生成しないため現在到達不能
+        // （将来の再有効化に備えて分岐のみ保持）。
         iconData = Icons.school;
         color = Colors.purple;
         break;
@@ -116,7 +118,7 @@ class ReviewRecommendationCard extends ConsumerWidget {
         break;
 
       case ReviewActionType.trapDojo:
-        // ひっかけ道場に遷移
+        // ひっかけ道場に遷移（現在このactionは生成されないため到達不能）
         Navigator.of(context).push(
           MaterialPageRoute(
             builder: (_) => const TrapDojoView(licenseCategory: 'motorcycle'),
