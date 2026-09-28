@@ -7,6 +7,15 @@ enum TrapNumberType {
   twoStageRightTurn, // 二段階右折
   speedLimit,
   followingDistance,
+  brakingDistance, // 制動距離
+  licensePeriod, // 免許の有効期間
+  turningRules, // 右左折・進路変更のルール
+  nightDriving, // 夜間運転
+  signalAndMarkings, // 信号・標示
+  hazardRecognition, // 危険予測
+  weatherConditions, // 天候
+  weatherSafety, // 悪天候時の安全運転
+  brakeTechnique, // ブレーキ操作
   other,
 }
 

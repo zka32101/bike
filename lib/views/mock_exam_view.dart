@@ -101,6 +101,7 @@ class _MockExamViewState extends ConsumerState<MockExamView> {
       case MockExamPhase.ready:
         return _IntroView(
           questionCount: state.totalCount,
+          timeLimitSeconds: state.remainingSeconds,
           onStart: _controller.start,
         );
       case MockExamPhase.inProgress:
@@ -166,9 +167,14 @@ class _TimerChip extends StatelessWidget {
 }
 
 class _IntroView extends StatelessWidget {
-  const _IntroView({required this.questionCount, required this.onStart});
+  const _IntroView({
+    required this.questionCount,
+    required this.timeLimitSeconds,
+    required this.onStart,
+  });
 
   final int questionCount;
+  final int timeLimitSeconds;
   final VoidCallback onStart;
 
   @override
@@ -188,9 +194,9 @@ class _IntroView extends StatelessWidget {
             ),
             const SizedBox(height: 24),
             _RuleRow(icon: Icons.format_list_numbered, text: '出題数：$questionCount問'),
-            const _RuleRow(
+            _RuleRow(
               icon: Icons.timer_outlined,
-              text: '制限時間：${mockExamTimeLimitSeconds ~/ 60}分',
+              text: '制限時間：${timeLimitSeconds ~/ 60}分',
             ),
             _RuleRow(
               icon: Icons.flag_outlined,

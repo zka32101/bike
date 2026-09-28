@@ -13,13 +13,23 @@ import 'providers.dart';
 
 // ---------------------------------------------------------------------------
 // 本番模擬テスト（制限時間・合格ライン判定つきの通し試験モード）
+//
+// 出題数・制限時間は実際の学科試験の仕様に合わせている。
+// - 原付: 48問（文章46問＋イラスト2問相当）、30分
+// - 二輪（普通・大型・AT限定・小型限定）: 95問（文章90問＋イラスト5問相当）、50分
+// 合格ラインはいずれも正答率90%以上。
+// パス未購入（無料）ユーザーは一切利用できない（原付の無料プレビューも対象外）。
 // ---------------------------------------------------------------------------
 
-/// 模擬テスト1回あたりの出題数。
-const int mockExamQuestionCount = 30;
+/// 区分ごとの模擬テスト出題数。
+int mockExamQuestionCountFor(String licenseCategory) {
+  return licenseCategory == LicenseCategory.gentsuki.name ? 48 : 95;
+}
 
-/// 模擬テストの制限時間（秒）。20分。
-const int mockExamTimeLimitSeconds = 20 * 60;
+/// 区分ごとの模擬テスト制限時間（秒）。
+int mockExamTimeLimitSecondsFor(String licenseCategory) {
+  return licenseCategory == LicenseCategory.gentsuki.name ? 30 * 60 : 50 * 60;
+}
 
 /// 合格ライン（正答率）。90%以上で合格。
 const double mockExamPassRate = 0.9;
@@ -50,7 +60,7 @@ class MockExamState {
     this.questions = const [],
     this.selectedAnswers = const [],
     this.currentIndex = 0,
-    this.remainingSeconds = mockExamTimeLimitSeconds,
+    this.remainingSeconds = 0,
     this.timedOut = false,
   });
 
@@ -136,27 +146,25 @@ class MockExamController extends FamilyNotifier<MockExamState, String> {
 
   /// 問題を読み込み、開始待ち（[MockExamPhase.ready]）状態にする。
   /// 区分内の全問題（マスター済み・未習得を問わず、段階フィルタなし）から
-  /// ランダムに [mockExamQuestionCount] 問を選出する。
+  /// ランダムに出題数分を選出する。
+  ///
+  /// 本番模擬テストはパス未購入（無料）ユーザーは一切利用できない
+  /// （原付の無料プレビュー枠であっても対象外）。
   Future<void> load() async {
     _cancelTimer();
     state = const MockExamState();
 
     final user = ref.read(userControllerProvider).valueOrNull;
-    final all = await ref.read(
-      questionsProvider(QuestionQuery(licenseCategory: _licenseCategory)).future,
-    );
-
-    // 無料/購入の制限は DailyQuotaController と同じルールを適用する。
     final hasAccess = user?.hasAccessToCategory(_licenseCategory) ?? false;
-    List<Question> pool;
-    if (hasAccess) {
-      pool = List.of(all);
-    } else if (_licenseCategory == LicenseCategory.gentsuki.name) {
-      pool = all.take(freeGentsukiPreviewCount).toList();
-    } else {
+    if (!hasAccess) {
       state = state.copyWith(phase: MockExamPhase.locked);
       return;
     }
+
+    final all = await ref.read(
+      questionsProvider(QuestionQuery(licenseCategory: _licenseCategory)).future,
+    );
+    final pool = List.of(all);
 
     if (pool.isEmpty) {
       state = state.copyWith(phase: MockExamPhase.empty);
@@ -164,11 +172,13 @@ class MockExamController extends FamilyNotifier<MockExamState, String> {
     }
 
     pool.shuffle();
-    final questions = pool.take(mockExamQuestionCount).toList();
+    final questionCount = mockExamQuestionCountFor(_licenseCategory);
+    final questions = pool.take(questionCount).toList();
     state = MockExamState(
       phase: MockExamPhase.ready,
       questions: questions,
       selectedAnswers: List<int?>.filled(questions.length, null),
+      remainingSeconds: mockExamTimeLimitSecondsFor(_licenseCategory),
     );
   }
 
@@ -181,7 +191,7 @@ class MockExamController extends FamilyNotifier<MockExamState, String> {
     state = state.copyWith(
       phase: MockExamPhase.inProgress,
       currentIndex: 0,
-      remainingSeconds: mockExamTimeLimitSeconds,
+      remainingSeconds: mockExamTimeLimitSecondsFor(_licenseCategory),
       timedOut: false,
     );
     _cancelTimer();

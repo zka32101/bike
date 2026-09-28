@@ -6,6 +6,7 @@ import '../core/constants/license_category.dart';
 import '../models/user.dart';
 import '../services/daily_question_widget_service.dart';
 import '../services/google_mobile_ads_service.dart';
+import '../viewmodels/mock_exam_providers.dart';
 import '../viewmodels/providers.dart';
 import '../widgets/pass_prediction_meter.dart';
 import '../widgets/pass_rate_card.dart';
@@ -14,8 +15,10 @@ import 'daily_quota_view.dart';
 import 'exam_date_setting_view.dart';
 import 'mock_exam_view.dart';
 import 'settings_view.dart';
+import 'number_quiz_view.dart';
 import 'sign_quiz_view.dart';
 import 'study_mode_view.dart';
+import 'trap_quiz_view.dart';
 
 /// ホーム画面：合格予測メーター／今日のノルマ。
 /// ホーム→ノルマ→正誤演出＝3タップ以内でAhaに到達する動線の起点。
@@ -180,7 +183,11 @@ class _HomeViewState extends ConsumerState<HomeView> {
                         contentPadding: const EdgeInsets.all(16),
                         leading: const Icon(Icons.timer, size: 32),
                         title: const Text('本番模擬テスト'),
-                        subtitle: const Text('30問・20分・合格ライン90%の通し試験'),
+                        subtitle: Text(
+                          '${mockExamQuestionCountFor(primaryCategoryId)}問・'
+                          '${mockExamTimeLimitSecondsFor(primaryCategoryId) ~/ 60}分・'
+                          '合格ライン90%（パス購入で利用可）',
+                        ),
                         trailing: const Icon(Icons.chevron_right),
                         onTap: () => Navigator.of(context).push(
                           MaterialPageRoute(
@@ -201,6 +208,36 @@ class _HomeViewState extends ConsumerState<HomeView> {
                         onTap: () => Navigator.of(context).push(
                           MaterialPageRoute(
                             builder: (_) => const SignQuizView(),
+                          ),
+                        ),
+                      ),
+                    ),
+                    const SizedBox(height: 12),
+                    Card(
+                      child: ListTile(
+                        contentPadding: const EdgeInsets.all(16),
+                        leading: const Icon(Icons.warning_amber, size: 32),
+                        title: const Text('ヒッかけ問題クイズ'),
+                        subtitle: const Text('引っかけ問題だけを集中的に練習'),
+                        trailing: const Icon(Icons.chevron_right),
+                        onTap: () => Navigator.of(context).push(
+                          MaterialPageRoute(
+                            builder: (_) => const TrapQuizView(),
+                          ),
+                        ),
+                      ),
+                    ),
+                    const SizedBox(height: 12),
+                    Card(
+                      child: ListTile(
+                        contentPadding: const EdgeInsets.all(16),
+                        leading: const Icon(Icons.pin, size: 32),
+                        title: const Text('数字・距離クイズ'),
+                        subtitle: const Text('制限速度・制動距離・車間距離などの数値を練習'),
+                        trailing: const Icon(Icons.chevron_right),
+                        onTap: () => Navigator.of(context).push(
+                          MaterialPageRoute(
+                            builder: (_) => const NumberQuizView(),
                           ),
                         ),
                       ),

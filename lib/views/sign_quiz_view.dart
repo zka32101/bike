@@ -9,7 +9,7 @@ import '../widgets/traffic_sign_painter.dart';
 
 /// 標識クイズ専用モード。
 ///
-/// 全20種の標識からランダムに [questionCount] 問を出題し、
+/// 全標識（[kTrafficSigns]）からランダムに [questionCount] 問を出題し、
 /// 標識の絵（CustomPainterで描画）→4択→正誤フィードバック→次の問題、を繰り返す。
 /// 最後に結果画面（正答数／出題数）を表示する。
 ///

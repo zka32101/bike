@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <color name="ic_launcher_background">#FFFFFF</color>
-    <!-- Flutterのスプラッシュ画面(SplashScreen)のグラデーション開始色と合わせ、
-         ネイティブ起動画面→Flutterスプラッシュの切り替わりを白フラッシュなしに見せる -->
-    <color name="splash_background">#F39C12</color>
+    <!-- 起動画面（ネイティブ起動画面→Flutterスプラッシュの切り替わり時）の背景色。
+         ベージュ系のニュートラルカラーで、派手さを抑えた落ち着いた印象にする。 -->
+    <color name="splash_background">#F5F5F0</color>
 </resources>

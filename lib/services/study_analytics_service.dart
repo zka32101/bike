@@ -442,6 +442,24 @@ class DefaultStudyAnalyticsService implements StudyAnalyticsService {
         return '速度制限';
       case TrapNumberType.followingDistance:
         return '追従距離';
+      case TrapNumberType.brakingDistance:
+        return '制動距離';
+      case TrapNumberType.licensePeriod:
+        return '免許の有効期間';
+      case TrapNumberType.turningRules:
+        return '右左折・進路変更';
+      case TrapNumberType.nightDriving:
+        return '夜間運転';
+      case TrapNumberType.signalAndMarkings:
+        return '信号・標示';
+      case TrapNumberType.hazardRecognition:
+        return '危険予測';
+      case TrapNumberType.weatherConditions:
+        return '天候';
+      case TrapNumberType.weatherSafety:
+        return '悪天候時の安全運転';
+      case TrapNumberType.brakeTechnique:
+        return 'ブレーキ操作';
       case TrapNumberType.other:
         return 'その他のひっかけ';
     }

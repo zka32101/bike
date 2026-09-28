@@ -252,7 +252,7 @@ class TrafficSignPainter extends CustomPainter {
     // 逆三角形は重心がやや下にあるので文字を少し上へ寄せる
     final dyShift =
         sign.shape == SignShape.invertedTriangle ? -g.radius * 0.12 : 0.0;
-    var y = g.center.dy - totalH / 2 + dyShift;
+    var y = g.center.dy - totalH / 2 + dyShift + s * sign.centerTextOffsetY;
     main.paint(canvas, Offset(g.center.dx - main.width / 2, y));
     if (sub != null) {
       y += main.height + gap;
@@ -413,7 +413,378 @@ class _SymbolPainter {
         _rightCurve();
       case SignSymbol.slippery:
         _slippery();
+      case SignSymbol.pedestrian:
+        _pedestrian(0, 0, 1, _fillPaint, _stroke);
+      case SignSymbol.bicycle:
+        _bicycle();
+      case SignSymbol.turnRightArrow:
+        _turnArrow(1, 0.26);
+      case SignSymbol.arrowLeft:
+        _turnArrow(-1, 0.4);
+      case SignSymbol.arrowStraightRight:
+        _arrowStraightRight();
+      case SignSymbol.speedUnderline:
+        _rrect(-0.72, 0.62, 0.72, 0.8, 0.02, _fillPaint);
+      case SignSymbol.heightMarkers:
+        _heightMarkers();
+      case SignSymbol.horn:
+        _horn();
+      case SignSymbol.crosswalk:
+        _crosswalk();
+      case SignSymbol.stopLineBar:
+        _rrect(-1.2, 0.5, 1.2, 0.82, 0.02, _fillPaint);
+      case SignSymbol.crossroad:
+        _rrect(-0.17, -0.95, 0.17, 0.95, 0, _fillPaint);
+        _rrect(-0.95, -0.17, 0.95, 0.17, 0, _fillPaint);
+      case SignSymbol.tJunction:
+        _rrect(-0.95, -0.62, 0.95, -0.28, 0, _fillPaint);
+        _rrect(-0.17, -0.62, 0.17, 0.95, 0, _fillPaint);
+      case SignSymbol.leftCurve:
+        _rightCurve(mirror: true);
+      case SignSymbol.twoWayTraffic:
+        _twoWayTraffic();
+      case SignSymbol.roadWorks:
+        _roadWorks();
+      case SignSymbol.deer:
+        _deer();
+      case SignSymbol.exclamation:
+        canvas.drawPath(
+          _poly([
+            [-0.17, -0.92],
+            [0.17, -0.92],
+            [0.08, 0.36],
+            [-0.08, 0.36],
+          ]),
+          _fillPaint,
+        );
+        _circle(0, 0.7, 0.16, _fillPaint);
+      case SignSymbol.carFront:
+        _carFront();
     }
+  }
+
+  /// 正面から見た乗用車（青地に白。窓とライトは地色の青で抜く）。
+  void _carFront() {
+    final paint = _fillPaint;
+    final cut = Paint()..color = SignColors.blue;
+    // キャビン
+    canvas.drawPath(
+      _poly([
+        [-0.66, -0.12],
+        [-0.46, -0.62],
+        [0.46, -0.62],
+        [0.66, -0.12],
+      ]),
+      paint,
+    );
+    // ボディ
+    _rrect(-0.95, -0.16, 0.95, 0.42, 0.1, paint);
+    // タイヤ
+    _rrect(-0.86, 0.36, -0.5, 0.66, 0.05, paint);
+    _rrect(0.5, 0.36, 0.86, 0.66, 0.05, paint);
+    // フロントガラス
+    canvas.drawPath(
+      _poly([
+        [-0.52, -0.2],
+        [-0.38, -0.52],
+        [0.38, -0.52],
+        [0.52, -0.2],
+      ]),
+      cut,
+    );
+    // ライトとグリル
+    _circle(-0.64, 0.12, 0.11, cut);
+    _circle(0.64, 0.12, 0.11, cut);
+    _rrect(-0.3, 0.06, 0.3, 0.18, 0.02, cut);
+  }
+
+  /// 右向きに歩く人。中心 ([cx],[cy])、倍率 [sc]。
+  void _pedestrian(
+    double cx,
+    double cy,
+    double sc,
+    Paint fill,
+    Paint Function(double w, {Color? paintColor, StrokeCap cap}) stroke,
+  ) {
+    double x(double v) => cx + v * sc;
+    double y(double v) => cy + v * sc;
+    _circle(x(0.1), y(-0.78), 0.17 * sc, fill);
+    // 胴体
+    _line(x(0.06), y(-0.5), x(0), y(0.12), stroke(0.26 * sc));
+    // 腕（前後に振る）
+    _line(x(0.06), y(-0.42), x(0.36), y(-0.02), stroke(0.11 * sc));
+    _line(x(0.04), y(-0.42), x(-0.3), y(-0.06), stroke(0.11 * sc));
+    // 脚（前後に開く）
+    final leg = stroke(0.14 * sc);
+    _line(x(0), y(0.1), x(0.3), y(0.5), leg);
+    _line(x(0.3), y(0.5), x(0.34), y(0.9), leg);
+    _line(x(0), y(0.1), x(-0.34), y(0.88), leg);
+  }
+
+  /// 横から見た自転車（右向き、乗員なし）。
+  void _bicycle() {
+    final tube = _stroke(0.09);
+    _circle(-0.62, 0.35, 0.38, tube);
+    _circle(0.62, 0.35, 0.38, tube);
+    final frame = Path();
+    void to(double px, double py, {bool move = false}) {
+      final o = p(px, py);
+      move ? frame.moveTo(o.dx, o.dy) : frame.lineTo(o.dx, o.dy);
+    }
+
+    to(-0.62, 0.35, move: true);
+    to(-0.04, 0.35); // 後輪ハブ→クランク
+    to(0.42, -0.22); // ダウンチューブ
+    to(-0.26, -0.22); // トップチューブ
+    to(-0.62, 0.35); // シートステー
+    to(-0.26, -0.22, move: true);
+    to(-0.04, 0.35); // シートチューブ
+    to(0.42, -0.22, move: true);
+    to(0.62, 0.35); // フロントフォーク
+    to(0.42, -0.22, move: true);
+    to(0.36, -0.42); // ハンドルポスト
+    to(0.56, -0.46); // ハンドル
+    to(-0.3, -0.22, move: true);
+    to(-0.34, -0.36); // シートポスト
+    canvas.drawPath(frame, _stroke(0.09));
+    _rrect(-0.5, -0.44, -0.18, -0.34, 0.04, _fillPaint); // サドル
+    _circle(-0.04, 0.35, 0.08, _fillPaint); // クランク
+  }
+
+  /// 上がってから右（dir=1）／左（dir=-1）へ曲がる太い矢印。
+  void _turnArrow(double dir, double width) {
+    final path = Path();
+    final a = p(-0.3 * dir, 0.95);
+    final b = p(-0.3 * dir, 0);
+    final ctrl = p(-0.3 * dir, -0.4);
+    final d = p(0.2 * dir, -0.4);
+    path
+      ..moveTo(a.dx, a.dy)
+      ..lineTo(b.dx, b.dy)
+      ..quadraticBezierTo(ctrl.dx, ctrl.dy, d.dx, d.dy);
+    canvas.drawPath(path, _stroke(width, cap: StrokeCap.butt));
+    final hh = 0.3 + width * 0.6;
+    canvas.drawPath(
+      _poly([
+        [0.9 * dir, -0.4],
+        [0.18 * dir, -0.4 - hh],
+        [0.18 * dir, -0.4 + hh],
+      ]),
+      _fillPaint,
+    );
+  }
+
+  /// 直進と右折の2方向を示す太い矢印。
+  void _arrowStraightRight() {
+    const x0 = -0.32;
+    final shaft = _stroke(0.34, cap: StrokeCap.butt);
+    // 直進の軸と矢じり
+    _line(x0, 0.95, x0, -0.4, shaft);
+    canvas.drawPath(
+      _poly([
+        [x0, -1.0],
+        [x0 + 0.5, -0.38],
+        [x0 - 0.5, -0.38],
+      ]),
+      _fillPaint,
+    );
+    // 右折の枝と矢じり
+    final branch = Path();
+    final s0 = p(x0, 0.5);
+    final ctrl = p(x0, 0.2);
+    final e = p(x0 + 0.5, 0.2);
+    branch
+      ..moveTo(s0.dx, s0.dy)
+      ..quadraticBezierTo(ctrl.dx, ctrl.dy, e.dx, e.dy);
+    canvas.drawPath(branch, shaft);
+    canvas.drawPath(
+      _poly([
+        [x0 + 1.2, 0.2],
+        [x0 + 0.48, -0.3],
+        [x0 + 0.48, 0.7],
+      ]),
+      _fillPaint,
+    );
+  }
+
+  /// 文字の上下に置く、文字へ向かい合う三角（高さ制限）。
+  void _heightMarkers() {
+    canvas.drawPath(
+      _poly([
+        [-0.3, -1.02],
+        [0.3, -1.02],
+        [0, -0.66],
+      ]),
+      _fillPaint,
+    );
+    canvas.drawPath(
+      _poly([
+        [-0.3, 1.02],
+        [0.3, 1.02],
+        [0, 0.66],
+      ]),
+      _fillPaint,
+    );
+  }
+
+  /// ラッパ形の警笛（右側が開いた朝顔）。
+  void _horn() {
+    // マウスピース
+    _rrect(-1, -0.18, -0.86, 0.18, 0.03, _fillPaint);
+    // 管
+    _rrect(-0.9, -0.09, -0.05, 0.09, 0, _fillPaint);
+    // 朝顔（ベル）
+    final bell = Path();
+    final a = p(-0.1, -0.09);
+    final c1 = p(0.45, -0.12);
+    final b = p(0.8, -0.62);
+    final d = p(0.8, 0.62);
+    final c2 = p(0.45, 0.12);
+    final e = p(-0.1, 0.09);
+    bell
+      ..moveTo(a.dx, a.dy)
+      ..quadraticBezierTo(c1.dx, c1.dy, b.dx, b.dy)
+      ..lineTo(d.dx, d.dy)
+      ..quadraticBezierTo(c2.dx, c2.dy, e.dx, e.dy)
+      ..close();
+    canvas.drawPath(bell, _fillPaint);
+  }
+
+  /// 白い正三角形の中に、横断歩道の縞の上を歩く黒い人。
+  void _crosswalk() {
+    canvas.drawPath(
+      _poly([
+        [0, -1.38],
+        [1.42, 1.08],
+        [-1.42, 1.08],
+      ]),
+      _fillPaint,
+    );
+    final black = Paint()..color = SignColors.black;
+    Paint blackStroke(double w, {Color? paintColor, StrokeCap cap = StrokeCap.round}) =>
+        _stroke(w, paintColor: SignColors.black, cap: cap);
+    _pedestrian(0, 0.05, 0.62, black, blackStroke);
+    // 横断歩道の縞（足もとに横一列）
+    for (var i = -2; i <= 2; i++) {
+      final x = i * 0.36;
+      _rrect(x - 0.12, 0.72, x + 0.12, 0.9, 0.01, black);
+    }
+  }
+
+  /// 左側に上向き、右側に下向きの矢印（左側通行の対面交通）。
+  void _twoWayTraffic() {
+    final shaft = _stroke(0.2, cap: StrokeCap.butt);
+    _line(-0.36, 0.92, -0.36, -0.3, shaft);
+    canvas.drawPath(
+      _poly([
+        [-0.36, -0.92],
+        [-0.02, -0.3],
+        [-0.7, -0.3],
+      ]),
+      _fillPaint,
+    );
+    _line(0.36, -0.92, 0.36, 0.3, shaft);
+    canvas.drawPath(
+      _poly([
+        [0.36, 0.92],
+        [0.02, 0.3],
+        [0.7, 0.3],
+      ]),
+      _fillPaint,
+    );
+  }
+
+  /// スコップで土を掘る作業員（右側）と土の山（左側）。
+  void _roadWorks() {
+    final paint = _fillPaint;
+    // 土の山
+    final mound = Path();
+    final m0 = p(-1, 0.9);
+    final mc = p(-0.62, 0.05);
+    final m1 = p(-0.2, 0.9);
+    mound
+      ..moveTo(m0.dx, m0.dy)
+      ..quadraticBezierTo(mc.dx, mc.dy, m1.dx, m1.dy)
+      ..close();
+    canvas.drawPath(mound, paint);
+    // 作業員（左へ前かがみ）
+    _circle(0.12, -0.68, 0.16, paint);
+    canvas.drawPath(
+      _poly([
+        [0.0, -0.5],
+        [0.26, -0.42],
+        [0.42, 0.14],
+        [0.16, 0.18],
+      ]),
+      paint,
+    );
+    final limb = _stroke(0.13);
+    _line(0.3, 0.12, 0.12, 0.9, limb); // 前脚
+    _line(0.34, 0.12, 0.62, 0.9, limb); // 後脚
+    _line(0.08, -0.4, -0.2, -0.16, _stroke(0.1)); // 腕
+    _line(0.16, -0.34, -0.08, 0.02, _stroke(0.1)); // 腕
+    // スコップ
+    _line(0.08, -0.46, -0.44, 0.34, _stroke(0.07));
+    canvas.drawPath(
+      _poly([
+        [-0.38, 0.26],
+        [-0.56, 0.22],
+        [-0.66, 0.52],
+        [-0.46, 0.56],
+      ]),
+      paint,
+    );
+  }
+
+  /// 右へ跳ねるシカ。
+  void _deer() {
+    final paint = _fillPaint;
+    // 胴体
+    canvas.drawPath(
+      _poly([
+        [-0.62, -0.02],
+        [-0.3, -0.16],
+        [0.3, -0.2],
+        [0.56, -0.32],
+        [0.6, -0.08],
+        [0.32, 0.18],
+        [-0.3, 0.2],
+        [-0.64, 0.16],
+      ]),
+      paint,
+    );
+    // 首と頭
+    canvas.drawPath(
+      _poly([
+        [0.44, -0.26],
+        [0.56, -0.62],
+        [0.74, -0.66],
+        [0.92, -0.52],
+        [0.88, -0.44],
+        [0.72, -0.46],
+        [0.62, -0.12],
+      ]),
+      paint,
+    );
+    // 角
+    final antler = _stroke(0.06);
+    _line(0.62, -0.62, 0.5, -0.95, antler);
+    _line(0.54, -0.84, 0.4, -0.92, antler);
+    _line(0.68, -0.64, 0.72, -0.96, antler);
+    _line(0.71, -0.84, 0.84, -0.92, antler);
+    // 尾
+    _line(-0.6, -0.02, -0.76, -0.12, _stroke(0.08));
+    // 前脚（前へ伸ばす）
+    final leg = _stroke(0.09);
+    _line(0.38, 0.08, 0.72, 0.28, leg);
+    _line(0.72, 0.28, 0.8, 0.5, leg);
+    _line(0.28, 0.12, 0.56, 0.4, leg);
+    _line(0.56, 0.4, 0.58, 0.6, leg);
+    // 後脚（後ろへ蹴る）
+    _line(-0.42, 0.12, -0.7, 0.42, leg);
+    _line(-0.7, 0.42, -0.96, 0.56, leg);
+    _line(-0.5, 0.14, -0.62, 0.52, leg);
+    _line(-0.62, 0.52, -0.86, 0.72, leg);
   }
 
   /// 横から見た二輪車（右向き）と乗員。
@@ -647,13 +1018,14 @@ class _SymbolPainter {
     }
   }
 
-  /// 下から上がって右へ曲がる矢印。
-  void _rightCurve() {
+  /// 下から上がって右へ曲がる矢印（[mirror] で左へ曲がる）。
+  void _rightCurve({bool mirror = false}) {
+    final m = mirror ? -1.0 : 1.0;
     final path = Path();
-    final a = p(-0.3, 0.95);
-    final b = p(-0.3, 0.05);
-    final ctrl = p(-0.3, -0.38);
-    final d = p(0.2, -0.38);
+    final a = p(-0.3 * m, 0.95);
+    final b = p(-0.3 * m, 0.05);
+    final ctrl = p(-0.3 * m, -0.38);
+    final d = p(0.2 * m, -0.38);
     path
       ..moveTo(a.dx, a.dy)
       ..lineTo(b.dx, b.dy)
@@ -661,9 +1033,9 @@ class _SymbolPainter {
     canvas.drawPath(path, _stroke(0.26, cap: StrokeCap.butt));
     canvas.drawPath(
       _poly([
-        [0.78, -0.38],
-        [0.18, -0.82],
-        [0.18, 0.06],
+        [0.78 * m, -0.38],
+        [0.18 * m, -0.82],
+        [0.18 * m, 0.06],
       ]),
       _fillPaint,
     );

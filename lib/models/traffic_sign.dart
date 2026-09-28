@@ -65,6 +65,60 @@ enum SignSymbol {
 
   /// 車とスリップ跡（すべりやすい）
   slippery,
+
+  /// 歩く人（歩行者通行止め）
+  pedestrian,
+
+  /// 横から見た自転車（自転車通行止め）
+  bicycle,
+
+  /// 上がって右へ曲がる矢印（車両横断禁止）
+  turnRightArrow,
+
+  /// 上がって左へ曲がる太い矢印（指定方向外進行禁止・左折）
+  arrowLeft,
+
+  /// 直進と右折の2方向の太い矢印（指定方向外進行禁止・直進・右折）
+  arrowStraightRight,
+
+  /// 数字の下の白い横線（最低速度）
+  speedUnderline,
+
+  /// 文字の上下に置く向かい合った三角（高さ制限）
+  heightMarkers,
+
+  /// ラッパ形の警笛（警笛鳴らせ）
+  horn,
+
+  /// 白い三角の中に歩行者と横断歩道の縞（横断歩道）
+  crosswalk,
+
+  /// 文字の下の白い太線（停止線）
+  stopLineBar,
+
+  /// 十字路（十形道路交差点あり）
+  crossroad,
+
+  /// T字路（T形道路交差点あり）
+  tJunction,
+
+  /// 下から上がって左へ曲がる矢印（左方屈曲あり）
+  leftCurve,
+
+  /// 上向きと下向きの2本の矢印（二方向交通）
+  twoWayTraffic,
+
+  /// スコップで掘る作業員と土の山（道路工事中）
+  roadWorks,
+
+  /// 跳ねるシカ（動物が飛び出すおそれあり）
+  deer,
+
+  /// 感嘆符（その他の危険）
+  exclamation,
+
+  /// 正面から見た乗用車（自動車専用）
+  carFront,
 }
 
 /// 禁止を表す赤線の種類。
@@ -95,6 +149,7 @@ class TrafficSign {
     this.centerText,
     this.centerTextColor = SignColors.black,
     this.centerTextScale = 0.4,
+    this.centerTextOffsetY = 0.0,
     this.subText,
     this.centerIcon,
     this.hasDiagonalSlash = false,
@@ -146,6 +201,9 @@ class TrafficSign {
   /// 文字サイズ（標識サイズに対する比率）
   final double centerTextScale;
 
+  /// 中央文字の縦位置のずらし量（標識サイズに対する比率。負で上へ）
+  final double centerTextOffsetY;
+
   /// 中央文字の下に小さく添える文字（"SLOW"等）
   final String? subText;
 
@@ -191,7 +249,9 @@ const String _kRegulatory = '規制標識';
 const String _kWarning = '警戒標識';
 const String _kInstruction = '指示標識';
 
-/// 標識クイズの全データ（20種）。
+/// 標識クイズの全データ（42種）。
+///
+/// 1〜20 は初期収録分、21 以降は追加収録分。
 const List<TrafficSign> kTrafficSigns = [
   // 1. 最高速度
   TrafficSign(
@@ -672,5 +732,554 @@ const List<TrafficSign> kTrafficSigns = [
     explanation:
         '白地・赤枠の円に二輪車の図柄（斜線なし）は「二輪の自動車・一般原動機付自転車通行止め」。'
         '二輪車を押して歩く場合は歩行者として扱われる。',
+  ),
+
+  // ===== 追加収録分 =====
+
+  // 21. 通行止め
+  TrafficSign(
+    id: 'sign_road_closed_all',
+    name: '通行止め',
+    category: _kRegulatory,
+    shape: SignShape.circle,
+    backgroundColor: SignColors.white,
+    borderColor: SignColors.red,
+    borderWidthRatio: 0.09,
+    centerText: '通行止',
+    centerTextColor: SignColors.blue,
+    centerTextScale: 0.22,
+    questionText: 'この標識がある道路を通行できるものはどれか。',
+    choices: [
+      '歩行者だけは通行できる',
+      '一般原動機付自転車だけは通行できる',
+      '歩行者も車両も路面電車も通行できない',
+      '自転車を押して歩く人だけは通行できる',
+    ],
+    answer: 2,
+    explanation:
+        '「通行止」の文字が入った標識は、歩行者・車両・路面電車のすべてが通れないことを示す。'
+        '白地に赤い円枠だけの「車両通行止め」は車両だけが対象なので、文字の有無で区別する。',
+  ),
+
+  // 22. 歩行者通行止め
+  TrafficSign(
+    id: 'sign_no_pedestrians',
+    name: '歩行者通行止め',
+    category: _kRegulatory,
+    shape: SignShape.circle,
+    backgroundColor: SignColors.white,
+    borderColor: SignColors.red,
+    borderWidthRatio: 0.09,
+    symbol: SignSymbol.pedestrian,
+    hasDiagonalSlash: true,
+    questionText: 'この標識が禁止しているものはどれか。',
+    choices: [
+      '歩行者の通行',
+      '歩行者の横断だけ（通行は可）',
+      '車両の通行',
+      '車両の駐車',
+    ],
+    answer: 0,
+    explanation:
+        '歩く人の図柄に赤い斜線が入った標識は「歩行者通行止め」。この先は歩行者が通れない。'
+        '二輪車を押して歩くと歩行者として扱われるため、押し歩きでも通行できない点に注意。',
+  ),
+
+  // 23. 自転車通行止め
+  TrafficSign(
+    id: 'sign_no_bicycles',
+    name: '自転車通行止め',
+    category: _kRegulatory,
+    shape: SignShape.circle,
+    backgroundColor: SignColors.white,
+    borderColor: SignColors.red,
+    borderWidthRatio: 0.09,
+    symbol: SignSymbol.bicycle,
+    questionText: 'この標識の意味として正しいのはどれか。',
+    choices: [
+      '自転車専用の道路である',
+      '自転車は通行できない',
+      'この先に自転車横断帯がある',
+      '自転車は歩道を通行しなければならない',
+    ],
+    answer: 1,
+    explanation:
+        '白地・赤枠の円に自転車の図柄は「自転車通行止め」。斜線がなくても、赤枠の円の中の車種は通れないという意味になる。'
+        '青い円に白い自転車の「自転車専用」とは色で見分ける。',
+  ),
+
+  // 24. 車両横断禁止
+  TrafficSign(
+    id: 'sign_no_crossing_vehicles',
+    name: '車両横断禁止',
+    category: _kRegulatory,
+    shape: SignShape.circle,
+    backgroundColor: SignColors.white,
+    borderColor: SignColors.red,
+    borderWidthRatio: 0.09,
+    symbol: SignSymbol.turnRightArrow,
+    hasDiagonalSlash: true,
+    questionText: 'この標識が示す規制として正しいのはどれか。',
+    choices: [
+      '交差点での右折が禁止されている',
+      '歩行者の横断が禁止されている',
+      '車両がUターンすることが禁止されている',
+      '車両が道路を右に横切って横断することが禁止されている',
+    ],
+    answer: 3,
+    explanation:
+        '右へ曲がる矢印に斜線の標識は「車両横断禁止」。道路外の施設に入るためなどで、車両が道路を右へ横切ることを禁じている。'
+        '左に横切る（左折して道路外へ出る）ことは禁止されていない。',
+  ),
+
+  // 25. 指定方向外進行禁止（左折）
+  TrafficSign(
+    id: 'sign_left_turn_only',
+    name: '指定方向外進行禁止（左折）',
+    category: _kRegulatory,
+    shape: SignShape.circle,
+    backgroundColor: SignColors.blue,
+    rimColor: SignColors.white,
+    rimWidthRatio: 0.025,
+    symbol: SignSymbol.arrowLeft,
+    symbolColor: SignColors.white,
+    questionText: 'この標識がある交差点で、車両が進めるのはどの方向か。',
+    choices: [
+      '左折だけ',
+      '直進と左折',
+      '左折以外のすべての方向',
+      '右折だけ',
+    ],
+    answer: 0,
+    explanation:
+        '青い円に白い矢印の標識は、矢印の方向以外へ進むことを禁じる「指定方向外進行禁止」。'
+        'この矢印は左を向いているので、左折しかできない。',
+  ),
+
+  // 26. 指定方向外進行禁止（直進・右折）
+  TrafficSign(
+    id: 'sign_straight_or_right_only',
+    name: '指定方向外進行禁止（直進・右折）',
+    category: _kRegulatory,
+    shape: SignShape.circle,
+    backgroundColor: SignColors.blue,
+    rimColor: SignColors.white,
+    rimWidthRatio: 0.025,
+    symbol: SignSymbol.arrowStraightRight,
+    symbolColor: SignColors.white,
+    questionText: 'この標識がある交差点での通行方法として正しいのはどれか。',
+    choices: [
+      '直進も右折もしてはいけない',
+      '直進と右折はできるが、左折はできない',
+      '右折する場合は必ず二段階で右折する',
+      '直進する車が右折する車より優先する',
+    ],
+    answer: 1,
+    explanation:
+        '「指定方向外進行禁止」の矢印が上と右を向いているので、進めるのは直進と右折だけで、左折は禁止される。'
+        '矢印が示すのは「進んでよい方向」であることを覚えておこう。',
+  ),
+
+  // 27. 最低速度
+  TrafficSign(
+    id: 'sign_min_speed_30',
+    name: '最低速度（30km/h）',
+    category: _kRegulatory,
+    shape: SignShape.circle,
+    backgroundColor: SignColors.blue,
+    rimColor: SignColors.white,
+    rimWidthRatio: 0.025,
+    symbol: SignSymbol.speedUnderline,
+    symbolColor: SignColors.white,
+    centerText: '30',
+    centerTextColor: SignColors.white,
+    centerTextScale: 0.42,
+    centerTextOffsetY: -0.04,
+    questionText: 'この標識の意味として正しいのはどれか。',
+    choices: [
+      '時速30キロメートルを超えて走ってはいけない',
+      'この先30メートルは徐行しなければならない',
+      '自動車は時速30キロメートルに満たない速度で走ってはいけない',
+      'この先30キロメートルは追越しが禁止されている',
+    ],
+    answer: 2,
+    explanation:
+        '青地に白い数字と下線の標識は「最低速度」。自動車は表示の速度より遅く走ってはいけない（渋滞などやむを得ない場合を除く）。'
+        '白地・赤枠に青い数字の「最高速度」と、色と下線の有無で見分ける。',
+  ),
+
+  // 28. 重量制限
+  TrafficSign(
+    id: 'sign_weight_limit',
+    name: '重量制限（5.5t）',
+    category: _kRegulatory,
+    shape: SignShape.circle,
+    backgroundColor: SignColors.white,
+    borderColor: SignColors.red,
+    borderWidthRatio: 0.09,
+    centerText: '5.5t',
+    centerTextColor: SignColors.blue,
+    centerTextScale: 0.3,
+    questionText: 'この標識が示す内容として正しいのはどれか。',
+    choices: [
+      '総重量が5.5トンを超える車両は通行できない',
+      '積み荷が5.5トン以下の車両は通行できない',
+      'この先5.5キロメートルは工事区間である',
+      '車両の高さが5.5メートルまでに制限されている',
+    ],
+    answer: 0,
+    explanation:
+        '数字に「t」がついた規制標識は「重量制限」。車の総重量（車体・人・荷物の合計）が表示の重さを超える車両は通れない。'
+        '橋などが重さに耐えられない場所に設置される。',
+  ),
+
+  // 29. 高さ制限
+  TrafficSign(
+    id: 'sign_height_limit',
+    name: '高さ制限（3.3m）',
+    category: _kRegulatory,
+    shape: SignShape.circle,
+    backgroundColor: SignColors.white,
+    borderColor: SignColors.red,
+    borderWidthRatio: 0.09,
+    symbol: SignSymbol.heightMarkers,
+    symbolColor: SignColors.blue,
+    centerText: '3.3m',
+    centerTextColor: SignColors.blue,
+    centerTextScale: 0.24,
+    questionText: 'この標識の意味として正しいのはどれか。',
+    choices: [
+      '道路の幅が3.3メートルに狭くなる',
+      '地上から3.3メートルを超える高さの車両は通行できない',
+      '車両どうしは3.3メートル以上の車間距離をとる',
+      '積み荷の長さは3.3メートルまでに制限される',
+    ],
+    answer: 1,
+    explanation:
+        '上下から向かい合う三角の間に数値がある標識は「高さ制限」。積み荷を含めた地面からの高さが表示を超える車両は通れない。'
+        '左右から向かい合う三角の「最大幅」と混同しないこと。',
+  ),
+
+  // 30. 警笛鳴らせ
+  TrafficSign(
+    id: 'sign_sound_horn',
+    name: '警笛鳴らせ',
+    category: _kRegulatory,
+    shape: SignShape.circle,
+    backgroundColor: SignColors.blue,
+    rimColor: SignColors.white,
+    rimWidthRatio: 0.025,
+    symbol: SignSymbol.horn,
+    symbolColor: SignColors.white,
+    questionText: 'この標識のある場所で、車両がしなければならないことはどれか。',
+    choices: [
+      '警音器を鳴らしてはいけない',
+      '夜間だけ前照灯を点滅させる',
+      '一時停止して左右を確かめる',
+      '警音器を鳴らす',
+    ],
+    answer: 3,
+    explanation:
+        '青い円に白いラッパの図柄は「警笛鳴らせ」。この標識のある場所では、車両は必ず警音器を鳴らす。'
+        '下に「区間内」の補助標識がある場合は「警笛区間」を示し、区間内の見通しのきかない交差点・曲がり角・上り坂の頂上で警音器を鳴らす。',
+  ),
+
+  // 31. 横断歩道
+  TrafficSign(
+    id: 'sign_pedestrian_crossing',
+    name: '横断歩道',
+    category: _kInstruction,
+    shape: SignShape.square,
+    backgroundColor: SignColors.blue,
+    rimColor: SignColors.white,
+    rimWidthRatio: 0.03,
+    symbol: SignSymbol.crosswalk,
+    symbolColor: SignColors.white,
+    questionText: 'この標識が示している内容はどれか。',
+    choices: [
+      '歩行者専用道路である',
+      'この付近に学校や幼稚園がある',
+      'この場所が横断歩道であることを示している',
+      '歩行者の横断が禁止されている',
+    ],
+    answer: 2,
+    explanation:
+        '青い四角に白い三角、その中に歩く人と縞模様がある標識は「横断歩道」を示す指示標識。'
+        '横断しようとする歩行者がいるときは、横断歩道の手前で一時停止して道を譲らなければならない。',
+  ),
+
+  // 32. 駐車可
+  TrafficSign(
+    id: 'sign_parking_allowed',
+    name: '駐車可',
+    category: _kInstruction,
+    shape: SignShape.square,
+    backgroundColor: SignColors.blue,
+    rimColor: SignColors.white,
+    rimWidthRatio: 0.03,
+    centerText: 'P',
+    centerTextColor: SignColors.white,
+    centerTextScale: 0.62,
+    questionText: 'この標識の意味として正しいのはどれか。',
+    choices: [
+      '駐車が禁止されている',
+      '駐車してよい場所である',
+      'パーキングエリアまで1キロメートルある',
+      '停車だけが認められている',
+    ],
+    answer: 1,
+    explanation:
+        '青い四角に白い「P」は「駐車可」を示す指示標識で、駐車してよい場所であることを表す。'
+        '青い円に赤い斜線の「駐車禁止」（規制標識）とは形も意味も異なる。',
+  ),
+
+  // 33. 停車可
+  TrafficSign(
+    id: 'sign_stopping_allowed',
+    name: '停車可',
+    category: _kInstruction,
+    shape: SignShape.square,
+    backgroundColor: SignColors.blue,
+    rimColor: SignColors.white,
+    rimWidthRatio: 0.03,
+    centerText: '停',
+    centerTextColor: SignColors.white,
+    centerTextScale: 0.52,
+    questionText: 'この標識がある場所についての説明で正しいのはどれか。',
+    choices: [
+      '車両は必ず一時停止しなければならない',
+      'バスの停留所である',
+      '駐車も停車もしてはいけない',
+      '停車してよい場所である',
+    ],
+    answer: 3,
+    explanation:
+        '青い四角に白い「停」の文字は「停車可」を示す指示標識で、停車してよい場所であることを表す。'
+        '一時停止を命じる赤い逆三角の「止まれ」とは別物なので注意する。',
+  ),
+
+  // 34. 停止線
+  TrafficSign(
+    id: 'sign_stop_line',
+    name: '停止線',
+    category: _kInstruction,
+    shape: SignShape.square,
+    backgroundColor: SignColors.blue,
+    rimColor: SignColors.white,
+    rimWidthRatio: 0.03,
+    symbol: SignSymbol.stopLineBar,
+    symbolColor: SignColors.white,
+    centerText: '停止線',
+    centerTextColor: SignColors.white,
+    centerTextScale: 0.24,
+    centerTextOffsetY: -0.1,
+    questionText: 'この標識が示している内容はどれか。',
+    choices: [
+      '車両が停止するときの位置を示している',
+      'この先は通行止めである',
+      'ここから先は駐車禁止である',
+      'ここで必ず一時停止しなければならない',
+    ],
+    answer: 0,
+    explanation:
+        '「停止線」の文字と白線の指示標識は、信号や一時停止の標識などで車両が止まる場合の停止位置を示す。'
+        'この標識自体が一時停止を命じているわけではない。',
+  ),
+
+  // 35. 十形道路交差点あり
+  TrafficSign(
+    id: 'sign_crossroad_ahead',
+    name: '十形道路交差点あり',
+    category: _kWarning,
+    shape: SignShape.diamond,
+    backgroundColor: SignColors.yellow,
+    borderColor: SignColors.black,
+    borderWidthRatio: 0.02,
+    rimColor: SignColors.yellow,
+    rimWidthRatio: 0.03,
+    symbol: SignSymbol.crossroad,
+    questionText: 'この標識が知らせている内容はどれか。',
+    choices: [
+      'この先に病院がある',
+      'この先に十字形の交差点がある',
+      'この先の交差点では右左折できない',
+      'この先に踏切がある',
+    ],
+    answer: 1,
+    explanation:
+        '黄色いひし形に「十」の図柄は「十形道路交差点あり」。見通しの悪い場所で、この先に十字路があることを前もって知らせる。'
+        '交差する道路から出てくる車に注意して減速する。',
+  ),
+
+  // 36. T形道路交差点あり
+  TrafficSign(
+    id: 'sign_t_junction_ahead',
+    name: 'T形道路交差点あり',
+    category: _kWarning,
+    shape: SignShape.diamond,
+    backgroundColor: SignColors.yellow,
+    borderColor: SignColors.black,
+    borderWidthRatio: 0.02,
+    rimColor: SignColors.yellow,
+    rimWidthRatio: 0.03,
+    symbol: SignSymbol.tJunction,
+    questionText: 'この標識が知らせている内容はどれか。',
+    choices: [
+      'この先に、道路が突き当たって左右に分かれるT字形の交差点がある',
+      'この先は優先道路である',
+      'この先は一方通行である',
+      'この先に料金所がある',
+    ],
+    answer: 0,
+    explanation:
+        '「T」の図柄の警戒標識は「T形道路交差点あり」。この先で道路が突き当たり、左右どちらかに曲がる必要がある。'
+        '手前から十分に速度を落として進路を準備する。',
+  ),
+
+  // 37. 左方屈曲あり（左カーブ）
+  TrafficSign(
+    id: 'sign_left_curve',
+    name: '左方屈曲あり',
+    category: _kWarning,
+    shape: SignShape.diamond,
+    backgroundColor: SignColors.yellow,
+    borderColor: SignColors.black,
+    borderWidthRatio: 0.02,
+    rimColor: SignColors.yellow,
+    rimWidthRatio: 0.03,
+    symbol: SignSymbol.leftCurve,
+    questionText: 'この標識の意味として正しいのはどれか。',
+    choices: [
+      'この先は左折しかできない',
+      'この先に左から合流する道路がある',
+      'この先の道路は左へ曲がっている',
+      '左側に寄って通行しなければならない',
+    ],
+    answer: 2,
+    explanation:
+        '黄色いひし形に左へ曲がる矢印は「左方屈曲あり」で、この先が左カーブであることを知らせる警戒標識。'
+        '青い円に白い矢印の「指定方向外進行禁止」とは違い、進路を命じるものではない。',
+  ),
+
+  // 38. 二方向交通
+  TrafficSign(
+    id: 'sign_two_way_traffic',
+    name: '二方向交通',
+    category: _kWarning,
+    shape: SignShape.diamond,
+    backgroundColor: SignColors.yellow,
+    borderColor: SignColors.black,
+    borderWidthRatio: 0.02,
+    rimColor: SignColors.yellow,
+    rimWidthRatio: 0.03,
+    symbol: SignSymbol.twoWayTraffic,
+    questionText: 'この標識が知らせている内容はどれか。',
+    choices: [
+      'この先は対面通行（二方向の交通）の道路である',
+      'この先は追越し禁止である',
+      'この先はUターンしなければならない',
+      'この先は車線が2本に増える',
+    ],
+    answer: 0,
+    explanation:
+        '上向きと下向きの矢印が並んだ警戒標識は「二方向交通」。一方通行の道路から対面通行の道路に変わるところなどに設置される。'
+        '対向車が来ることを意識し、道路の左側を通行する。',
+  ),
+
+  // 39. 道路工事中
+  TrafficSign(
+    id: 'sign_road_works',
+    name: '道路工事中',
+    category: _kWarning,
+    shape: SignShape.diamond,
+    backgroundColor: SignColors.yellow,
+    borderColor: SignColors.black,
+    borderWidthRatio: 0.02,
+    rimColor: SignColors.yellow,
+    rimWidthRatio: 0.03,
+    symbol: SignSymbol.roadWorks,
+    questionText: 'この標識が知らせている内容はどれか。',
+    choices: [
+      'この先は土砂崩れで通行止めである',
+      'この先で道路工事が行われている',
+      'この先は未舗装の道路である',
+      'この先に作業員の休憩所がある',
+    ],
+    answer: 1,
+    explanation:
+        'スコップで作業する人の図柄は「道路工事中」。この先で工事をしているので、作業員や工事車両、路面の段差などに注意して減速する。',
+  ),
+
+  // 40. 動物が飛び出すおそれあり
+  TrafficSign(
+    id: 'sign_animal_crossing',
+    name: '動物が飛び出すおそれあり',
+    category: _kWarning,
+    shape: SignShape.diamond,
+    backgroundColor: SignColors.yellow,
+    borderColor: SignColors.black,
+    borderWidthRatio: 0.02,
+    rimColor: SignColors.yellow,
+    rimWidthRatio: 0.03,
+    symbol: SignSymbol.deer,
+    questionText: 'この標識の意味として正しいのはどれか。',
+    choices: [
+      'この付近に動物園がある',
+      'この先は家畜を連れた人の専用道路である',
+      '動物を乗せた車は通行できない',
+      '動物が道路に飛び出してくるおそれがある',
+    ],
+    answer: 3,
+    explanation:
+        '動物の図柄の警戒標識は「動物が飛び出すおそれあり」。シカのほか、地域によってサルやタヌキなどの図柄もある。'
+        '二輪車は動物との衝突で転倒しやすいので、速度を落として前方をよく見る。',
+  ),
+
+  // 41. その他の危険
+  TrafficSign(
+    id: 'sign_other_danger',
+    name: 'その他の危険',
+    category: _kWarning,
+    shape: SignShape.diamond,
+    backgroundColor: SignColors.yellow,
+    borderColor: SignColors.black,
+    borderWidthRatio: 0.02,
+    rimColor: SignColors.yellow,
+    rimWidthRatio: 0.03,
+    symbol: SignSymbol.exclamation,
+    questionText: 'この標識の意味として正しいのはどれか。',
+    choices: [
+      'この先は通行止めである',
+      'この先で必ず一時停止しなければならない',
+      '他の警戒標識で表せない危険がこの先にある',
+      'この先に救急病院がある',
+    ],
+    answer: 2,
+    explanation:
+        '黄色いひし形に「！」の図柄は「その他の危険」。ほかの警戒標識では表せない危険があることを知らせるので、周囲をよく見て慎重に進む。',
+  ),
+
+  // 42. 自動車専用
+  TrafficSign(
+    id: 'sign_motorway',
+    name: '自動車専用',
+    category: _kRegulatory,
+    shape: SignShape.circle,
+    backgroundColor: SignColors.blue,
+    rimColor: SignColors.white,
+    rimWidthRatio: 0.025,
+    symbol: SignSymbol.carFront,
+    symbolColor: SignColors.white,
+    questionText: 'この標識がある道路を通行できないものはどれか。',
+    choices: [
+      '普通自動車',
+      '大型自動二輪車',
+      '普通自動二輪車（排気量125cc超）',
+      '一般原動機付自転車',
+    ],
+    answer: 3,
+    explanation:
+        '青い円に白い自動車の図柄は「自動車専用」で、高速道路や自動車専用道路の入口に設置される。'
+        '一般原動機付自転車や排気量125cc以下の普通自動二輪車、歩行者、自転車は通行できない。',
   ),
 ];
