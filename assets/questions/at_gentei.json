@@ -656,7 +656,7 @@
     "answer": 0,
     "explanation": "右左折の合図は、右左折しようとする地点の30m手前で行うことが定められている。",
     "isTrapQuestion": true,
-    "trapNumberType": "other",
+    "trapNumberType": "turningRules",
     "topicTag": "rules"
   },
   {
@@ -875,8 +875,8 @@
     ],
     "answer": 3,
     "explanation": "右折待ち車両は対向車の切れ目を見て発進しようとするため、直進する二輪車を見落として発進してくることがあり注意が必要。",
-    "isTrapQuestion": false,
-    "trapNumberType": "none",
+    "isTrapQuestion": true,
+    "trapNumberType": "hazardRecognition",
     "topicTag": "hazard_prediction"
   },
   {
@@ -1695,8 +1695,8 @@
     ],
     "answer": 0,
     "explanation": "駐車とは、車両が継続的に停止し、運転者がすぐに運転できない状態（車両を離れている等）にあることをいう。",
-    "isTrapQuestion": false,
-    "trapNumberType": "none",
+    "isTrapQuestion": true,
+    "trapNumberType": "other",
     "topicTag": "parking"
   },
   {
@@ -2075,8 +2075,8 @@
     ],
     "answer": 3,
     "explanation": "普通二輪免許は16歳から取得できる。AT限定であっても年齢要件は同じである。",
-    "isTrapQuestion": false,
-    "trapNumberType": "none",
+    "isTrapQuestion": true,
+    "trapNumberType": "other",
     "topicTag": "license_system"
   },
   {
@@ -2095,8 +2095,8 @@
     ],
     "answer": 0,
     "explanation": "大型二輪免許は18歳以上で取得できる。AT限定でも同じである。",
-    "isTrapQuestion": false,
-    "trapNumberType": "none",
+    "isTrapQuestion": true,
+    "trapNumberType": "other",
     "topicTag": "license_system"
   },
   {
@@ -2175,8 +2175,8 @@
     ],
     "answer": 0,
     "explanation": "初心運転者期間は免許取得後1年間で、この間に一定以上の違反をすると初心運転者講習の対象となる。",
-    "isTrapQuestion": false,
-    "trapNumberType": "none",
+    "isTrapQuestion": true,
+    "trapNumberType": "licensePeriod",
     "topicTag": "license_system"
   },
   {
@@ -2235,8 +2235,8 @@
     ],
     "answer": 3,
     "explanation": "行政処分は原則として過去3年間の累積点数と前歴の有無によって決まる。反則金の納付で点数が消えることはない。",
-    "isTrapQuestion": false,
-    "trapNumberType": "none",
+    "isTrapQuestion": true,
+    "trapNumberType": "other",
     "topicTag": "license_system"
   },
   {
@@ -3755,8 +3755,8 @@
     ],
     "answer": 3,
     "explanation": "呼気1リットル中0.15mg以上のアルコールを身体に保有した状態での運転が酒気帯び運転として処罰される。基準値未満でも酒気を帯びての運転自体が禁止されている。",
-    "isTrapQuestion": false,
-    "trapNumberType": "none",
+    "isTrapQuestion": true,
+    "trapNumberType": "other",
     "topicTag": "rules"
   },
   {
@@ -3995,8 +3995,8 @@
     ],
     "answer": 3,
     "explanation": "昼間でもトンネル内や濃霧などで視界が悪い場所（50m先が見えない程度、高速道路では200m）を通行するときは灯火をつけなければならない。",
-    "isTrapQuestion": false,
-    "trapNumberType": "none",
+    "isTrapQuestion": true,
+    "trapNumberType": "other",
     "topicTag": "rules"
   },
   {
@@ -4855,8 +4855,8 @@
     ],
     "answer": 2,
     "explanation": "右折時は対向車に気をとられて、曲がった先の横断歩道を渡る歩行者や自転車を見落としやすい。",
-    "isTrapQuestion": false,
-    "trapNumberType": "none",
+    "isTrapQuestion": true,
+    "trapNumberType": "hazardRecognition",
     "topicTag": "hazard_prediction"
   },
   {
