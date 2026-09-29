@@ -29,16 +29,22 @@ class FirebaseAuthService implements AuthService {
     FirebaseAuth? auth,
     GoogleSignIn? googleSignIn,
   })  : _auth = auth ?? FirebaseAuth.instance,
-        _googleSignIn = googleSignIn ??
-            GoogleSignIn(
-              // Android で Firebase の ID トークンを取得するために必須
-              // （google-services.json の oauth_client / client_type=3 と対応）。
-              serverClientId:
-                  '904710115227-365vjghmsgk5oj9ibk44p8t9ncauv39i.apps.googleusercontent.com',
-            );
+        _googleSignIn = googleSignIn ?? GoogleSignIn.instance;
+
+  // Android で Firebase の ID トークンを取得するために必須
+  // （google-services.json の oauth_client / client_type=3 と対応）。
+  static const String _serverClientId =
+      '904710115227-365vjghmsgk5oj9ibk44p8t9ncauv39i.apps.googleusercontent.com';
 
   final FirebaseAuth _auth;
   final GoogleSignIn _googleSignIn;
+  bool _initialized = false;
+
+  Future<void> _ensureInitialized() async {
+    if (_initialized) return;
+    await _googleSignIn.initialize(serverClientId: _serverClientId);
+    _initialized = true;
+  }
 
   @override
   String? get currentUid => _auth.currentUser?.uid;
@@ -46,17 +52,11 @@ class FirebaseAuthService implements AuthService {
   @override
   Future<String?> signInWithGoogle() async {
     try {
-      final googleUser = await _googleSignIn.signIn();
-      if (googleUser == null) {
-        // ユーザーがサインインをキャンセルした。
-        return null;
-      }
+      await _ensureInitialized();
+      final googleUser = await _googleSignIn.authenticate();
 
-      final googleAuth = await googleUser.authentication;
-      final credential = GoogleAuthProvider.credential(
-        accessToken: googleAuth.accessToken,
-        idToken: googleAuth.idToken,
-      );
+      final idToken = googleUser.authentication.idToken;
+      final credential = GoogleAuthProvider.credential(idToken: idToken);
 
       final userCredential = await _auth.signInWithCredential(credential);
       final uid = userCredential.user?.uid;
@@ -67,6 +67,15 @@ class FirebaseAuthService implements AuthService {
         debugPrint('Signed in with Google, UID: $uid');
       }
       return uid;
+    } on GoogleSignInException catch (e) {
+      if (e.code == GoogleSignInExceptionCode.canceled) {
+        // ユーザーがサインインをキャンセルした。
+        return null;
+      }
+      if (kDebugMode) {
+        debugPrint('Google sign-in failed: $e');
+      }
+      rethrow;
     } catch (e) {
       if (kDebugMode) {
         debugPrint('Google sign-in failed: $e');
@@ -78,6 +87,7 @@ class FirebaseAuthService implements AuthService {
   @override
   Future<void> signOut() async {
     try {
+      await _ensureInitialized();
       await _googleSignIn.signOut();
       await _auth.signOut();
       if (kDebugMode) {
@@ -98,6 +108,7 @@ class FirebaseAuthService implements AuthService {
   Future<void> waitForAuthReady() async {
     // Google Sign-In はユーザー操作が必要なため、ここでは何もしない。
     // すでにサインイン済みなら _auth.currentUser が非nullになっている。
+    await _ensureInitialized();
   }
 }
 
