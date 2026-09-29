@@ -15,7 +15,13 @@ class AccuracyBarItem {
   final int correctCount;
 
   double get accuracyPercent => accuracy * 100;
-  bool get isReliable => attempts >= 10;
+
+  /// 出題分野など項目ごとの試行回数がこの数以上なら正答率を信頼できるとみなす。
+  /// 学習分析全体の表示条件（回答10問以上）と揃えると、分野が8つ以上ある
+  /// 場合に「データ不足」から永遠に抜け出せなくなるため、弱点判定の
+  /// 閾値（5回）に合わせている。
+  static const int minReliableAttempts = 5;
+  bool get isReliable => attempts >= minReliableAttempts;
 }
 
 /// 複数の正答率バーをリスト表示

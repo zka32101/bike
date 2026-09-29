@@ -156,7 +156,7 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get homeQuotaExplanation =>
-      'Your daily goal is based on days left and unmastered questions';
+      'Your daily goal factors in days left, unmastered questions, and extra time to redo ones you get wrong';
 
   @override
   String get homeExamDatePassed =>

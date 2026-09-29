@@ -154,7 +154,7 @@ class AppLocalizationsVi extends AppLocalizations {
 
   @override
   String get homeQuotaExplanation =>
-      'Chỉ tiêu được tính từ số ngày còn lại và số câu chưa thuộc';
+      'Chỉ tiêu được tính từ số ngày còn lại, số câu chưa thuộc và cả thời gian làm lại các câu bạn từng sai';
 
   @override
   String get homeExamDatePassed =>

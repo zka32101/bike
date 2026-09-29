@@ -43,7 +43,7 @@
   "homeStreak": "{days}-day study streak!",
   "homeExamDatePrompt": "Set your exam date to get an automatic daily goal",
   "homeExamDateSet": "Set",
-  "homeQuotaExplanation": "Your daily goal is based on days left and unmastered questions",
+  "homeQuotaExplanation": "Your daily goal factors in days left, unmastered questions, and extra time to redo ones you get wrong",
   "homeExamDatePassed": "Your exam date has passed. Please update your settings",
   "homeNoUnmastered": "You've mastered every question. Keep it up!",
   "homeDailyGoalPace": "Solve {count} questions a day to be ready by your exam date",

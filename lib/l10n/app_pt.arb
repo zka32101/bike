@@ -43,7 +43,7 @@
   "homeStreak": "{days} dias seguidos de estudo!",
   "homeExamDatePrompt": "Defina a data da prova para calcular sua meta diária automaticamente",
   "homeExamDateSet": "Definir",
-  "homeQuotaExplanation": "Sua meta diária é calculada pelos dias restantes e questões não dominadas",
+  "homeQuotaExplanation": "Sua meta diária considera os dias restantes, questões não dominadas e tempo extra para refazer as que você errar",
   "homeExamDatePassed": "A data da prova já passou. Revise suas configurações",
   "homeNoUnmastered": "Você dominou todas as questões. Continue assim!",
   "homeDailyGoalPace": "Resolva {count} questões por dia para estar pronto até a prova",

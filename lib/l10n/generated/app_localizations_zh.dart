@@ -148,7 +148,7 @@ class AppLocalizationsZh extends AppLocalizations {
   String get homeExamDateSet => '设置';
 
   @override
-  String get homeQuotaExplanation => '根据剩余天数和未掌握题数倒推每日目标';
+  String get homeQuotaExplanation => '根据剩余天数、未掌握题数，并预留重做错题的时间来倒推每日目标';
 
   @override
   String get homeExamDatePassed => '考试日期已过，请重新设置';

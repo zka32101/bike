@@ -43,7 +43,7 @@
   "homeStreak": "Học liên tục {days} ngày!",
   "homeExamDatePrompt": "Đăng ký ngày thi để tự động tính chỉ tiêu mỗi ngày",
   "homeExamDateSet": "Đặt",
-  "homeQuotaExplanation": "Chỉ tiêu được tính từ số ngày còn lại và số câu chưa thuộc",
+  "homeQuotaExplanation": "Chỉ tiêu được tính từ số ngày còn lại, số câu chưa thuộc và cả thời gian làm lại các câu bạn từng sai",
   "homeExamDatePassed": "Đã qua ngày thi. Vui lòng kiểm tra lại cài đặt",
   "homeNoUnmastered": "Bạn đã thuộc hết các câu hỏi. Hãy duy trì phong độ nhé!",
   "homeDailyGoalPace": "Làm {count} câu mỗi ngày là kịp ngày thi",

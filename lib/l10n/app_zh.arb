@@ -43,7 +43,7 @@
   "homeStreak": "已连续学习{days}天！",
   "homeExamDatePrompt": "设置考试日期后将自动倒推计算每日目标",
   "homeExamDateSet": "设置",
-  "homeQuotaExplanation": "根据剩余天数和未掌握题数倒推每日目标",
+  "homeQuotaExplanation": "根据剩余天数、未掌握题数，并预留重做错题的时间来倒推每日目标",
   "homeExamDatePassed": "考试日期已过，请重新设置",
   "homeNoUnmastered": "没有未掌握的题目了，继续保持！",
   "homeDailyGoalPace": "每天做{count}道题即可在考试日前完成",

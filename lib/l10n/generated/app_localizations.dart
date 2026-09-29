@@ -155,7 +155,7 @@ abstract class AppLocalizations {
   /// No description provided for @menuTrapQuiz.
   ///
   /// In ja, this message translates to:
-  /// **'ヒッかけ問題クイズ'**
+  /// **'ひっかけ問題クイズ'**
   String get menuTrapQuiz;
 
   /// No description provided for @menuNumberQuiz.
@@ -365,7 +365,7 @@ abstract class AppLocalizations {
   /// No description provided for @homeQuotaExplanation.
   ///
   /// In ja, this message translates to:
-  /// **'残日数÷未習得問題数でノルマを逆算しています'**
+  /// **'残日数と未習得問題数から、間違えた問題の解き直し分も見込んでノルマを逆算しています'**
   String get homeQuotaExplanation;
 
   /// No description provided for @homeExamDatePassed.

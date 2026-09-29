@@ -69,7 +69,7 @@ class ExamInfoView extends StatelessWidget {
             children: [
               _InfoRow(label: '問題を解く／学習モード', value: '出題分野を幅広くカバーして基礎を固める'),
               _InfoRow(label: '標識クイズ', value: 'イラスト問題対策として標識の形・色・意味を練習'),
-              _InfoRow(label: 'ヒッかけ問題クイズ', value: '引っかけ問題のパターンに慣れる'),
+              _InfoRow(label: 'ひっかけ問題クイズ', value: '引っかけ問題のパターンに慣れる'),
               _InfoRow(label: '数字・距離クイズ', value: '制限速度・制動距離など数値問題を集中練習'),
               _InfoRow(label: '本番模擬テスト', value: '実際と同じ出題数・制限時間・合格ラインで通し練習'),
             ],

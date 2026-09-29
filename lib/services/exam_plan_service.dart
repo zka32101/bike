@@ -2,6 +2,12 @@
 class ExamPlanService {
   const ExamPlanService();
 
+  /// 間違えた問題は1回では覚えきれず解き直しが発生する前提で、
+  /// 未習得問題数に掛ける安全マージン。「覚えた」を押すまでに平均して
+  /// 何回か解き直す想定で、単純な残り問題数÷残り日数より少し多めに
+  /// 見積もる。
+  static const double _relearningBufferFactor = 1.3;
+
   /// 試験日までの残り日数と未習得問題数から、1日あたりに解くべき問題数を
   /// 計算する。
   ///
@@ -23,7 +29,7 @@ class ExamPlanService {
     final effectiveDays = daysLeft == 0 ? 1 : daysLeft;
     final dailyGoal = unmasteredCount == 0
         ? 0
-        : (unmasteredCount / effectiveDays).ceil();
+        : (unmasteredCount * _relearningBufferFactor / effectiveDays).ceil();
 
     return ExamPlan(
       daysLeft: daysLeft,

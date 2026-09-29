@@ -158,7 +158,7 @@ class AppLocalizationsPt extends AppLocalizations {
 
   @override
   String get homeQuotaExplanation =>
-      'Sua meta diária é calculada pelos dias restantes e questões não dominadas';
+      'Sua meta diária considera os dias restantes, questões não dominadas e tempo extra para refazer as que você errar';
 
   @override
   String get homeExamDatePassed =>

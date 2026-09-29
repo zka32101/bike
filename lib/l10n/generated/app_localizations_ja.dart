@@ -33,7 +33,7 @@ class AppLocalizationsJa extends AppLocalizations {
   String get menuSignQuiz => '標識クイズ';
 
   @override
-  String get menuTrapQuiz => 'ヒッかけ問題クイズ';
+  String get menuTrapQuiz => 'ひっかけ問題クイズ';
 
   @override
   String get menuNumberQuiz => '数字・距離クイズ';
@@ -148,7 +148,8 @@ class AppLocalizationsJa extends AppLocalizations {
   String get homeExamDateSet => '設定';
 
   @override
-  String get homeQuotaExplanation => '残日数÷未習得問題数でノルマを逆算しています';
+  String get homeQuotaExplanation =>
+      '残日数と未習得問題数から、間違えた問題の解き直し分も見込んでノルマを逆算しています';
 
   @override
   String get homeExamDatePassed => '試験日を過ぎています。設定を見直してください';

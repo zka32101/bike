@@ -10,8 +10,6 @@ import '../viewmodels/providers.dart';
 import '../widgets/analytics/overall_summary_card.dart';
 import '../widgets/analytics/accuracy_bar_list.dart';
 import '../widgets/analytics/period_filter_selector.dart';
-import '../widgets/analytics/weak_area_card.dart';
-import '../widgets/analytics/review_recommendation_card.dart';
 
 /// 学習分析ダッシュボード
 /// ユーザーの全体成績、ステージ別・カテゴリ別パフォーマンス、
@@ -227,65 +225,11 @@ class AnalyticsDashboardView extends ConsumerWidget {
             ),
           ),
 
-          const SliverPadding(padding: EdgeInsets.only(top: 24)),
-
-          // 弱点一覧
-          if (data.weakAreas.isNotEmpty)
-            SliverPadding(
-              padding: const EdgeInsets.symmetric(horizontal: 20),
-              sliver: SliverToBoxAdapter(
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Text(
-                      l10n.analyticsWeakTop(data.weakAreas.length),
-                      style: Theme.of(context).textTheme.titleMedium,
-                    ),
-                    const SizedBox(height: 12),
-                  ],
-                ),
-              ),
-            ),
-
-          if (data.weakAreas.isNotEmpty)
-            SliverPadding(
-              padding: const EdgeInsets.symmetric(horizontal: 20),
-              sliver: SliverList.separated(
-                itemCount: data.weakAreas.length,
-                separatorBuilder: (_, __) => const SizedBox(height: 12),
-                itemBuilder: (context, index) {
-                  final weakArea = data.weakAreas[index];
-                  return WeakAreaCard(weakArea: weakArea);
-                },
-              ),
-            ),
-
-          const SliverPadding(padding: EdgeInsets.only(top: 24)),
-
-          // 復習推奨
-          if (data.recommendations.isNotEmpty)
-            SliverPadding(
-              padding: const EdgeInsets.symmetric(horizontal: 20),
-              sliver: SliverToBoxAdapter(
-                child: Text(
-                  l10n.analyticsRecommendedReview,
-                  style: Theme.of(context).textTheme.titleMedium,
-                ),
-              ),
-            ),
-
-          if (data.recommendations.isNotEmpty)
-            SliverPadding(
-              padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 12),
-              sliver: SliverList.separated(
-                itemCount: data.recommendations.length,
-                separatorBuilder: (_, __) => const SizedBox(height: 12),
-                itemBuilder: (context, index) {
-                  final rec = data.recommendations[index];
-                  return ReviewRecommendationCard(recommendation: rec);
-                },
-              ),
-            ),
+          // 弱点TOP5・おすすめ復習は判定条件が厳しく実用的な精度で
+          // 表示できないケースが多かったため無効化（2026-09-29）。
+          // データ自体（data.weakAreas / data.recommendations）は
+          // StudyAnalyticsService側にまだ残っており、判定ロジックの
+          // 精度を改善できたら表示を復活させる想定。
 
           // 下部余白
           const SliverPadding(padding: EdgeInsets.only(bottom: 20)),
