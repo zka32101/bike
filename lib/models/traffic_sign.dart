@@ -119,6 +119,21 @@ enum SignSymbol {
 
   /// 正面から見た乗用車（自動車専用）
   carFront,
+
+  /// 自転車＋足もとの横断帯の縞（自転車横断帯）
+  bicycleCrossing,
+
+  /// 縦に並んだ2つの三角マーカー（安全地帯）
+  safetyZoneMarkers,
+
+  /// 並んだ2本の上向き矢印（車両通行区分）
+  laneArrows,
+
+  /// ラッパ形の警笛＋区間の両端を示す縦線（警笛区間）
+  hornZone,
+
+  /// 並んだ2台の車＋右側へはみ出す矢印（追越しのための右側部分はみ出し通行禁止）
+  overtakingProtrusion,
 }
 
 /// 禁止を表す赤線の種類。
@@ -249,7 +264,7 @@ const String _kRegulatory = '規制標識';
 const String _kWarning = '警戒標識';
 const String _kInstruction = '指示標識';
 
-/// 標識クイズの全データ（42種）。
+/// 標識クイズの全データ（48種）。
 ///
 /// 1〜20 は初期収録分、21 以降は追加収録分。
 const List<TrafficSign> kTrafficSigns = [
@@ -1281,5 +1296,116 @@ const List<TrafficSign> kTrafficSigns = [
     explanation:
         '青い円に白い自動車の図柄は「自動車専用」で、高速道路や自動車専用道路の入口に設置される。'
         '一般原動機付自転車や排気量125cc以下の普通自動二輪車、歩行者、自転車は通行できない。',
+  ),
+
+  // 43. 自転車横断帯
+  TrafficSign(
+    id: 'sign_bicycle_crossing',
+    name: '自転車横断帯',
+    category: _kInstruction,
+    shape: SignShape.square,
+    backgroundColor: SignColors.blue,
+    symbol: SignSymbol.bicycleCrossing,
+    symbolColor: SignColors.white,
+    questionText: 'この標識がある場所について正しいのはどれか。',
+    choices: [
+      '自転車が道路を横断するための場所であることを示す',
+      '自転車の通行が禁止されている場所であることを示す',
+      '自転車専用の駐輪スペースであることを示す',
+      '自転車の速度を制限する場所であることを示す',
+    ],
+    answer: 0,
+    explanation:
+        '青い四角の中に自転車と縞模様の図柄は「自転車横断帯」。自転車が道路を横断するための場所であることを示し、'
+        'この標識のある場所付近では自動車・二輪車は自転車の横断を妨げないよう注意する。',
+  ),
+
+  // 44. 安全地帯
+  TrafficSign(
+    id: 'sign_safety_zone',
+    name: '安全地帯',
+    category: _kInstruction,
+    shape: SignShape.square,
+    backgroundColor: SignColors.blue,
+    symbol: SignSymbol.safetyZoneMarkers,
+    symbolColor: SignColors.white,
+    questionText: 'この標識がある場所での運転者の義務として正しいのはどれか。',
+    choices: [
+      '歩行者がいなければ徐行せずに通過してよい',
+      '安全地帯に歩行者がいるときは、その側方を徐行しなければならない',
+      '安全地帯には駐停車できるが、徐行の必要はない',
+      'この標識がある区間は追越しが禁止される'
+    ],
+    answer: 1,
+    explanation:
+        '青い四角に2つの三角マークは「安全地帯」で、路面電車の停留所などで歩行者が安全に待機する場所を示す。'
+        '安全地帯に歩行者がいるときは、その側方を通過する際に徐行しなければならない。',
+  ),
+
+  // 45. 車両通行区分
+  TrafficSign(
+    id: 'sign_lane_designation',
+    name: '車両通行区分',
+    category: _kInstruction,
+    shape: SignShape.circle,
+    backgroundColor: SignColors.blue,
+    symbol: SignSymbol.laneArrows,
+    symbolColor: SignColors.white,
+    questionText: 'この標識の意味として正しいのはどれか。',
+    choices: [
+      '車両の種類ごとに通行すべき車両通行帯を指定する',
+      '車両の追越しを禁止する',
+      '一方通行であることを示す',
+      '駐車できる車両通行帯を指定する'
+    ],
+    answer: 0,
+    explanation:
+        '青い円に2本の矢印は「車両通行区分」。標識の直下や近くに設置された補助標識で示された車両の種類ごとに、'
+        '通行すべき車両通行帯（レーン）が指定されていることを表す。',
+  ),
+
+  // 46. 警笛区間
+  TrafficSign(
+    id: 'sign_horn_zone',
+    name: '警笛区間',
+    category: _kRegulatory,
+    shape: SignShape.square,
+    backgroundColor: SignColors.blue,
+    symbol: SignSymbol.hornZone,
+    symbolColor: SignColors.white,
+    questionText: 'この標識がある区間の通行について正しいのはどれか。',
+    choices: [
+      '区間内は常に警音器を鳴らし続けなければならない',
+      '見通しの悪い交差点やカーブなど、必要な場所で警音器を鳴らさなければならない',
+      '警音器の使用が禁止されている区間であることを示す',
+      '緊急車両のみ警音器を鳴らせる区間であることを示す'
+    ],
+    answer: 1,
+    explanation:
+        '青い四角にラッパと区間を示す縦線は「警笛区間」。区間内では、見通しの悪い交差点・曲がり角・上り坂の頂上などで'
+        '必要に応じて警音器を鳴らさなければならない（区間内を常時鳴らし続ける必要はない）。',
+  ),
+
+  // 47. 追越しのための右側部分はみ出し通行禁止
+  TrafficSign(
+    id: 'sign_no_overtaking_protrusion',
+    name: '追越しのための右側部分はみ出し通行禁止',
+    category: _kRegulatory,
+    shape: SignShape.circle,
+    backgroundColor: SignColors.yellow,
+    symbol: SignSymbol.overtakingProtrusion,
+    symbolColor: SignColors.black,
+    questionText: 'この標識がある場所での追越しについて正しいのはどれか。',
+    choices: [
+      'この先での追越しは全面的に禁止される',
+      '追越しのために道路の右側部分にはみ出して通行することを禁止する（右側部分にはみ出さない追越しは可能）',
+      '対向車がいなければ右側部分にはみ出して追越ししてよい',
+      '二輪車に限り右側部分にはみ出して追越ししてよい'
+    ],
+    answer: 1,
+    explanation:
+        '黄色い円に2台の車と右へはみ出す矢印は「追越しのための右側部分はみ出し通行禁止」。'
+        '追越し自体を禁止するものではなく、追越しのために道路の右側部分にはみ出して通行することを禁止する'
+        '（右側部分にはみ出さずに追越しできる場合は追越し可能）。',
   ),
 ];
