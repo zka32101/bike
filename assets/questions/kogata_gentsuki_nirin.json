@@ -355,8 +355,8 @@
     ],
     "answer": 1,
     "explanation": "駐車禁止の規制は車両の種類を問わず適用され、自動二輪車も指定された区間で駐車することはできない。",
-    "isTrapQuestion": false,
-    "trapNumberType": "none",
+    "isTrapQuestion": true,
+    "trapNumberType": "other",
     "topicTag": "rules"
   },
   {
@@ -1435,8 +1435,8 @@
     ],
     "answer": 3,
     "explanation": "転回禁止(Uターン禁止)の標識がある場所では、車両の種類を問わず転回することが禁止されている。",
-    "isTrapQuestion": false,
-    "trapNumberType": "none",
+    "isTrapQuestion": true,
+    "trapNumberType": "other",
     "topicTag": "operation"
   },
   {
@@ -1475,8 +1475,8 @@
     ],
     "answer": 1,
     "explanation": "駐車禁止の規制は、運転者がその場を離れているかどうかにかかわらず適用され、指定区間に自動二輪車を止めることはできない。",
-    "isTrapQuestion": false,
-    "trapNumberType": "none",
+    "isTrapQuestion": true,
+    "trapNumberType": "other",
     "topicTag": "parking"
   },
   {
@@ -1595,8 +1595,8 @@
     ],
     "answer": 3,
     "explanation": "時間制限駐車区間では、標示された制限時間の範囲内で、所定の表示方法に従って駐車することが認められている。",
-    "isTrapQuestion": false,
-    "trapNumberType": "none",
+    "isTrapQuestion": true,
+    "trapNumberType": "other",
     "topicTag": "parking"
   },
   {
@@ -1835,8 +1835,8 @@
     ],
     "answer": 3,
     "explanation": "小型限定普通二輪免許であっても、違反行為の内容に応じて点数が付され、累積点数に応じて免許の停止・取消しなどの行政処分の対象となる。",
-    "isTrapQuestion": false,
-    "trapNumberType": "none",
+    "isTrapQuestion": true,
+    "trapNumberType": "other",
     "topicTag": "license_system"
   },
   {
@@ -1955,8 +1955,8 @@
     ],
     "answer": 1,
     "explanation": "「二輪車通行止め」の標識がある道路は、原動機付自転車と自動二輪車の両方の通行が禁止されている区間であることを示す。",
-    "isTrapQuestion": false,
-    "trapNumberType": "none",
+    "isTrapQuestion": true,
+    "trapNumberType": "signalAndMarkings",
     "topicTag": "signs"
   },
   {
@@ -1975,8 +1975,8 @@
     ],
     "answer": 2,
     "explanation": "「最高速度」の標識は、その道路区間で車両が出すことのできる最高速度を示すものであり、これを超えて走行することはできない。",
-    "isTrapQuestion": false,
-    "trapNumberType": "none",
+    "isTrapQuestion": true,
+    "trapNumberType": "speedLimit",
     "topicTag": "signs"
   },
   {
@@ -2135,8 +2135,8 @@
     ],
     "answer": 2,
     "explanation": "運転するときは、距離や時間の長短に関係なく免許証を携帯しなければならない。携帯していないと免許証不携帯となる。",
-    "isTrapQuestion": false,
-    "trapNumberType": "none",
+    "isTrapQuestion": true,
+    "trapNumberType": "other",
     "topicTag": "license_system"
   },
   {
@@ -2235,8 +2235,8 @@
     ],
     "answer": 3,
     "explanation": "大型二輪免許では排気量にかかわらずすべての自動二輪車を運転でき、普通自動二輪車(小型を含む)、小型特殊自動車、原付も運転できる。",
-    "isTrapQuestion": false,
-    "trapNumberType": "none",
+    "isTrapQuestion": true,
+    "trapNumberType": "other",
     "topicTag": "license_system"
   },
   {
@@ -2255,8 +2255,8 @@
     ],
     "answer": 0,
     "explanation": "自賠責保険はすべての自動車・原付に加入が義務付けられている強制保険である。車検のない二輪車でも加入が必要で、証明書を備え付ける。",
-    "isTrapQuestion": false,
-    "trapNumberType": "none",
+    "isTrapQuestion": true,
+    "trapNumberType": "other",
     "topicTag": "license_system"
   },
   {
@@ -2475,8 +2475,8 @@
     ],
     "answer": 3,
     "explanation": "胸骨圧迫は、胸の真ん中を1分間に100〜120回のテンポで、約5cm沈む強さで絶え間なく行う。",
-    "isTrapQuestion": false,
-    "trapNumberType": "none",
+    "isTrapQuestion": true,
+    "trapNumberType": "other",
     "topicTag": "emergency"
   },
   {
@@ -2775,8 +2775,8 @@
     ],
     "answer": 2,
     "explanation": "駐車場、車庫などの自動車用の出入口から3m以内は駐車禁止の場所である。",
-    "isTrapQuestion": false,
-    "trapNumberType": "none",
+    "isTrapQuestion": true,
+    "trapNumberType": "other",
     "topicTag": "parking"
   },
   {
@@ -2835,8 +2835,8 @@
     ],
     "answer": 1,
     "explanation": "横断歩道・自転車横断帯とその端から前後5m以内は駐停車禁止である。止まった車が歩行者の姿を隠す危険があるためである。",
-    "isTrapQuestion": false,
-    "trapNumberType": "none",
+    "isTrapQuestion": true,
+    "trapNumberType": "other",
     "topicTag": "parking"
   },
   {
@@ -2895,8 +2895,8 @@
     ],
     "answer": 0,
     "explanation": "二人乗りは、同乗者用の乗車装置(座席)とステップなど、二人乗りのための装置がある二輪車でなければできない。",
-    "isTrapQuestion": false,
-    "trapNumberType": "none",
+    "isTrapQuestion": true,
+    "trapNumberType": "twoPersonRiding",
     "topicTag": "parking"
   },
   {
@@ -2955,8 +2955,8 @@
     ],
     "answer": 3,
     "explanation": "二人乗りでは重量が増えて制動距離が長くなり、カーブでの操作感覚も変わる。一人のときより慎重な運転が必要である。",
-    "isTrapQuestion": false,
-    "trapNumberType": "none",
+    "isTrapQuestion": true,
+    "trapNumberType": "brakingDistance",
     "topicTag": "parking"
   },
   {
@@ -3035,8 +3035,8 @@
     ],
     "answer": 3,
     "explanation": "実線2本の路側帯は歩行者用路側帯であり、車両は中に入って駐停車できない。車道の左端に沿って止める。",
-    "isTrapQuestion": false,
-    "trapNumberType": "none",
+    "isTrapQuestion": true,
+    "trapNumberType": "signalAndMarkings",
     "topicTag": "parking"
   },
   {
@@ -3075,8 +3075,8 @@
     ],
     "answer": 1,
     "explanation": "運転者が車から離れていてすぐに運転できない状態は、時間の長短にかかわらず駐車である。",
-    "isTrapQuestion": false,
-    "trapNumberType": "none",
+    "isTrapQuestion": true,
+    "trapNumberType": "other",
     "topicTag": "parking"
   },
   {
@@ -3355,8 +3355,8 @@
     ],
     "answer": 3,
     "explanation": "交差点とその手前から30m以内の場所では、優先道路を通行している場合を除いて追越しが禁止されている。",
-    "isTrapQuestion": false,
-    "trapNumberType": "none",
+    "isTrapQuestion": true,
+    "trapNumberType": "other",
     "topicTag": "rules"
   },
   {
@@ -3675,8 +3675,8 @@
     ],
     "answer": 3,
     "explanation": "合図は、右左折・転回・進路変更などの行為が終わるまで続け、終わったら速やかにやめる。",
-    "isTrapQuestion": false,
-    "trapNumberType": "none",
+    "isTrapQuestion": true,
+    "trapNumberType": "turningRules",
     "topicTag": "rules"
   },
   {
@@ -3915,8 +3915,8 @@
     ],
     "answer": 3,
     "explanation": "一方通行の道路では、道路の中央から右側部分にはみ出して通行することができる。",
-    "isTrapQuestion": false,
-    "trapNumberType": "none",
+    "isTrapQuestion": true,
+    "trapNumberType": "other",
     "topicTag": "rules"
   },
   {
@@ -4015,8 +4015,8 @@
     ],
     "answer": 0,
     "explanation": "酒気を帯びている人に車両を提供することは禁止されており、提供した人も処罰の対象となる。酒類の提供や同乗も禁止されている。",
-    "isTrapQuestion": false,
-    "trapNumberType": "none",
+    "isTrapQuestion": true,
+    "trapNumberType": "other",
     "topicTag": "rules"
   },
   {
@@ -4175,8 +4175,8 @@
     ],
     "answer": 0,
     "explanation": "前の車に続いて走るときは、前の車が急停止しても追突を避けられる安全な車間距離をとる。",
-    "isTrapQuestion": false,
-    "trapNumberType": "none",
+    "isTrapQuestion": true,
+    "trapNumberType": "followingDistance",
     "topicTag": "rules"
   },
   {
@@ -4375,8 +4375,8 @@
     ],
     "answer": 2,
     "explanation": "停止距離は、危険を感じてからブレーキが効き始めるまでの空走距離と、効き始めてから止まるまでの制動距離を合わせたものである。",
-    "isTrapQuestion": false,
-    "trapNumberType": "none",
+    "isTrapQuestion": true,
+    "trapNumberType": "brakingDistance",
     "topicTag": "operation"
   },
   {
@@ -4475,8 +4475,8 @@
     ],
     "answer": 3,
     "explanation": "遠心力はカーブの半径が小さいほど大きくなる。急なカーブほど手前で十分に速度を落とす必要がある。",
-    "isTrapQuestion": false,
-    "trapNumberType": "none",
+    "isTrapQuestion": true,
+    "trapNumberType": "other",
     "topicTag": "operation"
   },
   {
@@ -5055,8 +5055,8 @@
     ],
     "answer": 0,
     "explanation": "長時間の運転は疲労によって判断や操作が遅れるため、少なくとも2時間に1回程度は休憩をとるようにする。",
-    "isTrapQuestion": false,
-    "trapNumberType": "none",
+    "isTrapQuestion": true,
+    "trapNumberType": "other",
     "topicTag": "operation"
   },
   {
@@ -5915,8 +5915,8 @@
     ],
     "answer": 3,
     "explanation": "ぬれた路面では制動距離が長くなるため、晴れの日よりも車間距離を長めにとる必要がある。",
-    "isTrapQuestion": false,
-    "trapNumberType": "none",
+    "isTrapQuestion": true,
+    "trapNumberType": "followingDistance",
     "topicTag": "hazard_prediction"
   },
   {
@@ -6035,8 +6035,8 @@
     ],
     "answer": 1,
     "explanation": "「通行止め」は規制標識（円形・赤地に白のバツ印）で、歩行者・車両を問わず、すべての通行が禁止されていることを示すことを意味する。",
-    "isTrapQuestion": false,
-    "trapNumberType": "none",
+    "isTrapQuestion": true,
+    "trapNumberType": "signalAndMarkings",
     "topicTag": "signs"
   },
   {
@@ -6115,8 +6115,8 @@
     ],
     "answer": 1,
     "explanation": "「指定方向外進行禁止（直進のみ）」は規制標識（円形・青地に白の矢印）で、矢印で示された方向（直進）以外への進行を禁止することを意味する。",
-    "isTrapQuestion": false,
-    "trapNumberType": "none",
+    "isTrapQuestion": true,
+    "trapNumberType": "signalAndMarkings",
     "topicTag": "signs"
   },
   {
@@ -6155,8 +6155,8 @@
     ],
     "answer": 3,
     "explanation": "「車両（組合せ）通行止め」は規制標識（円形・赤地に白のバツ印と複数車両の絵）で、指定された複数の種類の車両の通行を禁止することを意味する。",
-    "isTrapQuestion": false,
-    "trapNumberType": "none",
+    "isTrapQuestion": true,
+    "trapNumberType": "signalAndMarkings",
     "topicTag": "signs"
   },
   {
@@ -6175,8 +6175,8 @@
     ],
     "answer": 0,
     "explanation": "「専用通行帯」は規制標識（円形・青地に白の矢印と専用車両の絵）で、バスなど特定の車両の専用通行帯であることを示し、それ以外の車両の通行を制限することを意味する。",
-    "isTrapQuestion": false,
-    "trapNumberType": "none",
+    "isTrapQuestion": true,
+    "trapNumberType": "signalAndMarkings",
     "topicTag": "signs"
   },
   {
@@ -6195,8 +6195,8 @@
     ],
     "answer": 1,
     "explanation": "「駐停車禁止」は規制標識（円形・青地に赤の斜線）で、車両の駐車と停車の両方を禁止することを意味する。",
-    "isTrapQuestion": false,
-    "trapNumberType": "none",
+    "isTrapQuestion": true,
+    "trapNumberType": "signalAndMarkings",
     "topicTag": "signs"
   },
   {
@@ -6235,8 +6235,8 @@
     ],
     "answer": 3,
     "explanation": "「特定の種類の車両の通行区分」は指示標識（円形・青地に白の矢印と特定車両の絵）で、原動機付自転車や自転車など特定の車両が通行すべき車両通行帯を指定することを意味する。",
-    "isTrapQuestion": false,
-    "trapNumberType": "none",
+    "isTrapQuestion": true,
+    "trapNumberType": "signalAndMarkings",
     "topicTag": "signs"
   },
   {
@@ -6255,8 +6255,8 @@
     ],
     "answer": 0,
     "explanation": "「駐車禁止」は規制標識（円形・青地に赤の斜線とPマーク）で、車両の駐車を禁止する（短時間の停車は可能）ことを意味する。",
-    "isTrapQuestion": false,
-    "trapNumberType": "none",
+    "isTrapQuestion": true,
+    "trapNumberType": "signalAndMarkings",
     "topicTag": "signs"
   },
   {
@@ -6275,8 +6275,8 @@
     ],
     "answer": 1,
     "explanation": "「大型乗用自動車等通行止め」は規制標識（円形・赤地に白のバツ印とバスの絵）で、大型乗用自動車（バス等）の通行を禁止することを意味する。",
-    "isTrapQuestion": false,
-    "trapNumberType": "none",
+    "isTrapQuestion": true,
+    "trapNumberType": "signalAndMarkings",
     "topicTag": "signs"
   },
   {
@@ -6295,8 +6295,8 @@
     ],
     "answer": 2,
     "explanation": "「車両通行区分」は指示標識（円形・青地に白の矢印と車両の絵）で、車両の種類ごとに通行すべき車両通行帯を指定することを意味する。",
-    "isTrapQuestion": false,
-    "trapNumberType": "none",
+    "isTrapQuestion": true,
+    "trapNumberType": "signalAndMarkings",
     "topicTag": "signs"
   },
   {
@@ -6355,8 +6355,8 @@
     ],
     "answer": 1,
     "explanation": "「自動車専用」は規制標識（円形・青地に白の自動車の絵）で、自動車・原動機付自転車以外（歩行者・軽車両等）の通行を禁止することを意味する。",
-    "isTrapQuestion": false,
-    "trapNumberType": "none",
+    "isTrapQuestion": true,
+    "trapNumberType": "signalAndMarkings",
     "topicTag": "signs"
   },
   {
@@ -6395,8 +6395,8 @@
     ],
     "answer": 3,
     "explanation": "「最低速度」は規制標識（円形・青地に白字で数字）で、その数字を下回る速度での走行を禁止する（高速道路等に設置）ことを意味する。",
-    "isTrapQuestion": false,
-    "trapNumberType": "none",
+    "isTrapQuestion": true,
+    "trapNumberType": "speedLimit",
     "topicTag": "signs"
   },
   {
@@ -6415,8 +6415,8 @@
     ],
     "answer": 0,
     "explanation": "「最高速度」は規制標識（円形・白地に赤枠、黒字で数字）で、その数字を超える速度での走行を禁止することを意味する。",
-    "isTrapQuestion": false,
-    "trapNumberType": "none",
+    "isTrapQuestion": true,
+    "trapNumberType": "speedLimit",
     "topicTag": "signs"
   },
   {
@@ -6535,8 +6535,8 @@
     ],
     "answer": 2,
     "explanation": "「歩行者通行止め」は規制標識（円形・赤地に白のバツ印と歩行者の絵）で、歩行者の通行を禁止することを意味する。",
-    "isTrapQuestion": false,
-    "trapNumberType": "none",
+    "isTrapQuestion": true,
+    "trapNumberType": "signalAndMarkings",
     "topicTag": "signs"
   },
   {
@@ -6555,8 +6555,8 @@
     ],
     "answer": 3,
     "explanation": "「直角駐車」は指示標識（長方形・青地に白の絵）で、道路の側端に対して直角に駐車すべきことを示すことを意味する。",
-    "isTrapQuestion": false,
-    "trapNumberType": "none",
+    "isTrapQuestion": true,
+    "trapNumberType": "signalAndMarkings",
     "topicTag": "signs"
   },
   {
@@ -6575,8 +6575,8 @@
     ],
     "answer": 0,
     "explanation": "「二輪の自動車・原動機付自転車通行止め」は規制標識（円形・赤地に白のバツ印とバイクの絵）で、二輪の自動車と原動機付自転車の通行を禁止することを意味する。",
-    "isTrapQuestion": false,
-    "trapNumberType": "none",
+    "isTrapQuestion": true,
+    "trapNumberType": "signalAndMarkings",
     "topicTag": "signs"
   },
   {
@@ -6595,8 +6595,8 @@
     ],
     "answer": 1,
     "explanation": "「警笛区間」は規制標識（長方形・青地に白字とラッパの絵）で、見通しの悪い区間など、必要に応じて警音器を鳴らすべき区間であることを示すことを意味する。",
-    "isTrapQuestion": false,
-    "trapNumberType": "none",
+    "isTrapQuestion": true,
+    "trapNumberType": "signalAndMarkings",
     "topicTag": "signs"
   },
   {
@@ -6635,8 +6635,8 @@
     ],
     "answer": 3,
     "explanation": "「自転車以外の軽車両通行止め」は規制標識（円形・赤地に白のバツ印と荷車の絵）で、自転車を除く軽車両（荷車など）の通行を禁止することを意味する。",
-    "isTrapQuestion": false,
-    "trapNumberType": "none",
+    "isTrapQuestion": true,
+    "trapNumberType": "signalAndMarkings",
     "topicTag": "signs"
   },
   {
@@ -6675,8 +6675,8 @@
     ],
     "answer": 1,
     "explanation": "「横断歩道」は指示標識（長方形・青地に白の歩行者の絵）で、歩行者が道路を横断するための場所であることを示すことを意味する。",
-    "isTrapQuestion": false,
-    "trapNumberType": "none",
+    "isTrapQuestion": true,
+    "trapNumberType": "signalAndMarkings",
     "topicTag": "signs"
   },
   {
@@ -6695,8 +6695,8 @@
     ],
     "answer": 2,
     "explanation": "「追越しのための右側部分はみ出し通行禁止」は規制標識（円形・黄色地に黒の追越し禁止マーク）で、追越しのために道路の右側部分にはみ出して通行することを禁止する（右側部分にはみ出さない追越しは可能）ことを意味する。",
-    "isTrapQuestion": false,
-    "trapNumberType": "none",
+    "isTrapQuestion": true,
+    "trapNumberType": "signalAndMarkings",
     "topicTag": "signs"
   },
   {
@@ -6755,8 +6755,8 @@
     ],
     "answer": 1,
     "explanation": "「警笛鳴らせ」は規制標識（三角形・黄色地に黒のラッパの絵）で、指定された区間で警音器（クラクション）を鳴らさなければならないことを示すことを意味する。",
-    "isTrapQuestion": false,
-    "trapNumberType": "none",
+    "isTrapQuestion": true,
+    "trapNumberType": "signalAndMarkings",
     "topicTag": "signs"
   },
   {
@@ -6795,8 +6795,8 @@
     ],
     "answer": 3,
     "explanation": "「自転車横断帯」は指示標識（長方形・青地に白の自転車の絵）で、自転車が道路を横断するための場所であることを示すことを意味する。",
-    "isTrapQuestion": false,
-    "trapNumberType": "none",
+    "isTrapQuestion": true,
+    "trapNumberType": "signalAndMarkings",
     "topicTag": "signs"
   },
   {
@@ -6835,8 +6835,8 @@
     ],
     "answer": 1,
     "explanation": "「斜め駐車」は指示標識（長方形・青地に白の絵）で、道路の側端に対して斜めに駐車すべきことを示すことを意味する。",
-    "isTrapQuestion": false,
-    "trapNumberType": "none",
+    "isTrapQuestion": true,
+    "trapNumberType": "signalAndMarkings",
     "topicTag": "signs"
   },
   {
@@ -6915,8 +6915,8 @@
     ],
     "answer": 1,
     "explanation": "「大型・特定中型貨物自動車等通行止め」は規制標識（円形・赤地に白のバツ印とトラックの絵）で、大型貨物自動車や特定中型貨物自動車などの通行を禁止することを意味する。",
-    "isTrapQuestion": false,
-    "trapNumberType": "none",
+    "isTrapQuestion": true,
+    "trapNumberType": "signalAndMarkings",
     "topicTag": "signs"
   },
   {
@@ -6935,8 +6935,8 @@
     ],
     "answer": 2,
     "explanation": "「指定方向外進行禁止（左折禁止）」は規制標識（円形・青地に白の矢印（左折方向を除く））で、示された方向以外への進行を禁止し、左折を禁止することを意味する。",
-    "isTrapQuestion": false,
-    "trapNumberType": "none",
+    "isTrapQuestion": true,
+    "trapNumberType": "signalAndMarkings",
     "topicTag": "signs"
   },
   {
@@ -6955,8 +6955,8 @@
     ],
     "answer": 3,
     "explanation": "「平行駐車」は指示標識（長方形・青地に白の絵）で、道路の側端に対して平行に駐車すべきことを示すことを意味する。",
-    "isTrapQuestion": false,
-    "trapNumberType": "none",
+    "isTrapQuestion": true,
+    "trapNumberType": "signalAndMarkings",
     "topicTag": "signs"
   },
   {
@@ -6975,8 +6975,8 @@
     ],
     "answer": 0,
     "explanation": "「指定方向外進行禁止（右折禁止）」は規制標識（円形・青地に白の矢印（右折方向を除く））で、示された方向以外への進行を禁止し、右折を禁止することを意味する。",
-    "isTrapQuestion": false,
-    "trapNumberType": "none",
+    "isTrapQuestion": true,
+    "trapNumberType": "signalAndMarkings",
     "topicTag": "signs"
   },
   {
@@ -6995,8 +6995,8 @@
     ],
     "answer": 1,
     "explanation": "「追越し禁止」は規制標識（円形・青地に赤の斜線と追越しの絵）で、他の車両を追い越すために進路変更することを禁止することを意味する。",
-    "isTrapQuestion": false,
-    "trapNumberType": "none",
+    "isTrapQuestion": true,
+    "trapNumberType": "signalAndMarkings",
     "topicTag": "signs"
   }
 ]
