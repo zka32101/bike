@@ -53,8 +53,8 @@
       "1年間の実乗経験後に可能",
       "免許取得直後から可能"
     ],
-    "answer": 2,
-    "explanation": "大型二輪での二人乗りは、免許取得後1年の実乗経験を経た後に可能。",
+    "answer": 3,
+    "explanation": "大型自動二輪車の二人乗りは、一般道路であれば免許取得直後から年齢・経験年数の条件なく可能。20歳以上・免許取得後通算3年以上という条件が課されるのは高速道路（自動車専用道路）を走行する場合のみ。",
     "isTrapQuestion": true,
     "trapNumberType": "twoPersonRiding",
     "topicTag": "parking"
@@ -1113,8 +1113,8 @@
       "免許取得直後から可能",
       "1年以上の実乗経験後に可能"
     ],
-    "answer": 3,
-    "explanation": "大型二輪での二人乗りは免許取得後1年の実乗経験が要件。",
+    "answer": 2,
+    "explanation": "大型自動二輪車の二人乗りは、一般道路であれば免許取得直後から年齢・経験年数の条件なく可能。20歳以上・免許取得後通算3年以上という条件が課されるのは高速道路（自動車専用道路）を走行する場合のみ。",
     "isTrapQuestion": true,
     "trapNumberType": "twoPersonRiding",
     "topicTag": "parking"
@@ -1313,8 +1313,8 @@
       "3年以上必須",
       "禁止"
     ],
-    "answer": 1,
-    "explanation": "大型二輪での二人乗りは免許取得後1年の実乗経験が要件。",
+    "answer": 0,
+    "explanation": "大型自動二輪車の二人乗りは、一般道路であれば免許取得直後から年齢・経験年数の条件なく可能。20歳以上・免許取得後通算3年以上という条件が課されるのは高速道路（自動車専用道路）を走行する場合のみ。",
     "isTrapQuestion": true,
     "trapNumberType": "twoPersonRiding",
     "topicTag": "parking"
@@ -1513,8 +1513,8 @@
       "免許取得直後から可能",
       "1年以上の実乗経験後に可能"
     ],
-    "answer": 3,
-    "explanation": "大型二輪での二人乗りは免許取得後1年の実乗経験が要件。",
+    "answer": 2,
+    "explanation": "大型自動二輪車の二人乗りは、一般道路であれば免許取得直後から年齢・経験年数の条件なく可能。20歳以上・免許取得後通算3年以上という条件が課されるのは高速道路（自動車専用道路）を走行する場合のみ。",
     "isTrapQuestion": true,
     "trapNumberType": "twoPersonRiding",
     "topicTag": "parking"
@@ -1713,8 +1713,8 @@
       "禁止",
       "3年以上必須"
     ],
-    "answer": 1,
-    "explanation": "大型二輪での二人乗りは免許取得後1年の実乗経験が要件。",
+    "answer": 0,
+    "explanation": "大型自動二輪車の二人乗りは、一般道路であれば免許取得直後から年齢・経験年数の条件なく可能。20歳以上・免許取得後通算3年以上という条件が課されるのは高速道路（自動車専用道路）を走行する場合のみ。",
     "isTrapQuestion": true,
     "trapNumberType": "twoPersonRiding",
     "topicTag": "parking"
@@ -1913,8 +1913,8 @@
       "免許取得直後から可能",
       "1年以上の実乗経験後に可能"
     ],
-    "answer": 3,
-    "explanation": "大型二輪での二人乗りは免許取得後1年の実乗経験が要件。",
+    "answer": 2,
+    "explanation": "大型自動二輪車の二人乗りは、一般道路であれば免許取得直後から年齢・経験年数の条件なく可能。20歳以上・免許取得後通算3年以上という条件が課されるのは高速道路（自動車専用道路）を走行する場合のみ。",
     "isTrapQuestion": true,
     "trapNumberType": "twoPersonRiding",
     "topicTag": "parking"
@@ -2113,8 +2113,8 @@
       "3年以上必須",
       "禁止"
     ],
-    "answer": 1,
-    "explanation": "大型二輪での二人乗りは免許取得後1年の実乗経験が要件。",
+    "answer": 0,
+    "explanation": "大型自動二輪車の二人乗りは、一般道路であれば免許取得直後から年齢・経験年数の条件なく可能。20歳以上・免許取得後通算3年以上という条件が課されるのは高速道路（自動車専用道路）を走行する場合のみ。",
     "isTrapQuestion": true,
     "trapNumberType": "twoPersonRiding",
     "topicTag": "parking"
@@ -2313,8 +2313,8 @@
       "禁止",
       "1年以上の実乗経験後に可能"
     ],
-    "answer": 3,
-    "explanation": "大型二輪での二人乗りは免許取得後1年の実乗経験が要件。",
+    "answer": 1,
+    "explanation": "大型自動二輪車の二人乗りは、一般道路であれば免許取得直後から年齢・経験年数の条件なく可能。20歳以上・免許取得後通算3年以上という条件が課されるのは高速道路（自動車専用道路）を走行する場合のみ。",
     "isTrapQuestion": true,
     "trapNumberType": "twoPersonRiding",
     "topicTag": "parking"
@@ -2513,8 +2513,8 @@
       "禁止",
       "3年以上必須"
     ],
-    "answer": 1,
-    "explanation": "大型二輪での二人乗りは免許取得後1年の実乗経験が要件。",
+    "answer": 0,
+    "explanation": "大型自動二輪車の二人乗りは、一般道路であれば免許取得直後から年齢・経験年数の条件なく可能。20歳以上・免許取得後通算3年以上という条件が課されるのは高速道路（自動車専用道路）を走行する場合のみ。",
     "isTrapQuestion": true,
     "trapNumberType": "twoPersonRiding",
     "topicTag": "parking"
@@ -2713,8 +2713,8 @@
       "3年以上必須",
       "1年以上の実乗経験後に可能"
     ],
-    "answer": 3,
-    "explanation": "大型二輪での二人乗りは免許取得後1年の実乗経験が要件。",
+    "answer": 0,
+    "explanation": "大型自動二輪車の二人乗りは、一般道路であれば免許取得直後から年齢・経験年数の条件なく可能。20歳以上・免許取得後通算3年以上という条件が課されるのは高速道路（自動車専用道路）を走行する場合のみ。",
     "isTrapQuestion": true,
     "trapNumberType": "twoPersonRiding",
     "topicTag": "parking"
@@ -2913,8 +2913,8 @@
       "禁止",
       "免許取得直後から可能"
     ],
-    "answer": 1,
-    "explanation": "大型二輪での二人乗りは免許取得後1年の実乗経験が要件。",
+    "answer": 3,
+    "explanation": "大型自動二輪車の二人乗りは、一般道路であれば免許取得直後から年齢・経験年数の条件なく可能。20歳以上・免許取得後通算3年以上という条件が課されるのは高速道路（自動車専用道路）を走行する場合のみ。",
     "isTrapQuestion": true,
     "trapNumberType": "twoPersonRiding",
     "topicTag": "parking"
@@ -3113,8 +3113,8 @@
       "免許取得直後から可能",
       "1年以上の実乗経験後に可能"
     ],
-    "answer": 3,
-    "explanation": "大型二輪での二人乗りは免許取得後1年の実乗経験が要件。",
+    "answer": 2,
+    "explanation": "大型自動二輪車の二人乗りは、一般道路であれば免許取得直後から年齢・経験年数の条件なく可能。20歳以上・免許取得後通算3年以上という条件が課されるのは高速道路（自動車専用道路）を走行する場合のみ。",
     "isTrapQuestion": true,
     "trapNumberType": "twoPersonRiding",
     "topicTag": "parking"
@@ -3573,8 +3573,8 @@
       "免許取得後1年の実乗経験後",
       "制限なし"
     ],
-    "answer": 2,
-    "explanation": "大型二輪での二人乗りは、免許取得後1年の実乗経験が必須条件。",
+    "answer": 1,
+    "explanation": "大型自動二輪車の二人乗りは、一般道路であれば免許取得直後から年齢・経験年数の条件なく可能。20歳以上・免許取得後通算3年以上という条件が課されるのは高速道路（自動車専用道路）を走行する場合のみ。",
     "isTrapQuestion": true,
     "trapNumberType": "twoPersonRiding",
     "topicTag": "parking"

@@ -473,8 +473,8 @@
       "児童乗車は完全禁止",
       "6歳以上で、親の判断で可能"
     ],
-    "answer": 3,
-    "explanation": "原付への児童乗車は6歳以上が条件で、適切なヘルメット着用が必須。",
+    "answer": 2,
+    "explanation": "原付（原付一種）は構造上定員が1名と定められており、児童・幼児を含め同乗者を乗せることは年齢にかかわらず一切禁止されている。",
     "isTrapQuestion": true,
     "trapNumberType": "twoPersonRiding",
     "topicTag": "parking"
@@ -951,10 +951,10 @@
       "ハロゲンライト",
       "懐中電灯",
       "LEDヘッドライト",
-      "ライト（125ルクス以上）"
+      "ライト（保安基準の光度基準を満たすもの）"
     ],
     "answer": 3,
-    "explanation": "夜間走行時は、十分な明るさ（125ルクス以上）のヘッドライトが法定要件。",
+    "explanation": "夜間走行時は、保安基準で定められた光度基準（すれ違い用前照灯で6,400カンデラ以上など）を満たすヘッドライトの点灯が必要。",
     "isTrapQuestion": false,
     "trapNumberType": "none",
     "topicTag": "hazard_prediction"
@@ -2408,13 +2408,13 @@
     "difficulty": 1,
     "questionText": "原付での緊急車両（救急車・消防車・パトカー）への対応は。",
     "choices": [
-      "右側に寄り停止",
+      "左側に寄り停止",
       "ウインカーのみ出す",
       "加速して先に進む",
       "そのまま走行継続"
     ],
     "answer": 0,
-    "explanation": "緊急車両には優先権がある。右側に寄り停止することが法的義務。",
+    "explanation": "緊急車両が接近してきたときは、交差点を避け、道路の左側に寄って一時停止することが道路交通法上の義務（一方通行路など、左に寄るとかえって緊急車両の妨げになる場合を除く）。",
     "isTrapQuestion": true,
     "trapNumberType": "other",
     "topicTag": "emergency"
@@ -2728,13 +2728,13 @@
     "difficulty": 1,
     "questionText": "原付での停止線について正しいのは。",
     "choices": [
-      "停止線の手前30cm以上で停止",
+      "停止線を越えないよう、その直前で停止",
       "停止線を少し超えて停止",
       "停止線の位置は目安",
       "停止線を越えて停止"
     ],
     "answer": 0,
-    "explanation": "停止線の手前で安全に停止することが道路交通法の要件。",
+    "explanation": "停止線を越えないよう、その直前で安全に停止することが道路交通法の要件。",
     "isTrapQuestion": true,
     "trapNumberType": "signalAndMarkings",
     "topicTag": "signs"
