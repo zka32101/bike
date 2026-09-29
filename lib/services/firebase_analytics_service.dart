@@ -29,7 +29,13 @@ class FirebaseAnalyticsService implements AnalyticsService {
     try {
       await _analytics.logEvent(
         name: name,
-        parameters: parameters ?? {},
+        parameters: parameters == null
+            ? null
+            : Map<String, Object>.fromEntries(
+                parameters.entries.where((e) => e.value != null).map(
+                      (e) => MapEntry(e.key, e.value as Object),
+                    ),
+              ),
       );
     } catch (e) {
       if (kDebugMode) {

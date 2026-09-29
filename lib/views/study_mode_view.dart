@@ -115,6 +115,7 @@ class _StudyModeViewState extends ConsumerState<StudyModeView> {
                     Padding(
                       padding: const EdgeInsets.only(bottom: 12),
                       child: _StudyQuestionCard(
+                        key: ValueKey(questions[i].id),
                         question: questions[i],
                         index: i + 1,
                         isMastered: masteredIds.contains(questions[i].id),
@@ -179,6 +180,7 @@ class _TopicSummarySection extends StatelessWidget {
 
 class _StudyQuestionCard extends ConsumerWidget {
   const _StudyQuestionCard({
+    super.key,
     required this.question,
     required this.index,
     required this.isMastered,
@@ -203,6 +205,7 @@ class _StudyQuestionCard extends ConsumerWidget {
   Widget build(BuildContext context, WidgetRef ref) {
     return Card(
       child: ExpansionTile(
+        key: PageStorageKey(question.id),
         title: Text('$index. ${question.questionText}'),
         childrenPadding: const EdgeInsets.fromLTRB(16, 0, 16, 16),
         children: [
