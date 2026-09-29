@@ -175,8 +175,8 @@
     ],
     "answer": 0,
     "explanation": "原付免許では50cc以下の一輪二輪車を運転できる。",
-    "isTrapQuestion": false,
-    "trapNumberType": "none",
+    "isTrapQuestion": true,
+    "trapNumberType": "other",
     "topicTag": "license_system"
   },
   {
@@ -395,8 +395,8 @@
     ],
     "answer": 3,
     "explanation": "原付でも1年に1回の定期点検が法で義務づけられている。",
-    "isTrapQuestion": false,
-    "trapNumberType": "none",
+    "isTrapQuestion": true,
+    "trapNumberType": "other",
     "topicTag": "maintenance"
   },
   {
@@ -475,8 +475,8 @@
     ],
     "answer": 3,
     "explanation": "原付への児童乗車は6歳以上が条件で、適切なヘルメット着用が必須。",
-    "isTrapQuestion": false,
-    "trapNumberType": "none",
+    "isTrapQuestion": true,
+    "trapNumberType": "twoPersonRiding",
     "topicTag": "parking"
   },
   {
@@ -836,7 +836,7 @@
     "answer": 1,
     "explanation": "原付（50cc以下）は高速道路での走行が禁止されている。",
     "isTrapQuestion": true,
-    "trapNumberType": "none",
+    "trapNumberType": "other",
     "topicTag": "rules"
   },
   {
@@ -1116,7 +1116,7 @@
     "answer": 3,
     "explanation": "信号待ち時のエンジン切断は許可されているが、多くのライダーは再スタートの利便性からかけたままにしている。",
     "isTrapQuestion": true,
-    "trapNumberType": "none",
+    "trapNumberType": "other",
     "topicTag": "rules"
   },
   {
@@ -1296,7 +1296,7 @@
     "answer": 0,
     "explanation": "上り坂ではギア選択で速度維持が重要で、ニュートラル走行は制御困難。",
     "isTrapQuestion": true,
-    "trapNumberType": "none",
+    "trapNumberType": "other",
     "topicTag": "operation"
   },
   {
@@ -1316,7 +1316,7 @@
     "answer": 1,
     "explanation": "急ブレーキは前輪をロックさせスリップの原因となり、危険。",
     "isTrapQuestion": true,
-    "trapNumberType": "brakingDistance",
+    "trapNumberType": "brakeTechnique",
     "topicTag": "operation"
   },
   {
@@ -1496,7 +1496,7 @@
     "answer": 2,
     "explanation": "原付は構造上バックギアを持たず、バックでの移動はマニュアル操作になる。",
     "isTrapQuestion": true,
-    "trapNumberType": "none",
+    "trapNumberType": "other",
     "topicTag": "maintenance"
   },
   {
@@ -1596,7 +1596,7 @@
     "answer": 3,
     "explanation": "適切なギアチェンジはエンジン保護と効率的な加速に重要。",
     "isTrapQuestion": true,
-    "trapNumberType": "none",
+    "trapNumberType": "other",
     "topicTag": "operation"
   },
   {
@@ -1936,7 +1936,7 @@
     "answer": 0,
     "explanation": "原付のハンドルロックはセキュリティ機構で、キー解錠時にハンドルが固定される。",
     "isTrapQuestion": true,
-    "trapNumberType": "none",
+    "trapNumberType": "other",
     "topicTag": "operation"
   },
   {
@@ -1996,7 +1996,7 @@
     "answer": 3,
     "explanation": "医療用含め、一部の薬物は眠気や判断力低下を招き、運転が禁止される場合がある。",
     "isTrapQuestion": true,
-    "trapNumberType": "none",
+    "trapNumberType": "other",
     "topicTag": "hazard_prediction"
   },
   {
@@ -2016,7 +2016,7 @@
     "answer": 0,
     "explanation": "飲酒運転は道路交通法で完全禁止。少量でも検査対象。",
     "isTrapQuestion": true,
-    "trapNumberType": "none",
+    "trapNumberType": "other",
     "topicTag": "operation"
   },
   {
@@ -2075,8 +2075,8 @@
     ],
     "answer": 3,
     "explanation": "発進は1速ギアから始まり、段階的に変速していくことが基本。",
-    "isTrapQuestion": false,
-    "trapNumberType": "none",
+    "isTrapQuestion": true,
+    "trapNumberType": "other",
     "topicTag": "operation"
   },
   {
@@ -2116,7 +2116,7 @@
     "answer": 1,
     "explanation": "前方車の急停止時に対応できるだけのブレーキ距離確保が最重要。",
     "isTrapQuestion": true,
-    "trapNumberType": "brakingDistance",
+    "trapNumberType": "followingDistance",
     "topicTag": "operation"
   },
   {
@@ -2296,7 +2296,7 @@
     "answer": 2,
     "explanation": "走行中のスマートフォン使用は道路交通法で完全禁止。注意散漫と事故のリスク。",
     "isTrapQuestion": true,
-    "trapNumberType": "none",
+    "trapNumberType": "other",
     "topicTag": "rules"
   },
   {
@@ -2356,7 +2356,7 @@
     "answer": 1,
     "explanation": "交通事故発生時は直ちに警察に通報することが法的義務。",
     "isTrapQuestion": true,
-    "trapNumberType": "none",
+    "trapNumberType": "other",
     "topicTag": "emergency"
   },
   {
@@ -2415,8 +2415,8 @@
     ],
     "answer": 0,
     "explanation": "緊急車両には優先権がある。右側に寄り停止することが法的義務。",
-    "isTrapQuestion": false,
-    "trapNumberType": "none",
+    "isTrapQuestion": true,
+    "trapNumberType": "other",
     "topicTag": "emergency"
   },
   {
@@ -2596,7 +2596,7 @@
     "answer": 1,
     "explanation": "ヘルメット未着用は反則金5,000円の違反。着用は法的義務。",
     "isTrapQuestion": true,
-    "trapNumberType": "none",
+    "trapNumberType": "other",
     "topicTag": "license_system"
   },
   {
@@ -2656,7 +2656,7 @@
     "answer": 0,
     "explanation": "ウインカー長押しは自動消灯機能の警告音で、正常機能。",
     "isTrapQuestion": true,
-    "trapNumberType": "none",
+    "trapNumberType": "other",
     "topicTag": "hazard_prediction"
   },
   {
@@ -2676,7 +2676,7 @@
     "answer": 1,
     "explanation": "発進はクラッチ完全切断→ギア入れ→クラッチ繋ぎ→アクセルが正確な手順。",
     "isTrapQuestion": true,
-    "trapNumberType": "none",
+    "trapNumberType": "other",
     "topicTag": "operation"
   },
   {
@@ -2876,7 +2876,7 @@
     "answer": 3,
     "explanation": "ハンドルは両手で軽く保持し、余分な力を入れないことで細かい操作が可能。",
     "isTrapQuestion": true,
-    "trapNumberType": "none",
+    "trapNumberType": "other",
     "topicTag": "operation"
   },
   {
@@ -2936,7 +2936,7 @@
     "answer": 2,
     "explanation": "ほぼ全ての原付はオートマチック構造で、特別な変速操作が不要。",
     "isTrapQuestion": true,
-    "trapNumberType": "none",
+    "trapNumberType": "other",
     "topicTag": "maintenance"
   },
   {
@@ -3416,7 +3416,7 @@
     "answer": 2,
     "explanation": "駐車時のエンジン切断は燃料節約と環境保全のために必須。",
     "isTrapQuestion": true,
-    "trapNumberType": "none",
+    "trapNumberType": "other",
     "topicTag": "parking"
   },
   {
@@ -3496,7 +3496,7 @@
     "answer": 2,
     "explanation": "消音器脱落は違法な騒音発生により走行禁止。即座に修理が必須。",
     "isTrapQuestion": true,
-    "trapNumberType": "none",
+    "trapNumberType": "other",
     "topicTag": "emergency"
   },
   {
@@ -4016,7 +4016,7 @@
     "answer": 0,
     "explanation": "前後輪のブレーキを同時に使うことで車体を安定させながら制動距離を短くできる。片方だけの急な操作は転倒の危険が高い。",
     "isTrapQuestion": true,
-    "trapNumberType": "other",
+    "trapNumberType": "brakeTechnique",
     "topicTag": "operation"
   },
   {
@@ -4056,7 +4056,7 @@
     "answer": 2,
     "explanation": "右左折の際は、その行為をしようとする地点の約30m手前で合図を出すことが定められている。",
     "isTrapQuestion": true,
-    "trapNumberType": "other",
+    "trapNumberType": "turningRules",
     "topicTag": "operation"
   },
   {
@@ -6015,8 +6015,8 @@
     ],
     "answer": 0,
     "explanation": "「最低速度」は規制標識（円形・青地に白字で数字）で、その数字を下回る速度での走行を禁止する（高速道路等に設置）ことを意味する。",
-    "isTrapQuestion": false,
-    "trapNumberType": "none",
+    "isTrapQuestion": true,
+    "trapNumberType": "speedLimit",
     "topicTag": "signs"
   },
   {

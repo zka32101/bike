@@ -1282,7 +1282,7 @@
     "answer": 0,
     "explanation": "踏切は停止して確認後、徐行で通過することが法規と安全のため必須。",
     "isTrapQuestion": true,
-    "trapNumberType": "none",
+    "trapNumberType": "other",
     "topicTag": "rules"
   },
   {
@@ -1538,7 +1538,7 @@
     "answer": 0,
     "explanation": "安全な制動はフロントブレーキ70%・リアブレーキ30%の比率が基本。",
     "isTrapQuestion": true,
-    "trapNumberType": "brakingDistance",
+    "trapNumberType": "brakeTechnique",
     "topicTag": "operation"
   },
   {
@@ -1559,8 +1559,8 @@
     ],
     "answer": 1,
     "explanation": "雨天時は路面グリップ低下により、ブレーキング距離が著しく延びる。",
-    "isTrapQuestion": false,
-    "trapNumberType": "none",
+    "isTrapQuestion": true,
+    "trapNumberType": "brakingDistance",
     "topicTag": "operation"
   },
   {
@@ -4351,8 +4351,8 @@
     ],
     "answer": 0,
     "explanation": "標識による指定がない一般道路での法定最高速度は時速60キロメートルである。",
-    "isTrapQuestion": false,
-    "trapNumberType": "none",
+    "isTrapQuestion": true,
+    "trapNumberType": "speedLimit",
     "topicTag": "rules"
   },
   {
@@ -4491,8 +4491,8 @@
     ],
     "answer": 3,
     "explanation": "黄色信号は、安全に停止することができない場合を除き、停止位置を越えて進行してはならないことを意味する。",
-    "isTrapQuestion": false,
-    "trapNumberType": "none",
+    "isTrapQuestion": true,
+    "trapNumberType": "signalAndMarkings",
     "topicTag": "rules"
   },
   {
@@ -4511,8 +4511,8 @@
     ],
     "answer": 0,
     "explanation": "赤色の点滅信号は、他の交通に注意しながら一時停止し、安全を確認したうえで進行しなければならないことを意味する。",
-    "isTrapQuestion": false,
-    "trapNumberType": "none",
+    "isTrapQuestion": true,
+    "trapNumberType": "signalAndMarkings",
     "topicTag": "rules"
   },
   {
@@ -4592,7 +4592,7 @@
     "answer": 0,
     "explanation": "危険を感じてから実際にブレーキが効き始めるまでに進む空走距離と、ブレーキが効き始めてから停止するまでの制動距離を合わせたものを停止距離という。",
     "isTrapQuestion": true,
-    "trapNumberType": "followingDistance",
+    "trapNumberType": "brakingDistance",
     "topicTag": "rules"
   },
   {
@@ -4612,7 +4612,7 @@
     "answer": 1,
     "explanation": "制動距離は速度の2乗にほぼ比例して長くなるため、速度が2倍になると制動距離はおよそ4倍になる。速度に応じて十分な車間距離をとる必要がある。",
     "isTrapQuestion": true,
-    "trapNumberType": "followingDistance",
+    "trapNumberType": "brakingDistance",
     "topicTag": "rules"
   },
   {
@@ -5052,7 +5052,7 @@
     "answer": 3,
     "explanation": "大型車のすぐ後ろに位置すると、トラックの運転者から二輪車が見えにくい死角に入りやすく、急停止や進路変更に対応できない危険がある。",
     "isTrapQuestion": true,
-    "trapNumberType": "other",
+    "trapNumberType": "hazardRecognition",
     "topicTag": "hazard_prediction"
   },
   {
@@ -5172,7 +5172,7 @@
     "answer": 1,
     "explanation": "ガソリンスタンドの出入口付近は油分がこぼれて路面が滑りやすくなっていることがあり、二輪車は特に注意して通過する必要がある。",
     "isTrapQuestion": true,
-    "trapNumberType": "other",
+    "trapNumberType": "hazardRecognition",
     "topicTag": "hazard_prediction"
   },
   {
@@ -5192,7 +5192,7 @@
     "answer": 2,
     "explanation": "右折待ちの車の陰は死角になりやすく、その陰から対向してくる二輪車や自転車が急に現れることがあるため、速度を落として備える必要がある。",
     "isTrapQuestion": true,
-    "trapNumberType": "other",
+    "trapNumberType": "hazardRecognition",
     "topicTag": "hazard_prediction"
   },
   {
@@ -5252,7 +5252,7 @@
     "answer": 1,
     "explanation": "工事現場付近は路面が荒れていたり砂利や鉄板があったりしてタイヤが取られやすいため、速度を落として慎重に通行する必要がある。",
     "isTrapQuestion": true,
-    "trapNumberType": "other",
+    "trapNumberType": "hazardRecognition",
     "topicTag": "hazard_prediction"
   },
   {
@@ -5272,7 +5272,7 @@
     "answer": 2,
     "explanation": "住宅街の細い路地は塀や駐車車両で見通しが悪いことが多く、広い道路に出る際には車両や歩行者を見落としやすいため、徐行して安全確認を行う必要がある。",
     "isTrapQuestion": true,
-    "trapNumberType": "other",
+    "trapNumberType": "hazardRecognition",
     "topicTag": "hazard_prediction"
   },
   {
@@ -5292,7 +5292,7 @@
     "answer": 3,
     "explanation": "強風時はあらかじめ速度を落とし、ハンドルをしっかり保持して突風による車体のふらつきに備えることが安全である。",
     "isTrapQuestion": true,
-    "trapNumberType": "other",
+    "trapNumberType": "hazardRecognition",
     "topicTag": "hazard_prediction"
   },
   {
@@ -5352,7 +5352,7 @@
     "answer": 2,
     "explanation": "駐車場の出入口では歩道を横切るため、歩行者の存在に気づかず接触する危険がある。歩道の手前で一時停止し歩行者の通行を妨げないようにする必要がある。",
     "isTrapQuestion": true,
-    "trapNumberType": "other",
+    "trapNumberType": "hazardRecognition",
     "topicTag": "hazard_prediction"
   },
   {
@@ -5372,7 +5372,7 @@
     "answer": 3,
     "explanation": "駐車車両の陰から子どもなどが飛び出す危険を考え、あらかじめ側方の間隔をとり速度を落としておくことで、とっさの対応がしやすくなる。",
     "isTrapQuestion": true,
-    "trapNumberType": "other",
+    "trapNumberType": "hazardRecognition",
     "topicTag": "hazard_prediction"
   },
   {
@@ -5412,7 +5412,7 @@
     "answer": 1,
     "explanation": "乗客が降りるために後部座席のドアが開く可能性があるため、速度を落とすか十分な側方間隔をとって通過することが安全である。",
     "isTrapQuestion": true,
-    "trapNumberType": "other",
+    "trapNumberType": "hazardRecognition",
     "topicTag": "hazard_prediction"
   },
   {
@@ -5452,7 +5452,7 @@
     "answer": 3,
     "explanation": "橋の上は地面からの熱が伝わりにくく他の路面より冷えやすいため、霜や薄氷による凍結が起きやすい。速度を落として慎重に走行する必要がある。",
     "isTrapQuestion": true,
-    "trapNumberType": "other",
+    "trapNumberType": "hazardRecognition",
     "topicTag": "hazard_prediction"
   },
   {
@@ -5472,7 +5472,7 @@
     "answer": 0,
     "explanation": "自転車は手信号を出さずに進路を変えることも多いため、常に予測できない動きに備え、追い越す際も十分な側方間隔をとる必要がある。",
     "isTrapQuestion": true,
-    "trapNumberType": "other",
+    "trapNumberType": "hazardRecognition",
     "topicTag": "hazard_prediction"
   },
   {
@@ -5752,7 +5752,7 @@
     "answer": 2,
     "explanation": "カーブの中でブレーキをかけると転倒の危険が高まるため、カーブに入る前の直線部分で十分に速度を落としておくことが基本である。",
     "isTrapQuestion": true,
-    "trapNumberType": "other",
+    "trapNumberType": "brakeTechnique",
     "topicTag": "operation"
   },
   {
@@ -6152,7 +6152,7 @@
     "answer": 2,
     "explanation": "運転免許証には有効期間が定められており、その満了前に更新手続きを行わなければ失効してしまう。",
     "isTrapQuestion": true,
-    "trapNumberType": "other",
+    "trapNumberType": "licensePeriod",
     "topicTag": "license_system"
   },
   {

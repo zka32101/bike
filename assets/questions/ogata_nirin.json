@@ -95,8 +95,8 @@
     ],
     "answer": 0,
     "explanation": "大型二輪免許では排気量の制限がなく、全ての二輪車を運転できる。",
-    "isTrapQuestion": false,
-    "trapNumberType": "none",
+    "isTrapQuestion": true,
+    "trapNumberType": "other",
     "topicTag": "license_system"
   },
   {
@@ -515,8 +515,8 @@
     ],
     "answer": 1,
     "explanation": "大型二輪でも1年に1回の定期点検が法で義務づけられている。",
-    "isTrapQuestion": false,
-    "trapNumberType": "none",
+    "isTrapQuestion": true,
+    "trapNumberType": "other",
     "topicTag": "maintenance"
   },
   {
@@ -3335,7 +3335,7 @@
     ],
     "answer": 2,
     "explanation": "排気量が大きいほど出力が大きく、危険管理のための高度な技術が必須。",
-    "isTrapQuestion": true,
+    "isTrapQuestion": false,
     "trapNumberType": "none",
     "topicTag": "maintenance"
   },
@@ -3456,7 +3456,7 @@
     "answer": 0,
     "explanation": "大型二輪の制動力は大きく、前後ブレーキの適切なバランスが必須。",
     "isTrapQuestion": true,
-    "trapNumberType": "brakingDistance",
+    "trapNumberType": "brakeTechnique",
     "topicTag": "operation"
   },
   {
@@ -3616,7 +3616,7 @@
     "answer": 0,
     "explanation": "急ブレーキは前輪をロックさせ、スリップや転倒につながり極めて危険。",
     "isTrapQuestion": true,
-    "trapNumberType": "brakingDistance",
+    "trapNumberType": "brakeTechnique",
     "topicTag": "operation"
   },
   {
@@ -3736,7 +3736,7 @@
     "answer": 2,
     "explanation": "蛇行走行は道路交通法違反で、極めて危険。",
     "isTrapQuestion": true,
-    "trapNumberType": "signalAndMarkings",
+    "trapNumberType": "other",
     "topicTag": "operation"
   },
   {
@@ -3836,7 +3836,7 @@
     "answer": 3,
     "explanation": "飲酒運転は完全禁止。少量でも重大な違反で法的責任が生じる。",
     "isTrapQuestion": true,
-    "trapNumberType": "none",
+    "trapNumberType": "other",
     "topicTag": "rules"
   },
   {
@@ -4056,7 +4056,7 @@
     "answer": 2,
     "explanation": "前輪ブレーキは制動力の大部分を担うため、前後輪を組み合わせつつ前輪を主体に使うのが基本である。",
     "isTrapQuestion": true,
-    "trapNumberType": "other",
+    "trapNumberType": "brakeTechnique",
     "topicTag": "operation"
   },
   {
@@ -4256,7 +4256,7 @@
     "answer": 0,
     "explanation": "同乗者の分だけ車両重量が増加し制動距離が伸びる傾向があるため、単独乗車時より早めに余裕を持って減速を開始する。",
     "isTrapQuestion": true,
-    "trapNumberType": "followingDistance",
+    "trapNumberType": "brakingDistance",
     "topicTag": "operation"
   },
   {
@@ -4716,7 +4716,7 @@
     "answer": 3,
     "explanation": "大型二輪は車体重量が大きく慣性が働きやすいため、同じ速度からでも制動距離が延びやすく、早めに余裕を持ってブレーキを操作する必要がある。",
     "isTrapQuestion": true,
-    "trapNumberType": "followingDistance",
+    "trapNumberType": "brakingDistance",
     "topicTag": "operation"
   },
   {
@@ -4835,8 +4835,8 @@
     ],
     "answer": 1,
     "explanation": "横断歩道や自転車横断帯の前後5メートル以内は、歩行者の視界を妨げないよう駐停車が禁止されている。",
-    "isTrapQuestion": false,
-    "trapNumberType": "none",
+    "isTrapQuestion": true,
+    "trapNumberType": "other",
     "topicTag": "parking"
   },
   {
@@ -5356,7 +5356,7 @@
     "answer": 3,
     "explanation": "制動距離は速度が高くなるほど加速度的に伸びる傾向があるため、速度が上がるほどより大きな余裕を持った運転が求められる。",
     "isTrapQuestion": true,
-    "trapNumberType": "speedLimit",
+    "trapNumberType": "brakingDistance",
     "topicTag": "hazard_prediction"
   },
   {
