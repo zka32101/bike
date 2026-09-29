@@ -460,7 +460,89 @@ class _SymbolPainter {
         _circle(0, 0.7, 0.16, _fillPaint);
       case SignSymbol.carFront:
         _carFront();
+      case SignSymbol.bicycleCrossing:
+        _bicycleCrossing();
+      case SignSymbol.safetyZoneMarkers:
+        _safetyZoneMarkers();
+      case SignSymbol.laneArrows:
+        _laneArrows();
+      case SignSymbol.hornZone:
+        _hornZone();
+      case SignSymbol.overtakingProtrusion:
+        _overtakingProtrusion();
     }
+  }
+
+  /// 自転車＋足もとに横断帯の縞（自転車横断帯）。
+  void _bicycleCrossing() {
+    _bicycle();
+    final black = Paint()..color = SignColors.black;
+    for (var i = -2; i <= 2; i++) {
+      final x = i * 0.36;
+      _rrect(x - 0.12, 0.78, x + 0.12, 0.94, 0.01, black);
+    }
+  }
+
+  /// 縦に並んだ2つの三角マーカー（安全地帯）。
+  void _safetyZoneMarkers() {
+    canvas.drawPath(
+      _poly([
+        [-0.32, -0.92],
+        [0.32, -0.92],
+        [0, -0.3],
+      ]),
+      _fillPaint,
+    );
+    canvas.drawPath(
+      _poly([
+        [-0.32, 0.1],
+        [0.32, 0.1],
+        [0, 0.72],
+      ]),
+      _fillPaint,
+    );
+  }
+
+  /// 並んだ2本の上向き矢印（車両通行区分）。
+  void _laneArrows() {
+    void arrow(double dx) {
+      final shaft = _stroke(0.14, cap: StrokeCap.butt);
+      _line(dx, 0.9, dx, -0.3, shaft);
+      canvas.drawPath(
+        _poly([
+          [dx, -0.95],
+          [dx + 0.26, -0.3],
+          [dx - 0.26, -0.3],
+        ]),
+        _fillPaint,
+      );
+    }
+
+    arrow(-0.4);
+    arrow(0.4);
+  }
+
+  /// ラッパ形の警笛＋区間の両端を示す縦線（警笛区間）。
+  void _hornZone() {
+    _horn();
+    final bar = _stroke(0.09, cap: StrokeCap.butt);
+    _line(-1.05, -0.5, -1.05, 0.5, bar);
+    _line(1.05, -0.5, 1.05, 0.5, bar);
+  }
+
+  /// 並んだ2台の車＋右側へはみ出す矢印（追越しのための右側部分はみ出し通行禁止）。
+  void _overtakingProtrusion() {
+    _twoCars();
+    final shaft = _stroke(0.08, cap: StrokeCap.butt);
+    _line(0, 0.3, 0.5, 0.3, shaft);
+    canvas.drawPath(
+      _poly([
+        [0.68, 0.3],
+        [0.42, 0.16],
+        [0.42, 0.44],
+      ]),
+      _fillPaint,
+    );
   }
 
   /// 正面から見た乗用車（青地に白。窓とライトは地色の青で抜く）。
