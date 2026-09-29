@@ -1,7 +1,7 @@
 name: bike_license_kore
 description: "原付・バイク免許コレ！— 二輪免許（原付〜大型二輪）特化の学科試験対策アプリ"
 publish_to: "none"
-version: 1.0.0+2
+version: 1.0.1+3
 
 environment:
   sdk: ">=3.3.0 <4.0.0"
@@ -13,25 +13,25 @@ dependencies:
     sdk: flutter
   cupertino_icons: ^1.0.6
 
-  # 状態管理
-  flutter_riverpod: ^2.5.1
+  # 状態管理（3.xはStateNotifier廃止等の破壊的変更が大きいため2.x系に固定）
+  flutter_riverpod: ">=2.5.1 <3.0.0"
 
   # Firebase（実プロジェクト接続はFirebase設定ファイル追加後に有効化）
-  firebase_core: ^2.27.0
-  firebase_auth: ^4.17.4
-  cloud_firestore: ^4.15.4
-  firebase_analytics: ^10.8.5
-  firebase_crashlytics: ^3.4.13
-  firebase_remote_config: ^4.3.14
+  firebase_core: ^4.15.0
+  firebase_auth: ^6.7.0
+  cloud_firestore: ^6.10.0
+  firebase_analytics: ^12.6.0
+  firebase_crashlytics: ^5.4.0
+  firebase_remote_config: ^6.7.0
 
   # 認証（Googleサインインのみ）
-  google_sign_in: ^6.2.1
+  google_sign_in: ^7.2.0
 
   # 課金（期間パス・非消費型）
-  purchases_flutter: ^8.0.0
+  purchases_flutter: ^10.0.0
 
   # 広告（Google Mobile Ads）
-  google_mobile_ads: ^6.0.0
+  google_mobile_ads: ^9.1.0
 
   # 演出
   lottie: ^3.1.0
