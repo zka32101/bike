@@ -1,6 +1,7 @@
 import 'package:app_common_kit/app_common_kit.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:yourwish_kentei/yourwish_kentei.dart' show FreeTierLimits;
 
 import '../core/constants/analytics_events.dart';
 import '../viewmodels/providers.dart';
@@ -46,6 +47,8 @@ class PaywallView extends ConsumerWidget {
               style: Theme.of(context).textTheme.bodyMedium,
               textAlign: TextAlign.center,
             ),
+            const SizedBox(height: 16),
+            const _PlanComparison(),
             if (state.adsHidden) ...[
               const SizedBox(height: 16),
               _CurrentPlan(state: state),
@@ -119,6 +122,35 @@ class PaywallView extends ConsumerWidget {
       SnackBar(
         content: Text(
           state.adsHidden ? '購入を復元しました' : '復元できる購入が見つかりませんでした',
+        ),
+      ),
+    );
+  }
+}
+
+/// 広告なし／プレミアムでできること（FreeTierLimits の無料枠と対応）。
+class _PlanComparison extends StatelessWidget {
+  const _PlanComparison();
+
+  @override
+  Widget build(BuildContext context) {
+    const limits = FreeTierLimits.standard;
+    return Card(
+      child: Padding(
+        padding: const EdgeInsets.all(16),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Text('広告なし', style: Theme.of(context).textTheme.titleSmall),
+            const Text('広告が表示されなくなります'),
+            const SizedBox(height: 12),
+            Text('プレミアム', style: Theme.of(context).textTheme.titleSmall),
+            const Text('広告なし に加えて'),
+            Text('・模擬テストが回数無制限（無料は月${limits.mockExamsPerMonth}回）'),
+            const Text('・模擬テストの分野別得点と「合格まであと◯問」'),
+            Text('・全分野の苦手分析（無料は上位${limits.weakTopicsShown}分野）'),
+            const Text('・試験日までの学習計画（1日の目安）'),
+          ],
         ),
       ),
     );

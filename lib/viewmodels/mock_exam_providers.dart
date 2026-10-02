@@ -3,6 +3,7 @@ import 'dart:async';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:yourwish_kentei/yourwish_kentei.dart' show UsageQuota;
 
 import '../core/constants/license_category.dart';
 import '../models/question.dart';
@@ -18,7 +19,7 @@ import 'providers.dart';
 // - 原付: 48問（文章46問＋イラスト2問相当）、30分
 // - 二輪（普通・大型・AT限定・小型限定）: 95問（文章90問＋イラスト5問相当）、50分
 // 合格ラインはいずれも正答率90%以上。
-// パス未購入（無料）ユーザーは一切利用できない（原付の無料プレビューも対象外）。
+// 無料は月1回まで（プレミアムは無制限。うかラボ共通の線引き・FreeTierLimits）。
 // ---------------------------------------------------------------------------
 
 /// 区分ごとの模擬テスト出題数。
@@ -38,7 +39,7 @@ enum MockExamPhase {
   /// 問題読み込み中。
   loading,
 
-  /// 無料版でフルアクセス権のない区分。
+  /// 無料枠（月1回）を使い切った。プレミアムで解除される。
   locked,
 
   /// 対象区分に問題が存在しない。
@@ -62,6 +63,7 @@ class MockExamState {
     this.currentIndex = 0,
     this.remainingSeconds = 0,
     this.timedOut = false,
+    this.quotaRemaining,
   });
 
   final MockExamPhase phase;
@@ -74,6 +76,9 @@ class MockExamState {
 
   /// 時間切れで採点された場合 true。
   final bool timedOut;
+
+  /// 今月の無料枠の残り回数。プレミアム（無制限）は null。
+  final int? quotaRemaining;
 
   int get totalCount => questions.length;
 
@@ -113,6 +118,7 @@ class MockExamState {
     int? currentIndex,
     int? remainingSeconds,
     bool? timedOut,
+    int? quotaRemaining,
   }) {
     return MockExamState(
       phase: phase ?? this.phase,
@@ -121,6 +127,7 @@ class MockExamState {
       currentIndex: currentIndex ?? this.currentIndex,
       remainingSeconds: remainingSeconds ?? this.remainingSeconds,
       timedOut: timedOut ?? this.timedOut,
+      quotaRemaining: quotaRemaining ?? this.quotaRemaining,
     );
   }
 }
@@ -139,6 +146,12 @@ class MockExamController extends FamilyNotifier<MockExamState, String> {
     return const MockExamState();
   }
 
+  /// 模擬試験の無料枠（月1回）。プレミアムは無制限。
+  UsageQuota _quota() => ref.read(freeTierLimitsProvider).mockExamQuota(
+        isPremium: ref.read(hasPremiumProvider),
+        store: ref.read(keyValueStoreProvider),
+      );
+
   void _cancelTimer() {
     _timer?.cancel();
     _timer = null;
@@ -148,10 +161,17 @@ class MockExamController extends FamilyNotifier<MockExamState, String> {
   /// 区分内の全問題（マスター済み・未習得を問わず、段階フィルタなし）から
   /// ランダムに出題数分を選出する。
   ///
-  /// 全問題が無料のため、区分によるロックはない。
+  /// 全問題が無料のため区分によるロックはない。ただし無料は模擬試験が月1回まで
+  /// （使い切ったら [MockExamPhase.locked]）。
   Future<void> load() async {
     _cancelTimer();
     state = const MockExamState();
+
+    final quota = _quota();
+    if (!quota.canUse) {
+      state = const MockExamState(phase: MockExamPhase.locked, quotaRemaining: 0);
+      return;
+    }
 
     final all = await ref.read(
       questionsProvider(QuestionQuery(licenseCategory: _licenseCategory)).future,
@@ -171,12 +191,15 @@ class MockExamController extends FamilyNotifier<MockExamState, String> {
       questions: questions,
       selectedAnswers: List<int?>.filled(questions.length, null),
       remainingSeconds: mockExamTimeLimitSecondsFor(_licenseCategory),
+      quotaRemaining: quota.remaining,
     );
   }
 
   /// 試験を開始し、カウントダウンタイマーを起動する。
   void start() {
     if (state.phase != MockExamPhase.ready) return;
+    // 開始した時点で1回分を消費する（途中で離脱しても戻らない）。
+    unawaited(_quota().tryConsume());
     ref
         .read(adGateServiceProvider)
         .enterContext(AdBlockingContext.answeringQuestion);

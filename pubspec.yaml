@@ -18,6 +18,10 @@ dependencies:
     git:
       url: https://github.com/zka32101/app_common_kit.git
       ref: v0.1.2
+  yourwish_kentei:
+    git:
+      url: https://github.com/zka32101/yourwish_kentei.git
+      ref: v0.2.0
 
   # 状態管理（3.xはStateNotifier廃止等の破壊的変更が大きいため2.x系に固定）
   flutter_riverpod: ">=2.5.1 <3.0.0"

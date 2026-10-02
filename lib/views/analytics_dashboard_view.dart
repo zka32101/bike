@@ -6,10 +6,12 @@ import '../core/constants/license_category.dart';
 import '../core/constants/question_topic.dart';
 import '../l10n/generated/app_localizations.dart';
 import '../models/analytics_snapshot.dart';
+import '../viewmodels/analytics_limits.dart';
 import '../viewmodels/providers.dart';
-import '../widgets/analytics/overall_summary_card.dart';
 import '../widgets/analytics/accuracy_bar_list.dart';
+import '../widgets/analytics/overall_summary_card.dart';
 import '../widgets/analytics/period_filter_selector.dart';
+import 'paywall_view.dart';
 
 /// 学習分析ダッシュボード
 /// ユーザーの全体成績、ステージ別・カテゴリ別パフォーマンス、
@@ -101,6 +103,12 @@ class AnalyticsDashboardView extends ConsumerWidget {
 
     final l10n = AppLocalizations.of(context);
 
+    // 無料は苦手な上位3分野まで。プレミアムは全分野（FreeTierLimits）。
+    final topicLimit = ref
+        .watch(freeTierLimitsProvider)
+        .weakTopicLimit(isPremium: ref.watch(hasPremiumProvider));
+    final shownTopics = visibleTopics(data.topics, topicLimit);
+
     // データ不足の場合の案内
     if (data.overall.attempts < 10) {
       return Center(
@@ -173,7 +181,7 @@ class AnalyticsDashboardView extends ConsumerWidget {
                   ),
                   const SizedBox(height: 12),
                   AccuracyBarList(
-                    items: data.topics
+                    items: shownTopics
                         .map((t) => AccuracyBarItem(
                           label: QuestionTopic.labelFor(t.categoryId),
                           accuracy: t.stat.accuracy,
@@ -182,6 +190,18 @@ class AnalyticsDashboardView extends ConsumerWidget {
                         ))
                         .toList(),
                   ),
+                  if (topicLimit != null)
+                    Card(
+                      child: ListTile(
+                        leading: const Icon(Icons.lock_outline),
+                        title: Text('苦手な上位$topicLimit分野を表示中'),
+                        subtitle: const Text('全分野の分析はプレミアムで見られます'),
+                        trailing: const Icon(Icons.chevron_right),
+                        onTap: () => Navigator.of(context).push(
+                          MaterialPageRoute(builder: (_) => const PaywallView()),
+                        ),
+                      ),
+                    ),
                 ],
               ),
             ),
