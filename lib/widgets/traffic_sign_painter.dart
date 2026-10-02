@@ -493,6 +493,20 @@ class _SymbolPainter {
         _hornZone();
       case SignSymbol.overtakingProtrusion:
         _overtakingProtrusion();
+      case SignSymbol.truck:
+        _truck();
+      case SignSymbol.sideBySide:
+        _sideBySide();
+      case SignSymbol.tramTrack:
+        _tramTrack();
+      case SignSymbol.parkingParallel:
+        _parking(math.pi / 2);
+      case SignSymbol.parkingRight:
+        _parking(0);
+      case SignSymbol.parkingAngled:
+        _parking(math.pi / 4);
+      case SignSymbol.busLane:
+        _busLane();
     }
   }
 
@@ -579,6 +593,114 @@ class _SymbolPainter {
         [0.36, -0.3],
       ]),
       _fillPaint,
+    );
+  }
+
+  /// 横から見た貨物自動車（右向き）。
+  void _truck() {
+    final paint = _fillPaint;
+    _rrect(-0.95, -0.5, 0.22, 0.3, 0.04, paint);
+    canvas.drawPath(
+      _poly([
+        [0.28, -0.22],
+        [0.62, -0.22],
+        [0.92, 0.1],
+        [0.92, 0.3],
+        [0.28, 0.3],
+      ]),
+      paint,
+    );
+    _circle(-0.55, 0.4, 0.2, paint);
+    _circle(0.55, 0.4, 0.2, paint);
+  }
+
+  /// 後ろから見た二輪車の運転者が2人並ぶ（並進可）。
+  void _sideBySide() {
+    final paint = _fillPaint;
+    for (final x in [-0.5, 0.5]) {
+      _circle(x, -0.68, 0.17, paint);
+      _rrect(x - 0.22, -0.46, x + 0.22, 0.1, 0.08, paint);
+      _line(x - 0.22, -0.4, x - 0.4, 0.08, _stroke(0.12));
+      _line(x + 0.22, -0.4, x + 0.4, 0.08, _stroke(0.12));
+      _line(x - 0.12, 0.05, x - 0.14, 0.5, _stroke(0.14));
+      _line(x + 0.12, 0.05, x + 0.14, 0.5, _stroke(0.14));
+      _rrect(x - 0.07, 0.2, x + 0.07, 0.95, 0.03, paint);
+    }
+  }
+
+  /// 軌道（レール）の上に乗る後ろ姿の車（軌道敷内通行可）。
+  void _tramTrack() {
+    final paint = _fillPaint;
+    final cut = Paint()..color = SignColors.blue;
+    canvas.drawPath(
+      _poly([
+        [-0.45, -0.1],
+        [-0.34, -0.55],
+        [0.34, -0.55],
+        [0.45, -0.1],
+      ]),
+      paint,
+    );
+    _rrect(-0.68, -0.12, 0.68, 0.3, 0.08, paint);
+    _rrect(-0.58, 0.25, -0.34, 0.42, 0.03, paint);
+    _rrect(0.34, 0.25, 0.58, 0.42, 0.03, paint);
+    canvas.drawPath(
+      _poly([
+        [-0.34, -0.16],
+        [-0.26, -0.46],
+        [0.26, -0.46],
+        [0.34, -0.16],
+      ]),
+      cut,
+    );
+    final rail = _stroke(0.07, cap: StrokeCap.butt);
+    _line(-0.3, 0.45, -0.62, 0.95, rail);
+    _line(0.3, 0.45, 0.62, 0.95, rail);
+    for (final y in [0.55, 0.7, 0.85]) {
+      final w = 0.3 + (y - 0.45) * 0.64;
+      _line(-w - 0.15, y, w + 0.15, y, _stroke(0.05, cap: StrokeCap.butt));
+    }
+  }
+
+  /// 駐車の向き。左の白線と、上から見た車を [angle] 回した向きで描く。
+  void _parking(double angle) {
+    _rrect(-0.88, -1.0, -0.76, 0.3, 0, _fillPaint);
+    const cx = 0.1;
+    const cy = -0.4;
+    canvas.save();
+    canvas.translate(p(cx, cy).dx, p(cx, cy).dy);
+    canvas.rotate(angle);
+    final paint = _fillPaint;
+    final cut = Paint()..color = SignColors.blue;
+    // 車体は x 方向が前後（長さ1.3、幅0.7）
+    canvas.drawRRect(
+      RRect.fromLTRBR(-0.65 * k, -0.35 * k, 0.65 * k, 0.35 * k, Radius.circular(0.16 * k)),
+      paint,
+    );
+    canvas.drawRect(Rect.fromLTRB(-0.05 * k, -0.28 * k, 0.28 * k, 0.28 * k), cut);
+    canvas.drawRect(Rect.fromLTRB(-0.5 * k, -0.28 * k, -0.34 * k, 0.28 * k), cut);
+    canvas.drawRect(Rect.fromLTRB(0.4 * k, -0.28 * k, 0.52 * k, 0.28 * k), cut);
+    canvas.restore();
+  }
+
+  /// バスの前面、「専用」の文字の位置を空けて、下向きの矢印（専用通行帯）。
+  void _busLane() {
+    final paint = _fillPaint;
+    final cut = Paint()..color = SignColors.blue;
+    _rrect(-1.0, -1.05, -0.88, 1.0, 0, paint);
+    _rrect(0.88, -1.05, 1.0, 1.0, 0, paint);
+    _rrect(-0.5, -1.0, 0.5, -0.42, 0.08, paint);
+    _rrect(-0.42, -0.92, 0.42, -0.66, 0.03, cut);
+    _circle(-0.3, -0.42, 0.1, cut);
+    _circle(0.3, -0.42, 0.1, cut);
+    _rrect(-0.15, 0.36, 0.15, 0.6, 0, paint);
+    canvas.drawPath(
+      _poly([
+        [0, 1.05],
+        [-0.5, 0.55],
+        [0.5, 0.55],
+      ]),
+      paint,
     );
   }
 
