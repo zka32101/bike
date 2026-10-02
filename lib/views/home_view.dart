@@ -20,6 +20,7 @@ import 'guide_view.dart';
 import 'sign_quiz_view.dart';
 import 'study_mode_view.dart';
 import 'trap_quiz_view.dart';
+import '../widgets/oshi_card.dart';
 
 /// ホーム画面：合格予測メーター／今日のノルマ。
 /// ホーム→ノルマ→正誤演出＝3タップ以内でAhaに到達する動線の起点。
@@ -113,6 +114,14 @@ class _HomeViewState extends ConsumerState<HomeView> {
                       _StreakBadge(streakCount: user!.streakCount),
                       const SizedBox(height: 16),
                     ],
+                    OshiCard(
+                      questions: ref
+                              .watch(questionsProvider(
+                                  QuestionQuery(licenseCategory: primaryCategoryId)))
+                              .valueOrNull ??
+                          const [],
+                    ),
+                    const SizedBox(height: 16),
                     PassPredictionMeter(
                       score: scoreAsync.valueOrNull,
                       answeredCount: answerLogsAsync.valueOrNull?.length ?? 0,

@@ -1,3 +1,4 @@
+import 'package:app_common_kit/app_common_kit.dart';
 import 'dart:async';
 
 import 'package:flutter/foundation.dart';
@@ -271,6 +272,9 @@ class MockExamController extends FamilyNotifier<MockExamState, String> {
     state = state.copyWith(phase: MockExamPhase.finished, timedOut: timedOut);
     ref.read(adGateServiceProvider).exitContext();
     unawaited(_saveAnswerLogs(state));
+    final coin = ref.read(coinProvider.notifier);
+    unawaited(coin.grant(CoinEvent.mockDone()));
+    if (state.passed) unawaited(coin.grant(CoinEvent.mockPass(_licenseCategory)));
   }
 
   /// 回答済みの問題を通常の学習ログと同様に保存する（未回答分は実際に

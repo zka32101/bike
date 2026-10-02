@@ -72,6 +72,10 @@ void main() async {
           adsHidden: () => entitlement.state.adsHidden,
         );
 
+  // 学習コイン（app_common_kit）。財布はアプリごと。端末内に保存する。
+  final coinService = CoinService(store: SharedPreferencesCoinStore('bike'));
+  await coinService.load();
+
   // ProviderScope を先にコンテナとして作り、runApp前に復習リマインダー通知の
   // 初期化（プラグイン初期化・通知タップ時のコールバック登録）を行う。
   final container = ProviderContainer(
@@ -87,6 +91,7 @@ void main() async {
       // Firebase Analytics を計測サービスとして使用
       analyticsServiceProvider.overrideWithValue(FirebaseAnalyticsService()),
 
+      coinServiceProvider.overrideWithValue(coinService),
       entitlementServiceProvider.overrideWithValue(entitlement),
       adGateProvider.overrideWithValue(adGate),
       keyValueStoreProvider.overrideWithValue(PrefsKeyValueStore(prefs)),
