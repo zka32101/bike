@@ -1528,7 +1528,7 @@ const List<TrafficSign> kTrafficSigns = [
   TrafficSign(
     id: 'sign_parking_parallel',
     name: '平行駐車',
-    category: _kInstruction,
+    category: _kRegulatory,
     shape: SignShape.square,
     backgroundColor: SignColors.blue,
     rimColor: SignColors.white,
@@ -1548,13 +1548,13 @@ const List<TrafficSign> kTrafficSigns = [
     ],
     answer: 2,
     explanation:
-        '青い四角に白い線と上から見た車、下に「平行駐車」と書かれた標識は、駐車するときの車の向きを指定する指示標識。この場所では道路と平行（縦向き）に駐車する。',
+        '青い四角に白い線と上から見た車、下に「平行駐車」と書かれた標識は、駐車するときの車の向きを指定する規制標識。この場所では道路と平行（縦向き）に駐車する。',
   ),
 
   TrafficSign(
     id: 'sign_parking_right',
     name: '直角駐車',
-    category: _kInstruction,
+    category: _kRegulatory,
     shape: SignShape.square,
     backgroundColor: SignColors.blue,
     rimColor: SignColors.white,
@@ -1574,13 +1574,13 @@ const List<TrafficSign> kTrafficSigns = [
     ],
     answer: 1,
     explanation:
-        '青い四角に白い線と上から見た車、下に「直角駐車」と書かれた標識は、駐車するときの車の向きを指定する指示標識。この場所では道路と直角（横向き）に駐車する。',
+        '青い四角に白い線と上から見た車、下に「直角駐車」と書かれた標識は、駐車するときの車の向きを指定する規制標識。この場所では道路と直角（横向き）に駐車する。',
   ),
 
   TrafficSign(
     id: 'sign_parking_angled',
     name: '斜め駐車',
-    category: _kInstruction,
+    category: _kRegulatory,
     shape: SignShape.square,
     backgroundColor: SignColors.blue,
     rimColor: SignColors.white,
@@ -1600,7 +1600,7 @@ const List<TrafficSign> kTrafficSigns = [
     ],
     answer: 0,
     explanation:
-        '青い四角に白い線と上から見た車、下に「斜め駐車」と書かれた標識は、駐車するときの車の向きを指定する指示標識。この場所では道路に対して斜めに駐車する。',
+        '青い四角に白い線と上から見た車、下に「斜め駐車」と書かれた標識は、駐車するときの車の向きを指定する規制標識。この場所では道路に対して斜めに駐車する。',
   ),
 
   TrafficSign(

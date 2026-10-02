@@ -148,5 +148,26 @@ void main() {
         expect(all125, isNot(contains('125ccの二輪車')), reason: '${q['id']}');
       }
     });
+  
+    test('規制標識の説明に「赤地に白のバツ印」「黄色地」を書かない（規制標識(1)は白地・赤枠・青い記号）', () {
+      for (final q in all) {
+        if (q['topicTag'] != 'signs') continue;
+        final e = q['explanation'] as String;
+        if (e.contains('規制標識')) {
+          expect(e, isNot(contains('赤地に白のバツ')), reason: '${q['id']}');
+          expect(e, isNot(contains('黄色地')), reason: '${q['id']}');
+        }
+      }
+    });
+
+    test('駐停車禁止と駐車禁止: 出入口3m・工事区域5m・消火栓5m・火災報知機1mは駐車禁止（第45条）', () {
+      for (final q in all) {
+        final text = q['questionText'] as String;
+        if (text.contains('駐停車が禁止') &&
+            (text.contains('消火栓') || text.contains('火災報知機'))) {
+          fail('${q['id']}: 第45条の場所は駐車禁止（駐停車禁止ではない）');
+        }
+      }
+    });
   });
 }

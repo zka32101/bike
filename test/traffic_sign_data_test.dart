@@ -125,4 +125,10 @@ void main() {
     expect(sign('sign_no_large_trucks').slash, SignSlash.single);
     expect(sign('sign_parking_right').backgroundColor, SignColors.blue);
   });
+
+  test('駐車の向きの標識(327の11〜13)は規制標識', () {
+    for (final id in ['sign_parking_parallel', 'sign_parking_right', 'sign_parking_angled']) {
+      expect(sign(id).category, sign('sign_stop').category, reason: id);
+    }
+  });
 }
