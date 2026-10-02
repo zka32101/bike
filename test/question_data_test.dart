@@ -89,6 +89,17 @@ void main() {
         }
       });
 
+      test('出典がある問題は、出典の確認日（lawVersion）も持つ', () {
+        for (final q in questions) {
+          final src = q['sourceRef'] as String?;
+          if (src == null) continue;
+          expect(src.trim(), isNotEmpty, reason: '${q['id']}');
+          expect(src.contains('。'), isFalse, reason: '${q['id']} の出典は短い参照だけにする');
+          expect(q['lawVersion'], matches(RegExp(r'^\d{4}-\d{2}-\d{2}$')),
+              reason: '${q['id']}');
+        }
+      });
+
       test('問題文が同じで正解が違う問題は、既知の曖昧な問題だけ', () {
         final byPrompt = <String, Set<String>>{};
         for (final q in questions) {

@@ -470,7 +470,7 @@ class _MockExamResultView extends StatelessWidget {
             Text('解説', style: Theme.of(context).textTheme.titleSmall),
             const SizedBox(height: 6),
             Text(
-              question.explanation.isEmpty ? '解説はありません。' : question.explanation,
+              question.explanation.isEmpty ? '解説はありません。' : question.displayExplanation,
             ),
           ],
         ),

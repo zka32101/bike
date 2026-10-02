@@ -32,6 +32,8 @@ class Question {
     this.isTrapQuestion = false,
     this.trapNumberType = TrapNumberType.none,
     this.topicTag,
+    this.sourceRef,
+    this.lawVersion,
   }) : assert(choices.length >= 2, 'choices must have at least 2 options'),
        assert(
          answer >= 0 && answer < choices.length,
@@ -66,6 +68,21 @@ class Question {
   /// トピックタグ（学習パスの個別最適化に使用）。
   final String? topicTag;
 
+  /// 出典（条文・教則の該当箇所）。確認できたものだけに付く。
+  final String? sourceRef;
+
+  /// 出典を確認した日（YYYY-MM-DD）。法令・教則はこの日時点の版。
+  final String? lawVersion;
+
+  /// 解説に出典を添えた表示用の文。出典がなければ解説だけ。
+  String get displayExplanation {
+    final src = sourceRef;
+    if (src == null || src.isEmpty) return explanation;
+    final ver = (lawVersion == null || lawVersion!.isEmpty) ? '' : '（$lawVersion 確認）';
+    final line = '出典: $src$ver';
+    return explanation.isEmpty ? line : '$explanation\n\n$line';
+  }
+
   factory Question.fromJson(Map<String, dynamic> json) {
     return Question(
       id: json['id'] as String,
@@ -82,6 +99,8 @@ class Question {
         orElse: () => TrapNumberType.none,
       ),
       topicTag: json['topicTag'] as String?,
+      sourceRef: json['sourceRef'] as String?,
+      lawVersion: json['lawVersion'] as String?,
     );
   }
 
@@ -97,5 +116,7 @@ class Question {
     'isTrapQuestion': isTrapQuestion,
     'trapNumberType': trapNumberType.name,
     'topicTag': topicTag,
+    if (sourceRef != null) 'sourceRef': sourceRef,
+    if (lawVersion != null) 'lawVersion': lawVersion,
   };
 }
