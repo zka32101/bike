@@ -264,7 +264,7 @@ const String _kRegulatory = '規制標識';
 const String _kWarning = '警戒標識';
 const String _kInstruction = '指示標識';
 
-/// 標識クイズの全データ（48種）。
+/// 標識クイズの全データ。
 ///
 /// 1〜20 は初期収録分、21 以降は追加収録分。
 const List<TrafficSign> kTrafficSigns = [
@@ -375,6 +375,7 @@ const List<TrafficSign> kTrafficSigns = [
     borderWidthRatio: 0.09,
     symbol: SignSymbol.twoRiders,
     hasDiagonalSlash: true,
+    symbolColor: SignColors.blue,
     questionText: 'この標識の意味として正しいのはどれか。',
     choices: [
       '二輪車は通行できない',
@@ -421,6 +422,7 @@ const List<TrafficSign> kTrafficSigns = [
     backgroundColor: SignColors.white,
     borderColor: SignColors.red,
     borderWidthRatio: 0.09,
+    hasDiagonalSlash: true,
     questionText: 'この標識の意味として正しいのはどれか。',
     choices: [
       '車両（自動車・原付・軽車両）は通行できない',
@@ -430,8 +432,8 @@ const List<TrafficSign> kTrafficSigns = [
     ],
     answer: 0,
     explanation:
-        '白地に赤い円枠だけの標識は「車両通行止め」。自動車だけでなく原動機付自転車や自転車などの軽車両も通行できない。'
-        '中に図柄が描かれている場合は、その車種だけが通行止めになる。',
+        '白地・赤枠の円に赤い斜めの帯が入り、中に図柄がない標識は「車両通行止め」。自動車だけでなく原動機付自転車や自転車などの軽車両も通行できない。'
+        '中に車種の図柄が描かれている場合は、その車種だけが通行止めになる。',
   ),
 
   // 8. 徐行
@@ -522,6 +524,7 @@ const List<TrafficSign> kTrafficSigns = [
     borderWidthRatio: 0.09,
     symbol: SignSymbol.uTurnArrow,
     hasDiagonalSlash: true,
+    symbolColor: SignColors.blue,
     questionText: 'この標識が示す規制はどれか。',
     choices: [
       '右折の禁止',
@@ -738,6 +741,8 @@ const List<TrafficSign> kTrafficSigns = [
     borderColor: SignColors.red,
     borderWidthRatio: 0.09,
     symbol: SignSymbol.motorcycle,
+    symbolColor: SignColors.blue,
+    hasDiagonalSlash: true,
     questionText: 'この標識の意味として正しいのはどれか。',
     choices: [
       '二輪車の駐車場がある',
@@ -747,7 +752,7 @@ const List<TrafficSign> kTrafficSigns = [
     ],
     answer: 3,
     explanation:
-        '白地・赤枠の円に二輪車の図柄（斜線なし）は「二輪の自動車・一般原動機付自転車通行止め」。'
+        '白地・赤枠の円に二輪車の図柄と赤い斜めの帯が入った標識は「二輪の自動車・一般原動機付自転車通行止め」。'
         '二輪車を押して歩く場合は歩行者として扱われる。',
   ),
 
@@ -764,7 +769,9 @@ const List<TrafficSign> kTrafficSigns = [
     borderWidthRatio: 0.09,
     centerText: '通行止',
     centerTextColor: SignColors.blue,
-    centerTextScale: 0.22,
+    centerTextScale: 0.17,
+    hasCrossSlash: true,
+    centerTextOffsetY: 0.27,
     questionText: 'この標識がある道路を通行できるものはどれか。',
     choices: [
       '歩行者だけは通行できる',
@@ -774,8 +781,8 @@ const List<TrafficSign> kTrafficSigns = [
     ],
     answer: 2,
     explanation:
-        '「通行止」の文字が入った標識は、歩行者・車両・路面電車のすべてが通れないことを示す。'
-        '白地に赤い円枠だけの「車両通行止め」は車両だけが対象なので、文字の有無で区別する。',
+        '赤い×印と「通行止」の文字が入った標識は、歩行者・車両・路面電車のすべてが通れないことを示す。'
+        '赤い斜めの帯だけの「車両通行止め」は車両だけが対象なので、×印と文字の有無で区別する。',
   ),
 
   // 22. 歩行者通行止め
@@ -783,12 +790,17 @@ const List<TrafficSign> kTrafficSigns = [
     id: 'sign_no_pedestrians',
     name: '歩行者通行止め',
     category: _kRegulatory,
-    shape: SignShape.circle,
+    shape: SignShape.square,
     backgroundColor: SignColors.white,
     borderColor: SignColors.red,
     borderWidthRatio: 0.09,
     symbol: SignSymbol.pedestrian,
     hasDiagonalSlash: true,
+    symbolColor: SignColors.blue,
+    centerText: '通行止',
+    centerTextColor: SignColors.blue,
+    centerTextScale: 0.14,
+    centerTextOffsetY: 0.30,
     questionText: 'この標識が禁止しているものはどれか。',
     choices: [
       '歩行者の通行',
@@ -812,6 +824,8 @@ const List<TrafficSign> kTrafficSigns = [
     borderColor: SignColors.red,
     borderWidthRatio: 0.09,
     symbol: SignSymbol.bicycle,
+    symbolColor: SignColors.blue,
+    hasDiagonalSlash: true,
     questionText: 'この標識の意味として正しいのはどれか。',
     choices: [
       '自転車専用の道路である',
@@ -821,7 +835,7 @@ const List<TrafficSign> kTrafficSigns = [
     ],
     answer: 1,
     explanation:
-        '白地・赤枠の円に自転車の図柄は「自転車通行止め」。斜線がなくても、赤枠の円の中の車種は通れないという意味になる。'
+        '白地・赤枠の円に自転車の図柄と赤い斜めの帯が入った標識は「自転車通行止め」。'
         '青い円に白い自転車の「自転車専用」とは色で見分ける。',
   ),
 
@@ -836,6 +850,7 @@ const List<TrafficSign> kTrafficSigns = [
     borderWidthRatio: 0.09,
     symbol: SignSymbol.turnRightArrow,
     hasDiagonalSlash: true,
+    symbolColor: SignColors.blue,
     questionText: 'この標識が示す規制として正しいのはどれか。',
     choices: [
       '交差点での右折が禁止されている',
@@ -903,15 +918,15 @@ const List<TrafficSign> kTrafficSigns = [
     name: '最低速度（30km/h）',
     category: _kRegulatory,
     shape: SignShape.circle,
-    backgroundColor: SignColors.blue,
-    rimColor: SignColors.white,
-    rimWidthRatio: 0.025,
+    backgroundColor: SignColors.white,
     symbol: SignSymbol.speedUnderline,
-    symbolColor: SignColors.white,
+    symbolColor: SignColors.blue,
     centerText: '30',
-    centerTextColor: SignColors.white,
+    centerTextColor: SignColors.blue,
     centerTextScale: 0.42,
     centerTextOffsetY: -0.04,
+    borderColor: SignColors.red,
+    borderWidthRatio: 0.09,
     questionText: 'この標識の意味として正しいのはどれか。',
     choices: [
       '時速30キロメートルを超えて走ってはいけない',
@@ -921,8 +936,8 @@ const List<TrafficSign> kTrafficSigns = [
     ],
     answer: 2,
     explanation:
-        '青地に白い数字と下線の標識は「最低速度」。自動車は表示の速度より遅く走ってはいけない（渋滞などやむを得ない場合を除く）。'
-        '白地・赤枠に青い数字の「最高速度」と、色と下線の有無で見分ける。',
+        '白地・赤枠の円に青い数字と、その下の青い線が入った標識は「最低速度」。自動車は表示の速度より遅く走ってはいけない（渋滞などやむを得ない場合を除く）。'
+        '同じ白地・赤枠の「最高速度」には数字の下に線がないので、下線の有無で見分ける。',
   ),
 
   // 28. 重量制限
@@ -1344,28 +1359,6 @@ const List<TrafficSign> kTrafficSigns = [
         '安全地帯に歩行者がいるときは、その側方を通過する際に徐行しなければならない。',
   ),
 
-  // 45. 車両通行区分
-  TrafficSign(
-    id: 'sign_lane_designation',
-    name: '車両通行区分',
-    category: _kInstruction,
-    shape: SignShape.circle,
-    backgroundColor: SignColors.blue,
-    symbol: SignSymbol.laneArrows,
-    symbolColor: SignColors.white,
-    questionText: 'この標識の意味として正しいのはどれか。',
-    choices: [
-      '車両の種類ごとに通行すべき車両通行帯を指定する',
-      '車両の追越しを禁止する',
-      '一方通行であることを示す',
-      '駐車できる車両通行帯を指定する'
-    ],
-    answer: 0,
-    explanation:
-        '青い円に2本の矢印は「車両通行区分」。標識の直下や近くに設置された補助標識で示された車両の種類ごとに、'
-        '通行すべき車両通行帯（レーン）が指定されていることを表す。',
-  ),
-
   // 46. 警笛区間
   TrafficSign(
     id: 'sign_horn_zone',
@@ -1388,26 +1381,4 @@ const List<TrafficSign> kTrafficSigns = [
         '必要に応じて警音器を鳴らさなければならない（区間内を常時鳴らし続ける必要はない）。',
   ),
 
-  // 47. 追越しのための右側部分はみ出し通行禁止
-  TrafficSign(
-    id: 'sign_no_overtaking_protrusion',
-    name: '追越しのための右側部分はみ出し通行禁止',
-    category: _kRegulatory,
-    shape: SignShape.circle,
-    backgroundColor: SignColors.yellow,
-    symbol: SignSymbol.overtakingProtrusion,
-    symbolColor: SignColors.black,
-    questionText: 'この標識がある場所での追越しについて正しいのはどれか。',
-    choices: [
-      'この先での追越しは全面的に禁止される',
-      '追越しのために道路の右側部分にはみ出して通行することを禁止する（右側部分にはみ出さない追越しは可能）',
-      '対向車がいなければ右側部分にはみ出して追越ししてよい',
-      '二輪車に限り右側部分にはみ出して追越ししてよい'
-    ],
-    answer: 1,
-    explanation:
-        '黄色い円に2台の車と右へはみ出す矢印は「追越しのための右側部分はみ出し通行禁止」。'
-        '追越し自体を禁止するものではなく、追越しのために道路の右側部分にはみ出して通行することを禁止する'
-        '（右側部分にはみ出さずに追越しできる場合は追越し可能）。',
-  ),
 ];
