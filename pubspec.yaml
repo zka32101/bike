@@ -87,6 +87,7 @@ flutter:
   assets:
     - assets/questions/
     - assets/lottie/
+    - assets/guides/
 
 flutter_launcher_icons:
   android: true
