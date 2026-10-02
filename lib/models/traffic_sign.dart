@@ -140,6 +140,27 @@ enum SignSymbol {
 
   /// 並んだ2台の車＋右側へはみ出す矢印（追越しのための右側部分はみ出し通行禁止）
   overtakingProtrusion,
+
+  /// 横から見た貨物自動車（大型貨物自動車等通行止め）
+  truck,
+
+  /// 並んで走る二輪車の運転者2人（並進可）
+  sideBySide,
+
+  /// 軌道（レール）の上の車（軌道敷内通行可）
+  tramTrack,
+
+  /// 上から見た車を線と平行に描く（平行駐車）
+  parkingParallel,
+
+  /// 上から見た車を線と直角に描く（直角駐車）
+  parkingRight,
+
+  /// 上から見た車を斜めに描く（斜め駐車）
+  parkingAngled,
+
+  /// バスと下向き矢印（専用通行帯）
+  busLane,
 }
 
 /// 禁止を表す赤線の種類。
@@ -1435,6 +1456,177 @@ const List<TrafficSign> kTrafficSigns = [
     explanation:
         '白地・赤枠の円に青い矢印と赤い斜めの帯が入った標識は「追越しのための右側部分はみ出し通行禁止」。'
         '追越しのために右側部分へはみ出すことが禁じられる（追越し自体は右側にはみ出さない方法なら可能な場合がある）。',
+  ),
+
+  TrafficSign(
+    id: 'sign_no_large_trucks',
+    name: '大型貨物自動車等通行止め',
+    category: _kRegulatory,
+    shape: SignShape.circle,
+    backgroundColor: SignColors.white,
+    borderColor: SignColors.red,
+    borderWidthRatio: 0.09,
+    symbol: SignSymbol.truck,
+    symbolColor: SignColors.blue,
+    hasDiagonalSlash: true,
+    questionText: 'この標識の意味として正しいのはどれか。',
+    choices: [
+      '貨物自動車専用の道路である',
+      '大型貨物自動車や特定中型貨物自動車などは通行できない',
+      '貨物自動車は駐車してはならない',
+      '貨物自動車は追越しをしてはならない',
+    ],
+    answer: 1,
+    explanation:
+        '白地・赤枠の円に貨物自動車の図柄と赤い斜めの帯が入った標識は「大型貨物自動車等通行止め」。表示された種類の貨物自動車は、この先を通行できない。',
+  ),
+
+  TrafficSign(
+    id: 'sign_side_by_side_ok',
+    name: '並進可',
+    category: _kInstruction,
+    shape: SignShape.square,
+    backgroundColor: SignColors.blue,
+    rimColor: SignColors.white,
+    rimWidthRatio: 0.03,
+    symbol: SignSymbol.sideBySide,
+    symbolColor: SignColors.white,
+    questionText: 'この標識の意味として正しいのはどれか。',
+    choices: [
+      '二輪車などが並んで走ることができる',
+      '二輪車は二人乗りができる',
+      '二輪車は追越しができる',
+      '二輪車の駐車場がある',
+    ],
+    answer: 0,
+    explanation:
+        '青い四角に、二輪車の運転者が横に2人並んだ図柄の標識は「並進可」。軽車両や二輪車などが、並んで進むことができる道路であることを示す。',
+  ),
+
+  TrafficSign(
+    id: 'sign_tram_track_ok',
+    name: '軌道敷内通行可',
+    category: _kInstruction,
+    shape: SignShape.square,
+    backgroundColor: SignColors.blue,
+    rimColor: SignColors.white,
+    rimWidthRatio: 0.03,
+    symbol: SignSymbol.tramTrack,
+    symbolColor: SignColors.white,
+    questionText: 'この標識の意味として正しいのはどれか。',
+    choices: [
+      '路面電車の停留場がある',
+      '踏切がある',
+      '自動車は軌道敷内を通行してはならない',
+      '自動車が軌道敷内を通行できる',
+    ],
+    answer: 3,
+    explanation:
+        '青い四角に、レールの上に乗った車の図柄の標識は「軌道敷内通行可」。自動車が路面電車の軌道敷内を通行できることを示す。',
+  ),
+
+  TrafficSign(
+    id: 'sign_parking_parallel',
+    name: '平行駐車',
+    category: _kInstruction,
+    shape: SignShape.square,
+    backgroundColor: SignColors.blue,
+    rimColor: SignColors.white,
+    rimWidthRatio: 0.03,
+    symbol: SignSymbol.parkingParallel,
+    symbolColor: SignColors.white,
+    centerText: '平行駐車',
+    centerTextColor: SignColors.white,
+    centerTextScale: 0.15,
+    centerTextOffsetY: 0.3,
+    questionText: 'この標識の意味として正しいのはどれか。',
+    choices: [
+      '駐車場の料金所がある',
+      'その場所に長時間駐車してよい',
+      '駐車するときの車の向きを道路と平行（縦向き）にすることを示す',
+      'この先は駐車禁止である',
+    ],
+    answer: 2,
+    explanation:
+        '青い四角に白い線と上から見た車、下に「平行駐車」と書かれた標識は、駐車するときの車の向きを指定する指示標識。この場所では道路と平行（縦向き）に駐車する。',
+  ),
+
+  TrafficSign(
+    id: 'sign_parking_right',
+    name: '直角駐車',
+    category: _kInstruction,
+    shape: SignShape.square,
+    backgroundColor: SignColors.blue,
+    rimColor: SignColors.white,
+    rimWidthRatio: 0.03,
+    symbol: SignSymbol.parkingRight,
+    symbolColor: SignColors.white,
+    centerText: '直角駐車',
+    centerTextColor: SignColors.white,
+    centerTextScale: 0.15,
+    centerTextOffsetY: 0.3,
+    questionText: 'この標識の意味として正しいのはどれか。',
+    choices: [
+      'その場所に長時間駐車してよい',
+      '駐車するときの車の向きを道路と直角（横向き）にすることを示す',
+      'この先は駐車禁止である',
+      '駐車場の料金所がある',
+    ],
+    answer: 1,
+    explanation:
+        '青い四角に白い線と上から見た車、下に「直角駐車」と書かれた標識は、駐車するときの車の向きを指定する指示標識。この場所では道路と直角（横向き）に駐車する。',
+  ),
+
+  TrafficSign(
+    id: 'sign_parking_angled',
+    name: '斜め駐車',
+    category: _kInstruction,
+    shape: SignShape.square,
+    backgroundColor: SignColors.blue,
+    rimColor: SignColors.white,
+    rimWidthRatio: 0.03,
+    symbol: SignSymbol.parkingAngled,
+    symbolColor: SignColors.white,
+    centerText: '斜め駐車',
+    centerTextColor: SignColors.white,
+    centerTextScale: 0.15,
+    centerTextOffsetY: 0.3,
+    questionText: 'この標識の意味として正しいのはどれか。',
+    choices: [
+      '駐車するときの車の向きを道路に対して斜めにすることを示す',
+      'この先は駐車禁止である',
+      '駐車場の料金所がある',
+      'その場所に長時間駐車してよい',
+    ],
+    answer: 0,
+    explanation:
+        '青い四角に白い線と上から見た車、下に「斜め駐車」と書かれた標識は、駐車するときの車の向きを指定する指示標識。この場所では道路に対して斜めに駐車する。',
+  ),
+
+  TrafficSign(
+    id: 'sign_bus_lane',
+    name: '専用通行帯',
+    category: _kRegulatory,
+    shape: SignShape.square,
+    backgroundColor: SignColors.blue,
+    rimColor: SignColors.white,
+    rimWidthRatio: 0.03,
+    symbol: SignSymbol.busLane,
+    symbolColor: SignColors.white,
+    centerText: '専用',
+    centerTextColor: SignColors.white,
+    centerTextScale: 0.15,
+    centerTextOffsetY: 0.04,
+    questionText: 'この標識の意味として正しいのはどれか。',
+    choices: [
+      'バス停留所がある',
+      'バスは追越しをしてはならない',
+      'バスの駐車場がある',
+      '表示された種類の車両のための専用の通行帯である（それ以外の車両は原則通行できない）',
+    ],
+    answer: 3,
+    explanation:
+        '青い四角にバスの図柄、「専用」の文字と下向きの矢印が描かれた標識は「専用通行帯」。表示された種類の車両の通行帯であり、それ以外の車両は原則として通行できない。',
   ),
 
 ];

@@ -107,4 +107,22 @@ void main() {
     expect(ov.symbolColor, SignColors.blue);
     expect(ov.slash, SignSlash.single);
   });
+
+  test('追加した7種が入っている（標識令 別表第二の図に基づく）', () {
+    for (final id in [
+      'sign_no_large_trucks',
+      'sign_side_by_side_ok',
+      'sign_tram_track_ok',
+      'sign_parking_parallel',
+      'sign_parking_right',
+      'sign_parking_angled',
+      'sign_bus_lane',
+    ]) {
+      expect(sign(id).name, isNotEmpty);
+    }
+    expect(sign('sign_no_large_trucks').backgroundColor, SignColors.white);
+    expect(sign('sign_no_large_trucks').symbolColor, SignColors.blue);
+    expect(sign('sign_no_large_trucks').slash, SignSlash.single);
+    expect(sign('sign_parking_right').backgroundColor, SignColors.blue);
+  });
 }
