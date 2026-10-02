@@ -470,11 +470,11 @@
     "choices": [
       "児童乗車は完全禁止",
       "制限がなく乗車可能",
-      "親が同乗すれば可能",
+      "免許取得後の年数などの条件を満たせば二人乗りできる",
       "6歳以上で親の判断で可能"
     ],
-    "answer": 3,
-    "explanation": "大型二輪への児童乗車は6歳以上が条件で、適切なヘルメット着用が必須。",
+    "answer": 2,
+    "explanation": "二人乗りは、同乗者用の座席などがあり、運転者が免許を受けて一定期間を経過していることなどが条件。児童の年齢だけでは決まらない。（根拠: 交通の方法に関する教則 第8章、道路交通法第71条の4）",
     "isTrapQuestion": false,
     "trapNumberType": "none",
     "topicTag": "parking"
@@ -774,7 +774,7 @@
       "登録不要"
     ],
     "answer": 2,
-    "explanation": "大型二輪は陸運局への登録が必須であり、登録証の携行が必要。",
+    "explanation": "大型二輪は陸運局への登録が必須であり、自動車検査証の携行が必要。",
     "isTrapQuestion": false,
     "trapNumberType": "none",
     "topicTag": "license_system"
