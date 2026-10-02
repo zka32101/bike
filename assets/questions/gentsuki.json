@@ -6020,26 +6020,6 @@
     "topicTag": "signs"
   },
   {
-    "id": "g302",
-    "licenseCategory": [
-      "gentsuki"
-    ],
-    "stageTag": "第二段階",
-    "difficulty": 2,
-    "questionText": "円形で青地に赤の斜線の「駐停車禁止」の標識について、正しい説明はどれか。",
-    "choices": [
-      "自転車が道路を横断するための場所であることを示す",
-      "車両の駐車と停車の両方を禁止する",
-      "路面電車の停留所などで、歩行者が安全に待機するための場所であることを示す",
-      "その数字を超える速度での走行を禁止する"
-    ],
-    "answer": 1,
-    "explanation": "「駐停車禁止」は規制標識（円形・青地に赤の斜線）で、車両の駐車と停車の両方を禁止することを意味する。",
-    "isTrapQuestion": false,
-    "trapNumberType": "none",
-    "topicTag": "signs"
-  },
-  {
     "id": "g303",
     "licenseCategory": [
       "gentsuki"
@@ -6075,26 +6055,6 @@
     ],
     "answer": 3,
     "explanation": "「指定方向外進行禁止（直進のみ）」は規制標識（円形・青地に白の矢印）で、矢印で示された方向（直進）以外への進行を禁止することを意味する。",
-    "isTrapQuestion": false,
-    "trapNumberType": "none",
-    "topicTag": "signs"
-  },
-  {
-    "id": "g305",
-    "licenseCategory": [
-      "gentsuki"
-    ],
-    "stageTag": "第一段階",
-    "difficulty": 2,
-    "questionText": "円形で赤地に白のバツ印とバスの絵の「大型乗用自動車等通行止め」の標識について、正しい説明はどれか。",
-    "choices": [
-      "大型乗用自動車（バス等）の通行を禁止する",
-      "路面電車の停留所などで、歩行者が安全に待機するための場所であることを示す",
-      "道路の側端に対して平行に駐車すべきことを示す",
-      "指定された区間で警音器（クラクション）を鳴らさなければならないことを示す"
-    ],
-    "answer": 0,
-    "explanation": "「大型乗用自動車等通行止め」は規制標識（円形・赤地に白のバツ印とバスの絵）で、大型乗用自動車（バス等）の通行を禁止することを意味する。",
     "isTrapQuestion": false,
     "trapNumberType": "none",
     "topicTag": "signs"
@@ -6140,26 +6100,6 @@
     "topicTag": "signs"
   },
   {
-    "id": "g308",
-    "licenseCategory": [
-      "gentsuki"
-    ],
-    "stageTag": "第二段階",
-    "difficulty": 2,
-    "questionText": "円形で青地に赤の斜線と追越しの絵の「追越し禁止」の標識について、正しい説明はどれか。",
-    "choices": [
-      "バスなど特定の車両の専用通行帯であることを示し、それ以外の車両の通行を制限する",
-      "付近に学校・幼稚園・保育所等があり、児童・幼児の飛び出し等に注意すべきことを示す",
-      "路面電車の軌道敷内を車両が通行できることを示す",
-      "他の車両を追い越すために進路変更することを禁止する"
-    ],
-    "answer": 3,
-    "explanation": "「追越し禁止」は規制標識（円形・青地に赤の斜線と追越しの絵）で、他の車両を追い越すために進路変更することを禁止することを意味する。",
-    "isTrapQuestion": false,
-    "trapNumberType": "none",
-    "topicTag": "signs"
-  },
-  {
     "id": "g309",
     "licenseCategory": [
       "gentsuki"
@@ -6195,26 +6135,6 @@
     ],
     "answer": 1,
     "explanation": "「専用通行帯」は規制標識（円形・青地に白の矢印と専用車両の絵）で、バスなど特定の車両の専用通行帯であることを示し、それ以外の車両の通行を制限することを意味する。",
-    "isTrapQuestion": false,
-    "trapNumberType": "none",
-    "topicTag": "signs"
-  },
-  {
-    "id": "g311",
-    "licenseCategory": [
-      "gentsuki"
-    ],
-    "stageTag": "第一段階",
-    "difficulty": 2,
-    "questionText": "長方形で青地に白字とラッパの絵の「警笛区間」の標識について、正しい説明はどれか。",
-    "choices": [
-      "その数字を下回る速度での走行を禁止する（高速道路等に設置）",
-      "路線バス等が優先的に通行する車両通行帯であることを示す",
-      "見通しの悪い区間など、必要に応じて警音器を鳴らすべき区間であることを示す",
-      "道路の側端に対して斜めに駐車すべきことを示す"
-    ],
-    "answer": 2,
-    "explanation": "「警笛区間」は規制標識（長方形・青地に白字とラッパの絵）で、見通しの悪い区間など、必要に応じて警音器を鳴らすべき区間であることを示すことを意味する。",
     "isTrapQuestion": false,
     "trapNumberType": "none",
     "topicTag": "signs"
@@ -6260,26 +6180,6 @@
     "topicTag": "signs"
   },
   {
-    "id": "g314",
-    "licenseCategory": [
-      "gentsuki"
-    ],
-    "stageTag": "第二段階",
-    "difficulty": 2,
-    "questionText": "円形で赤地に白のバツ印とトラックの絵の「大型・特定中型貨物自動車等通行止め」の標識について、正しい説明はどれか。",
-    "choices": [
-      "他の車両を追い越すために進路変更することを禁止する",
-      "大型貨物自動車や特定中型貨物自動車などの通行を禁止する",
-      "バスなど特定の車両の専用通行帯であることを示し、それ以外の車両の通行を制限する",
-      "路面が滑りやすい状態にあることが多く、注意すべきことを示す"
-    ],
-    "answer": 1,
-    "explanation": "「大型・特定中型貨物自動車等通行止め」は規制標識（円形・赤地に白のバツ印とトラックの絵）で、大型貨物自動車や特定中型貨物自動車などの通行を禁止することを意味する。",
-    "isTrapQuestion": false,
-    "trapNumberType": "none",
-    "topicTag": "signs"
-  },
-  {
     "id": "g315",
     "licenseCategory": [
       "gentsuki"
@@ -6315,26 +6215,6 @@
     ],
     "answer": 3,
     "explanation": "「停止線」は指示標識（長方形・青地に白の絵）で、停止すべき位置を示すことを意味する。",
-    "isTrapQuestion": false,
-    "trapNumberType": "none",
-    "topicTag": "signs"
-  },
-  {
-    "id": "g317",
-    "licenseCategory": [
-      "gentsuki"
-    ],
-    "stageTag": "第一段階",
-    "difficulty": 2,
-    "questionText": "円形で黄色地に黒の追越し禁止マークの「追越しのための右側部分はみ出し通行禁止」の標識について、正しい説明はどれか。",
-    "choices": [
-      "追越しのために道路の右側部分にはみ出して通行することを禁止する（右側部分にはみ出さない追越しは可能）",
-      "前方の道路に落石のおそれがあることを予告する",
-      "大型貨物自動車や特定中型貨物自動車などの通行を禁止する",
-      "自転車を除く軽車両（荷車など）の通行を禁止する"
-    ],
-    "answer": 0,
-    "explanation": "「追越しのための右側部分はみ出し通行禁止」は規制標識（円形・黄色地に黒の追越し禁止マーク）で、追越しのために道路の右側部分にはみ出して通行することを禁止する（右側部分にはみ出さない追越しは可能）ことを意味する。",
     "isTrapQuestion": false,
     "trapNumberType": "none",
     "topicTag": "signs"
@@ -6380,26 +6260,6 @@
     "topicTag": "signs"
   },
   {
-    "id": "g320",
-    "licenseCategory": [
-      "gentsuki"
-    ],
-    "stageTag": "第二段階",
-    "difficulty": 2,
-    "questionText": "円形で赤地に白のバツ印の「通行止め」の標識について、正しい説明はどれか。",
-    "choices": [
-      "一方通行路の出口などに設置され、車両がその方向へ進入することを禁止する",
-      "その道路が交差点において優先道路であることを示す",
-      "前方にロータリー（環状交差点）があることを予告する",
-      "歩行者・車両を問わず、すべての通行が禁止されていることを示す"
-    ],
-    "answer": 3,
-    "explanation": "「通行止め」は規制標識（円形・赤地に白のバツ印）で、歩行者・車両を問わず、すべての通行が禁止されていることを示すことを意味する。",
-    "isTrapQuestion": false,
-    "trapNumberType": "none",
-    "topicTag": "signs"
-  },
-  {
     "id": "g321",
     "licenseCategory": [
       "gentsuki"
@@ -6435,26 +6295,6 @@
     ],
     "answer": 1,
     "explanation": "「平行駐車」は指示標識（長方形・青地に白の絵）で、道路の側端に対して平行に駐車すべきことを示すことを意味する。",
-    "isTrapQuestion": false,
-    "trapNumberType": "none",
-    "topicTag": "signs"
-  },
-  {
-    "id": "g323",
-    "licenseCategory": [
-      "gentsuki"
-    ],
-    "stageTag": "第一段階",
-    "difficulty": 2,
-    "questionText": "逆三角形で白地に赤枠、赤字の「一時停止」の標識について、正しい説明はどれか。",
-    "choices": [
-      "付近に学校・幼稚園・保育所等があり、児童・幼児の飛び出し等に注意すべきことを示す",
-      "歩行者・車両を問わず、すべての通行が禁止されていることを示す",
-      "車両が停止線の直前で一時停止しなければならないことを示す",
-      "バスなど特定の車両の専用通行帯であることを示し、それ以外の車両の通行を制限する"
-    ],
-    "answer": 2,
-    "explanation": "「一時停止」は規制標識（逆三角形・白地に赤枠、赤字）で、車両が停止線の直前で一時停止しなければならないことを示すことを意味する。",
     "isTrapQuestion": false,
     "trapNumberType": "none",
     "topicTag": "signs"
@@ -6500,26 +6340,6 @@
     "topicTag": "signs"
   },
   {
-    "id": "g326",
-    "licenseCategory": [
-      "gentsuki"
-    ],
-    "stageTag": "第二段階",
-    "difficulty": 2,
-    "questionText": "三角形で黄色地に黒のラッパの絵の「警笛鳴らせ」の標識について、正しい説明はどれか。",
-    "choices": [
-      "道路の側端に対して斜めに駐車すべきことを示す",
-      "指定された区間で警音器（クラクション）を鳴らさなければならないことを示す",
-      "車両がただちに停止できるような速度まで速度を落として進行しなければならないことを示す",
-      "歩行者が道路を横断するための場所であることを示す"
-    ],
-    "answer": 1,
-    "explanation": "「警笛鳴らせ」は規制標識（三角形・黄色地に黒のラッパの絵）で、指定された区間で警音器（クラクション）を鳴らさなければならないことを示すことを意味する。",
-    "isTrapQuestion": false,
-    "trapNumberType": "none",
-    "topicTag": "signs"
-  },
-  {
     "id": "g327",
     "licenseCategory": [
       "gentsuki"
@@ -6555,26 +6375,6 @@
     ],
     "answer": 3,
     "explanation": "「斜め駐車」は指示標識（長方形・青地に白の絵）で、道路の側端に対して斜めに駐車すべきことを示すことを意味する。",
-    "isTrapQuestion": false,
-    "trapNumberType": "none",
-    "topicTag": "signs"
-  },
-  {
-    "id": "g329",
-    "licenseCategory": [
-      "gentsuki"
-    ],
-    "stageTag": "第一段階",
-    "difficulty": 2,
-    "questionText": "円形で青地に赤の斜線とPマークの「駐車禁止」の標識について、正しい説明はどれか。",
-    "choices": [
-      "車両の駐車を禁止する（短時間の停車は可能）",
-      "車両のUターン（転回）を禁止する",
-      "路面電車の軌道敷内を車両が通行できることを示す",
-      "前方の道路に落石のおそれがあることを予告する"
-    ],
-    "answer": 0,
-    "explanation": "「駐車禁止」は規制標識（円形・青地に赤の斜線とPマーク）で、車両の駐車を禁止する（短時間の停車は可能）ことを意味する。",
     "isTrapQuestion": false,
     "trapNumberType": "none",
     "topicTag": "signs"
@@ -6620,26 +6420,6 @@
     "topicTag": "signs"
   },
   {
-    "id": "g332",
-    "licenseCategory": [
-      "gentsuki"
-    ],
-    "stageTag": "第二段階",
-    "difficulty": 2,
-    "questionText": "円形の中に長方形で黄色地に白枠の「優先道路」の標識について、正しい説明はどれか。",
-    "choices": [
-      "前方に踏切があることを予告し、通過時の注意を促す",
-      "道路の側端に対して直角に駐車すべきことを示す",
-      "その数字を下回る速度での走行を禁止する（高速道路等に設置）",
-      "その道路が交差点において優先道路であることを示す"
-    ],
-    "answer": 3,
-    "explanation": "「優先道路」は指示標識（円形の中に長方形・黄色地に白枠）で、その道路が交差点において優先道路であることを示すことを意味する。",
-    "isTrapQuestion": false,
-    "trapNumberType": "none",
-    "topicTag": "signs"
-  },
-  {
     "id": "g333",
     "licenseCategory": [
       "gentsuki"
@@ -6675,26 +6455,6 @@
     ],
     "answer": 1,
     "explanation": "「ロータリーあり」は警戒標識（菱形・黄色地に黒の環状矢印）で、前方にロータリー（環状交差点）があることを予告することを意味する。",
-    "isTrapQuestion": false,
-    "trapNumberType": "none",
-    "topicTag": "signs"
-  },
-  {
-    "id": "g335",
-    "licenseCategory": [
-      "gentsuki"
-    ],
-    "stageTag": "第一段階",
-    "difficulty": 2,
-    "questionText": "円形で青地に白の矢印（左折方向を除く）の「指定方向外進行禁止（左折禁止）」の標識について、正しい説明はどれか。",
-    "choices": [
-      "原動機付自転車や自転車など特定の車両が通行すべき車両通行帯を指定する",
-      "歩行者・車両を問わず、すべての通行が禁止されていることを示す",
-      "示された方向以外への進行を禁止し、左折を禁止する",
-      "停止すべき位置を示す"
-    ],
-    "answer": 2,
-    "explanation": "「指定方向外進行禁止（左折禁止）」は規制標識（円形・青地に白の矢印（左折方向を除く））で、示された方向以外への進行を禁止し、左折を禁止することを意味する。",
     "isTrapQuestion": false,
     "trapNumberType": "none",
     "topicTag": "signs"
@@ -6740,26 +6500,6 @@
     "topicTag": "signs"
   },
   {
-    "id": "g338",
-    "licenseCategory": [
-      "gentsuki"
-    ],
-    "stageTag": "第二段階",
-    "difficulty": 2,
-    "questionText": "円形で赤地に白のバツ印とバイクの絵の「二輪の自動車・原動機付自転車通行止め」の標識について、正しい説明はどれか。",
-    "choices": [
-      "車両の種類ごとに通行すべき車両通行帯を指定する",
-      "二輪の自動車と原動機付自転車の通行を禁止する",
-      "路面電車の軌道敷内を車両が通行できることを示す",
-      "他の車両を追い越すために進路変更することを禁止する"
-    ],
-    "answer": 1,
-    "explanation": "「二輪の自動車・原動機付自転車通行止め」は規制標識（円形・赤地に白のバツ印とバイクの絵）で、二輪の自動車と原動機付自転車の通行を禁止することを意味する。",
-    "isTrapQuestion": false,
-    "trapNumberType": "none",
-    "topicTag": "signs"
-  },
-  {
     "id": "g339",
     "licenseCategory": [
       "gentsuki"
@@ -6795,26 +6535,6 @@
     ],
     "answer": 3,
     "explanation": "「中央線」は指示標識（長方形・青地に白の絵）で、道路の中央の位置を示す線であることを示すことを意味する。",
-    "isTrapQuestion": false,
-    "trapNumberType": "none",
-    "topicTag": "signs"
-  },
-  {
-    "id": "g341",
-    "licenseCategory": [
-      "gentsuki"
-    ],
-    "stageTag": "第一段階",
-    "difficulty": 2,
-    "questionText": "円形で赤地に白のバツ印と荷車の絵の「自転車以外の軽車両通行止め」の標識について、正しい説明はどれか。",
-    "choices": [
-      "自転車を除く軽車両（荷車など）の通行を禁止する",
-      "指定された区間で警音器（クラクション）を鳴らさなければならないことを示す",
-      "付近に学校・幼稚園・保育所等があり、児童・幼児の飛び出し等に注意すべきことを示す",
-      "歩行者専用の道路であり、車両の通行を禁止する"
-    ],
-    "answer": 0,
-    "explanation": "「自転車以外の軽車両通行止め」は規制標識（円形・赤地に白のバツ印と荷車の絵）で、自転車を除く軽車両（荷車など）の通行を禁止することを意味する。",
     "isTrapQuestion": false,
     "trapNumberType": "none",
     "topicTag": "signs"
@@ -6860,26 +6580,6 @@
     "topicTag": "signs"
   },
   {
-    "id": "g344",
-    "licenseCategory": [
-      "gentsuki"
-    ],
-    "stageTag": "第二段階",
-    "difficulty": 2,
-    "questionText": "円形で青地に赤の斜線とUターン矢印の「転回禁止」の標識について、正しい説明はどれか。",
-    "choices": [
-      "道路の側端に対して平行に駐車すべきことを示す",
-      "歩行者の通行を禁止する",
-      "示された方向以外への進行を禁止し、右折を禁止する",
-      "車両のUターン（転回）を禁止する"
-    ],
-    "answer": 3,
-    "explanation": "「転回禁止」は規制標識（円形・青地に赤の斜線とUターン矢印）で、車両のUターン（転回）を禁止することを意味する。",
-    "isTrapQuestion": false,
-    "trapNumberType": "none",
-    "topicTag": "signs"
-  },
-  {
     "id": "g345",
     "licenseCategory": [
       "gentsuki"
@@ -6920,26 +6620,6 @@
     "topicTag": "signs"
   },
   {
-    "id": "g347",
-    "licenseCategory": [
-      "gentsuki"
-    ],
-    "stageTag": "第一段階",
-    "difficulty": 2,
-    "questionText": "円形で青地に白の矢印とバスの絵の「路線バス等優先通行帯」の標識について、正しい説明はどれか。",
-    "choices": [
-      "車両がただちに停止できるような速度まで速度を落として進行しなければならないことを示す",
-      "追越しのために道路の右側部分にはみ出して通行することを禁止する（右側部分にはみ出さない追越しは可能）",
-      "路線バス等が優先的に通行する車両通行帯であることを示す",
-      "歩行者専用の道路であり、車両の通行を禁止する"
-    ],
-    "answer": 2,
-    "explanation": "「路線バス等優先通行帯」は規制標識（円形・青地に白の矢印とバスの絵）で、路線バス等が優先的に通行する車両通行帯であることを示すことを意味する。",
-    "isTrapQuestion": false,
-    "trapNumberType": "none",
-    "topicTag": "signs"
-  },
-  {
     "id": "g348",
     "licenseCategory": [
       "gentsuki"
@@ -6975,26 +6655,6 @@
     ],
     "answer": 0,
     "explanation": "「車両横断禁止」は規制標識（円形・青地に赤の斜線と矢印）で、車両が道路を横断（右左折を除く進路変更）することを禁止することを意味する。",
-    "isTrapQuestion": false,
-    "trapNumberType": "none",
-    "topicTag": "signs"
-  },
-  {
-    "id": "g350",
-    "licenseCategory": [
-      "gentsuki"
-    ],
-    "stageTag": "第二段階",
-    "difficulty": 2,
-    "questionText": "長方形で青地に白の自転車の絵の「自転車横断帯」の標識について、正しい説明はどれか。",
-    "choices": [
-      "前方の道路が右方向に大きく曲がっていることを予告する",
-      "自転車が道路を横断するための場所であることを示す",
-      "付近に学校・幼稚園・保育所等があり、児童・幼児の飛び出し等に注意すべきことを示す",
-      "路面電車の軌道敷内を車両が通行できることを示す"
-    ],
-    "answer": 1,
-    "explanation": "「自転車横断帯」は指示標識（長方形・青地に白の自転車の絵）で、自転車が道路を横断するための場所であることを示すことを意味する。",
     "isTrapQuestion": false,
     "trapNumberType": "none",
     "topicTag": "signs"

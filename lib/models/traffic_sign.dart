@@ -439,12 +439,14 @@ const List<TrafficSign> kTrafficSigns = [
     id: 'sign_slow',
     name: '徐行',
     category: _kRegulatory,
+    // 白地・赤縁・青字の逆三角形（国土交通省 2017-04-13 報道発表「『徐行』の標識に
+    // 英字『SLOW』を併記します」の図による）。一時停止（赤地・白縁）と取り違えない。
     shape: SignShape.invertedTriangle,
-    backgroundColor: SignColors.red,
-    rimColor: SignColors.white,
-    rimWidthRatio: 0.045,
+    backgroundColor: SignColors.white,
+    borderColor: SignColors.red,
+    borderWidthRatio: 0.085,
     centerText: '徐行',
-    centerTextColor: SignColors.white,
+    centerTextColor: SignColors.blue,
     centerTextScale: 0.2,
     subText: 'SLOW',
     questionText: 'この標識がある場所での正しい運転はどれか。',
