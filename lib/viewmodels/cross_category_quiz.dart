@@ -1,3 +1,4 @@
+import 'package:app_common_kit/app_common_kit.dart';
 import 'dart:async';
 
 import 'package:flutter/foundation.dart';
@@ -201,6 +202,8 @@ abstract class CrossCategoryQuizController
       stage: question.stageTag.isEmpty ? null : question.stageTag,
     );
     final dataService = ref.read(dataServiceProvider);
+    final coin = ref.read(coinProvider.notifier);
+    unawaited(coin.grant(CoinEvent.newQuestion(question.id)));
     _pendingLogWrite = _pendingLogWrite.then((_) async {
       try {
         await dataService.appendAnswerLog(log);

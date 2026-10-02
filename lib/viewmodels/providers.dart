@@ -1,3 +1,4 @@
+import 'dart:async';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:app_common_kit/app_common_kit.dart';
@@ -565,6 +566,7 @@ class DailyQuotaController extends FamilyNotifier<DailyQuotaState, String> {
         answeredAt: now,
       ),
     );
+    unawaited(ref.read(coinProvider.notifier).grant(CoinEvent.newQuestion(question.id)));
 
     // 習熟度（合格予測スコア）は毎回の回答で再計算・保存する。
     // 以前は3問正解のAha Moment時にしか保存しておらず、それ未満で演習を
