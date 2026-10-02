@@ -1388,4 +1388,53 @@ const List<TrafficSign> kTrafficSigns = [
         '必要に応じて警音器を鳴らさなければならない（区間内を常時鳴らし続ける必要はない）。',
   ),
 
+  // 車両通行区分（327）
+  TrafficSign(
+    id: 'sign_vehicle_classification',
+    name: '車両通行区分',
+    category: _kRegulatory,
+    shape: SignShape.wideRect,
+    backgroundColor: SignColors.white,
+    borderColor: SignColors.blue,
+    borderWidthRatio: 0.04,
+    centerText: '軽車両／二輪',
+    centerTextColor: SignColors.blue,
+    centerTextScale: 0.17,
+    questionText: 'この標識の意味として正しいのはどれか。',
+    choices: [
+      '表示された種類の車両が通行すべき通行帯を指定している',
+      '表示された種類の車両は通行できない',
+      '表示された種類の車両の駐車場所を示している',
+      '表示された種類の車両は一時停止しなければならない',
+    ],
+    answer: 0,
+    explanation:
+        '白地に青字で車両の種類が書かれた標識は「車両通行区分」。表示された種類の車両は、指定された通行帯を通行しなければならない。',
+  ),
+
+  // 追越しのための右側部分はみ出し通行禁止（314）
+  TrafficSign(
+    id: 'sign_no_overtaking_protrusion',
+    name: '追越しのための右側部分はみ出し通行禁止',
+    category: _kRegulatory,
+    shape: SignShape.circle,
+    backgroundColor: SignColors.white,
+    borderColor: SignColors.red,
+    borderWidthRatio: 0.09,
+    symbol: SignSymbol.overtakingProtrusion,
+    symbolColor: SignColors.blue,
+    hasDiagonalSlash: true,
+    questionText: 'この標識の意味として正しいのはどれか。',
+    choices: [
+      '追越しのため、道路の右側部分にはみ出して通行してはならない',
+      '追越しそのものが全面的に禁止されている',
+      '右折のため道路の右側に寄ってはならない',
+      '道路の右側部分を通行しなければならない',
+    ],
+    answer: 0,
+    explanation:
+        '白地・赤枠の円に青い矢印と赤い斜めの帯が入った標識は「追越しのための右側部分はみ出し通行禁止」。'
+        '追越しのために右側部分へはみ出すことが禁じられる（追越し自体は右側にはみ出さない方法なら可能な場合がある）。',
+  ),
+
 ];

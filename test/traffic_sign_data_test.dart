@@ -98,9 +98,13 @@ void main() {
     expect(max.symbol, isNot(SignSymbol.speedUnderline));
   });
 
-  test('図が公式と合わない標識は、描き直すまでクイズに入れない', () {
-    final ids = kTrafficSigns.map((s) => s.id).toSet();
-    expect(ids, isNot(contains('sign_lane_designation')));
-    expect(ids, isNot(contains('sign_no_overtaking_protrusion')));
+  test('描き直した2種が入っていて、公式どおりの色・形', () {
+    final lane = sign('sign_vehicle_classification');
+    expect(lane.shape, SignShape.wideRect);
+    expect(lane.backgroundColor, SignColors.white);
+    final ov = sign('sign_no_overtaking_protrusion');
+    expect(ov.backgroundColor, SignColors.white);
+    expect(ov.symbolColor, SignColors.blue);
+    expect(ov.slash, SignSlash.single);
   });
 }
