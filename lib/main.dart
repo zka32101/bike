@@ -16,6 +16,7 @@ import 'services/firebase_analytics_service.dart';
 import 'services/firestore_data_service.dart';
 import 'services/firestore_sync_service.dart';
 import 'services/ad_units.dart';
+import 'services/prefs_key_value_store.dart';
 import 'services/hybrid_data_service.dart';
 import 'services/local_data_service.dart';
 import 'viewmodels/providers.dart';
@@ -88,6 +89,7 @@ void main() async {
 
       entitlementServiceProvider.overrideWithValue(entitlement),
       adGateProvider.overrideWithValue(adGate),
+      keyValueStoreProvider.overrideWithValue(PrefsKeyValueStore(prefs)),
 
       localFallbackUidProvider.overrideWithValue(localFallbackUid),
     ],

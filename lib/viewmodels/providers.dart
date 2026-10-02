@@ -4,6 +4,8 @@ import 'package:app_common_kit/app_common_kit.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:yourwish_kentei/yourwish_kentei.dart'
+    show FreeTierLimits, InMemoryKeyValueStore, KeyValueStore;
 
 import '../core/constants/analytics_events.dart';
 import '../models/analytics_snapshot.dart';
@@ -59,6 +61,21 @@ final adGateServiceProvider = Provider<AdGateService>((ref) => AdGateService());
 /// 広告ゲート（app_common_kit）。main.dart で実体を差し込む。広告を使えない
 /// 環境（iOSの本番ID未発行など）は null。
 final adGateProvider = Provider<AdGate?>((ref) => null);
+
+/// 無料枠の使用回数の保存先。main.dart で SharedPreferences 版を差し込む。
+final keyValueStoreProvider =
+    Provider<KeyValueStore>((ref) => InMemoryKeyValueStore());
+
+/// 無料版の線引き（模擬試験は月1回など。うかラボ共通・暫定値）。
+final freeTierLimitsProvider =
+    Provider<FreeTierLimits>((ref) => FreeTierLimits.standard);
+
+/// プレミアムか。noads のみの人は false（広告が消えるだけで、機能制限は残る）。
+final hasPremiumProvider = Provider<bool>((ref) {
+  final service = ref.watch(entitlementServiceProvider);
+  return ref.watch(entitlementStateProvider).valueOrNull?.hasPremium ??
+      service.state.hasPremium;
+});
 
 final predictionScoreServiceProvider =
     Provider<PredictionScoreService>((ref) => PredictionScoreService());

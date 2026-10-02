@@ -48,10 +48,14 @@ Future<void> _pump(WidgetTester tester, FakeEntitlementService service) async {
 void main() {
   testWidgets('商品と価格をOfferingから表示する', (tester) async {
     await _pump(tester, FakeEntitlementService(availableOffers: _offers));
-    expect(find.text('広告なし'), findsOneWidget);
+    // 「広告なし」は商品名と比較表の見出しの両方に出る。
+    expect(find.text('広告なし'), findsNWidgets(2));
     expect(find.text('¥480'), findsOneWidget);
     expect(find.text('プレミアム 30日'), findsOneWidget);
     expect(find.text('¥600'), findsOneWidget);
+    // 比較表に、実装済みのプレミアム特典が出る。
+    expect(find.textContaining('模擬テストが回数無制限（無料は月1回）'), findsOneWidget);
+    expect(find.textContaining('無料は上位3分野'), findsOneWidget);
     expect(find.textContaining('すべての問題と解説は無料'), findsOneWidget);
   });
 

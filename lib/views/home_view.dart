@@ -15,6 +15,7 @@ import 'exam_date_setting_view.dart';
 import 'mock_exam_view.dart';
 import 'settings_view.dart';
 import 'number_quiz_view.dart';
+import 'paywall_view.dart';
 import 'sign_quiz_view.dart';
 import 'study_mode_view.dart';
 import 'trap_quiz_view.dart';
@@ -384,12 +385,20 @@ class _ExamCountdownCard extends ConsumerWidget {
       _ => Text(l10n.homeQuotaCalculating),
     };
 
+    // 試験日のカウントダウンは無料。試験日までの学習計画（1日の目安）はプレミアム。
+    final isPremium = ref.watch(hasPremiumProvider);
     final daysLeft = examDate!.difference(DateTime.now()).inDays;
     return Card(
       child: ListTile(
         leading: const Icon(Icons.event_available),
         title: Text(l10n.homeExamCountdown(daysLeft)),
-        subtitle: subtitle,
+        subtitle: isPremium ? subtitle : const Text('試験日までの学習計画はプレミアムで見られます'),
+        trailing: isPremium ? null : const Icon(Icons.lock_outline),
+        onTap: isPremium
+            ? null
+            : () => Navigator.of(context).push(
+                  MaterialPageRoute(builder: (_) => const PaywallView()),
+                ),
       ),
     );
   }

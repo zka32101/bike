@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
+import '../core/constants/question_topic.dart';
 import '../models/question.dart';
+import '../viewmodels/mock_exam_breakdown.dart';
 import '../viewmodels/mock_exam_providers.dart';
 import '../viewmodels/providers.dart';
 import 'paywall_view.dart';
@@ -102,6 +104,7 @@ class _MockExamViewState extends ConsumerState<MockExamView> {
         return _IntroView(
           questionCount: state.totalCount,
           timeLimitSeconds: state.remainingSeconds,
+          quotaRemaining: state.quotaRemaining,
           onStart: _controller.start,
         );
       case MockExamPhase.inProgress:
@@ -109,6 +112,7 @@ class _MockExamViewState extends ConsumerState<MockExamView> {
       case MockExamPhase.finished:
         return _MockExamResultView(
           state: state,
+          isPremium: ref.watch(hasPremiumProvider),
           onRetry: _controller.retry,
           onHome: () => Navigator.of(context).pop(),
         );
@@ -171,11 +175,15 @@ class _IntroView extends StatelessWidget {
     required this.questionCount,
     required this.timeLimitSeconds,
     required this.onStart,
+    this.quotaRemaining,
   });
 
   final int questionCount;
   final int timeLimitSeconds;
   final VoidCallback onStart;
+
+  /// 今月の無料枠の残り。プレミアム（無制限）は null で、案内を出さない。
+  final int? quotaRemaining;
 
   @override
   Widget build(BuildContext context) {
@@ -209,6 +217,12 @@ class _IntroView extends StatelessWidget {
                   '選択すると自動で次の問題へ進みます。\n'
                   '時間切れの場合、未回答は不正解になります。',
             ),
+            if (quotaRemaining != null)
+              _RuleRow(
+                icon: Icons.event_repeat,
+                text: '今月の無料枠：あと$quotaRemaining回\n'
+                    '（プレミアムなら回数無制限）',
+              ),
             const SizedBox(height: 32),
             SizedBox(
               width: double.infinity,
@@ -306,11 +320,15 @@ class _ExamQuestionBody extends StatelessWidget {
 class _MockExamResultView extends StatelessWidget {
   const _MockExamResultView({
     required this.state,
+    required this.isPremium,
     required this.onRetry,
     required this.onHome,
   });
 
   final MockExamState state;
+
+  /// プレミアムのときだけ分野別得点と「あと◯点」を表示する。
+  final bool isPremium;
   final VoidCallback onRetry;
   final VoidCallback onHome;
 
@@ -357,6 +375,11 @@ class _MockExamResultView extends StatelessWidget {
           '正答率 $percent%（合格ライン ${(mockExamPassRate * 100).round()}%）',
           textAlign: TextAlign.center,
         ),
+        const SizedBox(height: 16),
+        if (isPremium)
+          _PremiumBreakdown(state: state)
+        else
+          const _PremiumTeaser(),
         const SizedBox(height: 24),
         Row(
           children: [
@@ -510,7 +533,7 @@ class _ChoiceLine extends StatelessWidget {
   }
 }
 
-/// 対象区分にフルアクセスがない場合の入口（原付以外の無料ユーザー向け）。
+/// 無料枠（月1回）を使い切ったときの入口。
 class _LockedView extends StatelessWidget {
   const _LockedView({required this.licenseCategory});
 
@@ -527,8 +550,14 @@ class _LockedView extends StatelessWidget {
             const Icon(Icons.lock_outline, size: 56),
             const SizedBox(height: 16),
             const Text(
-              'この区分の模擬テストはパス購入で解放されます',
+              '今月の無料の模擬テストは使い切りました',
               style: TextStyle(fontWeight: FontWeight.bold),
+              textAlign: TextAlign.center,
+            ),
+            const SizedBox(height: 8),
+            const Text(
+              '来月になるとまた1回受けられます。\n'
+              'プレミアムなら、回数の制限なく何度でも受けられます。',
               textAlign: TextAlign.center,
             ),
             const SizedBox(height: 24),
@@ -538,9 +567,83 @@ class _LockedView extends StatelessWidget {
                   builder: (_) => PaywallView(categoryId: licenseCategory),
                 ),
               ),
-              child: const Text('プランを見る'),
+              child: const Text('プレミアムを見る'),
             ),
           ],
+        ),
+      ),
+    );
+  }
+}
+
+/// プレミアム：分野別得点と「合格まであと◯問」。
+class _PremiumBreakdown extends StatelessWidget {
+  const _PremiumBreakdown({required this.state});
+
+  final MockExamState state;
+
+  @override
+  Widget build(BuildContext context) {
+    final shortBy = shortByOf(state);
+    final scores = topicScoresOf(state);
+    return Card(
+      child: Padding(
+        padding: const EdgeInsets.all(16),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Text(
+              state.passed ? '合格ラインを超えています' : '合格まであと$shortBy問',
+              style: Theme.of(context).textTheme.titleMedium,
+            ),
+            const SizedBox(height: 12),
+            Text('分野別の得点', style: Theme.of(context).textTheme.labelLarge),
+            const SizedBox(height: 8),
+            for (final s in scores)
+              Padding(
+                padding: const EdgeInsets.only(bottom: 8),
+                child: Row(
+                  children: [
+                    Expanded(
+                      flex: 3,
+                      child: Text(QuestionTopic.labelFor(s.topicTag)),
+                    ),
+                    Expanded(
+                      flex: 4,
+                      child: LinearProgressIndicator(value: s.rate),
+                    ),
+                    const SizedBox(width: 8),
+                    SizedBox(
+                      width: 64,
+                      child: Text(
+                        '${s.correct}/${s.total}問',
+                        textAlign: TextAlign.end,
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+          ],
+        ),
+      ),
+    );
+  }
+}
+
+/// 無料：分野別得点と「あと◯問」はプレミアムで見られる。
+class _PremiumTeaser extends StatelessWidget {
+  const _PremiumTeaser();
+
+  @override
+  Widget build(BuildContext context) {
+    return Card(
+      child: ListTile(
+        leading: const Icon(Icons.lock_outline),
+        title: const Text('分野別の得点と「合格まであと◯問」'),
+        subtitle: const Text('プレミアムで見られます'),
+        trailing: const Icon(Icons.chevron_right),
+        onTap: () => Navigator.of(context).push(
+          MaterialPageRoute(builder: (_) => const PaywallView()),
         ),
       ),
     );
