@@ -1,3 +1,4 @@
+import 'package:app_common_kit/app_common_kit.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
@@ -244,13 +245,13 @@ class _QuotaCompletedViewState extends ConsumerState<_QuotaCompletedView> {
   void initState() {
     super.initState();
     // 【広告制御】ノルマ完走後の結果画面でのみインタースティシャルを検討する。
-    // AdGateService.canShowInterstitial が true の場合のみ・無料ユーザーのみ。
+    // AdGateService.canShowInterstitial が true の場合のみ・広告が有効なユーザーのみ。
     WidgetsBinding.instance.addPostFrameCallback((_) => _maybeShowInterstitial());
   }
 
   void _maybeShowInterstitial() {
-    final user = ref.read(userControllerProvider).valueOrNull;
-    if (user == null || user.hasAccessToCategory(widget.licenseCategory)) return;
+    // 広告なし(noads)またはプレミアムなら出さない。
+    if (ref.read(adsHiddenProvider)) return;
 
     final adGate = ref.read(adGateServiceProvider);
     if (!adGate.canShowInterstitial) return;

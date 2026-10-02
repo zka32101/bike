@@ -3,7 +3,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 import '../core/constants/license_category.dart';
-import '../models/user.dart';
 import '../viewmodels/providers.dart';
 import 'exam_date_setting_view.dart';
 import 'exam_info_view.dart';
@@ -113,10 +112,11 @@ class SettingsView extends ConsumerWidget {
           ListTile(
             leading: const Icon(Icons.workspace_premium_outlined),
             title: const Text('プラン'),
-            subtitle: Text(_planLabel(user?.purchaseStatus)),
-            trailing: user?.purchaseStatus == PurchaseStatus.free
-                ? const Icon(Icons.chevron_right)
-                : const Icon(Icons.check_circle, color: Colors.green),
+            subtitle: Text(_planLabel(ref.watch(entitlementStateProvider).valueOrNull ??
+                ref.read(entitlementServiceProvider).state)),
+            trailing: ref.watch(adsHiddenProvider)
+                ? const Icon(Icons.check_circle, color: Colors.green)
+                : const Icon(Icons.chevron_right),
             onTap: () => Navigator.of(context).push(
               MaterialPageRoute(builder: (_) => const PaywallView()),
             ),
@@ -157,16 +157,13 @@ class SettingsView extends ConsumerWidget {
 
   String _formatDate(DateTime date) => '${date.year}/${date.month}/${date.day}';
 
-  String _planLabel(PurchaseStatus? status) {
-    switch (status) {
-      case PurchaseStatus.singleCategoryPass:
-        return '単一区分パス';
-      case PurchaseStatus.allCategorySetPass:
-        return '全区分セットパス';
-      case PurchaseStatus.free:
-      case null:
-        return '無料版';
+  String _planLabel(EntitlementState state) {
+    if (state.hasPremium) {
+      final until = state.premiumExpiresAt;
+      return until == null ? 'プレミアム' : 'プレミアム（${_formatDate(until.toLocal())}まで）';
     }
+    if (state.hasNoAds) return '広告なし';
+    return '無料版';
   }
 
   void _showNotificationPrePrompt(BuildContext context, WidgetRef ref) {

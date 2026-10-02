@@ -1,67 +1,83 @@
+import 'package:app_common_kit/app_common_kit.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 import '../core/constants/analytics_events.dart';
-import '../core/constants/license_category.dart';
 import '../viewmodels/providers.dart';
 
-/// ペイウォール：期間パス（非消費型・買い切り）。サブスクではない。
-/// - 単一区分パス：¥980（合格まで無制限・広告完全非表示）
-/// - 全区分セットパス：¥1,800
+/// 購入できる商品（RevenueCat の現在の Offering）。取得できない場合は空。
+final _offersProvider = FutureProvider.autoDispose<List<EntitlementOffer>>(
+  (ref) => ref.watch(entitlementServiceProvider).offers(),
+);
+
+/// ペイウォール（うかラボ共通のプラン）。
+/// - 広告なし（noads）：買い切り。広告が表示されなくなる
+/// - プレミアム（premium）：30日／90日／買い切り。広告が表示されなくなる
+///
+/// 価格・商品名は RevenueCat の Offering から取得し、コードに埋め込まない。
+/// 全問題・全解説は無料（購入は広告の非表示などのため）。
 class PaywallView extends ConsumerWidget {
   const PaywallView({super.key, this.categoryId});
 
-  /// 単一区分パス購入時に解放する区分。ロック画面からの遷移時はその区分が
-  /// 渡され、その場合はピッカーを出さずそのまま購入する。設定画面からの
-  /// 一般遷移時（null）は、ユーザーが複数区分を選択していれば購入直前に
-  /// どの区分を解放するかを選ばせる。
+  /// 旧パス方式（区分ごとの解放）の名残。現在は全区分が無料のため使用しない。
+  /// ロック画面（到達しない）からの遷移コードが渡すだけで、値は無視する。
   final String? categoryId;
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
+    final offers = ref.watch(_offersProvider);
+    final state = ref.watch(entitlementStateProvider).valueOrNull ??
+        ref.read(entitlementServiceProvider).state;
+
     return Scaffold(
       appBar: AppBar(title: const Text('プランを選ぶ')),
       body: SafeArea(
-        child: Padding(
+        child: ListView(
           padding: const EdgeInsets.all(20),
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.stretch,
-            children: [
-              Text(
-                '広告なしで合格まで学習し放題',
-                style: Theme.of(context).textTheme.titleLarge,
-                textAlign: TextAlign.center,
-              ),
-              const SizedBox(height: 24),
-              _PlanCard(
-                title: '単一区分パス',
-                price: '¥980',
-                description: '選んだ1区分を合格まで無制限・広告完全非表示',
-                onTap: () => _purchase(context, ref, isSet: false),
-              ),
+          children: [
+            Text(
+              '広告なしで学習できます',
+              style: Theme.of(context).textTheme.titleLarge,
+              textAlign: TextAlign.center,
+            ),
+            const SizedBox(height: 8),
+            Text(
+              'すべての問題と解説は無料で使えます。',
+              style: Theme.of(context).textTheme.bodyMedium,
+              textAlign: TextAlign.center,
+            ),
+            if (state.adsHidden) ...[
               const SizedBox(height: 16),
-              _PlanCard(
-                title: '全区分セットパス',
-                price: '¥1,800',
-                description: '複数区分を並行/段階取得する人向け',
-                highlighted: true,
-                onTap: () => _purchase(context, ref, isSet: true),
-              ),
-              const Spacer(),
-              TextButton(
-                onPressed: () async {
-                  final status =
-                      await ref.read(purchaseServiceProvider).restorePurchases();
-                  await ref
-                      .read(userControllerProvider.notifier)
-                      .setPurchaseStatus(status, categoryId: categoryId);
-                  ref.invalidate(dailyQuotaControllerProvider);
-                },
-                child: const Text('購入を復元'),
-              ),
-              const SizedBox(height: 8),
+              _CurrentPlan(state: state),
             ],
-          ),
+            const SizedBox(height: 24),
+            offers.when(
+              loading: () => const Padding(
+                padding: EdgeInsets.symmetric(vertical: 24),
+                child: Center(child: CircularProgressIndicator()),
+              ),
+              error: (_, __) => const _Unavailable(),
+              data: (list) => list.isEmpty
+                  ? const _Unavailable()
+                  : Column(
+                      children: [
+                        for (final offer in list)
+                          Padding(
+                            padding: const EdgeInsets.only(bottom: 12),
+                            child: _PlanCard(
+                              offer: offer,
+                              onTap: () => _purchase(context, ref, offer),
+                            ),
+                          ),
+                      ],
+                    ),
+            ),
+            const SizedBox(height: 8),
+            TextButton(
+              onPressed: () => _restore(context, ref),
+              child: const Text('購入を復元'),
+            ),
+          ],
         ),
       ),
     );
@@ -69,117 +85,119 @@ class PaywallView extends ConsumerWidget {
 
   Future<void> _purchase(
     BuildContext context,
-    WidgetRef ref, {
-    required bool isSet,
-  }) async {
-    String? targetCategoryId = categoryId;
+    WidgetRef ref,
+    EntitlementOffer offer,
+  ) async {
+    final outcome =
+        await ref.read(entitlementServiceProvider).purchaseOffer(offer.id);
 
-    // 単一区分パスかつ対象区分が未確定（ロック画面経由ではない一般遷移）の
-    // 場合は、購入直前にどの区分を解放するか選んでもらう。
-    if (!isSet && targetCategoryId == null) {
-      final user = ref.read(userControllerProvider).valueOrNull;
-      final categories = user?.licenseCategories ?? const <String>[];
-      // 既に解放済みの区分を選んでも購入が無駄になるため、
-      // まだ解放していない区分のみをピッカーの対象にする。
-      final purchasable = categories
-          .where((c) => !(user?.hasAccessToCategory(c) ?? false))
-          .toList();
-      if (purchasable.length > 1) {
-        final picked = await _pickCategory(context, purchasable);
-        if (picked == null) return; // ユーザーがキャンセル
-        targetCategoryId = picked;
-      } else if (purchasable.isNotEmpty) {
-        targetCategoryId = purchasable.first;
-      }
+    if (outcome == PurchaseOutcome.success) {
+      await ref.read(analyticsServiceProvider).logEvent(
+        AnalyticsEvents.paywallConverted,
+        parameters: {'plan': offer.productId},
+      );
     }
+    if (!context.mounted) return;
 
-    final purchaseService = ref.read(purchaseServiceProvider);
-    final status = isSet
-        ? await purchaseService.purchaseAllCategorySetPass()
-        : await purchaseService.purchaseSingleCategoryPass();
-
-    await ref.read(userControllerProvider.notifier).setPurchaseStatus(
-          status,
-          categoryId: targetCategoryId,
+    switch (outcome) {
+      case PurchaseOutcome.success:
+        Navigator.of(context).pop();
+      case PurchaseOutcome.cancelled:
+        break; // ユーザーが自分で閉じたので何も出さない。
+      case PurchaseOutcome.blockedByGate:
+      case PurchaseOutcome.failed:
+        ScaffoldMessenger.of(context).showSnackBar(
+          const SnackBar(content: Text('購入できませんでした。時間をおいてもう一度お試しください')),
         );
-
-    // dailyQuotaControllerProvider は購入前に一度開かれていると
-    // ロック状態のまま state がキャッシュされ続ける（build() が
-    // 一度しか呼ばれないため）。購入直後に全区分分をinvalidateして、
-    // 次に開いたときは必ず最新の購入状態で出題し直させる。
-    ref.invalidate(dailyQuotaControllerProvider);
-
-    await ref.read(analyticsServiceProvider).logEvent(
-      AnalyticsEvents.paywallConverted,
-      parameters: {'plan': isSet ? 'all_category_set' : 'single_category'},
-    );
-
-    if (context.mounted) Navigator.of(context).pop();
+    }
   }
 
-  /// 単一区分パスでどの区分を解放するかを選ばせるダイアログ。
-  Future<String?> _pickCategory(
-    BuildContext context,
-    List<String> categories,
-  ) {
-    return showDialog<String>(
-      context: context,
-      builder: (dialogContext) => SimpleDialog(
-        title: const Text('どの区分を解放しますか？'),
-        children: [
-          for (final id in categories)
-            SimpleDialogOption(
-              onPressed: () => Navigator.of(dialogContext).pop(id),
-              child: Text(LicenseCategory.fromId(id).label),
-            ),
-        ],
+  Future<void> _restore(BuildContext context, WidgetRef ref) async {
+    final state = await ref.read(entitlementServiceProvider).restore();
+    if (!context.mounted) return;
+    ScaffoldMessenger.of(context).showSnackBar(
+      SnackBar(
+        content: Text(
+          state.adsHidden ? '購入を復元しました' : '復元できる購入が見つかりませんでした',
+        ),
+      ),
+    );
+  }
+}
+
+class _CurrentPlan extends StatelessWidget {
+  const _CurrentPlan({required this.state});
+
+  final EntitlementState state;
+
+  @override
+  Widget build(BuildContext context) {
+    final until = state.premiumExpiresAt;
+    final label = state.hasPremium
+        ? (until == null
+            ? 'プレミアムをご利用中です'
+            : 'プレミアムをご利用中です（${until.toLocal().year}/${until.toLocal().month}/${until.toLocal().day}まで）')
+        : '広告なしをご利用中です';
+    return Card(
+      color: Theme.of(context).colorScheme.primaryContainer,
+      child: ListTile(
+        leading: const Icon(Icons.check_circle, color: Colors.green),
+        title: Text(label),
+      ),
+    );
+  }
+}
+
+class _Unavailable extends StatelessWidget {
+  const _Unavailable();
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      padding: const EdgeInsets.all(16),
+      decoration: BoxDecoration(
+        color: Theme.of(context).colorScheme.surfaceContainerHighest,
+        borderRadius: BorderRadius.circular(12),
+      ),
+      child: const Text(
+        '現在プランを取得できません。通信状態を確認して、しばらくしてから再度お試しください。',
+        textAlign: TextAlign.center,
       ),
     );
   }
 }
 
 class _PlanCard extends StatelessWidget {
-  const _PlanCard({
-    required this.title,
-    required this.price,
-    required this.description,
-    required this.onTap,
-    this.highlighted = false,
-  });
+  const _PlanCard({required this.offer, required this.onTap});
 
-  final String title;
-  final String price;
-  final String description;
+  final EntitlementOffer offer;
   final VoidCallback onTap;
-  final bool highlighted;
 
   @override
   Widget build(BuildContext context) {
     return Card(
-      color: highlighted ? Theme.of(context).colorScheme.primaryContainer : null,
       child: InkWell(
         borderRadius: BorderRadius.circular(20),
         onTap: onTap,
         child: Padding(
           padding: const EdgeInsets.all(20),
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-              Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  Text(title, style: Theme.of(context).textTheme.titleMedium),
-                  Text(
-                    price,
-                    style: Theme.of(context)
-                        .textTheme
-                        .titleLarge
-                        ?.copyWith(fontWeight: FontWeight.bold),
-                  ),
-                ],
+              Expanded(
+                child: Text(
+                  offer.title,
+                  style: Theme.of(context).textTheme.titleMedium,
+                ),
               ),
-              const SizedBox(height: 8),
-              Text(description),
+              const SizedBox(width: 12),
+              Text(
+                offer.priceString,
+                style: Theme.of(context)
+                    .textTheme
+                    .titleLarge
+                    ?.copyWith(fontWeight: FontWeight.bold),
+              ),
             ],
           ),
         ),

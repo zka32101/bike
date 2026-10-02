@@ -1,10 +1,10 @@
+import 'package:app_common_kit/app_common_kit.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:google_mobile_ads/google_mobile_ads.dart';
 
 import '../core/constants/license_category.dart';
 import '../l10n/generated/app_localizations.dart';
-import '../models/user.dart';
 import '../services/daily_question_widget_service.dart';
 import '../services/google_mobile_ads_service.dart';
 import '../viewmodels/mock_exam_providers.dart';
@@ -134,13 +134,7 @@ class _HomeViewState extends ConsumerState<HomeView> {
                             LicenseCategory.fromId(primaryCategoryId).label,
                           ),
                         ),
-                        subtitle: Text(
-                          (user?.hasAccessToCategory(primaryCategoryId) ?? false)
-                              ? l10n.homeAnswerQuestionsSubtitle
-                              : primaryCategoryId == LicenseCategory.gentsuki.name
-                                  ? l10n.homeFreePreviewLimit(freeGentsukiPreviewCount)
-                                  : l10n.homeUnlockWithPass,
-                        ),
+                        subtitle: Text(l10n.homeAnswerQuestionsSubtitle),
                         trailing: const Icon(Icons.chevron_right),
                         onTap: () => Navigator.of(context).push(
                           MaterialPageRoute(
@@ -253,13 +247,13 @@ class _HomeViewState extends ConsumerState<HomeView> {
             ),
       ),
       bottomNavigationBar:
-          user?.purchaseStatus == PurchaseStatus.free ? const _HomeBannerAdBar() : null,
+          ref.watch(adsHiddenProvider) ? null : const _HomeBannerAdBar(),
     );
   }
 }
 
-/// 無料ユーザーのホーム画面下部に表示するバナー広告。
-/// パス購入済みユーザーには表示しない（広告なしが購入の価値）。
+/// 広告が有効なユーザーのホーム画面下部に表示するバナー広告。
+/// 広告なし(noads)・プレミアムのユーザーには表示しない。
 class _HomeBannerAdBar extends StatefulWidget {
   const _HomeBannerAdBar();
 

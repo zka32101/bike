@@ -127,26 +127,12 @@ abstract class CrossCategoryQuizController
     final categoryById = <String, String>{};
     final accessible = <Question>[];
     try {
-      final user = ref.read(userControllerProvider).valueOrNull;
       for (final category in LicenseCategory.values) {
         if (_disposed || generation != _loadGeneration) return;
         final id = category.name;
-        final hasAccess = user?.hasAccessToCategory(id) ?? false;
-        List<Question> questions;
-        if (hasAccess) {
-          questions = await ref.read(
-            questionsProvider(QuestionQuery(licenseCategory: id)).future,
-          );
-        } else if (category == LicenseCategory.gentsuki) {
-          // 無料版：原付の先頭固定プレビュー分のみ（DailyQuotaController と同じルール）。
-          final all = await ref.read(
-            questionsProvider(QuestionQuery(licenseCategory: id)).future,
-          );
-          questions = all.take(freeGentsukiPreviewCount).toList();
-        } else {
-          // 無料版：原付以外の区分は購入するまで対象外。
-          continue;
-        }
+        final questions = await ref.read(
+          questionsProvider(QuestionQuery(licenseCategory: id)).future,
+        );
         for (final q in questions) {
           // 複数区分で共通出題される問題は最初に見つかった区分で1回だけ採用。
           if (categoryById.containsKey(q.id)) continue;
