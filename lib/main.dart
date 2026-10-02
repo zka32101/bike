@@ -1,6 +1,10 @@
+import 'dart:async';
 import 'dart:io';
 import 'dart:math';
 
+import 'package:app_common_kit/app_common_kit.dart';
+import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
@@ -83,6 +87,20 @@ void main() async {
       localFallbackUidProvider.overrideWithValue(localFallbackUid),
     ],
   );
+
+  // 共通フィードバック(app_common_kit)の送信処理を注入。
+  // ルールは自分のUIDのみ作成可のため、送信時点のログインUIDで上書きする。
+  // 未ログイン時は例外にして、キュー(端末内)に残す。
+  container.read(feedbackProvider.notifier).setSubmitHandler((report) async {
+    final uid = FirebaseAuth.instance.currentUser?.uid;
+    if (uid == null) throw StateError('not signed in');
+    final sent = report.copyWith(userId: uid);
+    await FirebaseFirestore.instance
+        .collection('feedback')
+        .doc(sent.id)
+        .set(sent.toJson());
+  });
+  unawaited(container.read(feedbackProvider.notifier).retryPendingReports());
 
   final navigatorKey = container.read(navigatorKeyProvider);
   try {

@@ -25,6 +25,15 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "7.7.1"
+  app_common_kit:
+    dependency: "direct main"
+    description:
+      path: "."
+      ref: "v0.1.2"
+      resolved-ref: "25452891e34604e95ee608c8612ce41b206cfba0"
+      url: "https://github.com/zka32101/app_common_kit.git"
+    source: git
+    version: "0.1.2"
   archive:
     dependency: transitive
     description:
