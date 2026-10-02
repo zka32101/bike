@@ -548,16 +548,35 @@ class _SymbolPainter {
     _line(1.05, -0.5, 1.05, 0.5, bar);
   }
 
-  /// 並んだ2台の車＋右側へはみ出す矢印（追越しのための右側部分はみ出し通行禁止）。
+  /// 直進する矢印と、右へ出て戻る蛇行の矢印（追越しのための右側部分はみ出し通行禁止）。
   void _overtakingProtrusion() {
-    _twoCars();
-    final shaft = _stroke(0.08, cap: StrokeCap.butt);
-    _line(0, 0.3, 0.5, 0.3, shaft);
+    final shaft = _stroke(0.15, cap: StrokeCap.butt);
+    _line(-0.5, 0.8, -0.5, -0.3, shaft);
     canvas.drawPath(
       _poly([
-        [0.68, 0.3],
-        [0.42, 0.16],
-        [0.42, 0.44],
+        [-0.5, -0.95],
+        [-0.16, -0.3],
+        [-0.84, -0.3],
+      ]),
+      _fillPaint,
+    );
+    final path = Path();
+    final p0 = p(0.2, 0.8);
+    final p1 = p(0.2, 0.3);
+    final p2 = p(0.7, 0.1);
+    final p3 = p(0.7, -0.3);
+    path
+      ..moveTo(p0.dx, p0.dy)
+      ..lineTo(p1.dx, p1.dy)
+      ..cubicTo(p(0.2, 0.0).dx, p(0.2, 0.0).dy, p(0.7, 0.4).dx, p(0.7, 0.4).dy,
+          p2.dx, p2.dy)
+      ..lineTo(p3.dx, p3.dy);
+    canvas.drawPath(path, shaft);
+    canvas.drawPath(
+      _poly([
+        [0.7, -0.95],
+        [1.04, -0.3],
+        [0.36, -0.3],
       ]),
       _fillPaint,
     );
