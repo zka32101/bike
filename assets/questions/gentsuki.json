@@ -94,10 +94,12 @@
       "着用は任意"
     ],
     "answer": 2,
-    "explanation": "原付のヘルメット着用義務は運転者のみ。原付は二人乗りができない。（根拠: 道路交通法第71条の4第2項、同法施行令第23条）",
+    "explanation": "原付のヘルメット着用義務は運転者のみ。原付は二人乗りができない。",
     "isTrapQuestion": false,
     "trapNumberType": "none",
-    "topicTag": "rules"
+    "topicTag": "rules",
+    "sourceRef": "道路交通法第71条の4第2項、同法施行令第23条",
+    "lawVersion": "2026-10-02"
   },
   {
     "id": "g006",
@@ -174,10 +176,12 @@
       "総排気量100cc以下のもの"
     ],
     "answer": 1,
-    "explanation": "2025年4月から、総排気量125cc以下で最高出力を4.0kW以下に制御した二輪車も原動機付自転車（新基準原付）となり、原付免許で運転できる。（根拠: 道路交通法施行規則第1条の2。二輪の一般原動機付自転車は、総排気量50cc以下、または最高出力4.0kW以下に制御した総排気量125cc以下のもの）",
+    "explanation": "2025年4月から、総排気量125cc以下で最高出力を4.0kW以下に制御した二輪車も原動機付自転車（新基準原付）となり、原付免許で運転できる。二輪の一般原動機付自転車は、総排気量50cc以下、または最高出力4.0kW以下に制御した総排気量125cc以下のもの。",
     "isTrapQuestion": true,
     "trapNumberType": "other",
-    "topicTag": "license_system"
+    "topicTag": "license_system",
+    "sourceRef": "道路交通法施行規則第1条の2",
+    "lawVersion": "2026-10-02"
   },
   {
     "id": "g010",
@@ -194,10 +198,12 @@
       "左に傾きながら高速で曲がる"
     ],
     "answer": 1,
-    "explanation": "左折は、あらかじめ道路の左側端に寄り、左側端に沿って徐行して曲がる。大回りはしない。（根拠: 道路交通法第34条第1項）",
+    "explanation": "左折は、あらかじめ道路の左側端に寄り、左側端に沿って徐行して曲がる。大回りはしない。",
     "isTrapQuestion": false,
     "trapNumberType": "none",
-    "topicTag": "rules"
+    "topicTag": "rules",
+    "sourceRef": "道路交通法第34条第1項",
+    "lawVersion": "2026-10-02"
   },
   {
     "id": "g011",
@@ -254,10 +260,12 @@
       "常に歩道を走行できる"
     ],
     "answer": 1,
-    "explanation": "原付は歩道と車道の区別のある道路では車道を通行しなければならない。（根拠: 道路交通法第17条第1項）",
+    "explanation": "原付は歩道と車道の区別のある道路では車道を通行しなければならない。",
     "isTrapQuestion": false,
     "trapNumberType": "none",
-    "topicTag": "rules"
+    "topicTag": "rules",
+    "sourceRef": "道路交通法第17条第1項",
+    "lawVersion": "2026-10-02"
   },
   {
     "id": "g014",
@@ -374,10 +382,12 @@
       "走行中に片手で持っての通話なら可"
     ],
     "answer": 0,
-    "explanation": "走行中に携帯電話を手で保持して通話したり、画面を注視したりしてはならない。（根拠: 道路交通法第71条第5号の5。停止しているときを除き、携帯電話を手で保持して通話したり、画面を注視したりしてはならない）",
+    "explanation": "走行中に携帯電話を手で保持して通話したり、画面を注視したりしてはならない。停止しているときを除き、携帯電話を手で保持して通話したり、画面を注視したりしてはならない。",
     "isTrapQuestion": false,
     "trapNumberType": "none",
-    "topicTag": "rules"
+    "topicTag": "rules",
+    "sourceRef": "道路交通法第71条第5号の5",
+    "lawVersion": "2026-10-02"
   },
   {
     "id": "g020",
@@ -494,10 +504,12 @@
       "右折表示のみで走行"
     ],
     "answer": 0,
-    "explanation": "右折は、あらかじめ道路の中央に寄り、交差点の中心の直近の内側を徐行して曲がる。（根拠: 道路交通法第34条第2項）",
+    "explanation": "右折は、あらかじめ道路の中央に寄り、交差点の中心の直近の内側を徐行して曲がる。",
     "isTrapQuestion": false,
     "trapNumberType": "none",
-    "topicTag": "rules"
+    "topicTag": "rules",
+    "sourceRef": "道路交通法第34条第2項",
+    "lawVersion": "2026-10-02"
   },
   {
     "id": "g026",
@@ -917,7 +929,9 @@
     "explanation": "原付の右折は、右折表示を出してから対向車の通過を待つ必要があり、急な右折は危険。",
     "isTrapQuestion": true,
     "trapNumberType": "turningRules",
-    "topicTag": "rules"
+    "topicTag": "rules",
+    "sourceRef": "道交法34条2項・37条",
+    "lawVersion": "2026-10-02"
   },
   {
     "id": "g048",
@@ -1014,10 +1028,12 @@
       "2,000円"
     ],
     "answer": 2,
-    "explanation": "原付の積載物の重量制限超過（超過が5割未満）の反則金は15,000円（超過が5割以上10割未満は20,000円、10割以上は25,000円）。（根拠: 道路交通法施行令別表第六）",
+    "explanation": "原付の積載物の重量制限超過（超過が5割未満）の反則金は15,000円（超過が5割以上10割未満は20,000円、10割以上は25,000円）。",
     "isTrapQuestion": true,
     "trapNumberType": "loadLimit",
-    "topicTag": "parking"
+    "topicTag": "parking",
+    "sourceRef": "道路交通法施行令別表第六",
+    "lawVersion": "2026-10-02"
   },
   {
     "id": "g053",
@@ -1297,7 +1313,9 @@
     "explanation": "赤信号での進行は完全に禁止。周囲に車がなくても違反。",
     "isTrapQuestion": true,
     "trapNumberType": "signalAndMarkings",
-    "topicTag": "rules"
+    "topicTag": "rules",
+    "sourceRef": "道交法7条・施行令2条",
+    "lawVersion": "2026-10-02"
   },
   {
     "id": "g069",
@@ -1757,7 +1775,9 @@
     "explanation": "ヘルメットも積載物として扱われ、総積載制限30kgに含まれる。",
     "isTrapQuestion": true,
     "trapNumberType": "loadLimit",
-    "topicTag": "parking"
+    "topicTag": "parking",
+    "sourceRef": "施行令23条2号",
+    "lawVersion": "2026-10-02"
   },
   {
     "id": "g093",
@@ -1834,10 +1854,12 @@
       "有効期間が満了する日の直前の誕生日の1か月前から"
     ],
     "answer": 3,
-    "explanation": "更新期間は、有効期間が満了する日の直前の誕生日の1か月前から、有効期間が満了する日まで（通常は誕生日の1か月後まで）。（根拠: 道路交通法第101条第1項）",
+    "explanation": "更新期間は、有効期間が満了する日の直前の誕生日の1か月前から、有効期間が満了する日まで（通常は誕生日の1か月後まで）。",
     "isTrapQuestion": true,
     "trapNumberType": "licensePeriod",
-    "topicTag": "license_system"
+    "topicTag": "license_system",
+    "sourceRef": "道路交通法第101条第1項",
+    "lawVersion": "2026-10-02"
   },
   {
     "id": "g098",
@@ -2137,7 +2159,9 @@
     "explanation": "右折時の対向車には優先権がある。対向車通過後に右折する。",
     "isTrapQuestion": true,
     "trapNumberType": "turningRules",
-    "topicTag": "rules"
+    "topicTag": "rules",
+    "sourceRef": "道交法37条",
+    "lawVersion": "2026-10-02"
   },
   {
     "id": "g113",
@@ -2194,10 +2218,12 @@
       "走行中にSNSの画面を見るのは可"
     ],
     "answer": 2,
-    "explanation": "走行中に手で保持して通話したり、画面を注視したりしてはならない。（根拠: 道路交通法第71条第5号の5。停止しているときを除き、携帯電話を手で保持して通話したり、画面を注視したりしてはならない）",
+    "explanation": "走行中に手で保持して通話したり、画面を注視したりしてはならない。停止しているときを除き、携帯電話を手で保持して通話したり、画面を注視したりしてはならない。",
     "isTrapQuestion": true,
     "trapNumberType": "other",
-    "topicTag": "rules"
+    "topicTag": "rules",
+    "sourceRef": "道路交通法第71条第5号の5",
+    "lawVersion": "2026-10-02"
   },
   {
     "id": "g116",
@@ -2254,10 +2280,12 @@
       "バイクを移動してから様子を見る"
     ],
     "answer": 0,
-    "explanation": "事故を起こしたら、まず直ちに運転を停止し、負傷者を救護して道路上の危険を防止する。その後、警察に報告する。（根拠: 道路交通法第72条第1項）",
+    "explanation": "事故を起こしたら、まず直ちに運転を停止し、負傷者を救護して道路上の危険を防止する。その後、警察に報告する。",
     "isTrapQuestion": true,
     "trapNumberType": "other",
-    "topicTag": "emergency"
+    "topicTag": "emergency",
+    "sourceRef": "道路交通法第72条第1項",
+    "lawVersion": "2026-10-02"
   },
   {
     "id": "g119",
@@ -2434,10 +2462,12 @@
       "違反ではない"
     ],
     "answer": 2,
-    "explanation": "原付でもヘルメット着用は義務。違反すると違反点数1点が付く（反則金・罰則の定めはない）。（根拠: 道路交通法第71条の4第2項、同法施行令別表第二）",
+    "explanation": "原付でもヘルメット着用は義務。違反すると違反点数1点が付く（反則金・罰則の定めはない）。",
     "isTrapQuestion": true,
     "trapNumberType": "other",
-    "topicTag": "license_system"
+    "topicTag": "license_system",
+    "sourceRef": "道路交通法第71条の4第2項、同法施行令別表第二",
+    "lawVersion": "2026-10-02"
   },
   {
     "id": "g131",
@@ -2737,7 +2767,9 @@
     "explanation": "信号待ちは横断歩道を侵襲しない停止線手前で停止することが規則。",
     "isTrapQuestion": true,
     "trapNumberType": "signalAndMarkings",
-    "topicTag": "signs"
+    "topicTag": "signs",
+    "sourceRef": "施行令第2条 表備考",
+    "lawVersion": "2026-10-02"
   },
   {
     "id": "g146",
@@ -3494,10 +3526,12 @@
       "許可は不要で自由"
     ],
     "answer": 1,
-    "explanation": "道路の中央から右の部分にはみ出して通行できるのは、法令が認める場合（追越し、一方通行、障害物をよけるときなど）に限られる。（根拠: 道路交通法第17条第4項・第5項）",
+    "explanation": "道路の中央から右の部分にはみ出して通行できるのは、法令が認める場合（追越し、一方通行、障害物をよけるときなど）に限られる。",
     "isTrapQuestion": true,
     "trapNumberType": "signalAndMarkings",
-    "topicTag": "rules"
+    "topicTag": "rules",
+    "sourceRef": "道路交通法第17条第4項・第5項",
+    "lawVersion": "2026-10-02"
   },
   {
     "id": "g187",
@@ -3534,10 +3568,12 @@
       "地図アプリの画面なら走行中に注視して可"
     ],
     "answer": 0,
-    "explanation": "走行中に手で保持して通話したり、画面を注視したりしてはならない。（根拠: 道路交通法第71条第5号の5。停止しているときを除き、携帯電話を手で保持して通話したり、画面を注視したりしてはならない）",
+    "explanation": "走行中に手で保持して通話したり、画面を注視したりしてはならない。停止しているときを除き、携帯電話を手で保持して通話したり、画面を注視したりしてはならない。",
     "isTrapQuestion": true,
     "trapNumberType": "hazardRecognition",
-    "topicTag": "rules"
+    "topicTag": "rules",
+    "sourceRef": "道路交通法第71条第5号の5",
+    "lawVersion": "2026-10-02"
   },
   {
     "id": "g189",
@@ -4877,7 +4913,9 @@
     "explanation": "二段階右折は、その旨を示す標識がある交差点や、片側3車線以上ある道路の交差点で必要となる。それ以外の通常の交差点では一般的な右折方法でよい。",
     "isTrapQuestion": true,
     "trapNumberType": "twoStageRightTurn",
-    "topicTag": "rules"
+    "topicTag": "rules",
+    "sourceRef": "道交法34条5項",
+    "lawVersion": "2026-10-02"
   },
   {
     "id": "g256",
@@ -4954,10 +4992,12 @@
       "手に持って通話しながら運転すること（停止中を除く）は禁止されている"
     ],
     "answer": 3,
-    "explanation": "運転中に携帯電話を手に持って通話したり、画面を注視したりする行為は禁止されている。（根拠: 道路交通法第71条第5号の5。停止しているときを除き、携帯電話を手で保持して通話したり、画面を注視したりしてはならない）",
+    "explanation": "運転中に携帯電話を手に持って通話したり、画面を注視したりする行為は禁止されている。停止しているときを除き、携帯電話を手で保持して通話したり、画面を注視したりしてはならない。",
     "isTrapQuestion": false,
     "trapNumberType": "none",
-    "topicTag": "rules"
+    "topicTag": "rules",
+    "sourceRef": "道路交通法第71条第5号の5",
+    "lawVersion": "2026-10-02"
   },
   {
     "id": "g261",
@@ -5234,10 +5274,12 @@
       "坂の頂上付近や曲がり角に駐停車の規制はない"
     ],
     "answer": 1,
-    "explanation": "坂の頂上付近・勾配の急な坂・トンネル、および道路の曲がり角から5m以内は駐停車禁止。（根拠: 道路交通法第44条第1項）",
+    "explanation": "坂の頂上付近・勾配の急な坂・トンネル、および道路の曲がり角から5m以内は駐停車禁止。",
     "isTrapQuestion": true,
     "trapNumberType": "other",
-    "topicTag": "parking"
+    "topicTag": "parking",
+    "sourceRef": "道路交通法第44条第1項",
+    "lawVersion": "2026-10-02"
   },
   {
     "id": "g275",
@@ -5257,7 +5299,9 @@
     "explanation": "歩道に駐車する場合であっても歩行者の通行を妨げないよう配慮し、決められた方法や場所で駐車する必要がある。",
     "isTrapQuestion": false,
     "trapNumberType": "none",
-    "topicTag": "parking"
+    "topicTag": "parking",
+    "sourceRef": "道交法17条1項・48条",
+    "lawVersion": "2026-10-02"
   },
   {
     "id": "g276",
@@ -5277,7 +5321,9 @@
     "explanation": "バスの停留所を表示する標識から10メートル以内の場所は、バスの発着を妨げるため駐車が禁止されている。",
     "isTrapQuestion": true,
     "trapNumberType": "other",
-    "topicTag": "parking"
+    "topicTag": "parking",
+    "sourceRef": "道交法44条1項5号",
+    "lawVersion": "2026-10-02"
   },
   {
     "id": "g277",
@@ -5774,10 +5820,12 @@
       "路面電車の軌道敷内を車両が通行できることを示す"
     ],
     "answer": 0,
-    "explanation": "「最低速度」は規制標識（白地・赤枠・青色の数字）で、その数字に達しない速度で進行してはならないことを示す（法第23条。対象は自動車）。（根拠: 道路標識、区画線及び道路標示に関する命令）",
+    "explanation": "「最低速度」は規制標識（白地・赤枠・青色の数字）で、その数字に達しない速度で進行してはならないことを示す（法第23条。対象は自動車）。",
     "isTrapQuestion": true,
     "trapNumberType": "speedLimit",
-    "topicTag": "signs"
+    "topicTag": "signs",
+    "sourceRef": "道路標識、区画線及び道路標示に関する命令",
+    "lawVersion": "2026-10-02"
   },
   {
     "id": "g303",
@@ -5854,10 +5902,12 @@
       "前方の道路が右方向に大きく曲がっていることを予告する"
     ],
     "answer": 2,
-    "explanation": "「自動車専用」は規制標識で、高速自動車国道または自動車専用道路を示す。通行できるのは自動車のみで、原動機付自転車・軽車両・歩行者は通行できない。（根拠: 標識令 別表第一 325、道路交通法第2条第1項第9号）",
+    "explanation": "「自動車専用」は規制標識で、高速自動車国道または自動車専用道路を示す。通行できるのは自動車のみで、原動機付自転車・軽車両・歩行者は通行できない。",
     "isTrapQuestion": false,
     "trapNumberType": "none",
-    "topicTag": "signs"
+    "topicTag": "signs",
+    "sourceRef": "標識令 別表第一 325、道路交通法第2条第1項第9号",
+    "lawVersion": "2026-10-02"
   },
   {
     "id": "g309",
@@ -5877,7 +5927,9 @@
     "explanation": "「一方通行」は規制標識（長方形・青地に白の矢印）で、車両が矢印で示された方向にのみ進行できることを示すことを意味する。",
     "isTrapQuestion": false,
     "trapNumberType": "none",
-    "topicTag": "signs"
+    "topicTag": "signs",
+    "sourceRef": "標識令 326(規制標識)/規制標識(4)",
+    "lawVersion": "2026-10-02"
   },
   {
     "id": "g310",
@@ -5914,10 +5966,12 @@
       "その場所での駐車が認められていることを示す"
     ],
     "answer": 3,
-    "explanation": "「駐車可」は指示標識（白文字・青地）で、その場所で車両が駐車できることを示す（法第46条・第48条、標識令403）。（根拠: 道路標識、区画線及び道路標示に関する命令）",
+    "explanation": "「駐車可」は指示標識（白文字・青地）で、その場所で車両が駐車できることを示す（法第46条・第48条、標識令403）。",
     "isTrapQuestion": false,
     "trapNumberType": "none",
-    "topicTag": "signs"
+    "topicTag": "signs",
+    "sourceRef": "道路標識、区画線及び道路標示に関する命令",
+    "lawVersion": "2026-10-02"
   },
   {
     "id": "g313",
@@ -5937,7 +5991,9 @@
     "explanation": "「指定方向外進行禁止（右折禁止）」は規制標識（円形・青地に白の矢印（右折方向を除く））で、示された方向以外への進行を禁止し、右折を禁止することを意味する。",
     "isTrapQuestion": false,
     "trapNumberType": "none",
-    "topicTag": "signs"
+    "topicTag": "signs",
+    "sourceRef": "標識令 別表第一 311 指定方向外進行禁止",
+    "lawVersion": "2026-10-02"
   },
   {
     "id": "g315",
@@ -5977,7 +6033,9 @@
     "explanation": "「停止線」は指示標識（長方形・青地に白の絵）で、停止すべき位置を示すことを意味する。",
     "isTrapQuestion": false,
     "trapNumberType": "none",
-    "topicTag": "signs"
+    "topicTag": "signs",
+    "sourceRef": "標識令 別表第一 指示標識 406の2/(1)",
+    "lawVersion": "2026-10-02"
   },
   {
     "id": "g318",
@@ -6017,7 +6075,9 @@
     "explanation": "「軌道敷内通行可」は指示標識（円形・青地に白の絵）で、路面電車の軌道敷内を車両が通行できることを示すことを意味する。",
     "isTrapQuestion": false,
     "trapNumberType": "none",
-    "topicTag": "signs"
+    "topicTag": "signs",
+    "sourceRef": "法第21条第2項第3号; 標識令 402",
+    "lawVersion": "2026-10-02"
   },
   {
     "id": "g321",
@@ -6114,10 +6174,12 @@
       "車両の駐車と停車の両方を禁止する"
     ],
     "answer": 2,
-    "explanation": "「歩行者通行止め」(現行名「歩行者等通行止め」)は規制標識で、歩行者等の通行を禁止する(標識令別表第一331)。白地・赤枠・青の記号で表示される。（根拠: 道路標識、区画線及び道路標示に関する命令）",
+    "explanation": "「歩行者通行止め」(現行名「歩行者等通行止め」)は規制標識で、歩行者等の通行を禁止する(標識令別表第一331)。白地・赤枠・青の記号で表示される。",
     "isTrapQuestion": false,
     "trapNumberType": "none",
-    "topicTag": "signs"
+    "topicTag": "signs",
+    "sourceRef": "道路標識、区画線及び道路標示に関する命令",
+    "lawVersion": "2026-10-02"
   },
   {
     "id": "g328",
@@ -6197,7 +6259,9 @@
     "explanation": "「徐行」は規制標識（逆三角形・白地に赤枠、青字）で、車両がただちに停止できるような速度まで速度を落として進行しなければならないことを示すことを意味する。",
     "isTrapQuestion": false,
     "trapNumberType": "none",
-    "topicTag": "signs"
+    "topicTag": "signs",
+    "sourceRef": "標識令 別表第一 徐行(329-A,B); 別表第二備考3(5); 道交法2条1項20号",
+    "lawVersion": "2026-10-02"
   },
   {
     "id": "g334",
@@ -6297,7 +6361,9 @@
     "explanation": "「中央線」は指示標識（長方形・青地に白の絵）で、道路の中央の位置を示す線であることを示すことを意味する。",
     "isTrapQuestion": false,
     "trapNumberType": "none",
-    "topicTag": "signs"
+    "topicTag": "signs",
+    "sourceRef": "標識令 別表第一 指示標識 406/(1)",
+    "lawVersion": "2026-10-02"
   },
   {
     "id": "g342",
@@ -6317,7 +6383,9 @@
     "explanation": "「並進可」は指示標識（円形・青地に白の絵）で、自転車が2台まで並んで通行できることを示すことを意味する。",
     "isTrapQuestion": false,
     "trapNumberType": "none",
-    "topicTag": "signs"
+    "topicTag": "signs",
+    "sourceRef": "標識令 別表第一 並進可(401); 道交法63条の5",
+    "lawVersion": "2026-10-02"
   },
   {
     "id": "g343",
@@ -6334,10 +6402,12 @@
       "示された方向以外への進行を禁止し、左折を禁止する"
     ],
     "answer": 2,
-    "explanation": "「車両(組合せ)通行止め」は規制標識で、標示板の記号で表示される複数の種類の車両の通行を禁止する(標識令310)。白地・赤枠で表示される。（根拠: 道路標識、区画線及び道路標示に関する命令）",
+    "explanation": "「車両(組合せ)通行止め」は規制標識で、標示板の記号で表示される複数の種類の車両の通行を禁止する(標識令310)。白地・赤枠で表示される。",
     "isTrapQuestion": false,
     "trapNumberType": "none",
-    "topicTag": "signs"
+    "topicTag": "signs",
+    "sourceRef": "道路標識、区画線及び道路標示に関する命令",
+    "lawVersion": "2026-10-02"
   },
   {
     "id": "g345",
@@ -6374,10 +6444,12 @@
       "前方に十字路（交差点）があることを予告し、注意を促す"
     ],
     "answer": 1,
-    "explanation": "「特定の種類の車両の通行区分」は規制標識(標識令327の2、道交法20条2項)で、車両の種類を特定して通行すべき車両通行帯を指定する。青地に白の文字・記号(備考3(3))。（根拠: 道路標識、区画線及び道路標示に関する命令）",
+    "explanation": "「特定の種類の車両の通行区分」は規制標識(標識令327の2、道交法20条2項)で、車両の種類を特定して通行すべき車両通行帯を指定する。青地に白の文字・記号(備考3(3))。",
     "isTrapQuestion": false,
     "trapNumberType": "none",
-    "topicTag": "signs"
+    "topicTag": "signs",
+    "sourceRef": "道路標識、区画線及び道路標示に関する命令",
+    "lawVersion": "2026-10-02"
   },
   {
     "id": "g348",

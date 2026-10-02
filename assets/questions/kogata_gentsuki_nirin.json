@@ -134,10 +134,12 @@
       "運転に支障がなければ認められる"
     ],
     "answer": 2,
-    "explanation": "運転中に携帯電話を手に持って通話したり画面を注視したりする行為は禁止されており、交通の危険を生じさせた場合はより重い処分の対象となる。（根拠: 道路交通法第71条第5号の5。停止しているときを除き、携帯電話を手で保持して通話したり、画面を注視したりしてはならない）",
+    "explanation": "運転中に携帯電話を手に持って通話したり画面を注視したりする行為は禁止されており、交通の危険を生じさせた場合はより重い処分の対象となる。停止しているときを除き、携帯電話を手で保持して通話したり、画面を注視したりしてはならない。",
     "isTrapQuestion": true,
     "trapNumberType": "other",
-    "topicTag": "rules"
+    "topicTag": "rules",
+    "sourceRef": "道路交通法第71条第5号の5",
+    "lawVersion": "2026-10-02"
   },
   {
     "id": "kg008",
@@ -174,10 +176,12 @@
       "幅の広い一方通行路"
     ],
     "answer": 0,
-    "explanation": "車両通行帯のないトンネルの中は追越し禁止。（根拠: 道路交通法第30条第2号）",
+    "explanation": "車両通行帯のないトンネルの中は追越し禁止。",
     "isTrapQuestion": false,
     "trapNumberType": "none",
-    "topicTag": "rules"
+    "topicTag": "rules",
+    "sourceRef": "道路交通法第30条第2号",
+    "lawVersion": "2026-10-02"
   },
   {
     "id": "kg010",
@@ -274,10 +278,12 @@
       "広い駐車帯のある道路"
     ],
     "answer": 1,
-    "explanation": "火災報知機から1m以内は駐車禁止場所。（根拠: 道路交通法第45条第1項第5号）",
+    "explanation": "火災報知機から1m以内は駐車禁止場所。",
     "isTrapQuestion": true,
     "trapNumberType": "other",
-    "topicTag": "rules"
+    "topicTag": "rules",
+    "sourceRef": "道路交通法第45条第1項第5号",
+    "lawVersion": "2026-10-02"
   },
   {
     "id": "kg015",
@@ -1634,10 +1640,12 @@
       "駐車場に指定された空き地"
     ],
     "answer": 1,
-    "explanation": "道路工事区域の側端から5m以内は駐車禁止場所。（根拠: 道路交通法第45条第1項第2号）",
+    "explanation": "道路工事区域の側端から5m以内は駐車禁止場所。",
     "isTrapQuestion": true,
     "trapNumberType": "other",
-    "topicTag": "parking"
+    "topicTag": "parking",
+    "sourceRef": "道路交通法第45条第1項第2号",
+    "lawVersion": "2026-10-02"
   },
   {
     "id": "kg083",
@@ -1797,7 +1805,9 @@
     "explanation": "普通二輪免許を含む多くの免許では、両眼で0.7以上、かつ片眼でそれぞれ0.3以上の視力があることなどの適性基準を満たす必要がある。",
     "isTrapQuestion": true,
     "trapNumberType": "other",
-    "topicTag": "license_system"
+    "topicTag": "license_system",
+    "sourceRef": "規則 第23条 適性試験",
+    "lawVersion": "2026-10-02"
   },
   {
     "id": "kg091",
@@ -2077,7 +2087,9 @@
     "explanation": "AT小型限定免許では、総排気量125cc以下かつオートマチック(クラッチ操作不要)の二輪車しか運転できない。MT車を運転すると免許条件違反になる。",
     "isTrapQuestion": true,
     "trapNumberType": "other",
-    "topicTag": "license_system"
+    "topicTag": "license_system",
+    "sourceRef": "法91条/規則(AT限定)",
+    "lawVersion": "2026-10-02"
   },
   {
     "id": "kg105",
@@ -2177,7 +2189,9 @@
     "explanation": "初回更新者は、違反の有無にかかわらず優良運転者にはならないため、有効期間は3年となる。",
     "isTrapQuestion": true,
     "trapNumberType": "licensePeriod",
-    "topicTag": "license_system"
+    "topicTag": "license_system",
+    "sourceRef": "法92条の2第1項表・備考ニ",
+    "lawVersion": "2026-10-02"
   },
   {
     "id": "kg110",
@@ -2217,7 +2231,9 @@
     "explanation": "大型二輪免許を受けられるのは18歳以上である。小型限定普通二輪免許や普通二輪免許は16歳以上で受けられる。",
     "isTrapQuestion": true,
     "trapNumberType": "other",
-    "topicTag": "license_system"
+    "topicTag": "license_system",
+    "sourceRef": "法88条1項1号",
+    "lawVersion": "2026-10-02"
   },
   {
     "id": "kg112",
@@ -2237,7 +2253,9 @@
     "explanation": "大型二輪免許では排気量にかかわらずすべての自動二輪車を運転でき、普通自動二輪車(小型を含む)、小型特殊自動車、原付も運転できる。",
     "isTrapQuestion": true,
     "trapNumberType": "other",
-    "topicTag": "license_system"
+    "topicTag": "license_system",
+    "sourceRef": "法85条1項表",
+    "lawVersion": "2026-10-02"
   },
   {
     "id": "kg113",
@@ -3617,7 +3635,9 @@
     "explanation": "環状交差点では入るときの合図は不要で、出るときは直前の出口の側方を通過したときに左折の合図を出し、出るまで継続する。",
     "isTrapQuestion": true,
     "trapNumberType": "turningRules",
-    "topicTag": "rules"
+    "topicTag": "rules",
+    "sourceRef": "施行令21条2項",
+    "lawVersion": "2026-10-02"
   },
   {
     "id": "kg182",
@@ -3857,7 +3877,9 @@
     "explanation": "車両通行帯の境界が黄色の線の場合は、進路変更禁止を意味する。緊急自動車に進路を譲る場合などを除き、越えて進路変更してはならない。",
     "isTrapQuestion": false,
     "trapNumberType": "none",
-    "topicTag": "rules"
+    "topicTag": "rules",
+    "sourceRef": "道交法26条の2第3項、標識令別表(102の2)",
+    "lawVersion": "2026-10-02"
   },
   {
     "id": "kg194",
@@ -4074,10 +4096,12 @@
       "停止しているときを除き、手に持って通話したり画面を注視したりしてはならない"
     ],
     "answer": 3,
-    "explanation": "運転中に携帯電話を手に持って通話したり画像を注視したりすることは禁止されているが、この規定は車が停止しているときは除かれている。ただし発進に備え注意を怠らないこと。（根拠: 道路交通法第71条第5号の5。停止しているときを除き、携帯電話を手で保持して通話したり、画面を注視したりしてはならない）",
+    "explanation": "運転中に携帯電話を手に持って通話したり画像を注視したりすることは禁止されているが、この規定は車が停止しているときは除かれている。ただし発進に備え注意を怠らないこと。停止しているときを除き、携帯電話を手で保持して通話したり、画面を注視したりしてはならない。",
     "isTrapQuestion": true,
     "trapNumberType": "other",
-    "topicTag": "rules"
+    "topicTag": "rules",
+    "sourceRef": "道路交通法第71条第5号の5",
+    "lawVersion": "2026-10-02"
   },
   {
     "id": "kg205",
@@ -6014,10 +6038,12 @@
       "自転車が道路を横断するための場所であることを示す"
     ],
     "answer": 0,
-    "explanation": "「転回禁止」は規制標識で、車両の転回(Uターン)を禁止する(標識令313、道交法25条の2第2項)。白地・赤枠・青の記号で表示される。（根拠: 道路標識、区画線及び道路標示に関する命令）",
+    "explanation": "「転回禁止」は規制標識で、車両の転回(Uターン)を禁止する(標識令313、道交法25条の2第2項)。白地・赤枠・青の記号で表示される。",
     "isTrapQuestion": false,
     "trapNumberType": "none",
-    "topicTag": "signs"
+    "topicTag": "signs",
+    "sourceRef": "道路標識、区画線及び道路標示に関する命令",
+    "lawVersion": "2026-10-02"
   },
   {
     "id": "kg303",
@@ -6097,7 +6123,9 @@
     "explanation": "「停止線」は指示標識（長方形・青地に白の絵）で、停止すべき位置を示すことを意味する。",
     "isTrapQuestion": false,
     "trapNumberType": "none",
-    "topicTag": "signs"
+    "topicTag": "signs",
+    "sourceRef": "標識令 別表第一 停止線(406の2); 別表第二備考4(1)",
+    "lawVersion": "2026-10-02"
   },
   {
     "id": "kg309",
@@ -6154,10 +6182,12 @@
       "原動機付自転車や自転車など特定の車両が通行すべき車両通行帯を指定する"
     ],
     "answer": 3,
-    "explanation": "「特定の種類の車両の通行区分」は規制標識(標識令327の2)で、車両の種類を特定して通行すべき車両通行帯を指定する。青地に白の文字・記号(備考3(3))。（根拠: 道路標識、区画線及び道路標示に関する命令）",
+    "explanation": "「特定の種類の車両の通行区分」は規制標識(標識令327の2)で、車両の種類を特定して通行すべき車両通行帯を指定する。青地に白の文字・記号(備考3(3))。",
     "isTrapQuestion": true,
     "trapNumberType": "signalAndMarkings",
-    "topicTag": "signs"
+    "topicTag": "signs",
+    "sourceRef": "道路標識、区画線及び道路標示に関する命令",
+    "lawVersion": "2026-10-02"
   },
   {
     "id": "kg313",
@@ -6177,7 +6207,9 @@
     "explanation": "「駐車禁止」は規制標識（円形・青地に赤の斜線とPマーク）で、車両の駐車を禁止する（短時間の停車は可能）ことを意味する。",
     "isTrapQuestion": true,
     "trapNumberType": "signalAndMarkings",
-    "topicTag": "signs"
+    "topicTag": "signs",
+    "sourceRef": "標識令 別表第一 駐車禁止(316); 別表第二備考3(3); 道交法45条1項",
+    "lawVersion": "2026-10-02"
   },
   {
     "id": "kg315",
@@ -6194,10 +6226,12 @@
       "その数字を超える速度での走行を禁止する"
     ],
     "answer": 2,
-    "explanation": "「車両通行区分」は規制標識(標識令327、道交法20条2項)で、車両通行帯のある道路で、法定の通行区分と異なる通行の区分を指定する。白地に青の文字・縁線で表示される。（根拠: 道路標識、区画線及び道路標示に関する命令）",
+    "explanation": "「車両通行区分」は規制標識(標識令327、道交法20条2項)で、車両通行帯のある道路で、法定の通行区分と異なる通行の区分を指定する。白地に青の文字・縁線で表示される。",
     "isTrapQuestion": true,
     "trapNumberType": "signalAndMarkings",
-    "topicTag": "signs"
+    "topicTag": "signs",
+    "sourceRef": "道路標識、区画線及び道路標示に関する命令",
+    "lawVersion": "2026-10-02"
   },
   {
     "id": "kg316",
@@ -6234,10 +6268,12 @@
       "歩行者専用の道路であり、車両の通行を禁止する"
     ],
     "answer": 1,
-    "explanation": "「自動車専用」は規制標識で、高速自動車国道または自動車専用道路を示す。通行できるのは自動車のみで、原動機付自転車・軽車両・歩行者は通行できない。（根拠: 標識令 別表第一 325、道路交通法第2条第1項第9号）",
+    "explanation": "「自動車専用」は規制標識で、高速自動車国道または自動車専用道路を示す。通行できるのは自動車のみで、原動機付自転車・軽車両・歩行者は通行できない。",
     "isTrapQuestion": true,
     "trapNumberType": "signalAndMarkings",
-    "topicTag": "signs"
+    "topicTag": "signs",
+    "sourceRef": "標識令 別表第一 325、道路交通法第2条第1項第9号",
+    "lawVersion": "2026-10-02"
   },
   {
     "id": "kg319",
@@ -6334,10 +6370,12 @@
       "車両の駐車と停車の両方を禁止する"
     ],
     "answer": 0,
-    "explanation": "「車両横断禁止」は規制標識で、道路外の施設・場所に出入りするための車両の横断（左折を除く）を禁止する。（根拠: 道路交通法第25条の2、標識令 別表第一 312）",
+    "explanation": "「車両横断禁止」は規制標識で、道路外の施設・場所に出入りするための車両の横断（左折を除く）を禁止する。",
     "isTrapQuestion": false,
     "trapNumberType": "none",
-    "topicTag": "signs"
+    "topicTag": "signs",
+    "sourceRef": "道路交通法第25条の2、標識令 別表第一 312",
+    "lawVersion": "2026-10-02"
   },
   {
     "id": "kg327",
@@ -6354,10 +6392,12 @@
       "矢印で示された方向（直進）以外への進行を禁止する"
     ],
     "answer": 2,
-    "explanation": "「歩行者通行止め」(現行名「歩行者等通行止め」)は規制標識で、歩行者等の通行を禁止する(標識令331)。白地・赤枠で表示される。（根拠: 道路標識、区画線及び道路標示に関する命令）",
+    "explanation": "「歩行者通行止め」(現行名「歩行者等通行止め」)は規制標識で、歩行者等の通行を禁止する(標識令331)。白地・赤枠で表示される。",
     "isTrapQuestion": true,
     "trapNumberType": "signalAndMarkings",
-    "topicTag": "signs"
+    "topicTag": "signs",
+    "sourceRef": "道路標識、区画線及び道路標示に関する命令",
+    "lawVersion": "2026-10-02"
   },
   {
     "id": "kg328",
@@ -6394,10 +6434,12 @@
       "道路の中央の位置を示す線であることを示す"
     ],
     "answer": 1,
-    "explanation": "「警笛区間」は規制標識。区間内の左右の見通しのきかない交差点・曲がり角・上り坂の頂上を通行するときは、警音器を鳴らさなければならない。（根拠: 道路交通法第54条第1項第2号、標識令 別表第一 328の2）",
+    "explanation": "「警笛区間」は規制標識。区間内の左右の見通しのきかない交差点・曲がり角・上り坂の頂上を通行するときは、警音器を鳴らさなければならない。",
     "isTrapQuestion": true,
     "trapNumberType": "signalAndMarkings",
-    "topicTag": "signs"
+    "topicTag": "signs",
+    "sourceRef": "道路交通法第54条第1項第2号、標識令 別表第一 328の2",
+    "lawVersion": "2026-10-02"
   },
   {
     "id": "kg331",
@@ -6417,7 +6459,9 @@
     "explanation": "「歩行者専用」は規制標識（円形・青地に白の歩行者の絵）で、歩行者専用の道路であり、車両の通行を禁止することを意味する。",
     "isTrapQuestion": false,
     "trapNumberType": "none",
-    "topicTag": "signs"
+    "topicTag": "signs",
+    "sourceRef": "標識令 別表第一 歩行者等専用(325の4); 別表第二備考3(3)",
+    "lawVersion": "2026-10-02"
   },
   {
     "id": "kg333",
@@ -6434,10 +6478,12 @@
       "自転車が道路を横断するための場所であることを示す"
     ],
     "answer": 0,
-    "explanation": "「優先道路」は指示標識(標識令405、道交法36条2項)で、その道路が優先道路として指定されていることを示す。（根拠: 道路標識、区画線及び道路標示に関する命令）",
+    "explanation": "「優先道路」は指示標識(標識令405、道交法36条2項)で、その道路が優先道路として指定されていることを示す。",
     "isTrapQuestion": false,
     "trapNumberType": "none",
-    "topicTag": "signs"
+    "topicTag": "signs",
+    "sourceRef": "道路標識、区画線及び道路標示に関する命令",
+    "lawVersion": "2026-10-02"
   },
   {
     "id": "kg334",
@@ -6597,7 +6643,9 @@
     "explanation": "「中央線」は指示標識（長方形・青地に白の絵）で、道路の中央の位置を示す線であることを示すことを意味する。",
     "isTrapQuestion": false,
     "trapNumberType": "none",
-    "topicTag": "signs"
+    "topicTag": "signs",
+    "sourceRef": "標識令 別表第一 中央線(406); 別表第二備考4(1)",
+    "lawVersion": "2026-10-02"
   },
   {
     "id": "kg346",

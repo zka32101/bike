@@ -94,10 +94,12 @@
       "排気量250cc以下なら運転できる"
     ],
     "answer": 0,
-    "explanation": "普通自動車免許で運転できる二輪車は原動機付自転車までで、それを超える二輪車には二輪免許が必要。（根拠: 道路交通法第85条）",
+    "explanation": "普通自動車免許で運転できる二輪車は原動機付自転車までで、それを超える二輪車には二輪免許が必要。",
     "isTrapQuestion": false,
     "trapNumberType": "none",
-    "topicTag": "license_system"
+    "topicTag": "license_system",
+    "sourceRef": "道路交通法第85条",
+    "lawVersion": "2026-10-02"
   },
   {
     "id": "at006",
@@ -194,10 +196,12 @@
       "年齢が20歳以上であれば免許取得直後でも可能"
     ],
     "answer": 1,
-    "explanation": "普通二輪免許（AT限定含む）で二人乗りをするには、免許取得後1年以上の運転経験を積む必要がある。（根拠: 道路交通法第71条の4第6・7項、同法施行令第26条の3の3。一般道路での二人乗りは、大型・普通二輪とも免許を受けていた期間が通算1年以上必要。高速自動車国道・自動車専用道路では、さらに20歳以上かつ通算3年以上が必要＝同条第4・5項）",
+    "explanation": "普通二輪免許（AT限定含む）で二人乗りをするには、免許取得後1年以上の運転経験を積む必要がある。一般道路での二人乗りは、大型・普通二輪とも免許を受けていた期間が通算1年以上必要。高速自動車国道・自動車専用道路では、さらに20歳以上かつ通算3年以上が必要＝同条第4・5項。",
     "isTrapQuestion": true,
     "trapNumberType": "twoPersonRiding",
-    "topicTag": "rules"
+    "topicTag": "rules",
+    "sourceRef": "道路交通法第71条の4第6・7項、同法施行令第26条の3の3",
+    "lawVersion": "2026-10-02"
   },
   {
     "id": "at011",
@@ -214,10 +218,12 @@
       "2年以上"
     ],
     "answer": 2,
-    "explanation": "高速道路での二人乗りは、一般道路より厳しく、運転経験3年以上であることが必要とされている。（根拠: 道路交通法第71条の4第6・7項、同法施行令第26条の3の3。一般道路での二人乗りは、大型・普通二輪とも免許を受けていた期間が通算1年以上必要。高速自動車国道・自動車専用道路では、さらに20歳以上かつ通算3年以上が必要＝同条第4・5項）",
+    "explanation": "高速道路での二人乗りは、一般道路より厳しく、運転経験3年以上であることが必要とされている。一般道路での二人乗りは、大型・普通二輪とも免許を受けていた期間が通算1年以上必要。高速自動車国道・自動車専用道路では、さらに20歳以上かつ通算3年以上が必要＝同条第4・5項。",
     "isTrapQuestion": true,
     "trapNumberType": "twoPersonRiding",
-    "topicTag": "rules"
+    "topicTag": "rules",
+    "sourceRef": "道路交通法第71条の4第6・7項、同法施行令第26条の3の3",
+    "lawVersion": "2026-10-02"
   },
   {
     "id": "at012",
@@ -374,10 +380,12 @@
       "商店街のアーケード内"
     ],
     "answer": 2,
-    "explanation": "消火栓から5m以内は駐車禁止場所。停車は禁止されない。（根拠: 道路交通法第45条第1項第4号）",
+    "explanation": "消火栓から5m以内は駐車禁止場所。停車は禁止されない。",
     "isTrapQuestion": true,
     "trapNumberType": "other",
-    "topicTag": "rules"
+    "topicTag": "rules",
+    "sourceRef": "道路交通法第45条第1項第4号",
+    "lawVersion": "2026-10-02"
   },
   {
     "id": "at020",
@@ -1697,7 +1705,9 @@
     "explanation": "駐車とは、車両が継続的に停止し、運転者がすぐに運転できない状態（車両を離れている等）にあることをいう。",
     "isTrapQuestion": true,
     "trapNumberType": "other",
-    "topicTag": "parking"
+    "topicTag": "parking",
+    "sourceRef": "道交法2条1項18号",
+    "lawVersion": "2026-10-02"
   },
   {
     "id": "at086",
@@ -1874,10 +1884,12 @@
       "車庫前の駐車禁止は自動車のみに適用される"
     ],
     "answer": 1,
-    "explanation": "自動車用の出入口から3m以内は駐車禁止場所で、他車の出入りを妨げる駐車は違反となる。（根拠: 道路交通法第45条第1項第1号）",
+    "explanation": "自動車用の出入口から3m以内は駐車禁止場所で、他車の出入りを妨げる駐車は違反となる。",
     "isTrapQuestion": false,
     "trapNumberType": "none",
-    "topicTag": "parking"
+    "topicTag": "parking",
+    "sourceRef": "道路交通法第45条第1項第1号",
+    "lawVersion": "2026-10-02"
   },
   {
     "id": "at095",
@@ -1977,7 +1989,9 @@
     "explanation": "「二輪車二人乗り通行禁止」の標識がある区間では、AT限定を含むすべての二輪車が二人乗りで通行することを禁止される。",
     "isTrapQuestion": true,
     "trapNumberType": "twoPersonRiding",
-    "topicTag": "signs"
+    "topicTag": "signs",
+    "sourceRef": "法第8条第1項; 標識令 310の2",
+    "lawVersion": "2026-10-02"
   },
   {
     "id": "at100",
@@ -2017,7 +2031,9 @@
     "explanation": "小型限定普通二輪免許は総排気量125cc以下の二輪車が対象で、AT限定の場合はそのうちAT車に限られる。",
     "isTrapQuestion": true,
     "trapNumberType": "other",
-    "topicTag": "license_system"
+    "topicTag": "license_system",
+    "sourceRef": "規則 第18条付近(小型二輪車)",
+    "lawVersion": "2026-10-02"
   },
   {
     "id": "at102",
@@ -2214,10 +2230,12 @@
       "誕生日の前後1週間だけ"
     ],
     "answer": 2,
-    "explanation": "免許の更新は、更新年の誕生日の1か月前から1か月後までの期間に行う。（根拠: 道路交通法第101条第1項）",
+    "explanation": "免許の更新は、更新年の誕生日の1か月前から1か月後までの期間に行う。",
     "isTrapQuestion": true,
     "trapNumberType": "licensePeriod",
-    "topicTag": "license_system"
+    "topicTag": "license_system",
+    "sourceRef": "道路交通法第101条第1項",
+    "lawVersion": "2026-10-02"
   },
   {
     "id": "at112",
@@ -2354,10 +2372,12 @@
       "徐行すれば通行できる"
     ],
     "answer": 1,
-    "explanation": "この標識は、二輪の自動車（大型・普通自動二輪車）と一般原動機付自転車の通行を禁止する。AT車かMT車かは区別されないので、AT限定免許で乗る250ccのスクーターも通行できない。（根拠: 道路標識、区画線及び道路標示に関する命令 別表第一）",
+    "explanation": "この標識は、二輪の自動車（大型・普通自動二輪車）と一般原動機付自転車の通行を禁止する。AT車かMT車かは区別されないので、AT限定免許で乗る250ccのスクーターも通行できない。",
     "isTrapQuestion": true,
     "trapNumberType": "signalAndMarkings",
-    "topicTag": "signs"
+    "topicTag": "signs",
+    "sourceRef": "道路標識、区画線及び道路標示に関する命令 別表第一",
+    "lawVersion": "2026-10-02"
   },
   {
     "id": "at119",
@@ -6017,7 +6037,9 @@
     "explanation": "「徐行」は規制標識（逆三角形・白地に赤枠、青字）で、車両がただちに停止できるような速度まで速度を落として進行しなければならないことを示すことを意味する。",
     "isTrapQuestion": false,
     "trapNumberType": "none",
-    "topicTag": "signs"
+    "topicTag": "signs",
+    "sourceRef": "標識令 別表第一 規制標識(7); 法第2条第1項20号",
+    "lawVersion": "2026-10-02"
   },
   {
     "id": "at303",
@@ -6197,7 +6219,9 @@
     "explanation": "「指定方向外進行禁止（左折禁止）」は規制標識（円形・青地に白の矢印（左折方向を除く））で、示された方向以外への進行を禁止し、左折を禁止することを意味する。",
     "isTrapQuestion": false,
     "trapNumberType": "none",
-    "topicTag": "signs"
+    "topicTag": "signs",
+    "sourceRef": "標識令 別表第一 311 指定方向外進行禁止",
+    "lawVersion": "2026-10-02"
   },
   {
     "id": "at316",
@@ -6234,10 +6258,12 @@
       "前方にT字路があることを予告し、注意を促す"
     ],
     "answer": 1,
-    "explanation": "「自動車専用」は規制標識で、高速自動車国道または自動車専用道路を示す。通行できるのは自動車のみで、原動機付自転車・軽車両・歩行者は通行できない。（根拠: 標識令 別表第一 325、道路交通法第2条第1項第9号）",
+    "explanation": "「自動車専用」は規制標識で、高速自動車国道または自動車専用道路を示す。通行できるのは自動車のみで、原動機付自転車・軽車両・歩行者は通行できない。",
     "isTrapQuestion": false,
     "trapNumberType": "none",
-    "topicTag": "signs"
+    "topicTag": "signs",
+    "sourceRef": "標識令 別表第一 325、道路交通法第2条第1項第9号",
+    "lawVersion": "2026-10-02"
   },
   {
     "id": "at319",
@@ -6294,10 +6320,12 @@
       "車両が矢印で示された方向にのみ進行できることを示す"
     ],
     "answer": 1,
-    "explanation": "「車両横断禁止」は規制標識で、道路外の施設・場所に出入りするための車両の横断（左折を除く）を禁止する。（根拠: 道路交通法第25条の2、標識令 別表第一 312）",
+    "explanation": "「車両横断禁止」は規制標識で、道路外の施設・場所に出入りするための車両の横断（左折を除く）を禁止する。",
     "isTrapQuestion": false,
     "trapNumberType": "none",
-    "topicTag": "signs"
+    "topicTag": "signs",
+    "sourceRef": "道路交通法第25条の2、標識令 別表第一 312",
+    "lawVersion": "2026-10-02"
   },
   {
     "id": "at324",
@@ -6337,7 +6365,9 @@
     "explanation": "「指定方向外進行禁止（右折禁止）」は規制標識（円形・青地に白の矢印（右折方向を除く））で、示された方向以外への進行を禁止し、右折を禁止することを意味する。",
     "isTrapQuestion": false,
     "trapNumberType": "none",
-    "topicTag": "signs"
+    "topicTag": "signs",
+    "sourceRef": "標識令 別表第一 311 指定方向外進行禁止",
+    "lawVersion": "2026-10-02"
   },
   {
     "id": "at327",
@@ -6394,10 +6424,12 @@
       "示された方向以外への進行を禁止し、右折を禁止する"
     ],
     "answer": 1,
-    "explanation": "「転回禁止」は規制標識（白地・赤枠・青色の記号）で、車両の転回（Uターン）を禁止する（標識令313）。（根拠: 道路標識、区画線及び道路標示に関する命令）",
+    "explanation": "「転回禁止」は規制標識（白地・赤枠・青色の記号）で、車両の転回（Uターン）を禁止する（標識令313）。",
     "isTrapQuestion": false,
     "trapNumberType": "none",
-    "topicTag": "signs"
+    "topicTag": "signs",
+    "sourceRef": "道路標識、区画線及び道路標示に関する命令",
+    "lawVersion": "2026-10-02"
   },
   {
     "id": "at331",
@@ -6634,10 +6666,12 @@
       "他の車両を追い越すために進路変更することを禁止する"
     ],
     "answer": 3,
-    "explanation": "「追越し禁止」は規制標識（白地・赤枠・青色の記号）で、車両の追越しを禁止する（法第30条、標識令314の2）。（根拠: 道路標識、区画線及び道路標示に関する命令）",
+    "explanation": "「追越し禁止」は規制標識（白地・赤枠・青色の記号）で、車両の追越しを禁止する（法第30条、標識令314の2）。",
     "isTrapQuestion": false,
     "trapNumberType": "none",
-    "topicTag": "signs"
+    "topicTag": "signs",
+    "sourceRef": "道路標識、区画線及び道路標示に関する命令",
+    "lawVersion": "2026-10-02"
   },
   {
     "id": "at349",

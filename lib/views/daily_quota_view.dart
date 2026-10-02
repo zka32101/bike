@@ -134,7 +134,7 @@ class _QuestionResultLayer extends StatelessWidget {
     return AnswerResultOverlay(
       questionId: question.id,
       isCorrect: state.lastResult == AnswerResult.correct,
-      explanation: question.explanation,
+      explanation: question.displayExplanation,
       onNext: controller.advanceToNextQuestion,
     );
   }

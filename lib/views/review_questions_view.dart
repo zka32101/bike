@@ -131,7 +131,7 @@ class _ReviewQuestionCard extends ConsumerWidget {
           Align(
             alignment: Alignment.centerLeft,
             child: Text(
-              question.explanation,
+              question.displayExplanation,
               style: Theme.of(context).textTheme.bodyMedium,
             ),
           ),

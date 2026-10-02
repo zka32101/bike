@@ -80,8 +80,8 @@ class CrossCategoryQuizScaffold extends ConsumerWidget {
   static String _feedbackText(CrossCategoryQuizState state) {
     final q = state.currentQuestion!;
     final correct = '正解: ${q.choices[q.answer]}';
-    if (state.isCurrentCorrect) return q.explanation;
-    return q.explanation.isEmpty ? correct : '$correct\n\n${q.explanation}';
+    if (state.isCurrentCorrect) return q.displayExplanation;
+    return q.explanation.isEmpty ? correct : '$correct\n\n${q.displayExplanation}';
   }
 }
 
