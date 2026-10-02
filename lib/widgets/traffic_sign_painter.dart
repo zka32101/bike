@@ -134,7 +134,22 @@ class TrafficSignPainter extends CustomPainter {
         ], s * 0.04);
       case SignShape.invertedTriangle:
         return _roundedPolygon(_triangleVertices(s, inset), s * 0.05);
+      case SignShape.pentagon:
+        return _roundedPolygon(_pentagonVertices(s, inset), s * 0.04);
     }
+  }
+
+  /// 家型の五角形（頂点が上）。外形を中心へ向けて縮めて内側の輪郭にする。
+  List<Offset> _pentagonVertices(double s, double inset) {
+    final c = Offset(s / 2, s * 0.56);
+    final k = (s / 2 - inset) / (s / 2);
+    return [
+      Offset(s / 2, 0),
+      Offset(s, s * 0.26),
+      Offset(s, s),
+      Offset(0, s),
+      Offset(0, s * 0.26),
+    ].map((v) => c + (v - c) * k).toList();
   }
 
   /// 正三角形（逆向き）の頂点。上辺が幅 s に一致するよう配置する。
@@ -188,6 +203,8 @@ class TrafficSignPainter extends CustomPainter {
           Offset(s / 2, s / 2),
           (s / 2 - inset * math.sqrt2) / math.sqrt2 * 1.15,
         );
+      case SignShape.pentagon:
+        return _InnerGeometry(Offset(s / 2, s * 0.6), (s / 2 - inset) * 0.95);
       case SignShape.invertedTriangle:
         final v = _triangleVertices(s, inset);
         final centroid = Offset(s / 2, (v[0].dy + v[0].dy + v[2].dy) / 3);
@@ -432,7 +449,7 @@ class _SymbolPainter {
       case SignSymbol.crosswalk:
         _crosswalk();
       case SignSymbol.stopLineBar:
-        _rrect(-1.2, 0.5, 1.2, 0.82, 0.02, _fillPaint);
+        _rrect(-1.2, -0.82, 1.2, -0.5, 0.02, _fillPaint);
       case SignSymbol.crossroad:
         _rrect(-0.17, -0.95, 0.17, 0.95, 0, _fillPaint);
         _rrect(-0.95, -0.17, 0.95, 0.17, 0, _fillPaint);
@@ -483,21 +500,16 @@ class _SymbolPainter {
     }
   }
 
-  /// 縦に並んだ2つの三角マーカー（安全地帯）。
+  /// 太い白のV字（安全地帯）。
   void _safetyZoneMarkers() {
     canvas.drawPath(
       _poly([
-        [-0.32, -0.92],
-        [0.32, -0.92],
-        [0, -0.3],
-      ]),
-      _fillPaint,
-    );
-    canvas.drawPath(
-      _poly([
-        [-0.32, 0.1],
-        [0.32, 0.1],
-        [0, 0.72],
+        [-0.95, -0.7],
+        [-0.5, -0.7],
+        [0, 0.2],
+        [0.5, -0.7],
+        [0.95, -0.7],
+        [0, 1.0],
       ]),
       _fillPaint,
     );
@@ -1014,7 +1026,17 @@ class _SymbolPainter {
 
   /// 太い縦線と細い横線の交差。
   void _priorityRoad() {
-    _rrect(-0.28, -1.3, 0.28, 1.3, 0, _fillPaint);
+    _rrect(-0.2, -0.65, 0.2, 0.65, 0, _fillPaint);
+    for (final d in [-1.0, 1.0]) {
+      canvas.drawPath(
+        _poly([
+          [0, 1.2 * d],
+          [-0.55, 0.6 * d],
+          [0.55, 0.6 * d],
+        ]),
+        _fillPaint,
+      );
+    }
     _rrect(-1.3, -0.06, 1.3, 0.06, 0, _fillPaint);
   }
 
@@ -1074,12 +1096,12 @@ class _SymbolPainter {
     _line(sx(-0.12), sy(-0.34), sx(-0.3), sy(0), _stroke(0.09 * scale));
   }
 
-  /// 縦型の信号機（赤・黄・青）。
+  /// 横型の信号機（左から青・黄・赤）。
   void _trafficLight() {
-    _rrect(-0.32, -0.92, 0.32, 0.92, 0.16, _fillPaint);
-    _circle(0, -0.56, 0.2, Paint()..color = SignColors.signalRed);
-    _circle(0, 0, 0.2, Paint()..color = SignColors.signalYellow);
-    _circle(0, 0.56, 0.2, Paint()..color = SignColors.signalGreen);
+    _rrect(-0.95, -0.34, 0.95, 0.34, 0.17, _fillPaint);
+    _circle(-0.58, 0, 0.21, Paint()..color = SignColors.signalGreen);
+    _circle(0, 0, 0.21, Paint()..color = SignColors.signalYellow);
+    _circle(0.58, 0, 0.21, Paint()..color = SignColors.signalRed);
   }
 
   /// 両側から狭まる道路の縁線。
