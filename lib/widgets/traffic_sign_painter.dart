@@ -136,6 +136,10 @@ class TrafficSignPainter extends CustomPainter {
         return _roundedPolygon(_triangleVertices(s, inset), s * 0.05);
       case SignShape.pentagon:
         return _roundedPolygon(_pentagonVertices(s, inset), s * 0.04);
+      case SignShape.wideRect:
+        final rect = Rect.fromLTWH(0, s * 0.19, s, s * 0.62).deflate(inset);
+        return Path()
+          ..addRRect(RRect.fromRectAndRadius(rect, Radius.circular(s * 0.04)));
     }
   }
 
@@ -203,6 +207,8 @@ class TrafficSignPainter extends CustomPainter {
           Offset(s / 2, s / 2),
           (s / 2 - inset * math.sqrt2) / math.sqrt2 * 1.15,
         );
+      case SignShape.wideRect:
+        return _InnerGeometry(Offset(s / 2, s / 2), s * 0.31 - inset);
       case SignShape.pentagon:
         return _InnerGeometry(Offset(s / 2, s * 0.6), (s / 2 - inset) * 0.95);
       case SignShape.invertedTriangle:
@@ -445,7 +451,7 @@ class _SymbolPainter {
       case SignSymbol.heightMarkers:
         _heightMarkers();
       case SignSymbol.horn:
-        _horn();
+        _horn(withBolts: true);
       case SignSymbol.crosswalk:
         _crosswalk();
       case SignSymbol.stopLineBar:
@@ -722,7 +728,31 @@ class _SymbolPainter {
   }
 
   /// ラッパ形の警笛（右側が開いた朝顔）。
-  void _horn() {
+  void _horn({bool withBolts = false}) {
+    if (withBolts) {
+      canvas.save();
+      canvas.translate(c.dx - 0.4 * k, c.dy);
+      canvas.scale(0.68);
+      canvas.translate(-c.dx, -c.dy);
+      _horn();
+      canvas.restore();
+      final bolt = _stroke(0.1, cap: StrokeCap.butt);
+      for (final y in [-0.38, 0.38]) {
+        final path = Path();
+        final pts = [
+          p(0.42, y - 0.3),
+          p(0.62, y - 0.05),
+          p(0.48, y + 0.02),
+          p(0.72, y + 0.3),
+        ];
+        path.moveTo(pts[0].dx, pts[0].dy);
+        for (final q in pts.skip(1)) {
+          path.lineTo(q.dx, q.dy);
+        }
+        canvas.drawPath(path, bolt);
+      }
+      return;
+    }
     // マウスピース
     _rrect(-1, -0.18, -0.86, 0.18, 0.03, _fillPaint);
     // 管
@@ -1127,13 +1157,12 @@ class _SymbolPainter {
     final m = mirror ? -1.0 : 1.0;
     final path = Path();
     final a = p(-0.3 * m, 0.95);
-    final b = p(-0.3 * m, 0.05);
-    final ctrl = p(-0.3 * m, -0.38);
-    final d = p(0.2 * m, -0.38);
+    final c1 = p(-0.3 * m, 0.1);
+    final c2 = p(-0.25 * m, -0.38);
+    final d = p(0.25 * m, -0.38);
     path
       ..moveTo(a.dx, a.dy)
-      ..lineTo(b.dx, b.dy)
-      ..quadraticBezierTo(ctrl.dx, ctrl.dy, d.dx, d.dy);
+      ..cubicTo(c1.dx, c1.dy, c2.dx, c2.dy, d.dx, d.dy);
     canvas.drawPath(path, _stroke(0.26, cap: StrokeCap.butt));
     canvas.drawPath(
       _poly([

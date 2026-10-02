@@ -24,6 +24,9 @@ enum SignShape {
 
   /// 五角形（横断歩道・自転車横断帯。頂点が上の家型）
   pentagon,
+
+  /// 横長の長方形（一方通行）
+  wideRect,
 }
 
 /// 標識の中に描くシンボル（図柄）。すべて CustomPainter で描画する。
@@ -472,15 +475,12 @@ const List<TrafficSign> kTrafficSigns = [
     id: 'sign_one_way',
     name: '一方通行',
     category: _kRegulatory,
-    shape: SignShape.square,
+    shape: SignShape.wideRect,
     backgroundColor: SignColors.blue,
     rimColor: SignColors.white,
     rimWidthRatio: 0.03,
     symbol: SignSymbol.oneWayArrow,
     symbolColor: SignColors.white,
-    centerText: '一方通行',
-    centerTextColor: SignColors.blue,
-    centerTextScale: 0.11,
     questionText: 'この標識の意味として正しいのはどれか。',
     choices: [
       '矢印の方向にしか曲がることができない',
@@ -490,7 +490,7 @@ const List<TrafficSign> kTrafficSigns = [
     ],
     answer: 1,
     explanation:
-        '青い四角に白い矢印が描かれた標識は「一方通行」。車両は矢印の向きにしか進めず、逆向きに進入・通行してはいけない。',
+        '青い横長の長方形に白い矢印が描かれた標識は「一方通行」。車両は矢印の向きにしか進めず、逆向きに進入・通行してはいけない。',
   ),
 
   // 10. 車両進入禁止
