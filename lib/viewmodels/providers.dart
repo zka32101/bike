@@ -1,5 +1,6 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_core/firebase_core.dart';
+import 'package:app_common_kit/app_common_kit.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
@@ -54,6 +55,10 @@ final analyticsServiceProvider =
     Provider<AnalyticsService>((ref) => DebugAnalyticsService());
 
 final adGateServiceProvider = Provider<AdGateService>((ref) => AdGateService());
+
+/// 広告ゲート（app_common_kit）。main.dart で実体を差し込む。広告を使えない
+/// 環境（iOSの本番ID未発行など）は null。
+final adGateProvider = Provider<AdGate?>((ref) => null);
 
 final predictionScoreServiceProvider =
     Provider<PredictionScoreService>((ref) => PredictionScoreService());
@@ -757,7 +762,6 @@ class DailyQuotaController extends FamilyNotifier<DailyQuotaState, String> {
 
   Future<void> _onQuotaCompleted() async {
     ref.read(adGateServiceProvider).exitContext();
-    ref.read(adGateServiceProvider).markDailyQuotaCompleted();
     await ref
         .read(analyticsServiceProvider)
         .logEvent(AnalyticsEvents.dailyQuotaCompleted, parameters: {
