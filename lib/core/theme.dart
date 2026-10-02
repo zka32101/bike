@@ -1,30 +1,30 @@
+import 'package:app_common_kit/app_common_kit.dart';
 import 'package:flutter/material.dart';
 
-/// Step5.5 UI/UXクオリティ設計：ダークモード必須／カード角丸+影／
-/// タップ領域44pt以上を前提にしたテーマ定義。
+/// うかラボ共通テーマ（app_common_kit v0.2）。バイク免許は「技術・安全」の分野色。
+///
+/// 色・文字サイズ・角丸・タップ領域は共通デザイン仕様 v0.4 に従う。色を直書きしない。
+/// ボタンは従来どおり横幅いっぱい（高さ48）にする。
 class AppTheme {
   AppTheme._();
 
-  static const Color primary = Color(0xFFFF6A00); // 二輪エンジン×排気を想起する朱橙
-  static const Color secondary = Color(0xFF1B2A4A);
+  static const UkalabField field = UkalabField.tech;
 
   static ThemeData light() => _base(Brightness.light);
   static ThemeData dark() => _base(Brightness.dark);
 
   static ThemeData _base(Brightness brightness) {
-    final isDark = brightness == Brightness.dark;
-    return ThemeData(
-      brightness: brightness,
-      useMaterial3: true,
-      colorScheme: ColorScheme.fromSeed(
-        seedColor: primary,
-        brightness: brightness,
-      ),
-      scaffoldBackgroundColor: isDark ? const Color(0xFF0E1220) : const Color(0xFFF7F7FA),
+    final base = UkalabTheme.build(field: field, brightness: brightness);
+    final shape = RoundedRectangleBorder(
+      borderRadius: BorderRadius.circular(UkalabTheme.buttonRadius),
+    );
+    return base.copyWith(
       elevatedButtonTheme: ElevatedButtonThemeData(
         style: ElevatedButton.styleFrom(
           minimumSize: const Size.fromHeight(48), // 44pt+ 確保
-          shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(16)),
+          shape: shape,
+          backgroundColor: base.colorScheme.primary,
+          foregroundColor: base.colorScheme.onPrimary,
         ),
       ),
     );
