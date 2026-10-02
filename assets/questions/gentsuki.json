@@ -93,8 +93,8 @@
       "運転者のみ着用義務",
       "着用は任意"
     ],
-    "answer": 0,
-    "explanation": "原付車でも、運転者と乗客の両方にヘルメット着用義務がある。",
+    "answer": 2,
+    "explanation": "原付のヘルメット着用義務は運転者のみ。原付は二人乗りができない。（根拠: 道路交通法第71条の4第2項、同法施行令第23条）",
     "isTrapQuestion": false,
     "trapNumberType": "none",
     "topicTag": "rules"
@@ -189,12 +189,12 @@
     "questionText": "原付での交差点での左折について最も安全なのはどれか。",
     "choices": [
       "停止線を越えて左折する",
-      "十分に減速し、大きな回転半径で曲がる",
+      "あらかじめ道路の左側端に寄り、十分に減速して左側端に沿って曲がる",
       "左折表示のみで十分",
       "左に傾きながら高速で曲がる"
     ],
     "answer": 1,
-    "explanation": "原付の左折は、十分な減速と大きな回転半径を取ることが安全。",
+    "explanation": "左折は、あらかじめ道路の左側端に寄り、左側端に沿って徐行して曲がる。大回りはしない。（根拠: 道路交通法第34条第1項）",
     "isTrapQuestion": false,
     "trapNumberType": "none",
     "topicTag": "rules"
@@ -248,13 +248,13 @@
     "difficulty": 2,
     "questionText": "原付での歩道走行について正しいのはどれか。",
     "choices": [
-      "徐行して歩道走行できる",
-      "歩道走行は禁止",
-      "子供は歩道走行可能",
+      "徐行すれば歩道を走行できる",
+      "歩道は通行できない（車道を通行する）",
+      "子供は歩道を走行できる",
       "常に歩道を走行できる"
     ],
-    "answer": 0,
-    "explanation": "原付は特定の条件下で徐行して歩道走行できるが、基本は車道走行。",
+    "answer": 1,
+    "explanation": "原付は歩道と車道の区別のある道路では車道を通行しなければならない。（根拠: 道路交通法第17条第1項）",
     "isTrapQuestion": false,
     "trapNumberType": "none",
     "topicTag": "rules"
@@ -486,15 +486,15 @@
     ],
     "stageTag": "第一段階",
     "difficulty": 2,
-    "questionText": "原付での交差点での右折について最も安全なのはどれか。",
+    "questionText": "原付での交差点での右折（二段階右折の場所を除く）について最も安全なのはどれか。",
     "choices": [
-      "十分に減速し、交差点中央を大きく迂回",
+      "あらかじめ道路の中央に寄り、十分に減速して交差点の中心の直近の内側を通って曲がる",
       "速度を保ったまま右折",
       "他の車を無視して先に進む",
       "右折表示のみで走行"
     ],
     "answer": 0,
-    "explanation": "原付の右折は、十分な減速と大きな迂回路が安全運転のコツ。",
+    "explanation": "右折は、あらかじめ道路の中央に寄り、交差点の中心の直近の内側を徐行して曲がる。（根拠: 道路交通法第34条第2項）",
     "isTrapQuestion": false,
     "trapNumberType": "none",
     "topicTag": "rules"
@@ -900,26 +900,6 @@
     "topicTag": "rules"
   },
   {
-    "id": "g046",
-    "licenseCategory": [
-      "gentsuki"
-    ],
-    "stageTag": "第一段階",
-    "difficulty": 2,
-    "questionText": "原付車で時速30km以上の速度で走行した場合、最初の罰則は。",
-    "choices": [
-      "免許停止",
-      "反則金のみ",
-      "免許点数減点のみ",
-      "口頭注意"
-    ],
-    "answer": 1,
-    "explanation": "原付の速度超過違反は反則金5,000円が科される。",
-    "isTrapQuestion": true,
-    "trapNumberType": "speedLimit",
-    "topicTag": "license_system"
-  },
-  {
     "id": "g047",
     "licenseCategory": [
       "gentsuki"
@@ -1026,15 +1006,15 @@
     ],
     "stageTag": "第一段階",
     "difficulty": 2,
-    "questionText": "原付の積載荷物が30kgを超えた場合の違反は。",
+    "questionText": "原付の積載物の重量が制限（30kg）を5割未満超えた場合の反則金はいくらか。",
     "choices": [
-      "反則金10,000円",
-      "反則金2,000円",
-      "口頭注意のみ",
-      "反則金5,000円"
+      "5,000円",
+      "10,000円",
+      "15,000円",
+      "2,000円"
     ],
-    "answer": 3,
-    "explanation": "原付の積載制限超過は反則金5,000円が科される。",
+    "answer": 2,
+    "explanation": "原付の積載物の重量制限超過（超過が5割未満）の反則金は15,000円（超過が5割以上10割未満は20,000円、10割以上は25,000円）。（根拠: 道路交通法施行令別表第六）",
     "isTrapQuestion": true,
     "trapNumberType": "loadLimit",
     "topicTag": "parking"
@@ -1120,26 +1100,6 @@
     "topicTag": "rules"
   },
   {
-    "id": "g057",
-    "licenseCategory": [
-      "gentsuki"
-    ],
-    "stageTag": "第一段階",
-    "difficulty": 3,
-    "questionText": "白線がある横断歩道がない交差点での右折について正しいのは。",
-    "choices": [
-      "歩行者確認が最優先で、対向車確認後に右折",
-      "右折は禁止",
-      "急速に右折しても良い",
-      "対向車の確認後、徐々に右折する"
-    ],
-    "answer": 0,
-    "explanation": "交差点での右折は、歩行者確認が最優先で、その後対向車確認を行う。",
-    "isTrapQuestion": true,
-    "trapNumberType": "turningRules",
-    "topicTag": "rules"
-  },
-  {
     "id": "g058",
     "licenseCategory": [
       "gentsuki"
@@ -1218,26 +1178,6 @@
     "isTrapQuestion": true,
     "trapNumberType": "weatherConditions",
     "topicTag": "operation"
-  },
-  {
-    "id": "g062",
-    "licenseCategory": [
-      "gentsuki"
-    ],
-    "stageTag": "第一段階",
-    "difficulty": 3,
-    "questionText": "原付で夜間走行時に他のバイクを追い越す場合の注意。",
-    "choices": [
-      "ハイビームで対向車を照らす",
-      "十分な距離を取り、ハイビームを短時間使用して意図を伝える",
-      "ローライトのまま追い越す",
-      "クラクションのみで追い越す"
-    ],
-    "answer": 1,
-    "explanation": "夜間追い越しは危険が高いため、十分な距離確保とハイビーム短時間使用で安全に行う。",
-    "isTrapQuestion": true,
-    "trapNumberType": "nightDriving",
-    "topicTag": "rules"
   },
   {
     "id": "g063",
@@ -2328,13 +2268,13 @@
     "difficulty": 1,
     "questionText": "原付での交通事故後の対応で最初にすべきことは。",
     "choices": [
-      "バイク移動",
-      "警察に通報",
-      "相手の連絡先確認のみ",
-      "その場から去る"
+      "直ちに運転を停止し、負傷者の救護と危険防止の措置をとる",
+      "警察に通報するまで何もしない",
+      "相手の連絡先を聞いてその場を離れる",
+      "バイクを移動してから様子を見る"
     ],
-    "answer": 1,
-    "explanation": "交通事故発生時は直ちに警察に通報することが法的義務。",
+    "answer": 0,
+    "explanation": "事故を起こしたら、まず直ちに運転を停止し、負傷者を救護して道路上の危険を防止する。その後、警察に報告する。（根拠: 道路交通法第72条第1項）",
     "isTrapQuestion": true,
     "trapNumberType": "other",
     "topicTag": "emergency"
@@ -2460,26 +2400,6 @@
     "topicTag": "hazard_prediction"
   },
   {
-    "id": "g125",
-    "licenseCategory": [
-      "gentsuki"
-    ],
-    "stageTag": "第二段階",
-    "difficulty": 1,
-    "questionText": "原付での駐禁標識がある場所での停止について。",
-    "choices": [
-      "許可なく停止は完全禁止",
-      "数分なら大丈夫",
-      "標識無視可能",
-      "夜間なら可能"
-    ],
-    "answer": 0,
-    "explanation": "駐禁標識のある場所の無許可停止は違反で罰金対象。",
-    "isTrapQuestion": true,
-    "trapNumberType": "signalAndMarkings",
-    "topicTag": "signs"
-  },
-  {
     "id": "g126",
     "licenseCategory": [
       "gentsuki"
@@ -2568,13 +2488,13 @@
     "difficulty": 1,
     "questionText": "原付でのヘルメット未着用での罰則は。",
     "choices": [
-      "注意のみ",
       "反則金5,000円",
-      "違反ではない",
-      "反則金2,000円"
+      "罰金10万円",
+      "反則金・罰則はないが、違反点数1点が付く",
+      "違反ではない"
     ],
-    "answer": 1,
-    "explanation": "ヘルメット未着用は反則金5,000円の違反。着用は法的義務。",
+    "answer": 2,
+    "explanation": "原付でもヘルメット着用は義務。違反すると違反点数1点が付く（反則金・罰則の定めはない）。（根拠: 道路交通法第71条の4第2項、同法施行令別表第二）",
     "isTrapQuestion": true,
     "trapNumberType": "other",
     "topicTag": "license_system"
@@ -2900,26 +2820,6 @@
     "topicTag": "maintenance"
   },
   {
-    "id": "g147",
-    "licenseCategory": [
-      "gentsuki"
-    ],
-    "stageTag": "第一段階",
-    "difficulty": 1,
-    "questionText": "原付でのマニュアル・オートマ区別について。",
-    "choices": [
-      "形式で分かれている",
-      "ほぼマニュアル",
-      "原付はすべてオートマ",
-      "区別がない"
-    ],
-    "answer": 2,
-    "explanation": "ほぼ全ての原付はオートマチック構造で、特別な変速操作が不要。",
-    "isTrapQuestion": true,
-    "trapNumberType": "other",
-    "topicTag": "maintenance"
-  },
-  {
     "id": "g148",
     "licenseCategory": [
       "gentsuki"
@@ -3220,26 +3120,6 @@
     "topicTag": "operation"
   },
   {
-    "id": "g163",
-    "licenseCategory": [
-      "gentsuki"
-    ],
-    "stageTag": "第一段階",
-    "difficulty": 1,
-    "questionText": "原付での駐輪違反の罰則で正しいのは。",
-    "choices": [
-      "口頭注意のみ",
-      "罰則なし",
-      "反則金2,000円",
-      "免許取消し"
-    ],
-    "answer": 2,
-    "explanation": "駐輪禁止区域への駐輪は反則金2,000円の違反。",
-    "isTrapQuestion": true,
-    "trapNumberType": "signalAndMarkings",
-    "topicTag": "parking"
-  },
-  {
     "id": "g164",
     "licenseCategory": [
       "gentsuki"
@@ -3297,26 +3177,6 @@
     "explanation": "学校・病院前は児童・患者など危険要因が多く、最大警戒と超低速が必須。",
     "isTrapQuestion": false,
     "trapNumberType": "none",
-    "topicTag": "hazard_prediction"
-  },
-  {
-    "id": "g167",
-    "licenseCategory": [
-      "gentsuki"
-    ],
-    "stageTag": "第一段階",
-    "difficulty": 1,
-    "questionText": "原付での時間帯別ライト点灯基準で正しいのは。",
-    "choices": [
-      "ライト点灯は任意",
-      "昼間も点灯",
-      "薄暮時から夜間まで常時点灯",
-      "夜間のみ点灯"
-    ],
-    "answer": 2,
-    "explanation": "視認性が低下する薄暮時から夜間まで、ライト点灯が法定要件。",
-    "isTrapQuestion": true,
-    "trapNumberType": "nightDriving",
     "topicTag": "hazard_prediction"
   },
   {
@@ -3686,15 +3546,15 @@
     ],
     "stageTag": "第二段階",
     "difficulty": 2,
-    "questionText": "原付での中央線を越える走行について。",
+    "questionText": "原付での中央線を越える（道路の右側部分にはみ出す）走行について。",
     "choices": [
-      "判断は運転手",
-      "追越し以外は禁止",
+      "判断は運転者に任されている",
+      "追越しなど、法令が認める場合を除き禁止",
       "夜間なら可",
-      "許可"
+      "許可は不要で自由"
     ],
     "answer": 1,
-    "explanation": "中央線越えは追越し時のみ許可。それ以外は対向車との衝突リスク。",
+    "explanation": "道路の中央から右の部分にはみ出して通行できるのは、法令が認める場合（追越し、一方通行、障害物をよけるときなど）に限られる。（根拠: 道路交通法第17条第4項・第5項）",
     "isTrapQuestion": true,
     "trapNumberType": "signalAndMarkings",
     "topicTag": "rules"
@@ -5140,26 +5000,6 @@
     "topicTag": "rules"
   },
   {
-    "id": "g259",
-    "licenseCategory": [
-      "gentsuki"
-    ],
-    "stageTag": "第一段階",
-    "difficulty": 2,
-    "questionText": "二輪車の並進(横に並んで走行すること)に関する規定として正しいのはどれか。",
-    "choices": [
-      "常に自由に並進してよい",
-      "並進の可否は運転者の判断に任されている",
-      "並進を認める道路標識がある場所を除き、並進は禁止されている",
-      "二人までなら並進してよい"
-    ],
-    "answer": 2,
-    "explanation": "二輪車の並進は、これを認める道路標識がある区間を除いて禁止されている。",
-    "isTrapQuestion": true,
-    "trapNumberType": "other",
-    "topicTag": "rules"
-  },
-  {
     "id": "g260",
     "licenseCategory": [
       "gentsuki"
@@ -5446,15 +5286,15 @@
     ],
     "stageTag": "第二段階",
     "difficulty": 1,
-    "questionText": "見通しの悪いカーブや坂の頂上付近での駐停車について正しいのはどれか。",
+    "questionText": "坂の頂上付近や道路の曲がり角から5m以内での駐停車について正しいのはどれか。",
     "choices": [
       "見通しが悪くても短時間であれば駐停車してよい",
-      "見通しの悪いカーブや坂の頂上付近は駐停車が禁止されている",
+      "坂の頂上付近や曲がり角から5m以内は駐停車が禁止されている",
       "坂の頂上付近は駐車のみ禁止で停車はできる",
-      "カーブや坂の頂上付近に駐停車の規制はない"
+      "坂の頂上付近や曲がり角に駐停車の規制はない"
     ],
     "answer": 1,
-    "explanation": "見通しの悪いカーブの付近や坂の頂上付近は、後続車や対向車から発見が遅れ危険なため駐停車が禁止されている。",
+    "explanation": "坂の頂上付近・勾配の急な坂・トンネル、および道路の曲がり角から5m以内は駐停車禁止。（根拠: 道路交通法第44条第1項）",
     "isTrapQuestion": true,
     "trapNumberType": "other",
     "topicTag": "parking"
@@ -5994,7 +5834,7 @@
       "路面電車の軌道敷内を車両が通行できることを示す"
     ],
     "answer": 0,
-    "explanation": "「最低速度」は規制標識（円形・青地に白字で数字）で、その数字を下回る速度での走行を禁止する（高速道路等に設置）ことを意味する。",
+    "explanation": "「最低速度」は規制標識（白地・赤枠・青色の数字）で、その数字に達しない速度で進行してはならないことを示す（法第23条。対象は自動車）。（根拠: 道路標識、区画線及び道路標示に関する命令）",
     "isTrapQuestion": true,
     "trapNumberType": "speedLimit",
     "topicTag": "signs"
@@ -6070,11 +5910,11 @@
     "choices": [
       "前方にロータリー（環状交差点）があることを予告する",
       "前方に十字路（交差点）があることを予告し、注意を促す",
-      "自動車・原動機付自転車以外（歩行者・軽車両等）の通行を禁止する",
+      "自動車以外（原動機付自転車・軽車両・歩行者等）の通行を禁止する",
       "前方の道路が右方向に大きく曲がっていることを予告する"
     ],
     "answer": 2,
-    "explanation": "「自動車専用」は規制標識（円形・青地に白の自動車の絵）で、自動車・原動機付自転車以外（歩行者・軽車両等）の通行を禁止することを意味する。",
+    "explanation": "「自動車専用」は規制標識で、高速自動車国道または自動車専用道路を示す。通行できるのは自動車のみで、原動機付自転車・軽車両・歩行者は通行できない。（根拠: 標識令 別表第一 325、道路交通法第2条第1項第9号）",
     "isTrapQuestion": false,
     "trapNumberType": "none",
     "topicTag": "signs"
@@ -6134,7 +5974,7 @@
       "その場所での駐車が認められていることを示す"
     ],
     "answer": 3,
-    "explanation": "「駐車可」は規制標識（円形・青地に白のPマーク）で、その場所での駐車が認められていることを示すことを意味する。",
+    "explanation": "「駐車可」は指示標識（白文字・青地）で、その場所で車両が駐車できることを示す（法第46条・第48条、標識令403）。（根拠: 道路標識、区画線及び道路標示に関する命令）",
     "isTrapQuestion": false,
     "trapNumberType": "none",
     "topicTag": "signs"
@@ -6334,7 +6174,7 @@
       "車両の駐車と停車の両方を禁止する"
     ],
     "answer": 2,
-    "explanation": "「歩行者通行止め」は規制標識（円形・赤地に白のバツ印と歩行者の絵）で、歩行者の通行を禁止することを意味する。",
+    "explanation": "「歩行者通行止め」(現行名「歩行者等通行止め」)は規制標識で、歩行者等の通行を禁止する(標識令別表第一331)。白地・赤枠・青の記号で表示される。（根拠: 道路標識、区画線及び道路標示に関する命令）",
     "isTrapQuestion": false,
     "trapNumberType": "none",
     "topicTag": "signs"
@@ -6554,7 +6394,7 @@
       "示された方向以外への進行を禁止し、左折を禁止する"
     ],
     "answer": 2,
-    "explanation": "「車両（組合せ）通行止め」は規制標識（円形・赤地に白のバツ印と複数車両の絵）で、指定された複数の種類の車両の通行を禁止することを意味する。",
+    "explanation": "「車両(組合せ)通行止め」は規制標識で、標示板の記号で表示される複数の種類の車両の通行を禁止する(標識令310)。白地・赤枠で表示される。（根拠: 道路標識、区画線及び道路標示に関する命令）",
     "isTrapQuestion": false,
     "trapNumberType": "none",
     "topicTag": "signs"
@@ -6594,7 +6434,7 @@
       "前方に十字路（交差点）があることを予告し、注意を促す"
     ],
     "answer": 1,
-    "explanation": "「特定の種類の車両の通行区分」は指示標識（円形・青地に白の矢印と特定車両の絵）で、原動機付自転車や自転車など特定の車両が通行すべき車両通行帯を指定することを意味する。",
+    "explanation": "「特定の種類の車両の通行区分」は規制標識(標識令327の2、道交法20条2項)で、車両の種類を特定して通行すべき車両通行帯を指定する。青地に白の文字・記号(備考3(3))。（根拠: 道路標識、区画線及び道路標示に関する命令）",
     "isTrapQuestion": false,
     "trapNumberType": "none",
     "topicTag": "signs"
