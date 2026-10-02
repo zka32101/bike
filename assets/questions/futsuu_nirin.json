@@ -1146,26 +1146,6 @@
     "topicTag": "rules"
   },
   {
-    "id": "f056",
-    "licenseCategory": [
-      "futsuuNirin"
-    ],
-    "stageTag": "第一段階",
-    "difficulty": 2,
-    "questionText": "普通二輪車の横幅制限はどれか。",
-    "choices": [
-      "2.0m以下",
-      "1.5m以下",
-      "制限なし",
-      "1.0m以下"
-    ],
-    "answer": 3,
-    "explanation": "普通二輪は最大横幅1.0m以下と定められている。",
-    "isTrapQuestion": true,
-    "trapNumberType": "loadLimit",
-    "topicTag": "hazard_prediction"
-  },
-  {
     "id": "f057",
     "licenseCategory": [
       "futsuuNirin"
@@ -3074,13 +3054,13 @@
     "difficulty": 2,
     "questionText": "二輪車を運転するときの正しいステップ(足)の位置はどれか。",
     "choices": [
-      "つま先をステップに乗せ、しっかりと車体を挟むように保持する",
+      "土踏まずをステップに乗せ、タンクを両ひざでしめて車体を保持する",
       "片足だけをステップに乗せて走行する",
       "足の位置は走行に影響しないため自由でよい",
       "両足を地面につけたまま走行する"
     ],
     "answer": 0,
-    "explanation": "走行中は両足をステップに乗せ、ニーグリップなどで車体を安定させることで、操作性とバランスを保つことができる。",
+    "explanation": "ステップに土踏まずを載せ、足の裏をほぼ水平にし、足先を前に向けて、タンクを両ひざでしめて乗る。（根拠: 交通の方法に関する教則 第8章 二輪車の運転の方法）",
     "isTrapQuestion": true,
     "trapNumberType": "other",
     "topicTag": "operation"

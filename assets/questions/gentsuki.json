@@ -1840,26 +1840,6 @@
     "topicTag": "license_system"
   },
   {
-    "id": "g097",
-    "licenseCategory": [
-      "gentsuki"
-    ],
-    "stageTag": "第二段階",
-    "difficulty": 3,
-    "questionText": "原付でのハンドルロック現象について。",
-    "choices": [
-      "ハンドルが完全に固定される",
-      "時速40km以上で発生",
-      "両者とも起こらない",
-      "ハンドルが急に重くなる"
-    ],
-    "answer": 0,
-    "explanation": "原付のハンドルロックはセキュリティ機構で、キー解錠時にハンドルが固定される。",
-    "isTrapQuestion": true,
-    "trapNumberType": "other",
-    "topicTag": "operation"
-  },
-  {
     "id": "g098",
     "licenseCategory": [
       "gentsuki"
@@ -2378,46 +2358,6 @@
     "isTrapQuestion": true,
     "trapNumberType": "signalAndMarkings",
     "topicTag": "signs"
-  },
-  {
-    "id": "g124",
-    "licenseCategory": [
-      "gentsuki"
-    ],
-    "stageTag": "第二段階",
-    "difficulty": 2,
-    "questionText": "原付でのバイク専用レーン走行について。",
-    "choices": [
-      "タクシーも可",
-      "自動車も走行可",
-      "バス専用",
-      "原付のみ走行可"
-    ],
-    "answer": 3,
-    "explanation": "バイク専用レーンは原付を含むバイク専用で、自動車進入は禁止。",
-    "isTrapQuestion": true,
-    "trapNumberType": "signalAndMarkings",
-    "topicTag": "hazard_prediction"
-  },
-  {
-    "id": "g126",
-    "licenseCategory": [
-      "gentsuki"
-    ],
-    "stageTag": "第二段階",
-    "difficulty": 2,
-    "questionText": "原付での可動式横断歩道での通行方法は。",
-    "choices": [
-      "歩行者がいると停止",
-      "減速し周囲確認後通過",
-      "加速して通過",
-      "スキップしてもいい"
-    ],
-    "answer": 1,
-    "explanation": "可動式横断歩道は歩行者優先。減速・確認後、安全に通過する。",
-    "isTrapQuestion": false,
-    "trapNumberType": "none",
-    "topicTag": "rules"
   },
   {
     "id": "g127",
