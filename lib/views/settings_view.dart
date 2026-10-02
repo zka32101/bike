@@ -1,3 +1,4 @@
+import 'package:app_common_kit/app_common_kit.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
@@ -118,6 +119,20 @@ class SettingsView extends ConsumerWidget {
                 : const Icon(Icons.check_circle, color: Colors.green),
             onTap: () => Navigator.of(context).push(
               MaterialPageRoute(builder: (_) => const PaywallView()),
+            ),
+          ),
+          ListTile(
+            leading: const Icon(Icons.feedback_outlined),
+            title: const Text('ご意見・不具合報告'),
+            subtitle: const Text('バグ報告や改善要望をお寄せください'),
+            onTap: () => Navigator.of(context).push(
+              MaterialPageRoute(
+                builder: (_) => FeedbackFormPage(
+                  appName: 'bike-license',
+                  appVersion: '1.0.1',
+                  userId: user?.uid,
+                ),
+              ),
             ),
           ),
           ListTile(
