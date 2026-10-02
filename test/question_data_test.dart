@@ -20,6 +20,18 @@ List<Map<String, dynamic>> _load(File f) =>
     (jsonDecode(f.readAsStringSync()) as List<dynamic>)
         .cast<Map<String, dynamic>>();
 
+/// 標識の外見（形・色・図柄）を文章で描写している問題文。標識の絵は標識クイズ
+/// （コード描画）で出題するため、文章での描写は禁止。
+/// scripts/remove_sign_description_questions.py と同じ判定。
+final _signDescription = RegExp(
+  r'(円形|三角形|四角形|長方形|正方形|菱形|ひし形)で'
+  r'|円形の中'
+  r'|[青赤黄白黒緑]地'
+  r'|の絵'
+  r'|Pマーク'
+  r'|追越し禁止マーク',
+);
+
 void main() {
   final files = Directory('assets/questions')
       .listSync()
@@ -66,6 +78,14 @@ void main() {
           final prev = seen[key];
           expect(prev, isNull, reason: '${q['id']} は $prev と同じ問題');
           seen[key] = q['id'] as String;
+        }
+      });
+
+      test('標識の問題で、外見（形・色・図柄）を文章で描写していない', () {
+        for (final q in questions) {
+          if (q['topicTag'] != 'signs') continue;
+          expect(_signDescription.hasMatch(q['questionText'] as String), isFalse,
+              reason: '${q['id']}: 標識の外見は標識クイズ(画像)で出題する');
         }
       });
 
