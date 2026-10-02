@@ -16,6 +16,7 @@ import 'mock_exam_view.dart';
 import 'settings_view.dart';
 import 'number_quiz_view.dart';
 import 'paywall_view.dart';
+import 'guide_view.dart';
 import 'sign_quiz_view.dart';
 import 'study_mode_view.dart';
 import 'trap_quiz_view.dart';
@@ -206,6 +207,21 @@ class _HomeViewState extends ConsumerState<HomeView> {
                         onTap: () => Navigator.of(context).push(
                           MaterialPageRoute(
                             builder: (_) => const SignQuizView(),
+                          ),
+                        ),
+                      ),
+                    ),
+                    const SizedBox(height: 12),
+                    Card(
+                      child: ListTile(
+                        contentPadding: const EdgeInsets.all(16),
+                        leading: const Icon(Icons.lightbulb_outline, size: 32),
+                        title: const Text('役立つ情報'),
+                        subtitle: const Text('黄色い線・二段階右折など、わかりにくい決まりを図で解説'),
+                        trailing: const Icon(Icons.chevron_right),
+                        onTap: () => Navigator.of(context).push(
+                          MaterialPageRoute(
+                            builder: (_) => const GuideListView(),
                           ),
                         ),
                       ),
