@@ -115,6 +115,9 @@ class _HomeViewState extends ConsumerState<HomeView> {
                       const SizedBox(height: 16),
                     ],
                     OshiCard(
+                      streakDays: user?.streakCount ?? 0,
+                      lastStudyDate: user?.lastStudyDate,
+                      examDate: user?.examDatesByCategory[primaryCategoryId],
                       questions: ref
                               .watch(questionsProvider(
                                   QuestionQuery(licenseCategory: primaryCategoryId)))
