@@ -106,4 +106,47 @@ void main() {
       });
     });
   }
+
+  // 法令で確認した事実の回帰テスト（docs/question_review/README.md の「法令で確認した結果」）
+  group('法令で確認した事実', () {
+    final all = [for (final f in files) ..._load(f)];
+    String correct(Map<String, dynamic> q) =>
+        (q['choices'] as List<dynamic>)[q['answer'] as int] as String;
+
+    test('二人乗り: 大型二輪でも、一般道路で「免許取得直後から条件なし」を正解にしない', () {
+      for (final q in all) {
+        final text = q['questionText'] as String;
+        if (!text.contains('二人乗り')) continue;
+        expect(correct(q), isNot(contains('免許取得直後から可能')), reason: '${q['id']}');
+        expect(correct(q), isNot(contains('年齢・経験年数の条件なく')), reason: '${q['id']}');
+      }
+    });
+
+    test('携帯電話: 「停止中でも禁止」を正解にしない（道路交通法71条5号の5は停止中を除く）', () {
+      for (final q in all) {
+        if (!(q['questionText'] as String).contains('携帯電話') &&
+            !(q['questionText'] as String).contains('スマートフォン')) {
+          continue;
+        }
+        expect(correct(q), isNot(contains('停止中でも禁止')), reason: '${q['id']}');
+        expect(correct(q), isNot(contains('停止中でも一切')), reason: '${q['id']}');
+        expect(correct(q), isNot(equals('完全禁止')), reason: '${q['id']}');
+      }
+    });
+
+    test('125ccの二輪車は、最高出力4.0kW以下なら原付（新基準原付）。結論が変わる問題では250ccなどで出題する', () {
+      const ids = {
+        'kg005', 'kg120', 'kg121', 'kg136', 'kg137', 'kg145', 'kg155',
+        'kg159', 'kg160', 'kg161', 'kg162', 'kg191',
+      };
+      for (final q in all) {
+        if (!ids.contains(q['id'])) continue;
+        final all125 = [
+          q['questionText'] as String,
+          ...(q['choices'] as List<dynamic>).cast<String>(),
+        ].join();
+        expect(all125, isNot(contains('125ccの二輪車')), reason: '${q['id']}');
+      }
+    });
+  });
 }
