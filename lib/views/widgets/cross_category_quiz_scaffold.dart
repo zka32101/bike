@@ -1,3 +1,4 @@
+import 'package:app_common_kit/app_common_kit.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
@@ -66,7 +67,6 @@ class CrossCategoryQuizScaffold extends ConsumerWidget {
         body = _ResultView(
           correctCount: state.correctCount,
           total: state.totalCount,
-          icon: resultIcon,
           onRetry: controller.retry,
         );
     }
@@ -121,24 +121,16 @@ class _QuestionBody extends StatelessWidget {
             child: ListView(
               padding: const EdgeInsets.only(bottom: 16),
               children: [
-                Text(
-                  question.questionText,
-                  style: Theme.of(context).textTheme.titleLarge,
-                ),
-                const SizedBox(height: 24),
+                QuestionCard(text: question.questionText),
+                const SizedBox(height: 16),
                 for (var i = 0; i < question.choices.length; i++) ...[
-                  SizedBox(
-                    width: double.infinity,
-                    child: OutlinedButton(
-                      onPressed: state.hasAnsweredCurrent
-                          ? null
-                          : () => controller.answer(i),
-                      style: OutlinedButton.styleFrom(
-                        padding: const EdgeInsets.all(16),
-                        alignment: Alignment.centerLeft,
-                      ),
-                      child: Text(question.choices[i]),
-                    ),
+                  ChoiceTile(
+                    label: '${i + 1}',
+                    text: question.choices[i],
+                    state: _choiceState(i, question.answer),
+                    onTap: state.hasAnsweredCurrent
+                        ? null
+                        : () => controller.answer(i),
                   ),
                   const SizedBox(height: 12),
                 ],
@@ -148,6 +140,13 @@ class _QuestionBody extends StatelessWidget {
         ],
       ),
     );
+  }
+
+  ChoiceState _choiceState(int i, int answer) {
+    if (!state.hasAnsweredCurrent) return ChoiceState.idle;
+    if (i == answer) return ChoiceState.correct;
+    if (i == state.selectedAnswer) return ChoiceState.incorrect;
+    return ChoiceState.idle;
   }
 
   static String _categoryLabel(String id) {
@@ -162,51 +161,25 @@ class _ResultView extends StatelessWidget {
   const _ResultView({
     required this.correctCount,
     required this.total,
-    required this.icon,
     required this.onRetry,
   });
 
   final int correctCount;
   final int total;
-  final IconData icon;
   final Future<void> Function() onRetry;
 
   @override
   Widget build(BuildContext context) {
     return Center(
-      child: Padding(
+      child: SingleChildScrollView(
         padding: const EdgeInsets.all(24),
-        child: Column(
-          mainAxisSize: MainAxisSize.min,
-          children: [
-            Icon(icon, size: 72, color: Colors.amber),
-            const SizedBox(height: 16),
-            Text('結果', style: Theme.of(context).textTheme.headlineSmall),
-            const SizedBox(height: 8),
-            Text(
-              '$correctCount / $total 問正解',
-              style: Theme.of(context)
-                  .textTheme
-                  .headlineMedium
-                  ?.copyWith(fontWeight: FontWeight.bold),
-            ),
-            const SizedBox(height: 24),
-            SizedBox(
-              width: double.infinity,
-              child: ElevatedButton(
-                onPressed: onRetry,
-                child: const Text('もう一度挑戦する'),
-              ),
-            ),
-            const SizedBox(height: 8),
-            SizedBox(
-              width: double.infinity,
-              child: OutlinedButton(
-                onPressed: () => Navigator.of(context).pop(),
-                child: const Text('ホームに戻る'),
-              ),
-            ),
-          ],
+        child: ResultSummary(
+          correct: correctCount,
+          total: total,
+          onRetry: onRetry,
+          retryLabel: 'もう一度挑戦する',
+          onClose: () => Navigator.of(context).pop(),
+          closeLabel: 'ホームに戻る',
         ),
       ),
     );
