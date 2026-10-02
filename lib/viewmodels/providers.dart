@@ -5,7 +5,6 @@ import 'package:flutter/services.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 import '../core/constants/analytics_events.dart';
-import '../core/constants/license_category.dart';
 import '../models/analytics_snapshot.dart';
 import '../models/pass_prediction_score.dart';
 import '../models/question.dart';
@@ -24,7 +23,6 @@ import '../services/local_data_service.dart';
 import '../services/achievement_service.dart';
 import '../services/mastery_service.dart';
 import '../services/prediction_score_service.dart';
-import '../services/purchase_service.dart';
 import '../services/notification_service.dart';
 import '../services/question_index.dart';
 import '../services/sound_effects_service.dart';
@@ -54,9 +52,6 @@ final dataServiceProvider = Provider<DataService>((ref) => LocalDataService());
 
 final analyticsServiceProvider =
     Provider<AnalyticsService>((ref) => DebugAnalyticsService());
-
-final purchaseServiceProvider =
-    Provider<PurchaseService>((ref) => StubPurchaseService());
 
 final adGateServiceProvider = Provider<AdGateService>((ref) => AdGateService());
 
@@ -253,23 +248,6 @@ class UserController extends AsyncNotifier<AppUser> {
     state = AsyncData(updated);
     await _saveUserToLocalAndFirestore(updated);
   }
-
-  Future<void> setPurchaseStatus(
-    PurchaseStatus status, {
-    String? categoryId,
-  }) async {
-    final current = state.valueOrNull;
-    if (current == null) return;
-    final updated = current.copyWith(
-      purchaseStatus: status,
-      unlockedCategoryIds:
-          status == PurchaseStatus.singleCategoryPass && categoryId != null
-              ? {...current.unlockedCategoryIds, categoryId}.toList()
-              : current.unlockedCategoryIds,
-    );
-    state = AsyncData(updated);
-    await _saveUserToLocalAndFirestore(updated);
-  }
 }
 
 final userControllerProvider =
@@ -335,27 +313,13 @@ class StudyModeResult {
 }
 
 /// 学習モードで表示する問題一覧。出題(ランダム/日次ノルマ)とは独立しており、
-/// 対象区分の全問題をID順に返す（無料/購入の制限は [DailyQuotaController]
-/// と同じルールを適用する）。
+/// 対象区分の全問題をID順に返す（うかラボ共通方針により全問題が無料）。
 final studyModeQuestionsProvider =
     FutureProvider.family<StudyModeResult, String>((ref, licenseCategory) async {
-  final user = ref.watch(userControllerProvider).valueOrNull;
-  final hasAccess = user?.hasAccessToCategory(licenseCategory) ?? false;
-
   final all = await ref.watch(
     questionsProvider(QuestionQuery(licenseCategory: licenseCategory)).future,
   );
-
-  if (hasAccess) {
-    return StudyModeResult(locked: false, questions: all);
-  }
-  if (licenseCategory == LicenseCategory.gentsuki.name) {
-    return StudyModeResult(
-      locked: false,
-      questions: all.take(freeGentsukiPreviewCount).toList(),
-    );
-  }
-  return const StudyModeResult(locked: true, questions: []);
+  return StudyModeResult(locked: false, questions: all);
 });
 
 // ---------------------------------------------------------------------------
@@ -446,11 +410,6 @@ class DailyQuotaState {
   }
 }
 
-/// 無料版で原付（gentsuki）区分のみ解ける固定プレビュー問題数。
-/// 200問中、先頭固定30問（g001〜g030）が常に対象（日次リセットなし）。
-/// 原付以外の区分はフルアクセス（購入）がない限り一切解けない。
-const int freeGentsukiPreviewCount = 30;
-
 /// 問題データ（assets/questions/*.json）の stageTag に実際に使われている値。
 /// ExamDateSettingView の教習段階選択肢には「卒業検定前」「未定」もあるが、
 /// これらは問題データ側に対応する stageTag が存在しないため出題フィルタには
@@ -492,19 +451,8 @@ class DailyQuotaController extends FamilyNotifier<DailyQuotaState, String> {
       ).future,
     );
 
-    final hasAccess = user?.hasAccessToCategory(_licenseCategory) ?? false;
-
-    List<Question> pool;
-    if (hasAccess) {
-      pool = all;
-    } else if (_licenseCategory == LicenseCategory.gentsuki.name) {
-      // 無料版：原付の先頭固定30問のみ（生涯を通じて常にこの範囲）。
-      pool = all.take(freeGentsukiPreviewCount).toList();
-    } else {
-      // 無料版：原付以外の区分は購入するまで一切解けない。
-      state = state.copyWith(questions: const [], loading: false, locked: true);
-      return;
-    }
+    // うかラボ共通方針：全問題が無料（区分ごとのロックなし）。
+    final pool = all;
 
     // マスター済み問題を除外
     final masteredIds = await ref.read(masteryServiceProvider).loadMasteredQuestions(uid);

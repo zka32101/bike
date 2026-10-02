@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 import '../core/constants/license_category.dart';
-import '../models/user.dart';
 import '../viewmodels/providers.dart';
 import 'exam_date_setting_view.dart';
 
@@ -37,7 +36,6 @@ class _LicenseCategorySelectViewState
   Widget build(BuildContext context) {
     final userAsync = ref.watch(userControllerProvider);
     final user = userAsync.valueOrNull;
-    final isFree = user?.purchaseStatus == PurchaseStatus.free;
 
     // 設定画面から再度この画面を開いたとき、既存の選択状態を引き継ぐ。
     // これをしないと、ここで保存した時点で未チェックの既存区分が
@@ -62,18 +60,6 @@ class _LicenseCategorySelectViewState
               '今、対策したい免許区分を選んでください（複数選択可）',
               style: Theme.of(context).textTheme.titleMedium,
             ),
-            if (isFree)
-              Padding(
-                padding: const EdgeInsets.only(top: 8),
-                child: Text(
-                  '無料版は原付の最初の30問のみ無料で解けます。'
-                  '他の区分・原付の残り問題はパス購入で解放されます。',
-                  style: Theme.of(context)
-                      .textTheme
-                      .bodySmall
-                      ?.copyWith(color: Theme.of(context).colorScheme.error),
-                ),
-              ),
             const SizedBox(height: 16),
             Expanded(
               child: ListView(
@@ -82,7 +68,6 @@ class _LicenseCategorySelectViewState
                     _CategoryTile(
                       category: category,
                       selected: _selected.contains(category),
-                      accessLabel: _accessLabel(user, category),
                       onChanged: (checked) {
                         setState(() {
                           if (checked) {
@@ -126,31 +111,17 @@ class _LicenseCategorySelectViewState
       ),
     );
   }
-
-  /// 各区分の現在の利用可否を短いラベルで表す（購入していないのに解放
-  /// されていると誤解しないよう、選択画面の時点で明示する）。
-  String _accessLabel(AppUser? user, LicenseCategory category) {
-    if (user != null && user.hasAccessToCategory(category.name)) {
-      return '解放済み';
-    }
-    if (category == LicenseCategory.gentsuki) {
-      return '無料版は先頭$freeGentsukiPreviewCount問のみ・他はパス購入で解放';
-    }
-    return 'パス購入が必要';
-  }
 }
 
 class _CategoryTile extends StatelessWidget {
   const _CategoryTile({
     required this.category,
     required this.selected,
-    required this.accessLabel,
     required this.onChanged,
   });
 
   final LicenseCategory category;
   final bool selected;
-  final String accessLabel;
   final ValueChanged<bool> onChanged;
 
   @override
@@ -160,10 +131,6 @@ class _CategoryTile extends StatelessWidget {
         value: selected,
         onChanged: (v) => onChanged(v ?? false),
         title: Text(category.label),
-        subtitle: Text(
-          accessLabel,
-          style: Theme.of(context).textTheme.bodySmall,
-        ),
         controlAffinity: ListTileControlAffinity.leading,
       ),
     );

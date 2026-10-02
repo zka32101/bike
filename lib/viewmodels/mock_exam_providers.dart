@@ -148,18 +148,10 @@ class MockExamController extends FamilyNotifier<MockExamState, String> {
   /// 区分内の全問題（マスター済み・未習得を問わず、段階フィルタなし）から
   /// ランダムに出題数分を選出する。
   ///
-  /// 本番模擬テストはパス未購入（無料）ユーザーは一切利用できない
-  /// （原付の無料プレビュー枠であっても対象外）。
+  /// 全問題が無料のため、区分によるロックはない。
   Future<void> load() async {
     _cancelTimer();
     state = const MockExamState();
-
-    final user = ref.read(userControllerProvider).valueOrNull;
-    final hasAccess = user?.hasAccessToCategory(_licenseCategory) ?? false;
-    if (!hasAccess) {
-      state = state.copyWith(phase: MockExamPhase.locked);
-      return;
-    }
 
     final all = await ref.read(
       questionsProvider(QuestionQuery(licenseCategory: _licenseCategory)).future,

@@ -8,7 +8,6 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:purchases_flutter/purchases_flutter.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 import 'app.dart';
@@ -19,7 +18,6 @@ import 'services/firestore_sync_service.dart';
 import 'services/google_mobile_ads_service.dart';
 import 'services/hybrid_data_service.dart';
 import 'services/local_data_service.dart';
-import 'services/revenuecat_purchase_service.dart';
 import 'viewmodels/providers.dart';
 
 // RevenueCat API キー（iOS/Android）。
@@ -56,14 +54,14 @@ void main() async {
     await prefs.setString('local_fallback_uid', localFallbackUid);
   }
 
-  // RevenueCat 初期化。APIキーが渡されている場合のみ有効化する
-  // （未設定時はStubPurchaseServiceのままで課金は一切発生しない＝安全側）。
+  // 権利管理（app_common_kit）。RevenueCat の公開SDKキーがあるときだけ実際の
+  // 購入に接続し、無い場合（iOSキー未発行など）は無料状態のフェイクで安全側に倒す。
+  // 権利名は noads / premium（RevenueCat 側で作成し、Offering に商品を入れる）。
   final revenueCatApiKey =
       Platform.isIOS ? _revenueCatApiKeyiOS : _revenueCatApiKeyAndroid;
-  final revenueCatEnabled = revenueCatApiKey.isNotEmpty;
-  if (revenueCatEnabled) {
-    await Purchases.configure(PurchasesConfiguration(revenueCatApiKey));
-  }
+  final EntitlementService entitlement = revenueCatApiKey.isNotEmpty
+      ? await RevenueCatEntitlementService.init(publicSdkKey: revenueCatApiKey)
+      : FakeEntitlementService();
 
   // ProviderScope を先にコンテナとして作り、runApp前に復習リマインダー通知の
   // 初期化（プラグイン初期化・通知タップ時のコールバック登録）を行う。
@@ -80,9 +78,7 @@ void main() async {
       // Firebase Analytics を計測サービスとして使用
       analyticsServiceProvider.overrideWithValue(FirebaseAnalyticsService()),
 
-      // RevenueCat APIキーが設定されている場合のみ、実際の購入サービスに切り替える。
-      if (revenueCatEnabled)
-        purchaseServiceProvider.overrideWithValue(RevenueCatPurchaseService()),
+      entitlementServiceProvider.overrideWithValue(entitlement),
 
       localFallbackUidProvider.overrideWithValue(localFallbackUid),
     ],
