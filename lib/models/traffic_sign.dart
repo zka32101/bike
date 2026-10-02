@@ -21,6 +21,9 @@ enum SignShape {
 
   /// 四角形（指示標識・一方通行など）
   square,
+
+  /// 五角形（横断歩道・自転車横断帯。頂点が上の家型）
+  pentagon,
 }
 
 /// 標識の中に描くシンボル（図柄）。すべて CustomPainter で描画する。
@@ -1021,7 +1024,7 @@ const List<TrafficSign> kTrafficSigns = [
     id: 'sign_pedestrian_crossing',
     name: '横断歩道',
     category: _kInstruction,
-    shape: SignShape.square,
+    shape: SignShape.pentagon,
     backgroundColor: SignColors.blue,
     rimColor: SignColors.white,
     rimWidthRatio: 0.03,
@@ -1036,7 +1039,7 @@ const List<TrafficSign> kTrafficSigns = [
     ],
     answer: 2,
     explanation:
-        '青い四角に白い三角、その中に歩く人と縞模様がある標識は「横断歩道」を示す指示標識。'
+        '青い五角形（家型）に白い三角、その中に歩く人と縞模様がある標識は「横断歩道」を示す指示標識。'
         '横断しようとする歩行者がいるときは、横断歩道の手前で一時停止して道を譲らなければならない。',
   ),
 
@@ -1104,7 +1107,7 @@ const List<TrafficSign> kTrafficSigns = [
     centerText: '停止線',
     centerTextColor: SignColors.white,
     centerTextScale: 0.24,
-    centerTextOffsetY: -0.1,
+    centerTextOffsetY: 0.2,
     questionText: 'この標識が示している内容はどれか。',
     choices: [
       '車両が停止するときの位置を示している',
@@ -1320,8 +1323,10 @@ const List<TrafficSign> kTrafficSigns = [
     id: 'sign_bicycle_crossing',
     name: '自転車横断帯',
     category: _kInstruction,
-    shape: SignShape.square,
+    shape: SignShape.pentagon,
     backgroundColor: SignColors.blue,
+    rimColor: SignColors.white,
+    rimWidthRatio: 0.03,
     symbol: SignSymbol.bicycleCrossing,
     symbolColor: SignColors.white,
     questionText: 'この標識がある場所について正しいのはどれか。',
@@ -1333,7 +1338,7 @@ const List<TrafficSign> kTrafficSigns = [
     ],
     answer: 0,
     explanation:
-        '青い四角の中に自転車と縞模様の図柄は「自転車横断帯」。自転車が道路を横断するための場所であることを示し、'
+        '青い五角形（家型）の中に自転車と縞模様の図柄は「自転車横断帯」。自転車が道路を横断するための場所であることを示し、'
         'この標識のある場所付近では自動車・二輪車は自転車の横断を妨げないよう注意する。',
   ),
 
@@ -1344,6 +1349,8 @@ const List<TrafficSign> kTrafficSigns = [
     category: _kInstruction,
     shape: SignShape.square,
     backgroundColor: SignColors.blue,
+    rimColor: SignColors.white,
+    rimWidthRatio: 0.03,
     symbol: SignSymbol.safetyZoneMarkers,
     symbolColor: SignColors.white,
     questionText: 'この標識がある場所での運転者の義務として正しいのはどれか。',
@@ -1355,7 +1362,7 @@ const List<TrafficSign> kTrafficSigns = [
     ],
     answer: 1,
     explanation:
-        '青い四角に2つの三角マークは「安全地帯」で、路面電車の停留所などで歩行者が安全に待機する場所を示す。'
+        '青い四角に白いV字のマークは「安全地帯」で、路面電車の停留所などで歩行者が安全に待機する場所を示す。'
         '安全地帯に歩行者がいるときは、その側方を通過する際に徐行しなければならない。',
   ),
 
