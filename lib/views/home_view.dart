@@ -1,12 +1,10 @@
 import 'package:app_common_kit/app_common_kit.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:google_mobile_ads/google_mobile_ads.dart';
 
 import '../core/constants/license_category.dart';
 import '../l10n/generated/app_localizations.dart';
 import '../services/daily_question_widget_service.dart';
-import '../services/google_mobile_ads_service.dart';
 import '../viewmodels/mock_exam_providers.dart';
 import '../viewmodels/providers.dart';
 import '../widgets/pass_prediction_meter.dart';
@@ -246,50 +244,12 @@ class _HomeViewState extends ConsumerState<HomeView> {
               ),
             ),
       ),
-      bottomNavigationBar:
-          ref.watch(adsHiddenProvider) ? null : const _HomeBannerAdBar(),
-    );
-  }
-}
-
-/// 広告が有効なユーザーのホーム画面下部に表示するバナー広告。
-/// 広告なし(noads)・プレミアムのユーザーには表示しない。
-class _HomeBannerAdBar extends StatefulWidget {
-  const _HomeBannerAdBar();
-
-  @override
-  State<_HomeBannerAdBar> createState() => _HomeBannerAdBarState();
-}
-
-class _HomeBannerAdBarState extends State<_HomeBannerAdBar> {
-  BannerAd? _bannerAd;
-
-  @override
-  void initState() {
-    super.initState();
-    GoogleMobileAdsService().loadBannerAd(
-      onAdLoaded: (ad) {
-        if (mounted) setState(() => _bannerAd = ad);
-      },
-    );
-  }
-
-  @override
-  void dispose() {
-    _bannerAd?.dispose();
-    super.dispose();
-  }
-
-  @override
-  Widget build(BuildContext context) {
-    final ad = _bannerAd;
-    if (ad == null) return const SizedBox.shrink();
-    return SafeArea(
-      child: SizedBox(
-        width: ad.size.width.toDouble(),
-        height: ad.size.height.toDouble(),
-        child: AdWidget(ad: ad),
-      ),
+      bottomNavigationBar: ref.watch(adsHiddenProvider)
+          ? null
+          : SafeArea(
+              child: ref.read(adGateProvider)?.banner(BannerPlacement.home) ??
+                  const SizedBox.shrink(),
+            ),
     );
   }
 }

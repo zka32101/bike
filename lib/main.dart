@@ -15,7 +15,7 @@ import 'firebase_options.dart';
 import 'services/firebase_analytics_service.dart';
 import 'services/firestore_data_service.dart';
 import 'services/firestore_sync_service.dart';
-import 'services/google_mobile_ads_service.dart';
+import 'services/ad_units.dart';
 import 'services/hybrid_data_service.dart';
 import 'services/local_data_service.dart';
 import 'viewmodels/providers.dart';
@@ -41,9 +41,6 @@ void main() async {
     options: DefaultFirebaseOptions.currentPlatform,
   );
 
-  // Google Mobile Ads SDK 初期化（テスト広告IDはAdMob側の実IDに差し替え予定）
-  await GoogleMobileAdsService().initialize();
-
   // Firebase Auth が使えない場合（Firebase Console未設定等）のフォールバックUID。
   // 端末に永続化し、オフライン継続時も同一端末では常に同じIDを使う。
   final prefs = await SharedPreferences.getInstance();
@@ -63,6 +60,17 @@ void main() async {
       ? await RevenueCatEntitlementService.init(publicSdkKey: revenueCatApiKey)
       : FakeEntitlementService();
 
+  // 広告ゲート（app_common_kit）。同意(UMP)・頻度制御・有料時の非初期化を担う。
+  // 広告なし(noads)・プレミアムの間は広告SDKを初期化しない。ユニットIDが
+  // 使えない場合（iOSの本番ID未発行など）は null で、広告なしで動作する。
+  final adUnits = BikeAdUnits.resolve();
+  final AdGate? adGate = adUnits == null
+      ? null
+      : await AdGate.init(
+          config: AdConfig(unitIds: adUnits),
+          adsHidden: () => entitlement.state.adsHidden,
+        );
+
   // ProviderScope を先にコンテナとして作り、runApp前に復習リマインダー通知の
   // 初期化（プラグイン初期化・通知タップ時のコールバック登録）を行う。
   final container = ProviderContainer(
@@ -79,6 +87,7 @@ void main() async {
       analyticsServiceProvider.overrideWithValue(FirebaseAnalyticsService()),
 
       entitlementServiceProvider.overrideWithValue(entitlement),
+      adGateProvider.overrideWithValue(adGate),
 
       localFallbackUidProvider.overrideWithValue(localFallbackUid),
     ],

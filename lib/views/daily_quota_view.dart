@@ -1,10 +1,11 @@
+import 'dart:async';
+
 import 'package:app_common_kit/app_common_kit.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 import '../l10n/generated/app_localizations.dart';
 import '../models/pass_prediction_score.dart';
-import '../services/google_mobile_ads_service.dart';
 import '../viewmodels/providers.dart';
 import '../widgets/answer_result_overlay.dart';
 import '../widgets/pass_prediction_meter.dart';
@@ -245,23 +246,19 @@ class _QuotaCompletedViewState extends ConsumerState<_QuotaCompletedView> {
   void initState() {
     super.initState();
     // 【広告制御】ノルマ完走後の結果画面でのみインタースティシャルを検討する。
-    // AdGateService.canShowInterstitial が true の場合のみ・広告が有効なユーザーのみ。
     WidgetsBinding.instance.addPostFrameCallback((_) => _maybeShowInterstitial());
   }
 
   void _maybeShowInterstitial() {
-    // 広告なし(noads)またはプレミアムなら出さない。
-    if (ref.read(adsHiddenProvider)) return;
+    // 禁止ゾーン（出題中など）では出さない。
+    if (!ref.read(adGateServiceProvider).isAdAllowedNow) return;
 
-    final adGate = ref.read(adGateServiceProvider);
-    if (!adGate.canShowInterstitial) return;
-
-    GoogleMobileAdsService().loadInterstitialAd(
-      onAdLoaded: () {
-        adGate.markInterstitialShown();
-        GoogleMobileAdsService().showInterstitialAd(onAdDismissed: () {});
-      },
-      onAdFailedToLoad: (_) {},
+    // 同意・有料時の非表示・最短間隔・1日の上限は AdGate が判定する。
+    unawaited(
+      ref
+          .read(adGateProvider)
+          ?.maybeShowInterstitial(InterstitialTrigger.sessionEnd) ??
+          Future<void>.value(),
     );
   }
 
