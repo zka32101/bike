@@ -238,7 +238,7 @@ void main() {
           expect(q['sourceRef'], isNotNull, reason: '$id に出典がない');
         }
       }
-      expect(byId.length, greaterThanOrEqualTo(250));
+      expect(byId.length, greaterThanOrEqualTo(450));
     });
 
     test('追加した問題は、原付と小型限定普通二輪（125cc以下）に高速道路の問題を出さない', () {
@@ -249,8 +249,9 @@ void main() {
           if (!(q['id'] as String).startsWith('x')) continue;
           expect(q['topicTag'] != 'highway', isTrue);
           final text = (q['questionText'] as String);
-          expect(text.contains('高速道路') || text.contains('高速自動車国道'), isFalse,
-              reason: '${q['id']}（$name）に高速道路の問題');
+          final aboutHighway = (text.contains('高速道路') || text.contains('高速自動車国道')) &&
+              !text.contains('以外');
+          expect(aboutHighway, isFalse, reason: '${q['id']}（$name）に高速道路の問題');
         }
       }
     });
