@@ -17812,5 +17812,2782 @@
     "topicTag": "license_system",
     "sourceRef": "道路交通法施行令第26条の4の2",
     "lawVersion": "2026-10-03"
+  },
+  {
+    "id": "x453",
+    "licenseCategory": [
+      "gentsuki",
+      "kogataGentsukiNirin",
+      "futsuuNirin",
+      "ogataNirin",
+      "atGentei"
+    ],
+    "stageTag": "第二段階",
+    "difficulty": 2,
+    "questionText": "運転中の疲労の度が高まるにつれて起こりやすくなることとして、教則に示されているのはどれか。",
+    "choices": [
+      "見落としや見間違いが多くなる",
+      "明るさの変化で視力が一時急激に低下する",
+      "対向車のライトがまぶしく感じなくなる",
+      "特に近くのものが見えにくくなる"
+    ],
+    "answer": 0,
+    "explanation": "教則では、疲労の度が高まるにつれて見落としや見間違いが多くなるので気を付けるよう示されています。",
+    "isTrapQuestion": true,
+    "trapNumberType": "other",
+    "topicTag": "hazard_prediction",
+    "sourceRef": "教則 第4章第5節 安全運転に必要な知識など 1 視覚の特性",
+    "lawVersion": "2026-10-03"
+  },
+  {
+    "id": "x454",
+    "licenseCategory": [
+      "gentsuki",
+      "kogataGentsukiNirin",
+      "futsuuNirin",
+      "ogataNirin",
+      "atGentei"
+    ],
+    "stageTag": "第二段階",
+    "difficulty": 2,
+    "questionText": "夜間、対向車が近づいてきたときの視覚に関する注意として、教則に示されているのはどれか。",
+    "choices": [
+      "対向車のライトを見て相手の位置を確かめ続ける",
+      "対向車の運転者の目を見て合図を確かめる",
+      "対向車のライトを直視しないようにする",
+      "前方の一点だけを注視して走り続ける"
+    ],
+    "answer": 2,
+    "explanation": "教則では、夜間は対向車のライトを直視しないようにしましょうと示されています。",
+    "isTrapQuestion": false,
+    "trapNumberType": "none",
+    "topicTag": "hazard_prediction",
+    "sourceRef": "教則 第4章第5節 安全運転に必要な知識など 1 視覚の特性",
+    "lawVersion": "2026-10-03"
+  },
+  {
+    "id": "x455",
+    "licenseCategory": [
+      "gentsuki",
+      "kogataGentsukiNirin",
+      "futsuuNirin",
+      "ogataNirin",
+      "atGentei"
+    ],
+    "stageTag": "第二段階",
+    "difficulty": 3,
+    "questionText": "衝突したときの衝撃力について、教則に示されている内容として正しいのはどれか。",
+    "choices": [
+      "固い物にぶつかるように、衝撃の作用が短時間に行われるほど大きくなる",
+      "衝撃の作用が長時間に及ぶほど、衝撃力は大きくなる",
+      "衝撃力は速度に比例して大きくなり、2乗には比例しない",
+      "衝撃力は速度とは関係なく、重量だけで決まる"
+    ],
+    "answer": 0,
+    "explanation": "教則では、固い物にぶつかるときのように衝撃の作用が短時間に行われるほど、その力は大きくなるとされています。",
+    "isTrapQuestion": true,
+    "trapNumberType": "other",
+    "topicTag": "hazard_prediction",
+    "sourceRef": "教則 第4章第5節 安全運転に必要な知識など 2 自動車に働く自然の力 (3) 衝撃力",
+    "lawVersion": "2026-10-03"
+  },
+  {
+    "id": "x456",
+    "licenseCategory": [
+      "gentsuki",
+      "kogataGentsukiNirin",
+      "futsuuNirin",
+      "ogataNirin",
+      "atGentei"
+    ],
+    "stageTag": "第二段階",
+    "difficulty": 2,
+    "questionText": "走行中の車を止めるために、ブレーキを掛けて車輪の回転を止めたとき利用する力として、教則に示されているのはどれか。",
+    "choices": [
+      "タイヤと路面の間の摩擦抵抗",
+      "カーブの外側に働く遠心力",
+      "衝突したときに生じる衝撃力",
+      "クラッチを切った後も続く走り続けようとする力"
+    ],
+    "answer": 0,
+    "explanation": "教則では、車を止めるにはブレーキで車輪の回転を止め、タイヤと路面の間の摩擦抵抗を利用するとされています。",
+    "isTrapQuestion": false,
+    "trapNumberType": "none",
+    "topicTag": "operation",
+    "sourceRef": "教則 第4章第5節 安全運転に必要な知識など 2 自動車に働く自然の力 (1) 摩擦の力",
+    "lawVersion": "2026-10-03"
+  },
+  {
+    "id": "x457",
+    "licenseCategory": [
+      "gentsuki",
+      "kogataGentsukiNirin",
+      "futsuuNirin",
+      "ogataNirin",
+      "atGentei"
+    ],
+    "stageTag": "第二段階",
+    "difficulty": 2,
+    "questionText": "交通公害を少なくするために、教則に示されている心掛けはどれか。",
+    "choices": [
+      "早く走り抜けるため、急発進や急加速をして通過時間を短くする",
+      "積載制限は守り、最高速度は道路の流れに合わせて超えてもよい",
+      "最高速度や積載制限を守り、不必要な急発進や急ブレーキ、空ぶかしを避ける",
+      "駐停車するときは、すぐ発進できるようエンジンをかけておく"
+    ],
+    "answer": 2,
+    "explanation": "教則では、最高速度や積載制限などの規制を守り、不必要な急発進や急ブレーキ、空ぶかしを避けるよう努めることが示されています。",
+    "isTrapQuestion": false,
+    "trapNumberType": "none",
+    "topicTag": "rules",
+    "sourceRef": "教則 第4章第5節 安全運転に必要な知識など 3 交通公害、地球温暖化の防止など",
+    "lawVersion": "2026-10-03"
+  },
+  {
+    "id": "x458",
+    "licenseCategory": [
+      "gentsuki",
+      "kogataGentsukiNirin",
+      "futsuuNirin",
+      "ogataNirin",
+      "atGentei"
+    ],
+    "stageTag": "第二段階",
+    "difficulty": 2,
+    "questionText": "運転適性についての指導を行っている機関として、教則に示されているのはどれか。",
+    "choices": [
+      "各都道府県の交通安全活動推進センターなど",
+      "各都道府県の運転免許試験場の技能試験係のみ",
+      "各都道府県の自動車運送事業者団体",
+      "各市区町村の道路管理事務所"
+    ],
+    "answer": 0,
+    "explanation": "教則では、運転適性についての指導は各都道府県の交通安全活動推進センターなどで行っているとされています。",
+    "isTrapQuestion": true,
+    "trapNumberType": "other",
+    "topicTag": "license_system",
+    "sourceRef": "教則 第4章第5節 安全運転に必要な知識など 4 運転適性",
+    "lawVersion": "2026-10-03"
+  },
+  {
+    "id": "x459",
+    "licenseCategory": [
+      "gentsuki",
+      "kogataGentsukiNirin",
+      "futsuuNirin",
+      "ogataNirin",
+      "atGentei"
+    ],
+    "stageTag": "第二段階",
+    "difficulty": 3,
+    "questionText": "教則の乗車と積載の制限で人数を数えるとき、12歳未満の子供はどのように計算するか。",
+    "choices": [
+      "３人を２人として計算する",
+      "１人を１人として計算し、子供も大人と同じに数える",
+      "２人を１人として計算する",
+      "３人を１人として計算する"
+    ],
+    "answer": 0,
+    "explanation": "教則の備考では、12歳未満の子供は３人を２人として計算するとされています。",
+    "isTrapQuestion": true,
+    "trapNumberType": "other",
+    "topicTag": "rules",
+    "sourceRef": "教則 第4章第4節 乗車と積載 1 備考",
+    "lawVersion": "2026-10-03"
+  },
+  {
+    "id": "x460",
+    "licenseCategory": [
+      "gentsuki",
+      "kogataGentsukiNirin",
+      "futsuuNirin",
+      "ogataNirin",
+      "atGentei"
+    ],
+    "stageTag": "第二段階",
+    "difficulty": 2,
+    "questionText": "走行中に積んでいた荷物が道路に転落してしまった。教則に沿った対応として正しいのはどれか。",
+    "choices": [
+      "後続車に注意する余裕はないので、荷物を除去する措置は採らない",
+      "後続車などに十分注意しながら、速やかにその物を除去するなど必要な措置を採る",
+      "後続車が避けるはずなので、荷物はそのままにして走り続ける",
+      "荷物が転落した位置を覚えて、次の機会に取りに戻る"
+    ],
+    "answer": 1,
+    "explanation": "教則では、荷物が転落、飛散してしまったときは、速やかにその物を除去するなど必要な措置を採り、その場合は後続車などに十分注意するとされています。",
+    "isTrapQuestion": false,
+    "trapNumberType": "none",
+    "topicTag": "emergency",
+    "sourceRef": "教則 第4章第4節 乗車と積載 4",
+    "lawVersion": "2026-10-03"
+  },
+  {
+    "id": "x461",
+    "licenseCategory": [
+      "kogataGentsukiNirin",
+      "futsuuNirin",
+      "ogataNirin",
+      "atGentei"
+    ],
+    "stageTag": "第二段階",
+    "difficulty": 2,
+    "questionText": "狭い道路から広い道路に出るため、やむを得ずバックで発進する場合、教則ではどうするよう示しているか。",
+    "choices": [
+      "同乗者などに後方の確認を手伝ってもらう",
+      "後方の確認は省略し、前方だけを確認して発進する",
+      "ミラーだけで確認し、同乗者には前方を見てもらう",
+      "速度を上げて、一気に広い道路に出る"
+    ],
+    "answer": 0,
+    "explanation": "やむを得ずバックで発進する場合で、狭い道路から広い道路に出るときは、同乗者などに後方の確認を手伝ってもらいましょう。",
+    "isTrapQuestion": false,
+    "trapNumberType": "none",
+    "topicTag": "hazard_prediction",
+    "sourceRef": "教則 第５章 第１節 安全な発進 ５ 発進に当たつての安全確認",
+    "lawVersion": "2026-10-03"
+  },
+  {
+    "id": "x462",
+    "licenseCategory": [
+      "gentsuki",
+      "kogataGentsukiNirin",
+      "futsuuNirin",
+      "ogataNirin",
+      "atGentei"
+    ],
+    "stageTag": "第一段階",
+    "difficulty": 1,
+    "questionText": "中央線のある道路を二輪車で通行するとき、原則として通行しなければならない部分はどれか。",
+    "choices": [
+      "中央線をまたいで道路の中央寄りの部分",
+      "道路の左端から0.5メートルの路肩の部分",
+      "道路の中央線から左の部分",
+      "中央線から右の部分と左の部分の両方を車の流れに合わせて"
+    ],
+    "answer": 2,
+    "explanation": "道路の左側を走ること、で本文は中央線があるときはその中央線から左の部分を通行しなければならないとしています。",
+    "isTrapQuestion": false,
+    "trapNumberType": "none",
+    "topicTag": "rules",
+    "sourceRef": "教則 第5章第2節 自動車の通行するところ １ 道路の左側を走ること",
+    "lawVersion": "2026-10-03"
+  },
+  {
+    "id": "x463",
+    "licenseCategory": [
+      "gentsuki",
+      "kogataGentsukiNirin",
+      "futsuuNirin",
+      "ogataNirin",
+      "atGentei"
+    ],
+    "stageTag": "第二段階",
+    "difficulty": 3,
+    "questionText": "二輪車が道路の中央から右の部分にはみ出して通行できる場合のうち、はみ出し方をできるだけ少なくする必要がないのはどれか。",
+    "choices": [
+      "工事などのため左側部分だけでは通行に十分な幅がないとき",
+      "一方通行となっているとき",
+      "幅6メートル未満の見通しのよい道路で、ほかの車を追い越そうとするとき",
+      "こう配の急な道路の曲がり角付近で「右側通行」の標示があるとき"
+    ],
+    "answer": 1,
+    "explanation": "はみ出して通行できる場合でも、（１）の一方通行の場合のほかは、はみ出し方ができるだけ少なくなるようにしなければなりません。",
+    "isTrapQuestion": true,
+    "trapNumberType": "other",
+    "topicTag": "rules",
+    "sourceRef": "教則 第5章第2節 自動車の通行するところ １ 道路の左側を走ること",
+    "lawVersion": "2026-10-03"
+  },
+  {
+    "id": "x464",
+    "licenseCategory": [
+      "gentsuki",
+      "kogataGentsukiNirin",
+      "futsuuNirin",
+      "ogataNirin",
+      "atGentei"
+    ],
+    "stageTag": "第一段階",
+    "difficulty": 1,
+    "questionText": "車両通行帯のない道路を二輪車で通行するときの原則として正しいのはどれか。",
+    "choices": [
+      "路側帯の上を通行して、できるだけ左端に寄る",
+      "交通量が少ないときは、道路の中央に寄って通行する",
+      "追越しなどでやむを得ない場合のほかは、道路の左に寄って通行する",
+      "追越しをしないときも、前の車との間隔に応じて中央線寄りを通行する"
+    ],
+    "answer": 2,
+    "explanation": "車両通行帯のない道路では、追越しなどでやむを得ない場合のほかは、道路の左に寄って通行しなければなりません。",
+    "isTrapQuestion": false,
+    "trapNumberType": "none",
+    "topicTag": "rules",
+    "sourceRef": "教則 第5章第2節 自動車の通行するところ ２ 道路の左寄りに走ること",
+    "lawVersion": "2026-10-03"
+  },
+  {
+    "id": "x465",
+    "licenseCategory": [
+      "gentsuki",
+      "kogataGentsukiNirin",
+      "futsuuNirin",
+      "ogataNirin",
+      "atGentei"
+    ],
+    "stageTag": "第二段階",
+    "difficulty": 2,
+    "questionText": "同一の方向に二つの車両通行帯がある道路を、標識や標示による通行区分の指定がないときに二輪車で通行する場合の原則として正しいのはどれか。",
+    "choices": [
+      "右側の車両通行帯を通行する",
+      "どちらの車両通行帯を通行してもよい",
+      "速度が速いときは右側、遅いときは左側を通行する",
+      "左側の車両通行帯を通行する"
+    ],
+    "answer": 3,
+    "explanation": "同一の方向に二つの車両通行帯があるときは、左側の車両通行帯を通行しなければなりません。",
+    "isTrapQuestion": true,
+    "trapNumberType": "other",
+    "topicTag": "rules",
+    "sourceRef": "教則 第5章第2節 自動車の通行するところ ２ 道路の左寄りに走ること",
+    "lawVersion": "2026-10-03"
+  },
+  {
+    "id": "x466",
+    "licenseCategory": [
+      "gentsuki",
+      "kogataGentsukiNirin",
+      "futsuuNirin",
+      "ogataNirin",
+      "atGentei"
+    ],
+    "stageTag": "第二段階",
+    "difficulty": 2,
+    "questionText": "二輪車を運転中、前方の道路を身体障害者用の車で通行している人がいる。運転者がしなければならない対応はどれか。",
+    "choices": [
+      "警音器を鳴らして知らせ、道の端へ寄ってもらう",
+      "そばを通る前に、徐行も一時停止もせずに側方の間隔だけ広くとる",
+      "速度を保ったまま、できるだけ右側に寄って追い越す",
+      "一時停止か徐行をして、その人が安全に通れるようにする"
+    ],
+    "answer": 3,
+    "explanation": "身体障害者用の車で通行している人がいる場合は、一時停止か徐行をして、安全に通れるようにしなければなりません。",
+    "isTrapQuestion": false,
+    "trapNumberType": "none",
+    "topicTag": "rules",
+    "sourceRef": "教則 第5章第3節 歩行者の保護など ３ 身体の不自由な人の保護",
+    "lawVersion": "2026-10-03"
+  },
+  {
+    "id": "x470",
+    "licenseCategory": [
+      "gentsuki",
+      "kogataGentsukiNirin",
+      "futsuuNirin",
+      "ogataNirin",
+      "atGentei"
+    ],
+    "stageTag": "第二段階",
+    "difficulty": 2,
+    "questionText": "二輪車が環状交差点を出ようとするとき、方向指示器による合図として、正しいのはどれか。",
+    "choices": [
+      "左側の方向指示器を操作する",
+      "後退灯をつける",
+      "右側の方向指示器を操作する",
+      "ブレーキ灯をつける"
+    ],
+    "answer": 0,
+    "explanation": "環状交差点を出るときは、左側の方向指示器を操作するか、手による合図（左折と同じ）を行います。",
+    "isTrapQuestion": false,
+    "trapNumberType": "none",
+    "topicTag": "rules",
+    "sourceRef": "教則 第5章第５節 進路変更など １ 安全の確認と合図",
+    "lawVersion": "2026-10-03"
+  },
+  {
+    "id": "x472",
+    "licenseCategory": [
+      "gentsuki",
+      "kogataGentsukiNirin",
+      "futsuuNirin",
+      "ogataNirin",
+      "atGentei"
+    ],
+    "stageTag": "第二段階",
+    "difficulty": 2,
+    "questionText": "二輪車で追越しをするときの運転手順のうち、最初にすることとして正しいのはどれか。",
+    "choices": [
+      "追い越した車がルームミラーで見えるくらいの距離まで進む",
+      "最高速度の制限内で加速しながら、前の車の右側へ進路をとる",
+      "追越し禁止の場所でないことを確かめる",
+      "右側の方向指示器を出して、追い越す意思を周囲に知らせる"
+    ],
+    "answer": 2,
+    "explanation": "追越しの運転手順は、まず追越し禁止の場所でないことを確かめることから始まります。",
+    "isTrapQuestion": true,
+    "trapNumberType": "other",
+    "topicTag": "rules",
+    "sourceRef": "教則 第5章第6節 追越しなど",
+    "lawVersion": "2026-10-03"
+  },
+  {
+    "id": "x473",
+    "licenseCategory": [
+      "gentsuki",
+      "kogataGentsukiNirin",
+      "futsuuNirin",
+      "ogataNirin",
+      "atGentei"
+    ],
+    "stageTag": "第二段階",
+    "difficulty": 2,
+    "questionText": "二輪車で道路の右側部分にはみ出して追越しをしようとするとき、安全の確認について正しいのはどれか。",
+    "choices": [
+      "前方や右斜め後方に加え、反対方向の安全も必ず確かめる",
+      "確認するのは前方と右斜め後方だけでよく、反対方向は見なくてよい",
+      "反対方向の安全は、対向車が見えたときだけ確かめればよい",
+      "反対方向の安全は、右側の方向指示器を出した後に確かめればよい"
+    ],
+    "answer": 0,
+    "explanation": "右側部分にはみ出した追越しでは、前方や右斜め後方に加えて反対方向の安全を必ず確かめます。",
+    "isTrapQuestion": true,
+    "trapNumberType": "other",
+    "topicTag": "hazard_prediction",
+    "sourceRef": "教則 第5章第6節 追越しなど",
+    "lawVersion": "2026-10-03"
+  },
+  {
+    "id": "x474",
+    "licenseCategory": [
+      "gentsuki",
+      "kogataGentsukiNirin",
+      "futsuuNirin",
+      "ogataNirin",
+      "atGentei"
+    ],
+    "stageTag": "第二段階",
+    "difficulty": 3,
+    "questionText": "二輪車の運転で、教則が追越しに必要だと述べている運転操作はどれか。",
+    "choices": [
+      "進路を変え、減速した上で再び進路を戻すという複雑な運転操作",
+      "進路を変えたまま、元の進路には戻らずに加速を続ける運転操作",
+      "進路を変えずに、加速するだけで前の車の前方に出る単純な運転操作",
+      "進路を変え、加速した上で再び進路を戻すという複雑な運転操作"
+    ],
+    "answer": 3,
+    "explanation": "追越しは、進路を変え、加速した上で再び進路を戻すという複雑な運転操作を必要とします。",
+    "isTrapQuestion": true,
+    "trapNumberType": "other",
+    "topicTag": "rules",
+    "sourceRef": "教則 第5章第6節 追越しなど",
+    "lawVersion": "2026-10-03"
+  },
+  {
+    "id": "x475",
+    "licenseCategory": [
+      "gentsuki",
+      "kogataGentsukiNirin",
+      "futsuuNirin",
+      "ogataNirin",
+      "atGentei"
+    ],
+    "stageTag": "第二段階",
+    "difficulty": 3,
+    "questionText": "二輪車で道路の右側部分に入って追越しをしようとする場面について、正しいのはどれか。",
+    "choices": [
+      "前の車の進行を妨げなければ左側部分に戻れないときでも、追越しをしてよい",
+      "後ろの車が自分を追い越そうとしていても、右側部分に入れば追越しをしてよい",
+      "前の車の進行を妨げなければ左側部分に戻れないときは、追越しをしてはならない",
+      "反対方向からの車の進行を妨げるときでも、前方が空いていれば追越しをしてよい"
+    ],
+    "answer": 2,
+    "explanation": "右側部分に入っての追越しでは、反対方向からの車などや前の車の進行を妨げるときは追越しが禁止されます。",
+    "isTrapQuestion": true,
+    "trapNumberType": "other",
+    "topicTag": "hazard_prediction",
+    "sourceRef": "教則 第5章第6節 追越しなど",
+    "lawVersion": "2026-10-03"
+  },
+  {
+    "id": "x476",
+    "licenseCategory": [
+      "gentsuki",
+      "kogataGentsukiNirin",
+      "futsuuNirin",
+      "ogataNirin",
+      "atGentei"
+    ],
+    "stageTag": "第二段階",
+    "difficulty": 2,
+    "questionText": "二輪車で進路を変えたいが、変えると後ろから来る車が急ブレーキや急ハンドルで避けなければならない状況のとき、正しいのはどれか。",
+    "choices": [
+      "合図を出せば、進路を変えてよい",
+      "バックミラーを見たうえなら、進路を変えてよい",
+      "進路を変えてはならない",
+      "後ろの車より速度が速ければ、進路を変えてよい"
+    ],
+    "answer": 2,
+    "explanation": "進路を変更すると後ろの車が急ブレーキや急ハンドルで避けなければならないような場合は、進路を変えてはいけません。",
+    "isTrapQuestion": true,
+    "trapNumberType": "other",
+    "topicTag": "hazard_prediction",
+    "sourceRef": "教則 第5章第5節 進路変更など",
+    "lawVersion": "2026-10-03"
+  },
+  {
+    "id": "x477",
+    "licenseCategory": [
+      "gentsuki",
+      "kogataGentsukiNirin",
+      "futsuuNirin",
+      "ogataNirin",
+      "atGentei"
+    ],
+    "stageTag": "第二段階",
+    "difficulty": 2,
+    "questionText": "車両通行帯のある道路で、二輪車が最も右側の車両通行帯を通行して追越しをしたあとについて、正しいのはどれか。",
+    "choices": [
+      "通行し続けると速度超過や車間距離不足になり危険なので、速やかにそれ以外の通行帯に戻る",
+      "最も右側の通行帯は速度制限の対象外なので、通行し続けてよい",
+      "追越しを終えていれば、そのまま通行し続けても他の車の追越しの妨げにならない",
+      "次の追越しに備えるため、最も右側の通行帯を通行し続けるのがよい"
+    ],
+    "answer": 0,
+    "explanation": "最も右側の車両通行帯を通行し続けると、速度超過や車間距離が短くなるなど危険なため、速やかに戻らなければなりません。",
+    "isTrapQuestion": false,
+    "trapNumberType": "none",
+    "topicTag": "rules",
+    "sourceRef": "教則 第5章第6節 追越しなど",
+    "lawVersion": "2026-10-03"
+  },
+  {
+    "id": "x478",
+    "licenseCategory": [
+      "gentsuki",
+      "kogataGentsukiNirin",
+      "futsuuNirin",
+      "ogataNirin",
+      "atGentei"
+    ],
+    "stageTag": "第二段階",
+    "difficulty": 2,
+    "questionText": "交差点で右折しようとするとき、対向車線を直進する二輪車について、教則が述べている注意として正しいのはどれか。",
+    "choices": [
+      "二輪車は見つけやすいので、通常の確認で足り、特別な注意は必要ない",
+      "二輪車が見えにくくなることがあるので、十分注意する",
+      "二輪車に注意が必要なのは、夜間に右折するときだけである",
+      "自分の車が先に交差点に入っていれば、二輪車の確認は省いてもよい"
+    ],
+    "answer": 1,
+    "explanation": "教則は、特に右折しようとするときは対向車線を直進する二輪車が見えにくくなることがあるので、十分注意するよう述べています。",
+    "isTrapQuestion": false,
+    "trapNumberType": "none",
+    "topicTag": "hazard_prediction",
+    "sourceRef": "教則 第5章第7節 交差点の通り方 １ 交差点を通行するときの注意",
+    "lawVersion": "2026-10-03"
+  },
+  {
+    "id": "x479",
+    "licenseCategory": [
+      "gentsuki",
+      "kogataGentsukiNirin",
+      "futsuuNirin",
+      "ogataNirin",
+      "atGentei"
+    ],
+    "stageTag": "第二段階",
+    "difficulty": 2,
+    "questionText": "車が右左折するときに生じる「内輪差」の説明として、教則に沿って正しいのはどれか。",
+    "choices": [
+      "曲がるとき車体が外側へ振られることによる、進路のふくらみの差",
+      "曲がるとき前輪が後輪より内側を通ることによる、前後輪の軌跡の差",
+      "曲がるとき車体の左右の車輪が異なる速さで回ることによる、速度の差",
+      "曲がるとき後輪が前輪より内側を通ることによる、前後輪の軌跡の差"
+    ],
+    "answer": 3,
+    "explanation": "内輪差とは、曲がるとき後輪が前輪より内側を通ることによる前後輪の軌跡の差をいいます。",
+    "isTrapQuestion": true,
+    "trapNumberType": "other",
+    "topicTag": "rules",
+    "sourceRef": "教則 第5章第7節 交差点の通り方 １ 交差点を通行するときの注意",
+    "lawVersion": "2026-10-03"
+  },
+  {
+    "id": "x480",
+    "licenseCategory": [
+      "gentsuki",
+      "kogataGentsukiNirin",
+      "futsuuNirin",
+      "ogataNirin",
+      "atGentei"
+    ],
+    "stageTag": "第二段階",
+    "difficulty": 2,
+    "questionText": "二輪車で交差点を右左折する場合に、路面の矢印などの標示で通行方法が指定されているときの通り方として正しいのはどれか。",
+    "choices": [
+      "標示で指定された通行方法に従わなければならない",
+      "交通量が少なく安全が確認できるときは、指定に従わなくてもよい",
+      "指定に従わなければならないのは、二段階右折をする原付だけである",
+      "左折は道路の左端、右折は道路の中央に寄る原則どおりの通行を優先してよい"
+    ],
+    "answer": 0,
+    "explanation": "右左折の場合、矢印などの標示で通行方法を指定されているときは、それに従わなければなりません。",
+    "isTrapQuestion": false,
+    "trapNumberType": "none",
+    "topicTag": "rules",
+    "sourceRef": "教則 第5章第7節 交差点の通り方 ２ 交差点の通行方法",
+    "lawVersion": "2026-10-03"
+  },
+  {
+    "id": "x481",
+    "licenseCategory": [
+      "gentsuki",
+      "kogataGentsukiNirin",
+      "futsuuNirin",
+      "ogataNirin",
+      "atGentei"
+    ],
+    "stageTag": "第二段階",
+    "difficulty": 3,
+    "questionText": "車両通行帯のある道路で、標識や標示により交差点で進行する方向ごとに通行区分が指定されている。指定された区分に従わなくてもよい場合として、教則に示されているのはどれか。",
+    "choices": [
+      "後ろの車に急がされて、指定された区分を通り続けにくい場合",
+      "緊急自動車が近づいて来た場合や、道路工事などでやむを得ない場合",
+      "目的地が近く、指定された区分以外から進行したほうが近道になる場合",
+      "交通量が少なく、他の車の進行を妨げるおそれがない場合"
+    ],
+    "answer": 1,
+    "explanation": "緊急自動車が近づいて来た場合や道路工事などでやむを得ない場合のほかは、指定された区分に従つて通行しなければなりません。",
+    "isTrapQuestion": true,
+    "trapNumberType": "other",
+    "topicTag": "rules",
+    "sourceRef": "教則 第5章第7節 交差点の通り方 ２ 交差点の通行方法",
+    "lawVersion": "2026-10-03"
+  },
+  {
+    "id": "x483",
+    "licenseCategory": [
+      "gentsuki",
+      "kogataGentsukiNirin",
+      "futsuuNirin",
+      "ogataNirin",
+      "atGentei"
+    ],
+    "stageTag": "第二段階",
+    "difficulty": 2,
+    "questionText": "標識によって直進や左折など進行方向が指定されている交差点での通行方法として、正しいのはどれか。",
+    "choices": [
+      "指定された方向以外へも、徐行すれば進行してよい",
+      "指定された方向にしか進行してはいけない",
+      "指定された方向以外へ進行してよいのは、後続車がいないときである",
+      "指定された方向に進行できないときに限り、他の方向へ進行してよい"
+    ],
+    "answer": 1,
+    "explanation": "標識によって進行方向が指定されている交差点では、その指定された方向にしか進行してはいけません。",
+    "isTrapQuestion": false,
+    "trapNumberType": "none",
+    "topicTag": "rules",
+    "sourceRef": "教則 第5章第7節 交差点の通り方 ２ 交差点の通行方法",
+    "lawVersion": "2026-10-03"
+  },
+  {
+    "id": "x484",
+    "licenseCategory": [
+      "gentsuki",
+      "kogataGentsukiNirin",
+      "futsuuNirin",
+      "ogataNirin",
+      "atGentei"
+    ],
+    "stageTag": "第二段階",
+    "difficulty": 2,
+    "questionText": "環状交差点で左折、右折、直進、転回をしようとするとき、矢印などの標示で通行方法が指定されている場合の通り方として正しいのはどれか。",
+    "choices": [
+      "標示に従わなければならないのは、直進するときだけである",
+      "標示で指定された通行方法に従わなければならない",
+      "標示にかかわらず、常にあらかじめ道路の左端に寄って側端に沿う通行を優先する",
+      "標示で指定されていても、環状交差点内の車がいなければ従わなくてよい"
+    ],
+    "answer": 1,
+    "explanation": "環状交差点でも、矢印などの標示で通行方法を指定されているときは、それに従わなければなりません。",
+    "isTrapQuestion": false,
+    "trapNumberType": "none",
+    "topicTag": "rules",
+    "sourceRef": "教則 第5章第7節 交差点の通り方 ４ 環状交差点の通行方法",
+    "lawVersion": "2026-10-03"
+  },
+  {
+    "id": "x485",
+    "licenseCategory": [
+      "gentsuki",
+      "kogataGentsukiNirin",
+      "futsuuNirin",
+      "ogataNirin",
+      "atGentei"
+    ],
+    "stageTag": "第二段階",
+    "difficulty": 3,
+    "questionText": "標識により、車の右側の道路上に残すべき余地が指定されている場所で、3.5メートルの余地は残せるが、指定された余地は残せない。この場所での駐車について正しいのはどれか。",
+    "choices": [
+      "指定された余地がとれない場所なので、駐車してはいけない",
+      "指定された余地の半分以上が残せれば、駐車できる",
+      "車の左側を道路の端に十分寄せてあれば、駐車できる",
+      "3.5メートル以上の余地が残せるので、標識の指定にかかわらず駐車できる"
+    ],
+    "answer": 0,
+    "explanation": "標識により余地が指定されているときには、その余地がとれない場所では駐車してはいけません。",
+    "isTrapQuestion": true,
+    "trapNumberType": "other",
+    "topicTag": "parking",
+    "sourceRef": "教則 第5章第8節 駐車と停車 ２ 駐車、停車の禁止",
+    "lawVersion": "2026-10-03"
+  },
+  {
+    "id": "x486",
+    "licenseCategory": [
+      "futsuuNirin",
+      "ogataNirin",
+      "atGentei"
+    ],
+    "stageTag": "第二段階",
+    "difficulty": 3,
+    "questionText": "高速道路で駐車や停車をする場合の方法について、教則の説明として正しいのはどれか。",
+    "choices": [
+      "歩行者の通行が禁止されているので、路側帯に入って道路の左端に沿う",
+      "路側帯の幅が狭いので、路側帯には入らず、本線車道の右端に寄せて止める",
+      "歩行者の通行が禁止されているので、車道の左端に沿わず、車道の中央寄りに止める",
+      "歩行者がいないので、路側帯には入らず、車道の左端に沿って止める"
+    ],
+    "answer": 0,
+    "explanation": "高速道路では歩行者の通行が禁止されているので、路側帯に入って、道路の左端に沿うこととされています。",
+    "isTrapQuestion": true,
+    "trapNumberType": "other",
+    "topicTag": "parking",
+    "sourceRef": "教則 第5章第8節 駐車と停車 ３ 駐車、停車の方法",
+    "lawVersion": "2026-10-03"
+  },
+  {
+    "id": "x487",
+    "licenseCategory": [
+      "gentsuki",
+      "kogataGentsukiNirin",
+      "futsuuNirin",
+      "ogataNirin",
+      "atGentei"
+    ],
+    "stageTag": "第二段階",
+    "difficulty": 2,
+    "questionText": "歩道や路側帯のある一般道路で、二輪車を駐車や停車させるときに沿うべき場所として正しいのはどれか。",
+    "choices": [
+      "歩道の中",
+      "路側帯の中の右端",
+      "車道の左端",
+      "車道の中央寄り"
+    ],
+    "answer": 2,
+    "explanation": "歩道や路側帯のある一般道路では、車道の左端に沿って駐車や停車をしなければなりません。",
+    "isTrapQuestion": false,
+    "trapNumberType": "none",
+    "topicTag": "parking",
+    "sourceRef": "教則 第5章第8節 駐車と停車 ３ 駐車、停車の方法",
+    "lawVersion": "2026-10-03"
+  },
+  {
+    "id": "x488",
+    "licenseCategory": [
+      "gentsuki",
+      "kogataGentsukiNirin",
+      "futsuuNirin",
+      "ogataNirin",
+      "atGentei"
+    ],
+    "stageTag": "第二段階",
+    "difficulty": 2,
+    "questionText": "都市部の道路上での駐車について、教則の説明として正しいのはどれか。",
+    "choices": [
+      "標識がなければ、短時間であれば手数料なしで駐車できる",
+      "パーキング・メーター等のある場所で手数料を支払って駐車する場合のほかは、原則としてできない",
+      "夜間であれば、手数料の有無にかかわらず原則として駐車できる",
+      "手数料を支払わなくても、パーキング・メーター等のある場所なら駐車できる"
+    ],
+    "answer": 1,
+    "explanation": "都市部では駐車が禁止されていることが多く、手数料を支払って駐車する場合のほかは、道路上での駐車は原則としてできません。",
+    "isTrapQuestion": false,
+    "trapNumberType": "none",
+    "topicTag": "parking",
+    "sourceRef": "教則 第5章第8節 駐車と停車 ４ 時間制限駐車区間での駐車",
+    "lawVersion": "2026-10-03"
+  },
+  {
+    "id": "x489",
+    "licenseCategory": [
+      "gentsuki",
+      "kogataGentsukiNirin",
+      "futsuuNirin",
+      "ogataNirin",
+      "atGentei"
+    ],
+    "stageTag": "第二段階",
+    "difficulty": 2,
+    "questionText": "山道で対向車と行き違うとき、路肩が崩れやすくなっている場合の運転として正しいのはどれか。",
+    "choices": [
+      "路肩に寄り過ぎないよう注意して行き違う",
+      "対向車に道を譲るため路肩いっぱいに寄って停止する",
+      "路肩ぎりぎりまで寄って対向車に十分な余裕を与える",
+      "路肩の縁に沿って速度を保ったまま行き違う"
+    ],
+    "answer": 0,
+    "explanation": "山道では路肩が崩れやすくなっていることがあるため、行き違いでは路肩に寄り過ぎないよう注意します。",
+    "isTrapQuestion": false,
+    "trapNumberType": "none",
+    "topicTag": "hazard_prediction",
+    "sourceRef": "教則 第6章第2節 坂道・カーブ 1 坂道・山道",
+    "lawVersion": "2026-10-03"
+  },
+  {
+    "id": "x490",
+    "licenseCategory": [
+      "gentsuki",
+      "kogataGentsukiNirin",
+      "futsuuNirin",
+      "ogataNirin",
+      "atGentei"
+    ],
+    "stageTag": "第二段階",
+    "difficulty": 2,
+    "questionText": "オートマチック車で下り坂を走行するときの操作として、教則に沿っているのはどれか。",
+    "choices": [
+      "チェンジレバーをPに入れ、ブレーキを使わずに下る",
+      "チェンジレバーをNに入れ、惰性で下りながら必要なときにブレーキを使う",
+      "チェンジレバーをDに入れたまま、フットブレーキを主に使って速度を抑える",
+      "チェンジレバーを２かL（又は１）に入れ、エンジンブレーキを活用する"
+    ],
+    "answer": 3,
+    "explanation": "下り坂では低速のギアを用い、オートマチック車ではチェンジレバーを２かL（又は１）に入れてエンジンブレーキを活用します。",
+    "isTrapQuestion": false,
+    "trapNumberType": "none",
+    "topicTag": "operation",
+    "sourceRef": "教則 第6章第2節 坂道・カーブ 1 坂道・山道",
+    "lawVersion": "2026-10-03"
+  },
+  {
+    "id": "x491",
+    "licenseCategory": [
+      "gentsuki",
+      "kogataGentsukiNirin",
+      "futsuuNirin",
+      "ogataNirin",
+      "atGentei"
+    ],
+    "stageTag": "第一段階",
+    "difficulty": 1,
+    "questionText": "夜間に運転するとき、前方の障害物を早く発見するための視線の向け方として正しいのはどれか。",
+    "choices": [
+      "できるだけ先の方へ視線を向ける",
+      "車の直前の路面だけに視線を向ける",
+      "視線をできるだけ近くに保ち、前の車のテールランプだけを見る",
+      "対向車のライトに視線を合わせ続ける"
+    ],
+    "answer": 0,
+    "explanation": "夜間は、視線をできるだけ先の方へ向け、少しでも早く前方の障害物を発見するようにします。",
+    "isTrapQuestion": false,
+    "trapNumberType": "none",
+    "topicTag": "hazard_prediction",
+    "sourceRef": "教則 第6章第3節 夜間 1 夜間の走行",
+    "lawVersion": "2026-10-03"
+  },
+  {
+    "id": "x492",
+    "licenseCategory": [
+      "gentsuki",
+      "kogataGentsukiNirin",
+      "futsuuNirin",
+      "ogataNirin",
+      "atGentei"
+    ],
+    "stageTag": "第二段階",
+    "difficulty": 2,
+    "questionText": "踏切で車が動かなくなったときに、教則が求めている行動として正しいのはどれか。",
+    "choices": [
+      "列車の運転士などに知らせず、車を踏切の外に移動させることだけを行う",
+      "車を踏切内に置いたまま、まず自分の安全のために踏切から離れる",
+      "まず車を踏切の外に移動させることだけに専念し、運転士などへの連絡は後にする",
+      "一刻も早く列車の運転士などに知らせるとともに、車を踏切の外に移動させる"
+    ],
+    "answer": 3,
+    "explanation": "踏切で動かなくなったときは、一刻も早く列車の運転士などに知らせるとともに、車を踏切の外に移動させなければなりません。",
+    "isTrapQuestion": false,
+    "trapNumberType": "none",
+    "topicTag": "emergency",
+    "sourceRef": "教則 第6章第1節 踏切 2 踏切で故障したとき",
+    "lawVersion": "2026-10-03"
+  },
+  {
+    "id": "x493",
+    "licenseCategory": [
+      "gentsuki",
+      "kogataGentsukiNirin",
+      "futsuuNirin",
+      "ogataNirin",
+      "atGentei"
+    ],
+    "stageTag": "第二段階",
+    "difficulty": 2,
+    "questionText": "霧や吹雪などで視界が極めて狭いときの警音器の使い方として、教則に合うのはどれか。",
+    "choices": [
+      "中心線の位置を知るため、警音器を常に鳴らす",
+      "前の車を急がせるため、警音器を鳴らし続ける",
+      "他の車に気付かれないよう、警音器は使わない",
+      "危険を防止するため、必要に応じて警音器を使う"
+    ],
+    "answer": 3,
+    "explanation": "霧などのときは、危険を防止するため、必要に応じ警音器を使いましょうとされています。",
+    "isTrapQuestion": false,
+    "trapNumberType": "none",
+    "topicTag": "operation",
+    "sourceRef": "教則 第6章 第4節 悪天候など 3 霧などのときの運転",
+    "lawVersion": "2026-10-03"
+  },
+  {
+    "id": "x494",
+    "licenseCategory": [
+      "gentsuki",
+      "kogataGentsukiNirin",
+      "futsuuNirin",
+      "ogataNirin",
+      "atGentei"
+    ],
+    "stageTag": "第二段階",
+    "difficulty": 2,
+    "questionText": "ぬかるみなどで車輪が空回りするときの対処として、教則に合うのはどれか。",
+    "choices": [
+      "急にアクセルを開けて一気に抜け出す",
+      "古毛布や砂利などがあれば、滑り止めに使う",
+      "ブレーキを強く掛けて車輪の空回りを止める",
+      "タイヤの空気を抜いてから発進する"
+    ],
+    "answer": 1,
+    "explanation": "ぬかるみなどで車輪が空回りするときは、古毛布、砂利などがあれば、それを滑り止めに使うと効果的です。",
+    "isTrapQuestion": false,
+    "trapNumberType": "none",
+    "topicTag": "emergency",
+    "sourceRef": "教則 第6章 第5節 緊急時の措置",
+    "lawVersion": "2026-10-03"
+  },
+  {
+    "id": "x495",
+    "licenseCategory": [
+      "gentsuki",
+      "kogataGentsukiNirin",
+      "futsuuNirin",
+      "ogataNirin",
+      "atGentei"
+    ],
+    "stageTag": "第二段階",
+    "difficulty": 3,
+    "questionText": "走行中に後輪が横滑りを始めたときの最初の操作として、教則に合うのはどれか。",
+    "choices": [
+      "すぐに急ブレーキを掛けて車を止める",
+      "アクセルを踏み増して横滑りを抑える",
+      "ブレーキは掛けず、まずアクセルを緩める",
+      "ハンドルを固定したまま断続的にブレーキを踏む"
+    ],
+    "answer": 2,
+    "explanation": "後輪が横滑りを始めたときは、ブレーキを掛けてはいけません。まずアクセルを緩め、同時にハンドルで車の向きを立て直します。",
+    "isTrapQuestion": true,
+    "trapNumberType": "other",
+    "topicTag": "emergency",
+    "sourceRef": "教則 第6章 第5節 緊急時の措置",
+    "lawVersion": "2026-10-03"
+  },
+  {
+    "id": "x496",
+    "licenseCategory": [
+      "gentsuki",
+      "kogataGentsukiNirin",
+      "futsuuNirin",
+      "ogataNirin",
+      "atGentei"
+    ],
+    "stageTag": "第二段階",
+    "difficulty": 2,
+    "questionText": "後輪の横滑りが生じる原因として、教則に挙げられているのはどれか。",
+    "choices": [
+      "スピードの出し過ぎ、急ハンドル又は急加速",
+      "断続的なブレーキ操作や緩やかな減速",
+      "速度を落とし過ぎたことやエンジンの回転数の低下",
+      "車間距離の取り過ぎや緩やかなハンドル操作"
+    ],
+    "answer": 0,
+    "explanation": "後輪の横滑りは、スピードの出し過ぎ、急ハンドル又は急加速が原因で生じます。",
+    "isTrapQuestion": false,
+    "trapNumberType": "none",
+    "topicTag": "emergency",
+    "sourceRef": "教則 第6章 第5節 緊急時の措置",
+    "lawVersion": "2026-10-03"
+  },
+  {
+    "id": "x497",
+    "licenseCategory": [
+      "gentsuki",
+      "kogataGentsukiNirin",
+      "futsuuNirin",
+      "ogataNirin",
+      "atGentei"
+    ],
+    "stageTag": "第二段階",
+    "difficulty": 3,
+    "questionText": "下り坂などでブレーキが効かなくなったとき、最初に行う措置として教則に合うのはどれか。",
+    "choices": [
+      "ギアをニュートラルにして車輪の力を抜く",
+      "手早く減速チェンジをし、ハンドブレーキを引く",
+      "すぐにエンジンを止めて惰性で下る",
+      "ガードレールに車体をすり寄せて直ちに止める"
+    ],
+    "answer": 1,
+    "explanation": "ブレーキが効かなくなったときは、手早く減速チェンジをし、ハンドブレーキを引きます。それでも停止しないときに、ほかの方法で止めます。",
+    "isTrapQuestion": true,
+    "trapNumberType": "other",
+    "topicTag": "emergency",
+    "sourceRef": "教則 第6章 第5節 緊急時の措置",
+    "lawVersion": "2026-10-03"
+  },
+  {
+    "id": "x498",
+    "licenseCategory": [
+      "gentsuki",
+      "kogataGentsukiNirin",
+      "futsuuNirin",
+      "ogataNirin",
+      "atGentei"
+    ],
+    "stageTag": "第二段階",
+    "difficulty": 3,
+    "questionText": "踏切の中でエンストして気が焦りエンジンが掛からないとき、非常手段として教則に示されている方法はどれか。（クラッチ操作をするマニュアル車の場合）",
+    "choices": [
+      "ギアをトップに入れ、セルモーターを使って車を動かす",
+      "ギアをローかセコンドに入れ、セルモーターを使って車を動かす",
+      "ギアをニュートラルにして、セルモーターを使って動かす",
+      "エンジンスイッチを切り、ギアを入れたまま押して動かす"
+    ],
+    "answer": 1,
+    "explanation": "踏切や交差点の中でエンストしたときは、非常手段としてギアをローかセコンドに入れ、セルモーターを使って車を動かすこともできます。",
+    "isTrapQuestion": true,
+    "trapNumberType": "other",
+    "topicTag": "emergency",
+    "sourceRef": "教則 第6章 第5節 緊急時の措置",
+    "lawVersion": "2026-10-03"
+  },
+  {
+    "id": "x499",
+    "licenseCategory": [
+      "futsuuNirin",
+      "ogataNirin",
+      "atGentei"
+    ],
+    "stageTag": "第二段階",
+    "difficulty": 2,
+    "questionText": "高速道路で故障などにより停止するときに置く停止表示器材について、教則に沿って正しいのはどれか。",
+    "choices": [
+      "努めてTSマークの付いたものを使う",
+      "故障して停止してから準備すればよい",
+      "TSマークの有無は問わず、どれを使ってもよい",
+      "TSマークの付いていないものを使うようにする"
+    ],
+    "answer": 0,
+    "explanation": "停止表示器材は、前もつて準備しておき、努めてTSマークの付いたものを使いましよう。",
+    "isTrapQuestion": false,
+    "trapNumberType": "none",
+    "topicTag": "emergency",
+    "sourceRef": "教則 第7章第1節 高速道路に入る前の心得",
+    "lawVersion": "2026-10-03"
+  },
+  {
+    "id": "x500",
+    "licenseCategory": [
+      "futsuuNirin",
+      "ogataNirin",
+      "atGentei"
+    ],
+    "stageTag": "第二段階",
+    "difficulty": 2,
+    "questionText": "高速道路を走行する運転計画について、教則に沿って正しいのはどれか。",
+    "choices": [
+      "目的地まで休息を取らずに連続して走る計画を立てる",
+      "適当な休息時間を織り込んだゆとりのある計画を立てる",
+      "到着時刻を優先し、休息時間を最小限に削る",
+      "休息時間は走行中に疲れを感じてから決める"
+    ],
+    "answer": 1,
+    "explanation": "長時間連続して高速運転をすることは危険なので、適当な休息時間を織り込んだゆとりのある運転計画を立てましょう。",
+    "isTrapQuestion": false,
+    "trapNumberType": "none",
+    "topicTag": "rules",
+    "sourceRef": "教則 第7章第1節 高速道路に入る前の心得",
+    "lawVersion": "2026-10-03"
+  },
+  {
+    "id": "x501",
+    "licenseCategory": [
+      "futsuuNirin",
+      "ogataNirin",
+      "atGentei"
+    ],
+    "stageTag": "第二段階",
+    "difficulty": 2,
+    "questionText": "高速道路で、誤って本線車道などに進入し、反対方向から進行してくる車や歩行者がいることがあるとされている。このことに対する走行上の心構えとして正しいのはどれか。",
+    "choices": [
+      "高速道路上に設置された道路情報板などの情報に注意して走行する",
+      "道路情報板は見ずに前の車に合わせて走行する",
+      "反対方向から来る車や歩行者はいないものとして走行する",
+      "対向してくる車に備え中央分離帯寄りを通行する"
+    ],
+    "answer": 0,
+    "explanation": "教則では、誤って本線車道などに進入した車や歩行者がいることがあるため、道路情報板などの情報に注意して走行するとされています。",
+    "isTrapQuestion": false,
+    "trapNumberType": "none",
+    "topicTag": "hazard_prediction",
+    "sourceRef": "教則 第7章 高速道路での走行 ３ 走行方法",
+    "lawVersion": "2026-10-03"
+  },
+  {
+    "id": "x502",
+    "licenseCategory": [
+      "futsuuNirin",
+      "ogataNirin",
+      "atGentei"
+    ],
+    "stageTag": "第二段階",
+    "difficulty": 3,
+    "questionText": "高速道路を高速で走行中にブレーキを掛けるとき、エンジンブレーキを使うためのギアの操作として教則に示されているのはどれか。",
+    "choices": [
+      "二段以上低いギアに一気に落とす",
+      "ギアをニュートラルに入れる",
+      "ギアはそのままにしてクラッチを切る",
+      "一段低いギアに落とす"
+    ],
+    "answer": 3,
+    "explanation": "教則では、ブレーキを掛けるときは一段低いギアに落としエンジンブレーキを使うとともに、フットブレーキを数回に分けて踏むようにするとされています。",
+    "isTrapQuestion": true,
+    "trapNumberType": "other",
+    "topicTag": "operation",
+    "sourceRef": "教則 第7章 高速道路での走行 ３ 走行方法",
+    "lawVersion": "2026-10-03"
+  },
+  {
+    "id": "x503",
+    "licenseCategory": [
+      "futsuuNirin",
+      "ogataNirin",
+      "atGentei"
+    ],
+    "stageTag": "第二段階",
+    "difficulty": 2,
+    "questionText": "高速道路で追越しをする場合の手順として、教則に示されているのはどれか。",
+    "choices": [
+      "合図は出さず、追越し車線の車の動きだけに注意して行う",
+      "追越しを始める直前に合図をし、すぐに追越し車線へ出る",
+      "追越し車線の車の動きは気にせず、被追越車との間隔だけを見て行う",
+      "早目に合図をし、追越し車線の車の動きなどに注意してから行う"
+    ],
+    "answer": 3,
+    "explanation": "教則では、追越しをする場合は早目に合図をし、追越し車線の車の動きなどに注意してから行うこととされています。",
+    "isTrapQuestion": false,
+    "trapNumberType": "none",
+    "topicTag": "rules",
+    "sourceRef": "教則 第7章 高速道路での走行 ３ 走行方法",
+    "lawVersion": "2026-10-03"
+  },
+  {
+    "id": "x504",
+    "licenseCategory": [
+      "futsuuNirin",
+      "ogataNirin",
+      "atGentei"
+    ],
+    "stageTag": "第二段階",
+    "difficulty": 2,
+    "questionText": "高速道路で風の強いときなどに停止表示板を用いる場合に、教則に示されている注意として正しいのはどれか。",
+    "choices": [
+      "倒れたりすることのないよう必要な措置を講じる",
+      "倒れても構わないので、できるだけ路肩の外側に置く",
+      "風で飛ばされないよう、車の前方に置く",
+      "風の強いときは停止表示板を用いず、手で合図する"
+    ],
+    "answer": 0,
+    "explanation": "教則では、風の強いときなどに停止表示板を用いる場合には、倒れたりすることのないよう必要な措置を講じるとされています。",
+    "isTrapQuestion": false,
+    "trapNumberType": "none",
+    "topicTag": "emergency",
+    "sourceRef": "教則 第7章 高速道路での走行 ４ 駐車、停車の禁止など",
+    "lawVersion": "2026-10-03"
+  },
+  {
+    "id": "x505",
+    "licenseCategory": [
+      "futsuuNirin",
+      "ogataNirin",
+      "atGentei"
+    ],
+    "stageTag": "第二段階",
+    "difficulty": 2,
+    "questionText": "高速道路で運転できなくなった車の後方に停止表示器材を置くときの注意として、教則に示されているのはどれか。",
+    "choices": [
+      "停止表示器材を置く間は、非常点滅表示灯を消しておく",
+      "後続車に合図をせず、急いで素早く置く",
+      "後続車の流れが途切れるまで、車内で待ってから置く",
+      "発炎筒を使つて合図をするなど後続車に十分注意する"
+    ],
+    "answer": 3,
+    "explanation": "教則では、停止表示器材を置くときには、発炎筒を使つて合図をするなど後続車に十分注意するとされています。",
+    "isTrapQuestion": false,
+    "trapNumberType": "none",
+    "topicTag": "emergency",
+    "sourceRef": "教則 第7章 高速道路での走行 ４ 駐車、停車の禁止など",
+    "lawVersion": "2026-10-03"
+  },
+  {
+    "id": "x506",
+    "licenseCategory": [
+      "futsuuNirin",
+      "ogataNirin",
+      "atGentei"
+    ],
+    "stageTag": "第二段階",
+    "difficulty": 2,
+    "questionText": "高速道路で故障車の修理などが終わり、現場を立ち去るときの注意として教則に示されているのはどれか。",
+    "choices": [
+      "停止表示器材は後続車のために置いたままにする",
+      "停止表示器材を置き忘れないようにする",
+      "停止表示器材は路肩のガードレールの外側に置いて立ち去る",
+      "非常点滅表示灯は消さずに現場を立ち去る"
+    ],
+    "answer": 1,
+    "explanation": "教則では、修理などが終わり現場を立ち去るときは、停止表示器材を置き忘れないようにするとされています。",
+    "isTrapQuestion": false,
+    "trapNumberType": "none",
+    "topicTag": "emergency",
+    "sourceRef": "教則 第7章 高速道路での走行 ４ 駐車、停車の禁止など",
+    "lawVersion": "2026-10-03"
+  },
+  {
+    "id": "x507",
+    "licenseCategory": [
+      "futsuuNirin",
+      "ogataNirin",
+      "atGentei"
+    ],
+    "stageTag": "第二段階",
+    "difficulty": 3,
+    "questionText": "高速道路で運転できなくなった車を、可能であれば自力で路側帯や路肩へ移動させるときの方法として、教則に示されているのはどれか。",
+    "choices": [
+      "ギアをニュートラルに入れ、セルモーターを使って移動させる",
+      "ギアをローかセコンドに入れ、セルモーターを使って移動させる",
+      "ギアをサードに入れ、セルモーターを使って移動させる",
+      "ギアをトップに入れ、セルモーターを使って移動させる"
+    ],
+    "answer": 1,
+    "explanation": "教則では、可能であればギアをローかセコンドに入れ、セルモーターを使つて路側帯や路肩へ移動させましようとされています。",
+    "isTrapQuestion": true,
+    "trapNumberType": "other",
+    "topicTag": "emergency",
+    "sourceRef": "教則 第7章 高速道路での走行 ４ 駐車、停車の禁止など",
+    "lawVersion": "2026-10-03"
+  },
+  {
+    "id": "x508",
+    "licenseCategory": [
+      "futsuuNirin",
+      "ogataNirin",
+      "atGentei"
+    ],
+    "stageTag": "第一段階",
+    "difficulty": 1,
+    "questionText": "高速道路の本線車道から出るとき、あらかじめ注意しておくよう教則に示されているものはどれか。",
+    "choices": [
+      "出口に接続する減速車線の長さを示す標示",
+      "目的地への方向と出口を予告する案内標識",
+      "一般道路の最高速度を示す規制標識",
+      "出口付近の路肩の幅を示す標示"
+    ],
+    "answer": 1,
+    "explanation": "教則では、本線車道から出るときは、あらかじめ目的地への方向と出口を予告する案内標識に注意するとされています。",
+    "isTrapQuestion": false,
+    "trapNumberType": "none",
+    "topicTag": "rules",
+    "sourceRef": "教則 第7章 高速道路での走行 ５ 本線車道から出るとき",
+    "lawVersion": "2026-10-03"
+  },
+  {
+    "id": "x509",
+    "licenseCategory": [
+      "kogataGentsukiNirin",
+      "futsuuNirin",
+      "ogataNirin",
+      "atGentei"
+    ],
+    "stageTag": "第二段階",
+    "difficulty": 3,
+    "questionText": "教則で「小型二輪車」とされる普通自動二輪車の原動機の大きさとして正しいのはどれか。",
+    "choices": [
+      "総排気量250cc以下で、定格出力1.00キロワット以下",
+      "総排気量125cc以下で、定格出力2.00キロワット以下",
+      "総排気量125cc以下で、定格出力1.00キロワット以下",
+      "総排気量400cc以下で、定格出力2.00キロワット以下"
+    ],
+    "answer": 2,
+    "explanation": "小型二輪車は、総排気量については125cc以下、定格出力については1.00キロワット以下の原動機を有する普通自動二輪車です。",
+    "isTrapQuestion": true,
+    "trapNumberType": "other",
+    "topicTag": "license_system",
+    "sourceRef": "教則 第7章 高速道路での走行 注９ 小型二輪車",
+    "lawVersion": "2026-10-03"
+  },
+  {
+    "id": "x510",
+    "licenseCategory": [
+      "gentsuki",
+      "kogataGentsukiNirin",
+      "futsuuNirin",
+      "ogataNirin",
+      "atGentei"
+    ],
+    "stageTag": "第二段階",
+    "difficulty": 2,
+    "questionText": "二輪車が四輪車とは違った運転技術を必要とする理由として、教則に示されているのはどれか。",
+    "choices": [
+      "停止しているときは安定するが、速度が上がるほど安定を失うという構造上の特性があるから",
+      "四輪車に比べて速度が出にくく、周りの車の流れに合わせにくい構造上の特性があるから",
+      "体で安定を保ちながら走り、停止すれば安定を失うという構造上の特性があるから",
+      "走行中は車体が自立して安定するが、発進時にだけ安定を失うという構造上の特性があるから"
+    ],
+    "answer": 2,
+    "explanation": "二輪車は体で安定を保ちながら走り、停止すれば安定を失うという構造上の特性を持つため、四輪車とは違った運転技術が必要とされています。",
+    "isTrapQuestion": false,
+    "trapNumberType": "none",
+    "topicTag": "operation",
+    "sourceRef": "教則 第8章 二輪車の運転の方法 第1節 二輪車の運転者の心得",
+    "lawVersion": "2026-10-03"
+  },
+  {
+    "id": "x511",
+    "licenseCategory": [
+      "gentsuki",
+      "kogataGentsukiNirin",
+      "futsuuNirin",
+      "ogataNirin",
+      "atGentei"
+    ],
+    "stageTag": "第二段階",
+    "difficulty": 2,
+    "questionText": "二輪車の運転者が周りの交通の動きに一層の注意を払う必要があるのは、なぜか。",
+    "choices": [
+      "二輪車は排気音が小さく、周りの車が存在に気づきにくいことがあるから",
+      "二輪車は四輪車より速度が出るので、周りの車が追いつけないことがあるから",
+      "二輪車の動きが四輪車からは見えないことがあるから",
+      "二輪車は停止時に安定を失うので、周りの車が避けてくれないことがあるから"
+    ],
+    "answer": 2,
+    "explanation": "教則は、二輪車の動きが四輪車からは見えないことがあるので、周りの交通の動きについて一層の注意が必要と述べています。",
+    "isTrapQuestion": false,
+    "trapNumberType": "none",
+    "topicTag": "hazard_prediction",
+    "sourceRef": "教則 第8章 二輪車の運転の方法 第1節 二輪車の運転者の心得",
+    "lawVersion": "2026-10-03"
+  },
+  {
+    "id": "x512",
+    "licenseCategory": [
+      "gentsuki",
+      "kogataGentsukiNirin",
+      "futsuuNirin",
+      "ogataNirin",
+      "atGentei"
+    ],
+    "stageTag": "第一段階",
+    "difficulty": 1,
+    "questionText": "二輪車は手軽な乗り物ですが、運転するときの心構えとして教則に示されているのはどれか。",
+    "choices": [
+      "手軽な乗り物なので、慣れたら周りの動きへの注意は少なくしてよい",
+      "手軽な乗り物なので、短い距離であれば慎重さより素早い運転を心掛ける",
+      "手軽な乗り物でも、四輪車と同じ運転技術で運転すれば十分である",
+      "手軽な乗り物であると気を許さないで、常に慎重に運転する"
+    ],
+    "answer": 3,
+    "explanation": "教則は、手軽な乗り物であると気を許さないで、常に慎重に運転しましょうと述べています。",
+    "isTrapQuestion": false,
+    "trapNumberType": "none",
+    "topicTag": "rules",
+    "sourceRef": "教則 第8章 二輪車の運転の方法 第1節 二輪車の運転者の心得",
+    "lawVersion": "2026-10-03"
+  },
+  {
+    "id": "x513",
+    "licenseCategory": [
+      "gentsuki",
+      "kogataGentsukiNirin",
+      "futsuuNirin",
+      "ogataNirin",
+      "atGentei"
+    ],
+    "stageTag": "第二段階",
+    "difficulty": 2,
+    "questionText": "二輪車の点検で、チェーンについて確かめる事柄として正しいのはどれか。",
+    "choices": [
+      "緩み過ぎていないか。張り過ぎている分には、走行の妨げにならないので問題ない",
+      "注油は不要なので、緩みと張りの状態だけを確かめればよい",
+      "張り過ぎていないか。緩んでいる分には、走行の妨げにならないので問題ない",
+      "緩み過ぎていたり、張り過ぎていたりしないか、適当な注油がなされているか"
+    ],
+    "answer": 3,
+    "explanation": "チェーンが緩み過ぎていたり張り過ぎていたりしないか、また適当な注油がなされているかを確かめるとされています。",
+    "isTrapQuestion": true,
+    "trapNumberType": "other",
+    "topicTag": "maintenance",
+    "sourceRef": "教則 第8章 二輪車の運転の方法 第1節 6 二輪車の点検",
+    "lawVersion": "2026-10-03"
+  },
+  {
+    "id": "x514",
+    "licenseCategory": [
+      "kogataGentsukiNirin",
+      "futsuuNirin",
+      "ogataNirin",
+      "atGentei"
+    ],
+    "stageTag": "第二段階",
+    "difficulty": 2,
+    "questionText": "普通自動二輪車に同乗者を乗せるときの服装について、教則に照らして正しいのはどれか。",
+    "choices": [
+      "プロテクターは運転者だけが着用すればよく、同乗者は露出の少ない服装のみでよい",
+      "同乗者は運転しないので、服装は自由で、プロテクターを着用する必要はない",
+      "同乗者は体の露出が少なければ、乗車用ヘルメットを着用する必要はない",
+      "同乗者も運転者と同様に、体の露出がなるべく少なくなる服装をし、できるだけプロテクターを着用する"
+    ],
+    "answer": 3,
+    "explanation": "体の露出を少なくし、できるだけプロテクターを着用することは、大型自動二輪車や普通自動二輪車の同乗者についても同様とされています。",
+    "isTrapQuestion": false,
+    "trapNumberType": "none",
+    "topicTag": "rules",
+    "sourceRef": "教則 第8章 二輪車の運転の方法 第1節 3 服装など",
+    "lawVersion": "2026-10-03"
+  },
+  {
+    "id": "x515",
+    "licenseCategory": [
+      "futsuuNirin",
+      "ogataNirin",
+      "atGentei"
+    ],
+    "stageTag": "第二段階",
+    "difficulty": 3,
+    "questionText": "大型二輪免許を受けて4年になる19歳の人が、高速道路で大型自動二輪車に二人乗りをしようとしている。教則に照らして正しいのはどれか。",
+    "choices": [
+      "普通二輪免許を受けて1年を経過していれば、二人乗りをしてよい",
+      "後部座席があれば、年齢にかかわらず二人乗りをしてよい",
+      "免許を受けて3年以上経過しているので、二人乗りをしてよい",
+      "20歳未満なので、二人乗りをしてはいけない"
+    ],
+    "answer": 3,
+    "explanation": "大型二輪免許を受けた者で20歳未満のものは、高速道路で大型自動二輪車を運転するとき二人乗りをしてはいけません。",
+    "isTrapQuestion": true,
+    "trapNumberType": "other",
+    "topicTag": "hazard_prediction",
+    "sourceRef": "教則 第8章 二輪車の運転の方法 第1節 4 二人乗りの禁止",
+    "lawVersion": "2026-10-03"
+  },
+  {
+    "id": "x516",
+    "licenseCategory": [
+      "gentsuki",
+      "kogataGentsukiNirin",
+      "futsuuNirin",
+      "ogataNirin",
+      "atGentei"
+    ],
+    "stageTag": "第二段階",
+    "difficulty": 2,
+    "questionText": "二輪車で車の間を縫って走ったり、ジグザグ運転をしたりしてはいけない理由として、教則に示されているのはどれか。",
+    "choices": [
+      "極めて危険であるばかりでなく、周囲の運転者にも不安を与えるから",
+      "周囲の運転者には影響がないが、自分の車体が傷つきやすくなるから",
+      "機動性が低い二輪車では、車の間を通り抜けることができないから",
+      "危険ではないが、周囲の運転者に不安を与えて渋滞を引き起こすから"
+    ],
+    "answer": 0,
+    "explanation": "そのような運転方法は極めて危険であるばかりでなく、周囲の運転者にも不安を与えるとされています。",
+    "isTrapQuestion": false,
+    "trapNumberType": "none",
+    "topicTag": "rules",
+    "sourceRef": "教則 第8章 二輪車の運転の方法 第3節 安全な運転の方法",
+    "lawVersion": "2026-10-03"
+  },
+  {
+    "id": "x518",
+    "licenseCategory": [
+      "gentsuki",
+      "kogataGentsukiNirin",
+      "futsuuNirin",
+      "ogataNirin",
+      "atGentei"
+    ],
+    "stageTag": "第二段階",
+    "difficulty": 2,
+    "questionText": "雨上がりで路面が滑りやすいとき、二輪車のブレーキの掛け方として正しいのはどれか。",
+    "choices": [
+      "後輪ブレーキのみを使い、前輪ブレーキは使わない",
+      "前輪ブレーキをやや強く掛ける",
+      "エンジンブレーキだけを使い、前後輪のブレーキは掛けない",
+      "後輪ブレーキをやや強く掛ける"
+    ],
+    "answer": 3,
+    "explanation": "乾燥した路面では前輪ブレーキをやや強く、路面が滑りやすいときは後輪ブレーキをやや強く掛けます。",
+    "isTrapQuestion": true,
+    "trapNumberType": "other",
+    "topicTag": "operation",
+    "sourceRef": "教則 第8章 二輪車の運転の方法 第4節 ブレーキの掛け方",
+    "lawVersion": "2026-10-03"
+  },
+  {
+    "id": "x519",
+    "licenseCategory": [
+      "gentsuki",
+      "kogataGentsukiNirin",
+      "futsuuNirin",
+      "ogataNirin",
+      "atGentei"
+    ],
+    "stageTag": "第二段階",
+    "difficulty": 2,
+    "questionText": "二輪車でエンジンブレーキを効かせようとして、ギアをいきなり高速からローに入れた場合に起こるおそれがあることはどれか。",
+    "choices": [
+      "制動灯が点灯しなくなる",
+      "車輪の回転が止まり後輪が浮き上がる",
+      "エンジンを傷めたり、転倒したりする",
+      "前輪ブレーキが効かなくなる"
+    ],
+    "answer": 2,
+    "explanation": "ギアをいきなり高速からローに入れるとエンジンを傷めたり転倒したりするおそれがあるため、順序よくシフトダウンします。",
+    "isTrapQuestion": false,
+    "trapNumberType": "none",
+    "topicTag": "operation",
+    "sourceRef": "教則 第8章 二輪車の運転の方法 第4節 ブレーキの掛け方",
+    "lawVersion": "2026-10-03"
+  },
+  {
+    "id": "x520",
+    "licenseCategory": [
+      "gentsuki",
+      "kogataGentsukiNirin",
+      "futsuuNirin",
+      "ogataNirin",
+      "atGentei"
+    ],
+    "stageTag": "第二段階",
+    "difficulty": 2,
+    "questionText": "二輪車の改造について、変形ハンドルに関する記述として正しいのはどれか。",
+    "choices": [
+      "騒音が大きくなるので、このような改造をしてはいけない",
+      "運転しやすくなるので、安全のために取り付けてもよい",
+      "運転の妨げとなるので、このような改造をしてはいけない",
+      "運転の妨げにならなければ、自由に取り付けてもよい"
+    ],
+    "answer": 2,
+    "explanation": "変形ハンドルは運転の妨げとなるので、このような改造をしてはいけません。",
+    "isTrapQuestion": false,
+    "trapNumberType": "none",
+    "topicTag": "rules",
+    "sourceRef": "教則 第8章 二輪車の運転の方法 第6節 その他注意しなければならないこと",
+    "lawVersion": "2026-10-03"
+  },
+  {
+    "id": "x521",
+    "licenseCategory": [
+      "gentsuki",
+      "kogataGentsukiNirin",
+      "futsuuNirin",
+      "ogataNirin",
+      "atGentei"
+    ],
+    "stageTag": "第二段階",
+    "difficulty": 3,
+    "questionText": "二輪車を押して歩いている人のうち、歩行者として扱われないのはどれか。",
+    "choices": [
+      "エンジンを止めた二輪車を押しているとき",
+      "エンジンを止め、側車の付いていない二輪車を押しているとき",
+      "停止して車体を支えたまま、ハンドルを持っているとき",
+      "ほかの車をけん引している二輪車を押しているとき"
+    ],
+    "answer": 3,
+    "explanation": "エンジンを掛けているもの、ほかの車をけん引しているもの、側車付きのものを押しているときは、歩行者としては扱われません。",
+    "isTrapQuestion": true,
+    "trapNumberType": "other",
+    "topicTag": "rules",
+    "sourceRef": "教則 第8章 二輪車の運転の方法 第6節 その他注意しなければならないこと",
+    "lawVersion": "2026-10-03"
+  },
+  {
+    "id": "x522",
+    "licenseCategory": [
+      "gentsuki",
+      "kogataGentsukiNirin",
+      "futsuuNirin",
+      "ogataNirin",
+      "atGentei"
+    ],
+    "stageTag": "第二段階",
+    "difficulty": 2,
+    "questionText": "交通事故の現場でひき逃げを見かけたとき、負傷者の救護とともに行うこととして、教則に沿って正しいのはどれか。",
+    "choices": [
+      "現場に残っている他の人に任せ、見かけた自分は警察官への届け出をしなくてよい",
+      "負傷者の救護は後回しにして、逃げた車の進行方向だけをすぐ警察官に届け出る",
+      "逃げた車を追跡して停止させ、運転者の身元を自分で確認してから警察官に届け出る",
+      "その車のナンバー、車種、色など車の特徴を110番通報などで警察官に届け出る"
+    ],
+    "answer": 3,
+    "explanation": "ひき逃げを見かけたときは、負傷者を救護するとともに、車のナンバー、車種、色など車の特徴を110番通報などで警察官に届け出ます。",
+    "isTrapQuestion": false,
+    "trapNumberType": "none",
+    "topicTag": "emergency",
+    "sourceRef": "教則 第10章 第1節 交通事故のとき 3 現場に居合わせた人の協力",
+    "lawVersion": "2026-10-03"
+  },
+  {
+    "id": "x523",
+    "licenseCategory": [
+      "gentsuki",
+      "kogataGentsukiNirin",
+      "futsuuNirin",
+      "ogataNirin",
+      "atGentei"
+    ],
+    "stageTag": "第二段階",
+    "difficulty": 2,
+    "questionText": "二輪車で交通事故にあい、軽いけがで済んだ場合の対応として、教則に沿って正しいのはどれか。",
+    "choices": [
+      "軽いけがのときは、数日たって痛みが出てから警察官に届け出ればよい",
+      "軽いけがで済んだときは、警察官への届け出をせず、自分で病院に行けばよい",
+      "軽いけがでも、必ず警察官に届け出る",
+      "けがが軽く外傷もなければ、警察官にも医師にも届け出る必要はない"
+    ],
+    "answer": 2,
+    "explanation": "軽いけがでも、必ず警察官に届けます。外傷がなくても頭部などに強い衝撃を受けたときは、医師の診断を受けます。",
+    "isTrapQuestion": true,
+    "trapNumberType": "other",
+    "topicTag": "emergency",
+    "sourceRef": "教則 第10章 第1節 交通事故のとき 2 医師の診断を受けること",
+    "lawVersion": "2026-10-03"
+  },
+  {
+    "id": "x524",
+    "licenseCategory": [
+      "futsuuNirin",
+      "ogataNirin",
+      "atGentei"
+    ],
+    "stageTag": "第二段階",
+    "difficulty": 2,
+    "questionText": "高速道路でやむを得ず駐車して停止表示器材を置くときの、後続車に対する注意として、教則に沿って正しいのはどれか。",
+    "choices": [
+      "器材は後続車が来ないことを確認してから、車の前方に置く",
+      "後続車への合図は、車内からクラクションを鳴らし続けて行う",
+      "器材を置けば後続車から見えるので、後続車への特別な注意は必要ない",
+      "発炎筒を使って合図をするなど、後続車に十分注意する"
+    ],
+    "answer": 3,
+    "explanation": "停止表示器材を置くときには、発炎筒を使って合図をするなど後続車に十分注意します。",
+    "isTrapQuestion": false,
+    "trapNumberType": "none",
+    "topicTag": "emergency",
+    "sourceRef": "教則 第10章 第2節 故障などのとき",
+    "lawVersion": "2026-10-03"
+  },
+  {
+    "id": "x525",
+    "licenseCategory": [
+      "gentsuki",
+      "kogataGentsukiNirin",
+      "futsuuNirin",
+      "ogataNirin",
+      "atGentei"
+    ],
+    "stageTag": "第二段階",
+    "difficulty": 2,
+    "questionText": "道路上で故障した車に停止表示器材を置くなどの一次措置を終えたあと、教則に沿って行うこととして正しいのはどれか。",
+    "choices": [
+      "一次措置を終えたら、故障車を道路上に残したまま、すぐに現場を離れる",
+      "近くの電話などでJAFや修理業者などの車を呼び、速やかに道路外へ移動させる",
+      "追突を防ぐ表示をしてあるので、そのまま翌日まで道路上に置いて様子を見る",
+      "他の運転者に頼んで、その場で故障車を押してもらい、近くの路側帯に寄せる"
+    ],
+    "answer": 1,
+    "explanation": "道路に故障車両を放置すると追突事故などの原因となり危険です。一次措置を終えるとすぐに、JAFや修理業者などの車を呼んで、速やかに道路外へ移動させます。",
+    "isTrapQuestion": false,
+    "trapNumberType": "none",
+    "topicTag": "emergency",
+    "sourceRef": "教則 第10章 第2節 故障などのとき",
+    "lawVersion": "2026-10-03"
+  },
+  {
+    "id": "x527",
+    "licenseCategory": [
+      "gentsuki",
+      "kogataGentsukiNirin",
+      "futsuuNirin",
+      "ogataNirin",
+      "atGentei"
+    ],
+    "stageTag": "第二段階",
+    "difficulty": 2,
+    "questionText": "大規模地震対策特別措置法に基づく地震災害に関する警戒宣言を発するのは誰か。",
+    "choices": [
+      "気象庁長官",
+      "強化地域に指定された都道府県の知事",
+      "国家公安委員会委員長",
+      "内閣総理大臣"
+    ],
+    "answer": 3,
+    "explanation": "強化地域で大規模な地震の発生するおそれが迫り、地震防災応急対策を実施することが緊急に必要であるときは、内閣総理大臣が警戒宣言を発します。",
+    "isTrapQuestion": false,
+    "trapNumberType": "none",
+    "topicTag": "emergency",
+    "sourceRef": "教則 第10章 第3節 災害などのとき 1 地震災害に関する警戒宣言が発せられたとき",
+    "lawVersion": "2026-10-03"
+  },
+  {
+    "id": "x528",
+    "licenseCategory": [
+      "gentsuki",
+      "kogataGentsukiNirin",
+      "futsuuNirin",
+      "ogataNirin",
+      "atGentei"
+    ],
+    "stageTag": "第一段階",
+    "difficulty": 1,
+    "questionText": "地震災害に関する警戒宣言が発せられた場合の、強化地域内での一般車両の通行について、教則に沿って正しいのはどれか。",
+    "choices": [
+      "通行が禁止されるのは二輪車だけで、自動車は制限されない",
+      "通行が禁止されるのは高速道路だけで、一般道路は制限されない",
+      "通行は禁止され、又は制限される",
+      "通行は通常どおりで、速度のみが制限される"
+    ],
+    "answer": 2,
+    "explanation": "警戒宣言が発せられた場合、強化地域内での一般車両の通行は禁止され、又は制限されます。",
+    "isTrapQuestion": false,
+    "trapNumberType": "none",
+    "topicTag": "emergency",
+    "sourceRef": "教則 第10章 第3節 災害などのとき 1 地震災害に関する警戒宣言が発せられたとき",
+    "lawVersion": "2026-10-03"
+  },
+  {
+    "id": "x529",
+    "licenseCategory": [
+      "gentsuki",
+      "kogataGentsukiNirin",
+      "futsuuNirin",
+      "ogataNirin",
+      "atGentei"
+    ],
+    "stageTag": "第二段階",
+    "difficulty": 3,
+    "questionText": "緊急地震速報について、教則に沿って正しいのはどれか。",
+    "choices": [
+      "震度4以上を予想した区域などを、その揺れが来る前に発表するものである",
+      "震度5弱以上を予想した区域だけを、その揺れが来る前に発表するものである",
+      "震度4以上の揺れが観測された区域を、その揺れが収まった後に発表するものである",
+      "震度3以上を予想した区域を、揺れが来る数日前に発表するものである"
+    ],
+    "answer": 0,
+    "explanation": "緊急地震速報は、気象庁が、予想される地震動の大きさがおおむね震度5弱以上である場合などに、震度4以上を予想した区域などを、その揺れが来る前に発表するものです。",
+    "isTrapQuestion": true,
+    "trapNumberType": "other",
+    "topicTag": "emergency",
+    "sourceRef": "教則 第10章 第3節 災害などのとき 2 緊急地震速報が発表されたとき",
+    "lawVersion": "2026-10-03"
+  },
+  {
+    "id": "x530",
+    "licenseCategory": [
+      "gentsuki",
+      "kogataGentsukiNirin",
+      "futsuuNirin",
+      "ogataNirin",
+      "atGentei"
+    ],
+    "stageTag": "第二段階",
+    "difficulty": 2,
+    "questionText": "車を運転中に大地震が発生したときの、車の止め方として、教則に沿って正しいのはどれか。",
+    "choices": [
+      "急ハンドル、急ブレーキを避けるなど、できるだけ安全な方法により道路の左側に停止させる",
+      "揺れを避けるため、急ブレーキをかけて道路の中央にただちに停止させる",
+      "揺れが収まるまで、そのままの速度で走り続けてから道路の右側に停止させる",
+      "急ハンドルで進路を変えて、道路外の場所に直ちに停止させる"
+    ],
+    "answer": 0,
+    "explanation": "車を運転中に大地震が発生したときは、急ハンドル、急ブレーキを避けるなど、できるだけ安全な方法により道路の左側に停止させます。",
+    "isTrapQuestion": false,
+    "trapNumberType": "none",
+    "topicTag": "emergency",
+    "sourceRef": "教則 第10章 第3節 災害などのとき 3 大地震が発生したとき",
+    "lawVersion": "2026-10-03"
+  },
+  {
+    "id": "x531",
+    "licenseCategory": [
+      "gentsuki",
+      "kogataGentsukiNirin",
+      "futsuuNirin",
+      "ogataNirin",
+      "atGentei"
+    ],
+    "stageTag": "第二段階",
+    "difficulty": 2,
+    "questionText": "大地震の発生後、停止した車を引き続き運転するときに十分注意することとして、教則に沿って正しいのはどれか。",
+    "choices": [
+      "道路の損壊は修復されているので、道路上の障害物だけ",
+      "道路の損壊、信号機の作動停止、道路上の障害物など",
+      "対向車の速度と、渋滞の長さだけ",
+      "信号機は作動しているものとして、通常どおり信号に従うことだけ"
+    ],
+    "answer": 1,
+    "explanation": "引き続き車を運転するときは、道路の損壊、信号機の作動停止、道路上の障害物などに十分注意します。",
+    "isTrapQuestion": false,
+    "trapNumberType": "none",
+    "topicTag": "emergency",
+    "sourceRef": "教則 第10章 第3節 災害などのとき 3 大地震が発生したとき",
+    "lawVersion": "2026-10-03"
+  },
+  {
+    "id": "x532",
+    "licenseCategory": [
+      "gentsuki",
+      "kogataGentsukiNirin",
+      "futsuuNirin",
+      "ogataNirin",
+      "atGentei"
+    ],
+    "stageTag": "第二段階",
+    "difficulty": 2,
+    "questionText": "車を運転中以外の場合に大地震が発生し、津波から避難するためやむを得ず車を使用するときの運転として、教則に沿って正しいのはどれか。",
+    "choices": [
+      "避難が最優先なので、信号機が作動していなくても確認せずに速度を上げて通過する",
+      "道路の損壊、信号機の作動停止、道路上の障害物などに十分注意しながら運転する",
+      "道路の損壊を避けるため、道路の左側を離れて歩道を通行する",
+      "信号機の作動停止だけに注意し、道路の損壊や障害物は気にせず走行する"
+    ],
+    "answer": 1,
+    "explanation": "津波から避難するためやむを得ず車を使用するときは、道路の損壊、信号機の作動停止、道路上の障害物などに十分注意しながら運転します。",
+    "isTrapQuestion": false,
+    "trapNumberType": "none",
+    "topicTag": "emergency",
+    "sourceRef": "教則 第10章 第3節 災害などのとき 3 大地震が発生したとき",
+    "lawVersion": "2026-10-03"
+  },
+  {
+    "id": "x533",
+    "licenseCategory": [
+      "gentsuki",
+      "kogataGentsukiNirin",
+      "futsuuNirin",
+      "ogataNirin",
+      "atGentei"
+    ],
+    "stageTag": "第二段階",
+    "difficulty": 2,
+    "questionText": "通行禁止区域等で、車が緊急通行車両の通行の妨害となっているのに、命じられた措置を運転者などがとらないときについて、教則に沿って正しいのはどれか。",
+    "choices": [
+      "警察官は措置を命じることだけができ、自らその措置をとることはない",
+      "警察官が自ら措置をとることがあるが、車などを破損することは認められない",
+      "警察官が自らその措置をとることがあり、やむを得ない限度において、車などを破損することがある",
+      "運転者などが現れるまで、警察官は措置をとらずに待たなければならない"
+    ],
+    "answer": 2,
+    "explanation": "命じられた措置をとらなかったり、現場にいないために命じることができないときは、警察官が自らその措置をとることがあります。この場合、やむを得ない限度において、車などを破損することがあります。",
+    "isTrapQuestion": false,
+    "trapNumberType": "none",
+    "topicTag": "emergency",
+    "sourceRef": "教則 第10章 第3節 災害などのとき 4 災害が発生したときなどに災害対策基本法による交通の規制が行われたときなど",
+    "lawVersion": "2026-10-03"
+  },
+  {
+    "id": "x534",
+    "licenseCategory": [
+      "gentsuki",
+      "kogataGentsukiNirin",
+      "futsuuNirin",
+      "ogataNirin",
+      "atGentei"
+    ],
+    "stageTag": "第二段階",
+    "difficulty": 3,
+    "questionText": "通行禁止区域等で車を移動させるなどの警察官の命令等の職務を、災害派遣に従事する自衛官や消防吏員が行うのはどのような場合か。",
+    "choices": [
+      "警察官がその場にいるときに、警察官と共同して行うことがある",
+      "警察官がその場にいるかどうかにかかわらず、いつでも行うことがある",
+      "警察官がその場にいない場合に限り行うことがある",
+      "消防吏員だけが、警察官がその場にいる場合に限り行うことがある"
+    ],
+    "answer": 2,
+    "explanation": "警察官の命令等の職務は、警察官がその場にいない場合に限り、災害派遣に従事する自衛官や消防吏員が行うことがあります。",
+    "isTrapQuestion": true,
+    "trapNumberType": "other",
+    "topicTag": "emergency",
+    "sourceRef": "教則 第10章 第3節 災害などのとき 4 災害が発生したときなどに災害対策基本法による交通の規制が行われたときなど",
+    "lawVersion": "2026-10-03"
+  },
+  {
+    "id": "x535",
+    "licenseCategory": [
+      "gentsuki",
+      "kogataGentsukiNirin",
+      "futsuuNirin",
+      "ogataNirin",
+      "atGentei"
+    ],
+    "stageTag": "第二段階",
+    "difficulty": 3,
+    "questionText": "原子力災害対策特別措置法による交通の規制で、災害対策基本法の場合と同様に緊急通行車両以外の車両の通行が禁止され、又は制限されるのはいつの間か。",
+    "choices": [
+      "原子力緊急事態宣言があったときから、その日の終わりまでの間",
+      "原子力緊急事態宣言があったときから、原子力緊急事態解除宣言があるまでの間",
+      "原子力緊急事態宣言があるときより前から、原子力緊急事態解除宣言があるまでの間",
+      "原子力緊急事態解除宣言があったときから、1週間が過ぎるまでの間"
+    ],
+    "answer": 1,
+    "explanation": "原子力緊急事態宣言があったときから原子力緊急事態解除宣言があるまでの間についても、災害対策基本法による規制と同様に緊急通行車両以外の車両の通行が禁止され、又は制限されます。",
+    "isTrapQuestion": true,
+    "trapNumberType": "other",
+    "topicTag": "emergency",
+    "sourceRef": "教則 第10章 第3節 災害などのとき 4 災害が発生したときなどに災害対策基本法による交通の規制が行われたときなど",
+    "lawVersion": "2026-10-03"
+  },
+  {
+    "id": "x536",
+    "licenseCategory": [
+      "gentsuki",
+      "kogataGentsukiNirin",
+      "futsuuNirin",
+      "ogataNirin",
+      "atGentei"
+    ],
+    "stageTag": "第二段階",
+    "difficulty": 3,
+    "questionText": "自衛隊等による外部からの武力攻撃を排除するための行動が円滑に実施されるよう、道路交通法により交通の規制が行われたとき、通行が禁止され、又は制限されるのはどれか。",
+    "choices": [
+      "自衛隊等の使用する車両を含む一般車両",
+      "自衛隊等の使用する車両以外の車両",
+      "自衛隊等の使用する車両と緊急通行車両以外の車両",
+      "緊急通行車両以外の車両"
+    ],
+    "answer": 1,
+    "explanation": "道路交通法による規制では、自衛隊等の使用する車両以外の車両の通行が禁止され、又は制限されます。国民保護法による規制では、緊急通行車両以外の車両が対象です。",
+    "isTrapQuestion": true,
+    "trapNumberType": "other",
+    "topicTag": "emergency",
+    "sourceRef": "教則 第10章 第3節 災害などのとき 5 武力攻撃事態等における国民の保護のための措置に関する法律などによる交通の規制が行われたとき",
+    "lawVersion": "2026-10-03"
+  },
+  {
+    "id": "x537",
+    "licenseCategory": [
+      "gentsuki",
+      "kogataGentsukiNirin",
+      "futsuuNirin",
+      "ogataNirin",
+      "atGentei"
+    ],
+    "stageTag": "第二段階",
+    "difficulty": 3,
+    "questionText": "道路の左側部分の幅員が6メートルに満たない道路で、追越しのため右側部分にはみ出して通行できる条件の組み合わせとして正しいのはどれか。ただし、はみ出しを禁止する標識等はないものとする。",
+    "choices": [
+      "右側部分を見とおせなくても、反対方向からの交通を妨げなければよい",
+      "見とおせるかどうかや反対方向の交通にかかわらず、はみ出してよい",
+      "右側部分を見とおすことができ、かつ反対方向からの交通を妨げるおそれがない",
+      "反対方向からの交通を妨げるおそれがあっても、見とおせればよい"
+    ],
+    "answer": 2,
+    "explanation": "追越しのためのはみ出しは、右側部分を見とおすことができ、かつ反対方向からの交通を妨げるおそれがない場合に限られる。",
+    "isTrapQuestion": true,
+    "trapNumberType": "other",
+    "topicTag": "rules",
+    "sourceRef": "道路交通法第17条第5項第4号",
+    "lawVersion": "2026-10-03"
+  },
+  {
+    "id": "x538",
+    "licenseCategory": [
+      "gentsuki",
+      "kogataGentsukiNirin",
+      "futsuuNirin",
+      "ogataNirin",
+      "atGentei"
+    ],
+    "stageTag": "第二段階",
+    "difficulty": 3,
+    "questionText": "一方通行の道路で、道路の中央から右の部分にはみ出して通行するときの、はみ出し方について条文に合っているのはどれか。",
+    "choices": [
+      "一方通行の場合は、はみ出し方を少なくする義務の対象から除かれている",
+      "右側部分にその全部がはみ出すことは認められない",
+      "道路工事の場合と同じく、はみ出し方をできるだけ少なくしなければならない",
+      "一方通行でも、右側部分には一部しかはみ出してはならない"
+    ],
+    "answer": 0,
+    "explanation": "一方通行の場合は右側部分にはみ出せ、はみ出し方をできるだけ少なくする義務は、第一号の一方通行の場合を除いて課されている。",
+    "isTrapQuestion": true,
+    "trapNumberType": "other",
+    "topicTag": "rules",
+    "sourceRef": "道路交通法第17条第5項",
+    "lawVersion": "2026-10-03"
+  },
+  {
+    "id": "x539",
+    "licenseCategory": [
+      "gentsuki",
+      "kogataGentsukiNirin",
+      "futsuuNirin",
+      "ogataNirin",
+      "atGentei"
+    ],
+    "stageTag": "第二段階",
+    "difficulty": 3,
+    "questionText": "勾配の急な道路のまがりかど付近で、道路の中央から右の部分にはみ出して通行できるのは、どのような場合か。",
+    "choices": [
+      "標識等の指定がなくても、勾配が急であればいつでも",
+      "標識等の指定があっても、はみ出して通行してはならない",
+      "対向車がいなければ、標識等の指定がなくても",
+      "標識等により通行の方法が指定されていて、その指定に従い通行するとき"
+    ],
+    "answer": 3,
+    "explanation": "急な勾配の道路のまがりかど付近では、標識等で通行の方法が指定されていて、それに従い通行するときに限りはみ出して通行できる。",
+    "isTrapQuestion": true,
+    "trapNumberType": "other",
+    "topicTag": "rules",
+    "sourceRef": "道路交通法第17条第5項第5号",
+    "lawVersion": "2026-10-03"
+  },
+  {
+    "id": "x540",
+    "licenseCategory": [
+      "gentsuki",
+      "kogataGentsukiNirin",
+      "futsuuNirin",
+      "ogataNirin",
+      "atGentei"
+    ],
+    "stageTag": "第二段階",
+    "difficulty": 2,
+    "questionText": "車両通行帯のある道路で、標識により通行区分が指定されているとき、二輪車はどうしなければならないか。",
+    "choices": [
+      "常に左側端から数えて一番目の車両通行帯を通行する",
+      "指定は無視して、速度に応じた車両通行帯を通行する",
+      "空いている車両通行帯があれば、どれを通行してもよい",
+      "指定された通行の区分に従って、その車両通行帯を通行する"
+    ],
+    "answer": 3,
+    "explanation": "標識等で一番目の通行帯を通行する原則と異なる区分が指定されているときは、その区分に従って通行しなければならない。",
+    "isTrapQuestion": false,
+    "trapNumberType": "none",
+    "topicTag": "rules",
+    "sourceRef": "道路交通法第20条第2項",
+    "lawVersion": "2026-10-03"
+  },
+  {
+    "id": "x541",
+    "licenseCategory": [
+      "gentsuki",
+      "kogataGentsukiNirin",
+      "futsuuNirin",
+      "ogataNirin",
+      "atGentei"
+    ],
+    "stageTag": "第二段階",
+    "difficulty": 2,
+    "questionText": "車両通行帯のある道路で、左側端から数えて一番目の車両通行帯を通行しなくてもよいとされる場合として、条文に合っているのはどれか。",
+    "choices": [
+      "急いでいて、早く目的地へ着きたいとき",
+      "他の車両通行帯が空いているとき",
+      "走行に自信があり、安全を確認できたとき",
+      "道路の状況その他の事情によりやむを得ないとき"
+    ],
+    "answer": 3,
+    "explanation": "追越しなどのほか、道路の状況その他の事情によりやむを得ないときは、通行区分の規定によらないことができる。",
+    "isTrapQuestion": false,
+    "trapNumberType": "none",
+    "topicTag": "rules",
+    "sourceRef": "道路交通法第20条第3項",
+    "lawVersion": "2026-10-03"
+  },
+  {
+    "id": "x542",
+    "licenseCategory": [
+      "futsuuNirin",
+      "ogataNirin",
+      "atGentei"
+    ],
+    "stageTag": "第二段階",
+    "difficulty": 3,
+    "questionText": "交差点における交通の規定が適用されない場合として、条文に合っているのはどれか。",
+    "choices": [
+      "交差点を通行している軽車両",
+      "本線車道を通行している自動車",
+      "一般道路の交差点を通行している自動車",
+      "交差点付近で右折の順番を待っている二輪車"
+    ],
+    "answer": 1,
+    "explanation": "交差点における交通に係る規定は、本線車道を通行している自動車には適用されない。",
+    "isTrapQuestion": true,
+    "trapNumberType": "other",
+    "topicTag": "rules",
+    "sourceRef": "道路交通法第16条第3項",
+    "lawVersion": "2026-10-03"
+  },
+  {
+    "id": "x543",
+    "licenseCategory": [
+      "gentsuki",
+      "kogataGentsukiNirin",
+      "futsuuNirin",
+      "ogataNirin",
+      "atGentei"
+    ],
+    "stageTag": "第二段階",
+    "difficulty": 2,
+    "questionText": "二輪車で走行中、最高速度が自分の車両より高い車両に追いつかれた。この車両に追い越されようとしているときの運転として正しいのはどれか。",
+    "choices": [
+      "相手の車両が追越しを終わるまで、必ず徐行しなければならない",
+      "相手の車両に遅れないよう、速度を増して並んで走行する",
+      "相手の車両が追越しを終わるまで、速度を増してはならない",
+      "相手の車両が追越しを終わるまで、一時停止しなければならない"
+    ],
+    "answer": 2,
+    "explanation": "最高速度が高い車両に追いつかれたときは、その車両が追越しを終わるまで速度を増してはならないと定められている。",
+    "isTrapQuestion": true,
+    "trapNumberType": "other",
+    "topicTag": "rules",
+    "sourceRef": "道路交通法第27条第1項",
+    "lawVersion": "2026-10-03"
+  },
+  {
+    "id": "x544",
+    "licenseCategory": [
+      "gentsuki",
+      "kogataGentsukiNirin",
+      "futsuuNirin",
+      "ogataNirin",
+      "atGentei"
+    ],
+    "stageTag": "第二段階",
+    "difficulty": 3,
+    "questionText": "二輪車で走行中、自分と最高速度が同じ車両に後方から追いつかれ、その車両の速度よりおそい速度で引き続き進行しようとするときの運転として正しいのはどれか。",
+    "choices": [
+      "最高速度が同じなので、速度を増して先に行かせないようにする",
+      "最高速度が同じなので、速度を増してもよいが、進路は譲る",
+      "相手の車両が追越しを終わるまで、道路の中央に寄って進む",
+      "相手の車両が追越しを終わるまで、速度を増してはならない"
+    ],
+    "answer": 3,
+    "explanation": "最高速度が同じか低い車両に追いつかれ、その車両の速度よりおそい速度で進行しようとするときも、追越しが終わるまで速度を増してはならない。",
+    "isTrapQuestion": true,
+    "trapNumberType": "other",
+    "topicTag": "hazard_prediction",
+    "sourceRef": "道路交通法第27条第1項",
+    "lawVersion": "2026-10-03"
+  },
+  {
+    "id": "x545",
+    "licenseCategory": [
+      "gentsuki",
+      "kogataGentsukiNirin",
+      "futsuuNirin",
+      "ogataNirin",
+      "atGentei"
+    ],
+    "stageTag": "第二段階",
+    "difficulty": 2,
+    "questionText": "進路の変更の禁止を表示する道路標示で区画された車両通行帯を二輪車で通行しているとき、その道路標示をこえて進路を変更してよい場合はどれか。",
+    "choices": [
+      "通行している車両通行帯が混雑して進みにくいとき",
+      "進路変更の合図を、手や方向指示器で十分に行ったとき",
+      "後続の車両が追越しをしようとして接近しているとき",
+      "道路工事のため、通行している車両通行帯を通行できないとき"
+    ],
+    "answer": 3,
+    "explanation": "道路の損壊や道路工事その他の障害のため、通行している車両通行帯を通行できないときは、道路標示をこえて進路を変更することができる。",
+    "isTrapQuestion": false,
+    "trapNumberType": "none",
+    "topicTag": "rules",
+    "sourceRef": "道路交通法第26条の2第3項第1号",
+    "lawVersion": "2026-10-03"
+  },
+  {
+    "id": "x546",
+    "licenseCategory": [
+      "gentsuki",
+      "kogataGentsukiNirin",
+      "futsuuNirin",
+      "ogataNirin",
+      "atGentei"
+    ],
+    "stageTag": "第二段階",
+    "difficulty": 3,
+    "questionText": "二輪車で、乗客の乗降のため停車中の路面電車に追いついた。安全地帯はなく、路面電車に乗降する人もいない。徐行して路面電車の左側を通過できるのは、路面電車から何メートル以上の間隔を保つことができるときか。",
+    "choices": [
+      "2メートル以上",
+      "1.5メートル以上",
+      "3メートル以上",
+      "1メートル以上"
+    ],
+    "answer": 1,
+    "explanation": "乗降する者がいない場合に、路面電車の左側に路面電車から1.5メートル以上の間隔を保てるときは、徐行して左側を通過できる。",
+    "isTrapQuestion": true,
+    "trapNumberType": "other",
+    "topicTag": "rules",
+    "sourceRef": "道路交通法第31条",
+    "lawVersion": "2026-10-03"
+  },
+  {
+    "id": "x548",
+    "licenseCategory": [
+      "gentsuki",
+      "kogataGentsukiNirin",
+      "futsuuNirin",
+      "ogataNirin",
+      "atGentei"
+    ],
+    "stageTag": "第二段階",
+    "difficulty": 3,
+    "questionText": "二輪車が路面電車を追い越そうとするとき、原則として追いついた路面電車の左側を通行しなければならないが、この規定が適用されない場合はどれか。",
+    "choices": [
+      "軌道が道路の右側端に寄って設けられているとき",
+      "軌道が道路の左側端に寄って設けられているとき",
+      "路面電車が停留所で停車しているとき",
+      "路面電車の速度が二輪車よりおそいとき"
+    ],
+    "answer": 1,
+    "explanation": "路面電車を追い越すときは左側を通行するのが原則だが、軌道が道路の左側端に寄って設けられているときはこの限りでない。",
+    "isTrapQuestion": true,
+    "trapNumberType": "other",
+    "topicTag": "rules",
+    "sourceRef": "道路交通法第28条第3項",
+    "lawVersion": "2026-10-03"
+  },
+  {
+    "id": "x549",
+    "licenseCategory": [
+      "gentsuki",
+      "kogataGentsukiNirin",
+      "futsuuNirin",
+      "ogataNirin",
+      "atGentei"
+    ],
+    "stageTag": "第一段階",
+    "difficulty": 1,
+    "questionText": "道路標識等による停止線が設けられている踏切を、二輪車で通過しようとするとき、停止する位置として正しいのはどれか。",
+    "choices": [
+      "踏切の手前にある停止線の直前",
+      "踏切の遮断機の真下",
+      "停止線から1メートル手前",
+      "踏切に入ってすぐの場所"
+    ],
+    "answer": 0,
+    "explanation": "踏切を通過するときは、踏切の直前で、停止線が設けられているときはその停止線の直前で停止し、安全を確認した後に進行しなければならない。",
+    "isTrapQuestion": false,
+    "trapNumberType": "none",
+    "topicTag": "rules",
+    "sourceRef": "道路交通法第33条第1項",
+    "lawVersion": "2026-10-03"
+  },
+  {
+    "id": "x550",
+    "licenseCategory": [
+      "gentsuki",
+      "kogataGentsukiNirin",
+      "futsuuNirin",
+      "ogataNirin",
+      "atGentei"
+    ],
+    "stageTag": "第二段階",
+    "difficulty": 2,
+    "questionText": "車両通行帯のある道路で、道路標識等により交差点で進行する方向に関する通行の区分が指定されている。車両の通行について正しいのはどれか。",
+    "choices": [
+      "原則として、指定された通行の区分に従って、その車両通行帯を通行しなければならない",
+      "指定に従うのは、後続車がいるときだけである",
+      "通行の区分は目安であり、空いている車両通行帯を自由に選んでよい",
+      "指定にかかわらず、常に最も左の車両通行帯を通行しなければならない"
+    ],
+    "answer": 0,
+    "explanation": "交差点で進行する方向に関する通行の区分が道路標識等で指定されているときは、その区分に従い当該車両通行帯を通行しなければなりません。",
+    "isTrapQuestion": false,
+    "trapNumberType": "none",
+    "topicTag": "rules",
+    "sourceRef": "道路交通法第35条第1項",
+    "lawVersion": "2026-10-03"
+  },
+  {
+    "id": "x551",
+    "licenseCategory": [
+      "gentsuki",
+      "kogataGentsukiNirin",
+      "futsuuNirin",
+      "ogataNirin",
+      "atGentei"
+    ],
+    "stageTag": "第二段階",
+    "difficulty": 2,
+    "questionText": "交差点で進行する方向に関する通行の区分が指定されている道路で、指定された車両通行帯に従わなくてもよい場合として、条文上正しいのはどれか。",
+    "choices": [
+      "道路工事その他の障害のためやむを得ないとき",
+      "指定された車両通行帯の交通量が少なく、速度を上げたいとき",
+      "後続車に追い越されそうで、進路を譲りたくないとき",
+      "指定された車両通行帯が混雑していて、先に進みたいとき"
+    ],
+    "answer": 0,
+    "explanation": "道路の損壊、道路工事その他の障害のためやむを得ないときなどは、通行の区分に従わなくてもよいとされています。",
+    "isTrapQuestion": true,
+    "trapNumberType": "other",
+    "topicTag": "rules",
+    "sourceRef": "道路交通法第35条第1項",
+    "lawVersion": "2026-10-03"
+  },
+  {
+    "id": "x552",
+    "licenseCategory": [
+      "gentsuki",
+      "kogataGentsukiNirin",
+      "futsuuNirin",
+      "ogataNirin",
+      "atGentei"
+    ],
+    "stageTag": "第二段階",
+    "difficulty": 2,
+    "questionText": "環状交差点に入ろうとしたとき、すでに環状交差点内を通行している車両があった。二輪車の運転者の行動として正しいのはどれか。",
+    "choices": [
+      "環状交差点内の車両よりも、入ろうとする車両が優先する",
+      "左方から来る車両を優先する規定に従い、左方に車両がなければ先に入ってよい",
+      "環状交差点内を通行している車両の進行を妨げてはならない",
+      "環状交差点内を通行している車両と交互に進入する"
+    ],
+    "answer": 2,
+    "explanation": "環状交差点では、交差点内を通行する車両等の進行妨害をしてはならず、左方優先などの規定は適用されません。",
+    "isTrapQuestion": true,
+    "trapNumberType": "other",
+    "topicTag": "hazard_prediction",
+    "sourceRef": "道路交通法第37条の2第1項",
+    "lawVersion": "2026-10-03"
+  },
+  {
+    "id": "x553",
+    "licenseCategory": [
+      "gentsuki",
+      "kogataGentsukiNirin",
+      "futsuuNirin",
+      "ogataNirin",
+      "atGentei"
+    ],
+    "stageTag": "第二段階",
+    "difficulty": 3,
+    "questionText": "優先道路の指定も幅員の差もない、交通整理の行われていない交差点を二輪車で通行する。進行を妨げてはならない相手として、条文上正しいのはどれか。",
+    "choices": [
+      "交差道路を左方から進行してくる路面電車のみ",
+      "交差道路を通行する車両のうち、自分より速度の遅いもの",
+      "交差道路を右方から進行してくる車両のみ",
+      "交差道路を左方から進行してくる車両と、交差道路を通行する路面電車"
+    ],
+    "answer": 3,
+    "explanation": "車両は、交差道路を左方から進行してくる車両及び交差道路を通行する路面電車の進行妨害をしてはなりません。",
+    "isTrapQuestion": true,
+    "trapNumberType": "other",
+    "topicTag": "rules",
+    "sourceRef": "道路交通法第36条第1項第1号",
+    "lawVersion": "2026-10-03"
+  },
+  {
+    "id": "x554",
+    "licenseCategory": [
+      "gentsuki",
+      "kogataGentsukiNirin",
+      "futsuuNirin",
+      "ogataNirin",
+      "atGentei"
+    ],
+    "stageTag": "第一段階",
+    "difficulty": 1,
+    "questionText": "二輪車で道路のまがりかど附近を通行するとき、道路標識等による徐行の指定がない場合の運転として正しいのはどれか。",
+    "choices": [
+      "警音器を鳴らせば、通常の速度で進行してよい",
+      "必ず一時停止してから進行しなければならない",
+      "徐行しなければならない",
+      "見通しがよければ、通常の速度で進行してよい"
+    ],
+    "answer": 2,
+    "explanation": "道路のまがりかど附近を通行するときは、徐行しなければならないと定められています。",
+    "isTrapQuestion": false,
+    "trapNumberType": "none",
+    "topicTag": "rules",
+    "sourceRef": "道路交通法第42条第2号",
+    "lawVersion": "2026-10-03"
+  },
+  {
+    "id": "x555",
+    "licenseCategory": [
+      "gentsuki",
+      "kogataGentsukiNirin",
+      "futsuuNirin",
+      "ogataNirin",
+      "atGentei"
+    ],
+    "stageTag": "第二段階",
+    "difficulty": 2,
+    "questionText": "交差点の側端から5メートル以内の部分は停車も駐車も禁止されている。この場所で車両が停止してよい場合として、条文上正しいのはどれか。",
+    "choices": [
+      "人を待つため、エンジンをかけたまま停止するとき",
+      "同乗者を降ろすため、短時間停止するとき",
+      "危険を防止するため一時停止するとき",
+      "荷物を短時間積み下ろすため停止するとき"
+    ],
+    "answer": 2,
+    "explanation": "停車や駐車が禁止された場所でも、法令の規定若しくは警察官の命令により、又は危険を防止するため一時停止する場合は例外とされています。",
+    "isTrapQuestion": true,
+    "trapNumberType": "other",
+    "topicTag": "parking",
+    "sourceRef": "道路交通法第44条第1項",
+    "lawVersion": "2026-10-03"
+  },
+  {
+    "id": "x556",
+    "licenseCategory": [
+      "gentsuki",
+      "kogataGentsukiNirin",
+      "futsuuNirin",
+      "ogataNirin",
+      "atGentei"
+    ],
+    "stageTag": "第二段階",
+    "difficulty": 2,
+    "questionText": "交通整理の行われていない交差点の手前に一時停止の指定があり、停止線がない。一時停止する位置として正しいのはどれか。",
+    "choices": [
+      "交差点の直前",
+      "交差点の手前30メートルの地点",
+      "交差点の側端から5メートル手前の地点",
+      "交差点の中央付近"
+    ],
+    "answer": 0,
+    "explanation": "道路標識等による停止線が設けられていない場合は、交差点の直前で一時停止しなければなりません。",
+    "isTrapQuestion": true,
+    "trapNumberType": "other",
+    "topicTag": "rules",
+    "sourceRef": "道路交通法第43条",
+    "lawVersion": "2026-10-03"
+  },
+  {
+    "id": "x557",
+    "licenseCategory": [
+      "gentsuki",
+      "kogataGentsukiNirin",
+      "futsuuNirin",
+      "ogataNirin",
+      "atGentei"
+    ],
+    "stageTag": "第二段階",
+    "difficulty": 2,
+    "questionText": "停車が禁止されている場所に、二輪車が違反して停車していると認められるとき、警察官等が運転者に命ずることができる内容として、条文に合うのはどれか。",
+    "choices": [
+      "停車の方法を変更すること、または停車が禁止されている場所から移動すること",
+      "停車の方法を変更することだけで、場所の移動までは命ずることができない",
+      "その場で停車を続け、一定時間が過ぎるまで二輪車を離れないこと",
+      "運転免許証を直ちに提出して、その場で免許の効力を停止すること"
+    ],
+    "answer": 0,
+    "explanation": "違法停車の場合、警察官等は、停車の方法の変更、または禁止されている場所からの移動を命ずることができるとされています。",
+    "isTrapQuestion": true,
+    "trapNumberType": "other",
+    "topicTag": "parking",
+    "sourceRef": "道路交通法第50条の2",
+    "lawVersion": "2026-10-03"
+  },
+  {
+    "id": "x558",
+    "licenseCategory": [
+      "gentsuki",
+      "kogataGentsukiNirin",
+      "futsuuNirin",
+      "ogataNirin",
+      "atGentei"
+    ],
+    "stageTag": "第二段階",
+    "difficulty": 3,
+    "questionText": "二輪車を駐車すると、右側の道路上に3.5メートル以上の余地がなくなる場所で、例外として駐車できる場合として、条文に合うのはどれか。",
+    "choices": [
+      "運転者が二輪車から離れて買い物をするが、15分以内に戻るとき",
+      "運転者が二輪車から離れたが、直ちに運転に従事できる状態にあるとき",
+      "エンジンを止めて、友人を待つために運転者が二輪車の近くにいるとき",
+      "運転者が二輪車から離れ、すぐには運転に従事できないが短時間のとき"
+    ],
+    "answer": 1,
+    "explanation": "余地がない場所でも、運転者が車両を離れたが直ちに運転に従事できる状態にあるときなどは、駐車の禁止の例外になります。",
+    "isTrapQuestion": true,
+    "trapNumberType": "other",
+    "topicTag": "parking",
+    "sourceRef": "道路交通法第45条第2項",
+    "lawVersion": "2026-10-03"
+  },
+  {
+    "id": "x559",
+    "licenseCategory": [
+      "gentsuki",
+      "kogataGentsukiNirin",
+      "futsuuNirin",
+      "ogataNirin",
+      "atGentei"
+    ],
+    "stageTag": "第二段階",
+    "difficulty": 3,
+    "questionText": "道路標識等によって余地の距離が指定されている場所に、二輪車を駐車しようとするとき、右側の道路上に確保すべき余地として、条文に合うのはどれか。",
+    "choices": [
+      "指定にかかわらず、常に3.5メートル以上の余地",
+      "3.5メートルではなく、道路標識等で指定されている距離以上の余地",
+      "指定にかかわらず、常に5メートル以上の余地",
+      "指定された距離の半分にあたる距離以上の余地"
+    ],
+    "answer": 1,
+    "explanation": "右側の道路上に必要な余地は3.5メートルですが、道路標識等で距離が指定されているときは、その距離が基準になります。",
+    "isTrapQuestion": true,
+    "trapNumberType": "other",
+    "topicTag": "parking",
+    "sourceRef": "道路交通法第45条第2項",
+    "lawVersion": "2026-10-03"
+  },
+  {
+    "id": "x560",
+    "licenseCategory": [
+      "gentsuki",
+      "kogataGentsukiNirin",
+      "futsuuNirin",
+      "ogataNirin",
+      "atGentei"
+    ],
+    "stageTag": "第二段階",
+    "difficulty": 2,
+    "questionText": "駐車を禁止する道路の部分の一部について、道路標識等で駐車をすることができると定められているとき、二輪車の駐車について正しいのはどれか。",
+    "choices": [
+      "公安委員会の許可を別に受けた場合に限り、駐車することができる",
+      "駐車禁止の規定にかかわらず、その部分には駐車することができる",
+      "駐車はできないが、短時間の停車だけはすることができる",
+      "駐車禁止の規定が優先されるため、その部分には駐車できない"
+    ],
+    "answer": 1,
+    "explanation": "道路標識等により駐車できるとされている部分では、駐車を禁止する規定にかかわらず、駐車することができます。",
+    "isTrapQuestion": false,
+    "trapNumberType": "none",
+    "topicTag": "parking",
+    "sourceRef": "道路交通法第46条",
+    "lawVersion": "2026-10-03"
+  },
+  {
+    "id": "x561",
+    "licenseCategory": [
+      "gentsuki",
+      "kogataGentsukiNirin",
+      "futsuuNirin",
+      "ogataNirin",
+      "atGentei"
+    ],
+    "stageTag": "第二段階",
+    "difficulty": 2,
+    "questionText": "時間制限駐車区間で二輪車を駐車するとき、駐車の場所と方法について正しいのはどれか。",
+    "choices": [
+      "指定された部分であれば、方法は運転者が自由に選んで駐車できる",
+      "道路標識等により指定されている道路の部分と方法でなければ駐車してはならない",
+      "指定された方法であれば、道路の部分は運転者が自由に選んで駐車できる",
+      "制限時間内であれば、場所も方法も運転者が自由に選んで駐車できる"
+    ],
+    "answer": 1,
+    "explanation": "時間制限駐車区間では、道路標識等で指定された部分と方法でなければ駐車してはならないとされています。",
+    "isTrapQuestion": true,
+    "trapNumberType": "other",
+    "topicTag": "parking",
+    "sourceRef": "道路交通法第49条の3第3項",
+    "lawVersion": "2026-10-03"
+  },
+  {
+    "id": "x562",
+    "licenseCategory": [
+      "gentsuki",
+      "kogataGentsukiNirin",
+      "futsuuNirin",
+      "ogataNirin",
+      "atGentei"
+    ],
+    "stageTag": "第二段階",
+    "difficulty": 3,
+    "questionText": "警察署長から、時間制限駐車区間での駐車について場所・方法・開始と終了の時刻を指定した許可を受けた車両の運転者がしてはならないこととして、条文に合うのはどれか。",
+    "choices": [
+      "指定された開始時刻より前に、その場所に到着して待機すること",
+      "指定された終了時刻より前に、駐車を終えて出発すること",
+      "指定された場所で、人の乗降のために駐車を開始すること",
+      "指定された駐車を終了すべき時刻を過ぎて、引き続き駐車すること"
+    ],
+    "answer": 3,
+    "explanation": "許可を受けた車両でも、指定された駐車を終了すべき時刻を過ぎて引き続き駐車してはならないとされています。",
+    "isTrapQuestion": true,
+    "trapNumberType": "other",
+    "topicTag": "parking",
+    "sourceRef": "道路交通法第49条の5",
+    "lawVersion": "2026-10-03"
+  },
+  {
+    "id": "x563",
+    "licenseCategory": [
+      "gentsuki",
+      "kogataGentsukiNirin",
+      "futsuuNirin",
+      "ogataNirin",
+      "atGentei"
+    ],
+    "stageTag": "第二段階",
+    "difficulty": 2,
+    "questionText": "パーキング・チケット発給設備のある時間制限駐車区間に二輪車を駐車するとき、道路標識等で表示された駐車できる時間は、いつから数えるか。",
+    "choices": [
+      "チケットを前面に掲示し終えた時から",
+      "区間に入って走行を始めた時から",
+      "二輪車のエンジンを止めた時から",
+      "パーキング・チケットの発給を受けた時から"
+    ],
+    "answer": 3,
+    "explanation": "表示されている時間は、パーキング・チケット発給設備によりチケットの発給を受けた時から数えます。",
+    "isTrapQuestion": true,
+    "trapNumberType": "other",
+    "topicTag": "parking",
+    "sourceRef": "道路交通法第49条の3第2項",
+    "lawVersion": "2026-10-03"
+  },
+  {
+    "id": "x565",
+    "licenseCategory": [
+      "gentsuki",
+      "kogataGentsukiNirin",
+      "futsuuNirin",
+      "ogataNirin",
+      "atGentei"
+    ],
+    "stageTag": "第二段階",
+    "difficulty": 3,
+    "questionText": "二輪車が環状交差点の中で徐行し、または停止しようとするときの合図について、条文に照らして正しいのはどれか。",
+    "choices": [
+      "停止の場合は合図をせず、徐行の場合だけ合図をする",
+      "手、方向指示器又は灯火により合図をしなければならない",
+      "環状交差点を出るときだけ合図をすればよい",
+      "環状交差点内では合図をする必要はない"
+    ],
+    "answer": 1,
+    "explanation": "環状交差点において徐行し、停止し、又は後退するときも、手、方向指示器又は灯火により合図をしなければならない。",
+    "isTrapQuestion": true,
+    "trapNumberType": "other",
+    "topicTag": "rules",
+    "sourceRef": "道路交通法第53条第2項",
+    "lawVersion": "2026-10-03"
+  },
+  {
+    "id": "x566",
+    "licenseCategory": [
+      "gentsuki",
+      "kogataGentsukiNirin",
+      "futsuuNirin",
+      "ogataNirin",
+      "atGentei"
+    ],
+    "stageTag": "第二段階",
+    "difficulty": 2,
+    "questionText": "車両の運転者が合図をしなければならない場合として、条文に挙げられているものはどれか。",
+    "choices": [
+      "後退するとき",
+      "発進の準備のためエンジンをかけるとき",
+      "信号待ちで長時間停止を続けているとき",
+      "道路の左端に沿って直進を続けるとき"
+    ],
+    "answer": 0,
+    "explanation": "左折、右折、転回、徐行、停止、後退、同一方向に進行しながらの進路変更のときに合図をしなければならない。",
+    "isTrapQuestion": false,
+    "trapNumberType": "none",
+    "topicTag": "rules",
+    "sourceRef": "道路交通法第53条第1項",
+    "lawVersion": "2026-10-03"
+  },
+  {
+    "id": "x567",
+    "licenseCategory": [
+      "gentsuki",
+      "kogataGentsukiNirin",
+      "futsuuNirin",
+      "ogataNirin",
+      "atGentei"
+    ],
+    "stageTag": "第二段階",
+    "difficulty": 3,
+    "questionText": "二輪車で、道路標識等による指定のない見通しのきかない交差点を通行するときの警音器の扱いとして、条文に合うのはどれか。",
+    "choices": [
+      "一時停止してからであれば、指定がなくても警音器を鳴らしてよい",
+      "危険を防止するためやむを得ない場合を除き、警音器を鳴らしてはならない",
+      "徐行していれば、指定がなくても自由に警音器を鳴らしてよい",
+      "見通しがきかない交差点なので、指定がなくても必ず警音器を鳴らさなければならない"
+    ],
+    "answer": 1,
+    "explanation": "警音器を鳴らさなければならないのは標識等で指定された場所などに限られ、それ以外は危険防止のためやむを得ない場合を除き鳴らしてはならない。",
+    "isTrapQuestion": true,
+    "trapNumberType": "other",
+    "topicTag": "hazard_prediction",
+    "sourceRef": "道路交通法第54条第2項",
+    "lawVersion": "2026-10-03"
+  },
+  {
+    "id": "x568",
+    "licenseCategory": [
+      "gentsuki",
+      "kogataGentsukiNirin",
+      "futsuuNirin",
+      "ogataNirin",
+      "atGentei"
+    ],
+    "stageTag": "第二段階",
+    "difficulty": 2,
+    "questionText": "二輪車の荷台に荷物を積むときの注意として、条文に合うのはどれか。",
+    "choices": [
+      "外部から制動灯や尾灯、番号標を確認できなくなるような積み方をしてはならない",
+      "方向指示器だけは見えなくても、制動灯が見えていればよい",
+      "昼間であれば、尾灯や後部反射器が隠れる積み方でもよい",
+      "荷物がしっかり固定されていれば、番号標や制動灯を隠す積み方でもよい"
+    ],
+    "answer": 0,
+    "explanation": "運転者は、方向指示器、番号標、制動灯、尾灯、後部反射器を外部から確認できなくなるような積載をして運転してはならない。",
+    "isTrapQuestion": true,
+    "trapNumberType": "other",
+    "topicTag": "rules",
+    "sourceRef": "道路交通法第55条第2項",
+    "lawVersion": "2026-10-03"
+  },
+  {
+    "id": "x569",
+    "licenseCategory": [
+      "gentsuki",
+      "kogataGentsukiNirin",
+      "futsuuNirin",
+      "ogataNirin",
+      "atGentei"
+    ],
+    "stageTag": "第二段階",
+    "difficulty": 3,
+    "questionText": "整備不良車両に該当すると認められる車両が運転されているとき、応急の措置によっては必要な整備ができないと認められる場合に、警察官ができることとして正しいのはどれか。",
+    "choices": [
+      "その故障車両の運転を継続してはならない旨を命ずる",
+      "運転者の免許証を預かり、運転を続けさせる",
+      "走行を続けてもよいと許可し、整備は後日に回させる",
+      "その場で車両を警察署のものとして没収する"
+    ],
+    "answer": 0,
+    "explanation": "応急の措置によっては必要な整備ができないと認められる故障車両には、警察官は運転を継続してはならない旨を命ずることができる。",
+    "isTrapQuestion": true,
+    "trapNumberType": "other",
+    "topicTag": "rules",
+    "sourceRef": "道路交通法第63条第2項",
+    "lawVersion": "2026-10-03"
   }
 ]

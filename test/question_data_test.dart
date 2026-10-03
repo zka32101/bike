@@ -238,7 +238,7 @@ void main() {
           expect(q['sourceRef'], isNotNull, reason: '$id に出典がない');
         }
       }
-      expect(byId.length, greaterThanOrEqualTo(450));
+      expect(byId.length, greaterThanOrEqualTo(560));
     });
 
     test('追加した問題は、原付と小型限定普通二輪（125cc以下）に高速道路の問題を出さない', () {
