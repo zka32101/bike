@@ -4,6 +4,7 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 import '../models/question.dart';
 import '../viewmodels/providers.dart';
+import 'oshi_wardrobe.dart';
 
 /// 習得度から推しの成長段階を決める。網羅率＝解いた問題の種類÷全問題数、
 /// 正答率＝全回答の正解率（端末内で計算）。
@@ -109,15 +110,28 @@ class OshiCard extends ConsumerStatefulWidget {
 class _OshiCardState extends ConsumerState<OshiCard> {
   int _seed = 0;
 
+  ExamPhase _examPhase(DateTime? d) =>
+      MascotDayState(examDate: d).examPhase(widget.now ?? DateTime.now());
+
   @override
   Widget build(BuildContext context) {
     final display = ref.watch(oshiDisplayProvider);
     final theme = Theme.of(context);
-    final menu = PopupMenuButton<MascotDisplay>(
+    final menu = PopupMenuButton<MascotDisplay?>(
       tooltip: '推しの表示',
       icon: const Icon(Icons.more_vert),
-      onSelected: (d) => ref.read(oshiDisplayProvider.notifier).set(d),
+      onSelected: (d) {
+        if (d == null) {
+          Navigator.of(context).push(MaterialPageRoute(
+            builder: (_) =>
+                OshiWardrobeView(examPhase: _examPhase(widget.examDate)),
+          ));
+          return;
+        }
+        ref.read(oshiDisplayProvider.notifier).set(d);
+      },
       itemBuilder: (_) => const [
+        PopupMenuItem(value: null, child: Text('着替え・ショップ')),
         PopupMenuItem(value: MascotDisplay.normal, child: Text('通常')),
         PopupMenuItem(value: MascotDisplay.small, child: Text('小さく表示')),
         PopupMenuItem(value: MascotDisplay.hidden, child: Text('表示しない')),
@@ -160,6 +174,7 @@ class _OshiCardState extends ConsumerState<OshiCard> {
           children: [
             MascotWidget(
               stage: stage,
+              outfit: ref.watch(equippedOutfitProvider),
               expression: day.expression,
               examPhase: day.examPhase(now),
               display: display,
