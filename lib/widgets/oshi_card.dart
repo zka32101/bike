@@ -1,10 +1,12 @@
+import 'dart:typed_data';
+
 import 'package:app_common_kit/app_common_kit.dart';
 import 'package:flutter/material.dart';
+import 'package:share_plus/share_plus.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 import '../models/question.dart';
 import '../viewmodels/providers.dart';
-import 'oshi_wardrobe.dart';
 
 /// 習得度から推しの成長段階を決める。網羅率＝解いた問題の種類÷全問題数、
 /// 正答率＝全回答の正解率（端末内で計算）。
@@ -107,31 +109,74 @@ class OshiCard extends ConsumerStatefulWidget {
   ConsumerState<OshiCard> createState() => _OshiCardState();
 }
 
+/// ホームの推しカードのメニュー操作。
+enum _OshiAction { wardrobe, passReport }
+
+/// 画像（共有カード）をOSの共有シートで共有する。
+Future<void> shareCardImage(Uint8List png) async {
+  await SharePlus.instance.share(
+    ShareParams(
+      files: [XFile.fromData(png, mimeType: 'image/png', name: 'ukalab_pass.png')],
+      text: '#うかラボ #バイク免許',
+    ),
+  );
+}
+
 class _OshiCardState extends ConsumerState<OshiCard> {
   int _seed = 0;
 
   ExamPhase _examPhase(DateTime? d) =>
       MascotDayState(examDate: d).examPhase(widget.now ?? DateTime.now());
 
+  MascotStage _stageNow() {
+    final logs = ref.read(answerLogsProvider).valueOrNull ?? const [];
+    final ids = widget.questions.map((q) => q.id).toSet();
+    final inScope = logs.where((l) => ids.contains(l.questionId)).toList();
+    return oshiStageFor(
+      distinctAnswered: inScope.map((l) => l.questionId).toSet().length,
+      totalQuestions: ids.length,
+      correct: inScope.where((l) => l.isCorrect).length,
+      answered: inScope.length,
+    );
+  }
+
+  void _onMenu(Object value) {
+    if (value is MascotDisplay) {
+      ref.read(oshiDisplayProvider.notifier).set(value);
+      return;
+    }
+    switch (value as _OshiAction) {
+      case _OshiAction.wardrobe:
+        Navigator.of(context).push(MaterialPageRoute(
+          builder: (_) => WardrobeScreen(
+            cert: UkalabCert.bikeLicense,
+            examPhase: _examPhase(widget.examDate),
+            stage: _stageNow(),
+          ),
+        ));
+      case _OshiAction.passReport:
+        showPassReportDialog(
+          context,
+          ref,
+          cert: UkalabCert.bikeLicense,
+          stage: _stageNow(),
+          onShare: shareCardImage,
+        );
+    }
+  }
+
   @override
   Widget build(BuildContext context) {
     final display = ref.watch(oshiDisplayProvider);
     final theme = Theme.of(context);
-    final menu = PopupMenuButton<MascotDisplay?>(
-      tooltip: '推しの表示',
+    final menu = PopupMenuButton<Object>(
+      tooltip: '推しのメニュー',
       icon: const Icon(Icons.more_vert),
-      onSelected: (d) {
-        if (d == null) {
-          Navigator.of(context).push(MaterialPageRoute(
-            builder: (_) =>
-                OshiWardrobeView(examPhase: _examPhase(widget.examDate)),
-          ));
-          return;
-        }
-        ref.read(oshiDisplayProvider.notifier).set(d);
-      },
+      onSelected: _onMenu,
       itemBuilder: (_) => const [
-        PopupMenuItem(value: null, child: Text('着替え・ショップ')),
+        PopupMenuItem(value: _OshiAction.wardrobe, child: Text('着替え・ショップ')),
+        PopupMenuItem(value: _OshiAction.passReport, child: Text('試験の結果を報告')),
+        PopupMenuDivider(),
         PopupMenuItem(value: MascotDisplay.normal, child: Text('通常')),
         PopupMenuItem(value: MascotDisplay.small, child: Text('小さく表示')),
         PopupMenuItem(value: MascotDisplay.hidden, child: Text('表示しない')),

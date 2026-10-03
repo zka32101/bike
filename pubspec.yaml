@@ -17,7 +17,7 @@ dependencies:
   app_common_kit:
     git:
       url: https://github.com/zka32101/app_common_kit.git
-      ref: v0.2.1
+      ref: v0.4.0
   yourwish_kentei:
     git:
       url: https://github.com/zka32101/yourwish_kentei.git
@@ -71,6 +71,7 @@ dependencies:
 
   # 国際化（日付フォーマット等）。flutter_localizations (SDK) が固定するバージョンに合わせる。
   intl: ^0.20.2
+  share_plus: ^13.3.1
 
 dev_dependencies:
   flutter_test:
@@ -95,4 +96,7 @@ flutter_launcher_icons:
   # （iOSビルドに着手する際は ios/ を Flutter 標準構成で再生成してから有効化する）
   ios: false
   image_path: "assets/icon/app_icon.png"
+  # Android のアダプティブアイコン（うかラボ共通の生成ツールで作成。前景は中央66%以内）
+  adaptive_icon_background: "assets/icon/app_icon_bg.png"
+  adaptive_icon_foreground: "assets/icon/app_icon_fg.png"
   min_sdk_android: 21
