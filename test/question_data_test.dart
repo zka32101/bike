@@ -224,5 +224,35 @@ void main() {
       final q = all.firstWhere((q) => q['id'] == 'f289');
       expect((q['choices'] as List)[q['answer'] as int], contains('0.3メートル'));
     });
+
+    test('複数の区分ファイルに置く共通の問題は、どのファイルでも同じ内容（教則から追加した x### 系）', () {
+      final byId = <String, String>{};
+      for (final file in files) {
+        for (final q in _load(file)) {
+          final id = q['id'] as String;
+          if (!id.startsWith('x')) continue;
+          final body = jsonEncode(q);
+          expect(byId.putIfAbsent(id, () => body), body, reason: '$id が区分ファイル間で食い違う');
+          final cats = (q['licenseCategory'] as List).cast<String>();
+          expect(cats, isNotEmpty, reason: id);
+          expect(q['sourceRef'], isNotNull, reason: '$id に出典がない');
+        }
+      }
+      expect(byId.length, greaterThanOrEqualTo(250));
+    });
+
+    test('追加した問題は、原付と小型限定普通二輪（125cc以下）に高速道路の問題を出さない', () {
+      for (final file in files) {
+        final name = file.uri.pathSegments.last;
+        if (name != 'gentsuki.json' && name != 'kogata_gentsuki_nirin.json') continue;
+        for (final q in _load(file)) {
+          if (!(q['id'] as String).startsWith('x')) continue;
+          expect(q['topicTag'] != 'highway', isTrue);
+          final text = (q['questionText'] as String);
+          expect(text.contains('高速道路') || text.contains('高速自動車国道'), isFalse,
+              reason: '${q['id']}（$name）に高速道路の問題');
+        }
+      }
+    });
   });
 }
