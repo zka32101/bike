@@ -507,48 +507,6 @@
     "topicTag": "maintenance"
   },
   {
-    "id": "f025",
-    "licenseCategory": [
-      "futsuuNirin",
-      "kogataGentsukiNirin",
-      "atGentei"
-    ],
-    "stageTag": "第二段階",
-    "difficulty": 2,
-    "questionText": "二輪車で夜間走行する際の注意点で正しいのはどれか。",
-    "choices": [
-      "反射材や懐中電灯も装備すると視認性が高まる",
-      "ヘッドライトをつけていれば他の装備は不要",
-      "夜間走行は避けるべき",
-      "ハイビームのみで十分"
-    ],
-    "answer": 0,
-    "explanation": "夜間走行では、ヘッドライトに加えて反射材や懐中電灯を装備することで、より高い視認性が確保できる。",
-    "isTrapQuestion": false,
-    "trapNumberType": "none",
-    "topicTag": "hazard_prediction"
-  },
-  {
-    "id": "f026",
-    "licenseCategory": [
-      "futsuuNirin"
-    ],
-    "stageTag": "第一段階",
-    "difficulty": 1,
-    "questionText": "普通二輪車での白線の横断について正しいのはどれか。",
-    "choices": [
-      "白線は装飾的なマーク",
-      "白線を踏まないよう走行する",
-      "白線は安全と示す",
-      "白線は踏んでも問題ない"
-    ],
-    "answer": 1,
-    "explanation": "二輪車は白線（特に破線）を踏むとスリップのリスクが高まるため、可能な限り避けるべき。",
-    "isTrapQuestion": false,
-    "trapNumberType": "none",
-    "topicTag": "operation"
-  },
-  {
     "id": "f027",
     "licenseCategory": [
       "futsuuNirin",
@@ -612,26 +570,6 @@
     "isTrapQuestion": false,
     "trapNumberType": "none",
     "topicTag": "operation"
-  },
-  {
-    "id": "f030",
-    "licenseCategory": [
-      "futsuuNirin"
-    ],
-    "stageTag": "第一段階",
-    "difficulty": 1,
-    "questionText": "普通二輪車の税区分で正しいのはどれか。",
-    "choices": [
-      "軽自動車扱い",
-      "二輪の軽自動車税",
-      "普通車扱い",
-      "税金はかからない"
-    ],
-    "answer": 1,
-    "explanation": "普通二輪車は軽自動車税の対象であり、毎年申告が必要。",
-    "isTrapQuestion": false,
-    "trapNumberType": "none",
-    "topicTag": "license_system"
   },
   {
     "id": "f031",
@@ -870,26 +808,6 @@
     "topicTag": "operation"
   },
   {
-    "id": "f042",
-    "licenseCategory": [
-      "futsuuNirin"
-    ],
-    "stageTag": "第一段階",
-    "difficulty": 2,
-    "questionText": "普通二輪車での乗客の荷物についての規制で正しいのはどれか。",
-    "choices": [
-      "乗客の荷物は積載量に含まれない",
-      "乗客が持つ荷物も積載量に含まれる",
-      "荷物に制限はない",
-      "手で持っていれば問題ない"
-    ],
-    "answer": 1,
-    "explanation": "乗客が持つ荷物も総積載量60kg以内に含まれるため、事前の確認が必要。",
-    "isTrapQuestion": true,
-    "trapNumberType": "loadLimit",
-    "topicTag": "parking"
-  },
-  {
     "id": "f043",
     "licenseCategory": [
       "futsuuNirin",
@@ -953,48 +871,6 @@
     "isTrapQuestion": false,
     "trapNumberType": "none",
     "topicTag": "rules"
-  },
-  {
-    "id": "f046",
-    "licenseCategory": [
-      "futsuuNirin",
-      "kogataGentsukiNirin",
-      "atGentei"
-    ],
-    "stageTag": "第一段階",
-    "difficulty": 2,
-    "questionText": "二輪車での児童や幼児の乗車について正しいのはどれか。",
-    "choices": [
-      "制限がなく誰でも乗車可能",
-      "一定年齢以上で、安全装置の着用が必須",
-      "児童乗車は全て禁止",
-      "親の判断に任せられる"
-    ],
-    "answer": 1,
-    "explanation": "二輪車への児童乗車は6歳以上が条件であり、適切なヘルメット着用が必須。",
-    "isTrapQuestion": false,
-    "trapNumberType": "none",
-    "topicTag": "parking"
-  },
-  {
-    "id": "f047",
-    "licenseCategory": [
-      "futsuuNirin"
-    ],
-    "stageTag": "第二段階",
-    "difficulty": 2,
-    "questionText": "普通二輪での定期点検の頻度について正しいのはどれか。",
-    "choices": [
-      "点検義務はない",
-      "走行距離で判断される",
-      "1年に1回の定期点検が必須",
-      "3年に1回で十分"
-    ],
-    "answer": 2,
-    "explanation": "普通二輪は1年に1回の定期点検が法で義務づけられている。",
-    "isTrapQuestion": false,
-    "trapNumberType": "none",
-    "topicTag": "maintenance"
   },
   {
     "id": "f048",
@@ -1138,26 +1014,6 @@
     "isTrapQuestion": false,
     "trapNumberType": "none",
     "topicTag": "operation"
-  },
-  {
-    "id": "f055",
-    "licenseCategory": [
-      "futsuuNirin"
-    ],
-    "stageTag": "第二段階",
-    "difficulty": 2,
-    "questionText": "高速道路での二輪車の走行において、危険な状況はどれか。",
-    "choices": [
-      "大型車の間での走行",
-      "トレーラーの横風の影響",
-      "全て該当する",
-      "路肩走行"
-    ],
-    "answer": 2,
-    "explanation": "普通二輪は高速道路を走行できるが、大型車の間での走行、トレーラーなどによる横風の影響、路肩走行はいずれも二輪車にとって危険要因となりうる。",
-    "isTrapQuestion": false,
-    "trapNumberType": "none",
-    "topicTag": "rules"
   },
   {
     "id": "f057",
@@ -1498,28 +1354,6 @@
     "topicTag": "parking"
   },
   {
-    "id": "f073",
-    "licenseCategory": [
-      "futsuuNirin",
-      "kogataGentsukiNirin",
-      "atGentei"
-    ],
-    "stageTag": "第一段階",
-    "difficulty": 2,
-    "questionText": "普通二輪での制動力で重要な操作は。",
-    "choices": [
-      "フロント7:リア3の比率",
-      "リアブレーキのみ",
-      "どちらでもいい",
-      "フロントブレーキのみ"
-    ],
-    "answer": 0,
-    "explanation": "安全な制動はフロントブレーキ70%・リアブレーキ30%の比率が基本。",
-    "isTrapQuestion": true,
-    "trapNumberType": "brakeTechnique",
-    "topicTag": "operation"
-  },
-  {
     "id": "f074",
     "licenseCategory": [
       "futsuuNirin",
@@ -1716,28 +1550,6 @@
     "isTrapQuestion": true,
     "trapNumberType": "signalAndMarkings",
     "topicTag": "rules"
-  },
-  {
-    "id": "f083",
-    "licenseCategory": [
-      "futsuuNirin",
-      "kogataGentsukiNirin",
-      "atGentei"
-    ],
-    "stageTag": "第一段階",
-    "difficulty": 4,
-    "questionText": "普通二輪での時速60km走行時のブレーキング距離は。",
-    "choices": [
-      "約20m",
-      "約50m",
-      "約30m",
-      "約10m"
-    ],
-    "answer": 2,
-    "explanation": "時速60km時のブレーキング距離は約30mが目安。",
-    "isTrapQuestion": true,
-    "trapNumberType": "brakingDistance",
-    "topicTag": "operation"
   },
   {
     "id": "f084",
@@ -3147,26 +2959,6 @@
     ],
     "answer": 3,
     "explanation": "対向車と行き違うときは、相手の運転者を幻惑させないよう早めにライトを下向き(すれ違い用)に切り替える必要がある。",
-    "isTrapQuestion": false,
-    "trapNumberType": "none",
-    "topicTag": "operation"
-  },
-  {
-    "id": "f269",
-    "licenseCategory": [
-      "futsuuNirin"
-    ],
-    "stageTag": "第二段階",
-    "difficulty": 4,
-    "questionText": "強い横風を受けながら走行するときの車体の保持方法として正しいのはどれか。",
-    "choices": [
-      "ハンドルをしっかりと握り、風上側にわずかに車体を傾けて直進を保つ",
-      "風に逆らわず車体を完全に垂直に保ち、ハンドルはできるだけ軽く握る",
-      "風下側に大きく体を傾けたまま走行する",
-      "横風のときはアクセルを大きく開けて対抗する"
-    ],
-    "answer": 0,
-    "explanation": "横風を受けるときはハンドルをしっかり握り、風上側にわずかに車体を傾けることで、風に流されずに直進姿勢を保ちやすくなる。",
     "isTrapQuestion": false,
     "trapNumberType": "none",
     "topicTag": "operation"

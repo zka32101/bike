@@ -180,5 +180,22 @@ void main() {
         }
       }
     });
+
+    test('根拠が確認できず削除した問題が戻っていない（第4回確認）', () {
+      const removed = {
+        'f026', 'o044', 'g113', 'g061', 'o046', 'f042', 'g133', 'g098',
+        'g090', 'f046', 'f055', 'f073', 'g134', 'g065', 'f083', 'g105',
+        'f030', 'f025', 'kg235', 'f269', 'o210', 'g082', 'f047', 'o026',
+      };
+      final ids = all.map((q) => q['id'] as String).toSet();
+      expect(ids.intersection(removed), isEmpty);
+    });
+
+    test('g059 は教則（下り坂のエンジンブレーキ）に沿い、出典がある', () {
+      final q = all.firstWhere((q) => q['id'] == 'g059');
+      expect(q['sourceRef'], contains('教則'));
+      expect((q['choices'] as List)[q['answer'] as int] as String,
+          contains('フットブレーキの使い過ぎ'));
+    });
   });
 }

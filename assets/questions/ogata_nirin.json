@@ -508,26 +508,6 @@
     "topicTag": "parking"
   },
   {
-    "id": "o026",
-    "licenseCategory": [
-      "ogataNirin"
-    ],
-    "stageTag": "第二段階",
-    "difficulty": 2,
-    "questionText": "大型二輪での定期点検について正しいのはどれか。",
-    "choices": [
-      "点検義務なし",
-      "1年に1回の定期点検が必須",
-      "3年に1回で十分",
-      "走行距離で判断"
-    ],
-    "answer": 1,
-    "explanation": "大型二輪でも1年に1回の定期点検が法で義務づけられている。",
-    "isTrapQuestion": true,
-    "trapNumberType": "other",
-    "topicTag": "maintenance"
-  },
-  {
     "id": "o027",
     "licenseCategory": [
       "ogataNirin"
@@ -870,26 +850,6 @@
     "lawVersion": "2026-10-02"
   },
   {
-    "id": "o044",
-    "licenseCategory": [
-      "ogataNirin"
-    ],
-    "stageTag": "第二段階",
-    "difficulty": 2,
-    "questionText": "大型二輪でのスタンディング走行（立ちこぎ）について正しいのはどれか。",
-    "choices": [
-      "完全禁止",
-      "いつでも可能",
-      "下り坂では許可",
-      "特定の状況下で許可される"
-    ],
-    "answer": 3,
-    "explanation": "スタンディング走行は、オフロード走行など特定の状況下でのみ許可される。",
-    "isTrapQuestion": false,
-    "trapNumberType": "none",
-    "topicTag": "operation"
-  },
-  {
     "id": "o045",
     "licenseCategory": [
       "ogataNirin"
@@ -908,26 +868,6 @@
     "isTrapQuestion": true,
     "trapNumberType": "loadLimit",
     "topicTag": "parking"
-  },
-  {
-    "id": "o046",
-    "licenseCategory": [
-      "ogataNirin"
-    ],
-    "stageTag": "第二段階",
-    "difficulty": 2,
-    "questionText": "大型二輪でのコーナリング時の体重移動について正しいのはどれか。",
-    "choices": [
-      "内側に体重移動する",
-      "外側に体重移動する",
-      "垂直に保つ",
-      "体重移動は不要"
-    ],
-    "answer": 1,
-    "explanation": "コーナリング時は、バイクを内側に傾けると同時に、体重を外側に移動させることが安全。",
-    "isTrapQuestion": false,
-    "trapNumberType": "none",
-    "topicTag": "operation"
   },
   {
     "id": "o047",
@@ -2135,26 +2075,6 @@
     ],
     "answer": 0,
     "explanation": "車体が重い大型二輪では、ハンドルを大きく切りつつ後輪ブレーキと半クラッチで速度を微調整すると安定して小さく回ることができる。",
-    "isTrapQuestion": false,
-    "trapNumberType": "none",
-    "topicTag": "operation"
-  },
-  {
-    "id": "o210",
-    "licenseCategory": [
-      "ogataNirin"
-    ],
-    "stageTag": "第一段階",
-    "difficulty": 1,
-    "questionText": "下り坂の途中で一時停止し、その後発進するときの操作として適切なのはどれか。",
-    "choices": [
-      "ニュートラルのまま足だけで支える",
-      "後輪ブレーキで車体の後退を防ぎながら発進する",
-      "前輪ブレーキだけで停止と発進の両方を行う",
-      "クラッチをつないだままアクセルを大きく開ける"
-    ],
-    "answer": 1,
-    "explanation": "下り坂での発進時は車体が後退しやすいため、後輪ブレーキで後退を防ぎながらクラッチとアクセルを調整して発進する。",
     "isTrapQuestion": false,
     "trapNumberType": "none",
     "topicTag": "operation"

@@ -4704,26 +4704,6 @@
     "topicTag": "operation"
   },
   {
-    "id": "kg235",
-    "licenseCategory": [
-      "kogataGentsukiNirin"
-    ],
-    "stageTag": "第一段階",
-    "difficulty": 2,
-    "questionText": "AT二輪車(スクーター)のエンジンを始動する方法として正しいのはどれか。",
-    "choices": [
-      "アクセルを少し開けた状態で始動する",
-      "ブレーキはかけずに、すぐ発進できる状態で始動する",
-      "スタンドを立て、ブレーキをかけ、アクセルが戻っていることを確かめてから始動する",
-      "またがって片足を地面から浮かせた状態で始動する"
-    ],
-    "answer": 2,
-    "explanation": "AT車はアクセルを回すだけで発進するため、始動時はブレーキをかけ、アクセルが全閉であることを確かめる。急発進事故を防ぐためである。",
-    "isTrapQuestion": true,
-    "trapNumberType": "other",
-    "topicTag": "operation"
-  },
-  {
     "id": "kg236",
     "licenseCategory": [
       "kogataGentsukiNirin"
