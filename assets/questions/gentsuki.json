@@ -1146,14 +1146,16 @@
     "choices": [
       "燃料を多く消費する",
       "法定速度を超過させられる",
-      "タイヤへの負荷が減り、制動力が確保できる",
+      "長い下り坂でフットブレーキの使い過ぎを防ぎ、ブレーキが効かなくなる危険を減らせる",
       "エンジン破損のリスク"
     ],
     "answer": 2,
-    "explanation": "エンジンブレーキはタイヤ負荷を低減しながら減速でき、長い下り坂で有効。",
+    "explanation": "下り坂では低速のギアでエンジンブレーキを活用する。長い下り坂でフットブレーキをひんぱんに使い過ぎると、急にブレーキが効かなくなることがあり危険である。",
     "isTrapQuestion": false,
     "trapNumberType": "none",
-    "topicTag": "operation"
+    "topicTag": "operation",
+    "sourceRef": "教則 第6章第2節 坂道・カーブ（下り坂）",
+    "lawVersion": "2026-10-03"
   },
   {
     "id": "g060",
@@ -1174,26 +1176,6 @@
     "isTrapQuestion": true,
     "trapNumberType": "nightDriving",
     "topicTag": "hazard_prediction"
-  },
-  {
-    "id": "g061",
-    "licenseCategory": [
-      "gentsuki"
-    ],
-    "stageTag": "第一段階",
-    "difficulty": 2,
-    "questionText": "原付での雨天時のウインカー操作について正しいのは。",
-    "choices": [
-      "ウインカーは常に点灯し続けることが重要",
-      "ウインカーは雨の中では見えないので消す",
-      "ウインカー出後、手信号で曲がる方向を指す",
-      "ウインカーと同時にブレーキランプを点灯させる"
-    ],
-    "answer": 0,
-    "explanation": "雨天時こそウインカーが重要で、消すことは後続車への合図不足につながる。",
-    "isTrapQuestion": true,
-    "trapNumberType": "weatherConditions",
-    "topicTag": "operation"
   },
   {
     "id": "g063",
@@ -1234,26 +1216,6 @@
     "isTrapQuestion": true,
     "trapNumberType": "hazardRecognition",
     "topicTag": "emergency"
-  },
-  {
-    "id": "g065",
-    "licenseCategory": [
-      "gentsuki"
-    ],
-    "stageTag": "第一段階",
-    "difficulty": 3,
-    "questionText": "原付での坂道走行で正しいのはどれか。",
-    "choices": [
-      "上り坂ではギア選択で速度を保つ",
-      "下り坂ではニュートラルに入れ惰性走行",
-      "上り坂ではエンジンブレーキを使う",
-      "上り坂では速度を上げる"
-    ],
-    "answer": 0,
-    "explanation": "上り坂ではギア選択で速度維持が重要で、ニュートラル走行は制御困難。",
-    "isTrapQuestion": true,
-    "trapNumberType": "other",
-    "topicTag": "operation"
   },
   {
     "id": "g066",
@@ -1558,26 +1520,6 @@
     "topicTag": "hazard_prediction"
   },
   {
-    "id": "g082",
-    "licenseCategory": [
-      "gentsuki"
-    ],
-    "stageTag": "第二段階",
-    "difficulty": 3,
-    "questionText": "原付でのクラッチ操作での誤りは。",
-    "choices": [
-      "クラッチレバーの握りすぎ",
-      "急激にクラッチを繋ぐ",
-      "半クラッチでの走行",
-      "緩やかにクラッチを繋ぐ"
-    ],
-    "answer": 1,
-    "explanation": "急激なクラッチ繋ぎはエンジン停止や急加速につながり危険。",
-    "isTrapQuestion": true,
-    "trapNumberType": "hazardRecognition",
-    "topicTag": "operation"
-  },
-  {
     "id": "g083",
     "licenseCategory": [
       "gentsuki"
@@ -1718,26 +1660,6 @@
     "topicTag": "rules"
   },
   {
-    "id": "g090",
-    "licenseCategory": [
-      "gentsuki"
-    ],
-    "stageTag": "第二段階",
-    "difficulty": 2,
-    "questionText": "原付でのスタンド立てた場合の走行は。",
-    "choices": [
-      "燃費改善",
-      "エンジン停止が発生し危険",
-      "スピード向上",
-      "問題ない"
-    ],
-    "answer": 1,
-    "explanation": "スタンド立てたまま走行すると、エンジンが自動停止する安全機構が働く。",
-    "isTrapQuestion": true,
-    "trapNumberType": "hazardRecognition",
-    "topicTag": "operation"
-  },
-  {
     "id": "g091",
     "licenseCategory": [
       "gentsuki"
@@ -1862,26 +1784,6 @@
     "lawVersion": "2026-10-02"
   },
   {
-    "id": "g098",
-    "licenseCategory": [
-      "gentsuki"
-    ],
-    "stageTag": "第二段階",
-    "difficulty": 2,
-    "questionText": "原付での歩行者との接触事故での責任は。",
-    "choices": [
-      "歩行者がいけない",
-      "ドライバーに優先責任がある",
-      "互いに同等",
-      "関係ない"
-    ],
-    "answer": 1,
-    "explanation": "バイク走行時、歩行者との接触事故ではライダーに重大な法的責任がある。",
-    "isTrapQuestion": false,
-    "trapNumberType": "none",
-    "topicTag": "emergency"
-  },
-  {
     "id": "g099",
     "licenseCategory": [
       "gentsuki"
@@ -2000,26 +1902,6 @@
     "isTrapQuestion": true,
     "trapNumberType": "other",
     "topicTag": "operation"
-  },
-  {
-    "id": "g105",
-    "licenseCategory": [
-      "gentsuki"
-    ],
-    "stageTag": "第二段階",
-    "difficulty": 2,
-    "questionText": "原付での駐車時の配置で安全なのは。",
-    "choices": [
-      "歩道側を向く",
-      "車道側を向く",
-      "建物に寄せる",
-      "どこでもいい"
-    ],
-    "answer": 0,
-    "explanation": "駐車時は歩道側向きが走行開始時の安全確認に有利。",
-    "isTrapQuestion": false,
-    "trapNumberType": "none",
-    "topicTag": "parking"
   },
   {
     "id": "g106",
@@ -2162,26 +2044,6 @@
     "topicTag": "rules",
     "sourceRef": "道交法37条",
     "lawVersion": "2026-10-02"
-  },
-  {
-    "id": "g113",
-    "licenseCategory": [
-      "gentsuki"
-    ],
-    "stageTag": "第二段階",
-    "difficulty": 2,
-    "questionText": "原付でのスタンディング走行（立ち漕ぎ）について。",
-    "choices": [
-      "バイク制御困難になり危険",
-      "燃費改善",
-      "スピード向上",
-      "安全性が向上する"
-    ],
-    "answer": 0,
-    "explanation": "原付のスタンディング走行はハンドル制御困難となり極めて危険。",
-    "isTrapQuestion": false,
-    "trapNumberType": "none",
-    "topicTag": "operation"
   },
   {
     "id": "g114",
@@ -2508,46 +2370,6 @@
     "isTrapQuestion": false,
     "trapNumberType": "none",
     "topicTag": "maintenance"
-  },
-  {
-    "id": "g133",
-    "licenseCategory": [
-      "gentsuki"
-    ],
-    "stageTag": "第二段階",
-    "difficulty": 3,
-    "questionText": "原付でのウィンカーレバー長押しでの警告音について。",
-    "choices": [
-      "ウインカー自動消灯の警告",
-      "走行不可",
-      "故障",
-      "完全に消さないと違反"
-    ],
-    "answer": 0,
-    "explanation": "ウインカー長押しは自動消灯機能の警告音で、正常機能。",
-    "isTrapQuestion": true,
-    "trapNumberType": "other",
-    "topicTag": "hazard_prediction"
-  },
-  {
-    "id": "g134",
-    "licenseCategory": [
-      "gentsuki"
-    ],
-    "stageTag": "第二段階",
-    "difficulty": 3,
-    "questionText": "原付での完全停止からの発進時、最初の操作順序で正しいのは。",
-    "choices": [
-      "アクセル→クラッチ→ギア",
-      "クラッチ→ギア入れ→アクセル",
-      "ギア入れ→クラッチ→アクセル",
-      "順序は関係ない"
-    ],
-    "answer": 1,
-    "explanation": "発進はクラッチ完全切断→ギア入れ→クラッチ繋ぎ→アクセルが正確な手順。",
-    "isTrapQuestion": true,
-    "trapNumberType": "other",
-    "topicTag": "operation"
   },
   {
     "id": "g135",
