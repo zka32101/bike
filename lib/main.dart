@@ -6,6 +6,7 @@ import 'package:app_common_kit/app_common_kit.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_core/firebase_core.dart';
+import 'widgets/oshi_wardrobe.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:shared_preferences/shared_preferences.dart';
@@ -73,8 +74,14 @@ void main() async {
         );
 
   // 学習コイン（app_common_kit）。財布はアプリごと。端末内に保存する。
-  final coinService = CoinService(store: SharedPreferencesCoinStore('bike'));
+  final coinService = CoinService(
+    store: SharedPreferencesCoinStore('bike'),
+    shop: OutfitCatalog.shopItems([UkalabCert.bikeLicense]),
+  );
   await coinService.load();
+  final outfitService =
+      OutfitService(store: SharedPreferencesOutfitStore('bike'));
+  await outfitService.load();
 
   // ProviderScope を先にコンテナとして作り、runApp前に復習リマインダー通知の
   // 初期化（プラグイン初期化・通知タップ時のコールバック登録）を行う。
@@ -92,6 +99,7 @@ void main() async {
       analyticsServiceProvider.overrideWithValue(FirebaseAnalyticsService()),
 
       coinServiceProvider.overrideWithValue(coinService),
+      outfitServiceProvider.overrideWithValue(outfitService),
       entitlementServiceProvider.overrideWithValue(entitlement),
       adGateProvider.overrideWithValue(adGate),
       keyValueStoreProvider.overrideWithValue(PrefsKeyValueStore(prefs)),
