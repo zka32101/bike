@@ -155,6 +155,8 @@ abstract class CrossCategoryQuizController
 
     pool.shuffle();
     final questions = pool.take(crossCategoryQuizQuestionCount).toList();
+    // 結果画面のコイン内訳に、このクイズの分だけが出るよう、履歴を空にしておく。
+    ref.read(coinProvider.notifier).takeRecent();
     ref
         .read(adGateServiceProvider)
         .enterContext(AdBlockingContext.answeringQuestion);

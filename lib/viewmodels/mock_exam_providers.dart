@@ -1,4 +1,5 @@
 import 'package:app_common_kit/app_common_kit.dart';
+import '../services/oshi_readiness.dart';
 import 'dart:async';
 
 import 'package:flutter/foundation.dart';
@@ -201,6 +202,8 @@ class MockExamController extends FamilyNotifier<MockExamState, String> {
     if (state.phase != MockExamPhase.ready) return;
     // 開始した時点で1回分を消費する（途中で離脱しても戻らない）。
     unawaited(_quota().tryConsume());
+    // 結果画面のコイン内訳に、この試験の分だけが出るよう、履歴を空にしておく。
+    ref.read(coinProvider.notifier).takeRecent();
     ref
         .read(adGateServiceProvider)
         .enterContext(AdBlockingContext.answeringQuestion);
@@ -275,6 +278,9 @@ class MockExamController extends FamilyNotifier<MockExamState, String> {
     final coin = ref.read(coinProvider.notifier);
     unawaited(coin.grant(CoinEvent.mockDone()));
     if (state.passed) unawaited(coin.grant(CoinEvent.mockPass(_licenseCategory)));
+    if (state.passed) {
+      unawaited(checkReadinessAfterMock(ref, licenseCategory: _licenseCategory));
+    }
   }
 
   /// 回答済みの問題を通常の学習ログと同様に保存する（未回答分は実際に

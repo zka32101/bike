@@ -157,7 +157,7 @@ class _QuestionBody extends StatelessWidget {
   }
 }
 
-class _ResultView extends StatelessWidget {
+class _ResultView extends ConsumerWidget {
   const _ResultView({
     required this.correctCount,
     required this.total,
@@ -169,17 +169,24 @@ class _ResultView extends StatelessWidget {
   final Future<void> Function() onRetry;
 
   @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext context, WidgetRef ref) {
     return Center(
       child: SingleChildScrollView(
         padding: const EdgeInsets.all(24),
-        child: ResultSummary(
-          correct: correctCount,
-          total: total,
-          onRetry: onRetry,
-          retryLabel: 'もう一度挑戦する',
-          onClose: () => Navigator.of(context).pop(),
-          closeLabel: 'ホームに戻る',
+        child: Column(
+          mainAxisSize: MainAxisSize.min,
+          children: [
+            ResultSummary(
+              correct: correctCount,
+              total: total,
+              onRetry: onRetry,
+              retryLabel: 'もう一度挑戦する',
+              onClose: () => Navigator.of(context).pop(),
+              closeLabel: 'ホームに戻る',
+            ),
+            const SizedBox(height: 16),
+            CoinBreakdownCard(grants: ref.watch(coinProvider).recent),
+          ],
         ),
       ),
     );

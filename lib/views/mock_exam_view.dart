@@ -1,3 +1,4 @@
+import 'package:app_common_kit/app_common_kit.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
@@ -317,7 +318,7 @@ class _ExamQuestionBody extends StatelessWidget {
   }
 }
 
-class _MockExamResultView extends StatelessWidget {
+class _MockExamResultView extends ConsumerWidget {
   const _MockExamResultView({
     required this.state,
     required this.isPremium,
@@ -333,7 +334,7 @@ class _MockExamResultView extends StatelessWidget {
   final VoidCallback onHome;
 
   @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext context, WidgetRef ref) {
     final passed = state.passed;
     final color = passed ? Colors.green : Colors.red;
     final wrong = state.wrongIndices;
@@ -376,6 +377,8 @@ class _MockExamResultView extends StatelessWidget {
           textAlign: TextAlign.center,
         ),
         const SizedBox(height: 16),
+        CoinBreakdownCard(grants: ref.watch(coinProvider).recent),
+        if (ref.watch(coinProvider).recent.isNotEmpty) const SizedBox(height: 16),
         if (isPremium)
           _PremiumBreakdown(state: state)
         else
