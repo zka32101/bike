@@ -161,6 +161,45 @@ enum SignSymbol {
 
   /// バスと下向き矢印（専用通行帯）
   busLane,
+
+  /// Y字形に分かれる道（Y形道路交差点あり）
+  yJunction,
+
+  /// 時計回りの3本の矢印（ロータリーあり／環状の交差点における右回り通行）
+  roundabout,
+
+  /// 路面のでこぼこの断面（路面凹凸あり）
+  bumpyRoad,
+
+  /// 右上がりのくさびと白い矢印（上り急こう配あり）
+  slopeUp,
+
+  /// 右下がりのくさびと白い矢印（下り急こう配あり）
+  slopeDown,
+
+  /// 吹き流し（横風注意）
+  windsock,
+
+  /// 本線に斜めの道が合流する（合流交通あり）
+  mergeTraffic,
+
+  /// 2本の車線のうち1本が消える（車線数減少）
+  laneReduction,
+
+  /// 横から見たバス（大型乗用自動車等通行止め）
+  bus,
+
+  /// 左右から向かい合う三角（最大幅）
+  widthMarkers,
+
+  /// おとなと子どもの歩行者（歩行者専用）
+  pedestrianPair,
+
+  /// 上向きの矢印と右向きの矢印（一般原動機付自転車の右折方法）
+  turnArrows,
+
+  /// 時間帯・P・駐車できる時間（時間制限駐車区間）
+  parkingTime,
 }
 
 /// 禁止を表す赤線の種類。
@@ -1629,4 +1668,404 @@ const List<TrafficSign> kTrafficSigns = [
         '青い四角にバスの図柄、「専用」の文字と下向きの矢印が描かれた標識は「専用通行帯」。表示された種類の車両の通行帯であり、それ以外の車両は原則として通行できない。',
   ),
 
+  // ---- 追加収録（第2弾）。標識令 別表第二の図・備考の色で確認した16種 --------------
+
+  // 警戒標識（縁線・記号は黒、縁・地は黄）
+  TrafficSign(
+    id: 'sign_y_junction_ahead',
+    name: 'Y形道路交差点あり',
+    category: _kWarning,
+    shape: SignShape.diamond,
+    backgroundColor: SignColors.yellow,
+    borderColor: SignColors.black,
+    borderWidthRatio: 0.02,
+    rimColor: SignColors.yellow,
+    rimWidthRatio: 0.03,
+    symbol: SignSymbol.yJunction,
+    questionText: 'この標識が知らせている内容はどれか。',
+    choices: [
+      'この先で道路が合流して1本になる',
+      'この先にY字形の交差点がある',
+      'この先は行き止まりである',
+      'この先に踏切がある',
+    ],
+    answer: 1,
+    explanation:
+        '黄色いひし形にY字の図柄は「Y形道路交差点あり」。この先にY字形の交差点があることを前もって知らせる。'
+        '分かれる道から出てくる車や歩行者に注意して、速度を落とす。',
+  ),
+
+  TrafficSign(
+    id: 'sign_roundabout_ahead',
+    name: 'ロータリーあり',
+    category: _kWarning,
+    shape: SignShape.diamond,
+    backgroundColor: SignColors.yellow,
+    borderColor: SignColors.black,
+    borderWidthRatio: 0.02,
+    rimColor: SignColors.yellow,
+    rimWidthRatio: 0.03,
+    symbol: SignSymbol.roundabout,
+    questionText: 'この標識が知らせている内容はどれか。',
+    choices: [
+      'この先は一方通行の道路である',
+      'この先の道路は車の通行が禁止されている',
+      'この先にロータリー（環状の交差点）がある',
+      'この先に回転式の駐車場がある',
+    ],
+    answer: 2,
+    explanation:
+        '黄色いひし形に、円を描く3本の矢印は「ロータリーあり」。この先にロータリー（環状の交差点）があることを前もって知らせる。'
+        '青い円に白い矢印の「環状の交差点における右回り通行」は、ロータリーの手前で右回りを指定する規制標識なので、見分けること。',
+  ),
+
+  TrafficSign(
+    id: 'sign_bumpy_road',
+    name: '路面凹凸あり',
+    category: _kWarning,
+    shape: SignShape.diamond,
+    backgroundColor: SignColors.yellow,
+    borderColor: SignColors.black,
+    borderWidthRatio: 0.02,
+    rimColor: SignColors.yellow,
+    rimWidthRatio: 0.03,
+    symbol: SignSymbol.bumpyRoad,
+    questionText: 'この標識が知らせている内容はどれか。',
+    choices: [
+      'この先の路面に凹凸があるので、運転に注意が必要である',
+      'この先に登り坂がある',
+      'この先で道路工事が行われている',
+      'この先の路面はすべりやすい',
+    ],
+    answer: 0,
+    explanation:
+        '黄色いひし形に、路面のでこぼこの断面は「路面凹凸あり」。路面に凹凸があるため、車両の運転に注意が必要な箇所を知らせる。'
+        '路面の状態に合わせて、速度を落として通行する。',
+  ),
+
+  TrafficSign(
+    id: 'sign_steep_up',
+    name: '上り急こう配あり',
+    category: _kWarning,
+    shape: SignShape.diamond,
+    backgroundColor: SignColors.yellow,
+    borderColor: SignColors.black,
+    borderWidthRatio: 0.02,
+    rimColor: SignColors.yellow,
+    rimWidthRatio: 0.03,
+    symbol: SignSymbol.slopeUp,
+    centerText: '10%',
+    centerTextScale: 0.13,
+    centerTextOffsetY: -0.2,
+    questionText: 'この標識が知らせている内容はどれか。',
+    choices: [
+      'この先に勾配の急な下り坂がある',
+      'この先の道路は10%ずつ幅が狭くなる',
+      'この先に勾配の急な上り坂がある',
+      '最高速度が10%引き下げられる',
+    ],
+    answer: 2,
+    explanation:
+        '黄色いひし形に、右上がりのくさびと数字（%）の標識は「上り急こう配あり」。この先に勾配の急な上り坂があることを知らせる。'
+        '右下がりの「下り急こう配あり」と見分けること。',
+  ),
+
+  TrafficSign(
+    id: 'sign_steep_down',
+    name: '下り急こう配あり',
+    category: _kWarning,
+    shape: SignShape.diamond,
+    backgroundColor: SignColors.yellow,
+    borderColor: SignColors.black,
+    borderWidthRatio: 0.02,
+    rimColor: SignColors.yellow,
+    rimWidthRatio: 0.03,
+    symbol: SignSymbol.slopeDown,
+    centerText: '10%',
+    centerTextScale: 0.13,
+    centerTextOffsetY: -0.2,
+    questionText: 'この標識が知らせている内容はどれか。',
+    choices: [
+      'この先に勾配の急な下り坂がある',
+      'この先に勾配の急な上り坂がある',
+      'この先の道路はすべりやすい',
+      'この先の車線が減る',
+    ],
+    answer: 0,
+    explanation:
+        '黄色いひし形に、右下がりのくさびと数字（%）の標識は「下り急こう配あり」。この先に勾配の急な下り坂があることを知らせる。'
+        '下り坂ではエンジンブレーキを使い、ブレーキの使い過ぎに注意する。',
+  ),
+
+  TrafficSign(
+    id: 'sign_crosswind',
+    name: '横風注意',
+    category: _kWarning,
+    shape: SignShape.diamond,
+    backgroundColor: SignColors.yellow,
+    borderColor: SignColors.black,
+    borderWidthRatio: 0.02,
+    rimColor: SignColors.yellow,
+    rimWidthRatio: 0.03,
+    symbol: SignSymbol.windsock,
+    questionText: 'この標識が知らせている内容はどれか。',
+    choices: [
+      'この先に空港がある',
+      'この先に強い横風のおそれがある',
+      'この先に風力発電所がある',
+      'この先で追い風になる',
+    ],
+    answer: 1,
+    explanation:
+        '黄色いひし形に、吹き流しの図柄は「横風注意」。強い横風のおそれがある地点を知らせる。'
+        '二輪車は横風にあおられやすいので、速度を落としてハンドルをしっかり握る。',
+  ),
+
+  TrafficSign(
+    id: 'sign_merge_traffic',
+    name: '合流交通あり',
+    category: _kWarning,
+    shape: SignShape.diamond,
+    backgroundColor: SignColors.yellow,
+    borderColor: SignColors.black,
+    borderWidthRatio: 0.02,
+    rimColor: SignColors.yellow,
+    rimWidthRatio: 0.03,
+    symbol: SignSymbol.mergeTraffic,
+    questionText: 'この標識が知らせている内容はどれか。',
+    choices: [
+      'この先で道路が2つに分かれる',
+      'この先で別の道路からの交通が合流する',
+      'この先は行き止まりである',
+      'この先の道路は通行止めである',
+    ],
+    answer: 1,
+    explanation:
+        '黄色いひし形に、本線へ斜めの道が合流する図柄は「合流交通あり」。この先で別の道路からの交通が合流することを知らせる。'
+        '合流してくる車に注意し、速度を落とす。',
+  ),
+
+  TrafficSign(
+    id: 'sign_lane_reduction',
+    name: '車線数減少',
+    category: _kWarning,
+    shape: SignShape.diamond,
+    backgroundColor: SignColors.yellow,
+    borderColor: SignColors.black,
+    borderWidthRatio: 0.02,
+    rimColor: SignColors.yellow,
+    rimWidthRatio: 0.03,
+    symbol: SignSymbol.laneReduction,
+    questionText: 'この標識が知らせている内容はどれか。',
+    choices: [
+      'この先で車線が増える',
+      'この先で道路の幅が広くなる',
+      'この先は追越しのために右側部分にはみ出せる',
+      'この先で車線の数が減る',
+    ],
+    answer: 3,
+    explanation:
+        '黄色いひし形に、2本の車線のうち1本が途中で消える図柄は「車線数減少」。この先で車線の数が減ることを知らせる。'
+        '車線が減る手前では、他の車の動きに注意して、早めに進路を変える。',
+  ),
+
+  // 規制標識
+  TrafficSign(
+    id: 'sign_no_large_buses',
+    name: '大型乗用自動車等通行止め',
+    category: _kRegulatory,
+    shape: SignShape.circle,
+    backgroundColor: SignColors.white,
+    borderColor: SignColors.red,
+    borderWidthRatio: 0.09,
+    symbol: SignSymbol.bus,
+    symbolColor: SignColors.blue,
+    hasDiagonalSlash: true,
+    questionText: 'この標識の意味として正しいのはどれか。',
+    choices: [
+      'バスの停留所がある',
+      'バス専用の通行帯である',
+      '大型乗用自動車（バスなど）は通行できない',
+      'バスは追越しをしてはならない',
+    ],
+    answer: 2,
+    explanation:
+        '白地・赤枠の円にバスの図柄と赤い斜めの帯が入った標識は「大型乗用自動車等通行止め」。大型乗用自動車と特定中型乗用自動車は、この先を通行できない。'
+        '青地の「専用通行帯」（バスの図柄と専用の文字）とは意味が違う。',
+  ),
+
+  TrafficSign(
+    id: 'sign_no_dangerous_goods',
+    name: '危険物積載車両通行止め',
+    category: _kRegulatory,
+    shape: SignShape.circle,
+    backgroundColor: SignColors.white,
+    borderColor: SignColors.red,
+    borderWidthRatio: 0.09,
+    hasDiagonalSlash: true,
+    centerText: '危険物',
+    centerTextColor: SignColors.blue,
+    centerTextScale: 0.2,
+    questionText: 'この標識の意味として正しいのはどれか。',
+    choices: [
+      '危険物を積載した車両は通行できない',
+      '危険な場所なので徐行しなければならない',
+      '危険物の取扱いに注意が必要な道路である',
+      '危険物を扱う施設がある',
+    ],
+    answer: 0,
+    explanation:
+        '白地・赤枠の円に「危険物」の文字と赤い斜めの帯は「危険物積載車両通行止め」。危険物を積載する車両は、この先の道路の区間を通行できない。',
+  ),
+
+  TrafficSign(
+    id: 'sign_time_limit_parking',
+    name: '時間制限駐車区間',
+    category: _kRegulatory,
+    shape: SignShape.circle,
+    backgroundColor: SignColors.blue,
+    rimColor: SignColors.white,
+    rimWidthRatio: 0.025,
+    symbol: SignSymbol.parkingTime,
+    symbolColor: SignColors.white,
+    questionText: 'この標識の意味として正しいのはどれか。',
+    choices: [
+      '8時から20時までの間は、駐車が禁止されている',
+      '駐車場の営業時間が8時から20時までである',
+      '表示された時間帯に、同じ車が引き続き駐車できるのは60分までである',
+      '60分以内であれば、時間に関係なく自由に駐車できる',
+    ],
+    answer: 2,
+    explanation:
+        '青地に「P」と時間を示す標識は「時間制限駐車区間」。表示された時間帯（ここでは8時〜20時）に、同じ車が引き続き駐車できるのは表示の時間（60分）まで。'
+        '駐車禁止の標識（青地に赤い斜めの帯）とは意味が違う。',
+  ),
+
+  TrafficSign(
+    id: 'sign_max_width',
+    name: '最大幅（2.2m）',
+    category: _kRegulatory,
+    shape: SignShape.circle,
+    backgroundColor: SignColors.white,
+    borderColor: SignColors.red,
+    borderWidthRatio: 0.09,
+    symbol: SignSymbol.widthMarkers,
+    symbolColor: SignColors.blue,
+    centerText: '2.2m',
+    centerTextColor: SignColors.blue,
+    centerTextScale: 0.17,
+    questionText: 'この標識の意味として正しいのはどれか。',
+    choices: [
+      '地上から2.2メートルを超える高さの車両は通行できない',
+      '道路の幅が2.2メートルである',
+      '積載物の長さは2.2メートルまでである',
+      '積載物を含めた幅が2.2メートルを超える車両は通行できない',
+    ],
+    answer: 3,
+    explanation:
+        '左右から向かい合う三角の間に数値がある標識は「最大幅」。積み荷を含めた車両の幅が表示を超える車両は通れない。'
+        '上下から向かい合う三角の「高さ制限」と混同しないこと。',
+  ),
+
+  TrafficSign(
+    id: 'sign_pedestrian_only',
+    name: '歩行者専用',
+    category: _kRegulatory,
+    shape: SignShape.circle,
+    backgroundColor: SignColors.blue,
+    rimColor: SignColors.white,
+    rimWidthRatio: 0.025,
+    symbol: SignSymbol.pedestrianPair,
+    symbolColor: SignColors.white,
+    questionText: 'この標識がある道路について、正しいのはどれか。',
+    choices: [
+      '歩行者と自転車が通行できる道路である',
+      '車両は通行できず、歩行者のための道路である',
+      '歩行者が通行してはならない道路である',
+      '歩行者のために車が一時停止する場所である',
+    ],
+    answer: 1,
+    explanation:
+        '青い円に、おとなと子どもの歩行者の図柄は「歩行者専用」。歩行者の通行の安全と円滑を図るため、車両の通行を禁止する道路や場所を示す。'
+        '二輪車や原付も、原則として通行できない。',
+  ),
+
+  TrafficSign(
+    id: 'sign_moped_two_stage_right',
+    name: '一般原動機付自転車の右折方法（二段階）',
+    category: _kRegulatory,
+    shape: SignShape.circle,
+    backgroundColor: SignColors.blue,
+    rimColor: SignColors.white,
+    rimWidthRatio: 0.025,
+    symbol: SignSymbol.turnArrows,
+    symbolColor: SignColors.white,
+    centerText: '原付',
+    centerTextColor: SignColors.white,
+    centerTextScale: 0.17,
+    centerTextOffsetY: 0.3,
+    questionText: 'この標識がある交差点で、原動機付自転車が右折するときの方法として正しいのはどれか。',
+    choices: [
+      'あらかじめ道路の中央に寄り、小回りで右折する',
+      '右折してはならない',
+      '自動車と同じ方法で右折する',
+      '交差点の側端に沿って進み、二段階で右折する',
+    ],
+    answer: 3,
+    explanation:
+        '青い円に、直進と右折の矢印と「原付」の文字は「一般原動機付自転車の右折方法（二段階）」。'
+        '交通整理が行われている交差点で、原動機付自転車は交差点の側端に沿って通行し、二段階で右折する。',
+  ),
+
+  TrafficSign(
+    id: 'sign_moped_small_right',
+    name: '一般原動機付自転車の右折方法（小回り）',
+    category: _kRegulatory,
+    shape: SignShape.circle,
+    backgroundColor: SignColors.white,
+    borderColor: SignColors.red,
+    borderWidthRatio: 0.09,
+    symbol: SignSymbol.turnArrows,
+    symbolColor: SignColors.blue,
+    hasDiagonalSlash: true,
+    centerText: '原付',
+    centerTextColor: SignColors.blue,
+    centerTextScale: 0.17,
+    centerTextOffsetY: 0.3,
+    questionText: 'この標識がある交差点で、原動機付自転車が右折するときの方法として正しいのはどれか。',
+    choices: [
+      'あらかじめ道路の中央または右側端に寄り、小回りで右折する',
+      '交差点の側端に沿って進み、二段階で右折する',
+      '右折してはならない',
+      '一度停止してから、大回りで右折する',
+    ],
+    answer: 0,
+    explanation:
+        '白地・赤枠に、直進と右折の矢印と「原付」の文字、赤い斜めの帯は「一般原動機付自転車の右折方法（小回り）」。'
+        '交通整理が行われている交差点でも、この標識があれば、あらかじめ道路の中央（または右側端）に寄って小回りで右折する。'
+        '青地の「二段階」と見分けること。',
+  ),
+
+  TrafficSign(
+    id: 'sign_roundabout_circulation',
+    name: '環状の交差点における右回り通行',
+    category: _kRegulatory,
+    shape: SignShape.circle,
+    backgroundColor: SignColors.blue,
+    rimColor: SignColors.white,
+    rimWidthRatio: 0.025,
+    symbol: SignSymbol.roundabout,
+    symbolColor: SignColors.white,
+    questionText: 'この標識の意味として正しいのはどれか。',
+    choices: [
+      '環状の交差点では、車両は右回りに通行しなければならない',
+      '環状の交差点では、車両は左回りに通行しなければならない',
+      '環状の交差点の中では、駐車してよい',
+      '環状の交差点では、進入する車両が優先される',
+    ],
+    answer: 0,
+    explanation:
+        '青い円に、時計回りの矢印は「環状の交差点における右回り通行」。環状の交差点（ロータリーなど）では、車両は右回りに通行する。'
+        '黄色いひし形の「ロータリーあり」（警戒標識）とは意味が違う。',
+  ),
 ];

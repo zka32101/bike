@@ -76,7 +76,8 @@ class TrafficSignPainter extends CustomPainter {
       _drawHorizontalBar(canvas, geo);
     }
     if (sign.symbol != SignSymbol.none) {
-      _SymbolPainter(canvas, geo.center, geo.radius * (sign.shape == SignShape.diamond ? 0.72 : 0.62), sign.symbolColor)
+      _SymbolPainter(canvas, geo.center, geo.radius * (sign.shape == SignShape.diamond ? 0.72 : 0.62), sign.symbolColor,
+              fontFamily: fontFamily)
           .draw(sign.symbol);
     }
     if (sign.centerIcon != null) {
@@ -353,12 +354,13 @@ class _InnerGeometry {
 /// 図柄の描画。座標は中心 [c] を原点とし、[k] を 1.0 とした正規化座標で指定する
 /// （概ね -1.0〜1.0 の範囲に収まるように設計）。
 class _SymbolPainter {
-  _SymbolPainter(this.canvas, this.c, this.k, this.color);
+  _SymbolPainter(this.canvas, this.c, this.k, this.color, {this.fontFamily});
 
   final Canvas canvas;
   final Offset c;
   final double k;
   final Color color;
+  final String? fontFamily;
 
   Offset p(double x, double y) => c + Offset(x * k, y * k);
 
@@ -507,6 +509,32 @@ class _SymbolPainter {
         _parking(math.pi / 4);
       case SignSymbol.busLane:
         _busLane();
+      case SignSymbol.yJunction:
+        _yJunction();
+      case SignSymbol.roundabout:
+        _roundabout();
+      case SignSymbol.bumpyRoad:
+        _bumpyRoad();
+      case SignSymbol.slopeUp:
+        _slope(up: true);
+      case SignSymbol.slopeDown:
+        _slope(up: false);
+      case SignSymbol.windsock:
+        _windsock();
+      case SignSymbol.mergeTraffic:
+        _merge();
+      case SignSymbol.laneReduction:
+        _laneReduction();
+      case SignSymbol.bus:
+        _bus();
+      case SignSymbol.widthMarkers:
+        _widthMarkers();
+      case SignSymbol.pedestrianPair:
+        _pedestrianPair();
+      case SignSymbol.turnArrows:
+        _turnArrows();
+      case SignSymbol.parkingTime:
+        _parkingTime();
     }
   }
 
@@ -1345,5 +1373,261 @@ class _SymbolPainter {
         ..cubicTo(c1.dx, c1.dy, c2.dx, c2.dy, e.dx, e.dy);
       canvas.drawPath(path, track);
     }
+  }
+
+  // ---- 追加した標識の図柄 -------------------------------------------------
+
+  /// 文字（記号の色で描く）。中心 (x, y)、大きさ [size]（正規化座標）。
+  void _text(String t, double x, double y, double size,
+      {FontWeight weight = FontWeight.w800}) {
+    final tp = TextPainter(
+      text: TextSpan(
+        text: t,
+        style: TextStyle(
+          color: color,
+          fontFamily: fontFamily,
+          fontSize: size * k,
+          fontWeight: weight,
+          height: 1.0,
+        ),
+      ),
+      textDirection: TextDirection.ltr,
+    )..layout();
+    final o = p(x, y);
+    tp.paint(canvas, Offset(o.dx - tp.width / 2, o.dy - tp.height / 2));
+  }
+
+  /// 矢じり。先端 [tip]、向き [dir]（正規化座標の単位ベクトル）、長さ [len]、幅 [w]。
+  void _arrowHead(Offset tip, Offset dir, double len, double w) {
+    final back = Offset(tip.dx - dir.dx * len, tip.dy - dir.dy * len);
+    final perp = Offset(-dir.dy, dir.dx);
+    canvas.drawPath(
+      _poly([
+        [tip.dx, tip.dy],
+        [back.dx + perp.dx * w / 2, back.dy + perp.dy * w / 2],
+        [back.dx - perp.dx * w / 2, back.dy - perp.dy * w / 2],
+      ]),
+      _fillPaint,
+    );
+  }
+
+  /// Y形道路交差点（下から来る道が、上で左右に分かれる）。
+  void _yJunction() {
+    final paint = _stroke(0.24, cap: StrokeCap.butt);
+    _line(0, 0.95, 0, 0.0, paint);
+    _line(0, 0.02, -0.62, -0.78, paint);
+    _line(0, 0.02, 0.62, -0.78, paint);
+  }
+
+  /// 環状の交差点（時計回りの3本の矢印）。
+  void _roundabout({double radius = 0.58, double stroke = 0.17}) {
+    final rect = Rect.fromCircle(center: c, radius: radius * k);
+    final paint = _stroke(stroke, cap: StrokeCap.butt);
+    for (var i = 0; i < 3; i++) {
+      final start = -math.pi / 2 + i * 2 * math.pi / 3 + 0.12;
+      const sweep = 1.55;
+      canvas.drawArc(rect, start, sweep, false, paint);
+      final end = start + sweep;
+      final pos = Offset(radius * math.cos(end), radius * math.sin(end));
+      final dir = Offset(-math.sin(end), math.cos(end));
+      _arrowHead(
+        Offset(pos.dx + dir.dx * 0.2, pos.dy + dir.dy * 0.2),
+        dir,
+        0.34,
+        0.42,
+      );
+    }
+  }
+
+  /// 路面の凹凸（ふくらみが2つ並んだ断面）。
+  void _bumpyRoad() {
+    final path = Path();
+    void cubic(double x1, double y1, double x2, double y2, double x3, double y3) {
+      final a = p(x1, y1), b = p(x2, y2), c3 = p(x3, y3);
+      path.cubicTo(a.dx, a.dy, b.dx, b.dy, c3.dx, c3.dy);
+    }
+
+    final start = p(-0.92, 0.55);
+    path.moveTo(start.dx, start.dy);
+    final left = p(-0.92, 0.28);
+    path.lineTo(left.dx, left.dy);
+    cubic(-0.6, 0.28, -0.62, -0.42, -0.28, -0.42);
+    cubic(0.0, -0.42, -0.02, 0.28, 0.25, 0.28);
+    cubic(0.52, 0.28, 0.5, -0.3, 0.7, -0.3);
+    cubic(0.88, -0.3, 0.9, 0.2, 0.92, 0.28);
+    final end = p(0.92, 0.55);
+    path
+      ..lineTo(end.dx, end.dy)
+      ..close();
+    canvas.drawPath(path, _fillPaint);
+  }
+
+  /// 勾配（くさび形）。[up] が true なら右上がり、false なら右下がり。矢印は白。
+  void _slope({required bool up}) {
+    final wedge = up
+        ? [
+            [-0.92, 0.5],
+            [0.92, 0.5],
+            [0.92, -0.32],
+          ]
+        : [
+            [-0.92, -0.32],
+            [-0.92, 0.5],
+            [0.92, 0.5],
+          ];
+    canvas.drawPath(_poly(wedge), _fillPaint);
+    final white = Paint()
+      ..color = SignColors.white
+      ..style = PaintingStyle.stroke
+      ..strokeWidth = 0.1 * k
+      ..strokeCap = StrokeCap.butt
+      ..isAntiAlias = true;
+    // 斜面に沿った白い矢印
+    final from = up ? const Offset(-0.62, 0.3) : const Offset(-0.62, -0.04);
+    final to = up ? const Offset(0.5, -0.1) : const Offset(0.5, 0.34);
+    canvas.drawLine(p(from.dx, from.dy), p(to.dx, to.dy), white);
+    final d = Offset(to.dx - from.dx, to.dy - from.dy);
+    final n = math.sqrt(d.dx * d.dx + d.dy * d.dy);
+    final dir = Offset(d.dx / n, d.dy / n);
+    final back = Offset(to.dx - dir.dx * 0.28, to.dy - dir.dy * 0.28);
+    final perp = Offset(-dir.dy, dir.dx);
+    canvas.drawPath(
+      _poly([
+        [to.dx + dir.dx * 0.12, to.dy + dir.dy * 0.12],
+        [back.dx + perp.dx * 0.17, back.dy + perp.dy * 0.17],
+        [back.dx - perp.dx * 0.17, back.dy - perp.dy * 0.17],
+      ]),
+      Paint()
+        ..color = SignColors.white
+        ..style = PaintingStyle.fill
+        ..isAntiAlias = true,
+    );
+  }
+
+  /// 吹き流し（横風）。
+  void _windsock() {
+    final line = _stroke(0.1, cap: StrokeCap.butt);
+    _line(-0.66, -0.88, -0.66, 0.92, line);
+    // 袖（根もとが太く、先が細い）
+    canvas.drawPath(
+      _poly([
+        [-0.6, -0.72],
+        [-0.6, -0.1],
+        [0.86, 0.08],
+        [0.86, -0.42],
+      ]),
+      _fillPaint,
+    );
+    // 白い縞
+    final stripe = Paint()
+      ..color = SignColors.yellow
+      ..style = PaintingStyle.fill;
+    canvas.drawPath(
+      _poly([
+        [-0.05, -0.65],
+        [0.12, -0.63],
+        [0.12, -0.04],
+        [-0.05, -0.07],
+      ]),
+      stripe,
+    );
+    canvas.drawPath(
+      _poly([
+        [0.46, -0.58],
+        [0.62, -0.56],
+        [0.62, 0.0],
+        [0.46, -0.02],
+      ]),
+      stripe,
+    );
+  }
+
+  /// 合流（本線に、左下からの道が合流する）。
+  void _merge() {
+    final paint = _stroke(0.22, cap: StrokeCap.butt);
+    _line(0.26, 0.95, 0.26, -0.95, paint);
+    _line(-0.62, 0.88, 0.2, 0.02, paint);
+  }
+
+  /// 車線数の減少（左の車線が右へ寄って消える）。
+  void _laneReduction() {
+    final edge = _stroke(0.14, cap: StrokeCap.butt);
+    // 右端
+    _line(0.55, 0.95, 0.55, -0.95, edge);
+    // 左端が、途中から右へ寄っていく
+    final left = Path();
+    final a = p(-0.55, 0.95);
+    final b = p(-0.55, 0.05);
+    final d = p(-0.02, -0.5);
+    final e = p(-0.02, -0.95);
+    left
+      ..moveTo(a.dx, a.dy)
+      ..lineTo(b.dx, b.dy)
+      ..lineTo(d.dx, d.dy)
+      ..lineTo(e.dx, e.dy);
+    canvas.drawPath(left, edge);
+    // 中央の破線（車線境界）
+    final dash = _stroke(0.1, cap: StrokeCap.butt);
+    for (final y in [0.82, 0.5, 0.18]) {
+      _line(0.0, y, 0.0, y - 0.18, dash);
+    }
+  }
+
+  /// 横から見たバス。
+  void _bus() {
+    final fill = _fillPaint;
+    _rrect(-0.8, -0.5, 0.8, 0.34, 0.1, fill);
+    final win = Paint()
+      ..color = SignColors.white
+      ..style = PaintingStyle.fill;
+    for (var i = 0; i < 4; i++) {
+      final x0 = -0.68 + i * 0.3;
+      _rrect(x0, -0.38, x0 + 0.22, -0.08, 0.02, win);
+    }
+    _rrect(0.5, -0.38, 0.72, 0.16, 0.02, win); // 出入口
+    _circle(-0.45, 0.4, 0.17, fill);
+    _circle(0.45, 0.4, 0.17, fill);
+  }
+
+  /// 左右から向かい合う三角（最大幅）。
+  void _widthMarkers() {
+    canvas.drawPath(
+      _poly([
+        [-1.3, -0.28],
+        [-1.3, 0.28],
+        [-0.86, 0],
+      ]),
+      _fillPaint,
+    );
+    canvas.drawPath(
+      _poly([
+        [1.3, -0.28],
+        [1.3, 0.28],
+        [0.86, 0],
+      ]),
+      _fillPaint,
+    );
+  }
+
+  /// おとなと子どもの2人の歩行者（歩行者専用）。
+  void _pedestrianPair() {
+    _pedestrian(-0.28, -0.02, 0.9, _fillPaint, _stroke);
+    _pedestrian(0.5, 0.2, 0.62, _fillPaint, _stroke);
+  }
+
+  /// 上向きの矢印と、右へ向かう矢印（原動機付自転車の右折方法）。
+  void _turnArrows() {
+    final shaft = _stroke(0.17, cap: StrokeCap.butt);
+    _line(-0.3, 0.7, -0.3, -0.4, shaft);
+    _arrowHead(const Offset(-0.3, -0.86), const Offset(0, -1), 0.5, 0.56);
+    _line(-0.3, -0.28, 0.32, -0.28, shaft);
+    _arrowHead(const Offset(0.82, -0.28), const Offset(1, 0), 0.5, 0.52);
+  }
+
+  /// 時間制限駐車区間（時間帯・P・駐車できる時間）。
+  void _parkingTime() {
+    _text('8-20', 0, -0.68, 0.34);
+    _text('P', 0, -0.02, 0.92);
+    _text('60分', 0, 0.72, 0.36);
   }
 }

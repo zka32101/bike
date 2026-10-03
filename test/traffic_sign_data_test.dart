@@ -131,4 +131,98 @@ void main() {
       expect(sign(id).category, sign('sign_stop').category, reason: id);
     }
   });
+
+  // 第2弾（16種）。標識令 別表第二の図と、備考一（三）の色の規定で確認。
+  group('追加した16種（第2弾）', () {
+    const warning = [
+      'sign_y_junction_ahead', 'sign_roundabout_ahead', 'sign_bumpy_road',
+      'sign_steep_up', 'sign_steep_down', 'sign_crosswind',
+      'sign_merge_traffic', 'sign_lane_reduction',
+    ];
+    const regulatory1 = [
+      'sign_no_large_buses', 'sign_no_dangerous_goods', 'sign_max_width',
+      'sign_moped_small_right',
+    ];
+    const regulatory3 = [
+      'sign_time_limit_parking', 'sign_pedestrian_only',
+      'sign_moped_two_stage_right', 'sign_roundabout_circulation',
+    ];
+
+    test('全部で70種になった', () {
+      expect(kTrafficSigns.length, 70);
+    });
+
+    test('警戒標識は黄色いひし形（縁線・記号は黒）', () {
+      for (final id in warning) {
+        final s = sign(id);
+        expect(s.category, '警戒標識', reason: id);
+        expect(s.shape, SignShape.diamond, reason: id);
+        expect(s.backgroundColor, SignColors.yellow, reason: id);
+        expect(s.borderColor, SignColors.black, reason: id);
+      }
+    });
+
+    test('規制標識(1)は白地・赤い枠・青い文字と記号（備考一（三）３（１））', () {
+      for (final id in regulatory1) {
+        final s = sign(id);
+        expect(s.category, '規制標識', reason: id);
+        expect(s.backgroundColor, SignColors.white, reason: id);
+        expect(s.borderColor, SignColors.red, reason: id);
+        if (s.symbol != SignSymbol.none) {
+          expect(s.symbolColor, SignColors.blue, reason: id);
+        }
+        if (s.centerText != null) {
+          expect(s.centerTextColor, SignColors.blue, reason: id);
+        }
+      }
+    });
+
+    test('規制標識(3)は青地・白い文字と記号（備考一（三）３（３））', () {
+      for (final id in regulatory3) {
+        final s = sign(id);
+        expect(s.category, '規制標識', reason: id);
+        expect(s.backgroundColor, SignColors.blue, reason: id);
+        expect(s.symbolColor, SignColors.white, reason: id);
+        expect(s.slash, SignSlash.none, reason: id);
+      }
+    });
+
+    test('原付の右折方法は、二段階が青地、小回りが白地・赤い斜めの帯で、取り違えていない', () {
+      final two = sign('sign_moped_two_stage_right');
+      final small = sign('sign_moped_small_right');
+      expect(two.backgroundColor, isNot(small.backgroundColor));
+      expect(two.hasDiagonalSlash, isFalse);
+      expect(small.hasDiagonalSlash, isTrue);
+      expect(two.symbol, small.symbol);
+      expect(two.centerText, small.centerText);
+    });
+
+    test('ロータリーあり（警戒）と、環状の交差点における右回り通行（規制）は別の標識', () {
+      final w = sign('sign_roundabout_ahead');
+      final r = sign('sign_roundabout_circulation');
+      expect(w.category, isNot(r.category));
+      expect(w.symbol, r.symbol);
+      expect(w.backgroundColor, isNot(r.backgroundColor));
+    });
+
+    test('最大幅(322)は左右の三角、高さ制限は上下の三角で、図柄が違う', () {
+      expect(sign('sign_max_width').symbol, SignSymbol.widthMarkers);
+      expect(sign('sign_height_limit').symbol, SignSymbol.heightMarkers);
+    });
+
+    test('上り急こう配と下り急こう配は、くさびの向きが逆', () {
+      expect(sign('sign_steep_up').symbol, SignSymbol.slopeUp);
+      expect(sign('sign_steep_down').symbol, SignSymbol.slopeDown);
+    });
+
+    test('選択肢の正解位置が偏りすぎていない（追加16種）', () {
+      final counts = List.filled(4, 0);
+      for (final id in [...warning, ...regulatory1, ...regulatory3]) {
+        counts[sign(id).answer]++;
+      }
+      for (final c in counts) {
+        expect(c, inInclusiveRange(2, 7));
+      }
+    });
+  });
 }
