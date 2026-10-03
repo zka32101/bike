@@ -197,5 +197,32 @@ void main() {
       expect((q['choices'] as List)[q['answer'] as int] as String,
           contains('フットブレーキの使い過ぎ'));
     });
+
+    test('出典のある問題は確認日も持つ。出典付きは900問以上（第5回確認）', () {
+      final withSrc = all.where((q) => (q['sourceRef'] as String?)?.isNotEmpty ?? false).toList();
+      expect(withSrc.length, greaterThanOrEqualTo(900));
+      for (final q in withSrc) {
+        expect(q['lawVersion'], isNotNull, reason: '${q['id']}');
+      }
+    });
+
+    test('一般道路の法定最高速度: 60km/hは中央線・車両通行帯がある道路。ない道路は30km/h（施行令第11条）', () {
+      final f225 = all.firstWhere((q) => q['id'] == 'f225');
+      expect((f225['choices'] as List)[f225['answer'] as int], contains('30'));
+      for (final id in ['at013', 'f201', 'kg159', 'o229']) {
+        final q = all.firstWhere((q) => q['id'] == id);
+        expect(q['questionText'], contains('中央線'), reason: id);
+      }
+    });
+
+    test('大型・普通自動二輪車の夜間駐車灯火は施行令第18条第2項の対象外。誤った問題が戻っていない', () {
+      final ids = all.map((q) => q['id'] as String).toSet();
+      expect(ids.intersection({'at092', 'f288', 'kg149'}), isEmpty);
+    });
+
+    test('二輪の積載長は「乗車装置または積載装置の長さ+0.3m」。10分の1・10分の2ではない', () {
+      final q = all.firstWhere((q) => q['id'] == 'f289');
+      expect((q['choices'] as List)[q['answer'] as int], contains('0.3メートル'));
+    });
   });
 }
