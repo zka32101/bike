@@ -17,7 +17,9 @@
     "explanation": "小型限定普通二輪免許は総排気量125cc以下の自動二輪車(MT・ATを問わない)を運転できる限定免許である。",
     "isTrapQuestion": true,
     "trapNumberType": "other",
-    "topicTag": "license_system"
+    "topicTag": "license_system",
+    "sourceRef": "道路交通法施行規則第24条第2項",
+    "lawVersion": "2026-10-03"
   },
   {
     "id": "kg002",
@@ -37,7 +39,9 @@
     "explanation": "小型限定の条件が付いた普通二輪免許では高速自動車国道・自動車専用道路を走行することはできない。",
     "isTrapQuestion": true,
     "trapNumberType": "other",
-    "topicTag": "rules"
+    "topicTag": "rules",
+    "sourceRef": "教則 第７章高速道路での走行",
+    "lawVersion": "2026-10-03"
   },
   {
     "id": "kg003",
@@ -57,7 +61,9 @@
     "explanation": "原付とは異なり小型限定普通二輪免許では、当該免許を受けていた期間が通算1年以上あれば一般道路で二人乗りが認められる。高速道路での二人乗りにはさらに別の条件がある。",
     "isTrapQuestion": true,
     "trapNumberType": "twoPersonRiding",
-    "topicTag": "rules"
+    "topicTag": "rules",
+    "sourceRef": "道路交通法第七十一条の四（大型自動二輪車等の運転者の遵守事項）",
+    "lawVersion": "2026-10-03"
   },
   {
     "id": "kg004",
@@ -77,7 +83,9 @@
     "explanation": "原付は法定速度が一律30km/hだが、小型限定普通二輪車は原付のような一律制限はなく、道路標識や法定速度など一般の二輪車と同じ速度区分に従う。",
     "isTrapQuestion": true,
     "trapNumberType": "speedLimit",
-    "topicTag": "rules"
+    "topicTag": "rules",
+    "sourceRef": "道路交通法施行令第十一条（最高速度）",
+    "lawVersion": "2026-10-03"
   },
   {
     "id": "kg005",
@@ -117,7 +125,9 @@
     "explanation": "道路交通法上、二輪車の運転者と同乗者はいずれも乗車用ヘルメットを着用しなければならない。あごひもを確実に締めていない場合は着用とは認められない。",
     "isTrapQuestion": true,
     "trapNumberType": "other",
-    "topicTag": "rules"
+    "topicTag": "rules",
+    "sourceRef": "道路交通法第71条の4第1項",
+    "lawVersion": "2026-10-03"
   },
   {
     "id": "kg007",
@@ -159,7 +169,9 @@
     "explanation": "対向車と行き違う際や先行車のすぐ後ろを走るときは、相手を眩惑させないよう前照灯を下向きに切り替えなければならない。",
     "isTrapQuestion": true,
     "trapNumberType": "other",
-    "topicTag": "rules"
+    "topicTag": "rules",
+    "sourceRef": "道路交通法第52条第2項",
+    "lawVersion": "2026-10-03"
   },
   {
     "id": "kg009",
@@ -201,7 +213,9 @@
     "explanation": "進路変更をする場合でも、後続車が急ブレーキや急ハンドルを強いられるおそれがあるときは進路変更をしてはならない。",
     "isTrapQuestion": true,
     "trapNumberType": "other",
-    "topicTag": "rules"
+    "topicTag": "rules",
+    "sourceRef": "道路交通法第26条の2第2項",
+    "lawVersion": "2026-10-03"
   },
   {
     "id": "kg011",
@@ -221,7 +235,9 @@
     "explanation": "青色の灯火では、自動二輪車を含む車両は直進・左折・右折のいずれも進行することができる(交差点の状況による規制がある場合を除く)。",
     "isTrapQuestion": false,
     "trapNumberType": "none",
-    "topicTag": "rules"
+    "topicTag": "rules",
+    "sourceRef": "道路交通法施行令第2条第1項",
+    "lawVersion": "2026-10-03"
   },
   {
     "id": "kg012",
@@ -241,7 +257,9 @@
     "explanation": "黄色の灯火では、停止位置を越えて進行してはならない。ただし黄色に変わったときに交差点に近接していて安全に停止できない場合は、そのまま進行できる。",
     "isTrapQuestion": false,
     "trapNumberType": "none",
-    "topicTag": "rules"
+    "topicTag": "rules",
+    "sourceRef": "道路交通法施行令第2条第1項",
+    "lawVersion": "2026-10-03"
   },
   {
     "id": "kg013",
@@ -261,7 +279,9 @@
     "explanation": "踏切を通過するときは、原則として踏切の直前で一時停止し、自分の目と耳で左右の安全を確認してから通過しなければならない。",
     "isTrapQuestion": true,
     "trapNumberType": "other",
-    "topicTag": "rules"
+    "topicTag": "rules",
+    "sourceRef": "道路交通法第33条第1項",
+    "lawVersion": "2026-10-03"
   },
   {
     "id": "kg014",
@@ -303,7 +323,9 @@
     "explanation": "進路変更をしようとする約3秒前に方向指示器等で合図を行い、周囲に自分の意図を知らせなければならない。",
     "isTrapQuestion": true,
     "trapNumberType": "other",
-    "topicTag": "rules"
+    "topicTag": "rules",
+    "sourceRef": "道路交通法施行令第21条第1項",
+    "lawVersion": "2026-10-03"
   },
   {
     "id": "kg016",
@@ -323,7 +345,9 @@
     "explanation": "歩行者用道路(歩行者専用道路)は、沿道に車庫があるなど特別な許可を受けた車両を除き、自動二輪車を含む一般車両は通行できない。",
     "isTrapQuestion": true,
     "trapNumberType": "other",
-    "topicTag": "rules"
+    "topicTag": "rules",
+    "sourceRef": "道路交通法第8条第1項",
+    "lawVersion": "2026-10-03"
   },
   {
     "id": "kg017",
@@ -343,7 +367,9 @@
     "explanation": "追い越しは原則として前車の右側を通行して行う。ただし前車が右折のため道路の中央や右側に寄っているときなどは左側から追い越すことができる。",
     "isTrapQuestion": true,
     "trapNumberType": "other",
-    "topicTag": "rules"
+    "topicTag": "rules",
+    "sourceRef": "道路交通法第28条第1項",
+    "lawVersion": "2026-10-03"
   },
   {
     "id": "kg018",
@@ -363,7 +389,9 @@
     "explanation": "駐車禁止の規制は車両の種類を問わず適用され、自動二輪車も指定された区間で駐車することはできない。",
     "isTrapQuestion": true,
     "trapNumberType": "other",
-    "topicTag": "rules"
+    "topicTag": "rules",
+    "sourceRef": "道路交通法第45条第1項",
+    "lawVersion": "2026-10-03"
   },
   {
     "id": "kg019",
@@ -383,7 +411,9 @@
     "explanation": "自動二輪車は、運転者席のほかに同乗者用の座席と足を置く装置(ステップ)が備えられている場合に限り、運転者を含めて2名まで乗車できる。",
     "isTrapQuestion": true,
     "trapNumberType": "other",
-    "topicTag": "rules"
+    "topicTag": "rules",
+    "sourceRef": "道路交通法施行令第22条第1号",
+    "lawVersion": "2026-10-03"
   },
   {
     "id": "kg020",
@@ -403,7 +433,9 @@
     "explanation": "一時停止の標識がある場所では、停止線の直前で完全に車両を停止させ、左右の安全を確認したうえで進行しなければならない。",
     "isTrapQuestion": true,
     "trapNumberType": "other",
-    "topicTag": "rules"
+    "topicTag": "rules",
+    "sourceRef": "道路交通法第43条",
+    "lawVersion": "2026-10-03"
   },
   {
     "id": "kg021",
@@ -423,7 +455,9 @@
     "explanation": "路線バス等優先通行帯を走行している場合、後方から路線バス等が接近してきたときは速やかにその通行帯から出なければならない。",
     "isTrapQuestion": true,
     "trapNumberType": "other",
-    "topicTag": "rules"
+    "topicTag": "rules",
+    "sourceRef": "道路交通法第20条の2第1項",
+    "lawVersion": "2026-10-03"
   },
   {
     "id": "kg022",
@@ -443,7 +477,9 @@
     "explanation": "交通反則通告制度により反則金を任意の期間内に納付しない場合は、通常の刑事手続き(検察官への送致等)に移行する可能性がある。",
     "isTrapQuestion": false,
     "trapNumberType": "none",
-    "topicTag": "rules"
+    "topicTag": "rules",
+    "sourceRef": "道路交通法第130条",
+    "lawVersion": "2026-10-03"
   },
   {
     "id": "kg023",
@@ -463,7 +499,9 @@
     "explanation": "徐行とは、車両等が直ちに停止できるような速度で進行することをいい、具体的な数値ではなく状況に応じた速度が求められる。",
     "isTrapQuestion": true,
     "trapNumberType": "speedLimit",
-    "topicTag": "rules"
+    "topicTag": "rules",
+    "sourceRef": "道路交通法第2条第1項第20号",
+    "lawVersion": "2026-10-03"
   },
   {
     "id": "kg024",
@@ -483,7 +521,9 @@
     "explanation": "軌道敷内の通行は、危険防止のため道路工事などでやむを得ない場合や、標識等で通行が認められている場合などに限られる。",
     "isTrapQuestion": true,
     "trapNumberType": "other",
-    "topicTag": "rules"
+    "topicTag": "rules",
+    "sourceRef": "道路交通法第21条第1項",
+    "lawVersion": "2026-10-03"
   },
   {
     "id": "kg025",
@@ -503,7 +543,9 @@
     "explanation": "自動二輪車の積載物の高さは、地上から2メートルを超えないようにすることが原則とされている。",
     "isTrapQuestion": true,
     "trapNumberType": "loadLimit",
-    "topicTag": "rules"
+    "topicTag": "rules",
+    "sourceRef": "道路交通法施行令第22条第1項第3号ハ",
+    "lawVersion": "2026-10-03"
   },
   {
     "id": "kg026",
@@ -523,7 +565,9 @@
     "explanation": "横断歩道またはその手前で歩行者が横断しようとしているときは、その手前で一時停止し歩行者の通行を妨げてはならない。",
     "isTrapQuestion": false,
     "trapNumberType": "none",
-    "topicTag": "rules"
+    "topicTag": "rules",
+    "sourceRef": "道路交通法第38条第1項",
+    "lawVersion": "2026-10-03"
   },
   {
     "id": "kg027",
@@ -543,7 +587,9 @@
     "explanation": "保安基準に適合しない消音器への改造や取り外しは禁止されており、著しい騒音を発する不正改造車は整備不良として取り締まりの対象になる。",
     "isTrapQuestion": true,
     "trapNumberType": "other",
-    "topicTag": "rules"
+    "topicTag": "rules",
+    "sourceRef": "道路交通法第71条の2",
+    "lawVersion": "2026-10-03"
   },
   {
     "id": "kg028",
@@ -563,7 +609,9 @@
     "explanation": "酒気を帯びた状態での運転は車両の種類を問わず禁止されており、違反した場合は厳しい罰則が科される。",
     "isTrapQuestion": true,
     "trapNumberType": "other",
-    "topicTag": "rules"
+    "topicTag": "rules",
+    "sourceRef": "道路交通法第65条第1項",
+    "lawVersion": "2026-10-03"
   },
   {
     "id": "kg029",
@@ -583,7 +631,9 @@
     "explanation": "子供は予測できない動きをすることがあるため、速度を落とし、急な飛び出しにも対応できるよう備えて通過する必要がある。",
     "isTrapQuestion": false,
     "trapNumberType": "none",
-    "topicTag": "hazard_prediction"
+    "topicTag": "hazard_prediction",
+    "sourceRef": "教則 第5章第3節 歩行者の保護など 4 子供の保護 (1)",
+    "lawVersion": "2026-10-03"
   },
   {
     "id": "kg030",
@@ -623,7 +673,9 @@
     "explanation": "見通しの悪い交差点では出会い頭の事故が起こりやすいため、あらかじめ速度を落とし、左右を確認しながら進入することが重要である。",
     "isTrapQuestion": true,
     "trapNumberType": "other",
-    "topicTag": "hazard_prediction"
+    "topicTag": "hazard_prediction",
+    "sourceRef": "教則 第5章第4節 安全な速度と車間距離 4 徐行",
+    "lawVersion": "2026-10-03"
   },
   {
     "id": "kg032",
@@ -643,7 +695,9 @@
     "explanation": "駐車車両のドアが急に開いたり、陰から歩行者が飛び出したりする危険があるため、十分な間隔をあけて速度を落として通過する必要がある。",
     "isTrapQuestion": true,
     "trapNumberType": "other",
-    "topicTag": "hazard_prediction"
+    "topicTag": "hazard_prediction",
+    "sourceRef": "教則 第5章第3節 歩行者の保護など 1 (5)",
+    "lawVersion": "2026-10-03"
   },
   {
     "id": "kg033",
@@ -663,7 +717,9 @@
     "explanation": "対向車のライトで幻惑されたときは、視線をやや左前方の路肩寄りに向けて幻惑を避けつつ、速度を落として安全を確保することが大切である。",
     "isTrapQuestion": false,
     "trapNumberType": "none",
-    "topicTag": "hazard_prediction"
+    "topicTag": "hazard_prediction",
+    "sourceRef": "教則 第6章第3節 夜間 2 灯火 (3)",
+    "lawVersion": "2026-10-03"
   },
   {
     "id": "kg034",
@@ -683,7 +739,9 @@
     "explanation": "左折時は、左後方から並走してくる自転車や歩行者を巻き込む事故が多いため、あらかじめ左後方を目視確認することが重要である。",
     "isTrapQuestion": false,
     "trapNumberType": "none",
-    "topicTag": "hazard_prediction"
+    "topicTag": "hazard_prediction",
+    "sourceRef": "教則 第5章第7節 交差点の通り方 1 (3)",
+    "lawVersion": "2026-10-03"
   },
   {
     "id": "kg035",
@@ -703,7 +761,9 @@
     "explanation": "横風にあおられるとバランスを崩しやすいため、速度を落とし、ハンドルを適度な力加減で保持して姿勢を安定させることが重要である。",
     "isTrapQuestion": false,
     "trapNumberType": "none",
-    "topicTag": "hazard_prediction"
+    "topicTag": "hazard_prediction",
+    "sourceRef": "教則 第7章第2節 走行上の注意 (10)",
+    "lawVersion": "2026-10-03"
   },
   {
     "id": "kg036",
@@ -763,7 +823,9 @@
     "explanation": "見通しの悪いカーブでは対向車がセンターラインをはみ出してくる可能性があるため、速度を落とし進路の左寄りを走行することが安全である。",
     "isTrapQuestion": false,
     "trapNumberType": "none",
-    "topicTag": "hazard_prediction"
+    "topicTag": "hazard_prediction",
+    "sourceRef": "教則 第6章第2節 坂道・カーブ 2 曲がり角・カーブ (3)",
+    "lawVersion": "2026-10-03"
   },
   {
     "id": "kg039",
@@ -803,7 +865,9 @@
     "explanation": "自転車はふらつくことがあるため、追い越す際は十分な側方間隔をとり、速度差にも注意して安全に追い越す必要がある。",
     "isTrapQuestion": false,
     "trapNumberType": "none",
-    "topicTag": "hazard_prediction"
+    "topicTag": "hazard_prediction",
+    "sourceRef": "教則 第5章第3節 歩行者の保護など 7 特定小型原動機付自転車や自転車の保護 (2)",
+    "lawVersion": "2026-10-03"
   },
   {
     "id": "kg041",
@@ -863,7 +927,9 @@
     "explanation": "緊急自動車が接近してきたときは、交差点を避けて道路の左側に寄り、一時停止するなどして進路を譲らなければならない。",
     "isTrapQuestion": false,
     "trapNumberType": "none",
-    "topicTag": "hazard_prediction"
+    "topicTag": "hazard_prediction",
+    "sourceRef": "教則 第5章第2節 自動車の通行するところ 5 緊急自動車の優先",
+    "lawVersion": "2026-10-03"
   },
   {
     "id": "kg044",
@@ -963,7 +1029,9 @@
     "explanation": "子供の姿が見えている場合でも急に道路へ飛び出す可能性があるため、あらかじめ速度を落とし、すぐに止まれるように備えておく必要がある。",
     "isTrapQuestion": false,
     "trapNumberType": "none",
-    "topicTag": "hazard_prediction"
+    "topicTag": "hazard_prediction",
+    "sourceRef": "教則 第5章第3節 4 子供の保護",
+    "lawVersion": "2026-10-03"
   },
   {
     "id": "kg049",
@@ -1023,7 +1091,9 @@
     "explanation": "運転を始める前には、タイヤの空気圧、ブレーキの効き具合、灯火類など、安全に関わる部分を日常点検で確認することが望ましい。",
     "isTrapQuestion": false,
     "trapNumberType": "none",
-    "topicTag": "operation"
+    "topicTag": "operation",
+    "sourceRef": "教則 第8章第1節 二輪車の運転者の心得 6二輪車の点検",
+    "lawVersion": "2026-10-03"
   },
   {
     "id": "kg052",
@@ -1063,7 +1133,9 @@
     "explanation": "AT車はクラッチ操作やギアチェンジを運転者が行う必要がなく、アクセルとブレーキ操作を中心に運転できる点が特徴である。",
     "isTrapQuestion": true,
     "trapNumberType": "other",
-    "topicTag": "operation"
+    "topicTag": "operation",
+    "sourceRef": "教則 第8章第5節 オートマチック二輪車の運転 1",
+    "lawVersion": "2026-10-03"
   },
   {
     "id": "kg054",
@@ -1083,7 +1155,9 @@
     "explanation": "二輪車の制動は前輪ブレーキと後輪ブレーキを状況に応じて適切な配分で使うことが基本であり、片方だけに頼るとスリップや転倒の危険が高まる。",
     "isTrapQuestion": false,
     "trapNumberType": "none",
-    "topicTag": "operation"
+    "topicTag": "operation",
+    "sourceRef": "教則 第8章第4節 ブレーキの掛け方 2(1)",
+    "lawVersion": "2026-10-03"
   },
   {
     "id": "kg055",
@@ -1103,7 +1177,9 @@
     "explanation": "カーブは手前で十分に減速したうえで、車体を適度に傾けながら一定の速度で旋回するのが基本である。カーブの途中での急な加減速は転倒の危険を高める。",
     "isTrapQuestion": false,
     "trapNumberType": "none",
-    "topicTag": "operation"
+    "topicTag": "operation",
+    "sourceRef": "教則 第8章第3節 安全な運転の方法 1カーブでの運転方法",
+    "lawVersion": "2026-10-03"
   },
   {
     "id": "kg056",
@@ -1123,7 +1199,9 @@
     "explanation": "停車時はつま先立ちなどで両足を地面につけ、車体を安定させることが基本姿勢とされる。",
     "isTrapQuestion": false,
     "trapNumberType": "none",
-    "topicTag": "operation"
+    "topicTag": "operation",
+    "sourceRef": "教則 第8章第1節 二輪車の運転者の心得 1車種の選定",
+    "lawVersion": "2026-10-03"
   },
   {
     "id": "kg057",
@@ -1163,7 +1241,9 @@
     "explanation": "急な下り坂ではフットブレーキやハンドブレーキだけに頼らず、エンジンブレーキも併用して速度を制御することが安全である。",
     "isTrapQuestion": false,
     "trapNumberType": "none",
-    "topicTag": "operation"
+    "topicTag": "operation",
+    "sourceRef": "教則 第6章第2節 坂道・カーブ 1坂道・山道",
+    "lawVersion": "2026-10-03"
   },
   {
     "id": "kg059",
@@ -1243,7 +1323,9 @@
     "explanation": "急ブレーキをかけるときは、車体をできるだけ垂直に保ち、前後輪のブレーキをバランスよく使って制動距離を短くすることが基本である。",
     "isTrapQuestion": false,
     "trapNumberType": "none",
-    "topicTag": "operation"
+    "topicTag": "operation",
+    "sourceRef": "教則 第8章第4節 ブレーキの掛け方 2(1)",
+    "lawVersion": "2026-10-03"
   },
   {
     "id": "kg063",
@@ -1303,7 +1385,9 @@
     "explanation": "狭い道でのすれ違いでは、あらかじめ速度を落とし道路の左側に寄って、対向車との間隔を確保しながら安全に通過することが基本である。",
     "isTrapQuestion": false,
     "trapNumberType": "none",
-    "topicTag": "operation"
+    "topicTag": "operation",
+    "sourceRef": "教則 第5章第6節 追越しなど 5行き違い",
+    "lawVersion": "2026-10-03"
   },
   {
     "id": "kg066",
@@ -1323,7 +1407,9 @@
     "explanation": "雨天時は路面が滑りやすくタイヤのグリップが低下するため、通常よりも早めのタイミングで、弱い力から徐々にブレーキをかけて制動距離の増加に備える必要がある。",
     "isTrapQuestion": false,
     "trapNumberType": "none",
-    "topicTag": "operation"
+    "topicTag": "operation",
+    "sourceRef": "教則 第5章第4節 安全な速度と車間距離 3ブレーキの掛け方",
+    "lawVersion": "2026-10-03"
   },
   {
     "id": "kg067",
@@ -1343,7 +1429,9 @@
     "explanation": "エンジンを止め、かつ足で歩く速度で押して歩いている二輪車の運転者は、一定の条件のもとで歩行者に準じて扱われることがある。",
     "isTrapQuestion": false,
     "trapNumberType": "none",
-    "topicTag": "operation"
+    "topicTag": "operation",
+    "sourceRef": "教則 第8章第6節 その他注意しなければならないこと 3押して歩くとき",
+    "lawVersion": "2026-10-03"
   },
   {
     "id": "kg068",
@@ -1383,7 +1471,9 @@
     "explanation": "速度を落とすときやエンジンブレーキを積極的に活用したいときには、適切なタイミングでシフトダウンを行い、エンジン回転数を合わせることが必要である。",
     "isTrapQuestion": false,
     "trapNumberType": "none",
-    "topicTag": "operation"
+    "topicTag": "operation",
+    "sourceRef": "教則 第8章第4節 ブレーキの掛け方 2(3)",
+    "lawVersion": "2026-10-03"
   },
   {
     "id": "kg070",
@@ -1423,7 +1513,9 @@
     "explanation": "チェーン駆動の二輪車は、チェーンのたるみ具合や注油状態を定期的に点検し、適切に整備しておく必要がある。",
     "isTrapQuestion": false,
     "trapNumberType": "none",
-    "topicTag": "operation"
+    "topicTag": "operation",
+    "sourceRef": "教則 第8章第1節 二輪車の運転者の心得 6二輪車の点検",
+    "lawVersion": "2026-10-03"
   },
   {
     "id": "kg072",
@@ -1443,7 +1535,9 @@
     "explanation": "転回禁止(Uターン禁止)の標識がある場所では、車両の種類を問わず転回することが禁止されている。",
     "isTrapQuestion": true,
     "trapNumberType": "other",
-    "topicTag": "operation"
+    "topicTag": "operation",
+    "sourceRef": "道路交通法第25条の2第2項",
+    "lawVersion": "2026-10-03"
   },
   {
     "id": "kg073",
@@ -1463,7 +1557,9 @@
     "explanation": "側車付きでない自動二輪車の最大積載量は60kgと定められており、これを超える荷物を積載すると違反となる。",
     "isTrapQuestion": true,
     "trapNumberType": "loadLimit",
-    "topicTag": "parking"
+    "topicTag": "parking",
+    "sourceRef": "道路交通法施行令第22条第1項第2号",
+    "lawVersion": "2026-10-03"
   },
   {
     "id": "kg074",
@@ -1483,7 +1579,9 @@
     "explanation": "駐車禁止の規制は、運転者がその場を離れているかどうかにかかわらず適用され、指定区間に自動二輪車を止めることはできない。",
     "isTrapQuestion": true,
     "trapNumberType": "other",
-    "topicTag": "parking"
+    "topicTag": "parking",
+    "sourceRef": "道路交通法第2条第1項第18号",
+    "lawVersion": "2026-10-03"
   },
   {
     "id": "kg075",
@@ -1503,7 +1601,9 @@
     "explanation": "駐車は継続的な停止状態(荷物の積み下ろしで5分を超える場合や運転者がすぐに運転できない状態など)を指し、停車は人の乗り降りなど短時間の停止を指す。",
     "isTrapQuestion": true,
     "trapNumberType": "other",
-    "topicTag": "parking"
+    "topicTag": "parking",
+    "sourceRef": "道路交通法第2条第1項第18号",
+    "lawVersion": "2026-10-03"
   },
   {
     "id": "kg076",
@@ -1523,7 +1623,9 @@
     "explanation": "交差点の側端または道路の曲がり角から5メートル以内の場所は、見通しの確保のため駐停車が禁止されている。",
     "isTrapQuestion": true,
     "trapNumberType": "other",
-    "topicTag": "parking"
+    "topicTag": "parking",
+    "sourceRef": "道路交通法第44条第1項第2号",
+    "lawVersion": "2026-10-03"
   },
   {
     "id": "kg077",
@@ -1543,7 +1645,9 @@
     "explanation": "バスの停留所の標示板から前後10メートル以内は、運行の妨げになるため原則として駐停車が禁止されている。",
     "isTrapQuestion": true,
     "trapNumberType": "other",
-    "topicTag": "parking"
+    "topicTag": "parking",
+    "sourceRef": "教則 第5章第8節 駐車と停車",
+    "lawVersion": "2026-10-03"
   },
   {
     "id": "kg078",
@@ -1603,7 +1707,9 @@
     "explanation": "時間制限駐車区間では、標示された制限時間の範囲内で、所定の表示方法に従って駐車することが認められている。",
     "isTrapQuestion": true,
     "trapNumberType": "other",
-    "topicTag": "parking"
+    "topicTag": "parking",
+    "sourceRef": "道路交通法第49条の3第2項",
+    "lawVersion": "2026-10-03"
   },
   {
     "id": "kg081",
@@ -1665,7 +1771,9 @@
     "explanation": "積載する荷物は、走行中に荷崩れしないよう確実に固定し、運転者の視界や車体の幅を大きく超えないようにする必要がある。",
     "isTrapQuestion": false,
     "trapNumberType": "none",
-    "topicTag": "parking"
+    "topicTag": "parking",
+    "sourceRef": "教則 第4章第4節 乗車と積載",
+    "lawVersion": "2026-10-03"
   },
   {
     "id": "kg084",
@@ -1685,7 +1793,9 @@
     "explanation": "駐車した車両の右側に、他の車両が通行するために必要な余地(道路の状況に応じた基準)がない場所での駐車は、車両の種類を問わず禁止されている。",
     "isTrapQuestion": true,
     "trapNumberType": "other",
-    "topicTag": "parking"
+    "topicTag": "parking",
+    "sourceRef": "道路交通法第45条第2項",
+    "lawVersion": "2026-10-03"
   },
   {
     "id": "kg085",
@@ -1705,7 +1815,9 @@
     "explanation": "小型限定普通二輪免許は125cc以下の自動二輪車に限られるため、それを超える排気量の車両(例:400cc)を運転することはできない。",
     "isTrapQuestion": true,
     "trapNumberType": "other",
-    "topicTag": "license_system"
+    "topicTag": "license_system",
+    "sourceRef": "道路交通法施行規則第24条第2項",
+    "lawVersion": "2026-10-03"
   },
   {
     "id": "kg086",
@@ -1725,7 +1837,9 @@
     "explanation": "小型限定の条件を解除して400cc以下の普通二輪免許とするには、教習所での限定解除審査や運転免許試験場での技能試験など所定の手続きを経る必要がある。",
     "isTrapQuestion": true,
     "trapNumberType": "other",
-    "topicTag": "license_system"
+    "topicTag": "license_system",
+    "sourceRef": "道路交通法施行規則第18条の5",
+    "lawVersion": "2026-10-03"
   },
   {
     "id": "kg087",
@@ -1745,7 +1859,9 @@
     "explanation": "普通二輪免許(小型限定を含む)は満16歳以上から取得することができる。",
     "isTrapQuestion": true,
     "trapNumberType": "other",
-    "topicTag": "license_system"
+    "topicTag": "license_system",
+    "sourceRef": "道路交通法第88条第1項第1号",
+    "lawVersion": "2026-10-03"
   },
   {
     "id": "kg088",
@@ -1765,7 +1881,9 @@
     "explanation": "原付免許で運転できるのは原動機付自転車（50cc以下、または最高出力4.0kW以下の125cc以下）のみ。最高出力が4.0kWを超える125cc以下の自動二輪車を運転するには小型限定普通二輪免許を別途取得する必要がある。",
     "isTrapQuestion": true,
     "trapNumberType": "other",
-    "topicTag": "license_system"
+    "topicTag": "license_system",
+    "sourceRef": "道路交通法施行規則第1条の2",
+    "lawVersion": "2026-10-03"
   },
   {
     "id": "kg089",
@@ -1785,7 +1903,9 @@
     "explanation": "運転免許証に記載された住所などが変わった場合は、速やかに警察署等で記載事項変更の手続きを行う必要がある。",
     "isTrapQuestion": false,
     "trapNumberType": "none",
-    "topicTag": "license_system"
+    "topicTag": "license_system",
+    "sourceRef": "道路交通法第94条第1項",
+    "lawVersion": "2026-10-03"
   },
   {
     "id": "kg090",
@@ -1847,7 +1967,9 @@
     "explanation": "小型限定普通二輪免許であっても、違反行為の内容に応じて点数が付され、累積点数に応じて免許の停止・取消しなどの行政処分の対象となる。",
     "isTrapQuestion": true,
     "trapNumberType": "other",
-    "topicTag": "license_system"
+    "topicTag": "license_system",
+    "sourceRef": "道路交通法施行令別表第3",
+    "lawVersion": "2026-10-03"
   },
   {
     "id": "kg093",
@@ -1867,7 +1989,9 @@
     "explanation": "タイヤの空気圧が適正でないと、操縦安定性の低下や偏摩耗、パンクのリスクが高まるため、指定空気圧を保つよう定期的に点検する必要がある。",
     "isTrapQuestion": false,
     "trapNumberType": "none",
-    "topicTag": "maintenance"
+    "topicTag": "maintenance",
+    "sourceRef": "教則 第8章第1節 6 二輪車の点検",
+    "lawVersion": "2026-10-03"
   },
   {
     "id": "kg094",
@@ -1887,7 +2011,9 @@
     "explanation": "エンジンオイルは走行距離や使用期間に応じて劣化するため、定期的に点検・交換し、規定量や汚れの状態を確認することが必要である。",
     "isTrapQuestion": false,
     "trapNumberType": "none",
-    "topicTag": "maintenance"
+    "topicTag": "maintenance",
+    "sourceRef": "教則 第4章第3節 1 日常点検",
+    "lawVersion": "2026-10-03"
   },
   {
     "id": "kg095",
@@ -1927,7 +2053,9 @@
     "explanation": "前照灯、尾灯、方向指示器などの灯火類は、周囲への意思表示や視認性確保に重要なため、日常点検で点灯・点滅を確認することが望ましい。",
     "isTrapQuestion": false,
     "trapNumberType": "none",
-    "topicTag": "maintenance"
+    "topicTag": "maintenance",
+    "sourceRef": "教則 第8章第1節 6 二輪車の点検",
+    "lawVersion": "2026-10-03"
   },
   {
     "id": "kg097",
@@ -1947,7 +2075,9 @@
     "explanation": "駆動用チェーンやベルトのたるみが適正範囲から外れると、走行中の脱落や異音、駆動効率の低下、部品の早期摩耗につながるため定期点検が必要である。",
     "isTrapQuestion": false,
     "trapNumberType": "none",
-    "topicTag": "maintenance"
+    "topicTag": "maintenance",
+    "sourceRef": "教則 第8章第1節 6 二輪車の点検",
+    "lawVersion": "2026-10-03"
   },
   {
     "id": "kg098",
@@ -1967,7 +2097,9 @@
     "explanation": "「二輪車通行止め」の標識がある道路は、原動機付自転車と自動二輪車の両方の通行が禁止されている区間であることを示す。",
     "isTrapQuestion": true,
     "trapNumberType": "signalAndMarkings",
-    "topicTag": "signs"
+    "topicTag": "signs",
+    "sourceRef": "標識令 別表第一 規制標識 二輪の自動車・一般原動機付自転車通行止め",
+    "lawVersion": "2026-10-03"
   },
   {
     "id": "kg099",
@@ -1987,7 +2119,9 @@
     "explanation": "「最高速度」の標識は、その道路区間で車両が出すことのできる最高速度を示すものであり、これを超えて走行することはできない。",
     "isTrapQuestion": true,
     "trapNumberType": "speedLimit",
-    "topicTag": "signs"
+    "topicTag": "signs",
+    "sourceRef": "標識令 別表第一 規制標識 最高速度",
+    "lawVersion": "2026-10-03"
   },
   {
     "id": "kg100",
@@ -2027,7 +2161,9 @@
     "explanation": "普通二輪免許(小型限定を含む)では、限定の範囲内の普通自動二輪車のほか、小型特殊自動車と原動機付自転車も運転できる。普通自動車は運転できない。",
     "isTrapQuestion": true,
     "trapNumberType": "other",
-    "topicTag": "license_system"
+    "topicTag": "license_system",
+    "sourceRef": "教則 第4章第2節 運転免許の仕組み 2",
+    "lawVersion": "2026-10-03"
   },
   {
     "id": "kg102",
@@ -2047,7 +2183,9 @@
     "explanation": "普通自動車免許で運転できる二輪車は原動機付自転車までである。総排気量50ccを超える二輪車を運転するには二輪免許が必要になる。",
     "isTrapQuestion": true,
     "trapNumberType": "other",
-    "topicTag": "license_system"
+    "topicTag": "license_system",
+    "sourceRef": "教則 第4章第2節 運転免許の仕組み 2",
+    "lawVersion": "2026-10-03"
   },
   {
     "id": "kg103",
@@ -2067,7 +2205,9 @@
     "explanation": "令和7年4月から、総排気量125cc以下で最高出力4.0kW以下の二輪車は原動機付自転車として扱われる。そのため法定速度30km/h、二段階右折などのルールも原付と同じである。",
     "isTrapQuestion": true,
     "trapNumberType": "other",
-    "topicTag": "license_system"
+    "topicTag": "license_system",
+    "sourceRef": "道路交通法施行規則第1条の2",
+    "lawVersion": "2026-10-03"
   },
   {
     "id": "kg104",
@@ -2109,7 +2249,9 @@
     "explanation": "初心運転者期間制度は二輪免許にも適用され、取得日から1年間が初心運転者期間となる。初心者マークの表示義務がないことと混同しないようにする。",
     "isTrapQuestion": true,
     "trapNumberType": "licensePeriod",
-    "topicTag": "license_system"
+    "topicTag": "license_system",
+    "sourceRef": "道路交通法第100条の2（再試験）",
+    "lawVersion": "2026-10-03"
   },
   {
     "id": "kg106",
@@ -2129,7 +2271,9 @@
     "explanation": "初心運転者期間中に基準以上の違反をすると初心運転者講習の通知が来る。講習を受けない場合や受講後に再び基準に達した場合は再試験となり、不合格なら免許が取り消される。",
     "isTrapQuestion": true,
     "trapNumberType": "licensePeriod",
-    "topicTag": "license_system"
+    "topicTag": "license_system",
+    "sourceRef": "道路交通法第100条の2（再試験）",
+    "lawVersion": "2026-10-03"
   },
   {
     "id": "kg107",
@@ -2149,7 +2293,9 @@
     "explanation": "運転するときは、距離や時間の長短に関係なく免許証を携帯しなければならない。携帯していないと免許証不携帯となる。",
     "isTrapQuestion": true,
     "trapNumberType": "other",
-    "topicTag": "license_system"
+    "topicTag": "license_system",
+    "sourceRef": "道路交通法第95条第1項",
+    "lawVersion": "2026-10-03"
   },
   {
     "id": "kg108",
@@ -2169,7 +2315,9 @@
     "explanation": "免許の更新期間は、有効期間満了の年の誕生日の前後1か月間(誕生日の1か月前から1か月後まで)である。",
     "isTrapQuestion": true,
     "trapNumberType": "licensePeriod",
-    "topicTag": "license_system"
+    "topicTag": "license_system",
+    "sourceRef": "道路交通法第101条第1項",
+    "lawVersion": "2026-10-03"
   },
   {
     "id": "kg109",
@@ -2211,7 +2359,9 @@
     "explanation": "仮運転免許は普通・準中型・中型・大型自動車の練習用であり、二輪免許や原付免許には仮免許の制度がない。",
     "isTrapQuestion": true,
     "trapNumberType": "other",
-    "topicTag": "license_system"
+    "topicTag": "license_system",
+    "sourceRef": "教則 第4章第2節 運転免許の仕組み 1(3)",
+    "lawVersion": "2026-10-03"
   },
   {
     "id": "kg111",
@@ -2275,7 +2425,9 @@
     "explanation": "自賠責保険はすべての自動車・原付に加入が義務付けられている強制保険である。車検のない二輪車でも加入が必要で、証明書を備え付ける。",
     "isTrapQuestion": true,
     "trapNumberType": "other",
-    "topicTag": "license_system"
+    "topicTag": "license_system",
+    "sourceRef": "教則 第4章第1節 運転に当たつての注意 1(1)",
+    "lawVersion": "2026-10-03"
   },
   {
     "id": "kg114",
@@ -2315,7 +2467,9 @@
     "explanation": "免許証を紛失したら公安委員会(運転免許センター等)で再交付を受ける。免許証を持たずに運転すれば免許証不携帯になる。",
     "isTrapQuestion": false,
     "trapNumberType": "none",
-    "topicTag": "license_system"
+    "topicTag": "license_system",
+    "sourceRef": "道路交通法第94条第2項",
+    "lawVersion": "2026-10-03"
   },
   {
     "id": "kg116",
@@ -2335,7 +2489,9 @@
     "explanation": "小型限定普通二輪免許は、普通二輪免許に「小型に限る」という条件が付いたものである。独立した免許の種類ではない。",
     "isTrapQuestion": true,
     "trapNumberType": "other",
-    "topicTag": "license_system"
+    "topicTag": "license_system",
+    "sourceRef": "道路交通法施行規則第24条第2項",
+    "lawVersion": "2026-10-03"
   },
   {
     "id": "kg117",
@@ -2355,7 +2511,9 @@
     "explanation": "前歴がない場合、累積点数が6点以上になると免許停止処分の対象となり、15点以上で免許取消しの対象となる。",
     "isTrapQuestion": true,
     "trapNumberType": "other",
-    "topicTag": "license_system"
+    "topicTag": "license_system",
+    "sourceRef": "道路交通法施行令別表第3",
+    "lawVersion": "2026-10-03"
   },
   {
     "id": "kg118",
@@ -2375,7 +2533,9 @@
     "explanation": "教習所を卒業していない人が試験場で合格した場合、免許交付前に取得時講習(二輪車講習・応急救護処置講習)を受けなければならない。",
     "isTrapQuestion": true,
     "trapNumberType": "other",
-    "topicTag": "license_system"
+    "topicTag": "license_system",
+    "sourceRef": "道路交通法第108条の2第1項第8号",
+    "lawVersion": "2026-10-03"
   },
   {
     "id": "kg119",
@@ -2395,7 +2555,9 @@
     "explanation": "自動車専用道路は、総排気量125cc以下の普通自動二輪車や原付は通行できない。高速自動車国道と同様の扱いである。",
     "isTrapQuestion": true,
     "trapNumberType": "other",
-    "topicTag": "signs"
+    "topicTag": "signs",
+    "sourceRef": "教則 第7章 高速道路での走行",
+    "lawVersion": "2026-10-03"
   },
   {
     "id": "kg120",
@@ -2415,7 +2577,9 @@
     "explanation": "小型限定免許で運転できる二輪車も区分上は普通自動二輪車であるため、この標識の規制を受ける。一人乗りであれば通行できる。",
     "isTrapQuestion": true,
     "trapNumberType": "twoPersonRiding",
-    "topicTag": "signs"
+    "topicTag": "signs",
+    "sourceRef": "標識令 別表第一 規制標識 大型自動二輪車及び普通自動二輪車二人乗り通行禁止(310の2)",
+    "lawVersion": "2026-10-03"
   },
   {
     "id": "kg121",
@@ -2435,7 +2599,9 @@
     "explanation": "二段階右折の標識は原動機付自転車(一種)を対象としたものである。250ccの二輪車は自動車なので通常の方法(小回り)で右折する。",
     "isTrapQuestion": true,
     "trapNumberType": "twoStageRightTurn",
-    "topicTag": "signs"
+    "topicTag": "signs",
+    "sourceRef": "道路交通法第34条第2項",
+    "lawVersion": "2026-10-03"
   },
   {
     "id": "kg122",
@@ -2455,7 +2621,9 @@
     "explanation": "この標識は二輪の自動車(自動二輪車)以外の自動車の通行を禁止するものである。二輪の自動車は通行でき、原付もこの規制の対象外である。",
     "isTrapQuestion": true,
     "trapNumberType": "signalAndMarkings",
-    "topicTag": "signs"
+    "topicTag": "signs",
+    "sourceRef": "標識令 別表第一 規制標識 二輪の自動車以外の自動車通行止め(304)",
+    "lawVersion": "2026-10-03"
   },
   {
     "id": "kg123",
@@ -2475,7 +2643,9 @@
     "explanation": "事故を起こしたら、直ちに運転を停止し、負傷者の救護と道路上の危険防止の措置をとり、警察官に報告しなければならない。示談の有無は関係ない。",
     "isTrapQuestion": false,
     "trapNumberType": "none",
-    "topicTag": "emergency"
+    "topicTag": "emergency",
+    "sourceRef": "道路交通法第72条第1項",
+    "lawVersion": "2026-10-03"
   },
   {
     "id": "kg124",
@@ -2535,7 +2705,9 @@
     "explanation": "ブレーキレバーは遊びが適正で、いっぱいに握ったときにグリップとの間に適当なすき間があることを確認する。遊びが大きすぎると効きが悪い。",
     "isTrapQuestion": false,
     "trapNumberType": "none",
-    "topicTag": "maintenance"
+    "topicTag": "maintenance",
+    "sourceRef": "教則 第8章第1節 6 二輪車の点検",
+    "lawVersion": "2026-10-03"
   },
   {
     "id": "kg127",
@@ -2555,7 +2727,9 @@
     "explanation": "液補充式のバッテリーは液量が上限と下限の間にあることを確認し、不足していれば補充する。",
     "isTrapQuestion": false,
     "trapNumberType": "none",
-    "topicTag": "maintenance"
+    "topicTag": "maintenance",
+    "sourceRef": "教則 第4章第3節 1 日常点検",
+    "lawVersion": "2026-10-03"
   },
   {
     "id": "kg128",
@@ -2575,7 +2749,9 @@
     "explanation": "ハンドルは重さや、がた・取られがないかを点検する。異常があると操縦が不安定になり危険である。",
     "isTrapQuestion": false,
     "trapNumberType": "none",
-    "topicTag": "maintenance"
+    "topicTag": "maintenance",
+    "sourceRef": "教則 第8章第1節 6 二輪車の点検",
+    "lawVersion": "2026-10-03"
   },
   {
     "id": "kg129",
@@ -2595,7 +2771,9 @@
     "explanation": "冷却水はエンジンが冷えている状態でリザーバタンクの液量を確認する。熱いときにキャップを開けると熱湯が噴き出して危険である。",
     "isTrapQuestion": false,
     "trapNumberType": "none",
-    "topicTag": "maintenance"
+    "topicTag": "maintenance",
+    "sourceRef": "教則 第4章第3節 1 日常点検",
+    "lawVersion": "2026-10-03"
   },
   {
     "id": "kg130",
@@ -2615,7 +2793,9 @@
     "explanation": "ブレーキ液の減少はパッドの摩耗や液漏れのサインである。規定の液を使い、定期的に交換する必要がある。",
     "isTrapQuestion": false,
     "trapNumberType": "none",
-    "topicTag": "maintenance"
+    "topicTag": "maintenance",
+    "sourceRef": "教則 第4章第3節 1 日常点検",
+    "lawVersion": "2026-10-03"
   },
   {
     "id": "kg131",
@@ -2675,7 +2855,9 @@
     "explanation": "日常点検は車の使用者が自らの責任で行うものである。走行距離や運行時の状態などから判断して適切な時期に行う。",
     "isTrapQuestion": false,
     "trapNumberType": "none",
-    "topicTag": "maintenance"
+    "topicTag": "maintenance",
+    "sourceRef": "教則 第4章第3節 1 日常点検",
+    "lawVersion": "2026-10-03"
   },
   {
     "id": "kg134",
@@ -2695,7 +2877,9 @@
     "explanation": "制動灯は前輪・後輪それぞれのブレーキ操作で点灯するかを確認する。後続車への合図となる重要な灯火である。",
     "isTrapQuestion": false,
     "trapNumberType": "none",
-    "topicTag": "maintenance"
+    "topicTag": "maintenance",
+    "sourceRef": "教則 第4章第3節 1 日常点検",
+    "lawVersion": "2026-10-03"
   },
   {
     "id": "kg135",
@@ -2715,7 +2899,9 @@
     "explanation": "積載物の重量の制限は、原動機付自転車が30kg、自動二輪車が60kgである。排気量が125cc以下でも自動二輪車は60kgとなる。",
     "isTrapQuestion": true,
     "trapNumberType": "loadLimit",
-    "topicTag": "parking"
+    "topicTag": "parking",
+    "sourceRef": "道路交通法施行令第22条第1項第2号",
+    "lawVersion": "2026-10-03"
   },
   {
     "id": "kg136",
@@ -2735,7 +2921,9 @@
     "explanation": "自動二輪車の積載物の長さは、積載装置の長さに30cmを加えたものを超えてはならない。",
     "isTrapQuestion": true,
     "trapNumberType": "loadLimit",
-    "topicTag": "parking"
+    "topicTag": "parking",
+    "sourceRef": "道路交通法施行令第22条第1項第3号イ",
+    "lawVersion": "2026-10-03"
   },
   {
     "id": "kg137",
@@ -2755,7 +2943,9 @@
     "explanation": "自動二輪車の積載物の幅は、積載装置の幅に30cm(左右それぞれ15cm)を加えた範囲までとされている。",
     "isTrapQuestion": true,
     "trapNumberType": "loadLimit",
-    "topicTag": "parking"
+    "topicTag": "parking",
+    "sourceRef": "道路交通法施行令第22条第1項第4号ロ",
+    "lawVersion": "2026-10-03"
   },
   {
     "id": "kg138",
@@ -2775,7 +2965,9 @@
     "explanation": "消火栓、指定消防水利の標識がある位置、消防用防火水槽の取入口から5m以内は駐車禁止である。火災報知機の1mと混同しないようにする。",
     "isTrapQuestion": true,
     "trapNumberType": "other",
-    "topicTag": "parking"
+    "topicTag": "parking",
+    "sourceRef": "道路交通法第45条第1項第4号",
+    "lawVersion": "2026-10-03"
   },
   {
     "id": "kg139",
@@ -2795,7 +2987,9 @@
     "explanation": "駐車場、車庫などの自動車用の出入口から3m以内は駐車禁止の場所である。",
     "isTrapQuestion": true,
     "trapNumberType": "other",
-    "topicTag": "parking"
+    "topicTag": "parking",
+    "sourceRef": "教則 第5章第8節 駐車と停車 2(3)",
+    "lawVersion": "2026-10-03"
   },
   {
     "id": "kg140",
@@ -2815,7 +3009,9 @@
     "explanation": "踏切とその端から前後10m以内の場所は駐停車禁止である。",
     "isTrapQuestion": true,
     "trapNumberType": "other",
-    "topicTag": "parking"
+    "topicTag": "parking",
+    "sourceRef": "教則 第5章第8節 駐車と停車 2(2)",
+    "lawVersion": "2026-10-03"
   },
   {
     "id": "kg141",
@@ -2835,7 +3031,9 @@
     "explanation": "安全地帯の左側と、その前後10m以内の場所は駐停車禁止である。",
     "isTrapQuestion": true,
     "trapNumberType": "other",
-    "topicTag": "parking"
+    "topicTag": "parking",
+    "sourceRef": "教則 第5章第8節 駐車と停車 2(2)",
+    "lawVersion": "2026-10-03"
   },
   {
     "id": "kg142",
@@ -2855,7 +3053,9 @@
     "explanation": "横断歩道・自転車横断帯とその端から前後5m以内は駐停車禁止である。止まった車が歩行者の姿を隠す危険があるためである。",
     "isTrapQuestion": true,
     "trapNumberType": "other",
-    "topicTag": "parking"
+    "topicTag": "parking",
+    "sourceRef": "教則 第5章第8節 駐車と停車 2(2)",
+    "lawVersion": "2026-10-03"
   },
   {
     "id": "kg143",
@@ -2875,7 +3075,9 @@
     "explanation": "坂の頂上付近と勾配の急な坂は、上り坂・下り坂を問わず駐停車禁止である。追越し禁止の「急な下り坂」と混同しないようにする。",
     "isTrapQuestion": true,
     "trapNumberType": "other",
-    "topicTag": "parking"
+    "topicTag": "parking",
+    "sourceRef": "道路交通法第44条第1項第1号",
+    "lawVersion": "2026-10-03"
   },
   {
     "id": "kg144",
@@ -2935,7 +3137,9 @@
     "explanation": "一般道路での二人乗りは、大型二輪免許または普通二輪免許(小型限定を含む)を受けていた期間が通算1年以上必要である。原付免許の期間は含まれない。",
     "isTrapQuestion": true,
     "trapNumberType": "twoPersonRiding",
-    "topicTag": "parking"
+    "topicTag": "parking",
+    "sourceRef": "教則 第8章第1節 二輪車の運転者の心得 4(3)",
+    "lawVersion": "2026-10-03"
   },
   {
     "id": "kg147",
@@ -2978,26 +3182,6 @@
     "topicTag": "parking"
   },
   {
-    "id": "kg149",
-    "licenseCategory": [
-      "kogataGentsukiNirin"
-    ],
-    "stageTag": "第二段階",
-    "difficulty": 4,
-    "questionText": "夜間、道路に二輪車を駐車する場合の灯火について正しいのはどれか。",
-    "choices": [
-      "非常点滅表示灯、駐車灯または尾灯をつける。ただし50m後方から見える照明がある場所では不要である",
-      "どのような場所でも灯火をつけなくてよいのは二輪車だけである",
-      "夜間でも道路に止めるときは灯火をつける必要はない",
-      "前照灯を上向きにしてつけておかなければならない"
-    ],
-    "answer": 0,
-    "explanation": "夜間、道路に駐停車するときは非常点滅表示灯・駐車灯・尾灯のいずれかをつける。後方50mから見える明るい場所では不要である。",
-    "isTrapQuestion": true,
-    "trapNumberType": "nightDriving",
-    "topicTag": "parking"
-  },
-  {
     "id": "kg150",
     "licenseCategory": [
       "kogataGentsukiNirin"
@@ -3015,7 +3199,9 @@
     "explanation": "幅が0.75mを超える白の実線1本の路側帯では、路側帯に入って左側に0.75m以上の余地を残して駐停車する。",
     "isTrapQuestion": true,
     "trapNumberType": "other",
-    "topicTag": "parking"
+    "topicTag": "parking",
+    "sourceRef": "教則 第5章第8節 駐車と停車 3(3)",
+    "lawVersion": "2026-10-03"
   },
   {
     "id": "kg151",
@@ -3075,7 +3261,9 @@
     "explanation": "荷物の積みおろしのための停止は5分を超えると駐車になる。人の乗り降りのための停止は時間にかかわらず停車である。",
     "isTrapQuestion": true,
     "trapNumberType": "other",
-    "topicTag": "parking"
+    "topicTag": "parking",
+    "sourceRef": "道路交通法第2条第1項第18号",
+    "lawVersion": "2026-10-03"
   },
   {
     "id": "kg154",
@@ -3095,7 +3283,9 @@
     "explanation": "運転者が車から離れていてすぐに運転できない状態は、時間の長短にかかわらず駐車である。",
     "isTrapQuestion": true,
     "trapNumberType": "other",
-    "topicTag": "parking"
+    "topicTag": "parking",
+    "sourceRef": "道路交通法第2条第1項第18号",
+    "lawVersion": "2026-10-03"
   },
   {
     "id": "kg155",
@@ -3135,7 +3325,9 @@
     "explanation": "車から離れるときは、エンジンを止め、ブレーキをかけ、キーを抜いてハンドルロックをかけるなどの盗難防止措置をとる。",
     "isTrapQuestion": false,
     "trapNumberType": "none",
-    "topicTag": "parking"
+    "topicTag": "parking",
+    "sourceRef": "教則 第5章第8節 駐車と停車 10(2)",
+    "lawVersion": "2026-10-03"
   },
   {
     "id": "kg157",
@@ -3184,7 +3376,7 @@
     ],
     "stageTag": "第一段階",
     "difficulty": 1,
-    "questionText": "標識や標示による指定がない一般道路で、総排気量250ccの二輪車が出すことのできる最高速度として正しいのはどれか。",
+    "questionText": "標識や標示による指定がなく、中央線のある一般道路で、総排気量250ccの二輪車が出すことのできる最高速度として正しいのはどれか。",
     "choices": [
       "80km/h",
       "50km/h",
@@ -3192,10 +3384,12 @@
       "30km/h"
     ],
     "answer": 2,
-    "explanation": "総排気量250cc以下でも自動二輪車の一般道路での法定最高速度は60km/hである。30km/hは原付(一種)の法定最高速度である。",
+    "explanation": "総排気量250cc以下でも自動二輪車の一般道路（中央線または車両通行帯のあるもの）での法定最高速度は60km/hである。30km/hは原付(一種)の法定最高速度である。",
     "isTrapQuestion": true,
     "trapNumberType": "speedLimit",
-    "topicTag": "rules"
+    "topicTag": "rules",
+    "sourceRef": "道路交通法施行令第11条第1項第1号ハ",
+    "lawVersion": "2026-10-03"
   },
   {
     "id": "kg160",
@@ -3215,7 +3409,9 @@
     "explanation": "原付(一種)は標識の数値が30km/hを超えていても30km/hが上限である。250ccの二輪車は標識の50km/hに従う。",
     "isTrapQuestion": true,
     "trapNumberType": "speedLimit",
-    "topicTag": "rules"
+    "topicTag": "rules",
+    "sourceRef": "道路交通法施行令第11条",
+    "lawVersion": "2026-10-03"
   },
   {
     "id": "kg161",
@@ -3235,7 +3431,9 @@
     "explanation": "車線数による二段階右折の義務は原付(一種)に対するものである。250ccの二輪車は自動車なので通常の方法で右折する。",
     "isTrapQuestion": true,
     "trapNumberType": "twoStageRightTurn",
-    "topicTag": "rules"
+    "topicTag": "rules",
+    "sourceRef": "道路交通法第34条第2項",
+    "lawVersion": "2026-10-03"
   },
   {
     "id": "kg162",
@@ -3255,7 +3453,9 @@
     "explanation": "右向きの青色矢印では、自動車は右折できる。ただし二段階右折の方法で右折する原付(一種)は進行できない。250ccの二輪車は自動車なので右折できる。",
     "isTrapQuestion": true,
     "trapNumberType": "signalAndMarkings",
-    "topicTag": "rules"
+    "topicTag": "rules",
+    "sourceRef": "道路交通法施行令第2条第1項",
+    "lawVersion": "2026-10-03"
   },
   {
     "id": "kg163",
@@ -3275,7 +3475,9 @@
     "explanation": "黄色の点滅は、他の交通に注意して進むことができるという意味である。停止位置での一時停止が必要なのは赤色の点滅である。",
     "isTrapQuestion": false,
     "trapNumberType": "none",
-    "topicTag": "rules"
+    "topicTag": "rules",
+    "sourceRef": "道路交通法施行令第2条第1項",
+    "lawVersion": "2026-10-03"
   },
   {
     "id": "kg164",
@@ -3295,7 +3497,9 @@
     "explanation": "赤色の点滅は、停止位置で一時停止し、安全を確かめてから進行できるという意味である。",
     "isTrapQuestion": true,
     "trapNumberType": "signalAndMarkings",
-    "topicTag": "rules"
+    "topicTag": "rules",
+    "sourceRef": "道路交通法施行令第2条第1項",
+    "lawVersion": "2026-10-03"
   },
   {
     "id": "kg165",
@@ -3315,7 +3519,9 @@
     "explanation": "警察官が腕を水平に上げているとき、身体の正面に対面する交通は赤色、身体の正面に平行する交通は青色の灯火と同じ意味である。",
     "isTrapQuestion": false,
     "trapNumberType": "none",
-    "topicTag": "rules"
+    "topicTag": "rules",
+    "sourceRef": "道路交通法施行令第4条第1項",
+    "lawVersion": "2026-10-03"
   },
   {
     "id": "kg166",
@@ -3335,7 +3541,9 @@
     "explanation": "腕や灯火を頭上に上げているとき、身体の正面に平行する交通は黄色、対面する交通は赤色の灯火と同じ意味である。",
     "isTrapQuestion": true,
     "trapNumberType": "signalAndMarkings",
-    "topicTag": "rules"
+    "topicTag": "rules",
+    "sourceRef": "道路交通法施行令第5条第1項",
+    "lawVersion": "2026-10-03"
   },
   {
     "id": "kg167",
@@ -3355,7 +3563,9 @@
     "explanation": "信号機の表示と警察官の手信号等が異なる場合は、警察官の手信号等に従わなければならない。",
     "isTrapQuestion": false,
     "trapNumberType": "none",
-    "topicTag": "rules"
+    "topicTag": "rules",
+    "sourceRef": "道路交通法第7条",
+    "lawVersion": "2026-10-03"
   },
   {
     "id": "kg168",
@@ -3375,7 +3585,9 @@
     "explanation": "交差点とその手前から30m以内の場所では、優先道路を通行している場合を除いて追越しが禁止されている。",
     "isTrapQuestion": true,
     "trapNumberType": "other",
-    "topicTag": "rules"
+    "topicTag": "rules",
+    "sourceRef": "道路交通法第30条第3号",
+    "lawVersion": "2026-10-03"
   },
   {
     "id": "kg169",
@@ -3415,7 +3627,9 @@
     "explanation": "追越しは右側から行うのが原則だが、前の車が右折のため道路の中央や右端に寄っているときは左側から追い越す。",
     "isTrapQuestion": true,
     "trapNumberType": "other",
-    "topicTag": "rules"
+    "topicTag": "rules",
+    "sourceRef": "道路交通法第28条第2項",
+    "lawVersion": "2026-10-03"
   },
   {
     "id": "kg171",
@@ -3435,7 +3649,9 @@
     "explanation": "前の車が自動車を追い越そうとしているときに、さらにその車を追い越す二重追越しは禁止されている。前の車が原付や自転車を追い越そうとしている場合は二重追越しにはあたらない。",
     "isTrapQuestion": true,
     "trapNumberType": "other",
-    "topicTag": "rules"
+    "topicTag": "rules",
+    "sourceRef": "道路交通法第29条",
+    "lawVersion": "2026-10-03"
   },
   {
     "id": "kg172",
@@ -3455,7 +3671,9 @@
     "explanation": "追い越されるときは、追越しが終わるまで速度を上げてはならない。十分な余地がない場合はできるだけ左に寄って進路を譲る。",
     "isTrapQuestion": false,
     "trapNumberType": "none",
-    "topicTag": "rules"
+    "topicTag": "rules",
+    "sourceRef": "道路交通法第27条第1項",
+    "lawVersion": "2026-10-03"
   },
   {
     "id": "kg173",
@@ -3475,7 +3693,9 @@
     "explanation": "横断歩道・自転車横断帯とその手前30m以内の場所では、追越しに加え、前の車の側方を通過して前に出る追抜きも禁止されている。",
     "isTrapQuestion": true,
     "trapNumberType": "other",
-    "topicTag": "rules"
+    "topicTag": "rules",
+    "sourceRef": "道路交通法第38条第3項",
+    "lawVersion": "2026-10-03"
   },
   {
     "id": "kg174",
@@ -3495,7 +3715,9 @@
     "explanation": "横断歩道等の手前で停止している車の側方を通過してその前方に出るときは、見えない歩行者がいるおそれがあるため、一時停止しなければならない。",
     "isTrapQuestion": true,
     "trapNumberType": "other",
-    "topicTag": "rules"
+    "topicTag": "rules",
+    "sourceRef": "道路交通法第38条第2項",
+    "lawVersion": "2026-10-03"
   },
   {
     "id": "kg175",
@@ -3515,7 +3737,9 @@
     "explanation": "横断歩道に近づいたときは、横断する人がいないことが明らかな場合を除き、手前で停止できる速度で進む。",
     "isTrapQuestion": false,
     "trapNumberType": "none",
-    "topicTag": "rules"
+    "topicTag": "rules",
+    "sourceRef": "道路交通法第38条第1項",
+    "lawVersion": "2026-10-03"
   },
   {
     "id": "kg176",
@@ -3535,7 +3759,9 @@
     "explanation": "白や黄色のつえを持った人、盲導犬を連れた人が通行しているときは、一時停止か徐行をしてその人が安全に通れるようにする。",
     "isTrapQuestion": false,
     "trapNumberType": "none",
-    "topicTag": "rules"
+    "topicTag": "rules",
+    "sourceRef": "道路交通法第71条第2号",
+    "lawVersion": "2026-10-03"
   },
   {
     "id": "kg177",
@@ -3555,7 +3781,9 @@
     "explanation": "児童や幼児の乗り降りのため停止している通学通園バスのそばを通るときは、徐行して安全を確かめなければならない。",
     "isTrapQuestion": false,
     "trapNumberType": "none",
-    "topicTag": "rules"
+    "topicTag": "rules",
+    "sourceRef": "道路交通法第71条第2号の3",
+    "lawVersion": "2026-10-03"
   },
   {
     "id": "kg178",
@@ -3575,7 +3803,9 @@
     "explanation": "安全地帯のない停留所で乗降客がいる場合は、路面電車の後方で停止して待つ。乗降客がなく1.5m以上の間隔がとれる場合は徐行して通過できる。",
     "isTrapQuestion": false,
     "trapNumberType": "none",
-    "topicTag": "rules"
+    "topicTag": "rules",
+    "sourceRef": "道路交通法第31条第1項",
+    "lawVersion": "2026-10-03"
   },
   {
     "id": "kg179",
@@ -3595,7 +3825,9 @@
     "explanation": "安全地帯がある場合は、乗降客がいても徐行して進むことができる。安全地帯がない場合の「後方で停止」と区別して覚える。",
     "isTrapQuestion": true,
     "trapNumberType": "other",
-    "topicTag": "rules"
+    "topicTag": "rules",
+    "sourceRef": "道路交通法第31条第1項",
+    "lawVersion": "2026-10-03"
   },
   {
     "id": "kg180",
@@ -3657,7 +3889,9 @@
     "explanation": "環状交差点は右回りに通行する。環状交差点内を通行している車が優先であり、入るときは徐行してその進行を妨げないようにする。",
     "isTrapQuestion": false,
     "trapNumberType": "none",
-    "topicTag": "rules"
+    "topicTag": "rules",
+    "sourceRef": "道路交通法第37条の2",
+    "lawVersion": "2026-10-03"
   },
   {
     "id": "kg183",
@@ -3677,7 +3911,9 @@
     "explanation": "右左折や転回の合図は、その行為をしようとする地点から30m手前で出す。約3秒前は進路変更の合図の時期である。",
     "isTrapQuestion": true,
     "trapNumberType": "turningRules",
-    "topicTag": "rules"
+    "topicTag": "rules",
+    "sourceRef": "道路交通法施行令第21条第1項",
+    "lawVersion": "2026-10-03"
   },
   {
     "id": "kg184",
@@ -3697,7 +3933,9 @@
     "explanation": "合図は、右左折・転回・進路変更などの行為が終わるまで続け、終わったら速やかにやめる。",
     "isTrapQuestion": true,
     "trapNumberType": "turningRules",
-    "topicTag": "rules"
+    "topicTag": "rules",
+    "sourceRef": "道路交通法第53条第1項",
+    "lawVersion": "2026-10-03"
   },
   {
     "id": "kg185",
@@ -3717,7 +3955,9 @@
     "explanation": "左折するときは、あらかじめできるだけ道路の左端に寄り、交差点の側端に沿って徐行しながら通行する。",
     "isTrapQuestion": false,
     "trapNumberType": "none",
-    "topicTag": "rules"
+    "topicTag": "rules",
+    "sourceRef": "道路交通法第34条第1項",
+    "lawVersion": "2026-10-03"
   },
   {
     "id": "kg186",
@@ -3737,7 +3977,9 @@
     "explanation": "一方通行の道路で右折するときは、あらかじめできるだけ道路の右端に寄り、交差点の中心の内側を徐行して通行する。",
     "isTrapQuestion": true,
     "trapNumberType": "turningRules",
-    "topicTag": "rules"
+    "topicTag": "rules",
+    "sourceRef": "道路交通法第34条第4項",
+    "lawVersion": "2026-10-03"
   },
   {
     "id": "kg187",
@@ -3757,7 +3999,9 @@
     "explanation": "交通整理の行われていない交差点で道幅が同じくらいの場合は、左方から来る車の進行を妨げてはならない(左方優先)。",
     "isTrapQuestion": false,
     "trapNumberType": "none",
-    "topicTag": "rules"
+    "topicTag": "rules",
+    "sourceRef": "道路交通法第36条第1項第1号",
+    "lawVersion": "2026-10-03"
   },
   {
     "id": "kg188",
@@ -3777,7 +4021,9 @@
     "explanation": "優先道路と交わる交差点に入ろうとするときは、徐行をして優先道路を通行する車などの進行を妨げてはならない。",
     "isTrapQuestion": false,
     "trapNumberType": "none",
-    "topicTag": "rules"
+    "topicTag": "rules",
+    "sourceRef": "道路交通法第36条第3項",
+    "lawVersion": "2026-10-03"
   },
   {
     "id": "kg189",
@@ -3797,7 +4043,9 @@
     "explanation": "交差点で右折するときは、直進車や左折車の進行を妨げてはならない。先に交差点に入っていても同じである。",
     "isTrapQuestion": false,
     "trapNumberType": "none",
-    "topicTag": "rules"
+    "topicTag": "rules",
+    "sourceRef": "道路交通法第37条",
+    "lawVersion": "2026-10-03"
   },
   {
     "id": "kg190",
@@ -3817,7 +4065,9 @@
     "explanation": "緊急自動車には道路の左側に寄って進路を譲るのが原則だが、一方通行の道路で左に寄るとかえって妨げになる場合は右側に寄って譲る。",
     "isTrapQuestion": true,
     "trapNumberType": "other",
-    "topicTag": "rules"
+    "topicTag": "rules",
+    "sourceRef": "道路交通法第40条第1項",
+    "lawVersion": "2026-10-03"
   },
   {
     "id": "kg191",
@@ -3837,7 +4087,9 @@
     "explanation": "路線バス等の専用通行帯は、原付(一種)・小型特殊・軽車両は通行できるが、250ccの二輪車を含む自動車は右左折などやむを得ない場合を除き通行できない。",
     "isTrapQuestion": true,
     "trapNumberType": "other",
-    "topicTag": "rules"
+    "topicTag": "rules",
+    "sourceRef": "道路交通法第20条第2項",
+    "lawVersion": "2026-10-03"
   },
   {
     "id": "kg192",
@@ -3857,7 +4109,9 @@
     "explanation": "路側帯を通行できるのは歩行者と軽車両(歩行者用路側帯を除く)である。自動二輪車は路側帯を通行してはならない。",
     "isTrapQuestion": true,
     "trapNumberType": "other",
-    "topicTag": "rules"
+    "topicTag": "rules",
+    "sourceRef": "道路交通法第17条第1項",
+    "lawVersion": "2026-10-03"
   },
   {
     "id": "kg193",
@@ -3899,7 +4153,9 @@
     "explanation": "片側2車線の道路では、右側の通行帯は追越しなどのためにあけておき、原則として左側の通行帯を通行する。",
     "isTrapQuestion": false,
     "trapNumberType": "none",
-    "topicTag": "rules"
+    "topicTag": "rules",
+    "sourceRef": "道路交通法第20条第1項",
+    "lawVersion": "2026-10-03"
   },
   {
     "id": "kg195",
@@ -3919,7 +4175,9 @@
     "explanation": "黄色の実線の中央線は、追越しのための右側部分はみ出し通行禁止を示す。",
     "isTrapQuestion": false,
     "trapNumberType": "none",
-    "topicTag": "rules"
+    "topicTag": "rules",
+    "sourceRef": "道路標識、区画線及び道路標示に関する命令 別表第五 規制標示(102)",
+    "lawVersion": "2026-10-03"
   },
   {
     "id": "kg196",
@@ -3939,7 +4197,9 @@
     "explanation": "一方通行の道路では、道路の中央から右側部分にはみ出して通行することができる。",
     "isTrapQuestion": true,
     "trapNumberType": "other",
-    "topicTag": "rules"
+    "topicTag": "rules",
+    "sourceRef": "道路交通法第17条第5項第1号",
+    "lawVersion": "2026-10-03"
   },
   {
     "id": "kg197",
@@ -3959,7 +4219,9 @@
     "explanation": "坂道で行き違うときは、近くに待避所がある場合を除き、下りの車が上りの車に道を譲る。上り坂での発進は難しいためである。",
     "isTrapQuestion": false,
     "trapNumberType": "none",
-    "topicTag": "rules"
+    "topicTag": "rules",
+    "sourceRef": "交通の方法に関する教則 第6章第2節 坂道・カーブ",
+    "lawVersion": "2026-10-03"
   },
   {
     "id": "kg198",
@@ -3979,7 +4241,9 @@
     "explanation": "坂道の行き違いは下りが譲るのが原則だが、待避所がある場合は上り・下りに関係なく待避所のある側の車がそこに入って道を譲る。",
     "isTrapQuestion": true,
     "trapNumberType": "other",
-    "topicTag": "rules"
+    "topicTag": "rules",
+    "sourceRef": "交通の方法に関する教則 第6章第2節 坂道・カーブ",
+    "lawVersion": "2026-10-03"
   },
   {
     "id": "kg199",
@@ -3999,7 +4263,9 @@
     "explanation": "昼間でもトンネルの中や、霧などで視界が50m以下になるような場所では灯火をつけなければならない。",
     "isTrapQuestion": true,
     "trapNumberType": "nightDriving",
-    "topicTag": "rules"
+    "topicTag": "rules",
+    "sourceRef": "交通の方法に関する教則 第6章第3節 夜間",
+    "lawVersion": "2026-10-03"
   },
   {
     "id": "kg200",
@@ -4019,7 +4285,9 @@
     "explanation": "夜間、他の車の直後を通行するときは、前の車の運転者がまぶしくないよう前照灯を下向きに切り替える。",
     "isTrapQuestion": false,
     "trapNumberType": "none",
-    "topicTag": "rules"
+    "topicTag": "rules",
+    "sourceRef": "道路交通法第52条第2項",
+    "lawVersion": "2026-10-03"
   },
   {
     "id": "kg201",
@@ -4039,7 +4307,9 @@
     "explanation": "酒気を帯びている人に車両を提供することは禁止されており、提供した人も処罰の対象となる。酒類の提供や同乗も禁止されている。",
     "isTrapQuestion": true,
     "trapNumberType": "other",
-    "topicTag": "rules"
+    "topicTag": "rules",
+    "sourceRef": "道路交通法第65条第2項",
+    "lawVersion": "2026-10-03"
   },
   {
     "id": "kg202",
@@ -4059,7 +4329,9 @@
     "explanation": "過労、病気、薬の影響などで正常な運転ができないおそれがある状態で運転してはならない。",
     "isTrapQuestion": false,
     "trapNumberType": "none",
-    "topicTag": "rules"
+    "topicTag": "rules",
+    "sourceRef": "道路交通法第66条",
+    "lawVersion": "2026-10-03"
   },
   {
     "id": "kg203",
@@ -4079,7 +4351,9 @@
     "explanation": "ヘルメットはPS(C)マークやJISマークのある乗車用のものを選び、あごひもを確実に締める。工事用安全帽は乗車用ヘルメットではない。",
     "isTrapQuestion": false,
     "trapNumberType": "none",
-    "topicTag": "rules"
+    "topicTag": "rules",
+    "sourceRef": "交通の方法に関する教則 第8章第1節 二輪車の運転者の心得",
+    "lawVersion": "2026-10-03"
   },
   {
     "id": "kg204",
@@ -4121,7 +4395,9 @@
     "explanation": "道路外の施設に出入りするために歩道等を横切るときは、歩行者がいてもいなくても歩道の直前で一時停止しなければならない。",
     "isTrapQuestion": false,
     "trapNumberType": "none",
-    "topicTag": "rules"
+    "topicTag": "rules",
+    "sourceRef": "道路交通法第17条第2項",
+    "lawVersion": "2026-10-03"
   },
   {
     "id": "kg206",
@@ -4141,7 +4417,9 @@
     "explanation": "警報機が鳴っているときや遮断機が下り始めているときは、踏切に入ってはならない。",
     "isTrapQuestion": false,
     "trapNumberType": "none",
-    "topicTag": "rules"
+    "topicTag": "rules",
+    "sourceRef": "道路交通法第33条第2項",
+    "lawVersion": "2026-10-03"
   },
   {
     "id": "kg207",
@@ -4161,7 +4439,9 @@
     "explanation": "踏切に信号機がある場合は、その信号に従えばよく、青色の灯火のときは一時停止せずに安全を確かめて通過できる。",
     "isTrapQuestion": true,
     "trapNumberType": "other",
-    "topicTag": "rules"
+    "topicTag": "rules",
+    "sourceRef": "道路交通法第33条第1項",
+    "lawVersion": "2026-10-03"
   },
   {
     "id": "kg208",
@@ -4181,7 +4461,9 @@
     "explanation": "踏切では左端に寄りすぎると落輪のおそれがあるため、やや中央寄りを通過する。また踏切内では変速せず、エンストを防ぐ。",
     "isTrapQuestion": false,
     "trapNumberType": "none",
-    "topicTag": "rules"
+    "topicTag": "rules",
+    "sourceRef": "交通の方法に関する教則 第6章第1節 踏切",
+    "lawVersion": "2026-10-03"
   },
   {
     "id": "kg209",
@@ -4201,7 +4483,9 @@
     "explanation": "前の車に続いて走るときは、前の車が急停止しても追突を避けられる安全な車間距離をとる。",
     "isTrapQuestion": true,
     "trapNumberType": "followingDistance",
-    "topicTag": "rules"
+    "topicTag": "rules",
+    "sourceRef": "道路交通法第26条",
+    "lawVersion": "2026-10-03"
   },
   {
     "id": "kg210",
@@ -4221,7 +4505,9 @@
     "explanation": "初心者マーク、高齢者マーク、身体障害者マーク、聴覚障害者マーク、仮免許練習標識を付けた車への幅寄せや割込みは、二輪車の運転者にも禁止されている。",
     "isTrapQuestion": true,
     "trapNumberType": "other",
-    "topicTag": "rules"
+    "topicTag": "rules",
+    "sourceRef": "道路交通法第71条第5号の4",
+    "lawVersion": "2026-10-03"
   },
   {
     "id": "kg211",
@@ -4241,7 +4527,9 @@
     "explanation": "危険を防止するためやむを得ない場合を除き、急停止や急な減速をしてはならない。後続車の追突を招くおそれがある。",
     "isTrapQuestion": false,
     "trapNumberType": "none",
-    "topicTag": "rules"
+    "topicTag": "rules",
+    "sourceRef": "道路交通法第24条",
+    "lawVersion": "2026-10-03"
   },
   {
     "id": "kg212",
@@ -4261,7 +4549,9 @@
     "explanation": "最高速度が高い車に追いつかれ、中央との間に十分な余地がないときは、できるだけ左側に寄って進路を譲らなければならない。",
     "isTrapQuestion": false,
     "trapNumberType": "none",
-    "topicTag": "rules"
+    "topicTag": "rules",
+    "sourceRef": "道路交通法第27条第2項",
+    "lawVersion": "2026-10-03"
   },
   {
     "id": "kg213",
@@ -4281,7 +4571,9 @@
     "explanation": "ひじを軽く曲げて肩の力を抜くと、路面からの衝撃を吸収でき、ハンドル操作もしやすくなる。",
     "isTrapQuestion": false,
     "trapNumberType": "none",
-    "topicTag": "operation"
+    "topicTag": "operation",
+    "sourceRef": "教則 第8章第2節 正しい乗り方",
+    "lawVersion": "2026-10-03"
   },
   {
     "id": "kg214",
@@ -4301,7 +4593,9 @@
     "explanation": "ステップには土踏まずをのせ、足先はまっすぐ前に向ける。つま先が外を向くと思わぬ接触の原因となる。",
     "isTrapQuestion": false,
     "trapNumberType": "none",
-    "topicTag": "operation"
+    "topicTag": "operation",
+    "sourceRef": "教則 第8章第2節 正しい乗り方",
+    "lawVersion": "2026-10-03"
   },
   {
     "id": "kg215",
@@ -4321,7 +4615,9 @@
     "explanation": "視線は前方の遠くに置き、周囲の状況にも気を配る。近くばかり見るとふらつきやすく、危険の発見も遅れる。",
     "isTrapQuestion": false,
     "trapNumberType": "none",
-    "topicTag": "operation"
+    "topicTag": "operation",
+    "sourceRef": "教則 第8章第2節 正しい乗り方",
+    "lawVersion": "2026-10-03"
   },
   {
     "id": "kg216",
@@ -4341,7 +4637,9 @@
     "explanation": "乾燥した路面では前輪ブレーキをやや強めにかけ、前後輪を同時に使う。前輪の制動力のほうが大きいためである。",
     "isTrapQuestion": true,
     "trapNumberType": "brakeTechnique",
-    "topicTag": "operation"
+    "topicTag": "operation",
+    "sourceRef": "教則 第8章第4節 ブレーキの掛け方 2(2)",
+    "lawVersion": "2026-10-03"
   },
   {
     "id": "kg217",
@@ -4361,7 +4659,9 @@
     "explanation": "滑りやすい路面では前輪がロックすると転倒しやすいため、後輪ブレーキをやや強めにかけ、全体として早めに弱くかける。",
     "isTrapQuestion": true,
     "trapNumberType": "brakeTechnique",
-    "topicTag": "operation"
+    "topicTag": "operation",
+    "sourceRef": "教則 第8章第4節 ブレーキの掛け方 2(2)",
+    "lawVersion": "2026-10-03"
   },
   {
     "id": "kg218",
@@ -4381,7 +4681,9 @@
     "explanation": "ブレーキを数回に分けてかけると制動灯が点滅し、後続車に減速を知らせることができ、追突防止に役立つ。",
     "isTrapQuestion": false,
     "trapNumberType": "none",
-    "topicTag": "operation"
+    "topicTag": "operation",
+    "sourceRef": "教則 第5章第4節 安全な速度と車間距離 3ブレーキの掛け方",
+    "lawVersion": "2026-10-03"
   },
   {
     "id": "kg219",
@@ -4401,7 +4703,9 @@
     "explanation": "停止距離は、危険を感じてからブレーキが効き始めるまでの空走距離と、効き始めてから止まるまでの制動距離を合わせたものである。",
     "isTrapQuestion": true,
     "trapNumberType": "brakingDistance",
-    "topicTag": "operation"
+    "topicTag": "operation",
+    "sourceRef": "教則 第5章第4節 安全な速度と車間距離 2停止距離と車間距離",
+    "lawVersion": "2026-10-03"
   },
   {
     "id": "kg220",
@@ -4421,7 +4725,9 @@
     "explanation": "制動距離は速度の二乗に比例するため、速度が2倍になれば制動距離は約4倍になる。",
     "isTrapQuestion": true,
     "trapNumberType": "brakingDistance",
-    "topicTag": "operation"
+    "topicTag": "operation",
+    "sourceRef": "教則 第4章第5節 安全運転に必要な知識など 2(4)速度の影響",
+    "lawVersion": "2026-10-03"
   },
   {
     "id": "kg221",
@@ -4461,7 +4767,9 @@
     "explanation": "ぬれた路面ではタイヤと路面の摩擦が小さくなり制動距離が長くなる。タイヤがすり減っていればさらに長くなる。",
     "isTrapQuestion": false,
     "trapNumberType": "none",
-    "topicTag": "operation"
+    "topicTag": "operation",
+    "sourceRef": "教則 第5章第4節 安全な速度と車間距離 2停止距離と車間距離",
+    "lawVersion": "2026-10-03"
   },
   {
     "id": "kg223",
@@ -4481,7 +4789,9 @@
     "explanation": "遠心力は速度の二乗に比例する。速度が2倍になれば遠心力は約4倍になるため、カーブの手前で十分に減速する。",
     "isTrapQuestion": true,
     "trapNumberType": "other",
-    "topicTag": "operation"
+    "topicTag": "operation",
+    "sourceRef": "教則 第4章第5節 安全運転に必要な知識など 2(2)遠心力",
+    "lawVersion": "2026-10-03"
   },
   {
     "id": "kg224",
@@ -4501,7 +4811,9 @@
     "explanation": "遠心力はカーブの半径が小さいほど大きくなる。急なカーブほど手前で十分に速度を落とす必要がある。",
     "isTrapQuestion": true,
     "trapNumberType": "other",
-    "topicTag": "operation"
+    "topicTag": "operation",
+    "sourceRef": "教則 第4章第5節 安全運転に必要な知識など 2(2)遠心力",
+    "lawVersion": "2026-10-03"
   },
   {
     "id": "kg225",
@@ -4521,7 +4833,9 @@
     "explanation": "カーブの手前の直線部分で十分に速度を落とし、カーブの中ではアクセルで一定の速度を保つか、少しずつ加速すると安定する。",
     "isTrapQuestion": false,
     "trapNumberType": "none",
-    "topicTag": "operation"
+    "topicTag": "operation",
+    "sourceRef": "教則 第8章第3節 安全な運転の方法 1カーブでの運転方法",
+    "lawVersion": "2026-10-03"
   },
   {
     "id": "kg226",
@@ -4541,7 +4855,9 @@
     "explanation": "車体を傾けている状態で急ブレーキをかけると、タイヤが横滑りして転倒するおそれがある。ブレーキはカーブの手前で済ませる。",
     "isTrapQuestion": false,
     "trapNumberType": "none",
-    "topicTag": "operation"
+    "topicTag": "operation",
+    "sourceRef": "教則 第6章第2節 坂道・カーブ 2曲がり角・カーブ",
+    "lawVersion": "2026-10-03"
   },
   {
     "id": "kg227",
@@ -4621,7 +4937,9 @@
     "explanation": "砂利道ではハンドルを取られやすいため、低速ギアでハンドルをしっかり保持し、急な操作を避けて一定の速度で走る。",
     "isTrapQuestion": false,
     "trapNumberType": "none",
-    "topicTag": "operation"
+    "topicTag": "operation",
+    "sourceRef": "教則 第8章第3節 安全な運転の方法 2ぬかるみ、砂利道などでの運転方法",
+    "lawVersion": "2026-10-03"
   },
   {
     "id": "kg231",
@@ -4641,7 +4959,9 @@
     "explanation": "ぬかるみでは車輪が空転しやすいため、低速ギアを使い、アクセルを一定に保って通過する。",
     "isTrapQuestion": false,
     "trapNumberType": "none",
-    "topicTag": "operation"
+    "topicTag": "operation",
+    "sourceRef": "教則 第8章第3節 安全な運転の方法 2ぬかるみ、砂利道などでの運転方法",
+    "lawVersion": "2026-10-03"
   },
   {
     "id": "kg232",
@@ -4681,7 +5001,9 @@
     "explanation": "水たまりを通過するとブレーキ装置がぬれて効きが悪くなることがある。後方の安全を確かめ、ブレーキを軽く数回かけて乾かす。",
     "isTrapQuestion": true,
     "trapNumberType": "brakeTechnique",
-    "topicTag": "operation"
+    "topicTag": "operation",
+    "sourceRef": "教則 第6章第4節 悪天候など 1雨の日の運転(6)",
+    "lawVersion": "2026-10-03"
   },
   {
     "id": "kg234",
@@ -4701,7 +5023,9 @@
     "explanation": "エンジンブレーキは低速ギアほど強く効く。下り坂などでは低いギアを使って速度を抑える。",
     "isTrapQuestion": true,
     "trapNumberType": "brakeTechnique",
-    "topicTag": "operation"
+    "topicTag": "operation",
+    "sourceRef": "教則 第8章第4節 ブレーキの掛け方 2(3)",
+    "lawVersion": "2026-10-03"
   },
   {
     "id": "kg236",
@@ -4801,7 +5125,9 @@
     "explanation": "転倒時のけがを軽くするため、露出の少ない服装とし、他の交通から見やすい明るい色のものを選ぶ。靴は運転しやすいものにする。",
     "isTrapQuestion": false,
     "trapNumberType": "none",
-    "topicTag": "operation"
+    "topicTag": "operation",
+    "sourceRef": "教則 第8章第1節 二輪車の運転者の心得 3服装など",
+    "lawVersion": "2026-10-03"
   },
   {
     "id": "kg241",
@@ -4821,7 +5147,9 @@
     "explanation": "二輪車の事故では胸部や腹部の傷害が多い。胸部プロテクターなどを着用すると傷害を軽くする効果がある。",
     "isTrapQuestion": false,
     "trapNumberType": "none",
-    "topicTag": "operation"
+    "topicTag": "operation",
+    "sourceRef": "教則 第8章第1節 二輪車の運転者の心得 3服装など",
+    "lawVersion": "2026-10-03"
   },
   {
     "id": "kg242",
@@ -4841,7 +5169,9 @@
     "explanation": "夜間は他の車から二輪車が見えにくいため、反射材を身に着けるなどして自分の存在を知らせる工夫をする。",
     "isTrapQuestion": false,
     "trapNumberType": "none",
-    "topicTag": "operation"
+    "topicTag": "operation",
+    "sourceRef": "教則 第8章第1節 二輪車の運転者の心得 3服装など",
+    "lawVersion": "2026-10-03"
   },
   {
     "id": "kg243",
@@ -5021,7 +5351,9 @@
     "explanation": "ブレーキははじめ軽くかけ、徐々に強めていくと、タイヤのグリップを保ちながら安定して止まれる。",
     "isTrapQuestion": false,
     "trapNumberType": "none",
-    "topicTag": "operation"
+    "topicTag": "operation",
+    "sourceRef": "教則 第5章第4節 安全な速度と車間距離 3ブレーキの掛け方",
+    "lawVersion": "2026-10-03"
   },
   {
     "id": "kg252",
@@ -5061,7 +5393,9 @@
     "explanation": "長時間の運転は疲労によって判断や操作が遅れるため、少なくとも2時間に1回程度は休憩をとるようにする。",
     "isTrapQuestion": true,
     "trapNumberType": "other",
-    "topicTag": "operation"
+    "topicTag": "operation",
+    "sourceRef": "教則 第4章第1節 運転に当たつての注意",
+    "lawVersion": "2026-10-03"
   },
   {
     "id": "kg254",
@@ -5081,7 +5415,9 @@
     "explanation": "下り坂でニュートラルやクラッチを切った状態で走るとエンジンブレーキが効かず危険である。低速ギアでエンジンブレーキを使う。",
     "isTrapQuestion": true,
     "trapNumberType": "other",
-    "topicTag": "operation"
+    "topicTag": "operation",
+    "sourceRef": "教則 第6章第2節 坂道・カーブ 1坂道・山道",
+    "lawVersion": "2026-10-03"
   },
   {
     "id": "kg255",
@@ -5101,7 +5437,9 @@
     "explanation": "二輪車は雪道や凍結路では極めて転倒しやすい。できるだけ運転を控え、やむを得ない場合はごく低速で急な操作を避ける。",
     "isTrapQuestion": false,
     "trapNumberType": "none",
-    "topicTag": "operation"
+    "topicTag": "operation",
+    "sourceRef": "教則 第6章第4節 悪天候など 2雪道などの運転",
+    "lawVersion": "2026-10-03"
   },
   {
     "id": "kg256",
@@ -5141,7 +5479,9 @@
     "explanation": "二輪車は車体が小さく、右折車の運転者から距離や速度を誤って判断されやすい。右折車が曲がってくる可能性を考えて速度を落とす。",
     "isTrapQuestion": true,
     "trapNumberType": "hazardRecognition",
-    "topicTag": "hazard_prediction"
+    "topicTag": "hazard_prediction",
+    "sourceRef": "教則 第8章第1節 二輪車の運転者の心得",
+    "lawVersion": "2026-10-03"
   },
   {
     "id": "kg258",
@@ -5161,7 +5501,9 @@
     "explanation": "渋滞車列のすき間からは歩行者や対向の右折車が出てくることがある。車列の横を速い速度で通過するのは危険である。",
     "isTrapQuestion": false,
     "trapNumberType": "none",
-    "topicTag": "hazard_prediction"
+    "topicTag": "hazard_prediction",
+    "sourceRef": "教則 第8章第3節 安全な運転の方法",
+    "lawVersion": "2026-10-03"
   },
   {
     "id": "kg259",
@@ -5181,7 +5523,9 @@
     "explanation": "大型車は内輪差が大きく、左折時に後輪が大きく内側を通る。左側に入り込むと巻き込まれるおそれがある。",
     "isTrapQuestion": false,
     "trapNumberType": "none",
-    "topicTag": "hazard_prediction"
+    "topicTag": "hazard_prediction",
+    "sourceRef": "教則 第5章第7節 1 交差点を通行するときの注意",
+    "lawVersion": "2026-10-03"
   },
   {
     "id": "kg260",
@@ -5201,7 +5545,9 @@
     "explanation": "大型車は死角が大きく、運転者から二輪車が見えないことがある。死角に長くとどまらないようにする。",
     "isTrapQuestion": false,
     "trapNumberType": "none",
-    "topicTag": "hazard_prediction"
+    "topicTag": "hazard_prediction",
+    "sourceRef": "教則 第8章第1節 二輪車の運転者の心得",
+    "lawVersion": "2026-10-03"
   },
   {
     "id": "kg261",
@@ -5241,7 +5587,9 @@
     "explanation": "左折車の左側を進むと左折車に巻き込まれるおそれがある。左折車の動きに注意し、無理に左側から前に出ない。",
     "isTrapQuestion": true,
     "trapNumberType": "turningRules",
-    "topicTag": "hazard_prediction"
+    "topicTag": "hazard_prediction",
+    "sourceRef": "教則 第6章第2節 2 曲がり角・カーブ",
+    "lawVersion": "2026-10-03"
   },
   {
     "id": "kg263",
@@ -5281,7 +5629,9 @@
     "explanation": "高齢者は横断に時間がかかり、途中で立ち止まったり引き返したりすることがある。速度を落とし、安全を確認する。",
     "isTrapQuestion": false,
     "trapNumberType": "none",
-    "topicTag": "hazard_prediction"
+    "topicTag": "hazard_prediction",
+    "sourceRef": "教則 第5章第3節 5 高齢者の保護",
+    "lawVersion": "2026-10-03"
   },
   {
     "id": "kg265",
@@ -5341,7 +5691,9 @@
     "explanation": "雨の日は歩行者が傘で周囲が見えにくくなっており、急いで横断することもある。速度を落として注意する。",
     "isTrapQuestion": false,
     "trapNumberType": "none",
-    "topicTag": "hazard_prediction"
+    "topicTag": "hazard_prediction",
+    "sourceRef": "教則 第2章第6節 1 雨の日などに歩くとき",
+    "lawVersion": "2026-10-03"
   },
   {
     "id": "kg268",
@@ -5361,7 +5713,9 @@
     "explanation": "対向車と自車の前照灯の光が重なる付近では、歩行者などが見えなくなる蒸発現象が起こりやすい。速度を落として注意する。",
     "isTrapQuestion": true,
     "trapNumberType": "nightDriving",
-    "topicTag": "hazard_prediction"
+    "topicTag": "hazard_prediction",
+    "sourceRef": "教則 第6章第3節 1 夜間の走行",
+    "lawVersion": "2026-10-03"
   },
   {
     "id": "kg269",
@@ -5381,7 +5735,9 @@
     "explanation": "明るい所から暗い所に入ると、目が慣れるまで一時的に見えにくくなる。トンネルの手前で速度を落とし、前照灯をつける。",
     "isTrapQuestion": false,
     "trapNumberType": "none",
-    "topicTag": "hazard_prediction"
+    "topicTag": "hazard_prediction",
+    "sourceRef": "教則 第4章第5節 1 視覚の特性",
+    "lawVersion": "2026-10-03"
   },
   {
     "id": "kg270",
@@ -5401,7 +5757,9 @@
     "explanation": "雨の降り始めは路面の土ぼこりや油が雨水と混ざって浮き上がり、非常に滑りやすくなる。",
     "isTrapQuestion": true,
     "trapNumberType": "weatherSafety",
-    "topicTag": "hazard_prediction"
+    "topicTag": "hazard_prediction",
+    "sourceRef": "教則 第6章第4節 1 雨の日の運転",
+    "lawVersion": "2026-10-03"
   },
   {
     "id": "kg271",
@@ -5441,7 +5799,9 @@
     "explanation": "路肩の砂や土の上はタイヤが滑りやすく、急な操作で転倒するおそれがある。避けて通るか、慎重に通過する。",
     "isTrapQuestion": false,
     "trapNumberType": "none",
-    "topicTag": "hazard_prediction"
+    "topicTag": "hazard_prediction",
+    "sourceRef": "教則 第8章第3節 2 ぬかるみ、砂利道などでの運転方法",
+    "lawVersion": "2026-10-03"
   },
   {
     "id": "kg273",
@@ -5501,7 +5861,9 @@
     "explanation": "踏切の向こう側に入れる余地がないのに踏切に入ると、踏切内で停止してしまうおそれがある。余地を確かめてから入る。",
     "isTrapQuestion": false,
     "trapNumberType": "none",
-    "topicTag": "hazard_prediction"
+    "topicTag": "hazard_prediction",
+    "sourceRef": "教則 第6章第1節 1 一時停止と安全確認",
+    "lawVersion": "2026-10-03"
   },
   {
     "id": "kg276",
@@ -5541,7 +5903,9 @@
     "explanation": "前方で車が停止している場合は、その前を歩行者などが横断している可能性がある。停止車の陰から出てくる人に注意する。",
     "isTrapQuestion": false,
     "trapNumberType": "none",
-    "topicTag": "hazard_prediction"
+    "topicTag": "hazard_prediction",
+    "sourceRef": "教則 第5章第3節 2 歩行者が横断しているときなど",
+    "lawVersion": "2026-10-03"
   },
   {
     "id": "kg278",
@@ -5561,7 +5925,9 @@
     "explanation": "駐車車両の右側を通過するときは対向車の確認が必要である。障害物のある側の車が一時停止や減速をして対向車に道を譲る。",
     "isTrapQuestion": false,
     "trapNumberType": "none",
-    "topicTag": "hazard_prediction"
+    "topicTag": "hazard_prediction",
+    "sourceRef": "教則 第5章第6節 5 行き違い",
+    "lawVersion": "2026-10-03"
   },
   {
     "id": "kg279",
@@ -5601,7 +5967,9 @@
     "explanation": "後続車が接近してくるときは、急ブレーキなどで対抗せず、安全な場所で進路を譲って先に行かせる。",
     "isTrapQuestion": false,
     "trapNumberType": "none",
-    "topicTag": "hazard_prediction"
+    "topicTag": "hazard_prediction",
+    "sourceRef": "教則 第5章第6節 2 追越しの方法",
+    "lawVersion": "2026-10-03"
   },
   {
     "id": "kg281",
@@ -5621,7 +5989,9 @@
     "explanation": "進路の前方に障害物がある場合は、あらかじめ一時停止か減速をして、反対方向からの車に道を譲る。",
     "isTrapQuestion": true,
     "trapNumberType": "other",
-    "topicTag": "hazard_prediction"
+    "topicTag": "hazard_prediction",
+    "sourceRef": "教則 第5章第6節 5 行き違い",
+    "lawVersion": "2026-10-03"
   },
   {
     "id": "kg282",
@@ -5641,7 +6011,9 @@
     "explanation": "雨の夜は路面が光って車線や標示が見えにくく、歩行者も発見しにくい。速度を落とし、慎重に運転する。",
     "isTrapQuestion": false,
     "trapNumberType": "none",
-    "topicTag": "hazard_prediction"
+    "topicTag": "hazard_prediction",
+    "sourceRef": "教則 第2章第5節 夜間歩くとき 1",
+    "lawVersion": "2026-10-03"
   },
   {
     "id": "kg283",
@@ -5661,7 +6033,9 @@
     "explanation": "下り坂では速度が出やすく、カーブで曲がりきれなくなるおそれがある。カーブの手前で低速ギアと前後のブレーキで十分に減速する。",
     "isTrapQuestion": false,
     "trapNumberType": "none",
-    "topicTag": "hazard_prediction"
+    "topicTag": "hazard_prediction",
+    "sourceRef": "教則 第6章第2節 2 曲がり角・カーブ",
+    "lawVersion": "2026-10-03"
   },
   {
     "id": "kg284",
@@ -5681,7 +6055,9 @@
     "explanation": "上り坂の頂上付近は先が見えず、対向車や停止車両などがいても発見が遅れる。徐行が必要な場所であり、追越しも禁止されている。",
     "isTrapQuestion": false,
     "trapNumberType": "none",
-    "topicTag": "hazard_prediction"
+    "topicTag": "hazard_prediction",
+    "sourceRef": "教則 第6章第2節 1 坂道・山道",
+    "lawVersion": "2026-10-03"
   },
   {
     "id": "kg285",
@@ -5721,7 +6097,9 @@
     "explanation": "路線バスが停留所から発進しようと合図をしたときは、後方の車は急ブレーキなどが必要な場合を除き、その進路の変更を妨げてはならない。",
     "isTrapQuestion": true,
     "trapNumberType": "other",
-    "topicTag": "hazard_prediction"
+    "topicTag": "hazard_prediction",
+    "sourceRef": "教則 第5章第2節 6 路線バスなどの優先",
+    "lawVersion": "2026-10-03"
   },
   {
     "id": "kg287",
@@ -5741,7 +6119,9 @@
     "explanation": "幼児は予測できない行動をとることがあり、保護者がいても急に車道に出てくることがある。速度を落として備える。",
     "isTrapQuestion": false,
     "trapNumberType": "none",
-    "topicTag": "hazard_prediction"
+    "topicTag": "hazard_prediction",
+    "sourceRef": "教則 第5章第3節 4 子供の保護",
+    "lawVersion": "2026-10-03"
   },
   {
     "id": "kg288",
@@ -5781,7 +6161,9 @@
     "explanation": "夕暮れ時は周囲が見えにくく、事故が起こりやすい時間帯である。早めに前照灯をつけて他の交通に存在を知らせる。",
     "isTrapQuestion": false,
     "trapNumberType": "none",
-    "topicTag": "hazard_prediction"
+    "topicTag": "hazard_prediction",
+    "sourceRef": "教則 第6章第3節 1 夜間の走行",
+    "lawVersion": "2026-10-03"
   },
   {
     "id": "kg290",
@@ -5801,7 +6183,9 @@
     "explanation": "停止した対向車列の陰からは、左側を直進してくる二輪車や自転車が見えにくい。すき間から右折するときは、車列の陰を確認しながら少しずつ進む。",
     "isTrapQuestion": true,
     "trapNumberType": "hazardRecognition",
-    "topicTag": "hazard_prediction"
+    "topicTag": "hazard_prediction",
+    "sourceRef": "教則 第5章第7節 1 交差点を通行するときの注意",
+    "lawVersion": "2026-10-03"
   },
   {
     "id": "kg291",
@@ -5881,7 +6265,9 @@
     "explanation": "停止車列の陰からは横断歩道を渡る歩行者が見えにくい。車列の側方を通過して前に出るのは危険である。",
     "isTrapQuestion": false,
     "trapNumberType": "none",
-    "topicTag": "hazard_prediction"
+    "topicTag": "hazard_prediction",
+    "sourceRef": "教則 第5章第3節 2 歩行者が横断しているときなど",
+    "lawVersion": "2026-10-03"
   },
   {
     "id": "kg295",
@@ -5921,7 +6307,9 @@
     "explanation": "ぬれた路面では制動距離が長くなるため、晴れの日よりも車間距離を長めにとる必要がある。",
     "isTrapQuestion": true,
     "trapNumberType": "followingDistance",
-    "topicTag": "hazard_prediction"
+    "topicTag": "hazard_prediction",
+    "sourceRef": "教則 第6章第4節 1 雨の日の運転",
+    "lawVersion": "2026-10-03"
   },
   {
     "id": "kg297",
@@ -5941,7 +6329,9 @@
     "explanation": "渋滞中でも前の車が急に止まることがある。車間距離をつめすぎると追突のおそれがあるので、適度な間隔を保つ。",
     "isTrapQuestion": false,
     "trapNumberType": "none",
-    "topicTag": "hazard_prediction"
+    "topicTag": "hazard_prediction",
+    "sourceRef": "教則 第5章第4節 2 停止距離と車間距離",
+    "lawVersion": "2026-10-03"
   },
   {
     "id": "kg298",
@@ -5961,7 +6351,9 @@
     "explanation": "前の車が右折の合図を出しているときに右側から追い越すと衝突のおそれがある。追越しを中止し、安全を確保する。",
     "isTrapQuestion": true,
     "trapNumberType": "turningRules",
-    "topicTag": "hazard_prediction"
+    "topicTag": "hazard_prediction",
+    "sourceRef": "教則 第5章第6節 1 追越しの禁止",
+    "lawVersion": "2026-10-03"
   },
   {
     "id": "kg299",
@@ -6043,7 +6435,9 @@
     "explanation": "「安全地帯」は指示標識（長方形・青地に白の絵）で、路面電車の停留所などで、歩行者が安全に待機するための場所であることを示すことを意味する。",
     "isTrapQuestion": false,
     "trapNumberType": "none",
-    "topicTag": "signs"
+    "topicTag": "signs",
+    "sourceRef": "道路交通法第2条第1項第6号",
+    "lawVersion": "2026-10-03"
   },
   {
     "id": "kg304",
@@ -6083,7 +6477,9 @@
     "explanation": "「指定方向外進行禁止（直進のみ）」は規制標識（円形・青地に白の矢印）で、矢印で示された方向（直進）以外への進行を禁止することを意味する。",
     "isTrapQuestion": true,
     "trapNumberType": "signalAndMarkings",
-    "topicTag": "signs"
+    "topicTag": "signs",
+    "sourceRef": "標識令 別表第一 規制標識 指定方向外進行禁止",
+    "lawVersion": "2026-10-03"
   },
   {
     "id": "kg307",
@@ -6125,7 +6521,9 @@
     "explanation": "「専用通行帯」は規制標識（円形・青地に白の矢印と専用車両の絵）で、バスなど特定の車両の専用通行帯であることを示し、それ以外の車両の通行を制限することを意味する。",
     "isTrapQuestion": true,
     "trapNumberType": "signalAndMarkings",
-    "topicTag": "signs"
+    "topicTag": "signs",
+    "sourceRef": "標識令 別表第一 規制標識 専用通行帯",
+    "lawVersion": "2026-10-03"
   },
   {
     "id": "kg310",
@@ -6145,7 +6543,9 @@
     "explanation": "「駐停車禁止」は規制標識（円形・青地に赤の斜線）で、車両の駐車と停車の両方を禁止することを意味する。",
     "isTrapQuestion": true,
     "trapNumberType": "signalAndMarkings",
-    "topicTag": "signs"
+    "topicTag": "signs",
+    "sourceRef": "標識令 別表第一 規制標識 駐停車禁止",
+    "lawVersion": "2026-10-03"
   },
   {
     "id": "kg312",
@@ -6273,7 +6673,9 @@
     "explanation": "「車両進入禁止」は規制標識（円形・赤地に白の横棒）で、一方通行路の出口などに設置され、車両がその方向へ進入することを禁止することを意味する。",
     "isTrapQuestion": false,
     "trapNumberType": "none",
-    "topicTag": "signs"
+    "topicTag": "signs",
+    "sourceRef": "標識令 別表第一 規制標識 車両進入禁止",
+    "lawVersion": "2026-10-03"
   },
   {
     "id": "kg321",
@@ -6293,7 +6695,9 @@
     "explanation": "「最高速度」は規制標識（円形・白地に赤枠、黒字で数字）で、その数字を超える速度での走行を禁止することを意味する。",
     "isTrapQuestion": true,
     "trapNumberType": "speedLimit",
-    "topicTag": "signs"
+    "topicTag": "signs",
+    "sourceRef": "標識令 別表第一 規制標識 最高速度",
+    "lawVersion": "2026-10-03"
   },
   {
     "id": "kg322",
@@ -6333,7 +6737,9 @@
     "explanation": "「すべりやすい」は警戒標識（菱形・黄色地に黒の車両滑走の絵）で、路面が滑りやすい状態にあることが多く、注意すべきことを示すことを意味する。",
     "isTrapQuestion": false,
     "trapNumberType": "none",
-    "topicTag": "signs"
+    "topicTag": "signs",
+    "sourceRef": "標識令 別表第一 警戒標識「すべりやすい」",
+    "lawVersion": "2026-10-03"
   },
   {
     "id": "kg325",
@@ -6397,7 +6803,9 @@
     "explanation": "「直角駐車」は指示標識（長方形・青地に白の絵）で、道路の側端に対して直角に駐車すべきことを示すことを意味する。",
     "isTrapQuestion": true,
     "trapNumberType": "signalAndMarkings",
-    "topicTag": "signs"
+    "topicTag": "signs",
+    "sourceRef": "標識令 別表第一 規制標識「直角駐車」",
+    "lawVersion": "2026-10-03"
   },
   {
     "id": "kg330",
@@ -6483,7 +6891,9 @@
     "explanation": "「横断歩道」は指示標識（長方形・青地に白の歩行者の絵）で、歩行者が道路を横断するための場所であることを示すことを意味する。",
     "isTrapQuestion": true,
     "trapNumberType": "signalAndMarkings",
-    "topicTag": "signs"
+    "topicTag": "signs",
+    "sourceRef": "標識令 別表第一 指示標識「横断歩道」",
+    "lawVersion": "2026-10-03"
   },
   {
     "id": "kg336",
@@ -6503,7 +6913,9 @@
     "explanation": "「一時停止」は規制標識（逆三角形・白地に赤枠、赤字）で、車両が停止線の直前で一時停止しなければならないことを示すことを意味する。",
     "isTrapQuestion": false,
     "trapNumberType": "none",
-    "topicTag": "signs"
+    "topicTag": "signs",
+    "sourceRef": "標識令 別表第一 規制標識「一時停止」",
+    "lawVersion": "2026-10-03"
   },
   {
     "id": "kg337",
@@ -6563,7 +6975,9 @@
     "explanation": "「自転車横断帯」は指示標識（長方形・青地に白の自転車の絵）で、自転車が道路を横断するための場所であることを示すことを意味する。",
     "isTrapQuestion": true,
     "trapNumberType": "signalAndMarkings",
-    "topicTag": "signs"
+    "topicTag": "signs",
+    "sourceRef": "標識令 別表第一 指示標識「自転車横断帯」",
+    "lawVersion": "2026-10-03"
   },
   {
     "id": "kg342",
@@ -6583,7 +6997,9 @@
     "explanation": "「斜め駐車」は指示標識（長方形・青地に白の絵）で、道路の側端に対して斜めに駐車すべきことを示すことを意味する。",
     "isTrapQuestion": true,
     "trapNumberType": "signalAndMarkings",
-    "topicTag": "signs"
+    "topicTag": "signs",
+    "sourceRef": "標識令 別表第一 規制標識「斜め駐車」",
+    "lawVersion": "2026-10-03"
   },
   {
     "id": "kg343",
@@ -6645,7 +7061,9 @@
     "explanation": "「大型・特定中型貨物自動車等通行止め」は規制標識（白地・赤枠・青色の記号）で、大型貨物自動車や特定中型貨物自動車などの通行を禁止することを意味する。",
     "isTrapQuestion": true,
     "trapNumberType": "signalAndMarkings",
-    "topicTag": "signs"
+    "topicTag": "signs",
+    "sourceRef": "標識令 別表第一 規制標識「大型貨物自動車等通行止め」",
+    "lawVersion": "2026-10-03"
   },
   {
     "id": "kg348",
@@ -6665,7 +7083,9 @@
     "explanation": "「平行駐車」は指示標識（長方形・青地に白の絵）で、道路の側端に対して平行に駐車すべきことを示すことを意味する。",
     "isTrapQuestion": true,
     "trapNumberType": "signalAndMarkings",
-    "topicTag": "signs"
+    "topicTag": "signs",
+    "sourceRef": "標識令 別表第一 規制標識「平行駐車」",
+    "lawVersion": "2026-10-03"
   },
   {
     "id": "kg349",
@@ -6685,6 +7105,8 @@
     "explanation": "「指定方向外進行禁止（右折禁止）」は規制標識（円形・青地に白の矢印（右折方向を除く））で、示された方向以外への進行を禁止し、右折を禁止することを意味する。",
     "isTrapQuestion": true,
     "trapNumberType": "signalAndMarkings",
-    "topicTag": "signs"
+    "topicTag": "signs",
+    "sourceRef": "標識令 別表第一 規制標識「指定方向外進行禁止」",
+    "lawVersion": "2026-10-03"
   }
 ]
