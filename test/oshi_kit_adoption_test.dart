@@ -2,6 +2,7 @@ import 'package:app_common_kit/app_common_kit.dart';
 import 'package:bike_license_kore/models/question.dart';
 import 'package:bike_license_kore/services/oshi_readiness.dart';
 import 'package:bike_license_kore/viewmodels/providers.dart';
+import 'package:bike_license_kore/widgets/mock_record_button.dart';
 import 'package:bike_license_kore/widgets/oshi_card.dart';
 import 'package:bike_license_kore/widgets/oshi_readiness_card.dart';
 import 'package:flutter/material.dart';
@@ -142,5 +143,33 @@ void main() {
       expect(find.text('準備完了まで'), findsOneWidget);
       expect(find.text('習得度があと80%、模擬試験の合格でそろいます'), findsOneWidget);
     });
+  });
+
+  testWidgets('模擬試験の記録カード: 押すと本番の合格と区別できるカードが開き、コインは付かない', (tester) async {
+    tester.view.physicalSize = const Size(800, 2400);
+    tester.view.devicePixelRatio = 1.0;
+    addTearDown(tester.view.reset);
+    final coin = CoinService(store: InMemoryCoinStore(), shop: const []);
+    final c = ProviderContainer(overrides: [
+      coinServiceProvider.overrideWithValue(coin),
+      outfitServiceProvider.overrideWithValue(OutfitService(store: InMemoryOutfitStore())),
+      answerLogsProvider.overrideWith((ref) async => []),
+      questionsProvider(QuestionQuery(licenseCategory: 'gentsuki'))
+          .overrideWith((ref) async => [_q('a')]),
+    ]);
+    addTearDown(c.dispose);
+    await tester.pumpWidget(UncontrolledProviderScope(
+      container: c,
+      child: const MaterialApp(
+        home: Scaffold(
+            body: MockRecordButton(licenseCategory: 'gentsuki', accuracy: 0.86)),
+      ),
+    ));
+    await tester.tap(find.text('学習の記録カードを見る'));
+    await _settle(tester);
+    expect(find.text('学習の記録カード'), findsOneWidget);
+    expect(find.text('正答率 86%'), findsOneWidget);
+    expect(find.textContaining('本番の合格ではありません'), findsOneWidget);
+    expect(coin.balance, 0);
   });
 }

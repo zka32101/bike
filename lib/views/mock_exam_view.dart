@@ -7,6 +7,7 @@ import '../models/question.dart';
 import '../viewmodels/mock_exam_breakdown.dart';
 import '../viewmodels/mock_exam_providers.dart';
 import '../viewmodels/providers.dart';
+import '../widgets/mock_record_button.dart';
 import 'paywall_view.dart';
 
 /// 本番模擬テスト：30問・制限時間20分・正答率90%以上で合格。
@@ -113,6 +114,7 @@ class _MockExamViewState extends ConsumerState<MockExamView> {
       case MockExamPhase.finished:
         return _MockExamResultView(
           state: state,
+          licenseCategory: widget.licenseCategory,
           isPremium: ref.watch(hasPremiumProvider),
           onRetry: _controller.retry,
           onHome: () => Navigator.of(context).pop(),
@@ -321,12 +323,14 @@ class _ExamQuestionBody extends StatelessWidget {
 class _MockExamResultView extends ConsumerWidget {
   const _MockExamResultView({
     required this.state,
+    required this.licenseCategory,
     required this.isPremium,
     required this.onRetry,
     required this.onHome,
   });
 
   final MockExamState state;
+  final String licenseCategory;
 
   /// プレミアムのときだけ分野別得点と「あと◯点」を表示する。
   final bool isPremium;
@@ -379,6 +383,11 @@ class _MockExamResultView extends ConsumerWidget {
         const SizedBox(height: 16),
         CoinBreakdownCard(grants: ref.watch(coinProvider).recent),
         if (ref.watch(coinProvider).recent.isNotEmpty) const SizedBox(height: 16),
+        if (passed) ...[
+          MockRecordButton(
+              licenseCategory: licenseCategory, accuracy: state.accuracy),
+          const SizedBox(height: 16),
+        ],
         if (isPremium)
           _PremiumBreakdown(state: state)
         else
