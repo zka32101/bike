@@ -16,11 +16,12 @@ MascotStage oshiStageFor({
   required int correct,
   required int answered,
 }) {
-  if (totalQuestions <= 0 || answered <= 0) return MascotStage.lv1;
-  final coverage = (distinctAnswered / totalQuestions).clamp(0.0, 1.0);
-  final accuracy = (correct / answered).clamp(0.0, 1.0);
-  return MasteryModel.standard
-      .stageOf(MasteryInput(coverage: coverage, accuracy: accuracy));
+  return MasteryModel.standard.stageOf(MasteryInput.fromCounts(
+    distinctAnswered: distinctAnswered,
+    totalQuestions: totalQuestions,
+    correct: correct,
+    answered: answered,
+  ));
 }
 
 /// 今の状況に合うセリフの場面。責める表現は使わない（セリフ集側で検査済み）。
