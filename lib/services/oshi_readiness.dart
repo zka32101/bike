@@ -9,18 +9,8 @@ import '../viewmodels/providers.dart';
 MasteryInput masteryFromLogs({
   required Set<String> questionIds,
   required List<({String questionId, bool isCorrect})> logs,
-}) {
-  final inScope = logs.where((l) => questionIds.contains(l.questionId)).toList();
-  if (questionIds.isEmpty || inScope.isEmpty) {
-    return const MasteryInput(coverage: 0, accuracy: 0);
-  }
-  final distinct = inScope.map((l) => l.questionId).toSet().length;
-  final correct = inScope.where((l) => l.isCorrect).length;
-  return MasteryInput(
-    coverage: distinct / questionIds.length,
-    accuracy: correct / inScope.length,
-  );
-}
+}) =>
+    MasteryInput.fromLogs(questionIds: questionIds, logs: logs);
 
 /// 模擬試験で合格点を超えたあとに呼ぶ。準備完了の条件（[ReadinessRule]）を満たしたら、
 /// 「準備完了」の装いを解放する。初めて解放したら true。
