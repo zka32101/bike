@@ -3,6 +3,7 @@ import 'package:bike_license_kore/models/question.dart';
 import 'package:bike_license_kore/services/oshi_readiness.dart';
 import 'package:bike_license_kore/viewmodels/providers.dart';
 import 'package:bike_license_kore/widgets/oshi_card.dart';
+import 'package:bike_license_kore/widgets/oshi_readiness_card.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_test/flutter_test.dart';
@@ -115,6 +116,31 @@ void main() {
       await _settle(tester);
       expect(c.read(coinProvider).balance, CoinRules.standard.passReport);
       expect(c.read(outfitServiceProvider).passedCerts, contains('bike_license'));
+    });
+  });
+
+  group('OshiReadinessCard（準備完了まで）', () {
+    test('模擬試験の合格は、コイン台帳から区分ごとに分かる', () async {
+      final coin = CoinService(store: InMemoryCoinStore(), shop: const []);
+      await coin.grant(CoinEvent.mockPass('gentsuki'));
+      expect(mockPassedInLedger(coin.ledger, 'gentsuki'), isTrue);
+      expect(mockPassedInLedger(coin.ledger, 'futsuu_nirin'), isFalse);
+    });
+
+    testWidgets('回答がなければ、習得度があと80%と模擬試験の合格が案内される', (tester) async {
+      final c = _container();
+      await tester.pumpWidget(UncontrolledProviderScope(
+        container: c,
+        child: MaterialApp(
+          home: Scaffold(
+            body: OshiReadinessCard(
+                licenseCategory: 'gentsuki', questions: [_q('a'), _q('b')]),
+          ),
+        ),
+      ));
+      await tester.pump();
+      expect(find.text('準備完了まで'), findsOneWidget);
+      expect(find.text('習得度があと80%、模擬試験の合格でそろいます'), findsOneWidget);
     });
   });
 }
