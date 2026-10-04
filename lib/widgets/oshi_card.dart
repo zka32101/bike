@@ -213,40 +213,55 @@ class _OshiCardState extends ConsumerState<OshiCard> {
     final line = MascotLines.gentle.pick(oshiSituation(day, now), seed: _seed);
     final small = display == MascotDisplay.small;
 
+    final mascot = MascotWidget(
+      stage: stage,
+      outfit: ref.watch(equippedOutfitProvider),
+      expression: day.expression,
+      examPhase: day.examPhase(now),
+      display: display,
+      size: small ? 56 : 88,
+      line: small ? null : line,
+      onTap: () => setState(() => _seed++),
+    );
+    final info = Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        Text('あなたの推し  Lv${stage.index + 1}', style: theme.textTheme.titleSmall),
+        const SizedBox(height: 4),
+        Text(small ? line : '推しをタップすると、ひとこと話します',
+            style: theme.textTheme.bodySmall),
+        const SizedBox(height: 4),
+        Text('学習コイン ${coin.balance}', style: theme.textTheme.labelMedium),
+      ],
+    );
+
+    // 通常表示は吹き出し（最大200dp）が横幅を取るので、推しを上、説明を下の行に置く。
+    // 小さい表示は吹き出しが無いので、横並びのまま。
     return Card(
       child: Padding(
         padding: const EdgeInsets.fromLTRB(12, 12, 4, 12),
-        child: Row(
-          children: [
-            MascotWidget(
-              stage: stage,
-              outfit: ref.watch(equippedOutfitProvider),
-              expression: day.expression,
-              examPhase: day.examPhase(now),
-              display: display,
-              size: small ? 56 : 88,
-              line: small ? null : line,
-              onTap: () => setState(() => _seed++),
-            ),
-            const SizedBox(width: 12),
-            Expanded(
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
+        child: small
+            ? Row(
                 children: [
-                  Text('あなたの推し  Lv${stage.index + 1}',
-                      style: theme.textTheme.titleSmall),
-                  const SizedBox(height: 4),
-                  Text(small ? line : '推しをタップすると、ひとこと話します',
-                      style: theme.textTheme.bodySmall),
-                  const SizedBox(height: 4),
-                  Text('学習コイン ${coin.balance}',
-                      style: theme.textTheme.labelMedium),
+                  mascot,
+                  const SizedBox(width: 12),
+                  Expanded(child: info),
+                  menu,
+                ],
+              )
+            : Column(
+                crossAxisAlignment: CrossAxisAlignment.stretch,
+                children: [
+                  Center(child: mascot),
+                  const SizedBox(height: 8),
+                  Row(
+                    children: [
+                      Expanded(child: info),
+                      menu,
+                    ],
+                  ),
                 ],
               ),
-            ),
-            menu,
-          ],
-        ),
       ),
     );
   }
