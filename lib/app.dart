@@ -138,7 +138,7 @@ class _StartupGate extends ConsumerWidget {
                 const SizedBox(height: 8),
                 TextButton(
                   onPressed: () =>
-                      ref.read(offlineModeAcceptedProvider.notifier).state = true,
+                      acceptOfflineMode(ref),
                   child: const Text('オフラインで続ける（データはこの端末のみに保存されます）'),
                 ),
               ],

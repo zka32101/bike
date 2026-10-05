@@ -86,6 +86,10 @@ void main() async {
   // 初期化（プラグイン初期化・通知タップ時のコールバック登録）を行う。
   final container = ProviderContainer(
     overrides: [
+      // 「オフラインで続ける」を選択済みなら復元する
+      offlineModeAcceptedProvider.overrideWith(
+          (ref) => prefs.getBool(offlineModeAcceptedPrefsKey) ?? false),
+
       // ハイブリッドデータサービス：Firestore 優先、ローカルにフォールバック
       dataServiceProvider.overrideWithValue(
         HybridDataService(

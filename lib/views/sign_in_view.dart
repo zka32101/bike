@@ -82,7 +82,7 @@ class _SignInViewState extends ConsumerState<SignInView> {
                 TextButton(
                   onPressed: _loading
                       ? null
-                      : () => ref.read(offlineModeAcceptedProvider.notifier).state = true,
+                      : () => acceptOfflineMode(ref),
                   child: const Text('オフラインで続ける（データはこの端末のみに保存されます）'),
                 ),
               ],

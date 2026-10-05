@@ -5,6 +5,7 @@ import 'package:app_common_kit/app_common_kit.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 import 'package:yourwish_kentei/yourwish_kentei.dart'
     show FreeTierLimits, InMemoryKeyValueStore, KeyValueStore;
 
@@ -181,7 +182,18 @@ final localFallbackUidProvider = Provider<String>((ref) {
 
 /// 起動画面で「オフラインで続ける」を選択したかどうか。
 /// true の場合、Firebase認証なしで [localFallbackUidProvider] を使って続行する。
+/// 選択は端末に保存され、次回起動時は main() の override で復元される。
 final offlineModeAcceptedProvider = StateProvider<bool>((ref) => false);
+
+/// [offlineModeAcceptedProvider] を true にし、選択を端末に保存する。
+void acceptOfflineMode(WidgetRef ref) {
+  ref.read(offlineModeAcceptedProvider.notifier).state = true;
+  SharedPreferences.getInstance()
+      .then((p) => p.setBool(offlineModeAcceptedPrefsKey, true))
+      .catchError((_) => false);
+}
+
+const offlineModeAcceptedPrefsKey = 'offline_mode_accepted';
 
 /// 現在ログイン中のユーザーUID
 /// 同期的にアクセス。authReadyProvider が初期化を保証していること前提。
