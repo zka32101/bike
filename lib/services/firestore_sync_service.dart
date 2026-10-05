@@ -1,5 +1,6 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/foundation.dart';
+import 'ukalab_paths.dart';
 
 import '../models/user.dart';
 import '../models/user_answer_log.dart';
@@ -67,7 +68,7 @@ class LocalFirestoreSyncService implements FirestoreSyncService {
   @override
   Future<void> saveUser(AppUser user) async {
     try {
-      await _firestore.collection('users').doc(user.uid).set(
+      await _firestore.collection('users').doc(user.uid).collection('exams').doc(ukalabExamId).set(
             {
               'uid': user.uid,
               'licenseCategories': user.licenseCategories,
@@ -94,7 +95,7 @@ class LocalFirestoreSyncService implements FirestoreSyncService {
   @override
   Future<AppUser?> loadUser(String uid) async {
     try {
-      final doc = await _firestore.collection('users').doc(uid).get();
+      final doc = await _firestore.collection('users').doc(uid).collection('exams').doc(ukalabExamId).get();
       if (!doc.exists) {
         return null;
       }
@@ -134,6 +135,8 @@ class LocalFirestoreSyncService implements FirestoreSyncService {
       final existingDocs = await _firestore
           .collection('users')
           .doc(uid)
+          .collection('exams')
+          .doc(ukalabExamId)
           .collection('answerLogs')
           .get();
 
@@ -144,7 +147,7 @@ class LocalFirestoreSyncService implements FirestoreSyncService {
       // 新しいログを追加
       for (final log in logs) {
         final docRef =
-            _firestore.collection('users').doc(uid).collection('answerLogs').doc();
+            _firestore.collection('users').doc(uid).collection('exams').doc(ukalabExamId).collection('answerLogs').doc();
         batch.set(docRef, {
           'questionId': log.questionId,
           'licenseCategory': log.licenseCategory,
@@ -172,7 +175,7 @@ class LocalFirestoreSyncService implements FirestoreSyncService {
   Future<List<UserAnswerLog>> loadAnswerLogs(String uid) async {
     try {
       final docs =
-          await _firestore.collection('users').doc(uid).collection('answerLogs').get();
+          await _firestore.collection('users').doc(uid).collection('exams').doc(ukalabExamId).collection('answerLogs').get();
 
       return docs.docs.map((doc) {
         final data = doc.data();
@@ -208,6 +211,8 @@ class LocalFirestoreSyncService implements FirestoreSyncService {
       final existingDocs = await _firestore
           .collection('users')
           .doc(uid)
+          .collection('exams')
+          .doc(ukalabExamId)
           .collection('bikeProgress')
           .get();
 
@@ -218,7 +223,7 @@ class LocalFirestoreSyncService implements FirestoreSyncService {
       // 新しいデータを追加
       for (final bike in progress) {
         final docRef =
-            _firestore.collection('users').doc(uid).collection('bikeProgress').doc();
+            _firestore.collection('users').doc(uid).collection('exams').doc(ukalabExamId).collection('bikeProgress').doc();
         batch.set(docRef, {
           'bikeId': bike.bikeId,
           'correctCountRequired': bike.correctCountRequired,
@@ -246,6 +251,8 @@ class LocalFirestoreSyncService implements FirestoreSyncService {
       final docs = await _firestore
           .collection('users')
           .doc(uid)
+          .collection('exams')
+          .doc(ukalabExamId)
           .collection('bikeProgress')
           .get();
 
@@ -281,6 +288,8 @@ class LocalFirestoreSyncService implements FirestoreSyncService {
       final existingDocs = await _firestore
           .collection('users')
           .doc(uid)
+          .collection('exams')
+          .doc(ukalabExamId)
           .collection('trapDojo')
           .get();
 
@@ -290,7 +299,7 @@ class LocalFirestoreSyncService implements FirestoreSyncService {
 
       // 新しいデータを追加
       for (final session in sessions) {
-        final docRef = _firestore.collection('users').doc(uid).collection('trapDojo').doc();
+        final docRef = _firestore.collection('users').doc(uid).collection('exams').doc(ukalabExamId).collection('trapDojo').doc();
         batch.set(docRef, {
           'questionId': session.questionId,
           'licenseCategory': session.licenseCategory,
@@ -317,7 +326,7 @@ class LocalFirestoreSyncService implements FirestoreSyncService {
   Future<List<TrapDojoSession>> loadTrapDojoSessions(String uid) async {
     try {
       final docs =
-          await _firestore.collection('users').doc(uid).collection('trapDojo').get();
+          await _firestore.collection('users').doc(uid).collection('exams').doc(ukalabExamId).collection('trapDojo').get();
 
       return docs.docs.map((doc) {
         final data = doc.data();
@@ -353,6 +362,8 @@ class LocalFirestoreSyncService implements FirestoreSyncService {
       await _firestore
           .collection('users')
           .doc(uid)
+          .collection('exams')
+          .doc(ukalabExamId)
           .collection('metadata')
           .doc('predictionScore')
           .set({
@@ -377,6 +388,8 @@ class LocalFirestoreSyncService implements FirestoreSyncService {
       final doc = await _firestore
           .collection('users')
           .doc(uid)
+          .collection('exams')
+          .doc(ukalabExamId)
           .collection('metadata')
           .doc('predictionScore')
           .get();

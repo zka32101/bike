@@ -7,6 +7,7 @@ import '../models/trap_dojo_session.dart';
 import '../models/user.dart';
 import '../models/user_answer_log.dart';
 import 'local_data_service.dart';
+import 'ukalab_paths.dart';
 
 /// Firestore を用いたデータ永続化実装。
 ///
@@ -38,7 +39,6 @@ class FirestoreDataService implements DataService {
     );
   }
 
-  static const String _usersCollection = 'users';
   static const String _answerLogsSubcollection = 'answerLogs';
   static const String _predictionScoreDoc = 'predictionScore';
   static const String _bikeUnlockSubcollection = 'bikeProgress';
@@ -48,8 +48,10 @@ class FirestoreDataService implements DataService {
   Future<AppUser> loadUser(String uid) async {
     try {
       final docSnapshot = await _firestore
-          .collection(_usersCollection)
+          .collection('users')
           .doc(uid)
+          .collection('exams')
+          .doc(ukalabExamId)
           .get(const GetOptions(source: Source.serverAndCache));
 
       if (!docSnapshot.exists) {
@@ -66,8 +68,10 @@ class FirestoreDataService implements DataService {
   @override
   Future<void> saveUser(AppUser user) async {
     await _firestore
-        .collection(_usersCollection)
+        .collection('users')
         .doc(user.uid)
+        .collection('exams')
+        .doc(ukalabExamId)
         .set(user.toJson(), SetOptions(merge: true));
   }
 
@@ -94,8 +98,10 @@ class FirestoreDataService implements DataService {
   @override
   Future<void> appendAnswerLog(UserAnswerLog log) async {
     await _firestore
-        .collection(_usersCollection)
+        .collection('users')
         .doc(log.uid)
+        .collection('exams')
+        .doc(ukalabExamId)
         .collection(_answerLogsSubcollection)
         .add(log.toJson());
   }
@@ -103,8 +109,10 @@ class FirestoreDataService implements DataService {
   @override
   Future<List<UserAnswerLog>> loadAnswerLogs(String uid, {DateTime? since}) async {
     Query<Map<String, dynamic>> query = _firestore
-        .collection(_usersCollection)
+        .collection('users')
         .doc(uid)
+        .collection('exams')
+        .doc(ukalabExamId)
         .collection(_answerLogsSubcollection)
         .orderBy('answeredAt', descending: true);
 
@@ -123,8 +131,10 @@ class FirestoreDataService implements DataService {
   @override
   Future<void> savePredictionScore(PassPredictionScore score) async {
     await _firestore
-        .collection(_usersCollection)
+        .collection('users')
         .doc(score.uid)
+        .collection('exams')
+        .doc(ukalabExamId)
         .collection('metadata')
         .doc(_predictionScoreDoc)
         .set(score.toJson(), SetOptions(merge: true));
@@ -134,8 +144,10 @@ class FirestoreDataService implements DataService {
   Future<PassPredictionScore?> loadPredictionScore(String uid) async {
     try {
       final docSnapshot = await _firestore
-          .collection(_usersCollection)
+          .collection('users')
           .doc(uid)
+          .collection('exams')
+          .doc(ukalabExamId)
           .collection('metadata')
           .doc(_predictionScoreDoc)
           .get(const GetOptions(source: Source.serverAndCache));
@@ -151,8 +163,10 @@ class FirestoreDataService implements DataService {
   @override
   Future<List<BikeUnlockProgress>> loadBikeUnlockProgress(String uid) async {
     final querySnapshot = await _firestore
-        .collection(_usersCollection)
+        .collection('users')
         .doc(uid)
+        .collection('exams')
+        .doc(ukalabExamId)
         .collection(_bikeUnlockSubcollection)
         .get(const GetOptions(source: Source.serverAndCache));
 
@@ -164,8 +178,10 @@ class FirestoreDataService implements DataService {
   @override
   Future<void> saveBikeUnlockProgress(BikeUnlockProgress progress) async {
     await _firestore
-        .collection(_usersCollection)
+        .collection('users')
         .doc(progress.uid)
+        .collection('exams')
+        .doc(ukalabExamId)
         .collection(_bikeUnlockSubcollection)
         .doc(progress.bikeId)
         .set(progress.toJson(), SetOptions(merge: true));
@@ -174,8 +190,10 @@ class FirestoreDataService implements DataService {
   @override
   Future<List<TrapDojoSession>> loadTrapDojoSessions(String uid) async {
     final querySnapshot = await _firestore
-        .collection(_usersCollection)
+        .collection('users')
         .doc(uid)
+        .collection('exams')
+        .doc(ukalabExamId)
         .collection(_trapDojoSubcollection)
         .orderBy('createdAt', descending: true)
         .get(const GetOptions(source: Source.serverAndCache));
@@ -189,8 +207,10 @@ class FirestoreDataService implements DataService {
   Future<void> saveTrapDojoSession(TrapDojoSession session) async {
     // Use bossQuestionId as the document ID (one session per question per user)
     await _firestore
-        .collection(_usersCollection)
+        .collection('users')
         .doc(session.uid)
+        .collection('exams')
+        .doc(ukalabExamId)
         .collection(_trapDojoSubcollection)
         .doc(session.bossQuestionId)
         .set(session.toJson(), SetOptions(merge: true));

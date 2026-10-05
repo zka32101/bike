@@ -2,7 +2,7 @@
 // ignore_for_file: type=lint
 import 'package:firebase_core/firebase_core.dart' show FirebaseOptions;
 import 'package:flutter/foundation.dart'
-    show defaultTargetPlatform, kIsWeb, TargetPlatform;
+    show defaultTargetPlatform, kIsWeb, kReleaseMode, TargetPlatform;
 
 /// Default [FirebaseOptions] for use with your Firebase apps.
 ///
@@ -52,11 +52,23 @@ class DefaultFirebaseOptions {
     }
   }
 
-  static const FirebaseOptions android = FirebaseOptions(
-    apiKey: 'AIzaSyC_WPCRanjcqsGTh9F1gRhmksfKqQVUb8Q',
-    appId: '1:904710115227:android:68f8979d4806234c3f5b3e',
-    messagingSenderId: '904710115227',
-    projectId: 'bike-fb1ad',
-    storageBucket: 'bike-fb1ad.firebasestorage.app',
+  /// リリースビルドは本番（ukalab-prod）、それ以外（debug/profile）は開発（ukalab-dev）。
+  /// どちらも うかラボ共通プロジェクト。データは users/{uid}/exams/bike_license/ 配下。
+  static FirebaseOptions get android => kReleaseMode ? _androidProd : _androidDev;
+
+  static const FirebaseOptions _androidProd = FirebaseOptions(
+    apiKey: 'AIzaSyDZdjJ53kTfALpV_ti_ipLpxMeNVhLXOAE',
+    appId: '1:264757683394:android:5c55a24c475646a79a475b',
+    messagingSenderId: '264757683394',
+    projectId: 'ukalab-prod',
+    storageBucket: 'ukalab-prod.firebasestorage.app',
+  );
+
+  static const FirebaseOptions _androidDev = FirebaseOptions(
+    apiKey: 'AIzaSyCtYZQVS6ZElOuJwXnYZERNctGeB8G9wuY',
+    appId: '1:765180094909:android:a7cd1214cb0165390e8ad4',
+    messagingSenderId: '765180094909',
+    projectId: 'ukalab-dev',
+    storageBucket: 'ukalab-dev.firebasestorage.app',
   );
 }

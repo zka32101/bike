@@ -2,6 +2,7 @@ import 'dart:async';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/foundation.dart';
+import 'ukalab_paths.dart';
 
 /// ユーザー削除完了時のコールバック定義
 typedef OnDeletionComplete = Future<void> Function();
@@ -145,7 +146,7 @@ class FirebaseUserDeletionService implements UserDeletionService {
   /// Firestore のユーザードキュメントを削除
   Future<void> _deleteFirestoreUserData(String uid) async {
     try {
-      await _firestore.collection('users').doc(uid).delete();
+      await _firestore.collection('users').doc(uid).collection('exams').doc(ukalabExamId).delete();
     } catch (e) {
       if (kDebugMode) {
         debugPrint('UserDeletionService: Failed to delete user document: $e');
@@ -168,6 +169,8 @@ class FirebaseUserDeletionService implements UserDeletionService {
         final docs = await _firestore
             .collection('users')
             .doc(uid)
+            .collection('exams')
+            .doc(ukalabExamId)
             .collection(subcollection)
             .get();
 
