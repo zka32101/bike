@@ -1,4 +1,5 @@
 import 'dart:async';
+import 'package:connectivity_plus/connectivity_plus.dart';
 import 'package:flutter/foundation.dart';
 
 /// ネットワーク接続状態
@@ -37,22 +38,32 @@ class LocalConnectivityService implements ConnectivityService {
   @override
   Stream<ConnectivityStatus> statusStream() => _statusController.stream;
 
+  static ConnectivityStatus _toStatus(List<ConnectivityResult> results) =>
+      results.any((r) => r != ConnectivityResult.none)
+          ? ConnectivityStatus.connected
+          : ConnectivityStatus.disconnected;
+
   @override
   Future<ConnectivityStatus> getStatus() async {
-    // 実装は connectivity_plus を使用した実装で行う
-    // ここではデフォルト値を返す
+    try {
+      _currentStatus = _toStatus(await Connectivity().checkConnectivity());
+    } catch (e) {
+      if (kDebugMode) {
+        debugPrint('ConnectivityService: Failed to check connectivity: $e');
+      }
+    }
     return _currentStatus;
   }
 
   @override
   Future<void> initialize() async {
     try {
-      // connectivity_plus のストリームを監視
-      // 注：実装には connectivity_plus パッケージが必要
-      // import 'package:connectivity_plus/connectivity_plus.dart';
-      // を使用して実装
+      _currentStatus = _toStatus(await Connectivity().checkConnectivity());
+      _subscription = Connectivity()
+          .onConnectivityChanged
+          .listen((results) => _updateStatus(_toStatus(results)));
       if (kDebugMode) {
-        debugPrint('ConnectivityService: Initialized');
+        debugPrint('ConnectivityService: Initialized (${_currentStatus.name})');
       }
     } catch (e) {
       if (kDebugMode) {
