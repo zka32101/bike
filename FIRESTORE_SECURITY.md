@@ -1,3 +1,5 @@
+> **注意:** このアプリのFirestoreルールは、うかラボ共通の `app_common_kit/firebase/firestore.rules`（ukalab-prod / ukalab-dev）に移りました。旧 `firestore.rules` は削除済みです。以下は旧プロジェクト（bike-fb1ad）時代の記述です。共有プロジェクトへ誤ってデプロイしないこと。
+
 # Firestore Security Rules デプロイメント・ガイド
 
 ## 概要
