@@ -23,7 +23,8 @@ class PassPredictionMeter extends StatelessWidget {
     final hasEnoughData = answeredCount >=
         PredictionScoreService.minAnswersForPrediction;
     final label = hasEnoughData ? '合格予測' : '今の習熟度';
-    final value = score?.score ?? 0;
+    // 回答が1問もないときは保存済みスコアが残っていても 0 として扱う
+    final value = answeredCount == 0 ? 0.0 : (score?.score ?? 0);
 
     return Card(
       child: Padding(
