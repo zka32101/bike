@@ -33,8 +33,10 @@ class FirebaseAuthService implements AuthService {
 
   // Android で Firebase の ID トークンを取得するために必須
   // （google-services.json の oauth_client / client_type=3 と対応）。
-  static const String _serverClientId =
-      '904710115227-365vjghmsgk5oj9ibk44p8t9ncauv39i.apps.googleusercontent.com';
+  // 値は firebase_options.dart と同じく、リリース=ukalab-prod／それ以外=ukalab-dev。
+  static const String _serverClientId = kReleaseMode
+      ? '264757683394-cb09r5e6sv3qupn6oh4rgbetnjjvu5v2.apps.googleusercontent.com'
+      : '765180094909-nfni63nvrn7cekpp9ln414p7lbfabhrt.apps.googleusercontent.com';
 
   final FirebaseAuth _auth;
   final GoogleSignIn _googleSignIn;
