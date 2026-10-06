@@ -88,6 +88,10 @@ flutter:
   assets:
     - assets/questions/
     - assets/lottie/
+    - assets/mascot/kai/
+    - assets/mascot/mio/
+    - assets/mascot/moka/
+    - assets/mascot/mike/
     - assets/guides/
     - assets/branding/
 
