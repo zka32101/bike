@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 import '../l10n/generated/app_localizations.dart';
+import '../widgets/ukalab_empty_state.dart';
 import '../models/question.dart';
 import '../viewmodels/providers.dart';
 
@@ -33,7 +34,7 @@ class ReviewQuestionsView extends ConsumerWidget {
           error: (e, _) => Center(child: Text(l10n.commonLoadError(e.toString()))),
           data: (questions) {
             if (questions.isEmpty) {
-              return Center(child: Text(l10n.reviewNotFound));
+              return UkalabEmptyState(message: l10n.reviewNotFound);
             }
             final masteredIds = masteredAsync.valueOrNull
                     ?.map((m) => m.questionId)

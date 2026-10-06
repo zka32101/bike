@@ -3,6 +3,7 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 import '../models/mascot.dart';
 import '../services/mascot_service.dart';
+import '../viewmodels/providers.dart';
 import '../views/mascot_select_view.dart';
 
 /// ホーム上部の「推し」カード。励ましの一言と成長Lvを表示する。
@@ -36,6 +37,8 @@ class _MascotCardState extends ConsumerState<MascotCard> {
       });
     }
     final level = earned > s.maxLevel ? earned : s.maxLevel;
+    final last = ref.watch(userControllerProvider).valueOrNull?.lastStudyDate;
+    final away = last != null && DateTime.now().difference(last).inDays >= 3;
     final passed = level >= 5 && (widget.score ?? 0) >= 90;
     final joy = _tap.isOdd && !s.costume;
     final asset = joy
@@ -66,10 +69,24 @@ class _MascotCardState extends ConsumerState<MascotCard> {
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    Text('${m.displayName}  Lv$level',
-                        style: const TextStyle(fontWeight: FontWeight.bold)),
+                    Row(
+                      children: [
+                        Image.asset(
+                          'assets/icons_common/medal_lv$level.webp',
+                          width: 24,
+                          height: 24,
+                          excludeFromSemantics: true,
+                          errorBuilder: (_, __, ___) => const SizedBox.shrink(),
+                        ),
+                        const SizedBox(width: 6),
+                        Text('${m.displayName}  Lv$level',
+                            style: const TextStyle(fontWeight: FontWeight.bold)),
+                      ],
+                    ),
                     const SizedBox(height: 6),
-                    Text(mascotLine(m, level, salt: _tap ~/ 2)),
+                    Text(away && _tap == 0
+                        ? 'おかえり。また一緒にやろう。'
+                        : mascotLine(m, level, salt: _tap ~/ 2)),
                   ],
                 ),
               ),

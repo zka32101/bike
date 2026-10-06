@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import '../widgets/ukalab_empty_state.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 import '../core/constants/license_category.dart';
@@ -69,7 +70,7 @@ class _StudyModeViewState extends ConsumerState<StudyModeView> {
               );
             }
             if (result.questions.isEmpty) {
-              return Center(child: Text(l10n.commonNoQuestionsInCategory));
+              return UkalabEmptyState(message: l10n.commonNoQuestionsInCategory);
             }
 
             final masteredIds = masteredAsync.valueOrNull
