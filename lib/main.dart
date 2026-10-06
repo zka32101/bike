@@ -34,13 +34,24 @@ const String _revenueCatApiKeyAndroid = String.fromEnvironment(
   defaultValue: 'goog_LjzTdMuZdNmzxihVbMgpNlTQWaQ',
 );
 
+/// Firebase を、まだ初期化されていなければ初期化する（二重初期化で落ちない）。
+Future<void> ensureFirebaseInitialized() async {
+  if (Firebase.apps.isNotEmpty) return;
+  try {
+    await Firebase.initializeApp(options: DefaultFirebaseOptions.currentPlatform);
+  } on FirebaseException catch (e) {
+    if (e.code != 'duplicate-app') rethrow;
+  }
+}
+
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
 
   // Firebase 初期化（google-services.json / GoogleService-Info.plist が必須）
-  await Firebase.initializeApp(
-    options: DefaultFirebaseOptions.currentPlatform,
-  );
+  // Android は google-services プラグインがアプリ起動時に [DEFAULT] を先に初期化する。
+  // そこへ再度 initializeApp すると duplicate-app で例外になり、main が止まって
+  // 画面が出なくなる（リリース版でスプラッシュのまま進まなかった）。
+  await ensureFirebaseInitialized();
 
   // Firebase Auth が使えない場合（Firebase Console未設定等）のフォールバックUID。
   // 端末に永続化し、オフライン継続時も同一端末では常に同じIDを使う。
