@@ -8,6 +8,7 @@ import 'exam_date_setting_view.dart';
 import 'exam_info_view.dart';
 import 'help_view.dart';
 import 'license_category_select_view.dart';
+import 'mascot_select_view.dart';
 import 'paywall_view.dart';
 
 /// 設定(区分管理／通知／サブスク・パス管理)。
@@ -72,6 +73,14 @@ class SettingsView extends ConsumerWidget {
                 ),
               ),
           ],
+          ListTile(
+            leading: const Icon(Icons.favorite_border),
+            title: const Text('推し（キャラクター）'),
+            subtitle: const Text('学習を応援するキャラを選ぶ'),
+            onTap: () => Navigator.of(context).push(
+              MaterialPageRoute(builder: (_) => const MascotSelectView()),
+            ),
+          ),
           ListTile(
             leading: const Icon(Icons.volume_up),
             title: const Text('効果音'),

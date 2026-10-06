@@ -7,6 +7,7 @@ import '../l10n/generated/app_localizations.dart';
 import '../services/daily_question_widget_service.dart';
 import '../viewmodels/mock_exam_providers.dart';
 import '../viewmodels/providers.dart';
+import '../widgets/mascot_card.dart';
 import '../widgets/pass_prediction_meter.dart';
 import '../widgets/pass_rate_card.dart';
 import 'analytics_dashboard_view.dart';
@@ -137,6 +138,11 @@ class _HomeViewState extends ConsumerState<HomeView> {
                       ),
                       const SizedBox(height: 16),
                     ],
+                    MascotCard(
+                      score: scoreAsync.valueOrNull?.score,
+                      answeredCount: answerLogsAsync.valueOrNull?.length ?? 0,
+                    ),
+                    const SizedBox(height: 16),
                     PassPredictionMeter(
                       score: scoreAsync.valueOrNull,
                       answeredCount: answerLogsAsync.valueOrNull?.length ?? 0,
