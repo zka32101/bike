@@ -7,6 +7,7 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
+import 'widgets/startup_splash.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
@@ -46,6 +47,14 @@ Future<void> ensureFirebaseInitialized() async {
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
+
+  // 初期化（Firebase・課金・広告・保存データの読み込み）には時間がかかる。その間、
+  // 下部に組織ロゴを出した起動画面を先に出す。初期化が終わったら本来の画面に差し替える。
+  runApp(const MaterialApp(debugShowCheckedModeBanner: false, home: StartupSplash()));
+
+  // 初期化（Firebase・課金・広告・保存データの読み込み）には時間がかかる。その間、
+  // 下部に組織ロゴを出した起動画面を先に出す。初期化が終わったら本来の画面に差し替える。
+  runApp(const MaterialApp(debugShowCheckedModeBanner: false, home: StartupSplash()));
 
   // Firebase 初期化（google-services.json / GoogleService-Info.plist が必須）
   // Android は google-services プラグインがアプリ起動時に [DEFAULT] を先に初期化する。
