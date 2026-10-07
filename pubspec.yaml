@@ -17,7 +17,7 @@ dependencies:
   app_common_kit:
     git:
       url: https://github.com/zka32101/app_common_kit.git
-      ref: v0.4.4
+      ref: v0.4.5
   yourwish_kentei:
     git:
       url: https://github.com/zka32101/yourwish_kentei.git
@@ -89,10 +89,6 @@ flutter:
     - assets/questions/
     - assets/lottie/
     - assets/icons_common/
-    - assets/mascot/kai/
-    - assets/mascot/mio/
-    - assets/mascot/moka/
-    - assets/mascot/mike/
     - assets/guides/
     - assets/branding/
 

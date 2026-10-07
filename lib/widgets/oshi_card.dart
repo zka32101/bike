@@ -111,7 +111,7 @@ class OshiCard extends ConsumerStatefulWidget {
 }
 
 /// ホームの推しカードのメニュー操作。
-enum _OshiAction { wardrobe, passReport }
+enum _OshiAction { wardrobe, passReport, choose }
 
 /// 画像（共有カード）をOSの共有シートで共有する。
 Future<void> shareCardImage(Uint8List png) async {
@@ -153,7 +153,12 @@ class _OshiCardState extends ConsumerState<OshiCard> {
             cert: UkalabCert.bikeLicense,
             examPhase: _examPhase(widget.examDate),
             stage: _stageNow(),
+            pack: ref.read(selectedCharacterPackProvider),
           ),
+        ));
+      case _OshiAction.choose:
+        Navigator.of(context).push(MaterialPageRoute(
+          builder: (_) => const CharacterSelectScreen(),
         ));
       case _OshiAction.passReport:
         showPassReportDialog(
@@ -161,6 +166,7 @@ class _OshiCardState extends ConsumerState<OshiCard> {
           ref,
           cert: UkalabCert.bikeLicense,
           stage: _stageNow(),
+          pack: ref.read(selectedCharacterPackProvider),
           onShare: shareCardImage,
         );
     }
@@ -169,12 +175,14 @@ class _OshiCardState extends ConsumerState<OshiCard> {
   @override
   Widget build(BuildContext context) {
     final display = ref.watch(oshiDisplayProvider);
+    final pack = ref.watch(selectedCharacterPackProvider);
     final theme = Theme.of(context);
     final menu = PopupMenuButton<Object>(
       tooltip: '推しのメニュー',
       icon: const Icon(Icons.more_vert),
       onSelected: _onMenu,
       itemBuilder: (_) => const [
+        PopupMenuItem(value: _OshiAction.choose, child: Text('推しを選ぶ')),
         PopupMenuItem(value: _OshiAction.wardrobe, child: Text('着替え・ショップ')),
         PopupMenuItem(value: _OshiAction.passReport, child: Text('試験の結果を報告')),
         PopupMenuDivider(),
@@ -214,6 +222,7 @@ class _OshiCardState extends ConsumerState<OshiCard> {
     final small = display == MascotDisplay.small;
 
     final mascot = MascotWidget(
+      pack: pack,
       stage: stage,
       outfit: ref.watch(equippedOutfitProvider),
       expression: day.expression,
@@ -226,7 +235,20 @@ class _OshiCardState extends ConsumerState<OshiCard> {
     final info = Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        Text('あなたの推し  Lv${stage.index + 1}', style: theme.textTheme.titleSmall),
+        Row(
+          children: [
+            Image.asset(
+              'assets/icons_common/medal_lv${stage.index + 1}.webp',
+              width: 22,
+              height: 22,
+              excludeFromSemantics: true,
+              errorBuilder: (_, __, ___) => const SizedBox.shrink(),
+            ),
+            const SizedBox(width: 6),
+            Text('${pack.isBuiltIn ? 'あなたの推し' : pack.name}  Lv${stage.index + 1}',
+                style: theme.textTheme.titleSmall),
+          ],
+        ),
         const SizedBox(height: 4),
         Text(small ? line : '推しをタップすると、ひとこと話します',
             style: theme.textTheme.bodySmall),

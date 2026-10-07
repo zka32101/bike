@@ -1,4 +1,5 @@
 import 'package:app_common_kit/app_common_kit.dart';
+import 'package:app_common_kit/app_common_kit.dart' show CharacterSelectScreen;
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
@@ -8,7 +9,6 @@ import 'exam_date_setting_view.dart';
 import 'exam_info_view.dart';
 import 'help_view.dart';
 import 'license_category_select_view.dart';
-import 'mascot_select_view.dart';
 import 'paywall_view.dart';
 
 /// 設定(区分管理／通知／サブスク・パス管理)。
@@ -78,7 +78,7 @@ class SettingsView extends ConsumerWidget {
             title: const Text('推し（キャラクター）'),
             subtitle: const Text('学習を応援するキャラを選ぶ'),
             onTap: () => Navigator.of(context).push(
-              MaterialPageRoute(builder: (_) => const MascotSelectView()),
+              MaterialPageRoute(builder: (_) => const CharacterSelectScreen()),
             ),
           ),
           ListTile(
