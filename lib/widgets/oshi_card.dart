@@ -65,29 +65,20 @@ MascotDayState oshiDayState({
   );
 }
 
-const _kDisplayKey = 'oshi_display';
-
-/// 推しの表示設定（通常／小さく／非表示）。端末内に保存する。
-class OshiDisplayNotifier extends Notifier<MascotDisplay> {
-  @override
-  MascotDisplay build() {
-    final v = ref.read(keyValueStoreProvider).read(_kDisplayKey);
-    return MascotDisplay.values.firstWhere((e) => e.name == v,
-        orElse: () => MascotDisplay.normal);
-  }
-
-  Future<void> set(MascotDisplay d) async {
-    state = d;
-    await ref.read(keyValueStoreProvider).write(_kDisplayKey, d.name);
-  }
+/// 画像（共有カード）をOSの共有シートで共有する。
+Future<void> shareCardImage(Uint8List png) async {
+  await SharePlus.instance.share(
+    ShareParams(
+      files: [XFile.fromData(png, mimeType: 'image/png', name: 'ukalab_pass.png')],
+      text: '#うかラボ #バイク免許',
+    ),
+  );
 }
 
-final oshiDisplayProvider =
-    NotifierProvider<OshiDisplayNotifier, MascotDisplay>(OshiDisplayNotifier.new);
 
-/// ホームの「推し」カード。学習が進むと成長し、状況に合ったひとことを話す。
-/// タップでひとことが変わる。メニューから小さく／非表示にできる。
-class OshiCard extends ConsumerStatefulWidget {
+/// ホームの「推し」カード。共通キットの [UkalabOshiCard] に、バイク免許の成長段階・
+/// 連続日数・試験日を渡す。推しの選択・着替え・合格報告・表示切替・コイン表示はキット側。
+class OshiCard extends ConsumerWidget {
   const OshiCard({
     super.key,
     required this.questions,
@@ -107,103 +98,9 @@ class OshiCard extends ConsumerStatefulWidget {
   final DateTime? now;
 
   @override
-  ConsumerState<OshiCard> createState() => _OshiCardState();
-}
-
-/// ホームの推しカードのメニュー操作。
-enum _OshiAction { wardrobe, passReport, choose }
-
-/// 画像（共有カード）をOSの共有シートで共有する。
-Future<void> shareCardImage(Uint8List png) async {
-  await SharePlus.instance.share(
-    ShareParams(
-      files: [XFile.fromData(png, mimeType: 'image/png', name: 'ukalab_pass.png')],
-      text: '#うかラボ #バイク免許',
-    ),
-  );
-}
-
-class _OshiCardState extends ConsumerState<OshiCard> {
-  int _seed = 0;
-
-  ExamPhase _examPhase(DateTime? d) =>
-      MascotDayState(examDate: d).examPhase(widget.now ?? DateTime.now());
-
-  MascotStage _stageNow() {
-    final logs = ref.read(answerLogsProvider).valueOrNull ?? const [];
-    final ids = widget.questions.map((q) => q.id).toSet();
-    final inScope = logs.where((l) => ids.contains(l.questionId)).toList();
-    return oshiStageFor(
-      distinctAnswered: inScope.map((l) => l.questionId).toSet().length,
-      totalQuestions: ids.length,
-      correct: inScope.where((l) => l.isCorrect).length,
-      answered: inScope.length,
-    );
-  }
-
-  void _onMenu(Object value) {
-    if (value is MascotDisplay) {
-      ref.read(oshiDisplayProvider.notifier).set(value);
-      return;
-    }
-    switch (value as _OshiAction) {
-      case _OshiAction.wardrobe:
-        Navigator.of(context).push(MaterialPageRoute(
-          builder: (_) => WardrobeScreen(
-            cert: UkalabCert.bikeLicense,
-            examPhase: _examPhase(widget.examDate),
-            stage: _stageNow(),
-            pack: ref.read(selectedCharacterPackProvider),
-          ),
-        ));
-      case _OshiAction.choose:
-        Navigator.of(context).push(MaterialPageRoute(
-          builder: (_) => const CharacterSelectScreen(),
-        ));
-      case _OshiAction.passReport:
-        showPassReportDialog(
-          context,
-          ref,
-          cert: UkalabCert.bikeLicense,
-          stage: _stageNow(),
-          pack: ref.read(selectedCharacterPackProvider),
-          onShare: shareCardImage,
-        );
-    }
-  }
-
-  @override
-  Widget build(BuildContext context) {
-    final display = ref.watch(oshiDisplayProvider);
-    final pack = ref.watch(selectedCharacterPackProvider);
-    final theme = Theme.of(context);
-    final menu = PopupMenuButton<Object>(
-      tooltip: '推しのメニュー',
-      icon: const Icon(Icons.more_vert),
-      onSelected: _onMenu,
-      itemBuilder: (_) => const [
-        PopupMenuItem(value: _OshiAction.choose, child: Text('推しを選ぶ')),
-        PopupMenuItem(value: _OshiAction.wardrobe, child: Text('着替え・ショップ')),
-        PopupMenuItem(value: _OshiAction.passReport, child: Text('試験の結果を報告')),
-        PopupMenuDivider(),
-        PopupMenuItem(value: MascotDisplay.normal, child: Text('通常')),
-        PopupMenuItem(value: MascotDisplay.small, child: Text('小さく表示')),
-        PopupMenuItem(value: MascotDisplay.hidden, child: Text('表示しない')),
-      ],
-    );
-    final coin = ref.watch(coinProvider);
-    if (display == MascotDisplay.hidden) {
-      return Card(
-        child: ListTile(
-          title: Text('学習コイン ${coin.balance}', style: theme.textTheme.labelLarge),
-          subtitle: const Text('推しは非表示です'),
-          trailing: menu,
-        ),
-      );
-    }
-
+  Widget build(BuildContext context, WidgetRef ref) {
     final logs = ref.watch(answerLogsProvider).valueOrNull ?? const [];
-    final ids = widget.questions.map((q) => q.id).toSet();
+    final ids = questions.map((q) => q.id).toSet();
     final inScope = logs.where((l) => ids.contains(l.questionId)).toList();
     final stage = oshiStageFor(
       distinctAnswered: inScope.map((l) => l.questionId).toSet().length,
@@ -211,80 +108,18 @@ class _OshiCardState extends ConsumerState<OshiCard> {
       correct: inScope.where((l) => l.isCorrect).length,
       answered: inScope.length,
     );
-    final now = widget.now ?? DateTime.now();
-    final day = oshiDayState(
-      now: now,
-      streakDays: widget.streakDays,
-      lastStudyDate: widget.lastStudyDate,
-      examDate: widget.examDate,
-    );
-    final line = MascotLines.gentle.pick(oshiSituation(day, now), seed: _seed);
-    final small = display == MascotDisplay.small;
-
-    final mascot = MascotWidget(
-      pack: pack,
+    final at = now ?? DateTime.now();
+    final day = oshiDayState(now: at, streakDays: streakDays, lastStudyDate: lastStudyDate, examDate: examDate);
+    return UkalabOshiCard(
+      cert: UkalabCert.bikeLicense,
       stage: stage,
-      outfit: ref.watch(equippedOutfitProvider),
-      expression: day.expression,
-      examPhase: day.examPhase(now),
-      display: display,
-      size: small ? 56 : 88,
-      line: small ? null : line,
-      onTap: () => setState(() => _seed++),
-    );
-    final info = Column(
-      crossAxisAlignment: CrossAxisAlignment.start,
-      children: [
-        Row(
-          children: [
-            Image.asset(
-              'assets/icons_common/medal_lv${stage.index + 1}.webp',
-              width: 22,
-              height: 22,
-              excludeFromSemantics: true,
-              errorBuilder: (_, __, ___) => const SizedBox.shrink(),
-            ),
-            const SizedBox(width: 6),
-            Text('${pack.isBuiltIn ? 'あなたの推し' : pack.name}  Lv${stage.index + 1}',
-                style: theme.textTheme.titleSmall),
-          ],
-        ),
-        const SizedBox(height: 4),
-        Text(small ? line : '推しをタップすると、ひとこと話します',
-            style: theme.textTheme.bodySmall),
-        const SizedBox(height: 4),
-        Text('学習コイン ${coin.balance}', style: theme.textTheme.labelMedium),
-      ],
-    );
-
-    // 通常表示は吹き出し（最大200dp）が横幅を取るので、推しを上、説明を下の行に置く。
-    // 小さい表示は吹き出しが無いので、横並びのまま。
-    return Card(
-      child: Padding(
-        padding: const EdgeInsets.fromLTRB(12, 12, 4, 12),
-        child: small
-            ? Row(
-                children: [
-                  mascot,
-                  const SizedBox(width: 12),
-                  Expanded(child: info),
-                  menu,
-                ],
-              )
-            : Column(
-                crossAxisAlignment: CrossAxisAlignment.stretch,
-                children: [
-                  Center(child: mascot),
-                  const SizedBox(height: 8),
-                  Row(
-                    children: [
-                      Expanded(child: info),
-                      menu,
-                    ],
-                  ),
-                ],
-              ),
-      ),
+      appId: 'bike',
+      examDate: examDate,
+      streakDays: streakDays,
+      studiedToday: day.studiedToday,
+      daysSinceLastStudy: day.daysSinceLastStudy,
+      onShare: shareCardImage,
+      now: now,
     );
   }
 }
