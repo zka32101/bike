@@ -148,8 +148,8 @@ void main() {
       'sign_moped_two_stage_right', 'sign_roundabout_circulation',
     ];
 
-    test('全部で70種になった', () {
-      expect(kTrafficSigns.length, 70);
+    test('全部で83種になった', () {
+      expect(kTrafficSigns.length, 83);
     });
 
     test('警戒標識は黄色いひし形（縁線・記号は黒）', () {

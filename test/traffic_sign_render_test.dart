@@ -15,6 +15,22 @@ void main() {
     'sign_bicycle_crossing',
     'sign_horn_zone',
     'sign_sound_horn',
+    'sign_falling_rocks',
+    'sign_bumpy_road',
+    'sign_merge_traffic',
+    'sign_lane_reduction',
+    'sign_aux_distance',
+    'sign_aux_except_holiday',
+    'sign_aux_time',
+    'sign_aux_large_truck',
+    'sign_aux_except_moped',
+    'sign_aux_start',
+    'sign_aux_section',
+    'sign_aux_end',
+    'sign_aux_no_overtaking',
+    'sign_aux_priority_ahead',
+    'sign_aux_rail_caution',
+    'sign_aux_animal_caution',
   ];
   test('render fixed signs', () async {
     final font = File(Platform.environment['SIGN_FONT'] ?? 'C:/Windows/Fonts/NotoSansJP-VF.ttf');
