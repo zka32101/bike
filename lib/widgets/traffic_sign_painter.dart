@@ -83,7 +83,12 @@ class TrafficSignPainter extends CustomPainter {
     if (sign.centerIcon != null) {
       _drawIcon(canvas, geo, sign.centerIcon!);
     }
-    if (sign.centerText != null) {
+    // 斜めの帯と重なる円形標識の文字（危険物・原付・通行止）は、公式の図と同じく
+    // 帯の手前に白い縁取り付きで描く。
+    final textOverSlash = sign.centerText != null &&
+        sign.slash != SignSlash.none &&
+        sign.shape == SignShape.circle;
+    if (sign.centerText != null && !textOverSlash) {
       _drawCenterText(canvas, s, geo);
     }
 
@@ -96,6 +101,9 @@ class TrafficSignPainter extends CustomPainter {
       case SignSlash.cross:
         _drawSlash(canvas, s, geo, false);
         _drawSlash(canvas, s, geo, true);
+    }
+    if (textOverSlash) {
+      _drawCenterText(canvas, s, geo, halo: true);
     }
     canvas.restore();
     canvas.restore();
@@ -234,7 +242,8 @@ class TrafficSignPainter extends CustomPainter {
     );
   }
 
-  void _drawCenterText(Canvas canvas, double s, _InnerGeometry g) {
+  void _drawCenterText(Canvas canvas, double s, _InnerGeometry g,
+      {bool halo = false}) {
     final text = sign.centerText!;
     final hasSub = sign.subText != null;
     final fontSize = s * sign.centerTextScale;
@@ -277,6 +286,28 @@ class TrafficSignPainter extends CustomPainter {
     final dyShift =
         sign.shape == SignShape.invertedTriangle ? -g.radius * 0.12 : 0.0;
     var y = g.center.dy - totalH / 2 + dyShift + s * sign.centerTextOffsetY;
+    if (halo) {
+      final st = main.text!.style!;
+      final hp = TextPainter(
+        text: TextSpan(
+          text: text,
+          style: TextStyle(
+            fontSize: st.fontSize,
+            fontFamily: st.fontFamily,
+            fontWeight: st.fontWeight,
+            height: 1,
+            letterSpacing: st.letterSpacing,
+            foreground: Paint()
+              ..style = PaintingStyle.stroke
+              ..strokeJoin = StrokeJoin.round
+              ..strokeWidth = (st.fontSize ?? 14) * 0.2
+              ..color = Colors.white,
+          ),
+        ),
+        textDirection: TextDirection.ltr,
+      )..layout();
+      hp.paint(canvas, Offset(g.center.dx - hp.width / 2, y));
+    }
     main.paint(canvas, Offset(g.center.dx - main.width / 2, y));
     if (sub != null) {
       y += main.height + gap;
@@ -1225,18 +1256,21 @@ class _SymbolPainter {
 
   /// 太い縦線と細い横線の交差。
   void _priorityRoad() {
-    _rrect(-0.2, -0.65, 0.2, 0.65, 0, _fillPaint);
-    for (final d in [-1.0, 1.0]) {
-      canvas.drawPath(
-        _poly([
-          [0, 1.2 * d],
-          [-0.55, 0.6 * d],
-          [0.55, 0.6 * d],
-        ]),
-        _fillPaint,
-      );
-    }
-    _rrect(-1.3, -0.06, 1.3, 0.06, 0, _fillPaint);
+    // 標識令405: 上に矢じり形（先が尖る）、下はV字の切り欠きの太い縦線に細い横線。
+    canvas.drawPath(
+      _poly([
+        [0, -1.05],
+        [0.5, -0.5],
+        [0.34, -0.5],
+        [0.34, 0.95],
+        [0, 0.6],
+        [-0.34, 0.95],
+        [-0.34, -0.5],
+        [-0.5, -0.5],
+      ]),
+      _fillPaint,
+    );
+    _rrect(-1.1, -0.14, 1.1, 0.14, 0, _fillPaint);
   }
 
   /// 左向きの機関車。

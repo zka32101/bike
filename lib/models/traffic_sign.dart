@@ -832,9 +832,9 @@ const List<TrafficSign> kTrafficSigns = [
     borderWidthRatio: 0.09,
     centerText: '通行止',
     centerTextColor: SignColors.blue,
-    centerTextScale: 0.17,
+    centerTextScale: 0.14,
     hasCrossSlash: true,
-    centerTextOffsetY: 0.27,
+    centerTextOffsetY: 0.2,
     questionText: 'この標識がある道路を通行できるものはどれか。',
     choices: [
       '歩行者だけは通行できる',
