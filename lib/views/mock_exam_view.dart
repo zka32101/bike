@@ -9,6 +9,7 @@ import '../viewmodels/mock_exam_providers.dart';
 import '../viewmodels/providers.dart';
 import '../widgets/mock_record_button.dart';
 import 'paywall_view.dart';
+import '../data/question_signs.dart';
 
 /// 本番模擬テスト：30問・制限時間20分・正答率90%以上で合格。
 ///
@@ -291,6 +292,7 @@ class _ExamQuestionBody extends StatelessWidget {
             question.questionText,
             style: Theme.of(context).textTheme.titleLarge,
           ),
+          QuestionSignView(questionId: question.id, size: 120),
           const SizedBox(height: 24),
           Expanded(
             child: ListView.separated(
@@ -466,6 +468,7 @@ class _MockExamResultView extends ConsumerWidget {
               question.questionText,
               style: Theme.of(context).textTheme.titleMedium,
             ),
+            QuestionSignView(questionId: question.id, size: 72, answered: true),
             const SizedBox(height: 16),
             for (var c = 0; c < question.choices.length; c++)
               _ChoiceLine(

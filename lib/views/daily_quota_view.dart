@@ -10,6 +10,7 @@ import '../viewmodels/providers.dart';
 import '../widgets/answer_result_overlay.dart';
 import '../widgets/pass_prediction_meter.dart';
 import 'paywall_view.dart';
+import '../data/question_signs.dart';
 
 /// 出題(区分×段階フィルタ済み) → 正誤演出 → 3問クリアで合格予測メーター
 /// 初表示（Aha Moment）→ペイウォール導線、までを担う画面。
@@ -92,6 +93,7 @@ class _QuestionBody extends ConsumerWidget {
           )),
           const SizedBox(height: 20),
           Text(question.questionText, style: Theme.of(context).textTheme.titleLarge),
+          QuestionSignView(questionId: question.id, size: 72),
           const SizedBox(height: 24),
           Expanded(
             child: ListView.separated(

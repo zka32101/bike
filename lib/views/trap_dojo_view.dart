@@ -5,6 +5,7 @@ import '../l10n/generated/app_localizations.dart';
 import '../models/question.dart';
 import '../services/ad_gate_service.dart';
 import '../viewmodels/providers.dart';
+import '../data/question_signs.dart';
 
 /// ひっかけ道場：二輪特有の間違えやすい数字を対戦形式で反復。
 /// 誤答は自動でボス化し再挑戦キューに積まれる。
@@ -89,6 +90,7 @@ class _TrapDojoViewState extends ConsumerState<TrapDojoView> {
                 ),
                 const SizedBox(height: 16),
                 Text(boss.questionText, style: Theme.of(context).textTheme.titleLarge),
+                QuestionSignView(questionId: boss.id, size: 72),
                 const SizedBox(height: 24),
                 Expanded(
                   child: ListView.separated(

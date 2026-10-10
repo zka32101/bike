@@ -5,6 +5,7 @@ import '../l10n/generated/app_localizations.dart';
 import '../widgets/ukalab_empty_state.dart';
 import '../models/question.dart';
 import '../viewmodels/providers.dart';
+import '../data/question_signs.dart';
 
 /// 学習分析の「復習推奨」専用画面。
 ///
@@ -101,6 +102,7 @@ class _ReviewQuestionCard extends ConsumerWidget {
         title: Text('$index. ${question.questionText}'),
         childrenPadding: const EdgeInsets.fromLTRB(16, 0, 16, 16),
         children: [
+          QuestionSignView(questionId: question.id, size: 72, answered: true),
           for (var i = 0; i < question.choices.length; i++)
             Padding(
               padding: const EdgeInsets.symmetric(vertical: 2),
