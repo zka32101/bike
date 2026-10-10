@@ -10,10 +10,11 @@ import 'package:flutter_test/flutter_test.dart';
 void main() {
   final out = Platform.environment['SIGN_OUT_DIR'];
   const ids = [
-    'sign_priority_road',
-    'sign_road_closed_all',
-    'sign_no_dangerous_goods',
-    'sign_moped_small_right',
+    'sign_no_u_turn',
+    'sign_pedestrian_crossing',
+    'sign_bicycle_crossing',
+    'sign_horn_zone',
+    'sign_sound_horn',
   ];
   test('render fixed signs', () async {
     final font = File(Platform.environment['SIGN_FONT'] ?? 'C:/Windows/Fonts/NotoSansJP-VF.ttf');

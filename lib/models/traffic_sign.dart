@@ -135,7 +135,7 @@ enum SignSymbol {
   /// 並んだ2本の上向き矢印（車両通行区分）
   laneArrows,
 
-  /// ラッパ形の警笛＋区間の両端を示す縦線（警笛区間）
+  /// 警笛（警笛鳴らせと同じ図柄）。警笛区間では下に補助標識の板が付く
   hornZone,
 
   /// 並んだ2台の車＋右側へはみ出す矢印（追越しのための右側部分はみ出し通行禁止）
@@ -236,6 +236,7 @@ class TrafficSign {
     this.hasDiagonalSlash = false,
     this.hasCrossSlash = false,
     this.hasHorizontalBar = false,
+    this.auxPlateText,
     required this.questionText,
     required this.choices,
     required this.answer,
@@ -290,6 +291,9 @@ class TrafficSign {
 
   /// 文字・図柄の代わりにアイコンを使う場合
   final IconData? centerIcon;
+
+  /// 本標識の下に付ける補助標識（白い四角板）の文字（警笛区間の「区間内」など）。
+  final String? auxPlateText;
 
   /// 赤い斜線（左上→右下）を重ねるか
   final bool hasDiagonalSlash;
@@ -1086,8 +1090,10 @@ const List<TrafficSign> kTrafficSigns = [
     category: _kInstruction,
     shape: SignShape.pentagon,
     backgroundColor: SignColors.blue,
-    rimColor: SignColors.white,
-    rimWidthRatio: 0.03,
+    rimColor: SignColors.blue,
+    rimWidthRatio: 0.02,
+    borderColor: SignColors.white,
+    borderWidthRatio: 0.014,
     symbol: SignSymbol.crosswalk,
     symbolColor: SignColors.white,
     questionText: 'この標識が示している内容はどれか。',
@@ -1099,7 +1105,7 @@ const List<TrafficSign> kTrafficSigns = [
     ],
     answer: 2,
     explanation:
-        '青い五角形（家型）に白い三角、その中に歩く人と縞模様がある標識は「横断歩道」を示す指示標識。'
+        '青い五角形（家型）に白い歩行者と白い横棒（縞）の図柄の標識は「横断歩道」を示す指示標識。'
         '横断しようとする歩行者がいるときは、横断歩道の手前で一時停止して道を譲らなければならない。',
   ),
 
@@ -1385,8 +1391,10 @@ const List<TrafficSign> kTrafficSigns = [
     category: _kInstruction,
     shape: SignShape.pentagon,
     backgroundColor: SignColors.blue,
-    rimColor: SignColors.white,
-    rimWidthRatio: 0.03,
+    rimColor: SignColors.blue,
+    rimWidthRatio: 0.02,
+    borderColor: SignColors.white,
+    borderWidthRatio: 0.014,
     symbol: SignSymbol.bicycleCrossing,
     symbolColor: SignColors.white,
     questionText: 'この標識がある場所について正しいのはどれか。',
@@ -1398,7 +1406,7 @@ const List<TrafficSign> kTrafficSigns = [
     ],
     answer: 0,
     explanation:
-        '青い五角形（家型）の中に自転車と縞模様の図柄は「自転車横断帯」。自転車が道路を横断するための場所であることを示し、'
+        '青い五角形（家型）の中に白い自転車と白い横棒（縞）の図柄は「自転車横断帯」。自転車が道路を横断するための場所であることを示し、'
         'この標識のある場所付近では自動車・二輪車は自転車の横断を妨げないよう注意する。',
   ),
 
@@ -1431,10 +1439,13 @@ const List<TrafficSign> kTrafficSigns = [
     id: 'sign_horn_zone',
     name: '警笛区間',
     category: _kRegulatory,
-    shape: SignShape.square,
+    shape: SignShape.circle,
     backgroundColor: SignColors.blue,
+    rimColor: SignColors.white,
+    rimWidthRatio: 0.025,
     symbol: SignSymbol.hornZone,
     symbolColor: SignColors.white,
+    auxPlateText: '区間内',
     questionText: 'この標識がある区間の通行について正しいのはどれか。',
     choices: [
       '区間内は常に警音器を鳴らし続けなければならない',
@@ -1444,7 +1455,7 @@ const List<TrafficSign> kTrafficSigns = [
     ],
     answer: 1,
     explanation:
-        '青い四角にラッパと区間を示す縦線は「警笛区間」。区間内では、見通しの悪い交差点・曲がり角・上り坂の頂上などで'
+        '青い円の「警笛鳴らせ」の下に補助標識「区間内」が付いたものが「警笛区間」。区間内では、見通しの悪い交差点・曲がり角・上り坂の頂上などで'
         '必要に応じて警音器を鳴らさなければならない（区間内を常時鳴らし続ける必要はない）。',
   ),
 
