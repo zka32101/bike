@@ -27,6 +27,9 @@ enum SignShape {
 
   /// 横長の長方形（一方通行）
   wideRect,
+
+  /// 補助標識（白い長方形・細い黒枠）
+  auxPlate,
 }
 
 /// 標識の中に描くシンボル（図柄）。すべて CustomPainter で描画する。
@@ -200,6 +203,18 @@ enum SignSymbol {
 
   /// 時間帯・P・駐車できる時間（時間制限駐車区間）
   parkingTime,
+
+  /// 黒い三角の斜面と転がり落ちる3つの岩（落石のおそれあり）
+  fallingRocks,
+
+  /// 右向きの赤い矢印（補助標識 始まり）
+  auxArrowRight,
+
+  /// 左向きの赤い矢印（補助標識 終わり）
+  auxArrowLeft,
+
+  /// 左右両向きの赤い矢印（補助標識 区間内）
+  auxArrowBoth,
 }
 
 /// 禁止を表す赤線の種類。
@@ -333,6 +348,7 @@ class SignColors {
 const String _kRegulatory = '規制標識';
 const String _kWarning = '警戒標識';
 const String _kInstruction = '指示標識';
+const String _kAuxiliary = '補助標識';
 
 /// 標識クイズの全データ。
 ///
@@ -2078,5 +2094,305 @@ const List<TrafficSign> kTrafficSigns = [
     explanation:
         '青い円に、時計回りの矢印は「環状の交差点における右回り通行」。環状の交差点（ロータリーなど）では、車両は右回りに通行する。'
         '黄色いひし形の「ロータリーあり」（警戒標識）とは意味が違う。',
+  ),
+
+  // 警戒標識 209の2
+  TrafficSign(
+    id: 'sign_falling_rocks',
+    name: '落石のおそれあり（209の2）',
+    category: _kWarning,
+    shape: SignShape.diamond,
+    backgroundColor: SignColors.yellow,
+    borderColor: SignColors.black,
+    borderWidthRatio: 0.02,
+    rimColor: SignColors.yellow,
+    rimWidthRatio: 0.03,
+    symbol: SignSymbol.fallingRocks,
+    questionText: 'この標識が知らせている内容はどれか。',
+    choices: [
+      '落石のおそれがある道路であること',
+      '土砂崩れで通行止めになっていること',
+      '道路工事中であること',
+      '路面が凹凸していること',
+    ],
+    answer: 0,
+    explanation:
+        '黄色いひし形に、斜面を転がり落ちる岩の図柄は警戒標識の「落石のおそれあり」（209の2）。山側から石や岩が落ちてくるおそれのある区間なので、速度を落とし、落石に注意して通行する。',
+  ),
+
+  // 補助標識 501
+  TrafficSign(
+    id: 'sign_aux_distance',
+    name: '補助標識 距離・区域（501）',
+    category: _kAuxiliary,
+    shape: SignShape.auxPlate,
+    backgroundColor: SignColors.white,
+    rimColor: SignColors.black,
+    rimWidthRatio: 0.014,
+    centerText: 'この先100m',
+    centerTextScale: 0.15,
+    questionText: 'この補助標識の意味として正しいのはどれか。',
+    choices: [
+      '100m以内の速度を100km/hに制限する',
+      '本標識が示す規制・警戒などが、この先100mの区間にかかることを示す',
+      'この先100mで規制が終わることを示す',
+      'この先100mに駐車場があることを示す',
+    ],
+    answer: 1,
+    explanation:
+        '補助標識は本標識に付けて意味を補う白い長方形の標識。「この先100m」の距離・区域の補助標識（501）は、本標識が示す内容が及ぶ距離を示す。',
+  ),
+
+  // 補助標識 502
+  TrafficSign(
+    id: 'sign_aux_except_holiday',
+    name: '補助標識 日・時間（502）',
+    category: _kAuxiliary,
+    shape: SignShape.auxPlate,
+    backgroundColor: SignColors.white,
+    rimColor: SignColors.black,
+    rimWidthRatio: 0.014,
+    centerText: '日曜・休日を除く',
+    centerTextScale: 0.1,
+    questionText: 'この補助標識の意味として正しいのはどれか。',
+    choices: [
+      '日曜・休日は通行できない',
+      '日曜・休日だけ駐車できる',
+      '本標識の規制は、日曜日と休日には適用されない',
+      '本標識の規制は、日曜日と休日にだけ適用される',
+    ],
+    answer: 2,
+    explanation:
+        '「日曜・休日を除く」の補助標識（502）は、本標識の規制がかかる日を示す。この場合、日曜日と休日以外の日に規制が適用される。',
+  ),
+
+  // 補助標識 502
+  TrafficSign(
+    id: 'sign_aux_time',
+    name: '補助標識 日・時間（502）',
+    category: _kAuxiliary,
+    shape: SignShape.auxPlate,
+    backgroundColor: SignColors.white,
+    rimColor: SignColors.black,
+    rimWidthRatio: 0.014,
+    centerText: '8-20',
+    centerTextScale: 0.2,
+    questionText: 'この補助標識の意味として正しいのはどれか。',
+    choices: [
+      '本標識の規制が8日から20日まで行われることを示す',
+      '最高速度が8〜20km/hであることを示す',
+      '午後8時から午前8時まで規制されることを示す',
+      '本標識の規制が午前8時から午後8時まで行われることを示す',
+    ],
+    answer: 3,
+    explanation:
+        '「8-20」の補助標識（502）は、本標識の規制がかかる時間帯（午前8時から午後8時）を示す。時間帯以外は規制の対象とならない。',
+  ),
+
+  // 補助標識 503-A
+  TrafficSign(
+    id: 'sign_aux_large_truck',
+    name: '補助標識 車両の種類（503）',
+    category: _kAuxiliary,
+    shape: SignShape.auxPlate,
+    backgroundColor: SignColors.white,
+    rimColor: SignColors.black,
+    rimWidthRatio: 0.014,
+    centerText: '大　貨',
+    centerTextScale: 0.2,
+    questionText: 'この補助標識の意味として正しいのはどれか。',
+    choices: [
+      '本標識の規制が大型貨物自動車等に適用されることを示す',
+      '大型貨物自動車等だけが通行できることを示す',
+      '貨物自動車は通行できないことを示す',
+      '大型貨物自動車専用の駐車場を示す',
+    ],
+    answer: 0,
+    explanation:
+        '「大貨」の補助標識（503）は、本標識の規制の対象となる車の種類（大型貨物自動車等）を示す。補助標識で示された車だけが規制の対象となる。',
+  ),
+
+  // 補助標識 503-A
+  TrafficSign(
+    id: 'sign_aux_except_moped',
+    name: '補助標識 車両の種類（503）',
+    category: _kAuxiliary,
+    shape: SignShape.auxPlate,
+    backgroundColor: SignColors.white,
+    rimColor: SignColors.black,
+    rimWidthRatio: 0.014,
+    centerText: '原付を除く',
+    centerTextScale: 0.15,
+    questionText: 'この補助標識の意味として正しいのはどれか。',
+    choices: [
+      '原動機付自転車だけが駐車できる',
+      '本標識の規制は、原動機付自転車には適用されない',
+      '本標識の規制は、原動機付自転車にだけ適用される',
+      '原動機付自転車は通行できない',
+    ],
+    answer: 1,
+    explanation:
+        '「原付を除く」の補助標識（503）は、本標識の規制の対象から原動機付自転車を除くことを示す。ほかの車は本標識の規制に従う。',
+  ),
+
+  // 補助標識 505-A
+  TrafficSign(
+    id: 'sign_aux_start',
+    name: '補助標識 始まり（505）',
+    category: _kAuxiliary,
+    shape: SignShape.auxPlate,
+    backgroundColor: SignColors.white,
+    rimColor: SignColors.black,
+    rimWidthRatio: 0.014,
+    symbol: SignSymbol.auxArrowRight,
+    symbolColor: SignColors.red,
+    questionText: 'この補助標識の意味として正しいのはどれか。',
+    choices: [
+      '本標識の規制が右側にだけ適用されることを示す',
+      '右折しなければならないことを示す',
+      '本標識が示す規制などの区間の始まりを示す',
+      '本標識の規制が終わることを示す',
+    ],
+    answer: 2,
+    explanation:
+        '白地に赤い右向きの矢印の補助標識（505-A）は、本標識が示す規制などの区間の「始まり」を示す。矢印は区間が続く向きを表す。',
+  ),
+
+  // 補助標識 506
+  TrafficSign(
+    id: 'sign_aux_section',
+    name: '補助標識 区間内（506）',
+    category: _kAuxiliary,
+    shape: SignShape.auxPlate,
+    backgroundColor: SignColors.white,
+    rimColor: SignColors.black,
+    rimWidthRatio: 0.014,
+    symbol: SignSymbol.auxArrowBoth,
+    symbolColor: SignColors.red,
+    questionText: 'この補助標識の意味として正しいのはどれか。',
+    choices: [
+      '本標識が示す規制が終わることを示す',
+      '本標識の規制が左右両側の道路に適用されることを示す',
+      '本標識が示す規制が緩和されることを示す',
+      '本標識が示す規制などが、この標識のある場所からの区間内にかかることを示す',
+    ],
+    answer: 3,
+    explanation:
+        '白地に赤い左右両向きの矢印の補助標識（506）は、「区間内」を示す。本標識の規制などが、この標識の設置場所から区間内で行われていることを意味する。',
+  ),
+
+  // 補助標識 507-A
+  TrafficSign(
+    id: 'sign_aux_end',
+    name: '補助標識 終わり（507）',
+    category: _kAuxiliary,
+    shape: SignShape.auxPlate,
+    backgroundColor: SignColors.white,
+    rimColor: SignColors.black,
+    rimWidthRatio: 0.014,
+    symbol: SignSymbol.auxArrowLeft,
+    symbolColor: SignColors.red,
+    questionText: 'この補助標識の意味として正しいのはどれか。',
+    choices: [
+      '本標識が示す規制などの区間の終わりを示す',
+      '本標識が示す規制の始まりを示す',
+      '左折しなければならないことを示す',
+      '本標識の規制が左側の車だけに適用されることを示す',
+    ],
+    answer: 0,
+    explanation:
+        '白地に赤い左向きの矢印の補助標識（507-A）は、本標識が示す規制などの区間の「終わり」を示す。',
+  ),
+
+  // 補助標識 508の2
+  TrafficSign(
+    id: 'sign_aux_no_overtaking',
+    name: '補助標識 追越し禁止（508の2）',
+    category: _kAuxiliary,
+    shape: SignShape.auxPlate,
+    backgroundColor: SignColors.white,
+    rimColor: SignColors.black,
+    rimWidthRatio: 0.014,
+    centerText: '追越し禁止',
+    centerTextScale: 0.13,
+    questionText: 'この補助標識の意味として正しいのはどれか。',
+    choices: [
+      '追越しの際に警音器を鳴らす区間を示す',
+      'この区間では追越しが禁止されていることを示す',
+      '追越しをしてもよい区間を示す',
+      '追越し車線であることを示す',
+    ],
+    answer: 1,
+    explanation:
+        '「追越し禁止」の補助標識（508の2）は、その場所で追越しが禁止されていることを示す。',
+  ),
+
+  // 補助標識 509
+  TrafficSign(
+    id: 'sign_aux_priority_ahead',
+    name: '補助標識 前方優先道路（509）',
+    category: _kAuxiliary,
+    shape: SignShape.auxPlate,
+    backgroundColor: SignColors.white,
+    rimColor: SignColors.black,
+    rimWidthRatio: 0.014,
+    centerText: '前方優先道路',
+    centerTextScale: 0.11,
+    questionText: 'この補助標識の意味として正しいのはどれか。',
+    choices: [
+      'この先で道路が行き止まりであることを示す',
+      'この先で一時停止が必要であることを示す',
+      'この先に優先道路があることを知らせる',
+      'この道路が優先道路であることを示す',
+    ],
+    answer: 2,
+    explanation:
+        '「前方優先道路」の補助標識（509）は、この先の交差する道路が優先道路であることを知らせる注意の補助標識。',
+  ),
+
+  // 補助標識 509の2
+  TrafficSign(
+    id: 'sign_aux_rail_caution',
+    name: '補助標識 踏切注意（509の2）',
+    category: _kAuxiliary,
+    shape: SignShape.auxPlate,
+    backgroundColor: SignColors.white,
+    rimColor: SignColors.black,
+    rimWidthRatio: 0.014,
+    centerText: '踏切注意',
+    centerTextScale: 0.17,
+    questionText: 'この補助標識の意味として正しいのはどれか。',
+    choices: [
+      '踏切が閉鎖中であることを示す',
+      '踏切を通行してはならないことを示す',
+      '踏切を直進してはならないことを示す',
+      'この先に踏切があるので注意して通行する',
+    ],
+    answer: 3,
+    explanation:
+        '「踏切注意」の補助標識（509の2）は、この先に踏切があることへの注意をうながす。',
+  ),
+
+  // 補助標識 509の4
+  TrafficSign(
+    id: 'sign_aux_animal_caution',
+    name: '補助標識 動物注意（509の4）',
+    category: _kAuxiliary,
+    shape: SignShape.auxPlate,
+    backgroundColor: SignColors.white,
+    rimColor: SignColors.black,
+    rimWidthRatio: 0.014,
+    centerText: '動物注意',
+    centerTextScale: 0.17,
+    questionText: 'この補助標識の意味として正しいのはどれか。',
+    choices: [
+      '動物に注意して通行する',
+      '動物の通行を禁止する',
+      '動物を乗せた車は通行できない',
+      '動物の持ち込みを禁止する',
+    ],
+    answer: 0,
+    explanation:
+        '「動物注意」の補助標識（509の4）は、道路に動物が出てくるおそれがあることを知らせ、注意をうながす。',
   ),
 ];

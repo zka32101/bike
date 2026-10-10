@@ -201,6 +201,10 @@ class TrafficSignPainter extends CustomPainter {
         final rect = Rect.fromLTWH(0, s * 0.19, s, s * 0.62).deflate(inset);
         return Path()
           ..addRRect(RRect.fromRectAndRadius(rect, Radius.circular(s * 0.04)));
+      case SignShape.auxPlate:
+        final rect = Rect.fromLTWH(0, s * 0.29, s, s * 0.42).deflate(inset);
+        return Path()
+          ..addRRect(RRect.fromRectAndRadius(rect, Radius.circular(s * 0.06)));
     }
   }
 
@@ -270,6 +274,8 @@ class TrafficSignPainter extends CustomPainter {
         );
       case SignShape.wideRect:
         return _InnerGeometry(Offset(s / 2, s / 2), s * 0.31 - inset);
+      case SignShape.auxPlate:
+        return _InnerGeometry(Offset(s / 2, s / 2), s * 0.5 - inset);
       case SignShape.pentagon:
         return _InnerGeometry(Offset(s / 2, s * 0.6), (s / 2 - inset) * 0.95);
       case SignShape.invertedTriangle:
@@ -618,6 +624,14 @@ class _SymbolPainter {
         _turnArrows();
       case SignSymbol.parkingTime:
         _parkingTime();
+      case SignSymbol.fallingRocks:
+        _fallingRocks();
+      case SignSymbol.auxArrowRight:
+        _auxArrow(left: false, right: true);
+      case SignSymbol.auxArrowLeft:
+        _auxArrow(left: true, right: false);
+      case SignSymbol.auxArrowBoth:
+        _auxArrow(left: true, right: true);
     }
   }
 
@@ -1519,6 +1533,30 @@ class _SymbolPainter {
         0.42,
       );
     }
+  }
+
+  /// 落石のおそれあり（209の2）。黒い三角の斜面と、右の急斜面を転がり落ちる3つの岩。
+  void _fallingRocks() {
+    canvas.drawPath(_poly([[-0.13, -0.68], [-0.79, 0.45], [0.19, 0.45]]), _fillPaint);
+    _line(0.1, 0.45, 0.8, 0.45, _stroke(0.035, cap: StrokeCap.butt));
+    _circle(0.27, -0.29, 0.1, _fillPaint);
+    _circle(0.4, 0.05, 0.1, _fillPaint);
+    _circle(0.5, 0.31, 0.09, _fillPaint);
+    final tick = _stroke(0.03);
+    _line(0.2, -0.52, 0.22, -0.42, tick);
+    _line(0.25, -0.53, 0.27, -0.42, tick);
+    _line(0.3, -0.52, 0.31, -0.42, tick);
+    _line(0.33, -0.17, 0.34, -0.1, tick);
+    _line(0.38, -0.17, 0.39, -0.1, tick);
+  }
+
+  /// 補助標識の赤い矢印（505-A 始まり／506 区間内／507-A 終わり）。
+  void _auxArrow({required bool left, required bool right}) {
+    final red = _fillPaint;
+    canvas.drawRect(
+        Rect.fromPoints(p(left ? -0.5 : -0.78, -0.07), p(right ? 0.5 : 0.78, 0.07)), red);
+    if (right) canvas.drawPath(_poly([[0.45, -0.22], [0.85, 0], [0.45, 0.22]]), red);
+    if (left) canvas.drawPath(_poly([[-0.45, -0.22], [-0.85, 0], [-0.45, 0.22]]), red);
   }
 
   /// 路面の凹凸（ふくらみが2つ並んだ断面）。
