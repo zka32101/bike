@@ -53,7 +53,7 @@ class TrafficSignPainter extends CustomPainter {
     final origin = Offset((size.width - s) / 2, (size.height - s) / 2);
     canvas.save();
     canvas.translate(origin.dx, origin.dy);
-    if (sign.auxPlateText != null) {
+    if (sign.auxPlateText != null || sign.auxPlateDoubleArrow) {
       _paintWithAuxPlate(canvas, s);
     } else {
       _paintBody(canvas, s);
@@ -81,6 +81,31 @@ class TrafficSignPainter extends CustomPainter {
         ..style = PaintingStyle.stroke
         ..strokeWidth = s * 0.008,
     );
+    if (sign.auxPlateDoubleArrow) {
+      // 補助標識 506「区間内」: 赤い左右両向きの矢印
+      final red = Paint()
+        ..color = SignColors.red
+        ..style = PaintingStyle.fill
+        ..isAntiAlias = true;
+      final cx = plate.center.dx, cy = plate.center.dy;
+      final half = plate.width * 0.38, head = plate.height * 0.3;
+      canvas.drawRect(
+        Rect.fromLTRB(cx - half + head, cy - plate.height * 0.07,
+            cx + half - head, cy + plate.height * 0.07),
+        red,
+      );
+      for (final d in [-1.0, 1.0]) {
+        canvas.drawPath(
+          Path()
+            ..moveTo(cx + d * half, cy)
+            ..lineTo(cx + d * (half - head * 1.4), cy - head)
+            ..lineTo(cx + d * (half - head * 1.4), cy + head)
+            ..close(),
+          red,
+        );
+      }
+      return;
+    }
     final tp = TextPainter(
       text: TextSpan(
         text: sign.auxPlateText,
@@ -604,6 +629,8 @@ class _SymbolPainter {
         _roundabout();
       case SignSymbol.bumpyRoad:
         _bumpyRoad();
+      case SignSymbol.vehicleClassText:
+        _vehicleClassText();
       case SignSymbol.slopeUp:
         _slope(up: true);
       case SignSymbol.slopeDown:
@@ -1559,7 +1586,7 @@ class _SymbolPainter {
     if (left) canvas.drawPath(_poly([[-0.45, -0.22], [-0.85, 0], [-0.45, 0.22]]), red);
   }
 
-  /// 路面の凹凸（ふくらみが2つ並んだ断面）。
+  /// 路面の凹凸（公式: 平らな台の上に低いこぶが2つ並んだ断面）。
   void _bumpyRoad() {
     final path = Path();
     void cubic(double x1, double y1, double x2, double y2, double x3, double y3) {
@@ -1567,19 +1594,54 @@ class _SymbolPainter {
       path.cubicTo(a.dx, a.dy, b.dx, b.dy, c3.dx, c3.dy);
     }
 
-    final start = p(-0.92, 0.55);
+    final start = p(-0.8, 0.5);
     path.moveTo(start.dx, start.dy);
-    final left = p(-0.92, 0.28);
+    final left = p(-0.8, 0.1);
     path.lineTo(left.dx, left.dy);
-    cubic(-0.6, 0.28, -0.62, -0.42, -0.28, -0.42);
-    cubic(0.0, -0.42, -0.02, 0.28, 0.25, 0.28);
-    cubic(0.52, 0.28, 0.5, -0.3, 0.7, -0.3);
-    cubic(0.88, -0.3, 0.9, 0.2, 0.92, 0.28);
-    final end = p(0.92, 0.55);
+    cubic(-0.58, 0.1, -0.56, -0.22, -0.34, -0.22);
+    cubic(-0.17, -0.22, -0.17, 0.02, 0.0, 0.02);
+    cubic(0.17, 0.02, 0.17, -0.22, 0.34, -0.22);
+    cubic(0.56, -0.22, 0.58, 0.1, 0.8, 0.1);
+    final end = p(0.8, 0.5);
     path
       ..lineTo(end.dx, end.dy)
       ..close();
     canvas.drawPath(path, _fillPaint);
+  }
+
+  /// 車両通行区分（327）: 縦書きの「軽車両」「二輪」。公式は白地に青字・二重の青枠。
+  void _vehicleClassText() {
+    final frame = _stroke(0.025, cap: StrokeCap.butt);
+    canvas.drawRRect(
+      RRect.fromRectAndRadius(
+        Rect.fromCenter(center: c, width: 1.86 * k, height: 1.86 * k),
+        Radius.circular(0.06 * k),
+      ),
+      frame,
+    );
+    void ch(String t, double x, double y) {
+      final tp = TextPainter(
+        text: TextSpan(
+          text: t,
+          style: TextStyle(
+            color: color,
+            fontSize: 0.6 * k,
+            fontFamily: fontFamily,
+            fontWeight: FontWeight.w500,
+            height: 1,
+          ),
+        ),
+        textDirection: TextDirection.ltr,
+      )..layout();
+      tp.paint(canvas, p(x, y) - Offset(tp.width / 2, tp.height / 2));
+    }
+
+    const left = ['軽', '車', '両'];
+    for (var i = 0; i < left.length; i++) {
+      ch(left[i], -0.45, -0.58 + i * 0.58);
+    }
+    ch('二', 0.45, -0.58);
+    ch('輪', 0.45, 0.58);
   }
 
   /// 勾配（くさび形）。[up] が true なら右上がり、false なら右下がり。矢印は白。
@@ -1624,41 +1686,36 @@ class _SymbolPainter {
     );
   }
 
-  /// 吹き流し（横風）。
+  /// 吹き流し（横風）。公式: 左のポールから右へ、先細りの袖が少し下がって伸び、黒と黄の縞が並ぶ。
   void _windsock() {
     final line = _stroke(0.1, cap: StrokeCap.butt);
-    _line(-0.66, -0.88, -0.66, 0.92, line);
-    // 袖（根もとが太く、先が細い）
+    _line(-0.62, -0.55, -0.62, 0.7, line);
+    // 袖の中心線（左: 口の大きい側 → 右: 先の細い側）
+    const ax = -0.5, ay = -0.36, bx = 0.82, by = 0.1;
+    const wa = 0.27, wb = 0.13; // 半幅
+    List<double> pt(double t, double side) {
+      final x = ax + (bx - ax) * t;
+      final y = ay + (by - ay) * t;
+      final w = wa + (wb - wa) * t;
+      return [x, y + side * w];
+    }
+
+    // 縞（7等分。黒・黄を交互に）
+    const n = 7;
+    for (var i = 0; i < n; i++) {
+      final t0 = i / n, t1 = (i + 1) / n;
+      canvas.drawPath(
+        _poly([pt(t0, -1), pt(t1, -1), pt(t1, 1), pt(t0, 1)]),
+        Paint()
+          ..color = i.isEven ? color : SignColors.yellow
+          ..style = PaintingStyle.fill
+          ..isAntiAlias = true,
+      );
+    }
+    // 袖の輪郭
     canvas.drawPath(
-      _poly([
-        [-0.6, -0.72],
-        [-0.6, -0.1],
-        [0.86, 0.08],
-        [0.86, -0.42],
-      ]),
-      _fillPaint,
-    );
-    // 白い縞
-    final stripe = Paint()
-      ..color = SignColors.yellow
-      ..style = PaintingStyle.fill;
-    canvas.drawPath(
-      _poly([
-        [-0.05, -0.65],
-        [0.12, -0.63],
-        [0.12, -0.04],
-        [-0.05, -0.07],
-      ]),
-      stripe,
-    );
-    canvas.drawPath(
-      _poly([
-        [0.46, -0.58],
-        [0.62, -0.56],
-        [0.62, 0.0],
-        [0.46, -0.02],
-      ]),
-      stripe,
+      _poly([pt(0, -1), pt(1, -1), pt(1, 1), pt(0, 1)]),
+      _stroke(0.05, cap: StrokeCap.butt),
     );
   }
 

@@ -100,12 +100,19 @@ void main() {
 
   test('描き直した2種が入っていて、公式どおりの色・形', () {
     final lane = sign('sign_vehicle_classification');
-    expect(lane.shape, SignShape.wideRect);
+    expect(lane.shape, SignShape.square);
+    expect(lane.symbol, SignSymbol.vehicleClassText);
     expect(lane.backgroundColor, SignColors.white);
     final ov = sign('sign_no_overtaking_protrusion');
     expect(ov.backgroundColor, SignColors.white);
     expect(ov.symbolColor, SignColors.blue);
     expect(ov.slash, SignSlash.single);
+  });
+
+  test('警笛区間の補助板は506（左右両向きの矢印）で、文字板ではない', () {
+    final h = sign('sign_horn_zone');
+    expect(h.auxPlateDoubleArrow, isTrue);
+    expect(h.auxPlateText, isNull);
   });
 
   test('追加した7種が入っている（標識令 別表第二の図に基づく）', () {
