@@ -9,6 +9,7 @@ import '../l10n/generated/app_localizations.dart';
 import '../models/question.dart';
 import '../viewmodels/providers.dart';
 import 'paywall_view.dart';
+import '../data/question_signs.dart';
 
 /// 学習モード：クイズ形式ではなく、問題文・選択肢・正解・解説を一覧で
 /// 読んで学習できる画面。出題対象の範囲は [DailyQuotaView] の練習モードと
@@ -210,6 +211,7 @@ class _StudyQuestionCard extends ConsumerWidget {
         title: Text('$index. ${question.questionText}'),
         childrenPadding: const EdgeInsets.fromLTRB(16, 0, 16, 16),
         children: [
+          QuestionSignView(questionId: question.id, size: 72, answered: true),
           for (var i = 0; i < question.choices.length; i++)
             Padding(
               padding: const EdgeInsets.symmetric(vertical: 2),

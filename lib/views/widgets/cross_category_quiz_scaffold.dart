@@ -5,6 +5,7 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import '../../core/constants/license_category.dart';
 import '../../viewmodels/cross_category_quiz.dart';
 import '../../widgets/answer_result_overlay.dart';
+import '../../data/question_signs.dart';
 
 /// 区分横断クイズ（ひっかけ問題専門クイズ／数字・距離クイズ）共通の画面。
 ///
@@ -122,6 +123,11 @@ class _QuestionBody extends StatelessWidget {
               padding: const EdgeInsets.only(bottom: 16),
               children: [
                 QuestionCard(text: question.questionText),
+                QuestionSignView(
+                  questionId: question.id,
+                  size: 72,
+                  answered: state.hasAnsweredCurrent,
+                ),
                 const SizedBox(height: 16),
                 for (var i = 0; i < question.choices.length; i++) ...[
                   ChoiceTile(
