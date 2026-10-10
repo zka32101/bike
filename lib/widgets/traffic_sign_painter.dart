@@ -53,7 +53,51 @@ class TrafficSignPainter extends CustomPainter {
     final origin = Offset((size.width - s) / 2, (size.height - s) / 2);
     canvas.save();
     canvas.translate(origin.dx, origin.dy);
+    if (sign.auxPlateText != null) {
+      _paintWithAuxPlate(canvas, s);
+    } else {
+      _paintBody(canvas, s);
+    }
+    canvas.restore();
+  }
 
+  /// 本標識（上）と補助標識の白い四角板（下）を縦に並べて描く（警笛区間など）。
+  void _paintWithAuxPlate(Canvas canvas, double s) {
+    final mainS = s * 0.74;
+    canvas.save();
+    canvas.translate((s - mainS) / 2, 0);
+    canvas.scale(mainS / s);
+    _paintBody(canvas, s);
+    canvas.restore();
+
+    final plate = Rect.fromLTWH(s * 0.2, s * 0.79, s * 0.6, s * 0.19);
+    final rr = RRect.fromRectAndRadius(plate, Radius.circular(s * 0.025));
+    canvas.drawShadow(Path()..addRRect(rr), Colors.black, 2, false);
+    canvas.drawRRect(rr, Paint()..color = SignColors.white);
+    canvas.drawRRect(
+      rr.deflate(s * 0.012),
+      Paint()
+        ..color = SignColors.black
+        ..style = PaintingStyle.stroke
+        ..strokeWidth = s * 0.008,
+    );
+    final tp = TextPainter(
+      text: TextSpan(
+        text: sign.auxPlateText,
+        style: TextStyle(
+          color: SignColors.black,
+          fontSize: s * 0.115,
+          fontFamily: fontFamily,
+          fontWeight: FontWeight.w800,
+          height: 1,
+        ),
+      ),
+      textDirection: TextDirection.ltr,
+    )..layout(maxWidth: plate.width);
+    tp.paint(canvas, plate.center - Offset(tp.width / 2, tp.height / 2));
+  }
+
+  void _paintBody(Canvas canvas, double s) {
     final rimW = s * sign.rimWidthRatio;
     final borderW = s * sign.borderWidthRatio;
 
@@ -75,10 +119,8 @@ class TrafficSignPainter extends CustomPainter {
     if (sign.hasHorizontalBar) {
       _drawHorizontalBar(canvas, geo);
     }
-    if (sign.symbol != SignSymbol.none) {
-      _SymbolPainter(canvas, geo.center, geo.radius * (sign.shape == SignShape.diamond ? 0.72 : 0.62), sign.symbolColor,
-              fontFamily: fontFamily)
-          .draw(sign.symbol);
+    if (sign.symbol != SignSymbol.none && sign.symbol != SignSymbol.uTurnArrow) {
+      _drawSymbol(canvas, geo);
     }
     if (sign.centerIcon != null) {
       _drawIcon(canvas, geo, sign.centerIcon!);
@@ -105,8 +147,18 @@ class TrafficSignPainter extends CustomPainter {
     if (textOverSlash) {
       _drawCenterText(canvas, s, geo, halo: true);
     }
+    // 転回禁止の矢印は公式の図と同じく、斜めの帯の手前に白い縁取り付きで描く。
+    if (sign.symbol == SignSymbol.uTurnArrow) {
+      _drawSymbol(canvas, geo);
+    }
     canvas.restore();
-    canvas.restore();
+  }
+
+  void _drawSymbol(Canvas canvas, _InnerGeometry geo) {
+    _SymbolPainter(canvas, geo.center,
+            geo.radius * (sign.shape == SignShape.diamond ? 0.72 : 0.62), sign.symbolColor,
+            fontFamily: fontFamily)
+        .draw(sign.symbol);
   }
 
   void _fill(Canvas canvas, Path path, Color color) {
@@ -158,10 +210,10 @@ class TrafficSignPainter extends CustomPainter {
     final k = (s / 2 - inset) / (s / 2);
     return [
       Offset(s / 2, 0),
-      Offset(s, s * 0.26),
+      Offset(s, s * 0.74),
       Offset(s, s),
       Offset(0, s),
-      Offset(0, s * 0.26),
+      Offset(0, s * 0.74),
     ].map((v) => c + (v - c) * k).toList();
   }
 
@@ -484,7 +536,7 @@ class _SymbolPainter {
       case SignSymbol.heightMarkers:
         _heightMarkers();
       case SignSymbol.horn:
-        _horn(withBolts: true);
+        _horn();
       case SignSymbol.crosswalk:
         _crosswalk();
       case SignSymbol.stopLineBar:
@@ -523,7 +575,7 @@ class _SymbolPainter {
       case SignSymbol.laneArrows:
         _laneArrows();
       case SignSymbol.hornZone:
-        _hornZone();
+        _horn();
       case SignSymbol.overtakingProtrusion:
         _overtakingProtrusion();
       case SignSymbol.truck:
@@ -572,11 +624,7 @@ class _SymbolPainter {
   /// 自転車＋足もとに横断帯の縞（自転車横断帯）。
   void _bicycleCrossing() {
     _bicycle();
-    final black = Paint()..color = SignColors.black;
-    for (var i = -2; i <= 2; i++) {
-      final x = i * 0.36;
-      _rrect(x - 0.12, 0.78, x + 0.12, 0.94, 0.01, black);
-    }
+    _crosswalkBars(longY: 0.98, shortY: -0.18);
   }
 
   /// 太い白のV字（安全地帯）。
@@ -611,14 +659,6 @@ class _SymbolPainter {
 
     arrow(-0.4);
     arrow(0.4);
-  }
-
-  /// ラッパ形の警笛＋区間の両端を示す縦線（警笛区間）。
-  void _hornZone() {
-    _horn();
-    final bar = _stroke(0.09, cap: StrokeCap.butt);
-    _line(-1.05, -0.5, -1.05, 0.5, bar);
-    _line(1.05, -0.5, 1.05, 0.5, bar);
   }
 
   /// 直進する矢印と、右へ出て戻る蛇行の矢印（追越しのための右側部分はみ出し通行禁止）。
@@ -927,72 +967,68 @@ class _SymbolPainter {
     );
   }
 
-  /// ラッパ形の警笛（右側が開いた朝顔）。
-  void _horn({bool withBolts = false}) {
-    if (withBolts) {
-      canvas.save();
-      canvas.translate(c.dx - 0.4 * k, c.dy);
-      canvas.scale(0.68);
-      canvas.translate(-c.dx, -c.dy);
-      _horn();
-      canvas.restore();
-      final bolt = _stroke(0.1, cap: StrokeCap.butt);
-      for (final y in [-0.38, 0.38]) {
-        final path = Path();
-        final pts = [
-          p(0.42, y - 0.3),
-          p(0.62, y - 0.05),
-          p(0.48, y + 0.02),
-          p(0.72, y + 0.3),
-        ];
-        path.moveTo(pts[0].dx, pts[0].dy);
-        for (final q in pts.skip(1)) {
-          path.lineTo(q.dx, q.dy);
-        }
-        canvas.drawPath(path, bolt);
-      }
-      return;
-    }
-    // マウスピース
-    _rrect(-1, -0.18, -0.86, 0.18, 0.03, _fillPaint);
-    // 管
-    _rrect(-0.9, -0.09, -0.05, 0.09, 0, _fillPaint);
-    // 朝顔（ベル）
-    final bell = Path();
-    final a = p(-0.1, -0.09);
-    final c1 = p(0.45, -0.12);
-    final b = p(0.8, -0.62);
-    final d = p(0.8, 0.62);
-    final c2 = p(0.45, 0.12);
-    final e = p(-0.1, 0.09);
-    bell
-      ..moveTo(a.dx, a.dy)
-      ..quadraticBezierTo(c1.dx, c1.dy, b.dx, b.dy)
-      ..lineTo(d.dx, d.dy)
-      ..quadraticBezierTo(c2.dx, c2.dy, e.dx, e.dy)
+  /// 警笛（328）。左に小さな半円形のベル、右へ広がる2本の稲妻形。
+  void _horn() {
+    // 警笛本体（半円のベル＋口金）
+    final bell = Path()
+      ..moveTo(p(-0.78, -0.3).dx, p(-0.78, -0.3).dy)
+      ..arcToPoint(p(-0.78, 0.3), radius: Radius.circular(0.3 * k), clockwise: false)
+      ..lineTo(p(-0.62, 0.3).dx, p(-0.62, 0.3).dy)
+      ..lineTo(p(-0.62, -0.3).dx, p(-0.62, -0.3).dy)
       ..close();
     canvas.drawPath(bell, _fillPaint);
-  }
-
-  /// 白い正三角形の中に、横断歩道の縞の上を歩く黒い人。
-  void _crosswalk() {
+    _rrect(-0.62, -0.17, -0.36, 0.17, 0.0, _fillPaint);
+    // 稲妻形（上下に1本ずつ、右上と右下へ）
+    const upper = [
+      [-0.12, -0.1],
+      [0.2, -0.34],
+      [0.12, -0.4],
+      [0.9, -0.92],
+      [0.9, -0.5],
+      [0.5, -0.28],
+      [0.58, -0.26],
+      [0.3, -0.06],
+    ];
+    canvas.drawPath(_poly(upper), _fillPaint);
     canvas.drawPath(
-      _poly([
-        [0, -1.38],
-        [1.42, 1.08],
-        [-1.42, 1.08],
-      ]),
+      _poly([for (final e in upper) [e[0], -e[1]]]),
       _fillPaint,
     );
-    final black = Paint()..color = SignColors.black;
-    Paint blackStroke(double w, {Color? paintColor, StrokeCap cap = StrokeCap.round}) =>
-        _stroke(w, paintColor: SignColors.black, cap: cap);
-    _pedestrian(0, 0.05, 0.62, black, blackStroke);
-    // 横断歩道の縞（足もとに横一列）
-    for (var i = -2; i <= 2; i++) {
-      final x = i * 0.36;
-      _rrect(x - 0.12, 0.72, x + 0.12, 0.9, 0.01, black);
-    }
+  }
+
+  /// 帽子をかぶって右へ歩く白い人（横断歩道 407-A）。中心 ([cx],[cy])、倍率 [sc]。
+  void _hatWalker(double cx, double cy, double sc) {
+    final fill = _fillPaint;
+    Paint st(double w) => _stroke(w * sc, cap: StrokeCap.round);
+    double x(double v) => cx + v * sc;
+    double y(double v) => cy + v * sc;
+    // 頭と帽子（つばの広い帽子）
+    _circle(x(0.12), y(-0.74), 0.14 * sc, fill);
+    _line(x(-0.08), y(-0.84), x(0.34), y(-0.84), st(0.07));
+    _line(x(0.02), y(-0.9), x(0.24), y(-0.9), st(0.09));
+    // 胴体（前かがみ）
+    _line(x(0.1), y(-0.56), x(0.0), y(0.12), st(0.34));
+    // 腕
+    _line(x(0.1), y(-0.46), x(0.38), y(-0.06), st(0.1));
+    _line(x(0.06), y(-0.46), x(-0.26), y(-0.08), st(0.1));
+    // 脚（前後に開く）
+    _line(x(0.0), y(0.1), x(0.3), y(0.5), st(0.15));
+    _line(x(0.3), y(0.5), x(0.4), y(0.88), st(0.15));
+    _line(x(0.0), y(0.1), x(-0.34), y(0.9), st(0.15));
+  }
+
+  /// 横断歩道の白い横棒（足もとの長い1本と、左右の短い2本）。
+  void _crosswalkBars({double longY = 0.9, double shortY = 0.34}) {
+    final white = _fillPaint;
+    _rrect(-1.02, longY - 0.09, 1.02, longY + 0.09, 0.01, white);
+    _rrect(-1.02, shortY - 0.07, -0.58, shortY + 0.07, 0.01, white);
+    _rrect(0.58, shortY - 0.07, 1.02, shortY + 0.07, 0.01, white);
+  }
+
+  /// 青い五角形の中に、白い帽子の歩行者と横断歩道の白い横棒（407-A）。
+  void _crosswalk() {
+    _hatWalker(0.0, 0.0, 0.92);
+    _crosswalkBars(longY: 1.02, shortY: 0.46);
   }
 
   /// 左側に上向き、右側に下向きの矢印（左側通行の対面交通）。
@@ -1195,31 +1231,43 @@ class _SymbolPainter {
     _circle(cx + hw * 0.66, cy + 0.1, 0.06, Paint()..color = SignColors.white);
   }
 
-  /// U字の矢印（右側から上がって左側へ下りる）。
+  /// U字の矢印（標識令313）。左側の脚は矢じりなしの棒、右側の脚に下向きの矢じり。
+  /// 斜めの帯の手前に描くため、白い縁取りを先に描く。
   void _uTurn() {
+    canvas.save();
+    canvas.translate(c.dx, c.dy);
+    canvas.scale(1.18);
+    canvas.translate(-c.dx, -c.dy);
     final path = Path();
-    final start = p(0.42, 0.85);
+    final start = p(-0.42, 0.85);
     path.moveTo(start.dx, start.dy);
-    final a = p(0.42, -0.2);
+    final a = p(-0.42, -0.2);
     path.lineTo(a.dx, a.dy);
     path.arcTo(
       Rect.fromCircle(center: p(0, -0.2), radius: 0.42 * k),
-      0,
-      -math.pi,
+      math.pi,
+      math.pi,
       false,
     );
-    final b = p(-0.42, 0.28);
+    final b = p(0.42, 0.28);
     path.lineTo(b.dx, b.dy);
-    canvas.drawPath(path, _stroke(0.24, cap: StrokeCap.butt));
     // 矢じり（下向き）
+    final head = _poly([
+      [0.42, 0.8],
+      [0.8, 0.26],
+      [0.04, 0.26],
+    ]);
+    // 白い縁取り
+    final white = SignColors.white;
+    canvas.drawPath(path, _stroke(0.24 + 0.16, paintColor: white, cap: StrokeCap.butt));
     canvas.drawPath(
-      _poly([
-        [-0.42, 0.8],
-        [-0.8, 0.26],
-        [-0.04, 0.26],
-      ]),
-      _fillPaint,
+      head,
+      _stroke(0.16, paintColor: white, cap: StrokeCap.butt)
+        ..strokeJoin = StrokeJoin.miter,
     );
+    canvas.drawPath(path, _stroke(0.24, cap: StrokeCap.butt));
+    canvas.drawPath(head, _fillPaint);
+    canvas.restore();
   }
 
   /// 上向きの太い矢印。
