@@ -218,6 +218,24 @@ enum SignSymbol {
 
   /// 左右両向きの赤い矢印（補助標識 区間内）
   auxArrowBoth,
+
+  /// 正面から見た乗用車（白地用。窓・ライトは白で抜く）（二輪の自動車以外の自動車通行止め・304）
+  carFrontOnWhite,
+
+  /// 荷車（車輪と引き棒）（自転車以外の軽車両通行止め・308）
+  handcart,
+
+  /// 上に乗用車、下に二輪車（車両（組合せ）通行止め・310）
+  carAndMotorcycle,
+
+  /// 4車線の区画線・上向き矢印・貨物自動車（特定の種類の車両の通行区分・327の2）
+  laneTruck,
+
+  /// 破線の車線・バス・下向き矢印（路線バス等優先通行帯・327の5）
+  priorityBusLane,
+
+  /// 下向きの白い矢印（中央線・406）
+  downArrow,
 }
 
 /// 禁止を表す赤線の種類。
@@ -2400,5 +2418,162 @@ const List<TrafficSign> kTrafficSigns = [
     answer: 0,
     explanation:
         '「動物注意」の補助標識（509の4）は、道路に動物が出てくるおそれがあることを知らせ、注意をうながす。',
+  ),
+
+  // ---- 問題用の標識（国交省『道路標識一覧』2026-10-11 で形・色・図柄を確認） ----
+
+  // 二輪の自動車以外の自動車通行止め（304）
+  TrafficSign(
+    id: 'sign_no_cars_except_motorcycles',
+    name: '二輪の自動車以外の自動車通行止め',
+    category: _kRegulatory,
+    shape: SignShape.circle,
+    backgroundColor: SignColors.white,
+    borderColor: SignColors.red,
+    borderWidthRatio: 0.09,
+    symbol: SignSymbol.carFrontOnWhite,
+    symbolColor: SignColors.blue,
+    hasDiagonalSlash: true,
+    questionText: 'この標識の意味として正しいのはどれか。',
+    choices: [
+      '二輪の自動車以外の自動車は通行できない（自動二輪車は通行できる）',
+      '二輪の自動車を含むすべての自動車は通行できない',
+      '原動機付自転車だけが通行できない',
+      '四輪の自動車だけが一時停止しなければならない',
+    ],
+    answer: 0,
+    explanation:
+        '白地・赤枠の円に青い乗用車の図柄と赤い斜めの帯が入った標識は「二輪の自動車以外の自動車通行止め」。'
+        '四輪の自動車などは通行できないが、自動二輪車は通行できる。',
+  ),
+
+  // 自転車以外の軽車両通行止め（308）
+  TrafficSign(
+    id: 'sign_no_light_vehicles',
+    name: '自転車以外の軽車両通行止め',
+    category: _kRegulatory,
+    shape: SignShape.circle,
+    backgroundColor: SignColors.white,
+    borderColor: SignColors.red,
+    borderWidthRatio: 0.09,
+    symbol: SignSymbol.handcart,
+    symbolColor: SignColors.blue,
+    hasDiagonalSlash: true,
+    questionText: 'この標識の意味として正しいのはどれか。',
+    choices: [
+      '自転車を除く軽車両（荷車など）は通行できない',
+      '自転車を含む軽車両はすべて通行できない',
+      '荷物を積んだ自動車は通行できない',
+      '歩行者は通行できない',
+    ],
+    answer: 0,
+    explanation:
+        '白地・赤枠の円に青い荷車の図柄と赤い斜めの帯が入った標識は「自転車以外の軽車両通行止め」。'
+        '荷車などの軽車両は通行できないが、自転車は通行できる。',
+  ),
+
+  // 車両（組合せ）通行止め（310）
+  TrafficSign(
+    id: 'sign_no_combined_vehicles',
+    name: '車両（組合せ）通行止め',
+    category: _kRegulatory,
+    shape: SignShape.circle,
+    backgroundColor: SignColors.white,
+    borderColor: SignColors.red,
+    borderWidthRatio: 0.09,
+    symbol: SignSymbol.carAndMotorcycle,
+    symbolColor: SignColors.blue,
+    hasDiagonalSlash: true,
+    questionText: 'この標識の意味として正しいのはどれか。',
+    choices: [
+      '図柄に示された複数の種類の車両は通行できない',
+      '図柄に示された車両だけが通行できる',
+      'すべての車両が通行できない',
+      '図柄に示された車両は一時停止しなければならない',
+    ],
+    answer: 0,
+    explanation:
+        '赤い斜めの帯の円に複数の車両の図柄が並んだ標識は「車両（組合せ）通行止め」。図柄に示された種類の車両が通行できない'
+        '（図は一例で、組み合わせは設置場所によって異なる）。',
+  ),
+
+  // 特定の種類の車両の通行区分（327の2）
+  TrafficSign(
+    id: 'sign_vehicle_classification_specific',
+    name: '特定の種類の車両の通行区分',
+    category: _kRegulatory,
+    shape: SignShape.square,
+    backgroundColor: SignColors.blue,
+    rimColor: SignColors.white,
+    rimWidthRatio: 0.03,
+    symbol: SignSymbol.laneTruck,
+    symbolColor: SignColors.white,
+    questionText: 'この標識の意味として正しいのはどれか。',
+    choices: [
+      '図に示された種類の車両が通行すべき通行帯を指定している',
+      '図に示された種類の車両は通行できない',
+      '図に示された種類の車両の駐車場所を示している',
+      '図に示された種類の車両は追越しをしてはならない',
+    ],
+    answer: 0,
+    explanation:
+        '青地に車線の区画と矢印、車両の図柄が描かれた標識は「特定の種類の車両の通行区分」。'
+        '図に示された種類の車両が、指定された通行帯を通行しなければならない。',
+  ),
+
+  // 路線バス等優先通行帯（327の5）
+  TrafficSign(
+    id: 'sign_priority_bus_lane',
+    name: '路線バス等優先通行帯',
+    category: _kRegulatory,
+    shape: SignShape.square,
+    backgroundColor: SignColors.blue,
+    rimColor: SignColors.white,
+    rimWidthRatio: 0.03,
+    symbol: SignSymbol.priorityBusLane,
+    symbolColor: SignColors.white,
+    centerText: '優先',
+    centerTextColor: SignColors.white,
+    centerTextScale: 0.14,
+    centerTextOffsetY: 0.02,
+    questionText: 'この標識の意味として正しいのはどれか。',
+    choices: [
+      '路線バス等が優先して通行する通行帯である',
+      'バスだけが通行できる専用の通行帯である',
+      'バス停留所がある',
+      'バスは追越しをしてはならない',
+    ],
+    answer: 0,
+    explanation:
+        '青い四角にバスの図柄、「優先」の文字と下向きの矢印が描かれ、左右に破線が入った標識は「路線バス等優先通行帯」。'
+        '路線バス等が優先して通行する通行帯で、路線バス等が近づいてきたときは、他の車両は通行帯から出るなどしなければならない。',
+  ),
+
+  // 中央線（406）
+  TrafficSign(
+    id: 'sign_center_line',
+    name: '中央線',
+    category: _kInstruction,
+    shape: SignShape.square,
+    backgroundColor: SignColors.blue,
+    rimColor: SignColors.white,
+    rimWidthRatio: 0.03,
+    symbol: SignSymbol.downArrow,
+    symbolColor: SignColors.white,
+    centerText: '中央線',
+    centerTextColor: SignColors.white,
+    centerTextScale: 0.2,
+    centerTextOffsetY: -0.27,
+    questionText: 'この標識が示している内容はどれか。',
+    choices: [
+      '道路の中央の位置を示している',
+      '道路の右側部分への進入を禁止している',
+      'この先は追越し禁止である',
+      '車両の通行区分を指定している',
+    ],
+    answer: 0,
+    explanation:
+        '青地に白で「中央線」の文字と下向きの矢印が描かれた標識は、中央線の位置を示す指示標識（406）。'
+        '道路の中央の位置を示すもので、通行区分を指定するものではない。',
   ),
 ];
