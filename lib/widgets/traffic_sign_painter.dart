@@ -659,7 +659,82 @@ class _SymbolPainter {
         _auxArrow(left: true, right: false);
       case SignSymbol.auxArrowBoth:
         _auxArrow(left: true, right: true);
+      case SignSymbol.carFrontOnWhite:
+        _carFront(cutColor: SignColors.white);
+      case SignSymbol.handcart:
+        _handcart();
+      case SignSymbol.carAndMotorcycle:
+        _carAndMotorcycle();
+      case SignSymbol.laneTruck:
+        _laneTruck();
+      case SignSymbol.priorityBusLane:
+        _busLane(dashed: true);
+      case SignSymbol.downArrow:
+        _downArrow();
     }
+  }
+
+  /// 荷車（車輪と引き棒）。308 自転車以外の軽車両通行止め。
+  void _handcart() {
+    final spoke = _stroke(0.05, cap: StrokeCap.butt);
+    const cx = -0.12;
+    const cy = 0.1;
+    const r = 0.62;
+    // 外輪とハブ
+    _circle(cx, cy, r, _stroke(0.1));
+    _circle(cx, cy, 0.08, _fillPaint);
+    for (var i = 0; i < 12; i++) {
+      final a = i * math.pi / 6;
+      _line(cx, cy, cx + r * math.cos(a), cy + r * math.sin(a), spoke);
+    }
+    // 車軸から右上へ伸びる引き棒
+    _line(-0.95, 0.5, cx, cy, _stroke(0.07));
+    _line(cx, cy, 0.95, -0.2, _stroke(0.09));
+    _line(0.95, -0.2, 1, -0.4, _stroke(0.09));
+  }
+
+  /// 上に乗用車、下に二輪車（310 車両（組合せ）通行止め）。
+  void _carAndMotorcycle() {
+    _SymbolPainter(canvas, p(0, -0.62), k * 0.52, color, fontFamily: fontFamily)
+        ._carFront(cutColor: SignColors.white);
+    _SymbolPainter(canvas, p(0, 0.46), k * 0.82, color, fontFamily: fontFamily)
+        ._motorcycle(withPassenger: false);
+  }
+
+  /// 4車線の区画線（破線）・上向き矢印・貨物自動車（327の2）。ほぼ四角全体に描く。
+  void _laneTruck() {
+    final q = _SymbolPainter(canvas, c, k * 1.5, color, fontFamily: fontFamily);
+    final dash = q._stroke(0.06, cap: StrokeCap.butt);
+    for (final x in [-0.85, -0.12, 0.38, 0.85]) {
+      for (var y = -0.8; y < 0.7; y += 0.5) {
+        q._line(x, y, x, y + 0.28, dash);
+      }
+    }
+    q._line(-0.5, 0, -0.5, -0.45, q._stroke(0.16, cap: StrokeCap.butt));
+    canvas.drawPath(
+      q._poly([
+        [-0.5, -0.9],
+        [-0.28, -0.4],
+        [-0.72, -0.4],
+      ]),
+      q._fillPaint,
+    );
+    _SymbolPainter(canvas, q.p(-0.47, 0.6), q.k * 0.4, color, fontFamily: fontFamily)
+        ._truck();
+  }
+
+  /// 下向きの矢印（406 中央線の下半分）。
+  void _downArrow() {
+    final q = _SymbolPainter(canvas, c, k * 1.5, color, fontFamily: fontFamily);
+    q._rrect(-0.12, 0, 0.12, 0.38, 0, q._fillPaint);
+    canvas.drawPath(
+      q._poly([
+        [0, 0.88],
+        [-0.45, 0.32],
+        [0.45, 0.32],
+      ]),
+      q._fillPaint,
+    );
   }
 
   /// 自転車＋足もとに横断帯の縞（自転車横断帯）。
@@ -824,11 +899,19 @@ class _SymbolPainter {
   }
 
   /// バスの前面、「専用」の文字の位置を空けて、下向きの矢印（専用通行帯）。
-  void _busLane() {
+  void _busLane({bool dashed = false}) {
     final paint = _fillPaint;
     final cut = Paint()..color = SignColors.blue;
-    _rrect(-1.0, -1.05, -0.88, 1.0, 0, paint);
-    _rrect(0.88, -1.05, 1.0, 1.0, 0, paint);
+    if (dashed) {
+      // 路線バス等優先通行帯（327の5）は左右の区画線が破線。
+      for (var y = -1.0; y < 0.9; y += 0.4) {
+        _rrect(-1, y, -0.88, y + 0.24, 0, paint);
+        _rrect(0.88, y, 1, y + 0.24, 0, paint);
+      }
+    } else {
+      _rrect(-1.0, -1.05, -0.88, 1.0, 0, paint);
+      _rrect(0.88, -1.05, 1.0, 1.0, 0, paint);
+    }
     _rrect(-0.5, -1.0, 0.5, -0.42, 0.08, paint);
     _rrect(-0.42, -0.92, 0.42, -0.66, 0.03, cut);
     _circle(-0.3, -0.42, 0.1, cut);
@@ -845,9 +928,9 @@ class _SymbolPainter {
   }
 
   /// 正面から見た乗用車（青地に白。窓とライトは地色の青で抜く）。
-  void _carFront() {
+  void _carFront({Color cutColor = SignColors.blue}) {
     final paint = _fillPaint;
-    final cut = Paint()..color = SignColors.blue;
+    final cut = Paint()..color = cutColor;
     // キャビン
     canvas.drawPath(
       _poly([

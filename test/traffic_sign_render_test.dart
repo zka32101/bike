@@ -11,6 +11,7 @@ void main() {
   final out = Platform.environment['SIGN_OUT_DIR'];
   const ids = [
     'sign_no_overtaking',
+    'sign_no_motorcycles',
     'sign_no_overtaking_protrusion',
     'sign_vehicle_classification',
     'sign_crosswind',
@@ -35,6 +36,12 @@ void main() {
     'sign_aux_priority_ahead',
     'sign_aux_rail_caution',
     'sign_aux_animal_caution',
+    'sign_no_cars_except_motorcycles',
+    'sign_no_light_vehicles',
+    'sign_no_combined_vehicles',
+    'sign_vehicle_classification_specific',
+    'sign_priority_bus_lane',
+    'sign_center_line',
   ];
   test('render fixed signs', () async {
     final font = File(Platform.environment['SIGN_FONT'] ?? 'C:/Windows/Fonts/NotoSansJP-VF.ttf');
