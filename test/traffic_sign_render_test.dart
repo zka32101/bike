@@ -10,6 +10,10 @@ import 'package:flutter_test/flutter_test.dart';
 void main() {
   final out = Platform.environment['SIGN_OUT_DIR'];
   const ids = [
+    'sign_no_overtaking',
+    'sign_no_overtaking_protrusion',
+    'sign_vehicle_classification',
+    'sign_crosswind',
     'sign_no_u_turn',
     'sign_pedestrian_crossing',
     'sign_bicycle_crossing',

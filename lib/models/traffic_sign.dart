@@ -135,6 +135,9 @@ enum SignSymbol {
   /// 縦に並んだ2つの三角マーカー（安全地帯）
   safetyZoneMarkers,
 
+  /// 縦書きの文字2列「軽車両」「二輪」（車両通行区分・327）
+  vehicleClassText,
+
   /// 並んだ2本の上向き矢印（車両通行区分）
   laneArrows,
 
@@ -252,6 +255,7 @@ class TrafficSign {
     this.hasCrossSlash = false,
     this.hasHorizontalBar = false,
     this.auxPlateText,
+    this.auxPlateDoubleArrow = false,
     required this.questionText,
     required this.choices,
     required this.answer,
@@ -309,6 +313,9 @@ class TrafficSign {
 
   /// 本標識の下に付ける補助標識（白い四角板）の文字（警笛区間の「区間内」など）。
   final String? auxPlateText;
+
+  /// 本標識の下に付ける補助標識に、赤い左右両向きの矢印（506「区間内」）を描くか。
+  final bool auxPlateDoubleArrow;
 
   /// 赤い斜線（左上→右下）を重ねるか
   final bool hasDiagonalSlash;
@@ -871,7 +878,7 @@ const List<TrafficSign> kTrafficSigns = [
   // 22. 歩行者通行止め
   TrafficSign(
     id: 'sign_no_pedestrians',
-    name: '歩行者通行止め',
+    name: '歩行者等通行止め',
     category: _kRegulatory,
     shape: SignShape.square,
     backgroundColor: SignColors.white,
@@ -900,7 +907,7 @@ const List<TrafficSign> kTrafficSigns = [
   // 23. 自転車通行止め
   TrafficSign(
     id: 'sign_no_bicycles',
-    name: '自転車通行止め',
+    name: '特定小型原動機付自転車・自転車通行止め',
     category: _kRegulatory,
     shape: SignShape.circle,
     backgroundColor: SignColors.white,
@@ -1461,7 +1468,7 @@ const List<TrafficSign> kTrafficSigns = [
     rimWidthRatio: 0.025,
     symbol: SignSymbol.hornZone,
     symbolColor: SignColors.white,
-    auxPlateText: '区間内',
+    auxPlateDoubleArrow: true,
     questionText: 'この標識がある区間の通行について正しいのはどれか。',
     choices: [
       '区間内は常に警音器を鳴らし続けなければならない',
@@ -1480,13 +1487,12 @@ const List<TrafficSign> kTrafficSigns = [
     id: 'sign_vehicle_classification',
     name: '車両通行区分',
     category: _kRegulatory,
-    shape: SignShape.wideRect,
+    shape: SignShape.square,
     backgroundColor: SignColors.white,
     borderColor: SignColors.blue,
-    borderWidthRatio: 0.04,
-    centerText: '軽車両／二輪',
-    centerTextColor: SignColors.blue,
-    centerTextScale: 0.17,
+    borderWidthRatio: 0.022,
+    symbol: SignSymbol.vehicleClassText,
+    symbolColor: SignColors.blue,
     questionText: 'この標識の意味として正しいのはどれか。',
     choices: [
       '表示された種類の車両が通行すべき通行帯を指定している',
@@ -1772,7 +1778,7 @@ const List<TrafficSign> kTrafficSigns = [
 
   TrafficSign(
     id: 'sign_steep_up',
-    name: '上り急こう配あり',
+    name: '上り急勾配あり',
     category: _kWarning,
     shape: SignShape.diamond,
     backgroundColor: SignColors.yellow,
@@ -1799,7 +1805,7 @@ const List<TrafficSign> kTrafficSigns = [
 
   TrafficSign(
     id: 'sign_steep_down',
-    name: '下り急こう配あり',
+    name: '下り急勾配あり',
     category: _kWarning,
     shape: SignShape.diamond,
     backgroundColor: SignColors.yellow,
@@ -1996,7 +2002,7 @@ const List<TrafficSign> kTrafficSigns = [
 
   TrafficSign(
     id: 'sign_pedestrian_only',
-    name: '歩行者専用',
+    name: '歩行者等専用',
     category: _kRegulatory,
     shape: SignShape.circle,
     backgroundColor: SignColors.blue,
