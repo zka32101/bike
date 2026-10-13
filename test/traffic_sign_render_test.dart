@@ -42,6 +42,12 @@ void main() {
     'sign_vehicle_classification_specific',
     'sign_priority_bus_lane',
     'sign_center_line',
+    'sign_straight_or_left_only',
+    'sign_left_or_right_only',
+    'sign_straight_left_right',
+    'sign_straight_only',
+    'sign_left_turn_only',
+    'sign_straight_or_right_only',
   ];
   test('render fixed signs', () async {
     final font = File(Platform.environment['SIGN_FONT'] ?? 'C:/Windows/Fonts/NotoSansJP-VF.ttf');

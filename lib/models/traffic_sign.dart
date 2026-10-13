@@ -90,6 +90,15 @@ enum SignSymbol {
   /// 直進と右折の2方向の太い矢印（指定方向外進行禁止・直進・右折）
   arrowStraightRight,
 
+  /// 直進と左折の2方向の太い矢印（指定方向外進行禁止・311-A）
+  arrowStraightLeft,
+
+  /// 左折と右折の2方向の太い矢印（指定方向外進行禁止・311-D）
+  arrowLeftRight,
+
+  /// 直進・左折・右折の3方向の太い矢印（指定方向外進行禁止・311-E）
+  arrowStraightLeftRight,
+
   /// 数字の下の白い横線（最低速度）
   speedUnderline,
 
@@ -1018,6 +1027,75 @@ const List<TrafficSign> kTrafficSigns = [
     explanation:
         '「指定方向外進行禁止」の矢印が上と右を向いているので、進めるのは直進と右折だけで、左折は禁止される。'
         '矢印が示すのは「進んでよい方向」であることを覚えておこう。',
+  ),
+
+  // 指定方向外進行禁止（直進・左折）
+  TrafficSign(
+    id: 'sign_straight_or_left_only',
+    name: '指定方向外進行禁止（直進・左折）',
+    category: _kRegulatory,
+    shape: SignShape.circle,
+    backgroundColor: SignColors.blue,
+    rimColor: SignColors.white,
+    rimWidthRatio: 0.025,
+    symbol: SignSymbol.arrowStraightLeft,
+    symbolColor: SignColors.white,
+    questionText: 'この標識がある交差点での通行方法として正しいのはどれか。',
+    choices: [
+      '直進と左折はできるが、右折はできない',
+      '直進も左折もしてはいけない',
+      '右折だけができる',
+      'どの方向にも進める',
+    ],
+    answer: 0,
+    explanation:
+        '「指定方向外進行禁止」(311-A)は、矢印の方向以外への進行を禁じる標識。矢印が上と左を向いているので、進めるのは直進と左折だけで、右折は禁止される。',
+  ),
+
+  // 指定方向外進行禁止（左折・右折）
+  TrafficSign(
+    id: 'sign_left_or_right_only',
+    name: '指定方向外進行禁止（左折・右折）',
+    category: _kRegulatory,
+    shape: SignShape.circle,
+    backgroundColor: SignColors.blue,
+    rimColor: SignColors.white,
+    rimWidthRatio: 0.025,
+    symbol: SignSymbol.arrowLeftRight,
+    symbolColor: SignColors.white,
+    questionText: 'この標識がある交差点で、車両が進めるのはどの方向か。',
+    choices: [
+      '左折と右折だけ',
+      '直進と左折だけ',
+      '直進だけ',
+      '直進・左折・右折のすべて',
+    ],
+    answer: 0,
+    explanation:
+        '「指定方向外進行禁止」(311-D)は、矢印の方向以外への進行を禁じる標識。矢印が左と右を向いているので、進めるのは左折と右折だけで、直進は禁止される。',
+  ),
+
+  // 指定方向外進行禁止（直進・左折・右折）
+  TrafficSign(
+    id: 'sign_straight_left_right',
+    name: '指定方向外進行禁止（直進・左折・右折）',
+    category: _kRegulatory,
+    shape: SignShape.circle,
+    backgroundColor: SignColors.blue,
+    rimColor: SignColors.white,
+    rimWidthRatio: 0.025,
+    symbol: SignSymbol.arrowStraightLeftRight,
+    symbolColor: SignColors.white,
+    questionText: 'この標識がある交差点で、車両が進めるのはどの方向か。',
+    choices: [
+      '直進・左折・右折のいずれか',
+      '直進だけ',
+      '左折と右折だけ',
+      'どの方向にも進めない',
+    ],
+    answer: 0,
+    explanation:
+        '「指定方向外進行禁止」(311-E)は、矢印の方向以外への進行を禁じる標識。矢印が直進・左・右の3方向を向いているので、この3方向には進めるが、それ以外（転回など）は禁止される。',
   ),
 
   // 27. 最低速度
