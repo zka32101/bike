@@ -88,7 +88,6 @@ enum SignSymbol {
   arrowLeft,
 
   /// 直進と右折の2方向の太い矢印（指定方向外進行禁止・直進・右折）
-  arrowStraightRight,
 
   /// 直進と左折の2方向の太い矢印（指定方向外進行禁止・311-A）
   arrowStraightLeft,
@@ -1003,30 +1002,6 @@ const List<TrafficSign> kTrafficSigns = [
     explanation:
         '青い円に白い矢印の標識は、矢印の方向以外へ進むことを禁じる「指定方向外進行禁止」。'
         'この矢印は左を向いているので、左折しかできない。',
-  ),
-
-  // 26. 指定方向外進行禁止（直進・右折）
-  TrafficSign(
-    id: 'sign_straight_or_right_only',
-    name: '指定方向外進行禁止（直進・右折）',
-    category: _kRegulatory,
-    shape: SignShape.circle,
-    backgroundColor: SignColors.blue,
-    rimColor: SignColors.white,
-    rimWidthRatio: 0.025,
-    symbol: SignSymbol.arrowStraightRight,
-    symbolColor: SignColors.white,
-    questionText: 'この標識がある交差点での通行方法として正しいのはどれか。',
-    choices: [
-      '直進も右折もしてはいけない',
-      '直進と右折はできるが、左折はできない',
-      '右折する場合は必ず二段階で右折する',
-      '直進する車が右折する車より優先する',
-    ],
-    answer: 1,
-    explanation:
-        '「指定方向外進行禁止」の矢印が上と右を向いているので、進めるのは直進と右折だけで、左折は禁止される。'
-        '矢印が示すのは「進んでよい方向」であることを覚えておこう。',
   ),
 
   // 指定方向外進行禁止（直進・左折）

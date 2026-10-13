@@ -236,4 +236,4 @@ PDF（ichiran.pdf）の311は、A=直進・左折、B=左折、C=直進、D=左�
 | o301 | sign_straight_or_left_only (311-A) | 直進と左折だけ |
 | g043 | sign_straight_or_left_only (311-A) | 直進・左折の標識で右折はできない |
 
-注意: 既存の sign_straight_or_right_only（直進・右折）はPDFの311に該当図がない（Aは直進・左折）。標識クイズ側の扱いは別途要確認。
+注意: sign_straight_or_right_only（直進・右折）は公式311に該当図がないため削除済み（Aは直進・左折）。
