@@ -144,7 +144,10 @@ class TrafficSignPainter extends CustomPainter {
     if (sign.hasHorizontalBar) {
       _drawHorizontalBar(canvas, geo);
     }
-    if (sign.symbol != SignSymbol.none && sign.symbol != SignSymbol.uTurnArrow) {
+    if (sign.symbol != SignSymbol.none &&
+        sign.symbol != SignSymbol.uTurnArrow &&
+        sign.symbol != SignSymbol.overtakingProtrusion &&
+        sign.symbol != SignSymbol.carAndMotorcycle) {
       _drawSymbol(canvas, geo);
     }
     if (sign.centerIcon != null) {
@@ -173,7 +176,21 @@ class TrafficSignPainter extends CustomPainter {
       _drawCenterText(canvas, s, geo, halo: true);
     }
     // 転回禁止の矢印は公式の図と同じく、斜めの帯の手前に白い縁取り付きで描く。
-    if (sign.symbol == SignSymbol.uTurnArrow) {
+    // 車両（組合せ）通行止め（310）の車と二輪車も、公式の図と同じく帯の手前に白い縁取り付きで描く。
+    if (sign.symbol == SignSymbol.carAndMotorcycle) {
+      const d = 0.035;
+      for (var i = 0; i < 12; i++) {
+        final a = i * math.pi / 6;
+        final off = Offset(math.cos(a), math.sin(a)) * (geo.radius * d);
+        _SymbolPainter(canvas, geo.center + off, geo.radius * 0.62, SignColors.white,
+                fontFamily: fontFamily)
+            .draw(sign.symbol);
+      }
+    }
+    // 追越し禁止の矢印（314・314の2）も同じく帯の手前に描く。
+    if (sign.symbol == SignSymbol.uTurnArrow ||
+        sign.symbol == SignSymbol.overtakingProtrusion ||
+        sign.symbol == SignSymbol.carAndMotorcycle) {
       _drawSymbol(canvas, geo);
     }
     canvas.restore();
@@ -699,9 +716,9 @@ class _SymbolPainter {
 
   /// 上に乗用車、下に二輪車（310 車両（組合せ）通行止め）。
   void _carAndMotorcycle() {
-    _SymbolPainter(canvas, p(0, -0.62), k * 0.52, color, fontFamily: fontFamily)
+    _SymbolPainter(canvas, p(0, -0.62), k * 0.55, color, fontFamily: fontFamily)
         ._carFront(cutColor: SignColors.white);
-    _SymbolPainter(canvas, p(0, 0.46), k * 0.82, color, fontFamily: fontFamily)
+    _SymbolPainter(canvas, p(-0.03, 0.52), k * 0.62, color, fontFamily: fontFamily)
         ._motorcycle(withPassenger: false);
   }
 
@@ -781,38 +798,49 @@ class _SymbolPainter {
     arrow(0.4);
   }
 
-  /// 直進する矢印と、右へ出て戻る蛇行の矢印（追越しのための右側部分はみ出し通行禁止）。
+  /// 直進する短い矢印と、右へ出て戻る蛇行の矢印（追越しのための右側部分はみ出し通行禁止・追越し禁止）。
+  /// 国交省『道路標識一覧』の314・314の2の図に合わせた形。蛇行の矢印は斜めの帯の手前に白い縁取り付きで描く。
   void _overtakingProtrusion() {
-    final shaft = _stroke(0.15, cap: StrokeCap.butt);
-    _line(-0.5, 0.8, -0.5, -0.3, shaft);
+    canvas.save();
+    canvas.translate(c.dx, c.dy);
+    canvas.scale(1.4);
+    canvas.translate(-c.dx, -c.dy);
+    final white = SignColors.white;
+
+    // 左の短い直進矢印
+    _line(-0.38, 0.84, -0.38, 0.4, _stroke(0.15, cap: StrokeCap.butt));
     canvas.drawPath(
       _poly([
-        [-0.5, -0.95],
-        [-0.16, -0.3],
-        [-0.84, -0.3],
+        [-0.38, 0.0],
+        [-0.13, 0.47],
+        [-0.63, 0.47],
       ]),
       _fillPaint,
     );
+
+    // 右の蛇行矢印
     final path = Path();
-    final p0 = p(0.2, 0.8);
-    final p1 = p(0.2, 0.3);
-    final p2 = p(0.7, 0.1);
-    final p3 = p(0.7, -0.3);
+    final s0 = p(0.12, 0.92);
     path
-      ..moveTo(p0.dx, p0.dy)
-      ..lineTo(p1.dx, p1.dy)
-      ..cubicTo(p(0.2, 0.0).dx, p(0.2, 0.0).dy, p(0.7, 0.4).dx, p(0.7, 0.4).dy,
-          p2.dx, p2.dy)
-      ..lineTo(p3.dx, p3.dy);
-    canvas.drawPath(path, shaft);
+      ..moveTo(s0.dx, s0.dy)
+      ..cubicTo(p(0.36, 0.78).dx, p(0.36, 0.78).dy, p(0.43, 0.6).dx,
+          p(0.43, 0.6).dy, p(0.43, 0.32).dx, p(0.43, 0.32).dy)
+      ..cubicTo(p(0.43, -0.02).dx, p(0.43, -0.02).dy, p(0.1, -0.08).dx,
+          p(0.1, -0.08).dy, p(0.1, -0.42).dx, p(0.1, -0.42).dy);
+    final head = _poly([
+      [0.1, -1.02],
+      [0.48, -0.38],
+      [-0.28, -0.38],
+    ]);
+    canvas.drawPath(path, _stroke(0.17 + 0.14, paintColor: white, cap: StrokeCap.butt));
     canvas.drawPath(
-      _poly([
-        [0.7, -0.95],
-        [1.04, -0.3],
-        [0.36, -0.3],
-      ]),
-      _fillPaint,
+      head,
+      _stroke(0.14, paintColor: white, cap: StrokeCap.butt)
+        ..strokeJoin = StrokeJoin.miter,
     );
+    canvas.drawPath(path, _stroke(0.17, cap: StrokeCap.butt));
+    canvas.drawPath(head, _fillPaint);
+    canvas.restore();
   }
 
   /// 横から見た貨物自動車（右向き）。

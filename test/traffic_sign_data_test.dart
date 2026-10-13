@@ -109,6 +109,16 @@ void main() {
     expect(ov.slash, SignSlash.single);
   });
 
+  test('追越し禁止（314の2）は314と同じ図に補助標識「追越し禁止」(508の2)を付ける', () {
+    final a = sign('sign_no_overtaking');
+    final b = sign('sign_no_overtaking_protrusion');
+    expect(a.symbol, b.symbol);
+    expect(a.symbolColor, SignColors.blue);
+    expect(a.slash, SignSlash.single);
+    expect(a.auxPlateText, '追越し禁止');
+    expect(b.auxPlateText, isNull);
+  });
+
   test('警笛区間の補助板は506（左右両向きの矢印）で、文字板ではない', () {
     final h = sign('sign_horn_zone');
     expect(h.auxPlateDoubleArrow, isTrue);
@@ -155,8 +165,8 @@ void main() {
       'sign_moped_two_stage_right', 'sign_roundabout_circulation',
     ];
 
-    test('全部で91種になった', () {
-      expect(kTrafficSigns.length, 91);
+    test('全部で92種になった', () {
+      expect(kTrafficSigns.length, 92);
     });
 
     test('警戒標識は黄色いひし形（縁線・記号は黒）', () {

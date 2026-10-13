@@ -61,4 +61,40 @@ void main() {
             body: QuestionSignView(questionId: 'x', signs: m, answered: true))));
     expect(find.byType(TrafficSignWidget), findsOneWidget);
   });
+
+  test('補助標識(auxSignId)は501〜509の補助標識を指し、at146は駐車禁止＋8-20', () {
+    final byId = {for (final s in kTrafficSigns) s.id: s};
+    for (final e in kQuestionSigns.entries) {
+      final a = e.value.auxSignId;
+      if (a == null) continue;
+      expect(byId[a], isNotNull, reason: e.key);
+      expect(byId[a]!.shape, SignShape.auxPlate, reason: e.key);
+    }
+    final q = kQuestionSigns['at146']!;
+    expect(q.signId, 'sign_no_parking');
+    expect(byId[q.auxSignId]!.centerText, '8-20');
+  });
+
+  testWidgets('補助標識つきは本標識と補助板を縦に並べて出す', (tester) async {
+    tester.view.physicalSize = const Size(320, 640);
+    tester.view.devicePixelRatio = 1;
+    addTearDown(tester.view.reset);
+    await tester.pumpWidget(const MaterialApp(
+        home: Scaffold(
+            body: Column(children: [
+      QuestionSignView(questionId: 'at146', size: 120),
+    ]))));
+    expect(find.byType(TrafficSignWidget), findsNWidgets(2));
+    final main = tester.getRect(find.byType(TrafficSignWidget).first);
+    final aux = tester.getRect(
+        find.descendant(of: find.byType(QuestionSignView), matching: find.byType(ClipRect)).first);
+    expect(aux.top, greaterThan(main.bottom - 1));
+    expect(tester.takeException(), isNull);
+  });
+
+  testWidgets('補助標識なしの問題は従来どおり1枚だけ', (tester) async {
+    await tester.pumpWidget(const MaterialApp(
+        home: Scaffold(body: QuestionSignView(questionId: 'at030'))));
+    expect(find.byType(TrafficSignWidget), findsOneWidget);
+  });
 }
