@@ -412,6 +412,31 @@ const List<TrafficSign> kTrafficSigns = [
         'ただし一般原動機付自転車は、標識の数値が30を超えていても法定速度の時速30kmが上限となる点に注意。',
   ),
 
+  // 最高速度（50km/h）
+  TrafficSign(
+    id: 'sign_max_speed_50',
+    name: '最高速度（50km/h）',
+    category: _kRegulatory,
+    shape: SignShape.circle,
+    backgroundColor: SignColors.white,
+    borderColor: SignColors.red,
+    borderWidthRatio: 0.09,
+    centerText: '50',
+    centerTextColor: SignColors.blue,
+    centerTextScale: 0.46,
+    questionText: 'この標識が示す内容として正しいのはどれか。',
+    choices: [
+      'この先は時速50キロメートル以上で走らなければならない',
+      '車両は時速50キロメートルを超えて走ってはならない',
+      'この先50メートルで道路工事が行われている',
+      '重量50トンを超える車両は通行できない',
+    ],
+    answer: 1,
+    explanation:
+        '「最高速度」の規制標識で、表示された速度（ここでは時速50km）を超えて走ってはいけない。'
+        'ただし一般原動機付自転車は、標識の数値が30を超えていても法定速度の時速30kmが上限となる点に注意。',
+  ),
+
   // 2. 一時停止
   TrafficSign(
     id: 'sign_stop',
@@ -508,7 +533,10 @@ const List<TrafficSign> kTrafficSigns = [
         '一人乗りであれば通行できる。',
   ),
 
-  // 6. 追越し禁止
+  // 6. 追越し禁止（314の2）
+  // 標識令・国交省『道路標識一覧』では、314「追越しのための右側部分はみ出し通行禁止」と
+  // 314の2「追越し禁止」は同じ図（青い矢印＋赤い斜めの帯）で、追越し禁止には補助標識
+  // 「追越し禁止」(508の2)を附置する（標識令 別表第一の附置規定）。
   TrafficSign(
     id: 'sign_no_overtaking',
     name: '追越し禁止',
@@ -517,8 +545,10 @@ const List<TrafficSign> kTrafficSigns = [
     backgroundColor: SignColors.white,
     borderColor: SignColors.red,
     borderWidthRatio: 0.09,
-    symbol: SignSymbol.twoCars,
+    symbol: SignSymbol.overtakingProtrusion,
+    symbolColor: SignColors.blue,
     hasDiagonalSlash: true,
+    auxPlateText: '追越し禁止',
     questionText: 'この標識が示す規制はどれか。',
     choices: [
       '車両の並進（横に並んで走ること）の禁止',
@@ -528,8 +558,9 @@ const List<TrafficSign> kTrafficSigns = [
     ],
     answer: 2,
     explanation:
-        '2台の車に斜線を重ねた図柄は「追越し禁止」。この区間では前の車を追い越してはいけない。'
-        '二輪車であっても例外ではない。',
+        '白地・赤枠の円に青い矢印と赤い斜めの帯が入り、下に補助標識「追越し禁止」が付いたものが「追越し禁止」（314の2）。'
+        'この区間では前の車を追い越してはいけない。二輪車であっても例外ではない。'
+        '円の図は「追越しのための右側部分はみ出し通行禁止」（314）と同じで、追越し禁止には補助標識が付く。',
   ),
 
   // 7. 車両通行止め
@@ -1591,7 +1622,7 @@ const List<TrafficSign> kTrafficSigns = [
     questionText: 'この標識の意味として正しいのはどれか。',
     choices: [
       '追越しのため、道路の右側部分にはみ出して通行してはならない',
-      '追越しそのものが全面的に禁止されている',
+      '前の車を追い越すことも、追い越されることも禁止されている',
       '右折のため道路の右側に寄ってはならない',
       '道路の右側部分を通行しなければならない',
     ],
@@ -1636,14 +1667,15 @@ const List<TrafficSign> kTrafficSigns = [
     symbolColor: SignColors.white,
     questionText: 'この標識の意味として正しいのはどれか。',
     choices: [
-      '二輪車などが並んで走ることができる',
+      '普通自転車が2台まで並んで走ることができる',
       '二輪車は二人乗りができる',
       '二輪車は追越しができる',
       '二輪車の駐車場がある',
     ],
     answer: 0,
     explanation:
-        '青い四角に、二輪車の運転者が横に2人並んだ図柄の標識は「並進可」。軽車両や二輪車などが、並んで進むことができる道路であることを示す。',
+        '青い四角（正方形）に、自転車に乗った人が横に2人並んだ図柄の標識は「並進可」（標識令401）。'
+        '普通自転車が他の普通自転車と並んで走ること（3台以上並ぶ場合を除く）ができる道路であることを示す。',
   ),
 
   TrafficSign(

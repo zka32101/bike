@@ -14,11 +14,15 @@ enum QSMode {
 
 /// 問題と標識の対応。
 class QuestionSign {
-  const QuestionSign(this.signId, this.mode);
+  const QuestionSign(this.signId, this.mode, {this.auxSignId});
 
   /// [kTrafficSigns] の id。
   final String signId;
   final QSMode mode;
+
+  /// 本標識の下に縦に並べる補助標識（501〜509）の [kTrafficSigns] の id。
+  /// 問題文が補助標識の内容に触れていて、板の内容が問題文と一致する場合だけ指定する。
+  final String? auxSignId;
 }
 
 /// 問題ID → 標識の対応表。
@@ -30,6 +34,8 @@ const Map<String, QuestionSign> kQuestionSigns = {
   'at099': QuestionSign('sign_no_tandem', QSMode.question),
   'at117': QuestionSign('sign_no_cars_except_motorcycles', QSMode.question),
   'at118': QuestionSign('sign_no_motorcycles', QSMode.question),
+  'at146': QuestionSign('sign_no_parking', QSMode.question,
+      auxSignId: 'sign_aux_time'),
   'at150': QuestionSign('sign_moped_two_stage_right', QSMode.question),
   'at183': QuestionSign('sign_pedestrian_only', QSMode.question),
   'at184': QuestionSign('sign_one_way', QSMode.question),
@@ -65,6 +71,7 @@ const Map<String, QuestionSign> kQuestionSigns = {
   'at343': QuestionSign('sign_right_curve', QSMode.question),
   'at345': QuestionSign('sign_bicycle_crossing', QSMode.question),
   'at346': QuestionSign('sign_one_way', QSMode.question),
+  'at348': QuestionSign('sign_no_overtaking', QSMode.question),
   'at349': QuestionSign('sign_center_line', QSMode.question),
   'f044': QuestionSign('sign_stop', QSMode.question),
   'f228': QuestionSign('sign_no_motorcycles', QSMode.question),
@@ -77,6 +84,7 @@ const Map<String, QuestionSign> kQuestionSigns = {
   'f306': QuestionSign('sign_no_u_turn', QSMode.question),
   'f307': QuestionSign('sign_no_stopping', QSMode.question),
   'f309': QuestionSign('sign_one_way', QSMode.question),
+  'f310': QuestionSign('sign_no_overtaking', QSMode.question),
   'f312': QuestionSign('sign_crossroad_ahead', QSMode.question),
   'f313': QuestionSign('sign_no_large_trucks', QSMode.question),
   'f315': QuestionSign('sign_parking_angled', QSMode.question),
@@ -152,6 +160,7 @@ const Map<String, QuestionSign> kQuestionSigns = {
   'kg121': QuestionSign('sign_moped_two_stage_right', QSMode.question),
   'kg122': QuestionSign('sign_no_cars_except_motorcycles', QSMode.question),
   'kg158': QuestionSign('sign_no_parking', QSMode.question),
+  'kg160': QuestionSign('sign_max_speed_50', QSMode.question),
   'kg301': QuestionSign('sign_no_u_turn', QSMode.question),
   'kg303': QuestionSign('sign_safety_zone', QSMode.question),
   'kg304': QuestionSign('sign_falling_rocks', QSMode.question),
@@ -186,6 +195,8 @@ const Map<String, QuestionSign> kQuestionSigns = {
   'kg348': QuestionSign('sign_parking_parallel', QSMode.question),
   'kg349': QuestionSign('sign_straight_left_right', QSMode.question),
   'o031': QuestionSign('sign_stop', QSMode.question),
+  'o211': QuestionSign('sign_moped_two_stage_right', QSMode.question),
+  'o300': QuestionSign('sign_no_tandem', QSMode.question),
   'o301': QuestionSign('sign_straight_or_left_only', QSMode.question),
   'o303': QuestionSign('sign_no_overtaking_protrusion', QSMode.question),
   'o304': QuestionSign('sign_min_speed_30', QSMode.question),
@@ -255,9 +266,38 @@ class QuestionSignView extends StatelessWidget {
       }
     }
     if (sign == null) return const SizedBox.shrink();
+    Widget picture = TrafficSignWidget(sign: sign, size: size);
+    final auxId = entry.auxSignId;
+    if (auxId != null) {
+      TrafficSign? aux;
+      for (final s in kTrafficSigns) {
+        if (s.id == auxId) {
+          aux = s;
+          break;
+        }
+      }
+      if (aux != null) {
+        // 補助標識の板は正方形の描画領域の中央にある（縦は約42%）ので、上下の余白を切って
+        // 本標識の真下に詰めて並べる。
+        final auxSize = size * 0.8;
+        picture = Column(
+          mainAxisSize: MainAxisSize.min,
+          children: [
+            picture,
+            SizedBox(height: size * 0.03),
+            ClipRect(
+              child: Align(
+                heightFactor: 0.5,
+                child: TrafficSignWidget(sign: aux, size: auxSize),
+              ),
+            ),
+          ],
+        );
+      }
+    }
     return Padding(
       padding: const EdgeInsets.symmetric(vertical: 8),
-      child: Center(child: TrafficSignWidget(sign: sign, size: size)),
+      child: Center(child: picture),
     );
   }
 }

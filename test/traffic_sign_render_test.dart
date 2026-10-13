@@ -11,6 +11,9 @@ void main() {
   final out = Platform.environment['SIGN_OUT_DIR'];
   const ids = [
     'sign_no_overtaking',
+    'sign_max_speed_50',
+    'sign_no_parking',
+    'sign_side_by_side_ok',
     'sign_no_motorcycles',
     'sign_no_overtaking_protrusion',
     'sign_vehicle_classification',
