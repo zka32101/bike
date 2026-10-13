@@ -561,7 +561,13 @@ class _SymbolPainter {
       case SignSymbol.arrowLeft:
         _turnArrow(-1, 0.4);
       case SignSymbol.arrowStraightRight:
-        _arrowStraightRight();
+        _branchArrows(straight: true, left: false, right: true);
+      case SignSymbol.arrowStraightLeft:
+        _branchArrows(straight: true, left: true, right: false);
+      case SignSymbol.arrowLeftRight:
+        _branchArrows(straight: false, left: true, right: true);
+      case SignSymbol.arrowStraightLeftRight:
+        _branchArrows(straight: true, left: true, right: true);
       case SignSymbol.speedUnderline:
         _rrect(-0.72, 0.62, 0.72, 0.8, 0.02, _fillPaint);
       case SignSymbol.heightMarkers:
@@ -1038,37 +1044,43 @@ class _SymbolPainter {
     );
   }
 
-  /// 直進と右折の2方向を示す太い矢印。
-  void _arrowStraightRight() {
-    const x0 = -0.4;
+  /// 指定方向外進行禁止（311-A〜E）の分岐矢印。直進・左折・右折の組み合わせを描く。
+  void _branchArrows({required bool straight, required bool left, required bool right}) {
+    // 直進＋片側の分岐は軸を反対側へ寄せ、それ以外は中央に置く。
+    final x0 = (straight && left != right) ? (left ? 0.4 : -0.4) : 0.0;
     final shaft = _stroke(0.34, cap: StrokeCap.butt);
-    // 直進の軸と矢じり
-    _line(x0, 0.95, x0, -0.4, shaft);
-    canvas.drawPath(
-      _poly([
-        [x0, -1.0],
-        [x0 + 0.5, -0.38],
-        [x0 - 0.5, -0.38],
-      ]),
-      _fillPaint,
-    );
-    // 右折の枝と矢じり
-    final branch = Path();
-    final s0 = p(x0, 0.6);
-    final ctrl = p(x0, 0.2);
-    final e = p(x0 + 0.62, 0.2);
-    branch
-      ..moveTo(s0.dx, s0.dy)
-      ..quadraticBezierTo(ctrl.dx, ctrl.dy, e.dx, e.dy);
-    canvas.drawPath(branch, shaft);
-    canvas.drawPath(
-      _poly([
-        [x0 + 1.3, 0.2],
-        [x0 + 0.6, -0.3],
-        [x0 + 0.6, 0.7],
-      ]),
-      _fillPaint,
-    );
+    final base = straight ? -0.4 : 0.2;
+    _line(x0, 0.95, x0, base, shaft);
+    if (straight) {
+      canvas.drawPath(
+        _poly([
+          [x0, -1.0],
+          [x0 + 0.5, -0.38],
+          [x0 - 0.5, -0.38],
+        ]),
+        _fillPaint,
+      );
+    }
+    final headBase = x0 == 0 ? 0.36 : 0.2;
+    for (final dir in [if (left) -1.0 else null, if (right) 1.0 else null]) {
+      if (dir == null) continue;
+      final branch = Path();
+      final s0 = p(x0, 0.6);
+      final ctrl = p(x0, 0.2);
+      final e = p(dir * (headBase + 0.02), 0.2);
+      branch
+        ..moveTo(s0.dx, s0.dy)
+        ..quadraticBezierTo(ctrl.dx, ctrl.dy, e.dx, e.dy);
+      canvas.drawPath(branch, shaft);
+      canvas.drawPath(
+        _poly([
+          [dir * 0.9, 0.2],
+          [dir * (headBase - 0.02), -0.3],
+          [dir * (headBase - 0.02), 0.7],
+        ]),
+        _fillPaint,
+      );
+    }
   }
 
   /// 文字の上下に置く、文字へ向かい合う三角（高さ制限）。
