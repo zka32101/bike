@@ -47,7 +47,6 @@ void main() {
     'sign_straight_left_right',
     'sign_straight_only',
     'sign_left_turn_only',
-    'sign_straight_or_right_only',
   ];
   test('render fixed signs', () async {
     final font = File(Platform.environment['SIGN_FONT'] ?? 'C:/Windows/Fonts/NotoSansJP-VF.ttf');

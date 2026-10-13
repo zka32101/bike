@@ -560,8 +560,6 @@ class _SymbolPainter {
         _turnArrow(1, 0.26);
       case SignSymbol.arrowLeft:
         _turnArrow(-1, 0.4);
-      case SignSymbol.arrowStraightRight:
-        _branchArrows(straight: true, left: false, right: true);
       case SignSymbol.arrowStraightLeft:
         _branchArrows(straight: true, left: true, right: false);
       case SignSymbol.arrowLeftRight:
