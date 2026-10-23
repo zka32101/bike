@@ -3,6 +3,8 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 import '../core/constants/license_category.dart';
 import '../viewmodels/providers.dart';
+import '../viewmodels/solve_coverage_providers.dart';
+import '../widgets/solve_coverage_badge.dart';
 import 'exam_date_setting_view.dart';
 
 /// 免許区分選択（複数選択可）。
@@ -113,7 +115,7 @@ class _LicenseCategorySelectViewState
   }
 }
 
-class _CategoryTile extends StatelessWidget {
+class _CategoryTile extends ConsumerWidget {
   const _CategoryTile({
     required this.category,
     required this.selected,
@@ -125,12 +127,16 @@ class _CategoryTile extends StatelessWidget {
   final ValueChanged<bool> onChanged;
 
   @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext context, WidgetRef ref) {
+    final coverage = ref.watch(categoryCoverageProvider(category.name)).valueOrNull;
     return Card(
       child: CheckboxListTile(
         value: selected,
         onChanged: (v) => onChanged(v ?? false),
         title: Text(category.label),
+        secondary: coverage == null || coverage.total == 0
+            ? null
+            : SolveCoverageBadge(coverage: coverage, name: category.label),
         controlAffinity: ListTileControlAffinity.leading,
       ),
     );
