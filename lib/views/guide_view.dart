@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 
 import '../models/guide_article.dart';
 import '../widgets/guide_diagrams.dart';
+import 'skill_exam_view.dart';
 
 /// 「役立つ情報」の一覧。
 class GuideListView extends StatelessWidget {
@@ -14,9 +15,22 @@ class GuideListView extends StatelessWidget {
       body: SafeArea(
         child: ListView.separated(
           padding: const EdgeInsets.all(16),
-          itemCount: kGuideArticles.length,
+          itemCount: kGuideArticles.length + 1,
           separatorBuilder: (_, __) => const SizedBox(height: 12),
           itemBuilder: (context, i) {
+            if (i == kGuideArticles.length) {
+              return Card(
+                child: ListTile(
+                  contentPadding: const EdgeInsets.all(16),
+                  title: const Text('技能試験のコツ'),
+                  subtitle: const Text('一本橋・スラローム・急制動など、種目ごとのコツと練習チェックリスト'),
+                  trailing: const Icon(Icons.chevron_right),
+                  onTap: () => Navigator.of(context).push(
+                    MaterialPageRoute(builder: (_) => const SkillExamListView()),
+                  ),
+                ),
+              );
+            }
             final a = kGuideArticles[i];
             return Card(
               child: ListTile(
