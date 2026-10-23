@@ -85,6 +85,15 @@ class BikeLicenseKoreApp extends ConsumerWidget {
         GlobalCupertinoLocalizations.delegate,
       ],
       supportedLocales: AppLocalizations.supportedLocales,
+      // 対応言語は ja / en のみ。それ以外の端末ロケールは ja にフォールバックする。
+      localeResolutionCallback: (locale, supported) {
+        if (locale != null) {
+          for (final s in supported) {
+            if (s.languageCode == locale.languageCode) return s;
+          }
+        }
+        return const Locale('ja');
+      },
       home: const _StartupGate(),
     );
   }
