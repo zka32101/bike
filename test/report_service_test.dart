@@ -1,6 +1,6 @@
 import 'package:flutter_test/flutter_test.dart';
-import 'package:your_app_name/models/report_model.dart';
-import 'package:your_app_name/services/report_service.dart';
+import 'package:bike_license_kore/models/report_model.dart';
+import 'package:bike_license_kore/services/report_service.dart';
 
 void main() {
   group('ReportService Tests', () {
@@ -160,7 +160,7 @@ void main() {
       );
 
       // 異なるレポートなので別の ID を持つ
-      expect(report1.id, isNotEqualTo(report2.id));
+      expect(report1.id, isNot(equals(report2.id)));
     });
 
     test('Template retrieval: Predefined templates are available', () {
