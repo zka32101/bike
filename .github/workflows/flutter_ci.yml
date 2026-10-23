@@ -30,7 +30,15 @@ jobs:
         continue-on-error: true
 
       - name: Generate code (build_runner)
-        run: flutter pub run build_runner build --delete-conflicting-outputs
+        timeout-minutes: 10
+        run: |
+          # lib/test に生成コード(part '*.g.dart' / '*.freezed.dart')を使うソースが無ければ不要。
+          # 旧 analyzer 7.x と Dart 3.12 の不整合で build_runner が無限待機するため、不要時はスキップする。
+          if grep -rEq "^part '.*\.(g|freezed)\.dart';" lib test; then
+            dart run build_runner build --delete-conflicting-outputs
+          else
+            echo "No generated-code 'part' directives found - skipping build_runner"
+          fi
 
   build-android:
     name: Build Android APK
@@ -55,7 +63,15 @@ jobs:
         continue-on-error: true
 
       - name: Generate code (build_runner)
-        run: flutter pub run build_runner build --delete-conflicting-outputs
+        timeout-minutes: 10
+        run: |
+          # lib/test に生成コード(part '*.g.dart' / '*.freezed.dart')を使うソースが無ければ不要。
+          # 旧 analyzer 7.x と Dart 3.12 の不整合で build_runner が無限待機するため、不要時はスキップする。
+          if grep -rEq "^part '.*\.(g|freezed)\.dart';" lib test; then
+            dart run build_runner build --delete-conflicting-outputs
+          else
+            echo "No generated-code 'part' directives found - skipping build_runner"
+          fi
 
       - name: Setup Java
         uses: actions/setup-java@v4
