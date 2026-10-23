@@ -11,8 +11,7 @@ import 'exam_date_setting_view.dart';
 ///
 /// 【差別化の重心】表示順は普通二輪・大型二輪を先頭に置き、原付は
 /// 入口として残しつつ主役にしない（企画設計書 v1.1）。
-/// 区分の選択自体は制限しない。無料でフルアクセスできるのは原付の
-/// 先頭30問のみで、他区分・原付の残り問題はパス購入で解放される。
+/// 区分の選択自体は制限しない。全区分の全問題と解説は無料で使える（購入は広告の非表示とプレミアム機能のため）。
 class LicenseCategorySelectView extends ConsumerStatefulWidget {
   const LicenseCategorySelectView({super.key});
 

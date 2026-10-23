@@ -305,7 +305,7 @@ abstract class AppLocalizations {
   /// No description provided for @homeMockExamSubtitle.
   ///
   /// In ja, this message translates to:
-  /// **'{count}問・{minutes}分・合格ライン90%（パス購入で利用可）'**
+  /// **'{count}問・{minutes}分・合格ライン90%'**
   String homeMockExamSubtitle(int count, int minutes);
 
   /// No description provided for @homeSignQuizSubtitle.

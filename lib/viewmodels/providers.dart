@@ -414,7 +414,7 @@ class DailyQuotaState {
   final bool loading;
 
   /// 無料版でフルアクセス権のない区分を開いた場合 true。
-  /// この場合 [questions] は空で、UI側はパス購入への導線を表示する。
+  /// この場合 [questions] は空で、UI側は案内を表示する。
   final bool locked;
 
   Question? get currentQuestion =>

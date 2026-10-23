@@ -58,7 +58,7 @@
   "homeUnlockWithPass": "パス購入で解放されます",
   "homeStudyModeSubtitle": "問題・正解・解説を読んで学習",
   "homeAnalyticsSubtitle": "弱点と伸びを確認",
-  "homeMockExamSubtitle": "{count}問・{minutes}分・合格ライン90%（パス購入で利用可）",
+  "homeMockExamSubtitle": "{count}問・{minutes}分・合格ライン90%",
   "@homeMockExamSubtitle": {
     "placeholders": {
       "count": {

@@ -10,19 +10,23 @@ const _noAds = EntitlementState(hasNoAds: true);
 const _offers = [
   EntitlementOffer(
     id: 'noads',
-    productId: 'noads_480',
+    productId: 'bike_license_noads',
     title: '広告なし',
     priceString: '¥480',
   ),
   EntitlementOffer(
-    id: 'p30',
-    productId: 'premium_30d',
-    title: 'プレミアム 30日',
-    priceString: '¥600',
+    id: 'premium',
+    productId: 'bike_license_premium',
+    title: 'プレミアム',
+    priceString: '¥1,500',
   ),
 ];
 
 Future<void> _pump(WidgetTester tester, FakeEntitlementService service) async {
+  // 一覧が長くても全商品が画面内に入るよう、縦に大きい画面で表示する。
+  tester.view.physicalSize = const Size(800, 1800);
+  tester.view.devicePixelRatio = 1.0;
+  addTearDown(tester.view.reset);
   await tester.pumpWidget(
     ProviderScope(
       overrides: [entitlementServiceProvider.overrideWithValue(service)],
@@ -52,12 +56,16 @@ void main() {
     // 「広告なし」は商品名と比較表の見出しの両方に出る。
     expect(find.text('広告なし'), findsNWidgets(2));
     expect(find.text('¥480'), findsOneWidget);
-    expect(find.text('プレミアム 30日'), findsOneWidget);
-    expect(find.text('¥600'), findsOneWidget);
+    expect(find.text('プレミアム'), findsNWidgets(2)); // 商品名と比較表の見出し
+    expect(find.text('¥1,500'), findsOneWidget);
     // 比較表に、実装済みのプレミアム特典が出る。
     expect(find.textContaining('模擬テストが回数無制限（無料は月1回）'), findsOneWidget);
     expect(find.textContaining('無料は上位3分野'), findsOneWidget);
     expect(find.textContaining('すべての問題と解説は無料'), findsOneWidget);
+    expect(find.textContaining('危険予測シナリオの全シナリオ'), findsOneWidget);
+    // 期間パス（30日／90日）は扱わない。
+    expect(find.textContaining('30日'), findsNothing);
+    expect(find.textContaining('90日'), findsNothing);
   });
 
   testWidgets('商品が取得できないときは案内を出す', (tester) async {
@@ -68,7 +76,7 @@ void main() {
   testWidgets('購入に成功すると画面を閉じ、権利が反映される', (tester) async {
     final service = FakeEntitlementService(
       availableOffers: _offers,
-      grantOnPurchase: {'noads_480': _noAds},
+      grantOnPurchase: {'bike_license_noads': _noAds},
     );
     await _pump(tester, service);
     await tester.tap(find.text('¥480'));
@@ -80,7 +88,7 @@ void main() {
 
   testWidgets('購入に失敗するとメッセージを出して画面に残る', (tester) async {
     await _pump(tester, FakeEntitlementService(availableOffers: _offers));
-    await tester.tap(find.text('¥600'));
+    await tester.tap(find.text('¥1,500'));
     await tester.pumpAndSettle();
 
     expect(find.textContaining('購入できませんでした'), findsOneWidget);
