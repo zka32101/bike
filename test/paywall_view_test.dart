@@ -23,6 +23,10 @@ const _offers = [
 ];
 
 Future<void> _pump(WidgetTester tester, FakeEntitlementService service) async {
+  // 一覧が長くても全商品が画面内に入るよう、縦に大きい画面で表示する。
+  tester.view.physicalSize = const Size(800, 1800);
+  tester.view.devicePixelRatio = 1.0;
+  addTearDown(tester.view.reset);
   await tester.pumpWidget(
     ProviderScope(
       overrides: [entitlementServiceProvider.overrideWithValue(service)],
