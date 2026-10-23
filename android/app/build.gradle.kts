@@ -24,6 +24,13 @@ val hasReleaseSigning: Boolean =
         "keyPassword" to "UPLOAD_KEY_PASSWORD",
     ).all { (k, e) -> signingProp(k, e) != null }
 
+// AdMob App ID（注入式）。-PADMOB_APP_ID または環境変数 ADMOB_APP_ID。
+val admobAppId: String? =
+    (findProperty("ADMOB_APP_ID") as String?)?.takeIf { it.isNotBlank() }
+        ?: System.getenv("ADMOB_APP_ID")?.takeIf { it.isNotBlank() }
+// Google 公式のテスト App ID（debug 用フォールバック）
+val ADMOB_TEST_APP_ID = "ca-app-pub-3940256099942544~3347511713"
+
 android {
     namespace = "com.yourwish.bikelicense"
     compileSdk = flutter.compileSdkVersion
@@ -47,11 +54,11 @@ android {
         versionName = flutter.versionName
         multiDexEnabled = true
 
-        // AdMob App ID。「原付・バイク免許コレ！」用に発行済み（2026-09-28）。
-        // App IDはアプリ識別用の公開情報のためデフォルト値として埋め込み、
-        // 環境変数 ADMOB_APP_ID_ANDROID で上書きも可能にしておく。
-        manifestPlaceholders["admobAppId"] =
-            System.getenv("ADMOB_APP_ID_ANDROID") ?: "ca-app-pub-5058227312086483~9215678835"
+        // AdMob App ID は注入式（ソースに本番IDを置かない）。
+        // gradle プロパティ -PADMOB_APP_ID または環境変数 ADMOB_APP_ID。
+        // 未設定時は Google 公式のテスト App ID（debug 用）。release で未設定なら
+        // 下の taskGraph チェックで失敗する。
+        manifestPlaceholders["admobAppId"] = admobAppId ?: ADMOB_TEST_APP_ID
     }
 
     signingConfigs {
@@ -91,6 +98,14 @@ gradle.taskGraph.whenReady {
         it.project == project && Regex("^(assemble|bundle|package)(.*)Release$").matches(it.name)
     }
     if (releaseRequested) {
+        if (admobAppId == null) {
+            throw GradleException(
+                "release ビルドには AdMob App ID が必要です。-PADMOB_APP_ID または環境変数 ADMOB_APP_ID を設定してください。"
+            )
+        }
+        if (admobAppId.startsWith("ca-app-pub-3940256099942544")) {
+            throw GradleException("release ビルドに Google のテスト AdMob App ID は使えません。")
+        }
         if (!hasReleaseSigning) {
             throw GradleException(
                 "release ビルドには署名鍵が必要です。android/key.properties " +

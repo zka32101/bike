@@ -151,9 +151,14 @@ jobs:
           UPLOAD_KEY_PASSWORD: ${{ secrets.UPLOAD_KEY_PASSWORD }}
           UPLOAD_KEY_ALIAS: ${{ secrets.UPLOAD_KEY_ALIAS }}
           GOOGLE_SERVICES_JSON_BASE64: ${{ secrets.GOOGLE_SERVICES_JSON_BASE64 }}
+          RC_GOOGLE_KEY: ${{ secrets.RC_GOOGLE_KEY }}
+          ADMOB_APP_ID: ${{ secrets.ADMOB_APP_ID }}
+          AD_BANNER_ID: ${{ secrets.AD_BANNER_ID }}
+          AD_INTERSTITIAL_ID: ${{ secrets.AD_INTERSTITIAL_ID }}
+          AD_REWARDED_ID: ${{ secrets.AD_REWARDED_ID }}
         run: |
           missing=0
-          for v in UPLOAD_KEYSTORE_BASE64 UPLOAD_STORE_PASSWORD UPLOAD_KEY_PASSWORD UPLOAD_KEY_ALIAS GOOGLE_SERVICES_JSON_BASE64; do
+          for v in UPLOAD_KEYSTORE_BASE64 UPLOAD_STORE_PASSWORD UPLOAD_KEY_PASSWORD UPLOAD_KEY_ALIAS GOOGLE_SERVICES_JSON_BASE64 RC_GOOGLE_KEY ADMOB_APP_ID AD_BANNER_ID AD_INTERSTITIAL_ID AD_REWARDED_ID; do
             if [ -z "${!v}" ]; then
               echo "::error::Secret $v が未設定です。release ビルドは実行できません"
               missing=1
@@ -175,10 +180,17 @@ jobs:
           UPLOAD_STORE_PASSWORD: ${{ secrets.UPLOAD_STORE_PASSWORD }}
           UPLOAD_KEY_PASSWORD: ${{ secrets.UPLOAD_KEY_PASSWORD }}
           UPLOAD_KEY_ALIAS: ${{ secrets.UPLOAD_KEY_ALIAS }}
+          RC_GOOGLE_KEY: ${{ secrets.RC_GOOGLE_KEY }}
+          ADMOB_APP_ID: ${{ secrets.ADMOB_APP_ID }}
+          AD_BANNER_ID: ${{ secrets.AD_BANNER_ID }}
+          AD_INTERSTITIAL_ID: ${{ secrets.AD_INTERSTITIAL_ID }}
+          AD_REWARDED_ID: ${{ secrets.AD_REWARDED_ID }}
         run: |
           export UPLOAD_STORE_FILE="$RUNNER_TEMP/upload-keystore.jks"
-          flutter build apk --release
-          flutter build appbundle --release
+          DEFINES="--dart-define=RC_GOOGLE_KEY=$RC_GOOGLE_KEY --dart-define=AD_BANNER_ID=$AD_BANNER_ID --dart-define=AD_INTERSTITIAL_ID=$AD_INTERSTITIAL_ID --dart-define=AD_REWARDED_ID=$AD_REWARDED_ID"
+          # ADMOB_APP_ID は環境変数として gradle が読む（manifestPlaceholders）
+          flutter build apk --release $DEFINES
+          flutter build appbundle --release $DEFINES
 
       - name: Remove keystore
         if: always()

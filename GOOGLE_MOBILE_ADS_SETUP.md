@@ -348,48 +348,31 @@ Google Play 内部テスト配信時も AdMob は動作します。
 
 ## Step 7: Production Ad Unit ID への切り替え
 
-### 7.1 Ad Unit ID を環境変数で管理
+本番の App ID / 広告ユニットIDはソースやドキュメントに書かず、ビルド時に注入する。
 
-```dart
-// lib/config/ad_unit_config.dart (新規作成)
+| 用途 | 注入方法 | 名前（CI Secrets も同名） |
+|---|---|---|
+| AdMob App ID（Android） | 環境変数 または `-P` | `ADMOB_APP_ID` |
+| バナー | `--dart-define` | `AD_BANNER_ID` |
+| インタースティシャル | `--dart-define` | `AD_INTERSTITIAL_ID` |
+| リワード | `--dart-define` | `AD_REWARDED_ID` |
+| RevenueCat 公開SDKキー（Android） | `--dart-define` | `RC_GOOGLE_KEY` |
 
-class AdUnitConfig {
-  static const String interstitialAdUnitId = String.fromEnvironment(
-    'INTERSTITIAL_AD_UNIT_ID',
-    defaultValue: 'ca-app-pub-3940256099942544/1033173712', // テスト ID
-  );
-
-  static const String rewardedAdUnitId = String.fromEnvironment(
-    'REWARDED_AD_UNIT_ID',
-    defaultValue: 'ca-app-pub-3940256099942544/5224354917', // テスト ID
-  );
-}
-```
-
-### 7.2 main.dart で読み込み
-
-```dart
-import 'config/ad_unit_config.dart';
-
-await GoogleMobileAdsService().initialize(
-  interstitialAdUnitId: AdUnitConfig.interstitialAdUnitId,
-  rewardedAdUnitId: AdUnitConfig.rewardedAdUnitId,
-);
-```
-
-### 7.3 本番ビルド時に指定
+取得先: AdMob コンソール > アプリ > アプリ設定（App ID）／広告ユニット（各ユニットID）。
+RevenueCat は プロジェクト設定 > API keys の Public SDK key。
 
 ```bash
-# iOS
-flutter build ios --release \
-  --dart-define=INTERSTITIAL_AD_UNIT_ID=ca-app-pub-xxxxxxxxxxxxxxxx/yyyyyyyyyy \
-  --dart-define=REWARDED_AD_UNIT_ID=ca-app-pub-xxxxxxxxxxxxxxxx/zzzzzzzzzz
-
-# Android
+export ADMOB_APP_ID=<AdMob App ID>
 flutter build appbundle --release \
-  --dart-define=INTERSTITIAL_AD_UNIT_ID=ca-app-pub-xxxxxxxxxxxxxxxx/yyyyyyyyyy \
-  --dart-define=REWARDED_AD_UNIT_ID=ca-app-pub-xxxxxxxxxxxxxxxx/zzzzzzzzzz
+  --dart-define=RC_GOOGLE_KEY=<RevenueCat公開キー> \
+  --dart-define=AD_BANNER_ID=<バナーID> \
+  --dart-define=AD_INTERSTITIAL_ID=<インタースティシャルID> \
+  --dart-define=AD_REWARDED_ID=<リワードID>
 ```
+
+- debug は Google 公式のテストID/テスト App ID で動く（注入不要）。
+- release で `ADMOB_APP_ID` 未設定なら Gradle が失敗、広告ID・`RC_GOOGLE_KEY` が空なら起動時に失敗する。
+- iOS は `AD_*_ID_IOS` / `RC_APPLE_KEY`（未発行の間は空で広告なし）。
 
 ---
 
