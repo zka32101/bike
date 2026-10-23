@@ -10,7 +10,10 @@ on:
 jobs:
   test:
     name: Prepare Build
-    runs-on: ubuntu-latest
+    # ubuntu 26.04 での停止回避。解消を確認できたら ubuntu-latest に戻す
+    runs-on: ubuntu-24.04
+    # 止まったときに自動失敗させる(既定の360分まで待たない)
+    timeout-minutes: 30
     steps:
       - uses: actions/checkout@v4
 
@@ -34,7 +37,10 @@ jobs:
 
   build-android:
     name: Build Android APK
-    runs-on: ubuntu-latest
+    # ubuntu 26.04 での停止回避。解消を確認できたら ubuntu-latest に戻す
+    runs-on: ubuntu-24.04
+    # 止まったときに自動失敗させる(既定の360分まで待たない)
+    timeout-minutes: 30
     needs: test
     steps:
       - uses: actions/checkout@v4
@@ -142,7 +148,10 @@ jobs:
 
   build-release:
     name: Build Release APK
-    runs-on: ubuntu-latest
+    # ubuntu 26.04 での停止回避。解消を確認できたら ubuntu-latest に戻す
+    runs-on: ubuntu-24.04
+    # 止まったときに自動失敗させる(既定の360分まで待たない)
+    timeout-minutes: 30
     needs: test
     steps:
       - uses: actions/checkout@v4
