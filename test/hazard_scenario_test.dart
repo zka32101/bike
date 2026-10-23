@@ -1,4 +1,5 @@
 import 'package:app_common_kit/app_common_kit.dart';
+import 'package:ukalab_core/ui.dart';
 import 'package:bike_license_kore/data/hazard_scenario.dart';
 import 'package:bike_license_kore/views/hazard_scenario_view.dart';
 import 'package:flutter/material.dart';
