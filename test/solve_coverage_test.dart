@@ -2,7 +2,9 @@ import 'package:bike_license_kore/data/app_cert.dart';
 import 'package:bike_license_kore/data/solve_coverage.dart';
 import 'package:bike_license_kore/widgets/solve_coverage_badge.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_test/flutter_test.dart';
+import 'package:ukalab_core/ui.dart';
 
 double _contrast(Color a, Color b) {
   final la = a.computeLuminance();
@@ -12,14 +14,16 @@ double _contrast(Color a, Color b) {
   return (hi + 0.05) / (lo + 0.05);
 }
 
-Widget _wrap(Widget child, Brightness b) => MaterialApp(
-      theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(
-          seedColor: Colors.indigo,
-          brightness: b,
+Widget _wrap(Widget child, Brightness b) => ProviderScope(
+      child: MaterialApp(
+        theme: ThemeData(
+          colorScheme: ColorScheme.fromSeed(
+            seedColor: Colors.indigo,
+            brightness: b,
+          ),
         ),
+        home: Scaffold(body: Center(child: child)),
       ),
-      home: Scaffold(body: Center(child: child)),
     );
 
 void main() {
@@ -84,9 +88,10 @@ void main() {
         }
       }
     });
-    test('資格色はテーマ主色', () {
-      final t = ThemeData(colorScheme: ColorScheme.fromSeed(seedColor: Colors.red));
-      expect(bikeCertColor(t), t.colorScheme.primary);
+    test('資格色は UkalabCert.bikeLicense（ライト/ダーク）', () {
+      expect(kAppCert, UkalabCert.bikeLicense);
+      expect(certColorFor(kAppCert, Brightness.light), UkalabCert.bikeLicense.light);
+      expect(certColorFor(kAppCert, Brightness.dark), UkalabCert.bikeLicense.dark);
     });
   });
 

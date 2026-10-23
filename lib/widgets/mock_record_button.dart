@@ -3,6 +3,7 @@ import 'package:ukalab_core/ui.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
+import '../data/app_cert.dart';
 import '../services/oshi_readiness.dart';
 import '../viewmodels/providers.dart';
 import 'oshi_card.dart' show shareCardImage;
@@ -48,7 +49,7 @@ class MockRecordButton extends ConsumerWidget {
         await showMockRecordDialog(
           context,
           ref,
-          cert: UkalabCert.bikeLicense,
+          cert: kAppCert,
           stage: stage,
           scoreText: '正答率 ${(accuracy * 100).round()}%',
           onShare: shareCardImage,
