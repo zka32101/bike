@@ -1,6 +1,7 @@
 import 'package:app_common_kit/app_common_kit.dart';
 import 'package:bike_license_kore/services/ad_gate_service.dart';
 import 'package:bike_license_kore/services/ad_units.dart';
+import 'package:bike_license_kore/services/release_keys.dart';
 import 'package:flutter_test/flutter_test.dart';
 
 void main() {
@@ -41,15 +42,39 @@ void main() {
       }
     });
 
-    test('release のAndroidは本番ID（テストIDを含まない）', () {
-      final ids = BikeAdUnits.resolve(isRelease: true, isAndroid: true)!;
+    test('release のAndroidは注入された本番ID（テストIDを含まない）', () {
+      final ids = BikeAdUnits.resolve(
+        isRelease: true,
+        isAndroid: true,
+        banner: 'ca-app-pub-1111111111111111/1',
+        interstitial: 'ca-app-pub-1111111111111111/2',
+        rewarded: 'ca-app-pub-1111111111111111/3',
+      )!;
       expect(ids.usesTestIds, isFalse);
-      // release でテストIDだとキットが例外にするので、ここを通ることが重要。
       ids.assertNoTestIdsInRelease(isRelease: true);
     });
 
-    test('release のiOSは本番ID未発行のため null（広告なしで動作）', () {
+    test('release のAndroidで未注入（空）なら失敗する', () {
+      expect(
+        () => BikeAdUnits.resolve(isRelease: true, isAndroid: true),
+        throwsStateError,
+      );
+    });
+
+    test('release のiOSは未注入なら null（広告なしで動作）', () {
       expect(BikeAdUnits.resolve(isRelease: true, isAndroid: false), isNull);
+    });
+  });
+
+  group('requireRevenueCatKey', () {
+    test('release で空なら失敗する', () {
+      expect(() => requireRevenueCatKey('', isRelease: true), throwsStateError);
+    });
+    test('release でキーがあれば通る', () {
+      expect(requireRevenueCatKey('k', isRelease: true), 'k');
+    });
+    test('debug では空でも通る（Fake 用）', () {
+      expect(requireRevenueCatKey('', isRelease: false), '');
     });
   });
 }

@@ -45,7 +45,7 @@
             android:value="2" />
 
         <!-- AdMob App ID。デフォルトはテスト用ID。本番IDは build.gradle.kts の
-             manifestPlaceholders["admobAppId"]（環境変数 ADMOB_APP_ID_ANDROID）で上書きする -->
+             manifestPlaceholders["admobAppId"]（環境変数または -P の ADMOB_APP_ID）で注入する -->
         <meta-data
             android:name="com.google.android.gms.ads.APPLICATION_ID"
             android:value="${admobAppId}"/>

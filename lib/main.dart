@@ -21,23 +21,16 @@ import 'services/firebase_analytics_service.dart';
 import 'services/firestore_data_service.dart';
 import 'services/firestore_sync_service.dart';
 import 'services/ad_units.dart';
+import 'services/release_keys.dart';
 import 'services/prefs_key_value_store.dart';
 import 'services/hybrid_data_service.dart';
 import 'services/local_data_service.dart';
 import 'viewmodels/providers.dart';
 
-// RevenueCat API キー（iOS/Android）。
-// Android: RevenueCat「Your WIsh」プロジェクト > Bikeアプリ（com.yourwish.bikelicense）の
-// Public API Key（2026-09-28 発行）。公開APIキーはクライアントアプリへの埋め込みを
-// 前提とした非秘匿情報のため、ソースに直接デフォルト値として持たせる
-// （--dart-define=REVENUECAT_API_KEY_ANDROID=... で上書きも可能）。
-// iOS用キーは未発行（iOSアプリをRevenueCatに追加後に設定すること）。
-const String _revenueCatApiKeyiOS =
-    String.fromEnvironment('REVENUECAT_API_KEY_IOS');
-const String _revenueCatApiKeyAndroid = String.fromEnvironment(
-  'REVENUECAT_API_KEY_ANDROID',
-  defaultValue: 'goog_LjzTdMuZdNmzxihVbMgpNlTQWaQ',
-);
+// RevenueCat 公開SDKキー。ソースには置かず --dart-define で注入する
+// （RC_GOOGLE_KEY / RC_APPLE_KEY）。release で空なら起動時に失敗させる。
+const String _revenueCatApiKeyiOS = String.fromEnvironment('RC_APPLE_KEY');
+const String _revenueCatApiKeyAndroid = String.fromEnvironment('RC_GOOGLE_KEY');
 
 /// Firebase を、まだ初期化されていなければ初期化する（二重初期化で落ちない）。
 Future<void> ensureFirebaseInitialized() async {
@@ -81,10 +74,12 @@ void main() async {
   }
 
   // 権利管理（app_common_kit）。RevenueCat の公開SDKキーがあるときだけ実際の
-  // 購入に接続し、無い場合（iOSキー未発行など）は無料状態のフェイクで安全側に倒す。
+  // 購入に接続する。キーが空なのは debug/テストのみ許容（フェイク）。release は上で失敗。
   // 権利名は noads / premium（RevenueCat 側で作成し、Offering に商品を入れる）。
-  final revenueCatApiKey =
-      Platform.isIOS ? _revenueCatApiKeyiOS : _revenueCatApiKeyAndroid;
+  final revenueCatApiKey = requireRevenueCatKey(
+    Platform.isIOS ? _revenueCatApiKeyiOS : _revenueCatApiKeyAndroid,
+    isRelease: kReleaseMode,
+  );
   final EntitlementService entitlement = revenueCatApiKey.isNotEmpty
       ? await RevenueCatEntitlementService.init(publicSdkKey: revenueCatApiKey)
       : FakeEntitlementService();

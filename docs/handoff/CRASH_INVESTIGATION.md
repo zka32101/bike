@@ -123,7 +123,7 @@ Android のみサポートすればよい場合、`Firebase.initializeApp()` を
 
 - `android/app/proguard-rules.pro` は Firebase / AdMob / RevenueCat の keep ルールがあり、
   難読化由来のクラッシュの可能性は低い
-- AdMob App ID は環境変数未設定時 Google 公式テスト ID にフォールバックするため、通常はクラッシュ要因にならない
+- AdMob App ID は環境変数未設定時 Google 公式テスト ID にフォールバックする（release は ADMOB_APP_ID 未設定でビルド失敗）ため、通常はクラッシュ要因にならない
 - RevenueCat (`purchases_flutter`) の初期化コードは `lib/main.dart` で **コメントアウトされている** ため対象外
 
 ## 次回アップデート時の TODO: アプリアイコン変更

@@ -3,40 +3,37 @@ import 'dart:io';
 import 'package:app_common_kit/app_common_kit.dart';
 import 'package:flutter/foundation.dart';
 
-/// 広告ユニットID（debug はGoogle公式のテストID、release は本番ID）。
+/// 広告ユニットID（debug はGoogle公式のテストID、release は --dart-define 注入）。
 ///
-/// 本番IDは「原付・バイク免許コレ！」用に AdMob で発行済み
-/// （2026-09-28、App ID: ca-app-pub-5058227312086483~9215678835）。
-/// 広告ユニットIDはアプリ識別用の公開情報のためデフォルト値として持ち、
-/// --dart-define=ADMOB_BANNER_AD_UNIT_ID_ANDROID=... 等で上書きもできる。
-/// iOS用IDは未発行（iOSアプリをAdMobに追加後に設定すること）。
+/// 本番IDはソースに置かない。release ビルドでは次を --dart-define で渡す:
+/// AD_BANNER_ID / AD_INTERSTITIAL_ID / AD_REWARDED_ID（Android）、
+/// AD_BANNER_ID_IOS / AD_INTERSTITIAL_ID_IOS / AD_REWARDED_ID_IOS（iOS、未発行なら空で広告なし）。
+/// Android の release で未注入なら起動時に StateError で失敗する。
+/// release でテストIDを使うと app_common_kit が起動時に例外にする（既存挙動）。
 ///
-/// debug ビルドで本番IDを使うと、開発中の表示・クリックが無効トラフィックに
-/// なるため、必ずテストIDに切り替える。release でテストIDを使うと
-/// app_common_kit が起動時に例外にする。
+/// debug ビルドで本番IDを使うと無効トラフィックになるため、debug は必ずテストID。
 class BikeAdUnits {
   BikeAdUnits._();
 
-  static const _bannerAndroid = String.fromEnvironment(
-    'ADMOB_BANNER_AD_UNIT_ID_ANDROID',
-    defaultValue: 'ca-app-pub-5058227312086483/6564630614',
-  );
-  static const _interstitialAndroid = String.fromEnvironment(
-    'ADMOB_INTERSTITIAL_AD_UNIT_ID_ANDROID',
-    defaultValue: 'ca-app-pub-5058227312086483/8853725911',
-  );
-  static const _rewardedAndroid = String.fromEnvironment(
-    'ADMOB_REWARDED_AD_UNIT_ID_ANDROID',
-    defaultValue: 'ca-app-pub-5058227312086483/3963352158',
-  );
-  static const _bannerIos = String.fromEnvironment('ADMOB_BANNER_AD_UNIT_ID_IOS');
+  static const _bannerAndroid = String.fromEnvironment('AD_BANNER_ID');
+  static const _interstitialAndroid =
+      String.fromEnvironment('AD_INTERSTITIAL_ID');
+  static const _rewardedAndroid = String.fromEnvironment('AD_REWARDED_ID');
+  static const _bannerIos = String.fromEnvironment('AD_BANNER_ID_IOS');
   static const _interstitialIos =
-      String.fromEnvironment('ADMOB_INTERSTITIAL_AD_UNIT_ID_IOS');
-  static const _rewardedIos =
-      String.fromEnvironment('ADMOB_REWARDED_AD_UNIT_ID_IOS');
+      String.fromEnvironment('AD_INTERSTITIAL_ID_IOS');
+  static const _rewardedIos = String.fromEnvironment('AD_REWARDED_ID_IOS');
 
-  /// 使うIDを返す。release で本番IDが未発行（iOS）の場合は null（広告なしで動作）。
-  static AdUnitIds? resolve({bool? isRelease, bool? isAndroid}) {
+  /// 使うIDを返す。release の iOS で未注入（未発行）なら null（広告なしで動作）。
+  /// release の Android で未注入なら StateError。
+  /// [banner]/[interstitial]/[rewarded] はテスト用の注入口（省略時は dart-define 値）。
+  static AdUnitIds? resolve({
+    bool? isRelease,
+    bool? isAndroid,
+    String? banner,
+    String? interstitial,
+    String? rewarded,
+  }) {
     final release = isRelease ?? kReleaseMode;
     final android = isAndroid ?? Platform.isAndroid;
 
@@ -54,14 +51,18 @@ class BikeAdUnits {
             );
     }
 
-    final banner = android ? _bannerAndroid : _bannerIos;
-    final interstitial = android ? _interstitialAndroid : _interstitialIos;
-    final rewarded = android ? _rewardedAndroid : _rewardedIos;
-    if (banner.isEmpty || interstitial.isEmpty || rewarded.isEmpty) return null;
-    return AdUnitIds(
-      banner: banner,
-      interstitial: interstitial,
-      rewarded: rewarded,
-    );
+    final b = banner ?? (android ? _bannerAndroid : _bannerIos);
+    final i = interstitial ?? (android ? _interstitialAndroid : _interstitialIos);
+    final r = rewarded ?? (android ? _rewardedAndroid : _rewardedIos);
+    if (b.isEmpty || i.isEmpty || r.isEmpty) {
+      if (android) {
+        throw StateError(
+          'release ビルドに広告ユニットIDが注入されていません。'
+          '--dart-define=AD_BANNER_ID / AD_INTERSTITIAL_ID / AD_REWARDED_ID を指定してください。',
+        );
+      }
+      return null;
+    }
+    return AdUnitIds(banner: b, interstitial: i, rewarded: r);
   }
 }
