@@ -1,6 +1,6 @@
 import 'package:flutter_test/flutter_test.dart';
-import 'package:project_040/models/analytics_models.dart';
-import 'package:project_040/services/analytics_service.dart';
+import 'package:bike_license_kore/models/analytics_models.dart';
+import 'package:bike_license_kore/services/analytics_service.dart';
 
 void main() {
   group('Phase 90: Advanced AI-Powered Analytics & Insights', () {
