@@ -30,3 +30,6 @@ android/keystore/keystore_creds.txt
 *.jks
 *.keystore
 *.jks.password.txt
+
+# Release signing inputs
+android/key.properties
