@@ -5,6 +5,7 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 import '../core/constants/license_category.dart';
 import '../viewmodels/providers.dart';
+import 'bike_zukan_view.dart';
 import 'exam_date_setting_view.dart';
 import 'exam_info_view.dart';
 import 'help_view.dart';
@@ -142,6 +143,14 @@ class SettingsView extends ConsumerWidget {
                   userId: user?.uid,
                 ),
               ),
+            ),
+          ),
+          ListTile(
+            leading: const Icon(Icons.two_wheeler),
+            title: const Text('憧れバイク図鑑'),
+            subtitle: const Text('学習が進むと架空のタイプ紹介が解放されます'),
+            onTap: () => Navigator.of(context).push(
+              MaterialPageRoute(builder: (_) => const BikeZukanView()),
             ),
           ),
           ListTile(
