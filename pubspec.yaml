@@ -91,6 +91,7 @@ flutter:
     - assets/icons_common/
     - assets/guides/
     - assets/branding/
+    - assets/experience/
 
 flutter_launcher_icons:
   android: true

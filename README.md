@@ -46,6 +46,7 @@ flutter test
 - 合格予測ロジック（`PredictionScoreService`）と広告表示ガード（`AdGateService`）は
   ユニットテスト付きで実装済み（`test/`）。
 - ひっかけ道場・バイク解放・ペイウォール（買い切り期間パス）・設定画面も一通り実装。
+- 危険予測シナリオ（二輪特有の場面で判断を選ぶ体験型教材・全4本、最初の2本は無料／残りはプレミアム限定、AI下書き・専門確認前）を実装。データは `assets/experience/hazard_scenarios_bike.jsonl`。
 
 ### 未実装・要対応（本番リリース前に必須）
 
