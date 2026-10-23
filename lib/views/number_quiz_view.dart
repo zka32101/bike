@@ -14,7 +14,7 @@ class NumberQuizView extends StatelessWidget {
     return CrossCategoryQuizScaffold(
       title: '数字・距離クイズ',
       provider: numberQuizControllerProvider,
-      emptyMessage: '出題できる数字・距離の問題がありません。\nパスを購入すると全区分の問題が対象になります。',
+      emptyMessage: '出題できる数字・距離の問題がありません。\n全区分の問題が対象です。',
       resultIcon: Icons.speed,
     );
   }

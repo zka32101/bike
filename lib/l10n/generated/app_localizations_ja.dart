@@ -118,7 +118,7 @@ class AppLocalizationsJa extends AppLocalizations {
 
   @override
   String homeMockExamSubtitle(int count, int minutes) {
-    return '$count問・$minutes分・合格ライン90%（パス購入で利用可）';
+    return '$count問・$minutes分・合格ライン90%';
   }
 
   @override

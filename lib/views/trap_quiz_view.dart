@@ -13,7 +13,7 @@ class TrapQuizView extends StatelessWidget {
     return CrossCategoryQuizScaffold(
       title: 'ひっかけ問題クイズ',
       provider: trapQuizControllerProvider,
-      emptyMessage: '出題できるひっかけ問題がありません。\nパスを購入すると全区分の問題が対象になります。',
+      emptyMessage: '出題できるひっかけ問題がありません。\n全区分の問題が対象です。',
       resultIcon: Icons.psychology_alt,
     );
   }

@@ -46,7 +46,7 @@ flutter test
 - 合格予測ロジック（`PredictionScoreService`）と広告表示ガード（`AdGateService`）は
   ユニットテスト付きで実装済み（`test/`）。
 - 憧れバイク図鑑（設定→憧れバイク図鑑。架空のタイプ紹介・AI下書き・区分の学習到達度で解放・無料）。
-- ひっかけ道場・バイク解放・ペイウォール（買い切り期間パス）・設定画面も一通り実装。
+- ひっかけ道場・バイク解放・ペイウォール（買い切り2種）・設定画面も一通り実装。
 - 技能試験のコツ（一本橋・スラローム・急制動・S字クランク・方向変換・基本操作の読み物と練習チェックリスト、区分別の出し分け、全て無料、AI下書き・専門確認前）：「役立つ情報」から開く。
 - 危険予測シナリオ（二輪特有の場面で判断を選ぶ体験型教材・全4本、最初の2本は無料／残りはプレミアム限定、AI下書き・専門確認前）を実装。データは `assets/experience/hazard_scenarios_bike.jsonl`。
 
@@ -57,8 +57,11 @@ flutter test
   `analyticsServiceProvider` を Firestore/Firebase Analytics 実装に override する
   （`lib/services/local_data_service.dart`, `lib/services/analytics_service.dart` の
   TODOコメント参照）。
-- **RevenueCat接続**：`purchases_flutter` の実配線（`lib/services/purchase_service.dart`）。
-  非消費型(non-consumable)の単一区分パス(¥980)・全区分セットパス(¥1,980)。
+- **RevenueCat接続**：決定 CD-004 のシリーズ標準に合わせ、買い切り2種（全区分共通）。
+  広告なし（entitlement `noads`、¥480）／プレミアム（entitlement `premium`、¥1,500）。
+  **価格は他アプリ同様「暫定」**。期間パス・区分別パスは採らない。
+  商品IDは `<app>_noads` / `<app>_premium`（`<app>` は運営が最終アプリIDに合わせて決定、候補 `bike_license`）。
+  詳細は `REVENUECAT_SETUP.md`。
 - **広告SDK導入**：インタースティシャル/リワード広告本体の実装。表示直前に必ず
   `AdGateService.canShowInterstitial` / `canShowRewardedAd` を通すこと
   （バナー広告は方針上不採用＝ `canShowBanner` は常に `false`）。

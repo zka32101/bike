@@ -14,14 +14,14 @@ final _offersProvider = FutureProvider.autoDispose<List<EntitlementOffer>>(
 
 /// ペイウォール（うかラボ共通のプラン）。
 /// - 広告なし（noads）：買い切り。広告が表示されなくなる
-/// - プレミアム（premium）：30日／90日／買い切り。広告が表示されなくなる
+/// - プレミアム（premium）：買い切り。広告が表示されなくなり、プレミアム限定の機能が使える
 ///
 /// 価格・商品名は RevenueCat の Offering から取得し、コードに埋め込まない。
 /// 全問題・全解説は無料（購入は広告の非表示などのため）。
 class PaywallView extends ConsumerWidget {
   const PaywallView({super.key, this.categoryId});
 
-  /// 旧パス方式（区分ごとの解放）の名残。現在は全区分が無料のため使用しない。
+  /// 旧方式（区分ごとの解放）の名残。現在は全区分共通のため使用しない。
   /// ロック画面（到達しない）からの遷移コードが渡すだけで、値は無視する。
   final String? categoryId;
 
@@ -151,6 +151,7 @@ class _PlanComparison extends StatelessWidget {
             const Text('・模擬テストの分野別得点と「合格まであと◯問」'),
             Text('・全分野の苦手分析（無料は上位${limits.weakTopicsShown}分野）'),
             const Text('・試験日までの学習計画（1日の目安）'),
+            const Text('・危険予測シナリオの全シナリオ（無料は最初の2本）'),
           ],
         ),
       ),
@@ -165,12 +166,7 @@ class _CurrentPlan extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final until = state.premiumExpiresAt;
-    final label = state.hasPremium
-        ? (until == null
-            ? 'プレミアムをご利用中です'
-            : 'プレミアムをご利用中です（${until.toLocal().year}/${until.toLocal().month}/${until.toLocal().day}まで）')
-        : '広告なしをご利用中です';
+    final label = state.hasPremium ? 'プレミアムをご利用中です' : '広告なしをご利用中です';
     return Card(
       color: Theme.of(context).colorScheme.primaryContainer,
       child: ListTile(

@@ -13,7 +13,7 @@ import 'help_view.dart';
 import 'license_category_select_view.dart';
 import 'paywall_view.dart';
 
-/// 設定(区分管理／通知／サブスク・パス管理)。
+/// 設定(区分管理／通知／プラン管理)。
 class SettingsView extends ConsumerWidget {
   const SettingsView({super.key});
 
