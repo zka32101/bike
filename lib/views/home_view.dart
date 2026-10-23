@@ -17,6 +17,7 @@ import 'settings_view.dart';
 import 'number_quiz_view.dart';
 import 'paywall_view.dart';
 import 'guide_view.dart';
+import 'hazard_scenario_view.dart';
 import 'sign_quiz_view.dart';
 import 'study_mode_view.dart';
 import 'trap_quiz_view.dart';
@@ -216,6 +217,21 @@ class _HomeViewState extends ConsumerState<HomeView> {
                           MaterialPageRoute(
                             builder: (_) =>
                                 MockExamView(licenseCategory: primaryCategoryId),
+                          ),
+                        ),
+                      ),
+                    ),
+                    const SizedBox(height: 12),
+                    Card(
+                      child: ListTile(
+                        contentPadding: const EdgeInsets.all(16),
+                        leading: const Icon(Icons.two_wheeler, size: 32),
+                        title: const Text('危険予測シナリオ'),
+                        subtitle: const Text('二輪ならではの場面で判断を選んで学ぶ体験型教材。最初の2本は無料です'),
+                        trailing: const Icon(Icons.chevron_right),
+                        onTap: () => Navigator.of(context).push(
+                          MaterialPageRoute(
+                            builder: (_) => const HazardScenarioListView(),
                           ),
                         ),
                       ),
