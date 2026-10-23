@@ -1,9 +1,28 @@
+import java.io.FileInputStream
+import java.util.Properties
+
 plugins {
     id("com.android.application")
     id("kotlin-android")
     id("dev.flutter.flutter-gradle-plugin")
     id("com.google.gms.google-services")
 }
+
+// リリース署名の入力: android/key.properties（優先）→ 環境変数 UPLOAD_*。
+val keystoreProperties = Properties()
+rootProject.file("key.properties").takeIf { it.exists() }?.let {
+    FileInputStream(it).use { stream -> keystoreProperties.load(stream) }
+}
+fun signingProp(key: String, env: String): String? =
+    keystoreProperties.getProperty(key) ?: System.getenv(env)?.takeIf { it.isNotBlank() }
+
+val hasReleaseSigning: Boolean =
+    listOf(
+        "storeFile" to "UPLOAD_STORE_FILE",
+        "storePassword" to "UPLOAD_STORE_PASSWORD",
+        "keyAlias" to "UPLOAD_KEY_ALIAS",
+        "keyPassword" to "UPLOAD_KEY_PASSWORD",
+    ).all { (k, e) -> signingProp(k, e) != null }
 
 android {
     namespace = "com.yourwish.bikelicense"
@@ -36,22 +55,15 @@ android {
     }
 
     signingConfigs {
-        // Passwords from environment variables (GitHub Secrets in CI, or local env vars)
+        // release 署名の入力は android/key.properties（ローカル、gitignore対象）または
+        // 環境変数 UPLOAD_*（CI の GitHub Secrets）。両方無い場合 release ビルドは失敗する。
         create("release") {
-            storeFile = file("../keystore/release_prod.jks")
-            storePassword = System.getenv("KEYSTORE_PASSWORD")
-            keyAlias = "bike_license_release_prod"
-            // keytool defaults to PKCS12 (not JKS) since Java 9, regardless of the
-            // .jks file extension. AGP assumes JKS unless told otherwise, which
-            // causes signing to fail with a cryptic padding error.
-            storeType = "PKCS12"
-            // PKCS12 keystores encrypt the whole store with a single password;
-            // there is no separate per-key password. AGP's signing code still
-            // tries KEY_PASSWORD as a distinct key password, which fails to
-            // decrypt (BadPaddingException) whenever it differs from the store
-            // password. Force it to match the store password to match the
-            // actual PKCS12 format.
-            keyPassword = System.getenv("KEYSTORE_PASSWORD")
+            if (hasReleaseSigning) {
+                storeFile = file(signingProp("storeFile", "UPLOAD_STORE_FILE")!!)
+                storePassword = signingProp("storePassword", "UPLOAD_STORE_PASSWORD")
+                keyAlias = signingProp("keyAlias", "UPLOAD_KEY_ALIAS")
+                keyPassword = signingProp("keyPassword", "UPLOAD_KEY_PASSWORD")
+            }
         }
     }
 
@@ -67,24 +79,29 @@ android {
                 getDefaultProguardFile("proguard-android-optimize.txt"),
                 "proguard-rules.pro"
             )
-            // Use production keystore if KEYSTORE_PASSWORD env var is set
-            // Fallback to debug signature if keystore is not available
-            signingConfig =
-                if (System.getenv("KEYSTORE_PASSWORD") != null &&
-                    file("../keystore/release_prod.jks").exists()) {
-                    signingConfigs.getByName("release")
-                } else {
-                    signingConfigs.getByName("debug")
-                }
+            // debug 署名へのフォールバックはしない（鍵が無ければ下の taskGraph チェックで失敗）。
+            signingConfig = signingConfigs.getByName("release")
         }
     }
 }
 
-afterEvaluate {
-    val releaseConfig = android.signingConfigs.getByName("release")
-    println("DEBUG signingConfig[release]: storeType=${releaseConfig.storeType}, storeFile=${releaseConfig.storeFile}, keyAlias=${releaseConfig.keyAlias}, storePassword.isNullOrEmpty=${releaseConfig.storePassword.isNullOrEmpty()}, keyPassword.isNullOrEmpty=${releaseConfig.keyPassword.isNullOrEmpty()}")
-    val appliedConfig = android.buildTypes.getByName("release").signingConfig
-    println("DEBUG buildType[release].signingConfig: name=${appliedConfig?.name}, storeType=${appliedConfig?.storeType}")
+// release 系タスクが実行される場合のみ署名入力を必須にする（debug ビルド/analyze/test には影響しない）。
+gradle.taskGraph.whenReady {
+    val releaseRequested = allTasks.any {
+        it.project == project && Regex("^(assemble|bundle|package)(.*)Release$").matches(it.name)
+    }
+    if (releaseRequested) {
+        if (!hasReleaseSigning) {
+            throw GradleException(
+                "release ビルドには署名鍵が必要です。android/key.properties " +
+                    "(storeFile/storePassword/keyAlias/keyPassword) または環境変数 " +
+                    "UPLOAD_STORE_FILE/UPLOAD_STORE_PASSWORD/UPLOAD_KEY_ALIAS/UPLOAD_KEY_PASSWORD を設定してください。"
+            )
+        }
+        if (!file(signingProp("storeFile", "UPLOAD_STORE_FILE")!!).exists()) {
+            throw GradleException("署名キーストアが見つかりません: " + signingProp("storeFile", "UPLOAD_STORE_FILE"))
+        }
+    }
 }
 
 dependencies {
