@@ -1,11 +1,12 @@
 import 'package:app_common_kit/app_common_kit.dart';
+import 'package:ukalab_core/ui.dart';
 import '../services/oshi_readiness.dart';
 import 'dart:async';
 
 import 'package:flutter/foundation.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:yourwish_kentei/yourwish_kentei.dart' show UsageQuota;
+import 'package:ukalab_core/ukalab_core.dart' show UsageQuota;
 
 import '../core/constants/license_category.dart';
 import '../models/question.dart';

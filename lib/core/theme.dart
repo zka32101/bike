@@ -1,4 +1,5 @@
 import 'package:app_common_kit/app_common_kit.dart';
+import 'package:ukalab_core/ui.dart';
 import 'package:flutter/material.dart';
 
 /// うかラボ共通テーマ（app_common_kit v0.2）。バイク免許は「技術・安全」の分野色。

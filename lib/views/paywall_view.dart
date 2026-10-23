@@ -1,7 +1,8 @@
-import 'package:app_common_kit/app_common_kit.dart';
+import 'package:app_common_kit/app_common_kit.dart' hide AnalyticsEvents;
+import 'package:ukalab_core/ui.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:yourwish_kentei/yourwish_kentei.dart' show FreeTierLimits;
+import 'package:ukalab_core/ukalab_core.dart' show FreeTierLimits;
 
 import '../core/constants/analytics_events.dart';
 import '../viewmodels/providers.dart';

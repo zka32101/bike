@@ -1,12 +1,13 @@
 import 'dart:async';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_core/firebase_core.dart';
-import 'package:app_common_kit/app_common_kit.dart';
+import 'package:app_common_kit/app_common_kit.dart' hide AnalyticsEvents;
+import 'package:ukalab_core/ui.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:shared_preferences/shared_preferences.dart';
-import 'package:yourwish_kentei/yourwish_kentei.dart'
+import 'package:ukalab_core/ukalab_core.dart'
     show FreeTierLimits, InMemoryKeyValueStore, KeyValueStore;
 
 import '../core/constants/analytics_events.dart';

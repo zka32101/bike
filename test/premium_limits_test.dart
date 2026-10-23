@@ -1,4 +1,5 @@
 import 'package:app_common_kit/app_common_kit.dart';
+import 'package:ukalab_core/ui.dart';
 import 'package:bike_license_kore/models/analytics_snapshot.dart';
 import 'package:bike_license_kore/models/question.dart';
 import 'package:bike_license_kore/viewmodels/analytics_limits.dart';
@@ -7,7 +8,7 @@ import 'package:bike_license_kore/viewmodels/mock_exam_providers.dart';
 import 'package:bike_license_kore/viewmodels/providers.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:yourwish_kentei/yourwish_kentei.dart' show InMemoryKeyValueStore;
+import 'package:ukalab_core/ukalab_core.dart' show InMemoryKeyValueStore;
 
 Question q(String id, String topic) => Question(
       id: id,

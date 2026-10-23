@@ -1,6 +1,6 @@
 import 'dart:math';
 
-import 'package:yourwish_kentei/yourwish_kentei.dart' show requiredScore;
+import 'package:ukalab_core/ukalab_core.dart' show requiredScore;
 
 import 'mock_exam_providers.dart';
 
@@ -41,7 +41,7 @@ List<TopicScore> topicScoresOf(MockExamState state) {
 }
 
 /// 合格ラインまであと何問か（到達済みなら 0）。「あと◯点」表示用。
-/// 整数点で比較する（yourwish_kentei の `requiredScore`）。
+/// 整数点で比較する（ukalab_core の `requiredScore`）。
 int shortByOf(MockExamState state) {
   if (state.totalCount == 0) return 0;
   final need = requiredScore(mockExamPassRate * 100, state.totalCount);

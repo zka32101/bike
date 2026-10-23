@@ -6,7 +6,7 @@ import 'package:flutter_test/flutter_test.dart';
 /// 問題データ（assets/questions/*.json）の品質ガード。
 ///
 /// 区分ごとの出題プールは1ファイルなので、重複や構造の不備はファイル単位で検査する。
-/// 出典・法令版（lawVersion）の欄はまだ無く、別途 yourwish_kentei の検証で扱う。
+/// 出典・法令版（lawVersion）の欄はまだ無く、別途 ukalab_core の検証で扱う。
 
 /// 問題文は同じだが正解が異なる、既知の曖昧な問題（人が判断するまで許容）。
 /// 新しく増やさないこと。
