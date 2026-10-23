@@ -1,6 +1,7 @@
 import 'package:app_common_kit/app_common_kit.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:ukalab_core/learning.dart' show QuestionCard, ResultSummary;
 
 import '../../core/constants/license_category.dart';
 import '../../viewmodels/cross_category_quiz.dart';

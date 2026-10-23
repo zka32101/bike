@@ -6,7 +6,7 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:shared_preferences/shared_preferences.dart';
-import 'package:yourwish_kentei/yourwish_kentei.dart'
+import 'package:ukalab_core/ukalab_core.dart'
     show FreeTierLimits, InMemoryKeyValueStore, KeyValueStore;
 
 import '../core/constants/analytics_events.dart';
