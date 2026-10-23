@@ -8,6 +8,9 @@ import '../core/constants/topic_summaries.dart';
 import '../l10n/generated/app_localizations.dart';
 import '../models/question.dart';
 import '../viewmodels/providers.dart';
+import '../viewmodels/solve_coverage_providers.dart';
+import '../data/solve_coverage.dart';
+import '../widgets/solve_coverage_badge.dart';
 import 'paywall_view.dart';
 import '../data/question_signs.dart';
 
@@ -134,13 +137,14 @@ class _StudyModeViewState extends ConsumerState<StudyModeView> {
 
 /// トピック（標識・法規・運転操作など）ごとのまとめ解説。
 /// 出題対象に含まれるトピックのみ表示する。
-class _TopicSummarySection extends StatelessWidget {
+class _TopicSummarySection extends ConsumerWidget {
   const _TopicSummarySection({required this.questions});
 
   final List<Question> questions;
 
   @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext context, WidgetRef ref) {
+    final solvedIds = ref.watch(solvedQuestionIdsProvider).valueOrNull;
     final presentTopicIds = questions
         .map((q) => q.topicTag)
         .whereType<String>()
@@ -161,6 +165,17 @@ class _TopicSummarySection extends StatelessWidget {
               for (final topic in topics)
                 ExpansionTile(
                   title: Text(topic.label),
+                  trailing: solvedIds == null
+                      ? null
+                      : SolveCoverageBadge(
+                          coverage: aggregateCoverage(
+                            questions
+                                .where((q) => q.topicTag == topic.id)
+                                .map((q) => q.id),
+                            solvedIds,
+                          ),
+                          name: topic.label,
+                        ),
                   childrenPadding: const EdgeInsets.fromLTRB(16, 0, 16, 16),
                   children: [
                     Align(
