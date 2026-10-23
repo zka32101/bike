@@ -6,6 +6,7 @@ import 'package:flutter/material.dart';
 import 'package:share_plus/share_plus.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
+import '../data/app_cert.dart';
 import '../models/question.dart';
 import '../viewmodels/providers.dart';
 
@@ -112,7 +113,7 @@ class OshiCard extends ConsumerWidget {
     final at = now ?? DateTime.now();
     final day = oshiDayState(now: at, streakDays: streakDays, lastStudyDate: lastStudyDate, examDate: examDate);
     return UkalabOshiCard(
-      cert: UkalabCert.bikeLicense,
+      cert: kAppCert,
       stage: stage,
       appId: 'bike',
       examDate: examDate,

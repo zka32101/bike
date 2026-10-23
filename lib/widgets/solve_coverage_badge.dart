@@ -1,10 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 import '../data/app_cert.dart';
 import '../data/solve_coverage.dart';
 
 /// 「解いた割合」を資格色の濃淡と「12/40問」で示す小さなバッジ。
-class SolveCoverageBadge extends StatelessWidget {
+class SolveCoverageBadge extends ConsumerWidget {
   const SolveCoverageBadge({
     super.key,
     required this.coverage,
@@ -17,11 +18,11 @@ class SolveCoverageBadge extends StatelessWidget {
   final String name;
 
   @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext context, WidgetRef ref) {
     final theme = Theme.of(context);
     final scheme = theme.colorScheme;
     final fill = coverageFill(
-      bikeCertColor(theme),
+      certColorFor(ref.watch(appCertProvider), theme.brightness),
       coverage.level,
       scheme.surface,
     );

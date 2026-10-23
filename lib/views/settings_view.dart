@@ -2,6 +2,7 @@ import 'package:app_common_kit/app_common_kit.dart';
 import 'package:ukalab_core/ui.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:ukalab_core/cross_promo.dart' show UkalabCrossPromoSection;
 
 import '../core/constants/license_category.dart';
 import '../viewmodels/providers.dart';
@@ -167,6 +168,10 @@ class SettingsView extends ConsumerWidget {
             onTap: () => Navigator.of(context).push(
               MaterialPageRoute(builder: (_) => const ExamInfoView()),
             ),
+          ),
+          // 掲載リストが空なら何も表示しない。うかラボは大人向けなので保護者ゲートは不要。
+          const UkalabCrossPromoSection(
+            currentAppId: 'com.yourwish.bikelicense',
           ),
         ],
       ),

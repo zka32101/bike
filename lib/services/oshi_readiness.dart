@@ -2,6 +2,7 @@ import 'package:app_common_kit/app_common_kit.dart';
 import 'package:ukalab_core/ui.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
+import '../data/app_cert.dart';
 import '../viewmodels/providers.dart';
 
 /// 習得度（網羅率×正答率）を、回答ログと問題数から求める。
@@ -34,7 +35,7 @@ Future<bool> checkReadinessAfterMock(
     if (!ReadinessRule.standard.isReady(mastery: mastery, mockPassed: true)) {
       return false;
     }
-    return ref.read(outfitProvider.notifier).markReady(UkalabCert.bikeLicense);
+    return ref.read(outfitProvider.notifier).markReady(kAppCert);
   } catch (_) {
     return false;
   }

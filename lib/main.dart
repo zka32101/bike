@@ -12,7 +12,10 @@ import 'widgets/startup_splash.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
+import 'package:ukalab_core/cross_promo.dart' show UkalabCrossPromo;
+
 import 'app.dart';
+import 'data/app_cert.dart';
 import 'firebase_options.dart';
 import 'services/firebase_analytics_service.dart';
 import 'services/firestore_data_service.dart';
@@ -63,6 +66,10 @@ void main() async {
   // 画面が出なくなる（リリース版でスプラッシュのまま進まなかった）。
   await ensureFirebaseInitialized();
 
+  // 相互紹介（Remote Config の掲載リスト取得）。Firebase 初期化後に呼ぶ。
+  // 失敗しても起動を止めない（core 側で握りつぶす）。
+  unawaited(UkalabCrossPromo.init());
+
   // Firebase Auth が使えない場合（Firebase Console未設定等）のフォールバックUID。
   // 端末に永続化し、オフライン継続時も同一端末では常に同じIDを使う。
   final prefs = await SharedPreferences.getInstance();
@@ -96,7 +103,7 @@ void main() async {
   // 学習コイン（app_common_kit）。財布はアプリごと。端末内に保存する。
   final coinService = CoinService(
     store: SharedPreferencesCoinStore('bike'),
-    shop: OutfitCatalog.shopItems([UkalabCert.bikeLicense]),
+    shop: OutfitCatalog.shopItems([kAppCert]),
   );
   await coinService.load();
   final outfitService =
