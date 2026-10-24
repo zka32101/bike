@@ -16,8 +16,23 @@ def baseline(path):
     return int(open(path).read().split()[0])
 
 
+def _cut(t):
+    return t if len(t) <= 200 else t[:200] + "..."
+
+
+def _reason(error, stack):
+    """エラーメッセージ先頭2行と、stackTrace中の最初の test/ 配下の行を返す(各200字まで)。"""
+    out = ["    " + _cut(m.strip()) for m in str(error or "").splitlines() if m.strip()][:2]
+    for sl in str(stack or "").splitlines():
+        if re.search(r"(^|[/\\\s(])test/\S*\.dart", sl):
+            out.append("    at " + _cut(sl.strip()))
+            break
+    return out
+
+
 def count_test_failures(path):
     names, suites, test_suite, failed, done = {}, {}, {}, set(), 0
+    reasons = {}
     for line in open(path, errors="replace"):
         line = line.strip()
         if not line.startswith("{"):
@@ -31,16 +46,23 @@ def count_test_failures(path):
         elif isinstance(ev, dict) and ev.get("type") == "testStart":
             names[ev["test"]["id"]] = ev["test"].get("name", "")
             test_suite[ev["test"]["id"]] = ev["test"].get("suiteID")
+        elif isinstance(ev, dict) and ev.get("type") == "error":
+            if ev.get("testID") not in reasons:
+                reasons[ev.get("testID")] = _reason(ev.get("error"), ev.get("stackTrace"))
         elif isinstance(ev, dict) and ev.get("type") == "testDone":
             if ev.get("hidden") and ev.get("result") == "success":
                 continue
             done += 1
             if ev.get("result") in ("failure", "error") and not ev.get("skipped"):
                 failed.add(ev["testID"])
-    lines = sorted(
-        f"{suites.get(test_suite.get(i)) or '(unknown file)'}: {names.get(i, '') or '(unknown test)'}"
+    entries = sorted(
+        (f"{suites.get(test_suite.get(i)) or '(unknown file)'}: {names.get(i, '') or '(unknown test)'}", i)
         for i in failed
     )
+    lines = []
+    for head, i in entries:
+        lines.append(head)
+        lines.extend(reasons.get(i, []))
     return len(failed), done, lines
 
 
