@@ -17,7 +17,7 @@ def baseline(path):
 
 
 def count_test_failures(path):
-    names, failed, done = {}, set(), 0
+    names, suites, test_suite, failed, done = {}, {}, {}, set(), 0
     for line in open(path, errors="replace"):
         line = line.strip()
         if not line.startswith("{"):
@@ -26,26 +26,38 @@ def count_test_failures(path):
             ev = json.loads(line)
         except ValueError:
             continue
-        if isinstance(ev, dict) and ev.get("type") == "testStart":
+        if isinstance(ev, dict) and ev.get("type") == "suite":
+            suites[ev["suite"]["id"]] = ev["suite"].get("path", "")
+        elif isinstance(ev, dict) and ev.get("type") == "testStart":
             names[ev["test"]["id"]] = ev["test"].get("name", "")
+            test_suite[ev["test"]["id"]] = ev["test"].get("suiteID")
         elif isinstance(ev, dict) and ev.get("type") == "testDone":
             if ev.get("hidden") and ev.get("result") == "success":
                 continue
             done += 1
             if ev.get("result") in ("failure", "error") and not ev.get("skipped"):
                 failed.add(ev["testID"])
-    return len(failed), done
+    lines = sorted(
+        f"{suites.get(test_suite.get(i)) or '(unknown file)'}: {names.get(i, '') or '(unknown test)'}"
+        for i in failed
+    )
+    return len(failed), done, lines
 
 
 def main():
     mode, log, base_path = sys.argv[1:4]
     base = baseline(base_path)
     if mode == "tests":
-        n, done = count_test_failures(log)
+        n, done, failed_lines = count_test_failures(log)
         print(f"flutter test: 失敗 {n} 件 / 実行 {done} 件 (ベースライン {base})")
         if done == 0:
             print("::error::テスト結果を集計できません（テスト実行自体が失敗）")
             return 1
+        if failed_lines:
+            print("::group::失敗したテスト一覧")
+            for ln in failed_lines:
+                print(ln.replace("\n", " "))
+            print("::endgroup::")
     else:
         n = len(re.findall(r"^\s*error\s+•", open(log, errors="replace").read(), re.M))
         print(f"flutter analyze: error {n} 件 (ベースライン {base})")
@@ -57,4 +69,5 @@ def main():
     return 0
 
 
-sys.exit(main())
+if __name__ == "__main__":
+    sys.exit(main())
