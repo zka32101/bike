@@ -12,6 +12,10 @@ import re
 import sys
 
 
+MAX_PRINT_LINES = 25  # 失敗テスト1件あたりの print 出力上限
+MAX_TOTAL_LINES = 600  # 一覧全体の行数上限
+
+
 def baseline(path):
     return int(open(path).read().split()[0])
 
@@ -33,6 +37,7 @@ def _reason(error, stack):
 def count_test_failures(path):
     names, suites, test_suite, failed, done = {}, {}, {}, set(), 0
     reasons = {}
+    prints = {}
     for line in open(path, errors="replace"):
         line = line.strip()
         if not line.startswith("{"):
@@ -46,6 +51,11 @@ def count_test_failures(path):
         elif isinstance(ev, dict) and ev.get("type") == "testStart":
             names[ev["test"]["id"]] = ev["test"].get("name", "")
             test_suite[ev["test"]["id"]] = ev["test"].get("suiteID")
+        elif isinstance(ev, dict) and ev.get("type") == "print":
+            buf = prints.setdefault(ev.get("testID"), [])
+            for m in str(ev.get("message") or "").splitlines():
+                if m.strip() and len(buf) < MAX_PRINT_LINES:
+                    buf.append("      | " + _cut(m.rstrip()))
         elif isinstance(ev, dict) and ev.get("type") == "error":
             if ev.get("testID") not in reasons:
                 reasons[ev.get("testID")] = _reason(ev.get("error"), ev.get("stackTrace"))
@@ -63,6 +73,7 @@ def count_test_failures(path):
     for head, i in entries:
         lines.append(head)
         lines.extend(reasons.get(i, []))
+        lines.extend(prints.get(i, []))
     return len(failed), done, lines
 
 
@@ -77,8 +88,10 @@ def main():
             return 1
         if failed_lines:
             print("::group::失敗したテスト一覧")
-            for ln in failed_lines:
+            for ln in failed_lines[:MAX_TOTAL_LINES]:
                 print(ln.replace("\n", " "))
+            if len(failed_lines) > MAX_TOTAL_LINES:
+                print("(省略)")
             print("::endgroup::")
     else:
         n = len(re.findall(r"^\s*error\s+•", open(log, errors="replace").read(), re.M))
