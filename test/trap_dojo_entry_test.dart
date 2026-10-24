@@ -1,6 +1,5 @@
 import 'package:bike_license_kore/l10n/generated/app_localizations.dart';
 import 'package:bike_license_kore/models/question.dart';
-import 'package:bike_license_kore/services/ad_gate_service.dart';
 import 'package:bike_license_kore/viewmodels/providers.dart';
 import 'package:bike_license_kore/views/trap_dojo_view.dart';
 import 'package:bike_license_kore/widgets/trap_dojo_entry_card.dart';
@@ -23,7 +22,9 @@ void main() {
           localizationsDelegates: AppLocalizations.localizationsDelegates,
           supportedLocales: AppLocalizations.supportedLocales,
           locale: const Locale('ja'),
-          home: const Scaffold(body: TrapDojoEntryCard(licenseCategory: 'moped')),
+          home: const Scaffold(
+            body: TrapDojoEntryCard(licenseCategory: 'moped'),
+          ),
         ),
       ),
     );
@@ -37,8 +38,7 @@ void main() {
     expect(find.byType(TrapDojoView), findsOneWidget);
     expect(gate.isAdAllowedNow, isFalse);
 
-    final nav = tester.state<NavigatorState>(find.byType(Navigator));
-    nav.pop();
+    await tester.tap(find.byType(BackButton));
     await tester.pumpAndSettle();
     expect(find.byType(TrapDojoView), findsNothing);
     expect(gate.isAdAllowedNow, isTrue);
