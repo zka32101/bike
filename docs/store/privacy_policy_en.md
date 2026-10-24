@@ -28,7 +28,7 @@ This policy explains how "Moped & Motorcycle License Kore!" (原付・バイク�
 - Purpose: finding and fixing bugs.
 
 ### (5) Ads (Google AdMob)
-- The free version shows ads (a banner on the home screen). [Ops to confirm: whether an interstitial ad is shown at the end of the daily quota]
+- The free version shows ads (a banner on the home screen and an interstitial ad when you finish your daily quota, i.e. your daily study goal). No ads are shown on the question, boss battle, or pass-prediction meter screens.
 - Google may collect device identifiers such as the advertising ID to serve and measure ads.
 - You can choose your ad consent on the screen shown at first launch (Google User Messaging Platform). In regions where consent is required, ad handling follows your choice.
 - While you own "Ad-free" or "Premium", the ad SDK is not initialized and no ads are shown.
