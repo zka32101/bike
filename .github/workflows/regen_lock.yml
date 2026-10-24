@@ -1,13 +1,17 @@
 name: Regen pubspec.lock (temporary)
 
 on:
-  workflow_dispatch:
+  push:
+    branches: [chore/regen-pubspec-lock]
+    paths: ['.github/workflows/regen_lock.yml']
 
 permissions:
   contents: write
 
 jobs:
   regen:
+    # bot が push したコミットでは再実行しない（念のため）
+    if: github.actor != 'github-actions[bot]'
     runs-on: ubuntu-24.04
     timeout-minutes: 20
     steps:
