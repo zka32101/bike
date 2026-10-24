@@ -133,7 +133,7 @@ class ExportStatistics {
   });
 
   double get successRate => totalExports > 0 ? (successfulExports / totalExports) * 100 : 0.0;
-  bool get isHealthy => successRate > 95.0;
+  bool get isHealthy => successRate >= 95.0;
 }
 
 class ExportTask {
