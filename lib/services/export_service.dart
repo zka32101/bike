@@ -1,5 +1,10 @@
 import '../models/export_models.dart';
 
+int _idSeq = 0;
+
+/// Unique id: ms timestamp plus a monotonically increasing sequence (avoids same-ms collisions).
+String _nextId(String prefix) => '${prefix}_${DateTime.now().millisecondsSinceEpoch}_${_idSeq++}';
+
 // Repository Interface
 abstract class ExportRepository {
   Future<void> createExportJob(ExportJob job);
@@ -124,7 +129,7 @@ class MemoryExportRepository implements ExportRepository {
   @override
   Future<List<ExportStatistics>> getStatisticsInRange(DateTime start, DateTime end) async {
     return _stats.values
-        .where((s) => s.periodStart.isAfter(start) && s.periodEnd.isBefore(end))
+        .where((s) => !s.periodStart.isBefore(start) && !s.periodEnd.isAfter(end))
         .toList();
   }
 
@@ -196,7 +201,7 @@ class ExportEngine {
 
   Future<ExportJob> initializeExport(String dataSource, ExportFormat format) async {
     final job = ExportJob(
-      jobId: 'export_${DateTime.now().millisecondsSinceEpoch}',
+      jobId: _nextId('export'),
       dataSource: dataSource,
       format: format,
       createdAt: DateTime.now(),
@@ -210,7 +215,7 @@ class ExportEngine {
     if (job == null) throw Exception('Export job not found');
 
     final task = ExportTask(
-      taskId: 'task_${DateTime.now().millisecondsSinceEpoch}',
+      taskId: _nextId('task'),
       jobId: jobId,
       status: 'processing',
       progress: 0,
@@ -255,7 +260,7 @@ class ReportEngine {
 
   Future<Report> generateReport(String title, String description, ExportFormat format) async {
     final report = Report(
-      reportId: 'report_${DateTime.now().millisecondsSinceEpoch}',
+      reportId: _nextId('report'),
       title: title,
       description: description,
       generatedAt: DateTime.now(),
@@ -268,7 +273,7 @@ class ReportEngine {
 
   Future<void> scheduleReportGeneration(String reportId, ScheduleFrequency frequency) async {
     final schedule = ScheduledReport(
-      scheduleId: 'sched_${DateTime.now().millisecondsSinceEpoch}',
+      scheduleId: _nextId('sched'),
       reportId: reportId,
       frequency: frequency,
       nextRun: _calculateNextRun(frequency),
@@ -329,7 +334,7 @@ class ExportManager {
     final total = jobs.length;
 
     return ExportStatistics(
-      statsId: 'stats_${DateTime.now().millisecondsSinceEpoch}',
+      statsId: _nextId('stats'),
       totalExports: total,
       successfulExports: successful,
       failedExports: total - successful,
@@ -391,7 +396,7 @@ class ExportFacade {
   Future<ReportTemplate> createTemplate(String name, String description,
       Map<String, dynamic> config) async {
     final template = ReportTemplate(
-      templateId: 'tmpl_${DateTime.now().millisecondsSinceEpoch}',
+      templateId: _nextId('tmpl'),
       templateName: name,
       description: description,
       configuration: config,
@@ -415,7 +420,7 @@ class ExportFacade {
 
   Future<void> addExportLog(String jobId, String event, Map<String, dynamic> metadata) async {
     final log = ExportLog(
-      logId: 'log_${DateTime.now().millisecondsSinceEpoch}',
+      logId: _nextId('log'),
       jobId: jobId,
       event: event,
       timestamp: DateTime.now(),
