@@ -32,7 +32,7 @@ Not sure how far you have come
 
 Tricky questions
 - Tricky-question practice, traffic sign quizzes and a number-memorizing quiz
-<!-- TODO: The tricky-question dojo has no entry point on main yet (TrapDojoView is unreachable). Add it as its own item after the restoration PR lands on main. Do not describe it until then. -->
+- Trick Question Dojo: for those who struggle with tricky questions, practice only the questions that are easy to fall for. Open it from the home screen; it is free. Questions come as boss battles, and a missed question stays as the boss until you answer it correctly
 
 Situations specific to two wheels
 - Hazard prediction scenarios: experience a situation and choose how to react, then read why. The first 2 are free; the rest are Premium
@@ -91,7 +91,7 @@ Traffic rules change over time. Please check public authorities for the latest i
 | 2 | Home (quota, exam countdown) | One clear task a day until exam day | Exam date set, "days left" visible, quota card visible |
 | 3 | Study mode topic list | See how much you have solved, in color | Topics with varied shades from pale to dark, at least one at 100%; all 5 levels conveyed |
 | 4 | Hazard scenario (situation + 3 choices) | Experience it, then judge | Situation text and 3 choices (or the explanation after choosing) |
-| 5 | Tricky-question / number quiz screen | Tricky ones, explained | Question screen with explanation. Until the dojo entry point is on main, use the tricky-question quiz |
+| 5 | Trick Question Dojo question screen (open from home) | Practice the tricky ones | Screen showing "Boss n / total" and the choices |
 | 6 | Skill test tips | Check the tips before the skill test | An exercise page (e.g. one-plank bridge) with its checklist |
 | 7 | Bike encyclopedia | Unlock the bike encyclopedia as you study | 2-3 unlocked and some locked ("???") entries, unlock counter visible |
 | 8 | Settings / plan (two one-time purchases) | Ad-free or Premium, your choice | No amounts shown (use the real purchase screen after prices are final) |
