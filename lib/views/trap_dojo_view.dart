@@ -28,17 +28,19 @@ class _TrapDojoViewState extends ConsumerState<TrapDojoView> {
   bool _showResult = false;
   bool _lastCorrect = false;
 
+  // dispose 中は ref を使えないため、initState で取得して保持する。
+  late final AdGateService _adGate;
+
   @override
   void initState() {
     super.initState();
-    ref
-        .read(adGateServiceProvider)
-        .enterContext(AdBlockingContext.trapDojoBossBattle);
+    _adGate = ref.read(adGateServiceProvider);
+    _adGate.enterContext(AdBlockingContext.trapDojoBossBattle);
   }
 
   @override
   void dispose() {
-    ref.read(adGateServiceProvider).exitContext();
+    _adGate.exitContext();
     super.dispose();
   }
 
