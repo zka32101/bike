@@ -84,7 +84,7 @@ class AppLocalizationsEn extends AppLocalizations {
       'No questions are available for this category yet';
 
   @override
-  String get commonCategoryLocked => 'Purchase a pass to unlock this category';
+  String get commonCategoryLocked => 'Go Premium to use this category';
 
   @override
   String get commonViewPlans => 'View Plans';
@@ -110,7 +110,7 @@ class AppLocalizationsEn extends AppLocalizations {
   }
 
   @override
-  String get homeUnlockWithPass => 'Unlock by purchasing a pass';
+  String get homeUnlockWithPass => 'Available with Premium';
 
   @override
   String get homeStudyModeSubtitle =>
@@ -121,7 +121,7 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String homeMockExamSubtitle(int count, int minutes) {
-    return '$count questions · $minutes min · 90% to pass (pass required)';
+    return '$count questions · $minutes min · 90% to pass (Premium)';
   }
 
   @override

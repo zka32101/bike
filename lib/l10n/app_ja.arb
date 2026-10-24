@@ -34,7 +34,7 @@
     }
   },
   "commonNoQuestionsInCategory": "この区分の問題がまだありません",
-  "commonCategoryLocked": "この区分はパス購入で解放されます",
+  "commonCategoryLocked": "この区分はプレミアムで利用できます",
   "commonViewPlans": "プランを見る",
   "commonMarkMastered": "覚えた",
   "commonMastered": "覚えた ✓",
@@ -55,7 +55,7 @@
       }
     }
   },
-  "homeUnlockWithPass": "パス購入で解放されます",
+  "homeUnlockWithPass": "プレミアムで利用できます",
   "homeStudyModeSubtitle": "問題・正解・解説を読んで学習",
   "homeAnalyticsSubtitle": "弱点と伸びを確認",
   "homeMockExamSubtitle": "{count}問・{minutes}分・合格ライン90%",

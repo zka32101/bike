@@ -83,7 +83,7 @@ class AppLocalizationsJa extends AppLocalizations {
   String get commonNoQuestionsInCategory => 'この区分の問題がまだありません';
 
   @override
-  String get commonCategoryLocked => 'この区分はパス購入で解放されます';
+  String get commonCategoryLocked => 'この区分はプレミアムで利用できます';
 
   @override
   String get commonViewPlans => 'プランを見る';
@@ -108,7 +108,7 @@ class AppLocalizationsJa extends AppLocalizations {
   }
 
   @override
-  String get homeUnlockWithPass => 'パス購入で解放されます';
+  String get homeUnlockWithPass => 'プレミアムで利用できます';
 
   @override
   String get homeStudyModeSubtitle => '問題・正解・解説を読んで学習';
