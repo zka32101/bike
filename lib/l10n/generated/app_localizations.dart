@@ -245,7 +245,7 @@ abstract class AppLocalizations {
   /// No description provided for @commonCategoryLocked.
   ///
   /// In ja, this message translates to:
-  /// **'この区分はパス購入で解放されます'**
+  /// **'この区分はプレミアムで利用できます'**
   String get commonCategoryLocked;
 
   /// No description provided for @commonViewPlans.
@@ -287,7 +287,7 @@ abstract class AppLocalizations {
   /// No description provided for @homeUnlockWithPass.
   ///
   /// In ja, this message translates to:
-  /// **'パス購入で解放されます'**
+  /// **'プレミアムで利用できます'**
   String get homeUnlockWithPass;
 
   /// No description provided for @homeStudyModeSubtitle.
