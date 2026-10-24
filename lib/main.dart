@@ -22,6 +22,7 @@ import 'services/firebase_analytics_service.dart';
 import 'services/firestore_data_service.dart';
 import 'services/firestore_sync_service.dart';
 import 'services/ad_units.dart';
+import 'services/bike_ad_rules.dart';
 import 'services/release_keys.dart';
 import 'services/prefs_key_value_store.dart';
 import 'services/hybrid_data_service.dart';
@@ -88,11 +89,12 @@ void main() async {
   // 広告ゲート（app_common_kit）。同意(UMP)・頻度制御・有料時の非初期化を担う。
   // 広告なし(noads)・プレミアムの間は広告SDKを初期化しない。ユニットIDが
   // 使えない場合（iOSの本番ID未発行など）は null で、広告なしで動作する。
+  // インタースティシャルは 1日1回（CD-007）。ルールは kBikeAdRules で kit 既定を上書き。
   final adUnits = BikeAdUnits.resolve();
   final AdGate? adGate = adUnits == null
       ? null
       : await AdGate.init(
-          config: AdConfig(unitIds: adUnits),
+          config: AdConfig(unitIds: adUnits, rules: kBikeAdRules),
           adsHidden: () => entitlement.state.adsHidden,
         );
 
