@@ -23,6 +23,7 @@ import 'sign_quiz_view.dart';
 import 'study_mode_view.dart';
 import 'trap_quiz_view.dart';
 import '../widgets/oshi_card.dart';
+import '../widgets/trap_dojo_entry_card.dart';
 import '../widgets/oshi_readiness_card.dart';
 
 /// ホーム画面：合格予測メーター／今日のノルマ。
@@ -282,6 +283,8 @@ class _HomeViewState extends ConsumerState<HomeView> {
                         ),
                       ),
                     ),
+                    const SizedBox(height: 12),
+                    TrapDojoEntryCard(licenseCategory: primaryCategoryId),
                     const SizedBox(height: 12),
                     Card(
                       child: ListTile(
