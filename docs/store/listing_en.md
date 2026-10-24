@@ -39,7 +39,7 @@ Prices are shown on the Google Play purchase screen. [Ops to confirm: prices are
 Purchases can be restored.
 
 ADS
-The free version shows a banner ad on the home screen. [Ops to confirm: the code also contains an interstitial ad at the end of the daily quota; confirm the actual ad scope and align this text]
+The free version shows a banner ad on the home screen and an interstitial ad when you finish your daily quota (your daily study goal). No ads are shown on the question, boss battle, or pass-prediction meter screens.
 Ads can be removed with either purchase.
 
 PLEASE NOTE
