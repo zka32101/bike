@@ -32,6 +32,7 @@ val admobAppId: String? =
 val ADMOB_TEST_APP_ID = "ca-app-pub-3940256099942544~3347511713"
 
 android {
+    // namespace(Kotlin/R のパッケージ)は applicationId と別物。階層移動を避けるため旧値を据え置く。
     namespace = "com.yourwish.bikelicense"
     compileSdk = flutter.compileSdkVersion
     ndkVersion = "27.0.12077973"
@@ -47,7 +48,7 @@ android {
     }
 
     defaultConfig {
-        applicationId = "com.yourwish.bikelicense"
+        applicationId = "com.yourwish.ukalab.bike_license"
         minSdk = 21
         targetSdk = flutter.targetSdkVersion
         versionCode = flutter.versionCode

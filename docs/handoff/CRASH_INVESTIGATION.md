@@ -12,7 +12,7 @@
 apiKey: 'AIzaSyDummy_Firebase_API_Key_For_Development',
 appId: '1:123456789:android:abc123def456ghi',
 projectId: 'bike-license-project',
-iosBundleId: 'com.example.bike',   // 実際のパッケージ名は com.yourwish.bikelicense
+iosBundleId: 'com.example.bike',   // 実際のパッケージ名(applicationId)は com.yourwish.ukalab.bike_license（旧 com.yourwish.bikelicense。namespace は据え置き）
 ```
 
 `lib/main.dart` はこの値を明示的に Firebase 初期化に渡している:
