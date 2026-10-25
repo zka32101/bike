@@ -1,6 +1,6 @@
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:ukalab_core/ukalab_core.dart' show SolveCoverage, aggregateCoverage;
 
-import '../data/solve_coverage.dart';
 import 'providers.dart';
 
 /// 解答履歴（正誤不問）から得た「解いたことのある問題ID」。
