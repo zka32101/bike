@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import '../widgets/ukalab_empty_state.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:ukalab_core/ukalab_core.dart' show aggregateCoverage;
 
 import '../core/constants/license_category.dart';
 import '../core/constants/question_topic.dart';
@@ -9,7 +10,6 @@ import '../l10n/generated/app_localizations.dart';
 import '../models/question.dart';
 import '../viewmodels/providers.dart';
 import '../viewmodels/solve_coverage_providers.dart';
-import '../data/solve_coverage.dart';
 import '../widgets/solve_coverage_badge.dart';
 import 'paywall_view.dart';
 import '../data/question_signs.dart';
