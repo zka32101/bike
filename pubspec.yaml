@@ -103,4 +103,6 @@ flutter_launcher_icons:
   # Android のアダプティブアイコン（うかラボ共通の生成ツールで作成。前景は中央66%以内）
   adaptive_icon_background: "assets/icon/app_icon_bg.png"
   adaptive_icon_foreground: "assets/icon/app_icon_fg.png"
+  # 生成される ic_launcher.xml の inset(既定16%)を0%に固定。再生成しても縮小が復活しない
+  adaptive_icon_foreground_inset: 0
   min_sdk_android: 21
