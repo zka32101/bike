@@ -1,0 +1,26 @@
+name: regen-lock-tmp
+# 一時 workflow: ukalab_core の ref 更新に伴う pubspec.lock の再生成用。ブランチ限定。lock をコミットしたら削除する。
+on:
+  push:
+    branches: [chore/core-v0.85.0-migration]
+permissions:
+  contents: write
+jobs:
+  regen:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: subosito/flutter-action@v2
+        with:
+          flutter-version: '3.44.4'
+          channel: 'stable'
+      - run: flutter pub get
+      - name: Commit lock
+        run: |
+          if git diff --quiet pubspec.lock; then echo "lock unchanged"; exit 0; fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add pubspec.lock
+          git commit -m "chore: regenerate pubspec.lock for ukalab_core v0.85.0"
+          git push
