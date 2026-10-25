@@ -2,6 +2,7 @@
 <resources>
     <color name="ic_launcher_background">#FFFFFF</color>
     <!-- 起動画面（ネイティブ起動画面→Flutterスプラッシュの切り替わり時）の背景色。
-         ベージュ系のニュートラルカラーで、派手さを抑えた落ち着いた印象にする。 -->
-    <color name="splash_background">#F6F8FB</color>
+         UkalabCert.bikeLicense のライト色（#B84A12）。白い foreground アイコンとのコントラストは 5.2:1。
+         Flutter 側の StartupSplash.splashBackground と同じ値（test/startup_splash_test.dart で検査）。 -->
+    <color name="splash_background">#B84A12</color>
 </resources>
