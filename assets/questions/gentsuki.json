@@ -18846,5 +18846,1125 @@
     "topicTag": "rules",
     "sourceRef": "道路交通法第63条第2項",
     "lawVersion": "2026-10-03"
+  },
+  {
+    "id": "x570",
+    "licenseCategory": [
+      "gentsuki",
+      "kogataGentsukiNirin",
+      "futsuuNirin",
+      "ogataNirin",
+      "atGentei"
+    ],
+    "stageTag": "第一段階",
+    "difficulty": 1,
+    "questionText": "二輪車の日常点検を行うタイミングとして、最も適切なのはどれか。",
+    "choices": [
+      "乗る前に毎回、車体のまわりを確認する",
+      "月に一度、まとめて車体の状態を確認する",
+      "異常を感じたときだけ、乗る前に点検する",
+      "長く乗らなかったときだけ、走る前に確認する"
+    ],
+    "answer": 0,
+    "explanation": "二輪車は不具合がそのまま転倒につながりやすい。乗る前に毎回、短時間でも点検する習慣が基本。",
+    "isTrapQuestion": false,
+    "trapNumberType": "none",
+    "topicTag": "maintenance",
+    "sourceRef": "自作(AI下書き)",
+    "lawVersion": "2026-10-24",
+    "source": "original",
+    "contentStatus": "ai-draft"
+  },
+  {
+    "id": "x571",
+    "licenseCategory": [
+      "gentsuki",
+      "kogataGentsukiNirin",
+      "futsuuNirin",
+      "ogataNirin",
+      "atGentei"
+    ],
+    "stageTag": "第一段階",
+    "difficulty": 1,
+    "questionText": "タイヤの空気圧を点検するときの状態として、適切なのはどれか。",
+    "choices": [
+      "長く走った直後の、タイヤが温まった状態",
+      "走行して温まる前の、タイヤが冷えた状態",
+      "雨の日に走ったあとの、濡れた状態",
+      "荷物を積んで、重さがかかった状態"
+    ],
+    "answer": 1,
+    "explanation": "走行するとタイヤ内の空気が温まり、圧力が変わって正しく測れない。冷えた状態で測るのが基本。",
+    "isTrapQuestion": false,
+    "trapNumberType": "none",
+    "topicTag": "maintenance",
+    "sourceRef": "自作(AI下書き)",
+    "lawVersion": "2026-10-24",
+    "source": "original",
+    "contentStatus": "ai-draft"
+  },
+  {
+    "id": "x572",
+    "licenseCategory": [
+      "gentsuki",
+      "kogataGentsukiNirin",
+      "futsuuNirin",
+      "ogataNirin",
+      "atGentei"
+    ],
+    "stageTag": "第一段階",
+    "difficulty": 1,
+    "questionText": "タイヤの点検で、確認する項目として適切なのはどれか。",
+    "choices": [
+      "ホイールの色あせや、細かな汚れの有無",
+      "タイヤの側面に書かれた文字の見やすさ",
+      "亀裂や釘などの異物、溝のすり減り具合",
+      "タイヤの手触りが、柔らかいかどうか"
+    ],
+    "answer": 2,
+    "explanation": "亀裂・異物・溝の摩耗は、スリップやパンクの原因になる。外観の色や汚れよりも、安全に関わる状態を確かめる。",
+    "isTrapQuestion": false,
+    "trapNumberType": "none",
+    "topicTag": "maintenance",
+    "sourceRef": "自作(AI下書き)",
+    "lawVersion": "2026-10-24",
+    "source": "original",
+    "contentStatus": "ai-draft"
+  },
+  {
+    "id": "x573",
+    "licenseCategory": [
+      "gentsuki",
+      "kogataGentsukiNirin",
+      "futsuuNirin",
+      "ogataNirin",
+      "atGentei"
+    ],
+    "stageTag": "第一段階",
+    "difficulty": 2,
+    "questionText": "ブレーキレバーの遊びが大きすぎる場合に起こりやすいこととして、正しいのはどれか。",
+    "choices": [
+      "握った瞬間から、強く効いて止まりやすくなる",
+      "制動距離が短くなり、安全性が高まる",
+      "前後のブレーキが、均等に効くようになる",
+      "握ってから効き始めるまでが遅れ、制動が遅くなる"
+    ],
+    "answer": 3,
+    "explanation": "遊びが大きいと、握ってもすぐには効かず制動が遅れる。調整が必要な状態なので、乗る前に整備を依頼する。",
+    "isTrapQuestion": false,
+    "trapNumberType": "none",
+    "topicTag": "maintenance",
+    "sourceRef": "自作(AI下書き)",
+    "lawVersion": "2026-10-24",
+    "source": "original",
+    "contentStatus": "ai-draft"
+  },
+  {
+    "id": "x574",
+    "licenseCategory": [
+      "gentsuki",
+      "kogataGentsukiNirin",
+      "futsuuNirin",
+      "ogataNirin",
+      "atGentei"
+    ],
+    "stageTag": "第一段階",
+    "difficulty": 1,
+    "questionText": "ブレーキの点検で、乗る前に確かめることとして適切なのはどれか。",
+    "choices": [
+      "レバーやペダルの遊びが適当で、しっかり効くか",
+      "レバーやペダルが、できるだけ軽く動くかどうか",
+      "ブレーキを使うと、必ず大きな音が出るかどうか",
+      "ブレーキを離したとき、車体が全く動かないか"
+    ],
+    "answer": 0,
+    "explanation": "遊びが適当で、握ったり踏んだりしたときに確実に効くことが必要。効きが不十分なまま走り出してはいけない。",
+    "isTrapQuestion": false,
+    "trapNumberType": "none",
+    "topicTag": "maintenance",
+    "sourceRef": "自作(AI下書き)",
+    "lawVersion": "2026-10-24",
+    "source": "original",
+    "contentStatus": "ai-draft"
+  },
+  {
+    "id": "x575",
+    "licenseCategory": [
+      "gentsuki",
+      "kogataGentsukiNirin",
+      "futsuuNirin",
+      "ogataNirin",
+      "atGentei"
+    ],
+    "stageTag": "第一段階",
+    "difficulty": 2,
+    "questionText": "チェーン駆動の二輪車で、チェーンにオイルが切れたまま使い続けた場合に起こりやすいのはどれか。",
+    "choices": [
+      "チェーンが滑りやすくなり、のびにくくなる",
+      "摩耗が進んで、異音やチェーンののびが出やすい",
+      "摩擦が減って、エンジンの力が伝わりやすくなる",
+      "チェーンの寿命が、長くなりやすくなる"
+    ],
+    "answer": 1,
+    "explanation": "注油が不足すると摩擦で摩耗が進み、のびや異音の原因になる。適度な注油が必要。",
+    "isTrapQuestion": false,
+    "trapNumberType": "none",
+    "topicTag": "maintenance",
+    "sourceRef": "自作(AI下書き)",
+    "lawVersion": "2026-10-24",
+    "source": "original",
+    "contentStatus": "ai-draft"
+  },
+  {
+    "id": "x576",
+    "licenseCategory": [
+      "gentsuki",
+      "kogataGentsukiNirin",
+      "futsuuNirin",
+      "ogataNirin",
+      "atGentei"
+    ],
+    "stageTag": "第一段階",
+    "difficulty": 1,
+    "questionText": "バックミラーについて、運転前の扱いとして適切なのはどれか。",
+    "choices": [
+      "降りた状態で、見やすい角度に合わせておく",
+      "ミラーは動かさず、メーカー出荷時のままにする",
+      "乗車姿勢をとってから、後方がよく見えるよう調整する",
+      "後方が見えにくくても、振り向いて確認すれば足りる"
+    ],
+    "answer": 2,
+    "explanation": "ミラーは乗車姿勢で後方がよく見える位置に合わせる。実際に座って調整しないと、死角が増える。",
+    "isTrapQuestion": false,
+    "trapNumberType": "none",
+    "topicTag": "maintenance",
+    "sourceRef": "自作(AI下書き)",
+    "lawVersion": "2026-10-24",
+    "source": "original",
+    "contentStatus": "ai-draft"
+  },
+  {
+    "id": "x577",
+    "licenseCategory": [
+      "gentsuki",
+      "kogataGentsukiNirin",
+      "futsuuNirin",
+      "ogataNirin",
+      "atGentei"
+    ],
+    "stageTag": "第一段階",
+    "difficulty": 1,
+    "questionText": "灯火類の点検で、乗る前に確かめることとして適切なのはどれか。",
+    "choices": [
+      "前照灯だけが、明るく点灯するかどうか",
+      "ブレーキランプが、常に点灯したままかどうか",
+      "方向指示器が、点滅せずに点灯し続けるかどうか",
+      "前照灯・尾灯・ブレーキランプ・方向指示器が点くか"
+    ],
+    "answer": 3,
+    "explanation": "灯火は自分の存在や動きを周囲に伝える大切な装置。すべて正常に点灯・点滅するかを確認する。",
+    "isTrapQuestion": false,
+    "trapNumberType": "none",
+    "topicTag": "maintenance",
+    "sourceRef": "自作(AI下書き)",
+    "lawVersion": "2026-10-24",
+    "source": "original",
+    "contentStatus": "ai-draft"
+  },
+  {
+    "id": "x578",
+    "licenseCategory": [
+      "gentsuki",
+      "kogataGentsukiNirin",
+      "futsuuNirin",
+      "ogataNirin",
+      "atGentei"
+    ],
+    "stageTag": "第一段階",
+    "difficulty": 2,
+    "questionText": "エンジンオイルの量を確認するときの方法として、適切なのはどれか。",
+    "choices": [
+      "平らな場所で車体を安定させ、点検窓などで量を見る",
+      "坂道で車体を傾けたまま、オイルの量を見る方法",
+      "エンジンが十分に熱いうちに、すぐに量を見る方法",
+      "オイルの色だけを見て、量の確認は省く方法"
+    ],
+    "answer": 0,
+    "explanation": "傾いた状態では正しい量がわからない。平らな場所で、決められた方法で確かめる。",
+    "isTrapQuestion": false,
+    "trapNumberType": "none",
+    "topicTag": "maintenance",
+    "sourceRef": "自作(AI下書き)",
+    "lawVersion": "2026-10-24",
+    "source": "original",
+    "contentStatus": "ai-draft"
+  },
+  {
+    "id": "x579",
+    "licenseCategory": [
+      "gentsuki",
+      "kogataGentsukiNirin",
+      "futsuuNirin",
+      "ogataNirin",
+      "atGentei"
+    ],
+    "stageTag": "第一段階",
+    "difficulty": 1,
+    "questionText": "給油をするときの注意として、適切なのはどれか。",
+    "choices": [
+      "エンジンをかけたまま、手早く給油する",
+      "エンジンを止め、火気のない場所で行う",
+      "タバコを吸いながら、様子を見て給油する",
+      "こぼれても、そのままにして出発する"
+    ],
+    "answer": 1,
+    "explanation": "燃料は引火しやすい。エンジンを止め、火気を避けて給油する。こぼれた燃料は拭き取ってから出発する。",
+    "isTrapQuestion": false,
+    "trapNumberType": "none",
+    "topicTag": "maintenance",
+    "sourceRef": "自作(AI下書き)",
+    "lawVersion": "2026-10-24",
+    "source": "original",
+    "contentStatus": "ai-draft"
+  },
+  {
+    "id": "x580",
+    "licenseCategory": [
+      "gentsuki",
+      "kogataGentsukiNirin",
+      "futsuuNirin",
+      "ogataNirin",
+      "atGentei"
+    ],
+    "stageTag": "第一段階",
+    "difficulty": 2,
+    "questionText": "エンジンがかかりにくくなったとき、点検する項目として関係が深いのはどれか。",
+    "choices": [
+      "タイヤの空気圧と、溝のすり減り具合",
+      "ミラーの角度と、ステップの位置",
+      "バッテリーの状態と、端子のゆるみなど",
+      "ハンドルグリップの、すり減り具合"
+    ],
+    "answer": 2,
+    "explanation": "始動にはバッテリーが大きく関わる。端子のゆるみや電力の低下を確認する。",
+    "isTrapQuestion": false,
+    "trapNumberType": "none",
+    "topicTag": "maintenance",
+    "sourceRef": "自作(AI下書き)",
+    "lawVersion": "2026-10-24",
+    "source": "original",
+    "contentStatus": "ai-draft"
+  },
+  {
+    "id": "x581",
+    "licenseCategory": [
+      "gentsuki",
+      "kogataGentsukiNirin",
+      "futsuuNirin",
+      "ogataNirin",
+      "atGentei"
+    ],
+    "stageTag": "第一段階",
+    "difficulty": 2,
+    "questionText": "ブレーキ液の量について、適切な扱いはどれか。",
+    "choices": [
+      "量は気にせず、減った分だけ水を足して使い続ける",
+      "見えにくい場所にあるので、点検はしなくてよい",
+      "多いほどよいので、上限を超えて入れておく",
+      "規定の範囲にあるかを確かめ、足りないときは整備を依頼する"
+    ],
+    "answer": 3,
+    "explanation": "液が不足すると、ブレーキが効かなくなるおそれがある。範囲を確認し、不足は原因を含め整備を依頼する。",
+    "isTrapQuestion": false,
+    "trapNumberType": "none",
+    "topicTag": "maintenance",
+    "sourceRef": "自作(AI下書き)",
+    "lawVersion": "2026-10-24",
+    "source": "original",
+    "contentStatus": "ai-draft"
+  },
+  {
+    "id": "x582",
+    "licenseCategory": [
+      "gentsuki",
+      "kogataGentsukiNirin",
+      "futsuuNirin",
+      "ogataNirin",
+      "atGentei"
+    ],
+    "stageTag": "第二段階",
+    "difficulty": 2,
+    "questionText": "走行中に異音や異臭、振動に気づいたときの対応として、適切なのはどれか。",
+    "choices": [
+      "安全な場所に止めて、原因を確かめる",
+      "そのまま速度を上げ、様子を見ながら走る",
+      "音楽などで気をそらして、気にしないようにする",
+      "目的地に着くまでは、そのまま我慢して走る"
+    ],
+    "answer": 0,
+    "explanation": "異常を放置すると、事故や故障につながる。安全な場所に停止して確認し、必要なら整備を依頼する。",
+    "isTrapQuestion": false,
+    "trapNumberType": "none",
+    "topicTag": "maintenance",
+    "sourceRef": "自作(AI下書き)",
+    "lawVersion": "2026-10-24",
+    "source": "original",
+    "contentStatus": "ai-draft"
+  },
+  {
+    "id": "x583",
+    "licenseCategory": [
+      "gentsuki",
+      "kogataGentsukiNirin",
+      "futsuuNirin",
+      "ogataNirin",
+      "atGentei"
+    ],
+    "stageTag": "第一段階",
+    "difficulty": 2,
+    "questionText": "水冷式エンジンで、エンジンが熱いときの冷却水まわりの扱いとして、適切なのはどれか。",
+    "choices": [
+      "熱いうちに、すぐにキャップを開けて水を足す",
+      "熱いうちはキャップを開けず、冷えてから確認する",
+      "熱いほど補充しやすいので、続けて足す",
+      "キャップを開けて、中をのぞいて確かめる"
+    ],
+    "answer": 1,
+    "explanation": "高温のときにキャップを開けると、熱い液が噴き出してやけどのおそれがある。冷えてから扱う。",
+    "isTrapQuestion": false,
+    "trapNumberType": "none",
+    "topicTag": "maintenance",
+    "sourceRef": "自作(AI下書き)",
+    "lawVersion": "2026-10-24",
+    "source": "original",
+    "contentStatus": "ai-draft"
+  },
+  {
+    "id": "x584",
+    "licenseCategory": [
+      "gentsuki",
+      "kogataGentsukiNirin",
+      "futsuuNirin",
+      "ogataNirin",
+      "atGentei"
+    ],
+    "stageTag": "第一段階",
+    "difficulty": 1,
+    "questionText": "ヘルメットの点検として、適切なのはどれか。",
+    "choices": [
+      "色が目立つか、表面に汚れが付いていないか",
+      "重さが前回と同じか、においがしないか",
+      "あごひもが傷んでいないか、強い衝撃を受けていないか",
+      "かぶり心地が、少しゆるい方がよいかどうか"
+    ],
+    "answer": 2,
+    "explanation": "あごひもの傷みや、強い衝撃を受けた形跡があれば、保護の働きが落ちる。状態を確かめて使う。",
+    "isTrapQuestion": false,
+    "trapNumberType": "none",
+    "topicTag": "maintenance",
+    "sourceRef": "自作(AI下書き)",
+    "lawVersion": "2026-10-24",
+    "source": "original",
+    "contentStatus": "ai-draft"
+  },
+  {
+    "id": "x585",
+    "licenseCategory": [
+      "gentsuki",
+      "kogataGentsukiNirin",
+      "futsuuNirin",
+      "ogataNirin",
+      "atGentei"
+    ],
+    "stageTag": "第二段階",
+    "difficulty": 2,
+    "questionText": "雨の日や洗車のあとに、ブレーキについて注意することとして適切なのはどれか。",
+    "choices": [
+      "濡れたほうが摩擦が増えるので、強く効くと考える",
+      "水に濡れても変化はないので、確認は省いてよい",
+      "ブレーキが乾くまでは、強く握りしめたままにする",
+      "ブレーキが濡れて効きが落ちることがあるので、走る前に軽く確かめる"
+    ],
+    "answer": 3,
+    "explanation": "濡れるとブレーキの効きが落ちることがある。発進後は速度を抑えて軽くかけ、効きを確かめる。",
+    "isTrapQuestion": false,
+    "trapNumberType": "none",
+    "topicTag": "maintenance",
+    "sourceRef": "自作(AI下書き)",
+    "lawVersion": "2026-10-24",
+    "source": "original",
+    "contentStatus": "ai-draft"
+  },
+  {
+    "id": "x586",
+    "licenseCategory": [
+      "gentsuki",
+      "kogataGentsukiNirin",
+      "futsuuNirin",
+      "ogataNirin",
+      "atGentei"
+    ],
+    "stageTag": "第一段階",
+    "difficulty": 1,
+    "questionText": "発進前にスタンドについて確認することとして、適切なのはどれか。",
+    "choices": [
+      "スタンドが収納され、車体から外れているか",
+      "スタンドは出したまま、発進できるか",
+      "スタンドの色や、汚れが落ちているか",
+      "スタンドは、左右どちらも立てたままにするか"
+    ],
+    "answer": 0,
+    "explanation": "スタンドを出したまま発進すると、カーブや旋回で接地して転倒するおそれがある。発進前に収納を確かめる。",
+    "isTrapQuestion": false,
+    "trapNumberType": "none",
+    "topicTag": "maintenance",
+    "sourceRef": "自作(AI下書き)",
+    "lawVersion": "2026-10-24",
+    "source": "original",
+    "contentStatus": "ai-draft"
+  },
+  {
+    "id": "x587",
+    "licenseCategory": [
+      "gentsuki",
+      "kogataGentsukiNirin",
+      "futsuuNirin",
+      "ogataNirin",
+      "atGentei"
+    ],
+    "stageTag": "第一段階",
+    "difficulty": 2,
+    "questionText": "荷物を積むときの点検として、適切なのはどれか。",
+    "choices": [
+      "荷物は見た目が整っていれば、固定は不要か",
+      "荷台やホルダーに確実に固定され、ゆるみがないか",
+      "荷物の重さに関係なく、片側に寄せて積んでよいか",
+      "走り出してから、気になったら直せばよいか"
+    ],
+    "answer": 1,
+    "explanation": "荷物が走行中にずれたり落ちたりすると、転倒や後続車の事故につながる。出発前にしっかり固定する。",
+    "isTrapQuestion": false,
+    "trapNumberType": "none",
+    "topicTag": "maintenance",
+    "sourceRef": "自作(AI下書き)",
+    "lawVersion": "2026-10-24",
+    "source": "original",
+    "contentStatus": "ai-draft"
+  },
+  {
+    "id": "x588",
+    "licenseCategory": [
+      "gentsuki",
+      "kogataGentsukiNirin",
+      "futsuuNirin",
+      "ogataNirin",
+      "atGentei"
+    ],
+    "stageTag": "第一段階",
+    "difficulty": 1,
+    "questionText": "故障や不具合を見つけたときの対応として、適切なのはどれか。",
+    "choices": [
+      "軽い不具合なら、そのまま走って様子を見る",
+      "近距離だけなら、不具合があっても乗ってよい",
+      "走行せず、整備を依頼して直してから乗る",
+      "見なかったことにして、次の点検まで放置する"
+    ],
+    "answer": 2,
+    "explanation": "不具合のまま走ると、事故や転倒の原因になる。直してから乗るのが基本。",
+    "isTrapQuestion": false,
+    "trapNumberType": "none",
+    "topicTag": "maintenance",
+    "sourceRef": "自作(AI下書き)",
+    "lawVersion": "2026-10-24",
+    "source": "original",
+    "contentStatus": "ai-draft"
+  },
+  {
+    "id": "x589",
+    "licenseCategory": [
+      "gentsuki",
+      "kogataGentsukiNirin",
+      "futsuuNirin",
+      "ogataNirin",
+      "atGentei"
+    ],
+    "stageTag": "第一段階",
+    "difficulty": 2,
+    "questionText": "アクセルグリップ(スロットル)の点検として、適切なのはどれか。",
+    "choices": [
+      "回したあと、そのままの位置で止まるか",
+      "回す動きが、できるだけ重く感じられるか",
+      "回すと、グリップが少しガタつくか",
+      "回して離したとき、スムーズに元の位置へ戻るか"
+    ],
+    "answer": 3,
+    "explanation": "戻りが悪いと、加速したままになるおそれがある。ひっかかりなく戻ることを乗る前に確認する。",
+    "isTrapQuestion": false,
+    "trapNumberType": "none",
+    "topicTag": "maintenance",
+    "sourceRef": "自作(AI下書き)",
+    "lawVersion": "2026-10-24",
+    "source": "original",
+    "contentStatus": "ai-draft"
+  },
+  {
+    "id": "x590",
+    "licenseCategory": [
+      "gentsuki",
+      "kogataGentsukiNirin",
+      "futsuuNirin",
+      "ogataNirin",
+      "atGentei"
+    ],
+    "stageTag": "第一段階",
+    "difficulty": 1,
+    "questionText": "「工事中」の警戒標識がある場所を二輪車で通行するとき、適切な運転はどれか。",
+    "choices": [
+      "速度を落とし、作業員や路面の状態に注意して進む",
+      "工事は関係ないので、そのままの速度で進む",
+      "作業員を避けるため、警音器を鳴らして通過する",
+      "路面の状態は気にせず、車線の中央を進む"
+    ],
+    "answer": 0,
+    "explanation": "前方で道路工事が行われていることを示す。作業員や路面の段差・砂利などに備えて減速する。",
+    "isTrapQuestion": false,
+    "trapNumberType": "none",
+    "topicTag": "signs",
+    "sourceRef": "自作(AI下書き)",
+    "lawVersion": "2026-10-24",
+    "source": "original",
+    "contentStatus": "ai-draft"
+  },
+  {
+    "id": "x591",
+    "licenseCategory": [
+      "gentsuki",
+      "kogataGentsukiNirin",
+      "futsuuNirin",
+      "ogataNirin",
+      "atGentei"
+    ],
+    "stageTag": "第一段階",
+    "difficulty": 2,
+    "questionText": "「横風注意」の警戒標識がある場所を二輪車で通行するとき、適切な対応はどれか。",
+    "choices": [
+      "風は関係ないので、速度を上げて通過する",
+      "速度を控えめにして、ハンドルを取られないよう備える",
+      "風を避けるため、体を大きく倒して走り抜ける",
+      "風に押されないよう、片手を離して走る"
+    ],
+    "answer": 1,
+    "explanation": "強い横風が吹くおそれがあることを示す。二輪車は風の影響を受けやすいので、減速してハンドルをしっかり保持する。",
+    "isTrapQuestion": false,
+    "trapNumberType": "none",
+    "topicTag": "signs",
+    "sourceRef": "自作(AI下書き)",
+    "lawVersion": "2026-10-24",
+    "source": "original",
+    "contentStatus": "ai-draft"
+  },
+  {
+    "id": "x592",
+    "licenseCategory": [
+      "gentsuki",
+      "kogataGentsukiNirin",
+      "futsuuNirin",
+      "ogataNirin",
+      "atGentei"
+    ],
+    "stageTag": "第一段階",
+    "difficulty": 1,
+    "questionText": "「信号機あり」の警戒標識が意味するものはどれか。",
+    "choices": [
+      "前方の信号機は常に青色になっている",
+      "前方の信号機は故障しているので、無視してよい",
+      "前方に信号機があるので、注意して進む",
+      "前方に、歩行者用の信号機だけがある"
+    ],
+    "answer": 2,
+    "explanation": "信号機が前方にあることを知らせる標識。見落としやすい場所では、早めに減速して信号を確認する。",
+    "isTrapQuestion": false,
+    "trapNumberType": "none",
+    "topicTag": "signs",
+    "sourceRef": "自作(AI下書き)",
+    "lawVersion": "2026-10-24",
+    "source": "original",
+    "contentStatus": "ai-draft"
+  },
+  {
+    "id": "x593",
+    "licenseCategory": [
+      "gentsuki",
+      "kogataGentsukiNirin",
+      "futsuuNirin",
+      "ogataNirin",
+      "atGentei"
+    ],
+    "stageTag": "第一段階",
+    "difficulty": 1,
+    "questionText": "「動物が飛び出すおそれあり」の警戒標識がある道路での運転として、適切なのはどれか。",
+    "choices": [
+      "動物は音で逃げるので、警音器を鳴らして進む",
+      "動物に気づくまでは、速度を落とす必要はない",
+      "動物を見かけたら、その場で急に進路を変える",
+      "速度を控えめにして、道路わきの動きに注意する"
+    ],
+    "answer": 3,
+    "explanation": "動物の飛び出しがありうる場所を示す。いつでも止まれる速度で、道路わきの様子に注意して走行する。",
+    "isTrapQuestion": false,
+    "trapNumberType": "none",
+    "topicTag": "signs",
+    "sourceRef": "自作(AI下書き)",
+    "lawVersion": "2026-10-24",
+    "source": "original",
+    "contentStatus": "ai-draft"
+  },
+  {
+    "id": "x594",
+    "licenseCategory": [
+      "gentsuki",
+      "kogataGentsukiNirin",
+      "futsuuNirin",
+      "ogataNirin",
+      "atGentei"
+    ],
+    "stageTag": "第一段階",
+    "difficulty": 2,
+    "questionText": "「合流交通あり」の警戒標識が意味するものはどれか。",
+    "choices": [
+      "前方で、ほかの道路から車が合流してくる",
+      "前方で、道路が行き止まりになっている",
+      "前方で、ほかの道路へ分かれていく道がある",
+      "前方で、この道路が行き止まりになる"
+    ],
+    "answer": 0,
+    "explanation": "別の道路から車が合流してくる場所を示す。合流車の動きに注意し、必要に応じて減速や進路の余裕をとる。",
+    "isTrapQuestion": false,
+    "trapNumberType": "none",
+    "topicTag": "signs",
+    "sourceRef": "自作(AI下書き)",
+    "lawVersion": "2026-10-24",
+    "source": "original",
+    "contentStatus": "ai-draft"
+  },
+  {
+    "id": "x595",
+    "licenseCategory": [
+      "gentsuki",
+      "kogataGentsukiNirin",
+      "futsuuNirin",
+      "ogataNirin",
+      "atGentei"
+    ],
+    "stageTag": "第一段階",
+    "difficulty": 2,
+    "questionText": "「下り急勾配あり」の警戒標識がある場所での運転として、適切なのはどれか。",
+    "choices": [
+      "加速して下り、その勢いで一気に通り抜ける",
+      "速度を落とし、エンジンブレーキも使って走る",
+      "ブレーキだけを強く握りしめたまま下る",
+      "クラッチを切って、惰性にまかせて下る"
+    ],
+    "answer": 1,
+    "explanation": "急な下り坂では、フットブレーキだけに頼ると効きが落ちることがある。エンジンブレーキも併用して速度を抑える。",
+    "isTrapQuestion": false,
+    "trapNumberType": "none",
+    "topicTag": "signs",
+    "sourceRef": "自作(AI下書き)",
+    "lawVersion": "2026-10-24",
+    "source": "original",
+    "contentStatus": "ai-draft"
+  },
+  {
+    "id": "x596",
+    "licenseCategory": [
+      "gentsuki",
+      "kogataGentsukiNirin",
+      "futsuuNirin",
+      "ogataNirin",
+      "atGentei"
+    ],
+    "stageTag": "第一段階",
+    "difficulty": 2,
+    "questionText": "「路面凹凸あり」の警戒標識がある場所を二輪車で通行するとき、適切なのはどれか。",
+    "choices": [
+      "速度を上げて、凹凸を一気に通過する",
+      "片手を離して、衝撃をやわらげながら進む",
+      "速度を落として、ハンドルをしっかり保持して進む",
+      "凹凸が見えるまでは、そのままの速度を保つ"
+    ],
+    "answer": 2,
+    "explanation": "路面に凹凸があることを示す。二輪車はバランスをくずしやすいので、減速して両手でしっかり保持する。",
+    "isTrapQuestion": false,
+    "trapNumberType": "none",
+    "topicTag": "signs",
+    "sourceRef": "自作(AI下書き)",
+    "lawVersion": "2026-10-24",
+    "source": "original",
+    "contentStatus": "ai-draft"
+  },
+  {
+    "id": "x597",
+    "licenseCategory": [
+      "gentsuki",
+      "kogataGentsukiNirin",
+      "futsuuNirin",
+      "ogataNirin",
+      "atGentei"
+    ],
+    "stageTag": "第一段階",
+    "difficulty": 1,
+    "questionText": "「幅員減少」の警戒標識が意味するものはどれか。",
+    "choices": [
+      "前方で道路の幅が広くなる",
+      "前方で、進める方向が限られる",
+      "前方で、ほかの道路と交わる",
+      "前方で道路の幅が狭くなる"
+    ],
+    "answer": 3,
+    "explanation": "道路の幅が狭くなることを示す。対向車やすれ違いに注意し、速度を落として進む。",
+    "isTrapQuestion": false,
+    "trapNumberType": "none",
+    "topicTag": "signs",
+    "sourceRef": "自作(AI下書き)",
+    "lawVersion": "2026-10-24",
+    "source": "original",
+    "contentStatus": "ai-draft"
+  },
+  {
+    "id": "x598",
+    "licenseCategory": [
+      "gentsuki",
+      "kogataGentsukiNirin",
+      "futsuuNirin",
+      "ogataNirin",
+      "atGentei"
+    ],
+    "stageTag": "第一段階",
+    "difficulty": 1,
+    "questionText": "「車線数減少」の警戒標識が意味するものはどれか。",
+    "choices": [
+      "前方で車線の数が減る",
+      "前方で車線の数が増える",
+      "前方で、車線が反対向きになる",
+      "前方で、車線に区切りがなくなる"
+    ],
+    "answer": 0,
+    "explanation": "車線が減る場所では、車の進路変更が重なりやすい。周囲の動きに注意し、余裕を持って進路を調整する。",
+    "isTrapQuestion": false,
+    "trapNumberType": "none",
+    "topicTag": "signs",
+    "sourceRef": "自作(AI下書き)",
+    "lawVersion": "2026-10-24",
+    "source": "original",
+    "contentStatus": "ai-draft"
+  },
+  {
+    "id": "x599",
+    "licenseCategory": [
+      "gentsuki",
+      "kogataGentsukiNirin",
+      "futsuuNirin",
+      "ogataNirin",
+      "atGentei"
+    ],
+    "stageTag": "第一段階",
+    "difficulty": 1,
+    "questionText": "「踏切あり」の警戒標識が意味するものはどれか。",
+    "choices": [
+      "前方の踏切は、いつでも通れる状態である",
+      "前方に踏切があるので、注意して進む",
+      "前方の踏切は、通行止めになっている",
+      "前方に踏切はなく、線路が並んでいる"
+    ],
+    "answer": 1,
+    "explanation": "前方に踏切があることを知らせる標識。踏切の手前では速度を落とし、安全を確かめる準備をする。",
+    "isTrapQuestion": false,
+    "trapNumberType": "none",
+    "topicTag": "signs",
+    "sourceRef": "自作(AI下書き)",
+    "lawVersion": "2026-10-24",
+    "source": "original",
+    "contentStatus": "ai-draft"
+  },
+  {
+    "id": "x600",
+    "licenseCategory": [
+      "gentsuki",
+      "kogataGentsukiNirin",
+      "futsuuNirin",
+      "ogataNirin",
+      "atGentei"
+    ],
+    "stageTag": "第一段階",
+    "difficulty": 1,
+    "questionText": "「車両通行止め」の規制標識がある道路について、正しいのはどれか。",
+    "choices": [
+      "原動機付自転車だけは、通行できる",
+      "自動車は通行できないが、二輪車は通行できる",
+      "原動機付自転車を含め、車両は通行できない",
+      "歩行者も含め、すべての人が通行できない"
+    ],
+    "answer": 2,
+    "explanation": "車両すべての通行を禁止する標識。歩行者は対象外で、原動機付自転車や二輪車も通行できない。",
+    "isTrapQuestion": false,
+    "trapNumberType": "none",
+    "topicTag": "signs",
+    "sourceRef": "自作(AI下書き)",
+    "lawVersion": "2026-10-24",
+    "source": "original",
+    "contentStatus": "ai-draft"
+  },
+  {
+    "id": "x601",
+    "licenseCategory": [
+      "gentsuki",
+      "kogataGentsukiNirin",
+      "futsuuNirin",
+      "ogataNirin",
+      "atGentei"
+    ],
+    "stageTag": "第一段階",
+    "difficulty": 1,
+    "questionText": "「右折禁止」の規制標識がある交差点で、二輪車がとる行動として、正しいのはどれか。",
+    "choices": [
+      "右折してはいけないが、小回りなら右折してよい",
+      "右折の合図を出せば、右折してもよい",
+      "二輪車は対象外なので、右折してよい",
+      "右折せず、直進や左折など認められた進行方向を選ぶ"
+    ],
+    "answer": 3,
+    "explanation": "標識の示す方向への進行は禁止される。やむを得ないときは、通行できる経路を選んで進む。",
+    "isTrapQuestion": false,
+    "trapNumberType": "none",
+    "topicTag": "signs",
+    "sourceRef": "自作(AI下書き)",
+    "lawVersion": "2026-10-24",
+    "source": "original",
+    "contentStatus": "ai-draft"
+  },
+  {
+    "id": "x602",
+    "licenseCategory": [
+      "gentsuki",
+      "kogataGentsukiNirin",
+      "futsuuNirin",
+      "ogataNirin",
+      "atGentei"
+    ],
+    "stageTag": "第一段階",
+    "difficulty": 2,
+    "questionText": "「自転車専用」の標識がある通行帯・道路について、正しいのはどれか。",
+    "choices": [
+      "原動機付自転車は通行できない",
+      "原動機付自転車も、通行できる",
+      "二輪車はすべて、通行できる",
+      "徐行すれば、二輪車も通行できる"
+    ],
+    "answer": 0,
+    "explanation": "自転車専用は、自転車だけが通行できることを示す。原動機付自転車や二輪車は通行できない。",
+    "isTrapQuestion": false,
+    "trapNumberType": "none",
+    "topicTag": "signs",
+    "sourceRef": "自作(AI下書き)",
+    "lawVersion": "2026-10-24",
+    "source": "original",
+    "contentStatus": "ai-draft"
+  },
+  {
+    "id": "x603",
+    "licenseCategory": [
+      "gentsuki",
+      "kogataGentsukiNirin",
+      "futsuuNirin",
+      "ogataNirin",
+      "atGentei"
+    ],
+    "stageTag": "第一段階",
+    "difficulty": 2,
+    "questionText": "「自転車及び歩行者専用」の標識がある道について、正しいのはどれか。",
+    "choices": [
+      "原動機付自転車も、歩行者に注意すれば通行できる",
+      "原動機付自転車は通行できない",
+      "原動機付自転車は、低速なら通行できる",
+      "二輪車は時間帯によって通行できる"
+    ],
+    "answer": 1,
+    "explanation": "自転車と歩行者だけが通れる場所を示す。原動機付自転車を含む二輪車は通行できない。",
+    "isTrapQuestion": false,
+    "trapNumberType": "none",
+    "topicTag": "signs",
+    "sourceRef": "自作(AI下書き)",
+    "lawVersion": "2026-10-24",
+    "source": "original",
+    "contentStatus": "ai-draft"
+  },
+  {
+    "id": "x604",
+    "licenseCategory": [
+      "gentsuki",
+      "kogataGentsukiNirin",
+      "futsuuNirin",
+      "ogataNirin",
+      "atGentei"
+    ],
+    "stageTag": "第一段階",
+    "difficulty": 1,
+    "questionText": "「警笛鳴らせ」の標識が意味するものはどれか。",
+    "choices": [
+      "標識のある場所では、警音器を鳴らしてはならない",
+      "標識のある場所で、ライトを点滅させなければならない",
+      "標識のある場所で、警音器を鳴らさなければならない",
+      "標識のある場所で、必ず速度を上げなければならない"
+    ],
+    "answer": 2,
+    "explanation": "見通しの悪い交差点などで、ほかの交通に存在を知らせるため、警音器を鳴らす義務を示す。",
+    "isTrapQuestion": false,
+    "trapNumberType": "none",
+    "topicTag": "signs",
+    "sourceRef": "自作(AI下書き)",
+    "lawVersion": "2026-10-24",
+    "source": "original",
+    "contentStatus": "ai-draft"
+  },
+  {
+    "id": "x605",
+    "licenseCategory": [
+      "gentsuki",
+      "kogataGentsukiNirin",
+      "futsuuNirin",
+      "ogataNirin",
+      "atGentei"
+    ],
+    "stageTag": "第一段階",
+    "difficulty": 2,
+    "questionText": "「停車可」の標識が意味するものはどれか。",
+    "choices": [
+      "この場所で、荷物を積んで長く止めてよい",
+      "この場所は、停止も停車もできない",
+      "この場所で、いつでも長時間駐車できる",
+      "この場所で、車を止めることができる"
+    ],
+    "answer": 3,
+    "explanation": "停車が認められる場所を示す。駐車とは扱いが異なるので、長時間の駐車をしてよいという意味ではない。",
+    "isTrapQuestion": false,
+    "trapNumberType": "none",
+    "topicTag": "signs",
+    "sourceRef": "自作(AI下書き)",
+    "lawVersion": "2026-10-24",
+    "source": "original",
+    "contentStatus": "ai-draft"
+  },
+  {
+    "id": "x606",
+    "licenseCategory": [
+      "gentsuki",
+      "kogataGentsukiNirin",
+      "futsuuNirin",
+      "ogataNirin",
+      "atGentei"
+    ],
+    "stageTag": "第一段階",
+    "difficulty": 2,
+    "questionText": "「上り急勾配あり」の警戒標識が意味するものはどれか。",
+    "choices": [
+      "前方に急な上り坂があるので、備えて進む",
+      "前方に急な下り坂があるので、備えて進む",
+      "前方の道路が、急に右へ曲がっている",
+      "前方の道路が、急に狭くなっている"
+    ],
+    "answer": 0,
+    "explanation": "急な上り坂があることを示す。坂の途中での減速や停止・発進に備え、前の車との間隔を十分にあける。",
+    "isTrapQuestion": false,
+    "trapNumberType": "none",
+    "topicTag": "signs",
+    "sourceRef": "自作(AI下書き)",
+    "lawVersion": "2026-10-24",
+    "source": "original",
+    "contentStatus": "ai-draft"
+  },
+  {
+    "id": "x607",
+    "licenseCategory": [
+      "gentsuki",
+      "kogataGentsukiNirin",
+      "futsuuNirin",
+      "ogataNirin",
+      "atGentei"
+    ],
+    "stageTag": "第一段階",
+    "difficulty": 2,
+    "questionText": "「最高速度」の規制標識が意味するものはどれか。",
+    "choices": [
+      "表示された速度で、必ず走行しなければならない",
+      "表示された速度を超えて走行してはならない",
+      "表示された速度より、遅く走ってはならない",
+      "表示された速度は、目安として守ればよい"
+    ],
+    "answer": 1,
+    "explanation": "走行してよい速度の上限を示す標識。上限であって、道路や交通の状況に応じた安全な速度で走る必要は残る。",
+    "isTrapQuestion": false,
+    "trapNumberType": "none",
+    "topicTag": "signs",
+    "sourceRef": "自作(AI下書き)",
+    "lawVersion": "2026-10-24",
+    "source": "original",
+    "contentStatus": "ai-draft"
+  },
+  {
+    "id": "x608",
+    "licenseCategory": [
+      "gentsuki",
+      "kogataGentsukiNirin",
+      "futsuuNirin",
+      "ogataNirin",
+      "atGentei"
+    ],
+    "stageTag": "第一段階",
+    "difficulty": 1,
+    "questionText": "「左折禁止」の規制標識がある交差点で、二輪車がとる行動として、正しいのはどれか。",
+    "choices": [
+      "左折してはいけないが、徐行すれば左折してよい",
+      "左折の合図を出せば、左折してもよい",
+      "左折せず、直進や右折など認められた進行方向を選ぶ",
+      "原動機付自転車だけは、左折してもよい"
+    ],
+    "answer": 2,
+    "explanation": "標識が示す方向への進行は禁止される。二輪車でも例外ではなく、通行できる経路を選んで進む。",
+    "isTrapQuestion": false,
+    "trapNumberType": "none",
+    "topicTag": "signs",
+    "sourceRef": "自作(AI下書き)",
+    "lawVersion": "2026-10-24",
+    "source": "original",
+    "contentStatus": "ai-draft"
+  },
+  {
+    "id": "x609",
+    "licenseCategory": [
+      "gentsuki",
+      "kogataGentsukiNirin",
+      "futsuuNirin",
+      "ogataNirin",
+      "atGentei"
+    ],
+    "stageTag": "第一段階",
+    "difficulty": 2,
+    "questionText": "「つづら折りあり」の警戒標識が意味するものはどれか。",
+    "choices": [
+      "前方に、まっすぐな下り坂が続く",
+      "前方に、交差点が連続して並んでいる",
+      "前方に、道路の幅が広がる区間がある",
+      "前方に、曲がりくねった道が続く"
+    ],
+    "answer": 3,
+    "explanation": "連続した急な曲がり道があることを示す。カーブごとに十分減速し、曲がる前に速度を整えて進む。",
+    "isTrapQuestion": false,
+    "trapNumberType": "none",
+    "topicTag": "signs",
+    "sourceRef": "自作(AI下書き)",
+    "lawVersion": "2026-10-24",
+    "source": "original",
+    "contentStatus": "ai-draft"
   }
 ]
