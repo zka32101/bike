@@ -1,4 +1,4 @@
-# RevenueCat 設定ガイド（原付・バイク免許コレ！）
+# RevenueCat 設定ガイド（うかラボ 原付・バイク免許）
 
 決定 CD-004（ukalab_core `docs/common_design/decision_log.md`）に基づく、シリーズ標準の課金体系です。
 **価格は他アプリ同様「暫定」**で、運営が最終確認します。
@@ -33,7 +33,7 @@
 | 商品ID（プレミアム） | `<app>_premium` |
 | `<app>` | 運営が最終アプリIDに合わせて決定（候補: `bike_license`） |
 | 商品タイプ | 買い切り（アプリ内アイテム／非消費型） |
-| パッケージ名・Bundle ID | 最終アプリIDに合わせる（運営確認待ち） |
+| パッケージ名・Bundle ID | Android applicationId は `com.yourwish.ukalab.bike_license`（CD-005 で確定）。iOS は未作成 |
 
 候補どおりなら `bike_license_noads` / `bike_license_premium`。商品IDと Entitlement ID は作成後に変更できないため、確定してから登録する。
 
@@ -66,3 +66,12 @@
 - 商品が表示されない：Offering が現行に設定されているか、商品が「有効」か、パッケージ名がストア登録のアプリと一致するかを確認。
 - 購入が権利に反映されない：Products と Entitlement の紐付け（手順3）を確認。
 - Android `BILLING_SERVICE_DISCONNECTED`：Google Play 対応端末・Play ストアのバージョンを確認。
+
+## appID 変更に伴う新ID登録（CD-005）
+
+applicationId を `com.yourwish.bikelicense` から `com.yourwish.ukalab.bike_license` に変更した。商品IDは変更しない。Play Console 未登録のため、以下は新IDで新規登録する（運営作業）。
+
+- RevenueCat：Android アプリを新パッケージ名で登録し、公開 SDK キー（`RC_GOOGLE_KEY`）を更新
+- AdMob：アプリを新パッケージ名で登録（ストア連携）。アプリID・広告ユニットIDが変わる場合は secret（ADMOB_APP_ID / AD_*_ID）も更新
+- Firebase：新IDの Android アプリを追加し、google-services.json を再発行、secret `GOOGLE_SERVICES_JSON_BASE64` を更新（debug は `.debug` サフィックス付きも同一ファイルに含まれる）
+- Google Play Console：新パッケージ名でアプリを作成

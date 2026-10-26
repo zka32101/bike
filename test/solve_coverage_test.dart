@@ -1,10 +1,11 @@
 import 'package:bike_license_kore/data/app_cert.dart';
-import 'package:bike_license_kore/data/solve_coverage.dart';
 import 'package:bike_license_kore/widgets/solve_coverage_badge.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:ukalab_core/ui.dart';
+import 'package:ukalab_core/ui.dart' hide SolveCoverageBadge;
+import 'package:ukalab_core/ukalab_core.dart'
+    show SolveCoverage, SolveLevel, aggregateCoverage, solveLevel, solveRatio;
 
 double _contrast(Color a, Color b) {
   final la = a.computeLuminance();
@@ -62,11 +63,11 @@ void main() {
   group('色導出', () {
     test('0%は無色（面の色のまま）、段階が上がるほど濃い', () {
       const surface = Color(0xFFFFFFFF);
-      const cert = Color(0xFF3050A0);
-      expect(coverageFill(cert, SolveLevel.none, surface), surface);
+      expect(solveCoverageFill(UkalabCert.bikeLicense, Brightness.light, SolveLevel.none, surface), surface);
       var prev = 1.0;
       for (final l in SolveLevel.values) {
-        final lum = coverageFill(cert, l, surface).computeLuminance();
+        final lum = solveCoverageFill(UkalabCert.bikeLicense, Brightness.light, l, surface)
+            .computeLuminance();
         expect(lum, lessThanOrEqualTo(prev));
         prev = lum;
       }
@@ -78,8 +79,8 @@ void main() {
           brightness: b,
         );
         for (final l in SolveLevel.values) {
-          final fill = coverageFill(scheme.primary, l, scheme.surface);
-          final fg = coverageForeground(
+          final fill = solveCoverageFill(UkalabCert.bikeLicense, b, l, scheme.surface);
+          final fg = solveCoverageForeground(
             fill,
             onSurface: scheme.onSurface,
             surface: scheme.surface,
@@ -90,8 +91,15 @@ void main() {
     });
     test('資格色は UkalabCert.bikeLicense（ライト/ダーク）', () {
       expect(kAppCert, UkalabCert.bikeLicense);
-      expect(certColorFor(kAppCert, Brightness.light), UkalabCert.bikeLicense.light);
-      expect(certColorFor(kAppCert, Brightness.dark), UkalabCert.bikeLicense.dark);
+      // 100% の背景は資格色（不透明度0.85）を面に重ねたもの。ライト/ダークで資格色が切り替わる。
+      for (final b in Brightness.values) {
+        const surface = Color(0xFF808080);
+        final base = b == Brightness.dark ? kAppCert.dark : kAppCert.light;
+        expect(
+          solveCoverageFill(kAppCert, b, SolveLevel.complete, surface),
+          Color.alphaBlend(base.withValues(alpha: 0.85), surface),
+        );
+      }
     });
   });
 

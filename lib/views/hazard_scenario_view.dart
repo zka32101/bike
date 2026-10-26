@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:ukalab_core/ui.dart' show PremiumGatedStoryItem, PremiumGatedStoryListView;
 
 import '../data/hazard_scenario.dart';
 import '../viewmodels/providers.dart';
@@ -24,13 +25,9 @@ class _HazardScenarioListViewState extends ConsumerState<HazardScenarioListView>
   late final Future<List<HazardScenario>> _future =
       widget.scenariosFuture ?? loadHazardScenarios();
 
+  /// 無料枠・ロック中の案内は [PremiumGatedStoryListView]（コア v0.85.0〜）が扱う。
+  /// ここは「開ける」と判定されたシナリオを開くだけ。
   void _open(HazardScenario scenario) {
-    if (!scenario.isFree && !ref.read(hasPremiumProvider)) {
-      ScaffoldMessenger.of(context).showSnackBar(
-        const SnackBar(content: Text(kHazardPremiumNotice)),
-      );
-      return;
-    }
     Navigator.of(context).push(MaterialPageRoute<void>(
       builder: (_) => HazardScenarioPlayView(scenario: scenario),
     ));
@@ -39,8 +36,7 @@ class _HazardScenarioListViewState extends ConsumerState<HazardScenarioListView>
   @override
   Widget build(BuildContext context) {
     // 購入状態の変化に追従させる。
-    ref.watch(hasPremiumProvider);
-    final theme = Theme.of(context);
+    final hasPremium = ref.watch(hasPremiumProvider);
     return Scaffold(
       appBar: AppBar(title: const Text('危険予測シナリオ')),
       body: SafeArea(
@@ -54,36 +50,23 @@ class _HazardScenarioListViewState extends ConsumerState<HazardScenarioListView>
               return Center(child: Text('読み込みに失敗しました: ${snapshot.error}'));
             }
             final scenarios = snapshot.data!;
-            return ListView(
-              padding: const EdgeInsets.all(16),
-              children: [
-                Text(
-                  '二輪ならではの場面で、どう判断するかを選びます。選んだあとに理由の解説が出ます。',
-                  style: theme.textTheme.bodyMedium,
-                ),
-                const SizedBox(height: 4),
-                Text(
-                  kHazardDraftNotice,
-                  style: theme.textTheme.bodySmall?.copyWith(color: theme.colorScheme.outline),
-                ),
-                const SizedBox(height: 12),
-                for (final s in scenarios) ...[
-                  Card(
-                    child: ListTile(
-                      title: Text(s.title),
-                      subtitle: Text(
-                        '全${s.chapters.length}場面 ・ ${s.isFree ? '無料' : 'プレミアム'}',
-                        style: theme.textTheme.bodySmall,
-                      ),
-                      trailing: s.isFree
-                          ? const Icon(Icons.chevron_right)
-                          : Icon(Icons.lock_outline, color: theme.colorScheme.outline),
-                      onTap: () => _open(s),
-                    ),
+            final byId = {for (final s in scenarios) s.scenarioId: s};
+            return PremiumGatedStoryListView(
+              items: [
+                for (final s in scenarios)
+                  PremiumGatedStoryItem(
+                    id: s.scenarioId,
+                    title: s.title,
+                    chapterCount: s.chapters.length,
                   ),
-                  const SizedBox(height: 8),
-                ],
               ],
+              hasPremium: hasPremium,
+              isFree: (id) => byId[id]?.isFree ?? false,
+              onOpen: (item) => _open(byId[item.id]!),
+              intro: '二輪ならではの場面で、どう判断するかを選びます。選んだあとに理由の解説が出ます。',
+              draftNotice: kHazardDraftNotice,
+              chapterUnit: '場面',
+              lockedMessage: kHazardPremiumNotice,
             );
           },
         ),

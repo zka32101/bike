@@ -171,7 +171,7 @@ class SettingsView extends ConsumerWidget {
           ),
           // 掲載リストが空なら何も表示しない。うかラボは大人向けなので保護者ゲートは不要。
           const UkalabCrossPromoSection(
-            currentAppId: 'com.yourwish.bikelicense',
+            currentAppId: 'com.yourwish.ukalab.bike_license',
           ),
         ],
       ),

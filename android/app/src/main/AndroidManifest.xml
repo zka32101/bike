@@ -15,7 +15,7 @@
     <uses-permission android:name="android.permission.VIBRATE"/>
 
     <application
-        android:label="原付・バイク免許コレ"
+        android:label="うかラボ 原付・バイク免許"
         android:name="${applicationName}"
         android:icon="@mipmap/ic_launcher"
         android:allowBackup="false"

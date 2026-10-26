@@ -101,7 +101,7 @@ abstract class AppLocalizations {
   /// アプリ名（ホーム画面AppBarタイトル等）
   ///
   /// In ja, this message translates to:
-  /// **'原付・バイク免許コレ！'**
+  /// **'うかラボ 原付・バイク免許'**
   String get appTitle;
 
   /// No description provided for @navHome.

@@ -71,7 +71,7 @@ class BikeLicenseKoreApp extends ConsumerWidget {
     });
 
     return MaterialApp(
-      title: '原付・バイク免許コレ！',
+      title: 'うかラボ 原付・バイク免許',
       debugShowCheckedModeBanner: false,
       navigatorKey: navigatorKey,
       scaffoldMessengerKey: scaffoldMessengerKey,
