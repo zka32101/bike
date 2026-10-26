@@ -1,4 +1,4 @@
-# RevenueCat 設定ガイド（原付・バイク免許コレ！）
+# RevenueCat 設定ガイド（うかラボ 原付・バイク免許）
 
 決定 CD-004（ukalab_core `docs/common_design/decision_log.md`）に基づく、シリーズ標準の課金体系です。
 **価格は他アプリ同様「暫定」**で、運営が最終確認します。
