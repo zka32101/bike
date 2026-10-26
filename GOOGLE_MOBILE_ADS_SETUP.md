@@ -1,14 +1,16 @@
 # Google Mobile Ads 統合ガイド
 
-このドキュメントは、**原付・バイク免許コレ！** に Google Mobile Ads SDK を統合して、インタースティシャル・リワード広告を表示する手順を説明します。
+このドキュメントは、**うかラボ 原付・バイク免許** に Google Mobile Ads SDK を統合して、インタースティシャル・リワード広告を表示する手順を説明します。
 
 ## 概要
 
 ### 広告表示ポリシー（AdGateService で強制）
 
-- **バナー広告**: 不採用 (`canShowBanner` 常に false)
-- **インタースティシャル広告**: ノルマ完走後のみ・1日1回・同一セッション内2回目禁止
-- **リワード広告**: ユーザー起点のみ（"広告を見て報酬" ボタン）
+- **バナー広告**: 採用。ホーム画面下部のみ（`BannerPlacement.home`）
+- **インタースティシャル広告**: ノルマ（1日の学習目標）完走後の結果画面のみ（`InterstitialTrigger.sessionEnd`）。頻度は `app_common_kit` の `AdGate` が制御（既定：最短3分間隔・1日5回まで）
+- **リワード広告**: 現状、画面からの呼び出しなし（ユーザー起点のみとする方針）
+- 広告なし(noads)・プレミアム購入中は広告SDKを初期化せず、バナー・インタースティシャルとも表示しない
+- 問題・ボス・予測メーターの画面には出さない（`AdGateService` の禁止ゾーンで強制）
 
 ### ブロッキング対象（広告表示禁止）
 
@@ -47,7 +49,7 @@ https://admob.google.com にアクセスして、Google アカウントでサイ
 
 ```
 Platform: iOS
-App Name: 原付・バイク免許コレ
+App Name: うかラボ 原付・バイク免許
 App Store URL: https://apps.apple.com/app/id... (本番リリース後)
 ```
 
@@ -55,7 +57,7 @@ App Store URL: https://apps.apple.com/app/id... (本番リリース後)
 
 ```
 Platform: Google Play
-App Name: 原付・バイク免許コレ
+App Name: うかラボ 原付・バイク免許
 Play Store URL: https://play.google.com/store/apps/details?id=com.example.bike_license_kore
 ```
 
@@ -67,7 +69,7 @@ Play Store URL: https://play.google.com/store/apps/details?id=com.example.bike_l
 
 **AdMob Dashboard > Apps > [Your App] > Ad Units > Create new ad unit**
 
-#### 2.1.1 バナー広告 Ad Unit (参考: 不採用方針)
+#### 2.1.1 バナー広告 Ad Unit（ホーム画面で使用）
 
 ```
 Ad Unit Name: Banner - Home Screen
@@ -220,7 +222,7 @@ void main() async {
 Future<void> _showInterstitialIfEligible(WidgetRef ref) async {
   final adGateService = ref.read(adGateServiceProvider);
 
-  // AdGateService でチェック（1日1回・同一セッション内2回目禁止）
+  // AdGateService でチェック（頻度は AdGate（最短間隔・1日上限）が判定）
   if (!adGateService.canShowInterstitial) {
     return;
   }

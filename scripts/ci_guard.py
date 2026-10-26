@@ -12,12 +12,32 @@ import re
 import sys
 
 
+MAX_PRINT_LINES = 25  # 失敗テスト1件あたりの print 出力上限
+MAX_TOTAL_LINES = 600  # 一覧全体の行数上限
+
+
 def baseline(path):
     return int(open(path).read().split()[0])
 
 
+def _cut(t):
+    return t if len(t) <= 200 else t[:200] + "..."
+
+
+def _reason(error, stack):
+    """エラーメッセージ先頭2行と、stackTrace中の最初の test/ 配下の行を返す(各200字まで)。"""
+    out = ["    " + _cut(m.strip()) for m in str(error or "").splitlines() if m.strip()][:2]
+    for sl in str(stack or "").splitlines():
+        if re.search(r"(^|[/\\\s(])test/\S*\.dart", sl):
+            out.append("    at " + _cut(sl.strip()))
+            break
+    return out
+
+
 def count_test_failures(path):
-    names, failed, done = {}, set(), 0
+    names, suites, test_suite, failed, done = {}, {}, {}, set(), 0
+    reasons = {}
+    prints = {}
     for line in open(path, errors="replace"):
         line = line.strip()
         if not line.startswith("{"):
@@ -26,26 +46,53 @@ def count_test_failures(path):
             ev = json.loads(line)
         except ValueError:
             continue
-        if isinstance(ev, dict) and ev.get("type") == "testStart":
+        if isinstance(ev, dict) and ev.get("type") == "suite":
+            suites[ev["suite"]["id"]] = ev["suite"].get("path", "")
+        elif isinstance(ev, dict) and ev.get("type") == "testStart":
             names[ev["test"]["id"]] = ev["test"].get("name", "")
+            test_suite[ev["test"]["id"]] = ev["test"].get("suiteID")
+        elif isinstance(ev, dict) and ev.get("type") == "print":
+            buf = prints.setdefault(ev.get("testID"), [])
+            for m in str(ev.get("message") or "").splitlines():
+                if m.strip() and len(buf) < MAX_PRINT_LINES:
+                    buf.append("      | " + _cut(m.rstrip()))
+        elif isinstance(ev, dict) and ev.get("type") == "error":
+            if ev.get("testID") not in reasons:
+                reasons[ev.get("testID")] = _reason(ev.get("error"), ev.get("stackTrace"))
         elif isinstance(ev, dict) and ev.get("type") == "testDone":
             if ev.get("hidden") and ev.get("result") == "success":
                 continue
             done += 1
             if ev.get("result") in ("failure", "error") and not ev.get("skipped"):
                 failed.add(ev["testID"])
-    return len(failed), done
+    entries = sorted(
+        (f"{suites.get(test_suite.get(i)) or '(unknown file)'}: {names.get(i, '') or '(unknown test)'}", i)
+        for i in failed
+    )
+    lines = []
+    for head, i in entries:
+        lines.append(head)
+        lines.extend(reasons.get(i, []))
+        lines.extend(prints.get(i, []))
+    return len(failed), done, lines
 
 
 def main():
     mode, log, base_path = sys.argv[1:4]
     base = baseline(base_path)
     if mode == "tests":
-        n, done = count_test_failures(log)
+        n, done, failed_lines = count_test_failures(log)
         print(f"flutter test: 失敗 {n} 件 / 実行 {done} 件 (ベースライン {base})")
         if done == 0:
             print("::error::テスト結果を集計できません（テスト実行自体が失敗）")
             return 1
+        if failed_lines:
+            print("::group::失敗したテスト一覧")
+            for ln in failed_lines[:MAX_TOTAL_LINES]:
+                print(ln.replace("\n", " "))
+            if len(failed_lines) > MAX_TOTAL_LINES:
+                print("(省略)")
+            print("::endgroup::")
     else:
         n = len(re.findall(r"^\s*error\s+•", open(log, errors="replace").read(), re.M))
         print(f"flutter analyze: error {n} 件 (ベースライン {base})")
@@ -57,4 +104,5 @@ def main():
     return 0
 
 
-sys.exit(main())
+if __name__ == "__main__":
+    sys.exit(main())

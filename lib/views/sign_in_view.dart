@@ -46,7 +46,7 @@ class _SignInViewState extends ConsumerState<SignInView> {
                 const Icon(Icons.two_wheeler, size: 64),
                 const SizedBox(height: 16),
                 Text(
-                  '原付・バイク免許コレ！',
+                  'うかラボ 原付・バイク免許',
                   style: Theme.of(context).textTheme.titleLarge,
                 ),
                 const SizedBox(height: 8),

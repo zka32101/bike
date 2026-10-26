@@ -23,7 +23,9 @@ import 'sign_quiz_view.dart';
 import 'study_mode_view.dart';
 import 'trap_quiz_view.dart';
 import '../widgets/oshi_card.dart';
+import '../widgets/trap_dojo_entry_card.dart';
 import '../widgets/oshi_readiness_card.dart';
+import '../widgets/streak_share_dialog.dart';
 
 /// ホーム画面：合格予測メーター／今日のノルマ。
 /// ホーム→ノルマ→正誤演出＝3タップ以内でAhaに到達する動線の起点。
@@ -283,6 +285,8 @@ class _HomeViewState extends ConsumerState<HomeView> {
                       ),
                     ),
                     const SizedBox(height: 12),
+                    TrapDojoEntryCard(licenseCategory: primaryCategoryId),
+                    const SizedBox(height: 12),
                     Card(
                       child: ListTile(
                         contentPadding: const EdgeInsets.all(16),
@@ -384,11 +388,19 @@ class _StreakBadge extends StatelessWidget {
           children: [
             const Icon(Icons.local_fire_department, color: Colors.deepOrange),
             const SizedBox(width: 12),
-            Text(
-              AppLocalizations.of(context).homeStreak(streakCount),
-              style: Theme.of(context).textTheme.titleMedium?.copyWith(
-                    fontWeight: FontWeight.bold,
-                  ),
+            Expanded(
+              child: Text(
+                AppLocalizations.of(context).homeStreak(streakCount),
+                style: Theme.of(context).textTheme.titleMedium?.copyWith(
+                      fontWeight: FontWeight.bold,
+                    ),
+              ),
+            ),
+            IconButton(
+              tooltip: '連続学習をシェア',
+              icon: const Icon(Icons.ios_share),
+              onPressed: () =>
+                  showStreakShareDialog(context, streakDays: streakCount),
             ),
           ],
         ),
