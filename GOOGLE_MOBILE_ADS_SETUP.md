@@ -1,6 +1,6 @@
 # Google Mobile Ads 統合ガイド
 
-このドキュメントは、**原付・バイク免許コレ！** に Google Mobile Ads SDK を統合して、インタースティシャル・リワード広告を表示する手順を説明します。
+このドキュメントは、**うかラボ 原付・バイク免許** に Google Mobile Ads SDK を統合して、インタースティシャル・リワード広告を表示する手順を説明します。
 
 ## 概要
 
@@ -49,7 +49,7 @@ https://admob.google.com にアクセスして、Google アカウントでサイ
 
 ```
 Platform: iOS
-App Name: 原付・バイク免許コレ
+App Name: うかラボ 原付・バイク免許
 App Store URL: https://apps.apple.com/app/id... (本番リリース後)
 ```
 
@@ -57,7 +57,7 @@ App Store URL: https://apps.apple.com/app/id... (本番リリース後)
 
 ```
 Platform: Google Play
-App Name: 原付・バイク免許コレ
+App Name: うかラボ 原付・バイク免許
 Play Store URL: https://play.google.com/store/apps/details?id=com.example.bike_license_kore
 ```
 
