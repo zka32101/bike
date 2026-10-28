@@ -10,6 +10,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Changed
 
 - 専門家確認済みの AI 下書きデータ(問題 x570〜x609 を5区分、危険予測シナリオ14本)から `contentStatus: ai-draft` を外し、sourceRef を「専門家確認済み」に更新(2026-10-28)。内容は変更なし。
+- 危険予測シナリオの画面注記を「学習用の架空シナリオ(AI下書き・専門確認前)」から「体験用の架空シナリオです」へ変更(`kHazardDraftNotice` を `kHazardExperienceNotice` に置換、一覧・プレイ画面とも常時表示)。体験コンテンツのため専門家確認は不要との判断による。「専門家確認済み」とは表示しない。シナリオ本文は変更なし。憧れバイク図鑑・技能試験のコツの注記は未決のため据え置き(2026-10-28)。
 
 ## [0.1.0] - 2026-09-16
 
