@@ -43,7 +43,7 @@ void main() {
   });
 
   group('データ検証', () {
-    test('シナリオは14本(既存4本+ai-draft追加10本)で、最初の2本だけ無料', () {
+    test('シナリオは14本(既存4本+追加10本)で、最初の2本だけ無料', () {
       expect(_scenarios.length, 14);
       expect(_scenarios.where((s) => s.isFree).length, 2);
       expect(_scenarios.take(2).every((s) => s.isFree), isTrue);
@@ -53,7 +53,8 @@ void main() {
     test('各シナリオは5場面・3択・推奨1つで、品質ゲートに通る', () {
       expect(validateHazardScenarios(_scenarios), isEmpty);
       for (final s in _scenarios) {
-        expect(s.contentStatus, 'ai-draft');
+        expect(s.contentStatus, isEmpty);
+        expect(s.sourceRef, contains('専門家確認済み'));
         expect(s.source, 'original');
         expect(s.sourceRef, contains('自作'));
         expect(s.chapters.length, 5);
@@ -64,18 +65,18 @@ void main() {
       }
     });
 
-    test('禁止語を含むデータや ai-draft の欠落を検出できる', () {
+    test('禁止語を含むデータや不正な contentStatus を検出できる', () {
       const line = '{"scenarioId":"x","title":"過去問で学ぶ","description":"d",'
           '"chapters":[{"chapterId":"a","situation":"s","choices":['
           '{"choiceId":"1","text":"t","isRecommended":true,"feedback":"f"},'
           '{"choiceId":"2","text":"u","isRecommended":false,"feedback":"g"}]}],'
-          '"source":"other","sourceRef":"出典"}';
+          '"source":"other","sourceRef":"出典","contentStatus":"bogus"}';
       final parsed = parseHazardScenarios(line);
       expect(parsed.issues, isEmpty);
       final codes = validateHazardScenarios(parsed.scenarios).map((i) => i.code).toSet();
       expect(
         codes,
-        containsAll(['no-ai-draft', 'forbidden-word', 'not-original', 'no-self-made', 'choice-count']),
+        containsAll(['invalid-content-status', 'forbidden-word', 'not-original', 'no-self-made', 'choice-count']),
       );
     });
 
