@@ -5,8 +5,8 @@ import 'package:flutter/services.dart' show rootBundle;
 /// 「危険予測シナリオ」（二輪特有の場面で判断を選ぶ体験型教材）のデータ。
 /// 1シナリオ＝複数の場面（状況提示→3択の判断→解説）。最初の2本は無料、残りはプレミアム限定。
 
-/// 画面に出す、AI下書きであることの表示。
-const String kHazardDraftNotice = '学習用の架空シナリオ(AI下書き・専門確認前)';
+/// 画面に出す、体験用コンテンツであることの表示(事実に即した注記。専門家確認の有無は表示しない)。
+const String kHazardExperienceNotice = '体験用の架空シナリオです';
 
 /// データに付けるAI下書きの印（`contentStatus`）。
 const String kHazardContentStatusAiDraft = 'ai-draft';

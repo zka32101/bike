@@ -64,7 +64,7 @@ class _HazardScenarioListViewState extends ConsumerState<HazardScenarioListView>
               isFree: (id) => byId[id]?.isFree ?? false,
               onOpen: (item) => _open(byId[item.id]!),
               intro: '二輪ならではの場面で、どう判断するかを選びます。選んだあとに理由の解説が出ます。',
-              draftNotice: kHazardDraftNotice,
+              draftNotice: kHazardExperienceNotice,
               chapterUnit: '場面',
               lockedMessage: kHazardPremiumNotice,
             );
@@ -132,13 +132,11 @@ class _HazardScenarioPlayViewState extends State<HazardScenarioPlayView> {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              if (widget.scenario.isAiDraft) ...[
-                Text(
-                  kHazardDraftNotice,
-                  style: theme.textTheme.labelMedium?.copyWith(color: theme.colorScheme.outline),
-                ),
-                const SizedBox(height: 8),
-              ],
+              Text(
+                kHazardExperienceNotice,
+                style: theme.textTheme.labelMedium?.copyWith(color: theme.colorScheme.outline),
+              ),
+              const SizedBox(height: 8),
               if (_finished) ..._resultChildren(theme) else ..._chapterChildren(theme),
               const SizedBox(height: 24),
               Text('関連', style: theme.textTheme.titleSmall),

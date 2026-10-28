@@ -88,13 +88,14 @@ void main() {
   });
 
   group('一覧画面', () {
-    testWidgets('無料: 無料シナリオは開け、AI下書きの表示が出る', (tester) async {
+    testWidgets('無料: 無料シナリオは開け、体験用の注記が出る(専門確認前の注記は出ない)', (tester) async {
       await _pumpList(tester, premium: false);
-      expect(find.text(kHazardDraftNotice), findsOneWidget);
+      expect(find.text(kHazardExperienceNotice), findsOneWidget);
+      expect(find.textContaining('専門確認前'), findsNothing);
       await tester.tap(find.text(_scenarios[0].title));
       await _pumpFew(tester);
       expect(find.byType(HazardScenarioPlayView), findsOneWidget);
-      expect(find.text(kHazardDraftNotice), findsOneWidget);
+      expect(find.text(kHazardExperienceNotice), findsOneWidget);
       expect(find.text('場面 1 / 全5場面'), findsOneWidget);
     });
 
