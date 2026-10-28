@@ -54,7 +54,8 @@ void main() {
       expect(validateHazardScenarios(_scenarios), isEmpty);
       for (final s in _scenarios) {
         expect(s.contentStatus, isEmpty);
-        expect(s.sourceRef, contains('専門家確認済み'));
+        expect(s.sourceRef, contains('専門家確認は不要と判断'));
+        expect(s.sourceRef, isNot(contains('専門家確認済み')));
         expect(s.source, 'original');
         expect(s.sourceRef, contains('自作'));
         expect(s.chapters.length, 5);
