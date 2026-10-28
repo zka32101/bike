@@ -144,7 +144,7 @@ HazardScenario _scenarioFromJson(Map<String, dynamic> j) {
   );
 }
 
-/// 配信前の品質ゲート。構造・contentStatus(空=専門家確認済み/ai-draft=確認前)・自作の出典・禁止表現を確かめる。
+/// 配信前の品質ゲート。構造・contentStatus(空=通常扱い。専門家確認は不要と判断した体験コンテンツ/ai-draft=下書き)・自作の出典・禁止表現を確かめる。
 List<HazardIssue> validateHazardScenarios(List<HazardScenario> items) {
   final issues = <HazardIssue>[];
   final seen = <String>{};
@@ -162,7 +162,7 @@ List<HazardIssue> validateHazardScenarios(List<HazardScenario> items) {
       }
     }
     if (s.contentStatus.isNotEmpty && !s.isAiDraft) {
-      add('invalid-content-status', 'contentStatus は空(専門家確認済み)か ai-draft のみ使えます');
+      add('invalid-content-status', 'contentStatus は空(通常扱い)か ai-draft のみ使えます');
     }
     if (s.source != 'original') add('not-original', 'source は original(自作)である必要があります');
     if (!s.sourceRef.contains('自作')) add('no-self-made', 'sourceRef に自作である旨がありません');

@@ -17,6 +17,6 @@ Dart 内の `ai-draft` 定数が残る。体験コンテンツか、専門確認
 
 関連テスト: `test/bike_zukan_test.dart`、`test/skill_exam_test.dart` は `contentStatus == 'ai-draft'` を検証。
 
-## 注意
+## sourceRef 訂正 (2026-10-28)
 
-危険予測データの `sourceRef` には「専門家確認済み」と書かれている(#192)。体験コンテンツで専門確認は行っていないため事実と異なる。画面には出ていないが、別PRでの修正を推奨(本PRはシナリオデータ不変の制約により未変更)。
+#192 で sourceRef を「専門家確認済み」としたが、体験コンテンツのため専門家確認は実施しておらず、事実と食い違っていた。ユーザーの明示指示により、14本の sourceRef を「自作の架空シナリオ(AI下書き由来。体験コンテンツのため専門家確認は不要と判断)。…」へ訂正(contentVer "3")。`validateHazardScenarios` のコメント・メッセージも「空=通常扱い」に修正。検証ロジック、`kHazardContentStatusAiDraft` / `isAiDraft`、シナリオ本文は不変。
