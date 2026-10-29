@@ -1,0 +1,26 @@
+# 一時ワークフロー(試作確認用・確認後に削除する)
+name: proto-screens-tmp
+on:
+  workflow_dispatch:
+  push:
+    branches: [proto/reading-explanation]
+    paths: ['test/proto_screenshots_test.dart', '.github/workflows/proto-screens-tmp.yml']
+jobs:
+  shots:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+      - uses: subosito/flutter-action@v2
+        with:
+          flutter-version: '3.44.4'
+          channel: stable
+          cache: true
+      - run: sudo apt-get install -y fonts-ipafont-gothic || true
+      - run: flutter pub get
+      - run: flutter test test/proto_screenshots_test.dart
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: proto-shots
+          path: build/shots
+          retention-days: 1
