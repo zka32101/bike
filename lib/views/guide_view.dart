@@ -1,12 +1,17 @@
 import 'package:flutter/material.dart';
 
+import '../core/constants/reading_prototype.dart';
 import '../models/guide_article.dart';
 import '../widgets/guide_diagrams.dart';
+import 'chapter_reading_view.dart';
 import 'skill_exam_view.dart';
 
 /// 「役立つ情報」の一覧。
 class GuideListView extends StatelessWidget {
-  const GuideListView({super.key});
+  const GuideListView({super.key, this.showReadingPrototype = kReadingPrototypeEnabled});
+
+  /// 読み物(試作)への入口を先頭に出すか。既定は試作フラグ(通常は無効)に従う。
+  final bool showReadingPrototype;
 
   @override
   Widget build(BuildContext context) {
@@ -15,9 +20,13 @@ class GuideListView extends StatelessWidget {
       body: SafeArea(
         child: ListView.separated(
           padding: const EdgeInsets.all(16),
-          itemCount: kGuideArticles.length + 1,
+          itemCount: kGuideArticles.length + 1 + (showReadingPrototype ? 1 : 0),
           separatorBuilder: (_, __) => const SizedBox(height: 12),
           itemBuilder: (context, i) {
+            if (showReadingPrototype) {
+              if (i == 0) return const ReadingPrototypeEntryCard();
+              i -= 1;
+            }
             if (i == kGuideArticles.length) {
               return Card(
                 child: ListTile(

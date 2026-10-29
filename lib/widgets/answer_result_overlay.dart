@@ -15,12 +15,16 @@ class AnswerResultOverlay extends ConsumerStatefulWidget {
     required this.isCorrect,
     required this.explanation,
     required this.onNext,
+    this.wrongAnswerExtra,
   });
 
   final String questionId;
   final bool isCorrect;
   final String explanation;
   final VoidCallback onNext;
+
+  /// 不正解のときだけ、解説の下に足す表示(読み物(試作)への導線など)。省略時は従来どおり。
+  final Widget? wrongAnswerExtra;
 
   @override
   ConsumerState<AnswerResultOverlay> createState() => _AnswerResultOverlayState();
@@ -79,6 +83,8 @@ class _AnswerResultOverlayState extends ConsumerState<AnswerResultOverlay> {
             ?.any((m) => m.questionId == widget.questionId) ??
         false;
 
+    final extra = widget.isCorrect ? null : widget.wrongAnswerExtra;
+
     // コンテンツ部分
     final content = Card(
       margin: const EdgeInsets.symmetric(horizontal: 32),
@@ -103,6 +109,10 @@ class _AnswerResultOverlayState extends ConsumerState<AnswerResultOverlay> {
             if (widget.explanation.isNotEmpty) ...[
               const SizedBox(height: 12),
               Text(widget.explanation, textAlign: TextAlign.center),
+            ],
+            if (extra != null) ...[
+              const SizedBox(height: 12),
+              extra,
             ],
             const SizedBox(height: 20),
             SizedBox(
@@ -151,7 +161,13 @@ class _AnswerResultOverlayState extends ConsumerState<AnswerResultOverlay> {
     return Container(
       color: Colors.black54,
       alignment: Alignment.center,
-      child: animatedContent,
+      // 追加表示があるときだけ、小さい画面で溢れないよう縦にスクロールできるようにする。
+      child: extra == null
+          ? animatedContent
+          : SingleChildScrollView(
+              padding: const EdgeInsets.symmetric(vertical: 16),
+              child: animatedContent,
+            ),
     );
   }
 }

@@ -5,11 +5,13 @@ import 'package:ukalab_core/ui.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
+import '../core/constants/reading_prototype.dart';
 import '../l10n/generated/app_localizations.dart';
 import '../models/pass_prediction_score.dart';
 import '../viewmodels/providers.dart';
 import '../widgets/answer_result_overlay.dart';
 import '../widgets/pass_prediction_meter.dart';
+import '../widgets/reading_feedback.dart';
 import 'paywall_view.dart';
 import '../data/question_signs.dart';
 
@@ -139,6 +141,9 @@ class _QuestionResultLayer extends StatelessWidget {
       isCorrect: state.lastResult == AnswerResult.correct,
       explanation: question.displayExplanation,
       onNext: controller.advanceToNextQuestion,
+      // 読み物(試作)のフラグ有効時だけ、誤答のあとに関連する読み物へ誘導する。
+      wrongAnswerExtra:
+          kReadingPrototypeEnabled ? BikeReadingFeedback(question: question) : null,
     );
   }
 }
