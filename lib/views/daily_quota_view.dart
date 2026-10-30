@@ -10,6 +10,7 @@ import '../models/pass_prediction_score.dart';
 import '../viewmodels/providers.dart';
 import '../widgets/answer_result_overlay.dart';
 import '../widgets/pass_prediction_meter.dart';
+import '../widgets/reading_feedback.dart';
 import 'paywall_view.dart';
 import '../data/question_signs.dart';
 
@@ -139,6 +140,8 @@ class _QuestionResultLayer extends StatelessWidget {
       isCorrect: state.lastResult == AnswerResult.correct,
       explanation: question.displayExplanation,
       onNext: controller.advanceToNextQuestion,
+      // 誤答のあと、関連する読み物があるときだけ「読み物でおさらい」を出す(無ければ何も出ない)。
+      wrongAnswerExtra: BikeReadingFeedback(question: question),
     );
   }
 }
