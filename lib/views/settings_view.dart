@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:ukalab_core/cross_promo.dart' show UkalabCrossPromoSection;
 
+import '../core/constants/app_ids.dart';
 import '../core/constants/license_category.dart';
 import '../viewmodels/providers.dart';
 import 'bike_zukan_view.dart';
@@ -170,9 +171,7 @@ class SettingsView extends ConsumerWidget {
             ),
           ),
           // 掲載リストが空なら何も表示しない。うかラボは大人向けなので保護者ゲートは不要。
-          const UkalabCrossPromoSection(
-            currentAppId: 'com.yourwish.ukalab.bike_license',
-          ),
+          const UkalabCrossPromoSection(currentAppId: kBikeApplicationId),
         ],
       ),
     );
