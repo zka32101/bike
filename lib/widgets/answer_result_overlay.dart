@@ -15,12 +15,17 @@ class AnswerResultOverlay extends ConsumerStatefulWidget {
     required this.isCorrect,
     required this.explanation,
     required this.onNext,
+    this.wrongAnswerExtra,
   });
 
   final String questionId;
   final bool isCorrect;
   final String explanation;
   final VoidCallback onNext;
+
+  /// 不正解のときだけ、解説の下に足す表示(読み物への導線など)。省略時は従来どおり。
+  /// 余白は渡す側で付ける(中身が空のときに余白だけ残らないようにするため)。
+  final Widget? wrongAnswerExtra;
 
   @override
   ConsumerState<AnswerResultOverlay> createState() => _AnswerResultOverlayState();
@@ -79,6 +84,8 @@ class _AnswerResultOverlayState extends ConsumerState<AnswerResultOverlay> {
             ?.any((m) => m.questionId == widget.questionId) ??
         false;
 
+    final extra = widget.isCorrect ? null : widget.wrongAnswerExtra;
+
     // コンテンツ部分
     final content = Card(
       margin: const EdgeInsets.symmetric(horizontal: 32),
@@ -104,6 +111,7 @@ class _AnswerResultOverlayState extends ConsumerState<AnswerResultOverlay> {
               const SizedBox(height: 12),
               Text(widget.explanation, textAlign: TextAlign.center),
             ],
+            if (extra != null) extra,
             const SizedBox(height: 20),
             SizedBox(
               width: double.infinity,
@@ -151,7 +159,19 @@ class _AnswerResultOverlayState extends ConsumerState<AnswerResultOverlay> {
     return Container(
       color: Colors.black54,
       alignment: Alignment.center,
-      child: animatedContent,
+      // 追加表示があるときだけ、小さい画面で溢れないよう縦にスクロールできるようにする
+      // (中央寄せは従来どおり保つ)。
+      child: extra == null
+          ? animatedContent
+          : LayoutBuilder(
+              builder: (context, constraints) => SingleChildScrollView(
+                padding: const EdgeInsets.symmetric(vertical: 16),
+                child: ConstrainedBox(
+                  constraints: BoxConstraints(minHeight: (constraints.maxHeight - 32).clamp(0.0, double.infinity)),
+                  child: Center(child: animatedContent),
+                ),
+              ),
+            ),
     );
   }
 }

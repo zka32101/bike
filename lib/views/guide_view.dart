@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 
 import '../models/guide_article.dart';
 import '../widgets/guide_diagrams.dart';
+import 'chapter_reading_view.dart';
 import 'skill_exam_view.dart';
 
 /// 「役立つ情報」の一覧。
@@ -15,9 +16,12 @@ class GuideListView extends StatelessWidget {
       body: SafeArea(
         child: ListView.separated(
           padding: const EdgeInsets.all(16),
-          itemCount: kGuideArticles.length + 1,
+          itemCount: kGuideArticles.length + 2,
           separatorBuilder: (_, __) => const SizedBox(height: 12),
           itemBuilder: (context, i) {
+            // 先頭は読み物への入口。
+            if (i == 0) return const ReadingEntryCard();
+            i -= 1;
             if (i == kGuideArticles.length) {
               return Card(
                 child: ListTile(

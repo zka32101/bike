@@ -7,8 +7,17 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Added
+
+- 読み物「交差点での右左折と優先関係」(bike_reading-0001)を追加(`assets/experience/chapter_readings_bike.jsonl`、ukalab_core の `ChapterReading` 形式)。手順(steps)と表(table)で整理。「役立つ情報」の先頭に入口、読み物一覧→詳細、末尾に確認問題リンク(`ReadingQuestionLinks`)と危険予測への導線。出典は「自作（AI下書き由来。体験コンテンツのため専門家確認は不要と判断）」で、「専門家確認済み」とは書かない。
+- 危険予測への参照は、アプリ側の対応表ではなく core の `ChapterReading.relatedLinks`(`kind: hazard`、id は `scenarioId`)で表す。読み込み時に参照先の実在を検査する。
+- 毎日の練習で誤答したとき、関連する読み物があれば core の `RelatedReadingsCard`(誤答原因の選択欄なしの単体カード)で「読み物でおさらい」を出す(`AnswerResultOverlay.wrongAnswerExtra`)。関連が無ければ何も出ず、正解時も出ない。
+- 読み物の確認問題リンクは「まず確認する5問」だけ先に出し、「すべて見る」で全件に広げる。表は3列(場面・先に確かめること・基本の動き)にし、「つまずきやすい点」は表の下の箇条書きへ移した(内容は変更なし)。
+- 読み物の画面・誤答導線には広告を置かない(静的ガードのテストあり)。
+
 ### Changed
 
+- 読み物の試作フラグ(`READING_PROTOTYPE` / `showReadingPrototype`)は廃止(#195 の試作の位置づけを本番化)。入口は常に表示。
 - ukalab_core を v0.86.0 から v0.87.0 に更新(読み物の表現拡張等は追加のみ・後方互換。このPRでは新機能は未使用)。pubspec.lock は一時 workflow で再生成。
 - 危険予測シナリオ14本の sourceRef を事実に合う表記へ訂正(2026-10-28)。「専門家確認済み」→「AI下書き由来。体験コンテンツのため専門家確認は不要と判断」。専門家確認は実施していなかったため(#192の記述の訂正)。contentVer "2"→"3"。`validateHazardScenarios` のコメント・メッセージの「空=専門家確認済み」も「空=通常扱い」へ修正(検証ロジックは不変)。本文は変更なし。
 - 専門家確認済みの AI 下書きデータ(問題 x570〜x609 を5区分、危険予測シナリオ14本)から `contentStatus: ai-draft` を外し、sourceRef を「専門家確認済み」に更新(2026-10-28)。内容は変更なし。
