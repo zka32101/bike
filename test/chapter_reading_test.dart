@@ -94,7 +94,7 @@ void main() {
       final table = r.sections[ti].table!;
       final next = r.sections[ti + 1];
       expect(next.heading, 'つまずきやすい点');
-      final bullets = next.body!.split('\n');
+      final bullets = next.body.split('\n');
       expect(bullets, hasLength(table.rows.length));
       for (var i = 0; i < bullets.length; i++) {
         expect(bullets[i].startsWith('・${table.rows[i][0]}：'), isTrue, reason: bullets[i]);

@@ -114,8 +114,8 @@ void main() {
       expect(links, findsNWidgets(ids.length));
       expect(_textPlain(_questions[ids.last]!.questionText), findsOneWidget);
 
-      await tester.ensureVisible(find.text('最初の${kReadingFirstQuestionLinks}問だけ表示'));
-      await tester.tap(find.text('最初の${kReadingFirstQuestionLinks}問だけ表示'));
+      await tester.ensureVisible(find.text('最初の$kReadingFirstQuestionLinks問だけ表示'));
+      await tester.tap(find.text('最初の$kReadingFirstQuestionLinks問だけ表示'));
       await _settle(tester);
       expect(links, findsNWidgets(kReadingFirstQuestionLinks));
     });
