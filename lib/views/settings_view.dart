@@ -1,4 +1,5 @@
 import 'package:app_common_kit/app_common_kit.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:ukalab_core/ui.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
@@ -137,15 +138,41 @@ class SettingsView extends ConsumerWidget {
             leading: const Icon(Icons.feedback_outlined),
             title: const Text('ご意見・不具合報告'),
             subtitle: const Text('バグ報告や改善要望をお寄せください'),
-            onTap: () => Navigator.of(context).push(
-              MaterialPageRoute(
-                builder: (_) => FeedbackFormPage(
-                  appName: 'bike-license',
-                  appVersion: '1.0.1',
-                  userId: user?.uid,
+            onTap: () async {
+              // 送信にはログインが必要。「オフラインで続ける」中は、先に案内する。
+              if (FirebaseAuth.instance.currentUser == null) {
+                final write = await showDialog<bool>(
+                  context: context,
+                  builder: (ctx) => AlertDialog(
+                    title: const Text('ログインすると送れます'),
+                    content: const Text(
+                      'いまはログインしていないため、すぐには送信できません。'
+                      '書いた内容は端末に残り、Googleでログインしたあとに送られます。',
+                    ),
+                    actions: [
+                      TextButton(
+                        onPressed: () => Navigator.of(ctx).pop(false),
+                        child: const Text('閉じる'),
+                      ),
+                      TextButton(
+                        onPressed: () => Navigator.of(ctx).pop(true),
+                        child: const Text('書く'),
+                      ),
+                    ],
+                  ),
+                );
+                if (write != true || !context.mounted) return;
+              }
+              await Navigator.of(context).push(
+                MaterialPageRoute(
+                  builder: (_) => FeedbackFormPage(
+                    appName: 'bike-license',
+                    appVersion: '1.0.1',
+                    userId: user?.uid,
+                  ),
                 ),
-              ),
-            ),
+              );
+            },
           ),
           ListTile(
             leading: const Icon(Icons.two_wheeler),
